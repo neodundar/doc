@@ -169,8 +169,6 @@ cos(<code>{expr}</code>)			Float	cosine of <code>{expr}</code>
 cosh(<code>{expr}</code>)			Float	hyperbolic cosine of <code>{expr}</code>
 count(<code>{comp}</code>, <code>{expr}</code> [, <code>{ic}</code> [, <code>{start}</code>]])
 				Number	count how many <code>{expr}</code> are in <code>{comp}</code>
-cscope_connection([{num}, <code>{dbpath}</code> [, <code>{prepend}</code>]])
-				Number	checks existence of cscope connection
 ctxget([{index}])		Dict	return the <a href="repeat.html#context">context</a> dict at <code>{index}</code>
 ctxpop()			none	pop and restore <a href="repeat.html#context">context</a> from the
 					<a href="repeat.html#context-stack">context-stack</a>
@@ -1299,37 +1297,6 @@ count(<code>{comp}</code>, <code>{expr}</code> [, <code>{ic}</code> [, <code>{st
 		occurrences of <code>{expr}</code> is returned. Zero is returned when
 		<code>{expr}</code> is an empty string.</div>
 <div class="old-help-para">		Can also be used as a <a href="eval.html#method">method</a>:<pre>mylist-&gt;count(val)</pre></div>
-<div class="old-help-para">							<a name="cscope_connection()"></a><code class="help-tag-right">cscope_connection()</code>
-cscope_connection([{num} , <code>{dbpath}</code> [, <code>{prepend}</code>]])
-		Checks for the existence of a <a href="if_cscop.html#cscope">cscope</a> connection.  If no
-		parameters are specified, then the function returns:
-			0, if there are no cscope connections;
-			1, if there is at least one cscope connection.</div>
-<div class="old-help-para">		If parameters are specified, then the value of <code>{num}</code>
-		determines how existence of a cscope connection is checked:</div>
-<div class="old-help-para">		<code>{num}</code>	Description of existence check
-		-----	------------------------------
-		0	Same as no parameters (e.g., "cscope_connection()").
-		1	Ignore <code>{prepend}</code>, and use partial string matches for
-			<code>{dbpath}</code>.
-		2	Ignore <code>{prepend}</code>, and use exact string matches for
-			<code>{dbpath}</code>.
-		3	Use <code>{prepend}</code>, use partial string matches for both
-			<code>{dbpath}</code> and <code>{prepend}</code>.
-		4	Use <code>{prepend}</code>, use exact string matches for both
-			<code>{dbpath}</code> and <code>{prepend}</code>.</div>
-<div class="old-help-para">		Note: All string comparisons are case sensitive!</div>
-<div class="old-help-para">		Examples.  Suppose we had the following (from ":cs show"):<pre>
-# pid    database name                        prepend path
-0 27664  cscope.out                                /usr/local</pre></div>
-<div class="old-help-para"><div class="help-column_heading">		Invocation					Return Val</div>		----------					----------<pre>cscope_connection()                                        1
-cscope_connection(1, "out")                                1
-cscope_connection(2, "out")                                0
-cscope_connection(3, "out")                                0
-cscope_connection(3, "out", "local")                        1
-cscope_connection(4, "out")                                0
-cscope_connection(4, "out", "local")                        0
-cscope_connection(4, "cscope.out", "/usr/local")        1</pre></div>
 <div class="old-help-para">ctxget([{index}])					<a name="ctxget()"></a><code class="help-tag-right">ctxget()</code>
 		Returns a <a href="eval.html#Dictionary">Dictionary</a> representing the <a href="repeat.html#context">context</a> at <code>{index}</code>
 		from the top of the <a href="repeat.html#context-stack">context-stack</a> (see <a href="repeat.html#context-dict">context-dict</a>).
@@ -2484,7 +2451,6 @@ getcharsearch()						<a name="getcharsearch()"></a><code class="help-tag-right">
 		color		color schemes
 		command		Ex command
 		compiler	compilers
-		cscope		<a href="if_cscop.html#%3Acscope">:cscope</a> suboptions
 		diff_buffer     <a href="diff.html#%3Adiffget">:diffget</a> and <a href="diff.html#%3Adiffput">:diffput</a> completion
 		dir		directory names
 		environment	environment variable names
@@ -7381,7 +7347,7 @@ Don't forget that "^" will only match at the first character of the String and
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-14 06:28 from <code><a href="https://github.com/neovim/neovim/commit/d339b4aad7461937e1e03ac0836b2eb1354ff442">d339b4a</a></code>
+        Generated at 2022-10-15 06:02 from <code><a href="https://github.com/neovim/neovim/commit/1c478391ca7754bf5ecb4b76c29acfa9b4978393">1c47839</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 3 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+builtin.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/builtin.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim

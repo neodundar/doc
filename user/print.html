@@ -412,7 +412,7 @@ you need to define your own PostScript font encoding vector.  Details on how
 to define a font encoding vector is beyond the scope of this help file, but
 you can find details in the PostScript Language Reference Manual, 3rd Edition,
 published by Addison-Wesley and available in PDF form at
-<a href="http://www.adobe.com/">http://www.adobe.com/</a>.  The following describes what you need to do for Vim to
+<a href="https://www.adobe.com/">https://www.adobe.com/</a>.  The following describes what you need to do for Vim to
 locate and use your print character encoding.</div>
 <div class="old-help-para">i.   Decide on a unique name for your encoding vector, one that does not clash
      with any of the recognized or standard encoding names that Vim uses (see
@@ -450,11 +450,6 @@ characters may not appear when printed.</div>
 option allows you to specify different fonts to use when printing characters
 which are syntax highlighted with the font styles normal, italic, bold and
 bold-italic.</div>
-<div class="old-help-para">No CJK fonts are supplied with Vim.  There are some free Korean, Japanese, and
-Traditional Chinese fonts available at:</div>
-<div class="old-help-para">  <a href="http://examples.oreilly.com/cjkvinfo/adobe/samples/">http://examples.oreilly.com/cjkvinfo/adobe/samples/</a></div>
-<div class="old-help-para">You can find descriptions of the various fonts in the read me file at</div>
-<div class="old-help-para">  <a href="http://examples.oreilly.de/english_examples/cjkvinfo/adobe/00README">http://examples.oreilly.de/english_examples/cjkvinfo/adobe/00README</a></div>
 <div class="old-help-para">Please read your printer documentation on how to install new fonts.</div>
 <div class="old-help-para">CJK fonts can be large containing several thousand glyphs, and it is not
 uncommon to find that they only contain a subset of a national standard.  It
@@ -472,7 +467,7 @@ Vim to output ASCII characters for the ASCII code range with <a href="options.ht
 should not be attempted lightly.  A discussion on the process if beyond the
 scope of these help files.  You can find details on CMap (character map) files
 in the document 'Adobe CMap and CIDFont Files Specification, Version 1.0',
-available from <a href="http://www.adobe.com">http://www.adobe.com</a> as a PDF file.</div>
+available from <a href="https://www.adobe.com">https://www.adobe.com</a> as a PDF file.</div>
 <div class="old-help-para"><h2 class="help-heading">6. PostScript Printing Troubleshooting<span class="help-heading-tags">		<a name="postscript-print-trouble"></a><span class="help-tag">postscript-print-trouble</span></h2>									<a name="E621"></a><code class="help-tag-right">E621</code>
 Usually the only sign of a problem when printing with PostScript is that your
 printout does not appear.  If you are lucky you may get a printed page that
@@ -517,19 +512,8 @@ Replace "A4" with the paper size that best matches your printer paper.</div>
 <div class="old-help-para">Ghostscript is a PostScript and PDF interpreter that can be used to display
 and print on non-PostScript printers PostScript and PDF files.  It can also
 generate PDF files from PostScript.</div>
-<div class="old-help-para">Ghostscript will run on a wide variety of platforms.</div>
-<div class="old-help-para">There are three available versions:</div>
-<div class="old-help-para"><div class="help-li" style=""> AFPL Ghostscript (formerly Aladdin Ghostscript) which is free for
-  non-commercial use.  It can be obtained from:
-</div></div>
-<div class="old-help-para">    <a href="http://www.cs.wisc.edu/~ghost/">http://www.cs.wisc.edu/~ghost/</a></div>
-<div class="old-help-para"><div class="help-li" style=""> GNU Ghostscript which is available under the GNU General Public License.  It
-  can be obtained from:
-</div></div>
-<div class="old-help-para">    ftp://mirror.cs.wisc.edu/pub/mirrors/ghost/gnu/</div>
-<div class="old-help-para"><div class="help-li" style=""> A commercial version for inclusion in commercial products.
-</div></div>
-<div class="old-help-para">Additional information on Ghostscript can also be found at:</div>
+<div class="old-help-para">Ghostscript will run on a wide variety of platforms. Information on
+Ghostscript can be found at:</div>
 <div class="old-help-para">  <a href="http://www.ghostscript.com/">http://www.ghostscript.com/</a></div>
 <div class="old-help-para">Support for a number of non PostScript printers is provided in the
 distribution as standard, but if you cannot find support for your printer
@@ -539,54 +523,6 @@ check the Ghostscript site for other printers not included by default.</div>
 ends have been created.  These allow easier PostScript file selection,
 previewing at different zoom levels, and printing.  Check supplied
 documentation for full details.</div>
-<div class="old-help-para"><a name="_x11"></a><h3 class="help-heading">X11</h3></div>
-<div class="old-help-para"><div class="help-li" style=""> Ghostview.  Obtainable from:
-</div></div>
-<div class="old-help-para">    <a href="http://www.cs.wisc.edu/~ghost/gv/">http://www.cs.wisc.edu/~ghost/gv/</a></div>
-<div class="old-help-para"><div class="help-li" style=""> gv.  Derived from Ghostview.  Obtainable from:
-</div></div>
-<div class="old-help-para">    <a href="http://wwwthep.physik.uni-mainz.de/~plass/gv/">http://wwwthep.physik.uni-mainz.de/~plass/gv/</a></div>
-<div class="old-help-para">  Copies (possibly not the most recent) can be found at:</div>
-<div class="old-help-para">    <a href="http://www.cs.wisc.edu/~ghost/gv/">http://www.cs.wisc.edu/~ghost/gv/</a></div>
-<div class="old-help-para">MS-Windows</div>
-<div class="old-help-para"><div class="help-li" style=""> GSview.  Obtainable from:
-</div></div>
-<div class="old-help-para">    <a href="http://www.cs.wisc.edu/~ghost/gsview/">http://www.cs.wisc.edu/~ghost/gsview/</a></div>
-<div class="old-help-para">Linux</div>
-<div class="old-help-para"><div class="help-li" style=""> GSview.  Linux version of the popular MS-Windows previewer.
-  Obtainable from:
-</div></div>
-<div class="old-help-para">    <a href="http://www.cs.wisc.edu/~ghost/gsview/">http://www.cs.wisc.edu/~ghost/gsview/</a></div>
-<div class="old-help-para"><div class="help-li" style=""> BMV.  Different from Ghostview and gv in that it doesn't use X but svgalib.
-  Obtainable from:
-</div></div>
-<div class="old-help-para">    ftp://sunsite.unc.edu/pub/Linux/apps/graphics/viewers/svga/bmv-1.2.tgz</div>
-<div class="old-help-para">7.3 PSUtils</div>
-<div class="old-help-para">PSUtils is a collection of utility programs for manipulating PostScript
-documents.  Binary distributions are available for many platforms, as well as
-the full source.  PSUtils can be found at:</div>
-<div class="old-help-para">  <a href="http://knackered.org/angus/psutils">http://knackered.org/angus/psutils</a></div>
-<div class="old-help-para">The utilities of interest include:</div>
-<div class="old-help-para"><div class="help-li" style=""> psnup.     Convert PS files for N-up printing.
-</div><div class="help-li" style=""> psselect.  Select page range and order of printing.
-</div><div class="help-li" style=""> psresize.  Change the page size.
-</div><div class="help-li" style=""> psbook.    Reorder and lay out pages ready for making a book.
-</div></div>
-<div class="old-help-para">The output of one program can be used as the input to the next, allowing for
-complex print document creation.</div>
-<div class="old-help-para"><a name="_n-up-printing"></a><h3 class="help-heading">N-UP PRINTING</h3></div>
-<div class="old-help-para">The psnup utility takes an existing PostScript file generated from Vim and
-convert it to an n-up version.  The simplest way to create a 2-up printout is
-to first create a PostScript file with:<pre>
-:hardcopy &gt; test.ps</pre>
-Then on your command line execute:<pre>
-psnup -n 2 test.ps final.ps</pre>
-Note: You may get warnings from some Ghostscript previewers for files produced
-by psnup - these may safely be ignored.</div>
-<div class="old-help-para">Finally print the file final.ps to your PostScript printer with your
-platform's print command.  (You will need to delete the two PostScript files
-afterwards yourself.)  <a href="options.html#'printexpr'">'printexpr'</a> could be modified to perform this extra
-step before printing.</div>
 <div class="old-help-para"><a name="_alternate-duplex-printing"></a><h3 class="help-heading">ALTERNATE DUPLEX PRINTING</h3></div>
 <div class="old-help-para">It is possible to achieve a poor man's version of duplex printing using the PS
 utility psselect.  This utility has options -e and -o for printing just the
@@ -656,8 +592,6 @@ accidental blank pages.</div>
 6. PostScript Printing Troubleshooting		</a>
 </div><div class="help-toc-h1"><a href="#postscript-print-util">
 7. PostScript Utilities				</a>
-<div class="help-toc-h2"><a href="#_x11">X11</a></div>
-<div class="help-toc-h2"><a href="#_n-up-printing">N-UP PRINTING</a></div>
 <div class="help-toc-h2"><a href="#_alternate-duplex-printing">ALTERNATE DUPLEX PRINTING</a></div>
 </div><div class="help-toc-h1"><a href="#printing-formfeed">
 8. Formfeed Characters					</a>
@@ -666,7 +600,7 @@ accidental blank pages.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-14 06:29 from <code><a href="https://github.com/neovim/neovim/commit/d339b4aad7461937e1e03ac0836b2eb1354ff442">d339b4a</a></code>
+        Generated at 2022-10-15 06:02 from <code><a href="https://github.com/neovim/neovim/commit/1c478391ca7754bf5ecb4b76c29acfa9b4978393">1c47839</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+print.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/print.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="     Nvim

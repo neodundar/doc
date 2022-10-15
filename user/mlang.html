@@ -157,21 +157,10 @@ Current language: C
 :language mes
 Current messages language: de_DE.ISO_8859-1
 :lang mes en</pre></div>
-<div class="old-help-para"><h3 class="help-heading">MS-WINDOWS MESSAGE TRANSLATIONS<span class="help-heading-tags">				<a name="win32-gettext"></a><span class="help-tag">win32-gettext</span></h3></div>
-<div class="old-help-para">If you used the self-installing .exe file, message translations should work
-already.  Otherwise get the libintl.dll file if you don't have it yet:</div>
-<div class="old-help-para">	<a href="http://sourceforge.net/projects/gettext">http://sourceforge.net/projects/gettext</a>
-Or:
-	<a href="https://mlocati.github.io/gettext-iconv-windows/">https://mlocati.github.io/gettext-iconv-windows/</a></div>
-<div class="old-help-para">This also contains tools xgettext, msgformat and others.</div>
-<div class="old-help-para">libintl.dll should be placed in same directory as (g)vim.exe, or one of the
-directories listed in the PATH environment value.  Vim also looks for the
-alternate names "libintl-8.dll" and "intl.dll".</div>
 <div class="old-help-para">Message files (vim.mo) have to be placed in "$VIMRUNTIME/lang/xx/LC_MESSAGES",
-where "xx" is the abbreviation of the language (mostly two letters).</div>
-<div class="old-help-para">If you write your own translations you need to generate the .po file and
-convert it to a .mo file.  You need to get the source distribution and read
-the file "src/po/README.txt".</div>
+where "xx" is the abbreviation of the language (mostly two letters). If you
+write your own translations you need to generate the .po file and convert it
+to a .mo file.</div>
 <div class="old-help-para">To overrule the automatic choice of the language, set the $LANG variable to
 the language of your choice.  use "en" to disable translations.<pre>
 :let $LANG = 'ja'</pre>
@@ -246,7 +235,6 @@ a message adapt to language preferences of the user,<pre>
       <hr/>
   <div class="help-toc-h1"><a href="#multilang-messages">
 1. Messages						</a>
-<div class="help-toc-h2"><a href="#win32-gettext">MS-WINDOWS MESSAGE TRANSLATIONS				</a></div>
 </div><div class="help-toc-h1"><a href="#multilang-menus">
 2. Menus						</a>
 <div class="help-toc-h2"><a href="#_alias-locale-names">ALIAS LOCALE NAMES</a></div>
@@ -258,7 +246,7 @@ a message adapt to language preferences of the user,<pre>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-14 06:28 from <code><a href="https://github.com/neovim/neovim/commit/d339b4aad7461937e1e03ac0836b2eb1354ff442">d339b4a</a></code>
+        Generated at 2022-10-15 06:02 from <code><a href="https://github.com/neovim/neovim/commit/1c478391ca7754bf5ecb4b76c29acfa9b4978393">1c47839</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+mlang.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/mlang.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="     Nvim

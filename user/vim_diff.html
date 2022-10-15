@@ -109,7 +109,6 @@ centralized reference of the differences.</div>
 </div><div class="help-li" style=""> <a href="options.html#'belloff'">'belloff'</a> defaults to "all"
 </div><div class="help-li" style=""> <a href="vim_diff.html#'compatible'">'compatible'</a> is always disabled
 </div><div class="help-li" style=""> <a href="options.html#'complete'">'complete'</a> excludes "i"
-</div><div class="help-li" style=""> <a href="deprecated.html#'cscopeverbose'">'cscopeverbose'</a> is enabled
 </div><div class="help-li" style=""> <a href="options.html#'directory'">'directory'</a> defaults to ~/.local/state/nvim/swap// (<a href="starting.html#xdg">xdg</a>), auto-created
 </div><div class="help-li" style=""> <a href="options.html#'display'">'display'</a> defaults to "lastline"
 </div><div class="help-li" style=""> <a href="options.html#'encoding'">'encoding'</a> is UTF-8 (cf. <a href="options.html#'fileencoding'">'fileencoding'</a> for file-content encoding)
@@ -212,7 +211,7 @@ XDG base directories		<a href="starting.html#xdg">xdg</a></div>
 <div class="old-help-para"><div class="help-li" style=""> Nvim avoids features that cannot be provided on all platforms; instead that
   is delegated to external plugins/extensions. E.g. the <code>-X</code> platform-specific
   option is "sometimes" available in Vim (with potential surprises:
-  <a href="http://stackoverflow.com/q/14635295">http://stackoverflow.com/q/14635295</a>).
+  <a href="https://stackoverflow.com/q/14635295">https://stackoverflow.com/q/14635295</a>).
 </div></div>
 <div class="old-help-para"><div class="help-li" style=""> Vim's internal test functions (test_autochdir(), test_settime(), etc.) are
   not exposed (nor implemented); instead Nvim has a robust API.
@@ -526,12 +525,17 @@ coerced to strings. See <a href="builtin.html#id()">id()</a> for more details, c
   :shell
   :sleep! (does not hide the cursor; same as :sleep)
   :smile
-  :tearoff</div>
+  :tearoff
+  :cstag
+  :cscope
+  :lcscope
+  :scscope</div>
 <div class="old-help-para">Compile-time features:
   Emacs tags support
   X11 integration (see <a href="provider.html#x11-selection">x11-selection</a>)</div>
 <div class="old-help-para">Eval:
   Vim9script
+  <a name="cscope_connection()"></a><code class="help-tag">cscope_connection()</code>
   <a name="js_encode()"></a><code class="help-tag">js_encode()</code>
   <a name="js_decode()"></a><code class="help-tag">js_decode()</code>
   <a name="v%3Anone"></a><code class="help-tag">v:none</code> (used by Vim to represent JavaScript "undefined"); use <a href="eval.html#v%3Anull">v:null</a> instead.
@@ -558,6 +562,13 @@ autocmd TermOpen,WinEnter * if &amp;buftype=='terminal'
   <a name="'cp'"></a><code class="help-tag">'cp'</code> <a name="'nocompatible'"></a><code class="help-tag">'nocompatible'</code> <a name="'nocp'"></a><code class="help-tag">'nocp'</code> <a name="'compatible'"></a><code class="help-tag">'compatible'</code> (Nvim is always "nocompatible".)
   <a href="options.html#'cpoptions'">'cpoptions'</a> (gjkHw&lt;*- and all POSIX flags were removed)
   <a name="'cryptmethod'"></a><code class="help-tag">'cryptmethod'</code> <a name="'cm'"></a><code class="help-tag">'cm'</code> <a name="'key'"></a><code class="help-tag">'key'</code> (Vim encryption implementation)
+  cscopepathcomp
+  cscopeprg
+  cscopequickfix
+  cscoperelative
+  cscopetag
+  cscopetagorder
+  cscopeverbose
   <a name="'ed'"></a><code class="help-tag">'ed'</code> <a name="'edcompatible'"></a><code class="help-tag">'edcompatible'</code> <a name="'noed'"></a><code class="help-tag">'noed'</code> <a name="'noedcompatible'"></a><code class="help-tag">'noedcompatible'</code>
   <a href="options.html#'encoding'">'encoding'</a> ("utf-8" is always used)
   esckeys
@@ -664,6 +675,9 @@ EOF</pre></div>
   Vim issues a "request version" sequence to the terminal at startup and looks
   at how the terminal is sending CSI.  Nvim does not issue such a sequence and
   always uses 7-bit control sequences.</div>
+<div class="old-help-para">Cscope:
+                                                                      <a name="cscope"></a><code class="help-tag-right">cscope</code>
+  Cscope has been removed in favour of LSP based solutions.</div>
 
   </div>
       <div class="col-narrow toc">
@@ -688,7 +702,7 @@ EOF</pre></div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-14 06:29 from <code><a href="https://github.com/neovim/neovim/commit/d339b4aad7461937e1e03ac0836b2eb1354ff442">d339b4a</a></code>
+        Generated at 2022-10-15 06:03 from <code><a href="https://github.com/neovim/neovim/commit/1c478391ca7754bf5ecb4b76c29acfa9b4978393">1c47839</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+vim_diff.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/vim_diff.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim

@@ -116,14 +116,20 @@ with these (optional) keys:
 <div class="help-li" style=""> <code>rgb</code>			Decides the color format.
 </div><div class="help-li" style="margin-left: 3rem;"> true:	(default) 24-bit RGB colors
 </div><div class="help-li" style="margin-left: 3rem;"> false:	Terminal colors (8-bit, max 256)
+</div>
+</div>
+<div class="help-para">
 							<a name="ui-override"></a><code class="help-tag-right">ui-override</code>
-</div><div class="help-li" style=""> <code>override</code>		Decides how UI capabilities are resolved.
+<div class="help-li" style=""> <code>override</code>		Decides how UI capabilities are resolved.
 </div><div class="help-li" style="margin-left: 3rem;"> true:	Enable requested UI capabilities, even if not
 			  supported by all connected UIs (including <a href="term.html#TUI">TUI</a>).
 </div><div class="help-li" style="margin-left: 3rem;"> false: (default) Disable UI capabilities not
 			  supported by all connected UIs (including TUI).
+</div>
+</div>
+<div class="help-para">
 							<a name="ui-ext-options"></a><code class="help-tag-right">ui-ext-options</code>
-</div><div class="help-li" style=""> <code>ext_cmdline</code>		Externalize the cmdline. <a href="ui.html#ui-cmdline">ui-cmdline</a>
+<div class="help-li" style=""> <code>ext_cmdline</code>		Externalize the cmdline. <a href="ui.html#ui-cmdline">ui-cmdline</a>
 </div><div class="help-li" style=""> <code>ext_hlstate</code>		Detailed highlight state. <a href="ui.html#ui-hlstate">ui-hlstate</a>
 			Sets <code>ext_linegrid</code> implicitly.
 </div><div class="help-li" style=""> <code>ext_linegrid</code>	Line-based grid events. <a href="ui.html#ui-linegrid">ui-linegrid</a>
@@ -237,13 +243,22 @@ procedure:
 <div class="help-para">
 1. Invoke <a href="api.html#nvim_get_api_info()">nvim_get_api_info()</a>, if needed to setup the client library and/or
    to get the list of supported UI extensions.
+
+</div>
+<div class="help-para">
 2. Do any configuration that should be happen before user config is loaded.
    Buffers and windows are not available at this point, but this could be used
    to set <a href="eval.html#g%3A">g:</a> variables visible to init.vim
+
+</div>
+<div class="help-para">
 3. If the UI wants to do additional setup after user config is loaded,
    register a VimEnter autocmd:<pre>nvim_command("autocmd VimEnter * call rpcrequest(1, 'vimenter')")</pre>
-&lt;4. Now invoke <a href="api.html#nvim_ui_attach()">nvim_ui_attach()</a>. The UI must handle user input by now:
+4. Now invoke <a href="api.html#nvim_ui_attach()">nvim_ui_attach()</a>. The UI must handle user input by now:
    sourcing init.vim and loading buffers might lead to blocking prompts.
+
+</div>
+<div class="help-para">
 5. If step 3 was used, Nvim will send a blocking "vimenter" request to the UI.
    Inside this request handler, the UI can safely do any initialization before
    entering normal mode, for example reading variables set by init.vim.
@@ -1183,7 +1198,7 @@ Message/Dialog Events					   </a>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-14 06:29 from <code><a href="https://github.com/neovim/neovim/commit/d339b4aad7461937e1e03ac0836b2eb1354ff442">d339b4a</a></code>
+        Generated at 2022-10-15 06:03 from <code><a href="https://github.com/neovim/neovim/commit/1c478391ca7754bf5ecb4b76c29acfa9b4978393">1c47839</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+ui.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/ui.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim

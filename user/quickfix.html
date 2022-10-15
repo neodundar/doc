@@ -1107,7 +1107,7 @@ value.  For example:<pre>let g:perl_compiler_force_warnings = 0</pre>
 <div class="old-help-para">This is not actually a compiler, but a unit testing framework for the
 Python language.  It is included into standard Python distribution
 starting from version 2.0.  For older versions, you can get it from
-<a href="http://pyunit.sourceforge.net">http://pyunit.sourceforge.net</a>.</div>
+<a href="https://pyunit.sourceforge.net">https://pyunit.sourceforge.net</a>.</div>
 <div class="old-help-para">When you run your tests with the help of the framework, possible errors
 are parsed by Vim and presented for you in quick-fix mode.</div>
 <div class="old-help-para">Unfortunately, there is no standard way to run the tests.
@@ -1115,7 +1115,6 @@ The alltests.py script seems to be used quite often, that's all.
 Useful values for the <a href="options.html#'makeprg'">'makeprg'</a> options therefore are:
  setlocal makeprg=./alltests.py " Run a testsuite
  setlocal makeprg=python\ %:S   " Run a single testcase</div>
-<div class="old-help-para">Also see <a href="http://vim.sourceforge.net/tip_view.php?tip_id=280">http://vim.sourceforge.net/tip_view.php?tip_id=280</a>.</div>
 <div class="old-help-para"><h3 class="help-heading">TEX COMPILER<span class="help-heading-tags">						<a name="compiler-tex"></a><span class="help-tag">compiler-tex</span></h3></div>
 <div class="old-help-para">Included in the distribution compiler for TeX ($VIMRUNTIME/compiler/tex.vim)
 uses make command if possible.  If the compiler finds a file named "Makefile"
@@ -1512,7 +1511,7 @@ In English, that sed script:
   it as a "continuation of a multi-line message."
 </div></div>
 <div class="old-help-para">						<a name="errorformat-ant"></a><code class="help-tag-right">errorformat-ant</code>
-For ant (<a href="http://jakarta.apache.org/">http://jakarta.apache.org/</a>) the above errorformat has to be modified
+For ant (<a href="https://jakarta.apache.org/">https://jakarta.apache.org/</a>) the above errorformat has to be modified
 to honour the leading [javac] in front of each javac output line:<pre>:set efm=%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%-C%.%#</pre>
 The <a href="options.html#'errorformat'">'errorformat'</a> can also be configured to handle ant together with either
 javac or jikes.  If you're using jikes, you should tell ant to use jikes' +E
@@ -1683,7 +1682,7 @@ endfunc</pre></div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-14 06:29 from <code><a href="https://github.com/neovim/neovim/commit/d339b4aad7461937e1e03ac0836b2eb1354ff442">d339b4a</a></code>
+        Generated at 2022-10-15 06:02 from <code><a href="https://github.com/neovim/neovim/commit/1c478391ca7754bf5ecb4b76c29acfa9b4978393">1c47839</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 2 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+quickfix.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/quickfix.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="  Nvim

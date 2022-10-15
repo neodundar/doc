@@ -668,19 +668,20 @@ vim.lsp.start({
 })</pre></div>
 <div class="old-help-para">    See <a href="lsp.html#vim.lsp.start_client()">vim.lsp.start_client()</a> for all available options. The most important
     are:</div>
-<div class="old-help-para">    <code>name</code> is an arbitrary name for the LSP client. It should be unique per
-    language server.</div>
-<div class="old-help-para">    <code>cmd</code> the command as list - used to start the language server. The command must
-    be present in the <code>$PATH</code> environment variable or an absolute path to the executable. Shell
-    constructs like <code>~</code> are NOT expanded.</div>
-<div class="old-help-para">    <code>root_dir</code> path to the project root. By default this is used to decide if
-    an existing client should be re-used. The example above uses
-    <a href="lua.html#vim.fs.find()">vim.fs.find()</a> and <a href="lua.html#vim.fs.dirname()">vim.fs.dirname()</a> to detect the root by traversing
-    the file system upwards starting from the current directory until either a
-    <code>pyproject.toml</code> or <code>setup.py</code> file is found.</div>
-<div class="old-help-para">    <code>workspace_folders</code> a list of { uri:string, name: string } tables. The
-    project root folders used by the language server. If <code>nil</code> the property is
-    derived from the <code>root_dir</code> for convenience.</div>
+<div class="old-help-para"><div class="help-li" style=""> <code>name</code> arbitrary name for the LSP client. Should be unique per language
+      server.
+</div><div class="help-li" style=""> <code>cmd</code> command (in list form) used to start the language server. Must be
+      absolute, or found on <code>$PATH</code>. Shell constructs like <code>~</code> are not
+      expanded.
+</div><div class="help-li" style=""> <code>root_dir</code> path to the project root. By default this is used to decide
+      if an existing client should be re-used. The example above uses
+      <a href="lua.html#vim.fs.find()">vim.fs.find()</a> and <a href="lua.html#vim.fs.dirname()">vim.fs.dirname()</a> to detect the root by traversing
+      the file system upwards starting from the current directory until either
+      a <code>pyproject.toml</code> or <code>setup.py</code> file is found.
+</div><div class="help-li" style=""> <code>workspace_folders</code> list of <code>{ uri:string, name: string }</code> tables
+      specifying the project root folders used by the language server. If
+      <code>nil</code> the property is derived from <code>root_dir</code> for convenience.
+</div></div>
 <div class="old-help-para">    Language servers use this information to discover metadata like the
     dependencies of your project and they tend to index the contents within
     the project folder.</div>
@@ -1579,7 +1580,7 @@ Lua module: vim.lsp.protocol                                    </a>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-14 06:28 from <code><a href="https://github.com/neovim/neovim/commit/d339b4aad7461937e1e03ac0836b2eb1354ff442">d339b4a</a></code>
+        Generated at 2022-10-15 06:02 from <code><a href="https://github.com/neovim/neovim/commit/1c478391ca7754bf5ecb4b76c29acfa9b4978393">1c47839</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+lsp.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/lsp.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   LSP

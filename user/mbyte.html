@@ -340,30 +340,7 @@ also be specified with the <a href="options.html#'charconvert'">'charconvert'</a
     All:	    iconv
 	GNU iconv can convert most encodings.  Unicode is used as the
 	intermediate encoding, which allows conversion from and to all other
-	encodings.  See <a href="http://www.gnu.org/directory/libiconv.html">http://www.gnu.org/directory/libiconv.html</a>.</div>
-<div class="old-help-para">    Japanese:	    nkf
-	Nkf is "Network Kanji code conversion Filter".  One of the most unique
-	facility of nkf is the guess of the input Kanji code.  So, you don't
-	need to know what the inputting file's <a href="mbyte.html#charset">charset</a> is.  When convert to
-	EUC-JP from ISO-2022-JP or Shift_JIS, simply do the following command
-	in Vim:
-	    :%!nkf -e
-	Nkf can be found at:
-	<a href="http://www.sfc.wide.ad.jp/~max/FreeBSD/ports/distfiles/nkf-1.62.tar.gz">http://www.sfc.wide.ad.jp/~max/FreeBSD/ports/distfiles/nkf-1.62.tar.gz</a></div>
-<div class="old-help-para">    Chinese:	    hc
-	Hc is "Hanzi Converter".  Hc convert a GB file to a Big5 file, or Big5
-	file to GB file.  Hc can be found at:
-	ftp://ftp.cuhk.hk/pub/chinese/ifcss/software/unix/convert/hc-30.tar.gz</div>
-<div class="old-help-para">    Korean:	    hmconv
-	Hmconv is Korean code conversion utility especially for E-mail.  It can
-	convert between EUC-KR and ISO-2022-KR.  Hmconv can be found at:
-	ftp://ftp.kaist.ac.kr/pub/hangul/code/hmconv/</div>
-<div class="old-help-para">    Multilingual:   lv
-	Lv is a Powerful Multilingual File Viewer.  And it can be worked as
-	<a href="mbyte.html#charset">charset</a> converter.  Supported <a href="mbyte.html#charset">charset</a>: ISO-2022-CN, ISO-2022-JP,
-	ISO-2022-KR, EUC-CN, EUC-JP, EUC-KR, EUC-TW, UTF-7, UTF-8, ISO-8859
-	series, Shift_JIS, Big5 and HZ.  Lv can be found at:
-	<a href="http://www.ff.iij4u.or.jp/~nrt/lv/index.html">http://www.ff.iij4u.or.jp/~nrt/lv/index.html</a></div>
+	encodings.  See <a href="https://directory.fsf.org/wiki/Libiconv">https://directory.fsf.org/wiki/Libiconv</a>.</div>
 <div class="old-help-para">							<a name="mbyte-conversion"></a><code class="help-tag-right">mbyte-conversion</code>
 When reading and writing files in an encoding different from "utf-8",
 conversion needs to be done.  These conversions are supported:
@@ -393,15 +370,6 @@ is suitable for complex input, such as CJK.</div>
   large overhead in communication, but it provides safe synchronization with
   no restrictions on applications.
 </div></div>
-<div class="old-help-para">  For example, there are xwnmo and kinput2 Japanese <a href="mbyte.html#IM-server">IM-server</a>, both are
-  FrontEnd system.  Xwnmo is distributed with Wnn (see below), kinput2 can be
-  found at: ftp://ftp.sra.co.jp/pub/x11/kinput2/</div>
-<div class="old-help-para">  For Chinese, there's a great XIM server named "xcin", you can input both
-  Traditional and Simplified Chinese characters.  And it can accept other
-  locale if you make a correct input table.  Xcin can be found at:
-  <a href="http://cle.linux.org.tw/xcin/">http://cle.linux.org.tw/xcin/</a>
-  Others are scim: <a href="http://scim.freedesktop.org/">http://scim.freedesktop.org/</a> and fcitx:
-  <a href="http://www.fcitx.org/">http://www.fcitx.org/</a></div>
 <div class="old-help-para"><div class="help-li" style=""> Conversion Server
 							<a name="conversion-server"></a><code class="help-tag-right">conversion-server</code>
   Some system needs additional server: conversion server.  Most of Japanese
@@ -867,7 +835,7 @@ Overview of options					</a>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-14 06:28 from <code><a href="https://github.com/neovim/neovim/commit/d339b4aad7461937e1e03ac0836b2eb1354ff442">d339b4a</a></code>
+        Generated at 2022-10-15 06:02 from <code><a href="https://github.com/neovim/neovim/commit/1c478391ca7754bf5ecb4b76c29acfa9b4978393">1c47839</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+mbyte.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/mbyte.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="     Nvim

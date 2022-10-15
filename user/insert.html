@@ -1153,15 +1153,8 @@ in <a href="options.html#'runtimepath'">'runtimepath'</a>.  Thus for "java" it i
 <div class="old-help-para">Completion of C code requires a tags file.  You should use Universal/
 Exuberant ctags, because it adds extra information that is needed for
 completion.  You can find it here:
-	Universal Ctags: <a href="https://ctags.io">https://ctags.io</a>
-	Exuberant Ctags: <a href="http://ctags.sourceforge.net">http://ctags.sourceforge.net</a></div>
-<div class="old-help-para">Universal Ctags is preferred, Exuberant Ctags is no longer being developed.</div>
-<div class="old-help-para">For Exuberant ctags, version 5.6 or later is recommended.  For version 5.5.4
-you should add a patch that adds the "typename:" field:
-	ftp://ftp.vim.org/pub/vim/unstable/patches/ctags-5.5.4.patch
-A compiled .exe for MS-Windows can be found at:
-	<a href="http://ctags.sourceforge.net/">http://ctags.sourceforge.net/</a>
-	<a href="https://github.com/universal-ctags/ctags-win32">https://github.com/universal-ctags/ctags-win32</a></div>
+	Universal Ctags: <a href="https://ctags.io">https://ctags.io</a></div>
+<div class="old-help-para">Universal Ctags is preferred, Exuberant Ctags is no longer maintained.</div>
 <div class="old-help-para">If you want to complete system functions you can do something like this.  Use
 ctags to generate a tags file for all the system header files:<pre>% ctags -R -f ~/.config/nvim/systags /usr/include /usr/local/include</pre>
 In your vimrc file add this tags file to the <a href="options.html#'tags'">'tags'</a> option:<pre>set tags+=~/.config/nvim/systags</pre>
@@ -1234,7 +1227,7 @@ of external files).</div>
 <div class="old-help-para">At the moment (beginning of 2006) there are two main browsers - MS Internet
 Explorer and Mozilla Firefox. These two applications are covering over 90% of
 market. Theoretically standards are created by W3C organisation
-(<a href="http://www.w3c.org">http://www.w3c.org</a>) but they are not always followed/implemented.</div>
+(<a href="https://www.w3.org/">https://www.w3.org/</a>) but they are not always followed/implemented.</div>
 <div class="old-help-para"><div class="help-column_heading">		IE	FF	W3C  Omni completion</div><div class="help-column_heading">		+/-	+/-	+    +</div>+	+	-    ++	-	-    --	+	-    -</div>
 <div class="old-help-para">Regardless from state of implementation in browsers but if element is defined
 in standards, completion plugin will place element in suggestion list. When
@@ -1244,8 +1237,7 @@ will be suggested. All other elements are not placed in suggestion list.</div>
 <div class="old-help-para">Completion of PHP code requires a tags file for completion of data from
 external files and for class aware completion. You should use Universal/
 Exuberant ctags version 5.5.4 or newer. You can find it here:</div>
-<div class="old-help-para">	Universal Ctags: <a href="https://ctags.io">https://ctags.io</a>
-	Exuberant Ctags: <a href="http://ctags.sourceforge.net">http://ctags.sourceforge.net</a></div>
+<div class="old-help-para">	Universal Ctags: <a href="https://ctags.io">https://ctags.io</a></div>
 <div class="old-help-para">Script completes:</div>
 <div class="old-help-para"><div class="help-li" style=""> after $ variables name
 </div><div class="help-li" style="margin-left: 3rem;"> if variable was declared as object add "-&gt;", if tags file is available show
@@ -1457,10 +1449,10 @@ variables/functions and can be used for personal editing functions.</div>
 <div class="old-help-para">DTD -&gt; Vim							<a name="dtd2vim"></a><code class="help-tag-right">dtd2vim</code></div>
 <div class="old-help-para">On <a href="intro.html#www">www</a> is the script <a href="insert.html#dtd2vim">dtd2vim</a> which parses DTD and creates an XML data file
 for Vim XML omni completion.</div>
-<div class="old-help-para">    dtd2vim: <a href="http://www.vim.org/scripts/script.php?script_id=1462">http://www.vim.org/scripts/script.php?script_id=1462</a></div>
+<div class="old-help-para">    dtd2vim: <a href="https://www.vim.org/scripts/script.php?script_id=1462">https://www.vim.org/scripts/script.php?script_id=1462</a></div>
 <div class="old-help-para">Check the beginning of that file for usage details.
 The script requires perl and:</div>
-<div class="old-help-para">    perlSGML: <a href="http://savannah.nongnu.org/projects/perlsgml">http://savannah.nongnu.org/projects/perlsgml</a></div>
+<div class="old-help-para">    perlSGML: <a href="https://savannah.nongnu.org/projects/perlsgml">https://savannah.nongnu.org/projects/perlsgml</a></div>
 <div class="old-help-para">Commands</div>
 <div class="old-help-para">:XMLns <code>{name}</code> [{namespace}]					<a name="%3AXMLns"></a><code class="help-tag-right">:XMLns</code></div>
 <div class="old-help-para">Vim has to know which data file should be used and with which namespace.  For
@@ -1718,7 +1710,7 @@ self explanatory.  Using the long or the short version depends on the
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-14 06:28 from <code><a href="https://github.com/neovim/neovim/commit/d339b4aad7461937e1e03ac0836b2eb1354ff442">d339b4a</a></code>
+        Generated at 2022-10-15 06:02 from <code><a href="https://github.com/neovim/neovim/commit/1c478391ca7754bf5ecb4b76c29acfa9b4978393">1c47839</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+insert.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/insert.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim
