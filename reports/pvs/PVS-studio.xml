@@ -146,6 +146,16 @@
   <PVS-Studio_Analysis_Log>
     <Level>2</Level>
     <ErrorType>warning</ErrorType>
+    <ErrorCode>V601</ErrorCode>
+    <Message>The value of 'char' type is implicitly cast to a char pointer.</Message>
+    <Line>4108</Line>
+    <File>./src/nvim/ops.c</File>
+    <CWECode>CWE-704</CWECode>
+    <SAST>CERT-INT36-C</SAST>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <Level>2</Level>
+    <ErrorType>warning</ErrorType>
     <ErrorCode>V557</ErrorCode>
     <Message>Array overrun is possible. The value of 'strlen(whichwrap) - 1' index could reach 18446744073709551615.</Message>
     <Line>880</Line>
@@ -154,24 +164,14 @@
     <SAST>CERT-ARR30-C</SAST>
   </PVS-Studio_Analysis_Log>
   <PVS-Studio_Analysis_Log>
-    <Level>2</Level>
-    <ErrorType>warning</ErrorType>
-    <ErrorCode>V601</ErrorCode>
-    <Message>The value of 'char' type is implicitly cast to a char pointer.</Message>
-    <Line>4105</Line>
-    <File>./src/nvim/ops.c</File>
-    <CWECode>CWE-704</CWECode>
-    <SAST>CERT-INT36-C</SAST>
-  </PVS-Studio_Analysis_Log>
-  <PVS-Studio_Analysis_Log>
     <Level>1</Level>
     <ErrorType>error</ErrorType>
     <ErrorCode>V781</ErrorCode>
     <Message>The value of the 'i' index is checked after it was used. Perhaps there is a mistake in program logic.</Message>
-    <Line>2923</Line>
+    <Line>2929</Line>
     <File>./src/nvim/spell.c</File>
     <Positions>
-      <Position lines="2923,2925,2929">./src/nvim/spell.c</Position>
+      <Position lines="2929,2931,2935">./src/nvim/spell.c</Position>
     </Positions>
     <CWECode>CWE-20</CWECode>
     <SAST>CERT-API00-C</SAST>

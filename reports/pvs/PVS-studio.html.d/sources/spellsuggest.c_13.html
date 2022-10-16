@@ -542,7 +542,7 @@
 <a name="ln533">      }</a>
 <a name="ln534">      vim_snprintf((char *)IObuff, IOSIZE, &quot;%2d&quot;, i + 1);</a>
 <a name="ln535">      if (cmdmsg_rl) {</a>
-<a name="ln536">        rl_mirror((char_u *)IObuff);</a>
+<a name="ln536">        rl_mirror(IObuff);</a>
 <a name="ln537">      }</a>
 <a name="ln538">      msg_puts((const char *)IObuff);</a>
 <a name="ln539"> </a>
@@ -568,7 +568,7 @@
 <a name="ln559">        }</a>
 <a name="ln560">        if (cmdmsg_rl) {</a>
 <a name="ln561">          // Mirror the numbers, but keep the leading space.</a>
-<a name="ln562">          rl_mirror((char_u *)IObuff + 1);</a>
+<a name="ln562">          rl_mirror(IObuff + 1);</a>
 <a name="ln563">        }</a>
 <a name="ln564">        msg_advance(30);</a>
 <a name="ln565">        msg_puts((const char *)IObuff);</a>

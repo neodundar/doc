@@ -379,7 +379,7 @@
 <a name="ln370">  pos_T end_pos;</a>
 <a name="ln371">  proftime_T tm;</a>
 <a name="ln372">  int skiplen, patlen;</a>
-<a name="ln373">  char_u next_char;</a>
+<a name="ln373">  char next_char;</a>
 <a name="ln374">  char_u use_last_pat;</a>
 <a name="ln375">  int search_delim;</a>
 <a name="ln376"> </a>
@@ -417,7 +417,7 @@
 <a name="ln408">  int found;  // do_search() result</a>
 <a name="ln409"> </a>
 <a name="ln410">  // Use the previous pattern for &quot;:s//&quot;.</a>
-<a name="ln411">  next_char = (char_u)ccline.cmdbuff[skiplen + patlen];</a>
+<a name="ln411">  next_char = ccline.cmdbuff[skiplen + patlen];</a>
 <a name="ln412">  use_last_pat = patlen == 0 &amp;&amp; skiplen &gt; 0</a>
 <a name="ln413">                 &amp;&amp; ccline.cmdbuff[skiplen - 1] == next_char;</a>
 <a name="ln414"> </a>
@@ -446,7 +446,7 @@
 <a name="ln437">    found = do_search(NULL, firstc == ':' ? '/' : firstc, search_delim,</a>
 <a name="ln438">                      (char_u *)ccline.cmdbuff + skiplen, count,</a>
 <a name="ln439">                      search_flags, &amp;sia);</a>
-<a name="ln440">    ccline.cmdbuff[skiplen + patlen] = (char)next_char;</a>
+<a name="ln440">    ccline.cmdbuff[skiplen + patlen] = next_char;</a>
 <a name="ln441">    emsg_off--;</a>
 <a name="ln442">    if (curwin-&gt;w_cursor.lnum &lt; search_first_line</a>
 <a name="ln443">        || curwin-&gt;w_cursor.lnum &gt; search_last_line) {</a>
@@ -495,13 +495,13 @@
 <a name="ln486">  // Disable 'hlsearch' highlighting if the pattern matches</a>
 <a name="ln487">  // everything. Avoids a flash when typing &quot;foo\|&quot;.</a>
 <a name="ln488">  if (!use_last_pat) {</a>
-<a name="ln489">    next_char = (char_u)ccline.cmdbuff[skiplen + patlen];</a>
+<a name="ln489">    next_char = ccline.cmdbuff[skiplen + patlen];</a>
 <a name="ln490">    ccline.cmdbuff[skiplen + patlen] = NUL;</a>
 <a name="ln491">    if (empty_pattern(ccline.cmdbuff) &amp;&amp; !no_hlsearch) {</a>
 <a name="ln492">      redraw_all_later(UPD_SOME_VALID);</a>
 <a name="ln493">      set_no_hlsearch(true);</a>
 <a name="ln494">    }</a>
-<a name="ln495">    ccline.cmdbuff[skiplen + patlen] = (char)next_char;</a>
+<a name="ln495">    ccline.cmdbuff[skiplen + patlen] = next_char;</a>
 <a name="ln496">  }</a>
 <a name="ln497"> </a>
 <a name="ln498">  validate_cursor();</a>
@@ -1060,7 +1060,7 @@
 <a name="ln1051">      vungetc(s-&gt;c);</a>
 <a name="ln1052">      s-&gt;c = Ctrl_BSL;</a>
 <a name="ln1053">    } else if (s-&gt;c == 'e') {</a>
-<a name="ln1054">      char_u *p = NULL;</a>
+<a name="ln1054">      char *p = NULL;</a>
 <a name="ln1055">      int len;</a>
 <a name="ln1056"> </a>
 <a name="ln1057">      // Replace the command line with the result of an expression.</a>
@@ -1075,11 +1075,11 @@
 <a name="ln1066">      s-&gt;c = get_expr_register();</a>
 <a name="ln1067">      if (s-&gt;c == '=') {</a>
 <a name="ln1068">        textlock++;</a>
-<a name="ln1069">        p = (char_u *)get_expr_line();</a>
+<a name="ln1069">        p = get_expr_line();</a>
 <a name="ln1070">        textlock--;</a>
 <a name="ln1071"> </a>
 <a name="ln1072">        if (p != NULL) {</a>
-<a name="ln1073">          len = (int)STRLEN(p);</a>
+<a name="ln1073">          len = (int)strlen(p);</a>
 <a name="ln1074">          realloc_cmdbuff(len + 1);</a>
 <a name="ln1075">          ccline.cmdlen = len;</a>
 <a name="ln1076">          STRCPY(ccline.cmdbuff, p);</a>
@@ -1312,20 +1312,20 @@
 <a name="ln1303">  ui_flush();</a>
 <a name="ln1304"> </a>
 <a name="ln1305">  pos_T t;</a>
-<a name="ln1306">  char_u *pat;</a>
+<a name="ln1306">  char *pat;</a>
 <a name="ln1307">  int search_flags = SEARCH_NOOF;</a>
-<a name="ln1308">  char_u save;</a>
+<a name="ln1308">  char save;</a>
 <a name="ln1309"> </a>
 <a name="ln1310">  if (search_delim == ccline.cmdbuff[skiplen]) {</a>
-<a name="ln1311">    pat = last_search_pattern();</a>
+<a name="ln1311">    pat = (char *)last_search_pattern();</a>
 <a name="ln1312">    if (pat == NULL) {</a>
 <a name="ln1313">      restore_last_search_pattern();</a>
 <a name="ln1314">      return FAIL;</a>
 <a name="ln1315">    }</a>
 <a name="ln1316">    skiplen = 0;</a>
-<a name="ln1317">    patlen = (int)STRLEN(pat);</a>
+<a name="ln1317">    patlen = (int)strlen(pat);</a>
 <a name="ln1318">  } else {</a>
-<a name="ln1319">    pat = (char_u *)ccline.cmdbuff + skiplen;</a>
+<a name="ln1319">    pat = ccline.cmdbuff + skiplen;</a>
 <a name="ln1320">  }</a>
 <a name="ln1321"> </a>
 <a name="ln1322">  if (next_match) {</a>
@@ -1347,7 +1347,7 @@
 <a name="ln1338">  pat[patlen] = NUL;</a>
 <a name="ln1339">  int found = searchit(curwin, curbuf, &amp;t, NULL,</a>
 <a name="ln1340">                       next_match ? FORWARD : BACKWARD,</a>
-<a name="ln1341">                       pat, count, search_flags,</a>
+<a name="ln1341">                       (char_u *)pat, count, search_flags,</a>
 <a name="ln1342">                       RE_SEARCH, NULL);</a>
 <a name="ln1343">  emsg_off--;</a>
 <a name="ln1344">  pat[patlen] = save;</a>
@@ -1852,21 +1852,21 @@
 <a name="ln1843"> </a>
 <a name="ln1844">    if (s-&gt;hiscnt != s-&gt;save_hiscnt) {</a>
 <a name="ln1845">      // jumped to other entry</a>
-<a name="ln1846">      char_u *p;</a>
+<a name="ln1846">      char *p;</a>
 <a name="ln1847">      int len = 0;</a>
 <a name="ln1848">      int old_firstc;</a>
 <a name="ln1849"> </a>
 <a name="ln1850">      XFREE_CLEAR(ccline.cmdbuff);</a>
 <a name="ln1851">      s-&gt;xpc.xp_context = EXPAND_NOTHING;</a>
 <a name="ln1852">      if (s-&gt;hiscnt == get_hislen()) {</a>
-<a name="ln1853">        p = (char_u *)s-&gt;lookfor;                  // back to the old one</a>
+<a name="ln1853">        p = s-&gt;lookfor;                  // back to the old one</a>
 <a name="ln1854">      } else {</a>
-<a name="ln1855">        p = (char_u *)get_histentry(s-&gt;histype)[s-&gt;hiscnt].hisstr;</a>
+<a name="ln1855">        p = get_histentry(s-&gt;histype)[s-&gt;hiscnt].hisstr;</a>
 <a name="ln1856">      }</a>
 <a name="ln1857"> </a>
 <a name="ln1858">      if (s-&gt;histype == HIST_SEARCH</a>
-<a name="ln1859">          &amp;&amp; p != (char_u *)s-&gt;lookfor</a>
-<a name="ln1860">          &amp;&amp; (old_firstc = p[STRLEN(p) + 1]) != s-&gt;firstc) {</a>
+<a name="ln1859">          &amp;&amp; p != s-&gt;lookfor</a>
+<a name="ln1860">          &amp;&amp; (old_firstc = (uint8_t)p[strlen(p) + 1]) != s-&gt;firstc) {</a>
 <a name="ln1861">        // Correct for the separator character used when</a>
 <a name="ln1862">        // adding the history entry vs the one used now.</a>
 <a name="ln1863">        // First loop: count length.</a>
@@ -1893,7 +1893,7 @@
 <a name="ln1884">              }</a>
 <a name="ln1885"> </a>
 <a name="ln1886">              if (i &gt; 0) {</a>
-<a name="ln1887">                ccline.cmdbuff[len] = (char)p[j];</a>
+<a name="ln1887">                ccline.cmdbuff[len] = p[j];</a>
 <a name="ln1888">              }</a>
 <a name="ln1889">            }</a>
 <a name="ln1890">            len++;</a>
@@ -1905,7 +1905,7 @@
 <a name="ln1896">        }</a>
 <a name="ln1897">        ccline.cmdbuff[len] = NUL;</a>
 <a name="ln1898">      } else {</a>
-<a name="ln1899">        alloc_cmdbuff((int)STRLEN(p));</a>
+<a name="ln1899">        alloc_cmdbuff((int)strlen(p));</a>
 <a name="ln1900">        STRCPY(ccline.cmdbuff, p);</a>
 <a name="ln1901">      }</a>
 <a name="ln1902"> </a>
@@ -3390,7 +3390,7 @@
 <a name="ln3381">  int c;</a>
 <a name="ln3382"> </a>
 <a name="ln3383">  if (len &lt; 0) {</a>
-<a name="ln3384">    len = (int)STRLEN(str);</a>
+<a name="ln3384">    len = (int)strlen((char *)str);</a>
 <a name="ln3385">  }</a>
 <a name="ln3386"> </a>
 <a name="ln3387">  realloc_cmdbuff(ccline.cmdlen + len + 1);</a>
