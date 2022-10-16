@@ -2984,7 +2984,7 @@ augroup END</pre></div>
 	in Insert mode as specified with the <a href="options.html#'indentkeys'">'indentkeys'</a> option.
 	When this option is not empty, it overrules the <a href="options.html#'cindent'">'cindent'</a> and
 	<a href="options.html#'smartindent'">'smartindent'</a> indenting.  When <a href="options.html#'lisp'">'lisp'</a> is set, this option is
-	overridden by the Lisp indentation algorithm.
+	is only used when <a href="options.html#'lispoptions'">'lispoptions'</a> contains "expr:1".
 	When <a href="options.html#'paste'">'paste'</a> is set this option is not used for indenting.
 	The expression is evaluated with <a href="eval.html#v%3Alnum">v:lnum</a> set to the line number for
 	which the indent is to be computed.  The cursor is also in this line
@@ -3310,6 +3310,16 @@ augroup END</pre></div>
 	"=" operator to use this same indentation algorithm rather than
 	calling an external program if <a href="options.html#'equalprg'">'equalprg'</a> is empty.
 	This option is not used when <a href="options.html#'paste'">'paste'</a> is set.</div>
+<div class="old-help-para">						<a name="'lispoptions'"></a><code class="help-tag-right">'lispoptions'</code> <a name="'lop'"></a><code class="help-tag">'lop'</code>
+<a href="options.html#'lispoptions'">'lispoptions'</a> <a href="options.html#'lop'">'lop'</a>	string	(default "")
+			local to buffer
+	Comma-separated list of items that influence the Lisp indenting when
+	enabled with the <a href="options.html#'lisp'">'lisp'</a> option.  Currently only one item is
+	supported:
+		expr:1	use <a href="options.html#'indentexpr'">'indentexpr'</a> for Lisp indenting when it is set
+		expr:0	do not use <a href="options.html#'indentexpr'">'indentexpr'</a> for Lisp indenting (default)
+	Note that when using <a href="options.html#'indentexpr'">'indentexpr'</a> the <code>=</code> operator indents all the
+	lines, otherwise the first line is not indented (Vi-compatible).</div>
 <div class="old-help-para">						<a name="'lispwords'"></a><code class="help-tag-right">'lispwords'</code> <a name="'lw'"></a><code class="help-tag">'lw'</code>
 <a href="options.html#'lispwords'">'lispwords'</a> <a href="options.html#'lw'">'lw'</a>	string	(default is very long)
 			global or local to buffer <a href="options.html#global-local">global-local</a>
@@ -6431,7 +6441,7 @@ endfunc</pre></div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-15 06:02 from <code><a href="https://github.com/neovim/neovim/commit/1c478391ca7754bf5ecb4b76c29acfa9b4978393">1c47839</a></code>
+        Generated at 2022-10-16 06:01 from <code><a href="https://github.com/neovim/neovim/commit/0b71960ab1bcbcc42f2d6abba4c72cd6ac3c840b">0b71960</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 3 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+options.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/options.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim

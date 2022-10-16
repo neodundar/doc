@@ -1120,9 +1120,9 @@ The commands are sorted on the non-optional part of their name.</div>
 <a href="various.html#%3A%21%21">:!!</a>		:!!		repeat last ":!" command
 <a href="various.html#%3A%23">:#</a>		:#		same as ":number"
 <a href="change.html#%3A%26">:&amp;</a>		:&amp;		repeat last ":substitute"
-<a href="cmdline.html#%3Astar">:star</a>		:*		execute contents of a register
+<a href="cmdline.html#%3Astar">:star</a>		:*		use the last Visual area, like :'&lt;,'&gt;
 <a href="change.html#%3A%3C">:&lt;</a>		:&lt;		shift lines one <a href="options.html#'shiftwidth'">'shiftwidth'</a> left
-<a href="various.html#%3A%3D">:=</a>		:=		print the cursor line number
+<a href="various.html#%3A%3D">:=</a>		:=		print the last line number
 <a href="change.html#%3A%3E">:&gt;</a>		:&gt;		shift lines one <a href="options.html#'shiftwidth'">'shiftwidth'</a> right
 <a href="repeat.html#%3A%40">:@</a>		:@		execute contents of a register
 <a href="repeat.html#%3A%40%40">:@@</a>		:@@		repeat the previous ":@"
@@ -1314,6 +1314,7 @@ The commands are sorted on the non-optional part of their name.</div>
 <a href="syntax.html#%3Ahighlight">:highlight</a>	:hi[ghlight]	specify highlighting methods
 <a href="windows.html#%3Ahide">:hide</a>		:hid[e]		hide current buffer for a command
 <a href="cmdline.html#%3Ahistory">:history</a>	:his[tory]	print a history list
+<a href="windows.html#%3Ahorizontal">:horizontal</a>	:hor[izontal]	following window command work horizontally
 <a href="insert.html#%3Ainsert">:insert</a>	:i[nsert]	insert text
 <a href="map.html#%3Aiabbrev">:iabbrev</a>	:ia[bbrev]	like ":abbrev" but for Insert mode
 <a href="map.html#%3Aiabclear">:iabclear</a>	:iabc[lear]	like ":abclear" but for Insert mode
@@ -1749,7 +1750,7 @@ The commands are sorted on the non-optional part of their name.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-15 06:02 from <code><a href="https://github.com/neovim/neovim/commit/1c478391ca7754bf5ecb4b76c29acfa9b4978393">1c47839</a></code>
+        Generated at 2022-10-16 06:01 from <code><a href="https://github.com/neovim/neovim/commit/0b71960ab1bcbcc42f2d6abba4c72cd6ac3c840b">0b71960</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+index.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/vimindex.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="     Nvim

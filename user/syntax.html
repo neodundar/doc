@@ -2557,9 +2557,10 @@ keyword with ignoring case.</div>
 	"ignore".  Note that any items before this are not affected, and all
 	items until the next ":syntax case" command are affected.</div>
 <div class="old-help-para">:sy[ntax] case
-	Show either "syntax case match" or "syntax case ignore" (translated).</div>
+	Show either "syntax case match" or "syntax case ignore".</div>
 <div class="old-help-para"><h3 class="help-heading">DEFINING FOLDLEVEL<span class="help-heading-tags">					<a name="%3Asyn-foldlevel"></a><span class="help-tag">:syn-foldlevel</span></h3></div>
-<div class="old-help-para">:sy[ntax] foldlevel [start |  minimum]
+<div class="old-help-para">:sy[ntax] foldlevel start
+:sy[ntax] foldlevel minimum
 	This defines how the foldlevel of a line is computed when using
 	foldmethod=syntax (see <a href="fold.html#fold-syntax">fold-syntax</a> and <a href="syntax.html#%3Asyn-fold">:syn-fold</a>):</div>
 <div class="old-help-para">	start:		Use level of item containing start of line.
@@ -2569,9 +2570,12 @@ keyword with ignoring case.</div>
 	higher level.  This produces more natural folds when syntax items
 	may close and open horizontally within a line.</div>
 <div class="old-help-para">:sy[ntax] foldlevel
-	Show either "syntax foldlevel start" or "syntax foldlevel minimum".</div>
+	Show the current foldlevel method, either "syntax foldlevel start" or
+	"syntax foldlevel minimum".</div>
 <div class="old-help-para"><h3 class="help-heading">SPELL CHECKING<span class="help-heading-tags">						<a name="%3Asyn-spell"></a><span class="help-tag">:syn-spell</span></h3></div>
-<div class="old-help-para">:sy[ntax] spell [toplevel |  notoplevel |  default]
+<div class="old-help-para">:sy[ntax] spell toplevel
+:sy[ntax] spell notoplevel
+:sy[ntax] spell default
 	This defines where spell checking is to be done for text that is not
 	in a syntax item:</div>
 <div class="old-help-para">	toplevel:	Text is spell checked.
@@ -2582,8 +2586,8 @@ keyword with ignoring case.</div>
 	spell checking is done for "default" and "toplevel".</div>
 <div class="old-help-para">	To activate spell checking the <a href="options.html#'spell'">'spell'</a> option must be set.</div>
 <div class="old-help-para">:sy[ntax] spell
-	Show either "syntax spell toplevel", "syntax spell notoplevel" or
-	"syntax spell default" (translated).</div>
+	Show the current syntax spell checking method, either "syntax spell
+	toplevel", "syntax spell notoplevel" or "syntax spell default".</div>
 <div class="old-help-para"><h3 class="help-heading">SYNTAX ISKEYWORD SETTING<span class="help-heading-tags">				<a name="%3Asyn-iskeyword"></a><span class="help-tag">:syn-iskeyword</span></h3></div>
 <div class="old-help-para">:sy[ntax] iskeyword [clear |  <code>{option}</code>]
 	This defines the keyword characters.  It's like the <a href="options.html#'iskeyword'">'iskeyword'</a> option
@@ -3044,7 +3048,7 @@ example).</div>
 	off" returns to the normal state where the "conceal" flag must be
 	given explicitly.</div>
 <div class="old-help-para">:sy[ntax] conceal
-	Show either "syntax conceal on" or "syntax conceal off" (translated).</div>
+	Show either "syntax conceal on" or "syntax conceal off".</div>
 <div class="old-help-para"><h2 class="help-heading">8. Syntax patterns<span class="help-heading-tags">				<a name="%3Asyn-pattern"></a><span class="help-tag">:syn-pattern</span> <a name="E401"></a><span class="help-tag">E401</span> <a name="E402"></a><span class="help-tag">E402</span></span></h2></div>
 <div class="old-help-para">In the syntax commands, a pattern must be surrounded by two identical
 characters.  This is like it works for the ":s" command.  The most common to
@@ -4013,7 +4017,7 @@ literal text specify the size of that text (in bytes):</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-15 06:03 from <code><a href="https://github.com/neovim/neovim/commit/1c478391ca7754bf5ecb4b76c29acfa9b4978393">1c47839</a></code>
+        Generated at 2022-10-16 06:01 from <code><a href="https://github.com/neovim/neovim/commit/0b71960ab1bcbcc42f2d6abba4c72cd6ac3c840b">0b71960</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 2 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+syntax.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/syntax.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim
