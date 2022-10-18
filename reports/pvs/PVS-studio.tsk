@@ -14,7 +14,7 @@ pvs-studio.com/en/docs/warnings/	1	err	Help: The documentation for all analyzer 
 ./src/nvim/msgpack_rpc/unpacker.c	402	err	V501 There are identical sub-expressions to the left and to the right of the '==' operator: MPACK_TOKEN_STR == MPACK_TOKEN_STR
 ./src/nvim/msgpack_rpc/unpacker.c	463	err	V501 There are identical sub-expressions to the left and to the right of the '==' operator: MPACK_TOKEN_STR == MPACK_TOKEN_STR
 ./src/nvim/msgpack_rpc/unpacker.c	474	err	V501 There are identical sub-expressions to the left and to the right of the '==' operator: MPACK_TOKEN_SINT == MPACK_TOKEN_SINT
-./src/nvim/option.c	880	warn	V557 Array overrun is possible. The value of 'strlen(whichwrap) - 1' index could reach 18446744073709551615.
 ./src/nvim/ops.c	4108	warn	V601 The value of 'char' type is implicitly cast to a char pointer.
+./src/nvim/option.c	880	warn	V557 Array overrun is possible. The value of 'strlen(whichwrap) - 1' index could reach 18446744073709551615.
 ./src/nvim/spell.c	2929	err	V781 The value of the 'i' index is checked after it was used. Perhaps there is a mistake in program logic.
 ./src/nvim/spellsuggest.c	1155	warn	V1086 A call of the 'memset' function will lead to underflow of the buffer 'sp'.
