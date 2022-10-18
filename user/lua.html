@@ -2774,11 +2774,6 @@ add(<code>{filetypes}</code>)                                          <a name="
 
 </div>
 <div class="help-para">
-    Note that Lua filetype detection is disabled when <a href="filetype.html#g%3Ado_legacy_filetype">g:do_legacy_filetype</a>
-    is set.
-
-</div>
-<div class="help-para">
     Example:<pre>
 vim.filetype.add({
   extension = {
@@ -2815,7 +2810,7 @@ vim.filetype.add({
 
 </div>
 <div class="help-para">
-    To add a fallback match on contents (see <a href="filetype.html#new-filetype-scripts">new-filetype-scripts</a>), use<pre>
+    To add a fallback match on contents, use<pre>
 vim.filetype.add {
   pattern = {
     ['.*'] = {
@@ -3202,7 +3197,7 @@ Lua module: fs                                                        </a>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-17 06:35 from <code><a href="https://github.com/neovim/neovim/commit/8617101b6bf21bf27ba5194db5fb42c73ff67160">8617101</a></code>
+        Generated at 2022-10-18 06:31 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 1 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+lua.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/lua.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim

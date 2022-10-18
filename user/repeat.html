@@ -304,7 +304,7 @@ Q			Repeat the last recorded register [count] times.
 			"autoload" directory.  See <a href="repeat.html#packload-two-steps">packload-two-steps</a> for
 			how this can be useful.</div>
 <div class="old-help-para">			This is normally done automatically during startup,
-			after loading your .vimrc file.  With this command it
+			after loading your <a href="starting.html#vimrc">vimrc</a> file.  With this command it
 			can be done earlier.</div>
 <div class="old-help-para">			Packages will be loaded only once.  Using
 			<code>:packloadall</code> a second time will have no effect.
@@ -505,6 +505,10 @@ add a package from a zip archive "/tmp/foopack.zip":
 	pack/foo/opt/foodebug/plugin/debugger.vim</div>
 <div class="old-help-para">On startup after processing your <a href="starting.html#config">config</a>, Nvim scans all directories in
 <a href="options.html#'packpath'">'packpath'</a> for plugins in "pack/*/start/*", then loads the plugins.</div>
+<div class="old-help-para">To allow for calling into package functionality while parsing your <a href="starting.html#vimrc">vimrc</a>,
+<a href="syntax.html#%3Acolorscheme">:colorscheme</a> and <a href="userfunc.html#autoload">autoload</a> will both automatically search under <a href="options.html#'packpath'">'packpath'</a>
+as well in addition to <a href="options.html#'runtimepath'">'runtimepath'</a>.  See the documentation for each for
+details.</div>
 <div class="old-help-para">In the example Nvim will find "pack/foo/start/foobar/plugin/foo.vim" and load
 it.</div>
 <div class="old-help-para">If the "foobar" plugin kicks in and sets the <a href="options.html#'filetype'">'filetype'</a> to "some", Nvim will
@@ -917,7 +921,7 @@ Context							</a>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-17 06:36 from <code><a href="https://github.com/neovim/neovim/commit/8617101b6bf21bf27ba5194db5fb42c73ff67160">8617101</a></code>
+        Generated at 2022-10-18 06:32 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+repeat.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/repeat.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim

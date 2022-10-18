@@ -374,7 +374,10 @@ file should then define the function like this:<pre>
 function filename#funcname()
    echo "Done!"
 endfunction</pre>
-The file name and the name used before the # in the function must match
+If the file doesn't exist, Vim will also search in <a href="options.html#'packpath'">'packpath'</a> (under "start")
+to allow calling packages' functions from your <a href="starting.html#vimrc">vimrc</a> when the packages have
+not been added to <a href="options.html#'runtimepath'">'runtimepath'</a> yet (see <a href="repeat.html#packages">packages</a>).</div>
+<div class="old-help-para">The file name and the name used before the # in the function must match
 exactly, and the defined function must have the name exactly as it will be
 called.</div>
 <div class="old-help-para">It is possible to use subdirectories.  Every # in the function name works like
@@ -416,7 +419,7 @@ Avoid using the autoload functionality at the toplevel.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-17 06:36 from <code><a href="https://github.com/neovim/neovim/commit/8617101b6bf21bf27ba5194db5fb42c73ff67160">8617101</a></code>
+        Generated at 2022-10-18 06:32 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+userfunc.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/userfunc.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim

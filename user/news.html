@@ -99,30 +99,30 @@ The following changes may require adaptations in user config or plugins.
 
 </div>
 <div class="help-para">
-Cscope is now removed (see <a href="vim_diff.html#cscope">cscope</a> and <a href="vim_diff.html#nvim-features-removed">nvim-features-removed</a>):
-<div class="help-li" style=""> Commands removed:
-</div><div class="help-li" style="margin-left: 3rem;"> <code>:cscope</code>
-</div><div class="help-li" style="margin-left: 3rem;"> <code>:lcscope</code>
-</div><div class="help-li" style="margin-left: 3rem;"> <code>:scscope</code>
-</div><div class="help-li" style="margin-left: 3rem;"> <code>:cstag</code>
-</div><div class="help-li" style=""> Options removed:
-</div><div class="help-li" style="margin-left: 3rem;"> <code>cscopepathcomp</code>
-</div><div class="help-li" style="margin-left: 3rem;"> <code>cscopeprg</code>
-</div><div class="help-li" style="margin-left: 3rem;"> <code>cscopequickfix</code>
-</div><div class="help-li" style="margin-left: 3rem;"> <code>cscoperelative</code>
-</div><div class="help-li" style="margin-left: 3rem;"> <code>cscopetag</code>
-</div><div class="help-li" style="margin-left: 3rem;"> <code>cscopetagorder</code>
-</div><div class="help-li" style="margin-left: 3rem;"> <code>cscopeverbose</code>
-</div><div class="help-li" style=""> Eval functions removed:
-</div><div class="help-li" style="margin-left: 3rem;"> <code>cscope_connection()</code>
+<div class="help-li" style=""> Cscope is now removed (see <a href="vim_diff.html#cscope">cscope</a> and <a href="vim_diff.html#nvim-features-removed">nvim-features-removed</a>):
+</div><div class="help-li" style="margin-left: 3rem;"> Commands removed:
+</div><div class="help-li" style="margin-left: 4rem;"> <code>:cscope</code>
+</div><div class="help-li" style="margin-left: 4rem;"> <code>:lcscope</code>
+</div><div class="help-li" style="margin-left: 4rem;"> <code>:scscope</code>
+</div><div class="help-li" style="margin-left: 4rem;"> <code>:cstag</code>
+</div><div class="help-li" style="margin-left: 3rem;"> Options removed:
+</div><div class="help-li" style="margin-left: 4rem;"> <code>cscopepathcomp</code>
+</div><div class="help-li" style="margin-left: 4rem;"> <code>cscopeprg</code>
+</div><div class="help-li" style="margin-left: 4rem;"> <code>cscopequickfix</code>
+</div><div class="help-li" style="margin-left: 4rem;"> <code>cscoperelative</code>
+</div><div class="help-li" style="margin-left: 4rem;"> <code>cscopetag</code>
+</div><div class="help-li" style="margin-left: 4rem;"> <code>cscopetagorder</code>
+</div><div class="help-li" style="margin-left: 4rem;"> <code>cscopeverbose</code>
+</div><div class="help-li" style="margin-left: 3rem;"> Eval functions removed:
+</div><div class="help-li" style="margin-left: 4rem;"> <code>cscope_connection()</code>
 </div>
 </div>
 <div class="help-para">
-Note: support for <a href="tagsrch.html#ctags">ctags</a> remains with no plans to remove.
+  Note: support for <a href="tagsrch.html#ctags">ctags</a> remains with no plans to remove.
 
 </div>
 <div class="help-para">
-See <a href="https://github.com/neovim/neovim/pull/20545">https://github.com/neovim/neovim/pull/20545</a> for more information.
+  See <a href="https://github.com/neovim/neovim/pull/20545">https://github.com/neovim/neovim/pull/20545</a> for more information.
 
 </div>
 <div class="help-para">
@@ -132,6 +132,10 @@ See <a href="https://github.com/neovim/neovim/pull/20545">https://github.com/neo
 </div>
 <div class="help-para">
 The following new APIs or features were added.
+
+</div>
+<div class="help-para">
+<a href="api.html#nvim_select_popupmenu_item()">nvim_select_popupmenu_item()</a> now supports <a href="cmdline.html#cmdline-completion">cmdline-completion</a> popup menu.
 
 </div>
 <div class="help-para">
@@ -151,6 +155,13 @@ The following changes to existing APIs or features add new behavior.
 <div class="help-para">
 The following deprecated functions or APIs were removed.
 
+</div>
+<div class="help-para">
+<div class="help-li" style=""> <code>filetype.vim</code> is removed in favor of <a href="lua.html#lua-filetype">lua-filetype</a>
+  (Note that filetype logic and tests still align with Vim, so additions or
+  changes need to be contributed there first.)
+  See <a href="https://github.com/neovim/neovim/pull/20674">https://github.com/neovim/neovim/pull/20674</a>.
+</div>
 </div>
 <div class="help-para">
 <h2 class="help-heading">DEPRECATIONS<span class="help-heading-tags">                                                <a name="news-deprecations"></a><span class="help-tag">news-deprecations</span></h2>
@@ -184,7 +195,7 @@ DEPRECATIONS                                                </a>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-17 06:36 from <code><a href="https://github.com/neovim/neovim/commit/8617101b6bf21bf27ba5194db5fb42c73ff67160">8617101</a></code>
+        Generated at 2022-10-18 06:32 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+news.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/news.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim
