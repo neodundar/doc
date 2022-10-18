@@ -10,24 +10,6 @@
     <CWECode>CWE-1164</CWECode>
   </PVS-Studio_Analysis_Log>
   <PVS-Studio_Analysis_Log>
-    <Level>2</Level>
-    <ErrorType>warning</ErrorType>
-    <ErrorCode>V1086</ErrorCode>
-    <Message>A call of the 'memcpy' function will lead to underflow of the buffer 'dst'.</Message>
-    <Line>137</Line>
-    <File>./src/mpack/object.c</File>
-    <CWECode>CWE-682</CWECode>
-  </PVS-Studio_Analysis_Log>
-  <PVS-Studio_Analysis_Log>
-    <Level>2</Level>
-    <ErrorType>warning</ErrorType>
-    <ErrorCode>V1086</ErrorCode>
-    <Message>A call of the 'memcpy' function will lead to underflow of the buffer 'src'.</Message>
-    <Line>137</Line>
-    <File>./src/mpack/object.c</File>
-    <CWECode>CWE-682</CWECode>
-  </PVS-Studio_Analysis_Log>
-  <PVS-Studio_Analysis_Log>
     <Level>1</Level>
     <ErrorType>error</ErrorType>
     <ErrorCode>V610</ErrorCode>
@@ -47,6 +29,24 @@
     <Positions>
       <Position lines="31,482,483,484,485,481">./src/mpack/mpack_core.c</Position>
     </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <Level>2</Level>
+    <ErrorType>warning</ErrorType>
+    <ErrorCode>V1086</ErrorCode>
+    <Message>A call of the 'memcpy' function will lead to underflow of the buffer 'dst'.</Message>
+    <Line>137</Line>
+    <File>./src/mpack/object.c</File>
+    <CWECode>CWE-682</CWECode>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <Level>2</Level>
+    <ErrorType>warning</ErrorType>
+    <ErrorCode>V1086</ErrorCode>
+    <Message>A call of the 'memcpy' function will lead to underflow of the buffer 'src'.</Message>
+    <Line>137</Line>
+    <File>./src/mpack/object.c</File>
+    <CWECode>CWE-682</CWECode>
   </PVS-Studio_Analysis_Log>
   <PVS-Studio_Analysis_Log>
     <Level>2</Level>
@@ -79,11 +79,11 @@
     <Level>1</Level>
     <ErrorType>error</ErrorType>
     <ErrorCode>V595</ErrorCode>
-    <Message>The 'colored_ccline-&gt;cmdbuff' pointer was utilized before it was verified against nullptr. Check lines: 2876, 2882.</Message>
-    <Line>2876</Line>
+    <Message>The 'colored_ccline-&gt;cmdbuff' pointer was utilized before it was verified against nullptr. Check lines: 2894, 2900.</Message>
+    <Line>2894</Line>
     <File>./src/nvim/ex_getln.c</File>
     <Positions>
-      <Position lines="2876,2882">./src/nvim/ex_getln.c</Position>
+      <Position lines="2894,2900">./src/nvim/ex_getln.c</Position>
     </Positions>
     <CWECode>CWE-476</CWECode>
     <SAST>CERT-EXP12-C</SAST>
@@ -146,22 +146,22 @@
   <PVS-Studio_Analysis_Log>
     <Level>2</Level>
     <ErrorType>warning</ErrorType>
-    <ErrorCode>V601</ErrorCode>
-    <Message>The value of 'char' type is implicitly cast to a char pointer.</Message>
-    <Line>4108</Line>
-    <File>./src/nvim/ops.c</File>
-    <CWECode>CWE-704</CWECode>
-    <SAST>CERT-INT36-C</SAST>
-  </PVS-Studio_Analysis_Log>
-  <PVS-Studio_Analysis_Log>
-    <Level>2</Level>
-    <ErrorType>warning</ErrorType>
     <ErrorCode>V557</ErrorCode>
     <Message>Array overrun is possible. The value of 'strlen(whichwrap) - 1' index could reach 18446744073709551615.</Message>
     <Line>880</Line>
     <File>./src/nvim/option.c</File>
     <CWECode>CWE-787</CWECode>
     <SAST>CERT-ARR30-C</SAST>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <Level>2</Level>
+    <ErrorType>warning</ErrorType>
+    <ErrorCode>V601</ErrorCode>
+    <Message>The value of 'char' type is implicitly cast to a char pointer.</Message>
+    <Line>4108</Line>
+    <File>./src/nvim/ops.c</File>
+    <CWECode>CWE-704</CWECode>
+    <SAST>CERT-INT36-C</SAST>
   </PVS-Studio_Analysis_Log>
   <PVS-Studio_Analysis_Log>
     <Level>1</Level>
