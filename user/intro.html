@@ -341,7 +341,7 @@ with the ":map" command.</div>
 <code>&lt;Space&gt;</code>		space				 32	<a name="space"></a><code class="help-tag">space</code>
 <code>&lt;lt&gt;</code>		less-than		&lt;	 60	<a name="%3Clt%3E"></a><code class="help-tag">&lt;lt&gt;</code>
 <code>&lt;Bslash&gt;</code>	backslash		\	 92	<a name="backslash"></a><code class="help-tag">backslash</code> <a name="%3CBslash%3E"></a><code class="help-tag">&lt;Bslash&gt;</code>
-<code>&lt;Bar&gt;</code>		vertical bar		|		124	<a name="%3CBar%3E"></a><code class="help-tag">&lt;Bar&gt;</code>
+<code>&lt;Bar&gt;</code>		vertical bar		|	124	<a name="%3CBar%3E"></a><code class="help-tag">&lt;Bar&gt;</code>
 <code>&lt;Del&gt;</code>		delete				127
 <code>&lt;CSI&gt;</code>		command sequence intro  <code>ALT-E</code>sc 155	<a name="%3CCSI%3E"></a><code class="help-tag">&lt;CSI&gt;</code></div>
 <div class="old-help-para"><code>&lt;EOL&gt;</code>		end-of-line (can be <code>&lt;CR&gt;</code>, <code>&lt;NL&gt;</code> or <code>&lt;CR&gt;</code><code>&lt;NL&gt;</code>,
@@ -378,7 +378,7 @@ with the ":map" command.</div>
 <code>&lt;kPageDown&gt;</code>	keypad page-down (lower right)	<a name="keypad-page-down"></a><code class="help-tag">keypad-page-down</code>
 <code>&lt;kDel&gt;</code>		keypad delete 			<a name="keypad-delete"></a><code class="help-tag-right">keypad-delete</code>
 <code>&lt;kPlus&gt;</code>		keypad +			<a name="keypad-plus"></a><code class="help-tag-right">keypad-plus</code>
-<code>&lt;kMinus&gt;</code>	keypad -			<a name="keypad-minus"></a><code class="help-tag-right">keypad-minus</code>
+<code>&lt;kMinus&gt;</code>	keypad -				<a name="keypad-minus"></a><code class="help-tag-right">keypad-minus</code>
 <code>&lt;kMultiply&gt;</code>	keypad *			<a name="keypad-multiply"></a><code class="help-tag-right">keypad-multiply</code>
 <code>&lt;kDivide&gt;</code>	keypad /			<a name="keypad-divide"></a><code class="help-tag-right">keypad-divide</code>
 <code>&lt;kPoint&gt;</code>	keypad .			<a name="keypad-point"></a><code class="help-tag-right">keypad-point</code>
@@ -391,7 +391,8 @@ with the ":map" command.</div>
 <code>&lt;M-…&gt;</code>		alt-key or meta-key		<a name="META"></a><code class="help-tag-right">META</code> <a name="ALT"></a><code class="help-tag">ALT</code> <a name="%3CM-"></a><code class="help-tag">&lt;M-</code>
 <code>&lt;A-…&gt;</code>		same as <code>&lt;M-…&gt;</code>			<a name="%3CA-"></a><code class="help-tag-right">&lt;A-</code>
 <code>&lt;D-…&gt;</code>		command-key or "super" key	<a name="%3CD-"></a><code class="help-tag">&lt;D-</code>
-<a name="_-"></a><h3 class="help-heading"></h3>Note:</div>
+<div class="help-column_heading">-----------------------------------------------------------------------</div></div>
+<div class="old-help-para">Note:</div>
 <div class="old-help-para"><div class="help-li" style=""> Availability of some keys (<code>&lt;Help&gt;</code>, <code>&lt;S-Right&gt;</code>, …) depends on the UI or host
   terminal.
 </div><div class="help-li" style=""> If numlock is on the <a href="term.html#TUI">TUI</a> receives plain ASCII values, so mapping <code>&lt;k0&gt;</code>,
@@ -508,7 +509,7 @@ CTRL-O in Insert mode you get a beep but you are still in Insert mode, type
 <div class="old-help-para">							<a name="i_esc"></a><code class="help-tag-right">i_esc</code>
 <div class="help-column_heading">		TO mode</div><div class="help-column_heading">		Normal	Visual	Select	Insert	  Replace   Cmd-line  Ex</div><div class="help-column_heading">FROM mode</div>Normal			v V ^V	  *4	 *1	   R gR     : / ? !   Q
 Visual2		  ^G	 c C	    --	      :       --
-Select5	^O ^G6	    --	      --      --
+Select		 *5	^O ^G		 *6	    --	      --      --
 Insert		 <code>&lt;Esc&gt;</code>	  --	  --		  <code>&lt;Insert&gt;</code>    --      --
 Replace		 <code>&lt;Esc&gt;</code>	  --	  --	<code>&lt;Insert&gt;</code>	      --      --
 Command-line3	  --	  --	 :start	    --		      --
@@ -569,32 +570,31 @@ exceptions:
 <div class="old-help-para">If the window has room after the last line of the buffer, Vim will show '~' in
 the first column of the last lines in the window, like this:</div>
 <div class="old-help-para">	+-----------------------+
-	|some line		|
-	|last line		|
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+intro.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/intro.html%0D%0DContext%3A%0D%0D%60%60%60%0Dthe%20first%20column%20of%20the%20last%20lines%20in%20the%20window%2C%20like%20this%3A%0A%0A%09%2B-----------------------%2B%0A%09%7Csome%20line%09%09%7C%0A%09%7Clast%20line%09%09%7C%0A%09%7C~%09%09%09%7C%0A%09%7C~%09%09%09%7C%0D%60%60%60">some</a> line		|
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+intro.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/intro.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A%09%2B-----------------------%2B%0A%09%7Csome%20line%09%09%7C%0A%09%7Clast%20line%09%09%7C%0A%09%7C~%09%09%09%7C%0A%09%7C~%09%09%09%7C%0A%09%2B-----------------------%2B%0D%60%60%60">last</a> line		|
 	|~			|
 	|~			|
-	+-----------------------+
-
-Thus the '~' lines indicate that the end of the buffer was reached.</div>
+	+-----------------------+</div>
+<div class="old-help-para">Thus the '~' lines indicate that the end of the buffer was reached.</div>
 <div class="old-help-para">If the last line in a window doesn't fit, Vim will indicate this with a '@' in
 the first column of the last lines in the window, like this:</div>
 <div class="old-help-para">	+-----------------------+
-	|first line		|
-	|second line		|
-	|@			|
-	|@			|
-	+-----------------------+
-
-Thus the '@' lines indicate that there is a line that doesn't fit in the
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+intro.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/intro.html%0D%0DContext%3A%0D%0D%60%60%60%0Dthe%20first%20column%20of%20the%20last%20lines%20in%20the%20window%2C%20like%20this%3A%0A%0A%09%2B-----------------------%2B%0A%09%7Cfirst%20line%09%09%7C%0A%09%7Csecond%20line%09%09%7C%0A%09%7C%40%09%09%09%7C%0A%09%7C%40%09%09%09%7C%0D%60%60%60">first</a> line		|
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+intro.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/intro.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A%09%2B-----------------------%2B%0A%09%7Cfirst%20line%09%09%7C%0A%09%7Csecond%20line%09%09%7C%0A%09%7C%40%09%09%09%7C%0A%09%7C%40%09%09%09%7C%0A%09%2B-----------------------%2B%0D%60%60%60">second</a> line		|
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+intro.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/intro.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%2B-----------------------%2B%0A%09%7Cfirst%20line%09%09%7C%0A%09%7Csecond%20line%09%09%7C%0A%09%7C%40%09%09%09%7C%0A%09%7C%40%09%09%09%7C%0A%09%2B-----------------------%2B%0A%0D%60%60%60">@</a>			|
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+intro.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/intro.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%7Cfirst%20line%09%09%7C%0A%09%7Csecond%20line%09%09%7C%0A%09%7C%40%09%09%09%7C%0A%09%7C%40%09%09%09%7C%0A%09%2B-----------------------%2B%0A%0AThus%20the%20'%40'%20lines%20indicate%20that%20there%20is%20a%20line%20that%20doesn't%20fit%20in%20the%0D%60%60%60">@</a>			|
+	+-----------------------+</div>
+<div class="old-help-para">Thus the '@' lines indicate that there is a line that doesn't fit in the
 window.</div>
 <div class="old-help-para">When the "lastline" flag is present in the <a href="options.html#'display'">'display'</a> option, you will not see
 '@' characters at the left side of window.  If the last line doesn't fit
 completely, only the part that fits is shown, and the last three characters of
 the last line are replaced with "@@@", like this:</div>
 <div class="old-help-para">	+-----------------------+
-	|first line		|
-	|second line		|	<a href="insert.html#a">a</a> very long line that d|
-oesn't fit in the wi@@@|
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+intro.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/intro.html%0D%0DContext%3A%0D%0D%60%60%60%0Dthe%20last%20line%20are%20replaced%20with%20%22%40%40%40%22%2C%20like%20this%3A%0A%0A%09%2B-----------------------%2B%0A%09%7Cfirst%20line%09%09%7C%0A%09%7Csecond%20line%09%09%7C%0A%09%7Ca%20very%20long%20line%20that%20d%7C%0A%09%7Coesn't%20fit%20in%20the%20wi%40%40%40%7C%0D%60%60%60">first</a> line		|
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+intro.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/intro.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A%09%2B-----------------------%2B%0A%09%7Cfirst%20line%09%09%7C%0A%09%7Csecond%20line%09%09%7C%0A%09%7Ca%20very%20long%20line%20that%20d%7C%0A%09%7Coesn't%20fit%20in%20the%20wi%40%40%40%7C%0A%09%2B-----------------------%2B%0D%60%60%60">second</a> line		|
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+intro.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/intro.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%2B-----------------------%2B%0A%09%7Cfirst%20line%09%09%7C%0A%09%7Csecond%20line%09%09%7C%0A%09%7Ca%20very%20long%20line%20that%20d%7C%0A%09%7Coesn't%20fit%20in%20the%20wi%40%40%40%7C%0A%09%2B-----------------------%2B%0A%0D%60%60%60">a</a> very long line that d|
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+intro.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/intro.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%7Cfirst%20line%09%09%7C%0A%09%7Csecond%20line%09%09%7C%0A%09%7Ca%20very%20long%20line%20that%20d%7C%0A%09%7Coesn't%20fit%20in%20the%20wi%40%40%40%7C%0A%09%2B-----------------------%2B%0A%0AIf%20there%20is%20a%20single%20line%20that%20is%20too%20long%20to%20fit%20in%20the%20window%2C%20this%20is%20a%0D%60%60%60">oesn't</a> fit in the wi@@@|
 	+-----------------------+</div>
 <div class="old-help-para">If there is a single line that is too long to fit in the window, this is a
 special situation.  Vim will show only part of the line, around where the
@@ -658,23 +658,20 @@ to be able to read most messages on the last line.</div>
 <div class="old-help-para">A screen contains one or more windows, separated by status lines and with the
 command line at the bottom.</div>
 <div class="old-help-para">	+-------------------------------+
-screen	|  window 1	|  window 2	|
-	|			|			|
-	|			|			|
-	<a href="change.html#%3D">=</a> status line =|= status line =|
-	|  window 3			|
-	|					|
-	|					|
-==== status line ==============|
-	|command line			|
-	+-------------------------------+
-
-The command line is also used for messages.  It scrolls up the screen when
-there is not enough room in the command line.
-
-A difference is made between four types of lines:
-
-  buffer lines		The lines in the buffer.  This is the same as the
+screen	| window 1	| window 2	|
+	|		|		|
+	|		|		|
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+intro.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/intro.html%0D%0DContext%3A%0D%0D%60%60%60%0Dscreen%09%7C%20window%201%09%7C%20window%202%09%7C%0A%09%7C%09%09%7C%09%09%7C%0A%09%7C%09%09%7C%09%09%7C%0A%09%7C%3D%20status%20line%20%3D%7C%3D%20status%20line%20%3D%7C%0A%09%7C%20window%203%09%09%09%7C%0A%09%7C%09%09%09%09%7C%0A%09%7C%09%09%09%09%7C%0D%60%60%60">=</a> status line =|= status line =|
+	| window 3			|
+	|				|
+	|				|
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+intro.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/intro.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%7C%20window%203%09%09%09%7C%0A%09%7C%09%09%09%09%7C%0A%09%7C%09%09%09%09%7C%0A%09%7C%3D%3D%3D%3D%20status%20line%20%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%7C%0A%09%7Ccommand%20line%09%09%09%7C%0A%09%2B-------------------------------%2B%0A%0D%60%60%60">====</a> status line ==============|
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+intro.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/intro.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%7C%09%09%09%09%7C%0A%09%7C%09%09%09%09%7C%0A%09%7C%3D%3D%3D%3D%20status%20line%20%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%7C%0A%09%7Ccommand%20line%09%09%09%7C%0A%09%2B-------------------------------%2B%0A%0AThe%20command%20line%20is%20also%20used%20for%20messages.%20%20It%20scrolls%20up%20the%20screen%20when%0D%60%60%60">command</a> line			|
+	+-------------------------------+</div>
+<div class="old-help-para">The command line is also used for messages.  It scrolls up the screen when
+there is not enough room in the command line.</div>
+<div class="old-help-para">A difference is made between four types of lines:</div>
+<div class="old-help-para">  buffer lines		The lines in the buffer.  This is the same as the
 			lines as they are read from/written to a file.  They
 			can be thousands of characters long.
   logical lines		The buffer lines with folding applied.  Buffer lines
@@ -690,10 +687,9 @@ A difference is made between four types of lines:
 			and the command line added.  They can only be as long
 			as the width of the screen allows.  When the command
 			line gets longer it wraps and lines are scrolled to
-			make room.
-
-buffer lines	logical lines	window lines	screen lines ~
-1. one		1. one		1. +-- folded   1.  +-- folded
+			make room.</div>
+<div class="old-help-para"><div class="help-column_heading">buffer lines	logical lines	window lines	screen lines</div></div>
+<div class="old-help-para">1. one		1. one		1. +-- folded   1.  +-- folded
 2. two		2. +-- folded	2. five		2.  five
 3. three	3. five		3. six		3.  six
 4. four		4. six		4. seven	4.  seven
@@ -736,8 +732,6 @@ Sponsor Vim/Nvim development				</a>
 Credits				</a>
 </div><div class="help-toc-h1"><a href="#notation">
 Notation						</a>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
 </div><div class="help-toc-h1"><a href="#vim-modes-intro">
 Modes, introduction				</a>
 </div><div class="help-toc-h1"><a href="#mode-switching">
@@ -751,10 +745,10 @@ Definitions						</a>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:31 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+intro.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/intro.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="     Nvim
+      parse_errors: 13 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+intro.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/intro.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="     Nvim
 			    NVIM REFERENCE MANUAL
                                       Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
  vim:tw=78:ts=8:noet:ft=help:norl:">noise_lines: 4</span>

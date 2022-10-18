@@ -367,9 +367,9 @@ Wildcards in <code>{file}</code> are expanded, but as with file completion, <a h
 and <a href="options.html#'suffixes'">'suffixes'</a> apply.  Which wildcards are supported depends on the system.
 These are the common ones:
 	?	matches one character
-	*	matches anything, including nothing
+	*	matches anything, including nothing</div>
 	**	matches anything, including nothing, recurses into directories
-	[abc]	match 'a', 'b' or 'c'</div>
+	[abc]	match<div class="old-help-para"> 'a', 'b' or 'c'</div>
 <div class="old-help-para">To avoid the special meaning of the wildcards prepend a backslash.  However,
 on MS-Windows the backslash is a path separator and "path\[abc]" is still seen
 as a wildcard when "[" is in the <a href="options.html#'isfname'">'isfname'</a> option.  A simple way to avoid this
@@ -461,8 +461,8 @@ will use the old value of the option.  Same for the <a href="options.html#'binar
 <div class="old-help-para">							<a name="%2Bcmd"></a><code class="help-tag-right">+cmd</code> <a name="%5B%2Bcmd%5D"></a><code class="help-tag">[+cmd]</code>
 The [+cmd] argument can be used to position the cursor in the newly opened
 file, or execute any other command:
-	+		Start at the last line.
-	+{num}		Start at line <code>{num}</code>.
+<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+editing.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/editing.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%09%09%09%09%09%2A%2Bcmd%2A%20%2A%5B%2Bcmd%5D%2A%0AThe%20%5B%2Bcmd%5D%20argument%20can%20be%20used%20to%20position%20the%20cursor%20in%20the%20newly%20opened%0Afile%2C%20or%20execute%20any%20other%20command%3A%0A%09%2B%09%09Start%20at%20the%20last%20line.%0A%09%2B%7Bnum%7D%09%09Start%20at%20line%20%7Bnum%7D.%0A%09%2B%2F%7Bpat%7D%09%09Start%20at%20first%20line%20containing%20%7Bpat%7D.%0A%09%2B%7Bcommand%7D%09Execute%20%7Bcommand%7D%20after%20opening%20the%20new%20file.%0D%60%60%60">+		Start at the last line.</a></div>
+<div class="old-help-para">	+{num}		Start at line <code>{num}</code>.
 	+/{pat}		Start at first line containing <code>{pat}</code>.
 	+{command}	Execute <code>{command}</code> after opening the new file.
 			<code>{command}</code> is any Ex command.
@@ -1026,7 +1026,8 @@ ZQ			Quit without checking for changes (same as ":q!").</div>
 			<a href="diff.html#%3Adiffsplit">:diffsplit</a>, <a href="diff.html#%3Adiffpatch">:diffpatch</a>, <a href="windows.html#%3Apedit">:pedit</a>, <a href="various.html#%3Aredir">:redir</a>,
 			<a href="repeat.html#%3Asource">:source</a>, <a href="editing.html#%3Aupdate">:update</a>, <a href="editing.html#%3Avisual">:visual</a>, <a href="windows.html#%3Avsplit">:vsplit</a>,
 			and <a href="editing.html#%3Aqall">:qall</a> if <a href="options.html#'confirm'">'confirm'</a> is set.
-			{<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+editing.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/editing.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%09%7C%3Adiffsplit%7C%2C%20%7C%3Adiffpatch%7C%2C%20%7C%3Apedit%7C%2C%20%7C%3Aredir%7C%2C%0A%09%09%09%7C%3Asource%7C%2C%20%7C%3Aupdate%7C%2C%20%7C%3Avisual%7C%2C%20%7C%3Avsplit%7C%2C%0A%09%09%09and%20%7C%3Aqall%7C%20if%20'confirm'%20is%20set.%0A%09%09%09%7Bonly%20in%20Win32%20GUI%2C%20in%20console%20%60browse%20edit%60%20works%0A%09%09%09if%20the%20FileExplorer%20autocommand%20group%20exists%7D%0A%09%09%09When%20%22%3Abrowse%22%20is%20not%20possible%20you%20get%20an%20error%0A%09%09%09message.%20%20If%20%7Bcommand%7D%20doesn't%20support%20browsing%2C%20the%0A%09%09%09%7Bcommand%7D%20is%20executed%20without%20a%20dialog.%0D%60%60%60">only in Win32 GUI, in console `browse edit` works</a>			if the FileExplorer autocommand group exists}
+			<code>{only in Win32 GUI, in console `browse edit` works}</code>
+			if the FileExplorer autocommand group exists}
 			When ":browse" is not possible you get an error
 			message.  If <code>{command}</code> doesn't support browsing, the
 			<code>{command}</code> is executed without a dialog.
@@ -1050,7 +1051,8 @@ unmodified.</div>
 For MS-Windows you can modify the filters that are used in the browse
 dialog.  By setting the g:browsefilter or b:browsefilter variables, you can
 change the filters globally or locally to the buffer.  The variable is set to
-a string in the format "{filter label}\t{pattern};{pattern}\n" where <code>{filter<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+editing.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/editing.html%0D%0DContext%3A%0D%0D%60%60%60%0DFor%20MS-Windows%20you%20can%20modify%20the%20filters%20that%20are%20used%20in%20the%20browse%0Adialog.%20%20By%20setting%20the%20g%3Abrowsefilter%20or%20b%3Abrowsefilter%20variables%2C%20you%20can%0Achange%20the%20filters%20globally%20or%20locally%20to%20the%20buffer.%20%20The%20variable%20is%20set%20to%0Aa%20string%20in%20the%20format%20%22%7Bfilter%20label%7D%5Ct%7Bpattern%7D%3B%7Bpattern%7D%5Cn%22%20where%20%7Bfilter%0Alabel%7D%20is%20the%20text%20that%20appears%20in%20the%20%22Files%20of%20Type%22%20comboBox%2C%20and%20%7Bpattern%7D%0Ais%20the%20pattern%20which%20filters%20the%20filenames.%20%20Several%20patterns%20can%20be%20given%2C%0Aseparated%20by%20'%3B'.%0A%0D%60%60%60">label</a>}</code> is the text that appears in the "Files of Type" comboBox, and <code>{pattern}</code>
+a string in the format "{filter label}\t{pattern};{pattern}\n" where {<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+editing.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/editing.html%0D%0DContext%3A%0D%0D%60%60%60%0DFor%20MS-Windows%20you%20can%20modify%20the%20filters%20that%20are%20used%20in%20the%20browse%0Adialog.%20%20By%20setting%20the%20g%3Abrowsefilter%20or%20b%3Abrowsefilter%20variables%2C%20you%20can%0Achange%20the%20filters%20globally%20or%20locally%20to%20the%20buffer.%20%20The%20variable%20is%20set%20to%0Aa%20string%20in%20the%20format%20%22%7Bfilter%20label%7D%5Ct%7Bpattern%7D%3B%7Bpattern%7D%5Cn%22%20where%20%7Bfilter%0Alabel%7D%20is%20the%20text%20that%20appears%20in%20the%20%22Files%20of%20Type%22%20comboBox%2C%20and%20%7Bpattern%7D%0Ais%20the%20pattern%20which%20filters%20the%20filenames.%20%20Several%20patterns%20can%20be%20given%2C%0Aseparated%20by%20'%3B'.%0D%60%60%60">filter</a>
+label} is the text that appears in the "Files of Type" comboBox, and <code>{pattern}</code>
 is the pattern which filters the filenames.  Several patterns can be given,
 separated by ';'.</div>
 <div class="old-help-para">For example, to have only Vim files in the dialog, you could use the following
@@ -1093,7 +1095,7 @@ exist, the next-higher scope in the hierarchy applies.</div>
 			On MS-Windows this also changes the active drive.
 			To change to the directory of the current file:<pre>:cd %:h</pre></div>
 <div class="old-help-para">							<a name="%3Acd-"></a><code class="help-tag-right">:cd-</code> <a name="E186"></a><code class="help-tag">E186</code>
-:cd[!] -		Change to the previous current directory (before the
+:cd[!] -			Change to the previous current directory (before the
 			previous ":cd <code>{path}</code>" command).</div>
 <div class="old-help-para">							<a name="%3Achd"></a><code class="help-tag-right">:chd</code> <a name="%3Achdir"></a><code class="help-tag">:chdir</code>
 :chd[ir][!] [path]	Same as <a href="editing.html#%3Acd">:cd</a>.</div>
@@ -1104,7 +1106,7 @@ exist, the next-higher scope in the hierarchy applies.</div>
 			other tabs and for windows in the current tab that
 			have their own window-local directory.</div>
 <div class="old-help-para">							<a name="%3Atcd-"></a><code class="help-tag-right">:tcd-</code>
-:tc[d][!] -		Change to the previous current directory (before the
+:tc[d][!] -			Change to the previous current directory (before the
 			previous ":tcd <code>{path}</code>" command).</div>
 <div class="old-help-para">							<a name="%3Atch"></a><code class="help-tag-right">:tch</code> <a name="%3Atchdir"></a><code class="help-tag">:tchdir</code>
 :tch[dir][!]		Same as <a href="editing.html#%3Atcd">:tcd</a>.</div>
@@ -1115,7 +1117,7 @@ exist, the next-higher scope in the hierarchy applies.</div>
 <div class="old-help-para">							<a name="%3Alch"></a><code class="help-tag-right">:lch</code> <a name="%3Alchdir"></a><code class="help-tag">:lchdir</code>
 :lch[dir][!]		Same as <a href="editing.html#%3Alcd">:lcd</a>.</div>
 <div class="old-help-para">							<a name="%3Alcd-"></a><code class="help-tag-right">:lcd-</code>
-:lc[d][!] -		Change to the previous current directory (before the
+:lc[d][!] -			Change to the previous current directory (before the
 			previous ":lcd <code>{path}</code>" command).</div>
 <div class="old-help-para">							<a name="%3Apw"></a><code class="help-tag-right">:pw</code> <a name="%3Apwd"></a><code class="help-tag">:pwd</code> <a name="E187"></a><code class="help-tag">E187</code>
 :pw[d]			Print the current directory name.
@@ -1287,11 +1289,11 @@ options, for <a href="builtin.html#finddir()">finddir()</a> and <a href="builtin
 which is slightly different.</div>
 <div class="old-help-para">There are three different types of searching:</div>
 <div class="old-help-para">1) Downward search:					<a name="starstar"></a><code class="help-tag-right">starstar</code>
-   Downward search uses the wildcards '*', '**' and possibly others
-   supported by your operating system.  '*' and '**' are handled inside Vim,
+   Downward search uses the wildcards '', '' and possibly others
+   supported by your operating system.  ''<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+editing.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/editing.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A1)%20Downward%20search%3A%09%09%09%09%09%2Astarstar%2A%0A%20%20%20Downward%20search%20uses%20the%20wildcards%20'%2A'%2C%20'%2A%2A'%20and%20possibly%20others%0A%20%20%20supported%20by%20your%20operating%20system.%20%20'%2A'%20and%20'%2A%2A'%20are%20handled%20inside%20Vim%2C%0A%20%20%20so%20they%20work%20on%20all%20operating%20systems.%20%20Note%20that%20%22%2A%2A%22%20only%20acts%20as%20a%0A%20%20%20special%20wildcard%20when%20it%20is%20at%20the%20start%20of%20a%20name.%0A%0D%60%60%60">and '</a>' are handled inside Vim,
    so they work on all operating systems.  Note that "**" only acts as a
    special wildcard when it is at the start of a name.</div>
-<div class="old-help-para">   The usage of '*' is quite simple: It matches 0 or more characters.  In a
+<div class="old-help-para">   The usage of '' is quite simple: It matches 0 or more characters.  In a
    search pattern this would be ".*".  Note that the "." is not used for file
    searching.</div>
 <div class="old-help-para">   '**' is more sophisticated:
@@ -1317,7 +1319,7 @@ which is slightly different.</div>
 <div class="help-li" style=""> '**' can only be at the end of the path or be followed by a path
 	separator or by a number and a path separator.
 </div></div>
-<div class="old-help-para">   You can combine '*' and '**' in any order:<pre>/usr/**/sys/*
+<div class="old-help-para">   You can combine ''<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+editing.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/editing.html%0D%0DContext%3A%0D%0D%60%60%60%0D%20%20%20%20%20%20-%20'%2A%2A'%20can%20only%20be%20at%20the%20end%20of%20the%20path%20or%20be%20followed%20by%20a%20path%0A%09separator%20or%20by%20a%20number%20and%20a%20path%20separator.%0A%0A%20%20%20You%20can%20combine%20'%2A'%20and%20'%2A%2A'%20in%20any%20order%3A%20%3E%0A%09%2Fusr%2F%2A%2A%2Fsys%2F%2A%0A%09%2Fusr%2F%2Atory%2Fsys%2F%2A%2A%0A%09%2Fusr%2F%2A%2A2%2Fsys%2F%2A%0D%60%60%60">and '</a>' in any order:<pre>/usr/**/sys/*
 /usr/*tory/sys/**
 /usr/**2/sys/*</pre>
 2) Upward search:
@@ -1393,10 +1395,10 @@ which is slightly different.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:31 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:36 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 2 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+editing.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/editing.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim
+      parse_errors: 4 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+editing.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/editing.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim
 		  VIM REFERENCE MANUAL    by Bram Moolenaar
                                       Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
  vim:tw=78:ts=8:noet:ft=help:norl:">noise_lines: 4</span>

@@ -246,7 +246,7 @@ You may do so by placing the following two lines in your &lt;.vimrc&gt;:<pre>
    in <a href="pi_netrw.html#netrw-start">netrw-start</a>.  These include dav, fetch, http,... well, just look
    at the list in <a href="pi_netrw.html#netrw-externapp">netrw-externapp</a>.  Each protocol is associated with a
    variable which holds the default command supporting that protocol.</div>
-<div class="old-help-para"><h3 class="help-heading">EXTERNAL APPLICATIONS AND PROTOCOLS<span class="help-heading-tags">			<a name="netrw-externapp"></a><span class="help-tag">netrw-externapp</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0D%20%20%20at%20the%20list%20in%20%7Cnetrw-externapp%7C.%20%20Each%20protocol%20is%20associated%20with%20a%0A%20%20%20variable%20which%20holds%20the%20default%20command%20supporting%20that%20protocol.%0A%0AEXTERNAL%20APPLICATIONS%20AND%20PROTOCOLS%09%09%09%2Anetrw-externapp%2A%20%7B%7B%7B2%0A%0A%09Protocol%20%20Variable%09%20%20%20%20%20%20%20Default%20Value%0A%09--------%20%20----------------%20%20%20%20%20-------------%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">EXTERNAL APPLICATIONS AND PROTOCOLS<span class="help-heading-tags">			<a name="netrw-externapp"></a><span class="help-tag">netrw-externapp</span> {{{2</h3></div>
 <div class="old-help-para">	Protocol  Variable	       Default Value
 	--------  ----------------     -------------
 	   dav:   <a name="g%3Anetrw_dav_cmd"></a><code class="help-tag">g:netrw_dav_cmd</code>      = "cadaver"    if cadaver is executable
@@ -277,7 +277,7 @@ fetch  : "-o"</pre></div>
 <div class="old-help-para">	in your .vimrc.</div>
 <div class="old-help-para">	g:netrw_http_put_cmd: this option specifies both the executable and
 	any needed options.  This command does a PUT operation to the url.</div>
-<div class="old-help-para"><h3 class="help-heading">READING<span class="help-heading-tags">						<a name="netrw-read"></a><span class="help-tag">netrw-read</span> <a name="netrw-nread"></a><span class="help-tag">netrw-nread</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09any%20needed%20options.%20%20This%20command%20does%20a%20PUT%20operation%20to%20the%20url.%0A%0A%0AREADING%09%09%09%09%09%09%2Anetrw-read%2A%20%2Anetrw-nread%2A%20%7B%7B%7B2%0A%0A%09Generally%2C%20one%20may%20just%20use%20the%20URL%20notation%20with%20a%20normal%20editing%0A%09command%2C%20such%20as%20%3E%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">READING<span class="help-heading-tags">						<a name="netrw-read"></a><span class="help-tag">netrw-read</span> <a name="netrw-nread"></a><span class="help-tag">netrw-nread</span> {{{2</h3></div>
 <div class="old-help-para">	Generally, one may just use the URL notation with a normal editing
 	command, such as<pre>
 :e ftp://[user@]machine/path</pre></div>
@@ -294,7 +294,7 @@ fetch  : "-o"</pre></div>
 	:Nread "rsync://[user@]machine[:port]/path"	uses rsync
 	:Nread "scp://[user@]machine[[:#]port]/path"	uses scp
 	:Nread "sftp://[user@]machine/path"		uses sftp</div>
-<div class="old-help-para"><h3 class="help-heading">WRITING<span class="help-heading-tags">					<a name="netrw-write"></a><span class="help-tag">netrw-write</span> <a name="netrw-nwrite"></a><span class="help-tag">netrw-nwrite</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%3ANread%20%22scp%3A%2F%2F%5Buser%40%5Dmachine%5B%5B%3A%23%5Dport%5D%2Fpath%22%09uses%20scp%0A%09%3ANread%20%22sftp%3A%2F%2F%5Buser%40%5Dmachine%2Fpath%22%09%09uses%20sftp%0A%0AWRITING%09%09%09%09%09%2Anetrw-write%2A%20%2Anetrw-nwrite%2A%20%7B%7B%7B2%0A%0A%09One%20may%20just%20use%20the%20URL%20notation%20with%20a%20normal%20file%20writing%0A%09command%2C%20such%20as%20%3E%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">WRITING<span class="help-heading-tags">					<a name="netrw-write"></a><span class="help-tag">netrw-write</span> <a name="netrw-nwrite"></a><span class="help-tag">netrw-nwrite</span> {{{2</h3></div>
 <div class="old-help-para">	One may just use the URL notation with a normal file writing
 	command, such as<pre>
 :w ftp://[user@]machine/path</pre></div>
@@ -310,7 +310,7 @@ fetch  : "-o"</pre></div>
 	:Nwrite "scp://[user@]machine[[:#]port]/path"	uses scp
 	:Nwrite "sftp://[user@]machine/path"		uses sftp
 	http: not supported!</div>
-<div class="old-help-para"><h3 class="help-heading">SOURCING<span class="help-heading-tags">					<a name="netrw-source"></a><span class="help-tag">netrw-source</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%3ANwrite%20%22sftp%3A%2F%2F%5Buser%40%5Dmachine%2Fpath%22%09%09uses%20sftp%0A%09http%3A%20not%20supported%21%0A%0ASOURCING%09%09%09%09%09%2Anetrw-source%2A%20%7B%7B%7B2%0A%0A%09One%20may%20just%20use%20the%20URL%20notation%20with%20the%20normal%20file%20sourcing%0A%09command%2C%20such%20as%20%3E%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">SOURCING<span class="help-heading-tags">					<a name="netrw-source"></a><span class="help-tag">netrw-source</span> {{{2</h3></div>
 <div class="old-help-para">	One may just use the URL notation with the normal file sourcing
 	command, such as<pre>
 :so ftp://[user@]machine/path</pre></div>
@@ -324,7 +324,7 @@ fetch  : "-o"</pre></div>
 	:Nsource "rsync://[user@]machine[:port]/path"	uses rsync
 	:Nsource "scp://[user@]machine[[:#]port]/path"	uses scp
 	:Nsource "sftp://[user@]machine/path"		uses sftp</div>
-<div class="old-help-para"><h3 class="help-heading">DIRECTORY LISTING<span class="help-heading-tags">		<a name="netrw-trailingslash"></a><span class="help-tag">netrw-trailingslash</span> <a name="netrw-dirlist"></a><span class="help-tag">netrw-dirlist</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%3ANsource%20%22scp%3A%2F%2F%5Buser%40%5Dmachine%5B%5B%3A%23%5Dport%5D%2Fpath%22%09uses%20scp%0A%09%3ANsource%20%22sftp%3A%2F%2F%5Buser%40%5Dmachine%2Fpath%22%09%09uses%20sftp%0A%0ADIRECTORY%20LISTING%09%09%2Anetrw-trailingslash%2A%20%2Anetrw-dirlist%2A%20%7B%7B%7B2%0A%0A%09One%20may%20browse%20a%20directory%20to%20get%20a%20listing%20by%20simply%20attempting%20to%0A%09edit%20the%20directory%3A%20%3E%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">DIRECTORY LISTING<span class="help-heading-tags">		<a name="netrw-trailingslash"></a><span class="help-tag">netrw-trailingslash</span> <a name="netrw-dirlist"></a><span class="help-tag">netrw-dirlist</span> {{{2</h3></div>
 <div class="old-help-para">	One may browse a directory to get a listing by simply attempting to
 	edit the directory:<pre>
 :e scp://[user]@hostname/path/
@@ -336,7 +336,7 @@ fetch  : "-o"</pre></div>
 	trailing slash is necessary):<pre>
 :Nread [protocol]://[user]@hostname/path/</pre></div>
 <div class="old-help-para">					<a name="netrw-login"></a><code class="help-tag-right">netrw-login</code> <a name="netrw-password"></a><code class="help-tag">netrw-password</code>
-<h3 class="help-heading">CHANGING USERID AND PASSWORD<span class="help-heading-tags">		<a name="netrw-chgup"></a><span class="help-tag">netrw-chgup</span> <a name="netrw-userpass"></a><span class="help-tag">netrw-userpass</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%3ANread%20%5Bprotocol%5D%3A%2F%2F%5Buser%5D%40hostname%2Fpath%2F%0A%3C%0A%09%09%09%09%09%2Anetrw-login%2A%20%2Anetrw-password%2A%0ACHANGING%20USERID%20AND%20PASSWORD%09%09%2Anetrw-chgup%2A%20%2Anetrw-userpass%2A%20%7B%7B%7B2%0A%0A%09Attempts%20to%20use%20ftp%20will%20prompt%20you%20for%20a%20user-id%20and%20a%20password.%0A%09These%20will%20be%20saved%20in%20global%20variables%20%7Cg%3Anetrw_uid%7C%20and%0D%60%60%60">{{{2</a></h3></div>
+<h3 class="help-heading">CHANGING USERID AND PASSWORD<span class="help-heading-tags">		<a name="netrw-chgup"></a><span class="help-tag">netrw-chgup</span> <a name="netrw-userpass"></a><span class="help-tag">netrw-userpass</span> {{{2</h3></div>
 <div class="old-help-para">	Attempts to use ftp will prompt you for a user-id and a password.
 	These will be saved in global variables <a href="pi_netrw.html#g%3Anetrw_uid">g:netrw_uid</a> and
 	<a href="pi_netrw.html#s%3Anetrw_passwd">s:netrw_passwd</a>; subsequent use of ftp will re-use those two strings,
@@ -351,7 +351,7 @@ fetch  : "-o"</pre></div>
 	:call NetUserPass("uid")		-- prompts for password
 	:call NetUserPass("uid","password")	-- sets global uid and password</div>
 <div class="old-help-para">(Related topics: <a href="pi_netrw.html#ftp">ftp</a> <a href="pi_netrw.html#netrw-userpass">netrw-userpass</a> <a href="pi_netrw.html#netrw-start">netrw-start</a>)</div>
-<div class="old-help-para"><h3 class="help-heading">NETRW VARIABLES AND SETTINGS<span class="help-heading-tags">				<a name="netrw-variables"></a><span class="help-tag">netrw-variables</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A(Related%20topics%3A%20%7Cftp%7C%20%7Cnetrw-userpass%7C%20%7Cnetrw-start%7C)%0A%0ANETRW%20VARIABLES%20AND%20SETTINGS%09%09%09%09%2Anetrw-variables%2A%20%7B%7B%7B2%0A%20%20%20%20(Also%20see%3A%0A%20%20%20%20%7Cnetrw-browser-var%7C%20%20%20%20%20%3A%20netrw%20browser%20option%20variables%0A%20%20%20%20%7Cnetrw-protocol%7C%20%20%20%20%20%20%20%20%3A%20file%20transfer%20protocol%20option%20variables%0D%60%60%60">{{{2</a></h3>    (Also see:
+<div class="old-help-para"><h3 class="help-heading">NETRW VARIABLES AND SETTINGS<span class="help-heading-tags">				<a name="netrw-variables"></a><span class="help-tag">netrw-variables</span> {{{2</h3>    (Also see:
     <a href="pi_netrw.html#netrw-browser-var">netrw-browser-var</a>     : netrw browser option variables
     <a href="pi_netrw.html#netrw-protocol">netrw-protocol</a>        : file transfer protocol option variables
     <a href="pi_netrw.html#netrw-settings">netrw-settings</a>        : additional file transfer options
@@ -454,7 +454,7 @@ let g:Netrw_funcref= function("MyFuncRef")</pre></div>
 			   This option is ignored if you're using unix</div>
 <div class="old-help-para"> <a name="g%3Anetrw_use_nt_rcp"></a><code class="help-tag">g:netrw_use_nt_rcp</code>	=0 don't use the rcp of WinNT, Win2000 and WinXP
 			=1 use WinNT's rcp in binary mode         (default)</div>
-<div class="old-help-para"><h3 class="help-heading">PATHS<span class="help-heading-tags">							<a name="netrw-path"></a><span class="help-tag">netrw-path</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0D%20%2Ag%3Anetrw_use_nt_rcp%2A%09%3D0%20don't%20use%20the%20rcp%20of%20WinNT%2C%20Win2000%20and%20WinXP%0A%09%09%09%3D1%20use%20WinNT's%20rcp%20in%20binary%20mode%20%20%20%20%20%20%20%20%20(default)%0A%0APATHS%09%09%09%09%09%09%09%2Anetrw-path%2A%20%7B%7B%7B2%0A%0APaths%20to%20files%20are%20generally%20user-directory%20relative%20for%20most%20protocols.%0AIt%20is%20possible%20that%20some%20protocol%20will%20make%20paths%20relative%20to%20some%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">PATHS<span class="help-heading-tags">							<a name="netrw-path"></a><span class="help-tag">netrw-path</span> {{{2</h3></div>
 <div class="old-help-para">Paths to files are generally user-directory relative for most protocols.
 It is possible that some protocol will make paths relative to some
 associated directory, however.
@@ -547,52 +547,52 @@ transfers (read/write) to or from that machine will take place without
 additional prompting.</div>
 <div class="old-help-para">								<a name="netrw-urls"></a><code class="help-tag-right">netrw-urls</code>
   +=================================+============================+============+
-  |   Reading                        |  Writing                    |   Uses      |
+  |  Reading                        | Writing                    |  Uses      |
   +=================================+============================+============+
-  |  DAV:                            |                             |             |
-  |   dav://host/path                |                             |  cadaver    |
-  |   :Nread dav://host/path         |  :Nwrite dav://host/path    |  cadaver    |
+  | DAV:                            |                            |            |
+  |  dav://host/path                |                            | cadaver    |
+  |  :Nread dav://host/path         | :Nwrite dav://host/path    | cadaver    |
   +---------------------------------+----------------------------+------------+
-  |  DAV + SSL:                      |                             |             |
-  |   davs://host/path               |                             |  cadaver    |
-  |   :Nread davs://host/path        |  :Nwrite davs://host/path   |  cadaver    |
+  | DAV + SSL:                      |                            |            |
+  |  davs://host/path               |                            | cadaver    |
+  |  :Nread davs://host/path        | :Nwrite davs://host/path   | cadaver    |
   +---------------------------------+----------------------------+------------+
-  |  FETCH:                          |                             |             |
-  |   fetch://[user@]host/path       |                             |             |
-  |   fetch://[user@]host:http/path  |   Not Available             |  fetch      |
-  |   :Nread fetch://[user@]host/path|                            |             |
+  | FETCH:                          |                            |            |
+  |  fetch://[user@]host/path       |                            |            |
+  |  fetch://[user@]host:http/path  |  Not Available             | fetch      |
+  |  :Nread fetch://[user@]host/path|                            |            |
   +---------------------------------+----------------------------+------------+
-  |  FILE:                           |                             |             |
-  |   file:///*                      |  file:///*                  |             |
-  |   file://localhost/*             |  file://localhost/*         |             |
+  | FILE:                           |                            |            |
+  |  file:///*                      | file:///*                  |            |
+  |  file://localhost/*             | file://localhost/*         |            |
   +---------------------------------+----------------------------+------------+
-  |  FTP:          (3)              |               (3)          |             |
-  |   ftp://[user@]host/path         |  ftp://[user@]host/path     |  ftp  (*2)  |
-  |   :Nread ftp://host/path         |  :Nwrite ftp://host/path    |  ftp+.netrc |
-  |   :Nread host path               |  :Nwrite host path          |  ftp+.netrc |
-  |   :Nread host uid pass path      |  :Nwrite host uid pass path |  ftp        |
+  | FTP:          (3)              |              (3)          |            |
+  |  ftp://[user@]host/path         | ftp://[user@]host/path     | ftp  (2)  |
+  |  :Nread ftp://host/path         | :Nwrite ftp://host/path    | ftp+.netrc |
+  |  :Nread host path               | :Nwrite host path          | ftp+.netrc |
+  |  :Nread host uid pass path      | :Nwrite host uid pass path | ftp        |
   +---------------------------------+----------------------------+------------+
-  |  HTTP: wget is executable: (4)  |                             |             |
-  |   <a href="http://[user@">http://[user@</a>]host/path        |         Not Available       |  wget       |
+  | HTTP: wget is executable: (4)  |                            |            |
+  |  <a href="http://[user@">http://[user@</a>]host/path        |        Not Available       | wget       |
   +---------------------------------+----------------------------+------------+
-  |  HTTP: fetch is executable (4)  |                             |             |
-  |   <a href="http://[user@">http://[user@</a>]host/path        |         Not Available       |  fetch      |
+  | HTTP: fetch is executable (4)  |                            |            |
+  |  <a href="http://[user@">http://[user@</a>]host/path        |        Not Available       | fetch      |
   +---------------------------------+----------------------------+------------+
-  |  RCP:                            |                             |             |
-  |   rcp://[user@]host/path         |  rcp://[user@]host/path     |  rcp        |
+  | RCP:                            |                            |            |
+  |  rcp://[user@]host/path         | rcp://[user@]host/path     | rcp        |
   +---------------------------------+----------------------------+------------+
-  |  RSYNC:                          |                             |             |
-  |   rsync://[user@]host/path       |  rsync://[user@]host/path   |  rsync      |
-  |   :Nread rsync://host/path       |  :Nwrite rsync://host/path  |  rsync      |
-  |   :Nread rcp://host/path         |  :Nwrite rcp://host/path    |  rcp        |
+  | RSYNC:                          |                            |            |
+  |  rsync://[user@]host/path       | rsync://[user@]host/path   | rsync      |
+  |  :Nread rsync://host/path       | :Nwrite rsync://host/path  | rsync      |
+  |  :Nread rcp://host/path         | :Nwrite rcp://host/path    | rcp        |
   +---------------------------------+----------------------------+------------+
-  |  SCP:                            |                             |             |
-  |   scp://[user@]host/path         |  scp://[user@]host/path     |  scp        |
-  |   :Nread scp://host/path         |  :Nwrite scp://host/path    |  scp  (*1)  |
+  | SCP:                            |                            |            |
+  |  scp://[user@]host/path         | scp://[user@]host/path     | scp        |
+  |  :Nread scp://host/path         | :Nwrite scp://host/path    | scp  (1)  |
   +---------------------------------+----------------------------+------------+
-  |  SFTP:                           |                             |             |
-  |   sftp://[user@]host/path        |  sftp://[user@]host/path    |  sftp       |
-  |   :Nread sftp://host/path        |  :Nwrite sftp://host/path   |  sftp  (*1) |
+  | SFTP:                           |                            |            |
+  |  sftp://[user@]host/path        | sftp://[user@]host/path    | sftp       |
+  |  :Nread sftp://host/path        | :Nwrite sftp://host/path   | sftp  (1) |
   +=================================+============================+============+</div>
 <div class="old-help-para">	(1) For an absolute path use scp://machine//path.</div>
 <div class="old-help-para">	(2) if &lt;.netrc&gt; is present, it is assumed that it will
@@ -835,8 +835,8 @@ messages) you may write a NetReadFixup() function:
   else               " complain
   endif
 endfunction</pre>
-<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0D%20%20%20%20%20%20else%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22%20complain%0A%20%20%20%20%20%20endif%0A%20%20%20%20endfunction%0A%3E%0AThe%20NetReadFixup()%20function%20will%20be%20called%20if%20it%20exists%20and%20thus%20allows%20you%20to%0Acustomize%20your%20reading%20process.%20%20As%20a%20further%20example%2C%20%3Cnetrw.vim%3E%20contains%0Ajust%20such%20a%20function%20to%20handle%20Windows%2095%20ftp.%20%20For%20whatever%20reason%2C%20Windows%0A95's%20ftp%20dumps%20four%20blank%20lines%20at%20the%20end%20of%20a%20transfer%2C%20and%20so%20it%20is%0D%60%60%60">&gt;
-The</a> NetReadFixup() function will be called if it exists and thus allows you to
+&gt;
+The NetReadFixup() function will be called if it exists and thus allows you to
 customize your reading process.  As a further example, &lt;netrw.vim&gt; contains
 just such a function to handle Windows 95 ftp.  For whatever reason, Windows
 95's ftp dumps four blank lines at the end of a transfer, and so it is
@@ -850,10 +850,10 @@ itself:
    endif
  endfunction
 endif</pre>
-<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0D%20%20%20%20%20%20%20endif%0A%20%20%20%20%20endfunction%0A%20%20%20%20endif%0A%3E%0A(Related%20topics%3A%20%7Cftp%7C%20%7Cnetrw-userpass%7C%20%7Cnetrw-start%7C)%0A%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0A9.%20Browsing%09%09%2Anetrw-browsing%2A%20%2Anetrw-browse%2A%20%2Anetrw-help%2A%20%7B%7B%7B1%0D%60%60%60">&gt;
-(Related topics:</a> <a href="pi_netrw.html#ftp">ftp</a> <a href="pi_netrw.html#netrw-userpass">netrw-userpass</a> <a href="pi_netrw.html#netrw-start">netrw-start</a>)</div>
+<pre></pre>
+(Related topics: <a href="pi_netrw.html#ftp">ftp</a> <a href="pi_netrw.html#netrw-userpass">netrw-userpass</a> <a href="pi_netrw.html#netrw-start">netrw-start</a>)</div>
 <div class="old-help-para"><h2 class="help-heading">9. Browsing<span class="help-heading-tags">		<a name="netrw-browsing"></a><span class="help-tag">netrw-browsing</span> <a name="netrw-browse"></a><span class="help-tag">netrw-browse</span> <a name="netrw-help"></a><span class="help-tag">netrw-help</span> {{{1</h2>			<a name="netrw-browser"></a><code class="help-tag-right">netrw-browser</code>  <a name="netrw-dir"></a><code class="help-tag">netrw-dir</code>    <a name="netrw-list"></a><code class="help-tag">netrw-list</code></div>
-<div class="old-help-para"><h3 class="help-heading">INTRODUCTION TO BROWSING<span class="help-heading-tags">			<a name="netrw-intro-browse"></a><span class="help-tag">netrw-intro-browse</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0D9.%20Browsing%09%09%2Anetrw-browsing%2A%20%2Anetrw-browse%2A%20%2Anetrw-help%2A%20%7B%7B%7B1%0A%09%09%09%2Anetrw-browser%2A%20%20%2Anetrw-dir%2A%20%20%20%20%2Anetrw-list%2A%0A%0AINTRODUCTION%20TO%20BROWSING%09%09%09%2Anetrw-intro-browse%2A%20%7B%7B%7B2%0A%09(Quick%20References%3A%20%7Cnetrw-quickmaps%7C%20%7Cnetrw-quickcoms%7C)%0A%0ANetrw%20supports%20the%20browsing%20of%20directories%20on%20your%20local%20system%20and%20on%20remote%0D%60%60%60">{{{2</a></h3>	(Quick References: <a href="pi_netrw.html#netrw-quickmaps">netrw-quickmaps</a> <a href="pi_netrw.html#netrw-quickcoms">netrw-quickcoms</a>)</div>
+<div class="old-help-para"><h3 class="help-heading">INTRODUCTION TO BROWSING<span class="help-heading-tags">			<a name="netrw-intro-browse"></a><span class="help-tag">netrw-intro-browse</span> {{{2</h3>	(Quick References: <a href="pi_netrw.html#netrw-quickmaps">netrw-quickmaps</a> <a href="pi_netrw.html#netrw-quickcoms">netrw-quickcoms</a>)</div>
 <div class="old-help-para">Netrw supports the browsing of directories on your local system and on remote
 hosts; browsing includes listing files and directories, entering directories,
 editing files therein, deleting files/directories, making new directories,
@@ -903,7 +903,7 @@ filetype to locally listed files:</div>
 	links      : @
 	sockets    : =</div>
 <div class="old-help-para">The filigree also affects the <a href="pi_netrw.html#g%3Anetrw_sort_sequence">g:netrw_sort_sequence</a>.</div>
-<div class="old-help-para"><h3 class="help-heading">QUICK HELP<span class="help-heading-tags">						<a name="netrw-quickhelp"></a><span class="help-tag">netrw-quickhelp</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0DThe%20filigree%20also%20affects%20the%20%7Cg%3Anetrw_sort_sequence%7C.%0A%0A%0AQUICK%20HELP%09%09%09%09%09%09%2Anetrw-quickhelp%2A%20%7B%7B%7B2%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20(Use%20ctrl-%5D%20to%20select%20a%20topic)~%0A%09Intro%20to%20Browsing...............................%7Cnetrw-intro-browse%7C%0A%09%20%20Quick%20Reference%3A%20Maps.........................%7Cnetrw-quickmap%7C%0D%60%60%60">{{{2</a></h3>                       (Use ctrl-] to select a topic)~
+<div class="old-help-para"><h3 class="help-heading">QUICK HELP<span class="help-heading-tags">						<a name="netrw-quickhelp"></a><span class="help-tag">netrw-quickhelp</span> {{{2</h3>                       (Use ctrl-] to select a topic)~
 	Intro to Browsing...............................|netrw-intro-browse|
 	  Quick Reference: Maps.........................|netrw-quickmap|
 	  Quick Reference: Commands.....................|netrw-browse-cmds|
@@ -935,7 +935,7 @@ Map                        Quick Explanation                        Link
 	 <code>&lt;c-l&gt;</code>	Causes Netrw to refresh the directory listing        <a href="pi_netrw.html#netrw-ctrl-l">netrw-ctrl-l</a>
 	 <code>&lt;c-r&gt;</code>	Browse using a gvim server                           <a href="pi_netrw.html#netrw-ctrl-r">netrw-ctrl-r</a>
 	 <code>&lt;c-tab&gt;</code> Shrink/expand a netrw/explore window                <a href="pi_netrw.html#netrw-c-tab">netrw-c-tab</a>
-	   -	Makes Netrw go up one directory                      <a href="pi_netrw.html#netrw--">netrw--</a>
+	   -		Makes Netrw go up one directory                      <a href="pi_netrw.html#netrw--">netrw--</a>
 	   a	Cycles between normal display,                       <a href="pi_netrw.html#netrw-a">netrw-a</a>
 	    	hiding (suppress display of files matching g:netrw_list_hide)
 	    	and showing (display only files which match g:netrw_list_hide)
@@ -1054,7 +1054,7 @@ default, its stored on the first directory on the user's <a href="options.html#'
 	<a href="pi_netrw.html#netrw-mB">netrw-mB</a> how to delete bookmarks
 	<a href="pi_netrw.html#netrw-qb">netrw-qb</a> how to list bookmarks
 	<a href="pi_netrw.html#g%3Anetrw_home">g:netrw_home</a> controls where .netrwbook is kept</div>
-<div class="old-help-para"><h3 class="help-heading">BROWSING<span class="help-heading-tags">					<a name="netrw-enter"></a><span class="help-tag">netrw-enter</span>	<a name="netrw-cr"></a><span class="help-tag">netrw-cr</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%7Cg%3Anetrw_home%7C%20controls%20where%20.netrwbook%20is%20kept%0A%0A%0ABROWSING%09%09%09%09%09%2Anetrw-enter%2A%09%2Anetrw-cr%2A%20%7B%7B%7B2%0A%0ABrowsing%20is%20simple%3A%20move%20the%20cursor%20onto%20a%20file%20or%20directory%20of%20interest.%0AHitting%20the%20%3Ccr%3E%20(the%20return%20key)%20will%20select%20the%20file%20or%20directory.%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">BROWSING<span class="help-heading-tags">					<a name="netrw-enter"></a><span class="help-tag">netrw-enter</span>	<a name="netrw-cr"></a><span class="help-tag">netrw-cr</span> {{{2</h3></div>
 <div class="old-help-para">Browsing is simple: move the cursor onto a file or directory of interest.
 Hitting the <code>&lt;cr&gt;</code> (the return key) will select the file or directory.
 Directories will themselves be listed, and files will be opened using the
@@ -1154,7 +1154,7 @@ will use a gvim server (see <a href="pi_netrw.html#g%3Anetrw_servername">g:netrw
 Associated setting variables:
 	<a href="pi_netrw.html#g%3Anetrw_servername">g:netrw_servername</a>   : sets name of server
 	<a href="pi_netrw.html#g%3Anetrw_browse_split">g:netrw_browse_split</a> : controls how <code>&lt;cr&gt;</code> will open files</div>
-<div class="old-help-para"><h3 class="help-heading">CHANGE LISTING STYLE  (THIN LONG WIDE TREE)<span class="help-heading-tags">			<a name="netrw-i"></a><span class="help-tag">netrw-i</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%7Cg%3Anetrw_browse_split%7C%20%3A%20controls%20how%20%3Ccr%3E%20will%20open%20files%0A%0A%0ACHANGE%20LISTING%20STYLE%20%20(THIN%20LONG%20WIDE%20TREE)%09%09%09%2Anetrw-i%2A%20%7B%7B%7B2%0A%0AThe%20%22i%22%20map%20cycles%20between%20the%20thin%2C%20long%2C%20wide%2C%20and%20tree%20listing%20formats.%0A%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">CHANGE LISTING STYLE  (THIN LONG WIDE TREE)<span class="help-heading-tags">			<a name="netrw-i"></a><span class="help-tag">netrw-i</span> {{{2</h3></div>
 <div class="old-help-para">The "i" map cycles between the thin, long, wide, and tree listing formats.</div>
 <div class="old-help-para">The thin listing format gives just the files' and directories' names.</div>
 <div class="old-help-para">The long listing is either based on the "ls" command via ssh for remote
@@ -1186,7 +1186,7 @@ P (edit newly selected file in the previous window)
 ...etc...</pre></div>
 <div class="old-help-para">Associated setting variables: <a href="pi_netrw.html#g%3Anetrw_liststyle">g:netrw_liststyle</a> <a href="pi_netrw.html#g%3Anetrw_maxfilenamelen">g:netrw_maxfilenamelen</a>
                               <a href="pi_netrw.html#g%3Anetrw_timefmt">g:netrw_timefmt</a>   <a href="pi_netrw.html#g%3Anetrw_list_cmd">g:netrw_list_cmd</a></div>
-<div class="old-help-para"><h3 class="help-heading">CHANGE FILE PERMISSION<span class="help-heading-tags">						<a name="netrw-gp"></a><span class="help-tag">netrw-gp</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0DAssociated%20setting%20variables%3A%20%7Cg%3Anetrw_liststyle%7C%20%7Cg%3Anetrw_maxfilenamelen%7C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7Cg%3Anetrw_timefmt%7C%20%20%20%7Cg%3Anetrw_list_cmd%7C%0A%0ACHANGE%20FILE%20PERMISSION%09%09%09%09%09%09%2Anetrw-gp%2A%20%7B%7B%7B2%0A%0A%22gp%22%20will%20ask%20you%20for%20a%20new%20permission%20for%20the%20file%20named%20under%20the%20cursor.%0ACurrently%2C%20this%20only%20works%20for%20local%20files.%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">CHANGE FILE PERMISSION<span class="help-heading-tags">						<a name="netrw-gp"></a><span class="help-tag">netrw-gp</span> {{{2</h3></div>
 <div class="old-help-para">"gp" will ask you for a new permission for the file named under the cursor.
 Currently, this only works for local files.</div>
 <div class="old-help-para">Associated setting variables: <a href="pi_netrw.html#g%3Anetrw_chgperm">g:netrw_chgperm</a></div>
@@ -1224,7 +1224,7 @@ qb map to list both the bookmarks and history. (see <a href="pi_netrw.html#netrw
 <div class="old-help-para">The "U" map also accepts counts to go forward in the history several slots.</div>
 <div class="old-help-para">See <a href="pi_netrw.html#g%3Anetrw_dirhistmax">g:netrw_dirhistmax</a> for how to control the quantity of history stack
 slots.</div>
-<div class="old-help-para"><h3 class="help-heading">CHANGING TREE TOP<span class="help-heading-tags">			<a name="netrw-ntree"></a><span class="help-tag">netrw-ntree</span>  <a name="%3ANtree"></a><span class="help-tag">:Ntree</span>  <a name="netrw-gn"></a><span class="help-tag">netrw-gn</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0Dslots.%0A%0A%0ACHANGING%20TREE%20TOP%09%09%09%2Anetrw-ntree%2A%20%20%2A%3ANtree%2A%20%20%2Anetrw-gn%2A%20%7B%7B%7B2%0A%0AOne%20may%20specify%20a%20new%20tree%20top%20for%20tree%20listings%20using%20%3E%0A%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">CHANGING TREE TOP<span class="help-heading-tags">			<a name="netrw-ntree"></a><span class="help-tag">netrw-ntree</span>  <a name="%3ANtree"></a><span class="help-tag">:Ntree</span>  <a name="netrw-gn"></a><span class="help-tag">netrw-gn</span> {{{2</h3></div>
 <div class="old-help-para">One may specify a new tree top for tree listings using<pre>
 :Ntree [dirname]</pre>
 Without a "dirname", the current line is used (and any leading depth
@@ -1232,7 +1232,7 @@ information is elided).
 With a "dirname", the specified directory name is used.</div>
 <div class="old-help-para">The "gn" map will take the word below the cursor and use that for
 changing the top of the tree listing.</div>
-<div class="old-help-para"><h3 class="help-heading">NETRW CLEAN<span class="help-heading-tags">					<a name="netrw-clean"></a><span class="help-tag">netrw-clean</span> <a name="%3ANetrwClean"></a><span class="help-tag">:NetrwClean</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0Dchanging%20the%20top%20of%20the%20tree%20listing.%0A%0A%0ANETRW%20CLEAN%09%09%09%09%09%2Anetrw-clean%2A%20%2A%3ANetrwClean%2A%20%7B%7B%7B2%0A%0AWith%20%3ANetrwClean%20one%20may%20easily%20remove%20netrw%20from%20one's%20home%20directory%3B%0Amore%20precisely%2C%20from%20the%20first%20directory%20on%20your%20%7C'runtimepath'%7C.%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">NETRW CLEAN<span class="help-heading-tags">					<a name="netrw-clean"></a><span class="help-tag">netrw-clean</span> <a name="%3ANetrwClean"></a><span class="help-tag">:NetrwClean</span> {{{2</h3></div>
 <div class="old-help-para">With :NetrwClean one may easily remove netrw from one's home directory;
 more precisely, from the first directory on your <a href="options.html#'runtimepath'">'runtimepath'</a>.</div>
 <div class="old-help-para">With :NetrwClean!, netrw will attempt to remove netrw from all directories on
@@ -1312,7 +1312,7 @@ file.rcs,v  -&gt;  NFH_rcsCOMMAv()</pre></div>
 with a request.  (remove the embedded NOSPAM first)</div>
 <div class="old-help-para">Associated setting variable: <a href="pi_netrw.html#g%3Anetrw_browsex_viewer">g:netrw_browsex_viewer</a></div>
 <div class="old-help-para">							<a name="netrw-curdir"></a><code class="help-tag-right">netrw-curdir</code>
-<h3 class="help-heading">DELETING BOOKMARKS<span class="help-heading-tags">					<a name="netrw-mB"></a><span class="help-tag">netrw-mB</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0DAssociated%20setting%20variable%3A%20%7Cg%3Anetrw_browsex_viewer%7C%0A%0A%09%09%09%09%09%09%09%2Anetrw-curdir%2A%0ADELETING%20BOOKMARKS%09%09%09%09%09%2Anetrw-mB%2A%20%7B%7B%7B2%0A%0ATo%20delete%20a%20bookmark%2C%20use%20%3E%0A%0D%60%60%60">{{{2</a></h3></div>
+<h3 class="help-heading">DELETING BOOKMARKS<span class="help-heading-tags">					<a name="netrw-mB"></a><span class="help-tag">netrw-mB</span> {{{2</h3></div>
 <div class="old-help-para">To delete a bookmark, use<pre>
 {cnt}mB</pre>
 If there are marked files, then mB will remove them from the
@@ -1323,7 +1323,7 @@ Related Topics:
 	<a href="pi_netrw.html#netrw-gb">netrw-gb</a> how to return (go) to a bookmark
 	<a href="pi_netrw.html#netrw-mb">netrw-mb</a> how to make a bookmark
 	<a href="pi_netrw.html#netrw-qb">netrw-qb</a> how to list bookmarks</div>
-<div class="old-help-para"><h3 class="help-heading">DELETING FILES OR DIRECTORIES<span class="help-heading-tags">	<a name="netrw-delete"></a><span class="help-tag">netrw-delete</span> <a name="netrw-D"></a><span class="help-tag">netrw-D</span> <a name="netrw-del"></a><span class="help-tag">netrw-del</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%7Cnetrw-qb%7C%20how%20to%20list%20bookmarks%0A%0A%0ADELETING%20FILES%20OR%20DIRECTORIES%09%2Anetrw-delete%2A%20%2Anetrw-D%2A%20%2Anetrw-del%2A%20%7B%7B%7B2%0A%0AIf%20files%20have%20not%20been%20marked%20with%20%7Cnetrw-mf%7C%3A%20%20%20(local%20marked%20file%20list)%0A%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">DELETING FILES OR DIRECTORIES<span class="help-heading-tags">	<a name="netrw-delete"></a><span class="help-tag">netrw-delete</span> <a name="netrw-D"></a><span class="help-tag">netrw-D</span> <a name="netrw-del"></a><span class="help-tag">netrw-del</span> {{{2</h3></div>
 <div class="old-help-para">If files have not been marked with <a href="pi_netrw.html#netrw-mf">netrw-mf</a>:   (local marked file list)</div>
 <div class="old-help-para">    Deleting/removing files and directories involves moving the cursor to the
     file/directory to be deleted and pressing "D".  Directories must be empty
@@ -1445,11 +1445,12 @@ following four patterns Explore generates a list of files which satisfy the
 request for the local file system.  These exploration patterns will not work
 with remote file browsing.</div>
 <div class="old-help-para">/filepat	files in current directory which satisfy filepat
-    **/filepat	files in current directory or below which satisfy the
-		file pattern//pattern	files in the current directory which contain the
+    **/filepat	files in current directory or below which satisfy the</div>
+<div class="old-help-para">		file pattern
+//pattern	files in the current directory which contain the
 		pattern (vimgrep is used)
-    **//pattern	files in the current directory or below which contain
-		the pattern (vimgrep is used)</div>
+    **//pattern	files in the current directory or below which contain</div>
+<div class="old-help-para">		the pattern (vimgrep is used)</div>
 <div class="old-help-para">The cursor will be placed on the first file in the list.  One may then
 continue to go to subsequent files on that list via <a href="pi_netrw.html#%3ANexplore">:Nexplore</a> or to
 preceding files on that list with <a href="pi_netrw.html#%3APexplore">:Pexplore</a>.  Explore will update the
@@ -1474,11 +1475,11 @@ message like "Match 3 of 20".</div>
 	<a href="pi_netrw.html#g%3Anetrw_ftp_list_cmd">g:netrw_ftp_list_cmd</a>     <a href="pi_netrw.html#g%3Anetrw_ftp_sizelist_cmd">g:netrw_ftp_sizelist_cmd</a>
 	<a href="pi_netrw.html#g%3Anetrw_ftp_timelist_cmd">g:netrw_ftp_timelist_cmd</a> <a href="pi_netrw.html#g%3Anetrw_list_cmd">g:netrw_list_cmd</a>
 	<a href="pi_netrw.html#g%3Anetrw_liststyle">g:netrw_liststyle</a></div>
-<div class="old-help-para"><h3 class="help-heading">DISPLAYING INFORMATION ABOUT FILE<span class="help-heading-tags">				<a name="netrw-qf"></a><span class="help-tag">netrw-qf</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%7Cg%3Anetrw_liststyle%7C%0A%0A%0ADISPLAYING%20INFORMATION%20ABOUT%20FILE%09%09%09%09%2Anetrw-qf%2A%20%7B%7B%7B2%0A%0AWith%20the%20cursor%20atop%20a%20filename%2C%20pressing%20%22qf%22%20will%20reveal%20the%20file's%20size%0Aand%20last%20modification%20timestamp.%20%20Currently%20this%20capability%20is%20only%20available%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">DISPLAYING INFORMATION ABOUT FILE<span class="help-heading-tags">				<a name="netrw-qf"></a><span class="help-tag">netrw-qf</span> {{{2</h3></div>
 <div class="old-help-para">With the cursor atop a filename, pressing "qf" will reveal the file's size
 and last modification timestamp.  Currently this capability is only available
 for local files.</div>
-<div class="old-help-para"><h3 class="help-heading">EDIT FILE OR DIRECTORY HIDING LIST<span class="help-heading-tags">	<a name="netrw-ctrl-h"></a><span class="help-tag">netrw-ctrl-h</span> <a name="netrw-edithide"></a><span class="help-tag">netrw-edithide</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0Dfor%20local%20files.%0A%0A%0AEDIT%20FILE%20OR%20DIRECTORY%20HIDING%20LIST%09%2Anetrw-ctrl-h%2A%20%2Anetrw-edithide%2A%20%7B%7B%7B2%0A%0AThe%20%22%3Cctrl-h%3E%22%20map%20brings%20up%20a%20requestor%20allowing%20the%20user%20to%20change%20the%0Afile%2Fdirectory%20hiding%20list%20contained%20in%20%7Cg%3Anetrw_list_hide%7C.%20%20The%20hiding%20list%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">EDIT FILE OR DIRECTORY HIDING LIST<span class="help-heading-tags">	<a name="netrw-ctrl-h"></a><span class="help-tag">netrw-ctrl-h</span> <a name="netrw-edithide"></a><span class="help-tag">netrw-edithide</span> {{{2</h3></div>
 <div class="old-help-para">The "&lt;ctrl-h&gt;" map brings up a requestor allowing the user to change the
 file/directory hiding list contained in <a href="pi_netrw.html#g%3Anetrw_list_hide">g:netrw_list_hide</a>.  The hiding list
 consists of one or more patterns delimited by commas.  Files and/or
@@ -1498,7 +1499,7 @@ What it means:</div>
 <div class="old-help-para">Associated setting variables: <a href="pi_netrw.html#g%3Anetrw_hide">g:netrw_hide</a> <a href="pi_netrw.html#g%3Anetrw_list_hide">g:netrw_list_hide</a>
 Associated topics: <a href="pi_netrw.html#netrw-a">netrw-a</a> <a href="pi_netrw.html#netrw-gh">netrw-gh</a> <a href="pi_netrw.html#netrw-mh">netrw-mh</a></div>
 <div class="old-help-para">					<a name="netrw-sort-sequence"></a><code class="help-tag-right">netrw-sort-sequence</code>
-<h3 class="help-heading">EDITING THE SORTING SEQUENCE<span class="help-heading-tags">		<a name="netrw-S"></a><span class="help-tag">netrw-S</span> <a name="netrw-sortsequence"></a><span class="help-tag">netrw-sortsequence</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0DAssociated%20topics%3A%20%7Cnetrw-a%7C%20%7Cnetrw-gh%7C%20%7Cnetrw-mh%7C%0A%0A%09%09%09%09%09%2Anetrw-sort-sequence%2A%0AEDITING%20THE%20SORTING%20SEQUENCE%09%09%2Anetrw-S%2A%20%2Anetrw-sortsequence%2A%20%7B%7B%7B2%0A%0AWhen%20%22Sorted%20by%22%20is%20name%2C%20one%20may%20specify%20priority%20via%20the%20sorting%20sequence%0A(g%3Anetrw_sort_sequence).%20%20The%20sorting%20sequence%20typically%20prioritizes%20the%0D%60%60%60">{{{2</a></h3></div>
+<h3 class="help-heading">EDITING THE SORTING SEQUENCE<span class="help-heading-tags">		<a name="netrw-S"></a><span class="help-tag">netrw-S</span> <a name="netrw-sortsequence"></a><span class="help-tag">netrw-sortsequence</span> {{{2</h3></div>
 <div class="old-help-para">When "Sorted by" is name, one may specify priority via the sorting sequence
 (g:netrw_sort_sequence).  The sorting sequence typically prioritizes the
 name-listing by suffix, although any pattern will do.  Patterns are delimited
@@ -1513,7 +1514,7 @@ g:netrw_sort_sequence variable (either manually or in your &lt;.vimrc&gt;) or by
 using the "S" map.</div>
 <div class="old-help-para">Related topics:               <a href="pi_netrw.html#netrw-s">netrw-s</a>               <a href="pi_netrw.html#netrw-S">netrw-S</a>
 Associated setting variables: <a href="pi_netrw.html#g%3Anetrw_sort_sequence">g:netrw_sort_sequence</a> <a href="pi_netrw.html#g%3Anetrw_sort_options">g:netrw_sort_options</a></div>
-<div class="old-help-para"><h3 class="help-heading">EXECUTING FILE UNDER CURSOR VIA SYSTEM()<span class="help-heading-tags">			<a name="netrw-X"></a><span class="help-tag">netrw-X</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0DAssociated%20setting%20variables%3A%20%7Cg%3Anetrw_sort_sequence%7C%20%7Cg%3Anetrw_sort_options%7C%0A%0A%0AEXECUTING%20FILE%20UNDER%20CURSOR%20VIA%20SYSTEM()%09%09%09%2Anetrw-X%2A%20%7B%7B%7B2%0A%0APressing%20X%20while%20the%20cursor%20is%20atop%20an%20executable%20file%20will%20yield%20a%20prompt%0Ausing%20the%20filename%20asking%20for%20any%20arguments.%20%20Upon%20pressing%20a%20%5Breturn%5D%2C%20netrw%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">EXECUTING FILE UNDER CURSOR VIA SYSTEM()<span class="help-heading-tags">			<a name="netrw-X"></a><span class="help-tag">netrw-X</span> {{{2</h3></div>
 <div class="old-help-para">Pressing X while the cursor is atop an executable file will yield a prompt
 using the filename asking for any arguments.  Upon pressing a [return], netrw
 will then call <a href="builtin.html#system()">system()</a> with that command and arguments.  The result will be
@@ -1526,7 +1527,7 @@ in that it is difficult to tell whether they link to a file or to a
 directory.</div>
 <div class="old-help-para">To force treatment as a file: use<pre>gf</pre></div>
 <div class="old-help-para">To force treatment as a directory: use<pre>gd</pre></div>
-<div class="old-help-para"><h3 class="help-heading">GOING UP<span class="help-heading-tags">							<a name="netrw--"></a><span class="help-tag">netrw--</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09gd%0A%3C%0A%0AGOING%20UP%09%09%09%09%09%09%09%2Anetrw--%2A%20%7B%7B%7B2%0A%0ATo%20go%20up%20a%20directory%2C%20press%20%22-%22%20or%20press%20the%20%3Ccr%3E%20when%20atop%20the%20..%2F%20directory%0Aentry%20in%20the%20listing.%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">GOING UP<span class="help-heading-tags">							<a name="netrw--"></a><span class="help-tag">netrw--</span> {{{2</h3></div>
 <div class="old-help-para">To go up a directory, press "-" or press the <code>&lt;cr&gt;</code> when atop the ../ directory
 entry in the listing.</div>
 <div class="old-help-para">Netrw will use the command in <a href="pi_netrw.html#g%3Anetrw_list_cmd">g:netrw_list_cmd</a> to perform the directory
@@ -1537,7 +1538,7 @@ ssh HOSTNAME ls -FLa</pre></div>
 read.  Naturally, the user may override this command with whatever is
 preferred.  The NetList function which implements remote browsing
 expects that directories will be flagged by a trailing slash.</div>
-<div class="old-help-para"><h3 class="help-heading">HIDING FILES OR DIRECTORIES<span class="help-heading-tags">			<a name="netrw-a"></a><span class="help-tag">netrw-a</span> <a name="netrw-hiding"></a><span class="help-tag">netrw-hiding</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0Dexpects%20that%20directories%20will%20be%20flagged%20by%20a%20trailing%20slash.%0A%0A%0AHIDING%20FILES%20OR%20DIRECTORIES%09%09%09%2Anetrw-a%2A%20%2Anetrw-hiding%2A%20%7B%7B%7B2%0A%0ANetrw's%20browsing%20facility%20allows%20one%20to%20use%20the%20hiding%20list%20in%20one%20of%20three%0Aways%3A%20ignore%20it%2C%20hide%20files%20which%20match%2C%20and%20show%20only%20those%20files%20which%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">HIDING FILES OR DIRECTORIES<span class="help-heading-tags">			<a name="netrw-a"></a><span class="help-tag">netrw-a</span> <a name="netrw-hiding"></a><span class="help-tag">netrw-hiding</span> {{{2</h3></div>
 <div class="old-help-para">Netrw's browsing facility allows one to use the hiding list in one of three
 ways: ignore it, hide files which match, and show only those files which
 match.</div>
@@ -1581,8 +1582,8 @@ global gitignore file: `git config --global core.excludesfile`
 system gitignore file: `git config --system core.excludesfile`</pre></div>
 <div class="old-help-para">Files that do not exist, are ignored.
 Git-ignore patterns are taken from existing files, and converted to patterns for
-hiding files. For example, if you had '*.log' in your '.gitignore' file, it
-would be converted to '.*\.log'.</div>
+hiding files. For example, if you had '.log' in your '.gitignore' file, it
+would be converted to '.\.log'.</div>
 <div class="old-help-para">To use this function, simply assign its output to <a href="pi_netrw.html#g%3Anetrw_list_hide">g:netrw_list_hide</a> option.<pre>
 Example: let g:netrw_list_hide= netrw_gitignore#Hide()
         Git-ignored files are hidden in Netrw.
@@ -1592,7 +1593,7 @@ Example: let g:netrw_list_hide= netrw_gitignore#Hide('my_gitignore_file')
 
 Example: let g:netrw_list_hide= netrw_gitignore#Hide() .. '.*\.swp$'
         Combining 'netrw_gitignore#Hide' with custom patterns.</pre></div>
-<div class="old-help-para"><h3 class="help-heading">IMPROVING BROWSING<span class="help-heading-tags">			<a name="netrw-listhack"></a><span class="help-tag">netrw-listhack</span> <a name="netrw-ssh-hack"></a><span class="help-tag">netrw-ssh-hack</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09Combining%20'netrw_gitignore%23Hide'%20with%20custom%20patterns.%0A%3C%0A%0AIMPROVING%20BROWSING%09%09%09%2Anetrw-listhack%2A%20%2Anetrw-ssh-hack%2A%20%7B%7B%7B2%0A%0AEspecially%20with%20the%20remote%20directory%20browser%2C%20constantly%20entering%20the%20password%0Ais%20tedious.%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">IMPROVING BROWSING<span class="help-heading-tags">			<a name="netrw-listhack"></a><span class="help-tag">netrw-listhack</span> <a name="netrw-ssh-hack"></a><span class="help-tag">netrw-ssh-hack</span> {{{2</h3></div>
 <div class="old-help-para">Especially with the remote directory browser, constantly entering the password
 is tedious.</div>
 <div class="old-help-para">For Linux/Unix systems, the book "Linux Server Hacks - 100 industrial strength
@@ -1650,7 +1651,7 @@ passwords:</div>
 	    <a href="http://thomer.com/howtos/netrw_ssh.html">http://thomer.com/howtos/netrw_ssh.html</a></div>
 <div class="old-help-para">	Alex Young has several hints on speeding ssh up:
 	    <a href="http://usevim.com/2012/03/16/editing-remote-files/">http://usevim.com/2012/03/16/editing-remote-files/</a></div>
-<div class="old-help-para"><h3 class="help-heading">LISTING BOOKMARKS AND HISTORY<span class="help-heading-tags">		<a name="netrw-qb"></a><span class="help-tag">netrw-qb</span> <a name="netrw-listbookmark"></a><span class="help-tag">netrw-listbookmark</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%20%20%20%20http%3A%2F%2Fusevim.com%2F2012%2F03%2F16%2Fediting-remote-files%2F%0A%0A%0ALISTING%20BOOKMARKS%20AND%20HISTORY%09%09%2Anetrw-qb%2A%20%2Anetrw-listbookmark%2A%20%7B%7B%7B2%0A%0APressing%20%22qb%22%20(query%20bookmarks)%20will%20list%20both%20the%20bookmarked%20directories%20and%0Adirectory%20traversal%20history.%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">LISTING BOOKMARKS AND HISTORY<span class="help-heading-tags">		<a name="netrw-qb"></a><span class="help-tag">netrw-qb</span> <a name="netrw-listbookmark"></a><span class="help-tag">netrw-listbookmark</span> {{{2</h3></div>
 <div class="old-help-para">Pressing "qb" (query bookmarks) will list both the bookmarked directories and
 directory traversal history.</div>
 <div class="old-help-para">Related Topics:
@@ -1669,7 +1670,7 @@ a file or a directory) will be detected, reported on, and ignored.</div>
 <div class="old-help-para">Related topics: <a href="pi_netrw.html#netrw-D">netrw-D</a>
 Associated setting variables:	<a href="pi_netrw.html#g%3Anetrw_localmkdir">g:netrw_localmkdir</a>   <a href="pi_netrw.html#g%3Anetrw_mkdir_cmd">g:netrw_mkdir_cmd</a>
 				<a href="pi_netrw.html#g%3Anetrw_remote_mkdir">g:netrw_remote_mkdir</a> <a href="pi_netrw.html#netrw-%25">netrw-%</a></div>
-<div class="old-help-para"><h3 class="help-heading">MAKING THE BROWSING DIRECTORY THE CURRENT DIRECTORY<span class="help-heading-tags">	<a name="netrw-cd"></a><span class="help-tag">netrw-cd</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%09%09%7Cg%3Anetrw_remote_mkdir%7C%20%7Cnetrw-%25%7C%0A%0A%0AMAKING%20THE%20BROWSING%20DIRECTORY%20THE%20CURRENT%20DIRECTORY%09%2Anetrw-cd%2A%20%7B%7B%7B2%0A%0ABy%20default%2C%20%7Cg%3Anetrw_keepdir%7C%20is%201.%20%20This%20setting%20means%20that%20the%20current%0Adirectory%20will%20not%20track%20the%20browsing%20directory.%20(done%20for%20backwards%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">MAKING THE BROWSING DIRECTORY THE CURRENT DIRECTORY<span class="help-heading-tags">	<a name="netrw-cd"></a><span class="help-tag">netrw-cd</span> {{{2</h3></div>
 <div class="old-help-para">By default, <a href="pi_netrw.html#g%3Anetrw_keepdir">g:netrw_keepdir</a> is 1.  This setting means that the current
 directory will not track the browsing directory. (done for backwards
 compatibility with v6's file explorer).</div>
@@ -1683,7 +1684,7 @@ directory.</div>
 <div class="old-help-para"><a href="pi_netrw.html#netrw-cd">netrw-cd</a> : This map's name was changed from "c" to cd (see <a href="pi_netrw.html#netrw-cd">netrw-cd</a>).
            This change was done to allow for <a href="pi_netrw.html#netrw-cb">netrw-cb</a> and <a href="pi_netrw.html#netrw-cB">netrw-cB</a> maps.</div>
 <div class="old-help-para">Associated setting variable: <a href="pi_netrw.html#g%3Anetrw_keepdir">g:netrw_keepdir</a></div>
-<div class="old-help-para"><h3 class="help-heading">MARKING FILES<span class="help-heading-tags">					<a name="netrw-%3AMF"></a><span class="help-tag">netrw-:MF</span>	<a name="netrw-mf"></a><span class="help-tag">netrw-mf</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0AAssociated%20setting%20variable%3A%20%7Cg%3Anetrw_keepdir%7C%0A%0AMARKING%20FILES%09%09%09%09%09%2Anetrw-%3AMF%2A%09%2Anetrw-mf%2A%20%7B%7B%7B2%0A%09(also%20see%20%7Cnetrw-mr%7C)%0A%0ANetrw%20provides%20several%20ways%20to%20mark%20files%3A%0D%60%60%60">{{{2</a></h3>	(also see <a href="pi_netrw.html#netrw-mr">netrw-mr</a>)</div>
+<div class="old-help-para"><h3 class="help-heading">MARKING FILES<span class="help-heading-tags">					<a name="netrw-%3AMF"></a><span class="help-tag">netrw-:MF</span>	<a name="netrw-mf"></a><span class="help-tag">netrw-mf</span> {{{2</h3>	(also see <a href="pi_netrw.html#netrw-mr">netrw-mr</a>)</div>
 <div class="old-help-para">Netrw provides several ways to mark files:</div>
 <div class="old-help-para"><div class="help-li" style=""> One may mark files with the cursor atop a filename and
 	  then pressing "mf".
@@ -1754,17 +1755,17 @@ directories have files with the same name,  then marking such a file will
 result in all such files being highlighted as if they were all marked.  The
 <a href="pi_netrw.html#markfilelist">markfilelist</a>, however, will only have the selected file in it.  This problem
 is unlikely to be fixed.</div>
-<div class="old-help-para"><h3 class="help-heading">UNMARKING FILES<span class="help-heading-tags">							<a name="netrw-mF"></a><span class="help-tag">netrw-mF</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0Dis%20unlikely%20to%20be%20fixed.%0A%0A%0AUNMARKING%20FILES%09%09%09%09%09%09%09%2Anetrw-mF%2A%20%7B%7B%7B2%0A%09(also%20see%20%7Cnetrw-mf%7C%2C%20%7Cnetrw-mu%7C)%0A%0AThe%20%22mF%22%20command%20will%20unmark%20all%20files%20in%20the%20current%20buffer.%20%20One%20may%20also%20use%0D%60%60%60">{{{2</a></h3>	(also see <a href="pi_netrw.html#netrw-mf">netrw-mf</a>, <a href="pi_netrw.html#netrw-mu">netrw-mu</a>)</div>
+<div class="old-help-para"><h3 class="help-heading">UNMARKING FILES<span class="help-heading-tags">							<a name="netrw-mF"></a><span class="help-tag">netrw-mF</span> {{{2</h3>	(also see <a href="pi_netrw.html#netrw-mf">netrw-mf</a>, <a href="pi_netrw.html#netrw-mu">netrw-mu</a>)</div>
 <div class="old-help-para">The "mF" command will unmark all files in the current buffer.  One may also use
 mf (<a href="pi_netrw.html#netrw-mf">netrw-mf</a>) on a specific, already marked, file to unmark just that file.</div>
-<div class="old-help-para"><h3 class="help-heading">MARKING FILES BY LOCATION LIST<span class="help-heading-tags">					<a name="netrw-qL"></a><span class="help-tag">netrw-qL</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0DThe%20%22mF%22%20command%20will%20unmark%20all%20files%20in%20the%20current%20buffer.%20%20One%20may%20also%20use%0Amf%20(%7Cnetrw-mf%7C)%20on%20a%20specific%2C%20already%20marked%2C%20file%20to%20unmark%20just%20that%20file.%0A%0AMARKING%20FILES%20BY%20LOCATION%20LIST%09%09%09%09%09%2Anetrw-qL%2A%20%7B%7B%7B2%0A%09(also%20see%20%7Cnetrw-mf%7C)%0A%0AOne%20may%20convert%20%7Clocation-list%7Cs%20into%20a%20marked%20file%20list%20using%20%22qL%22.%0D%60%60%60">{{{2</a></h3>	(also see <a href="pi_netrw.html#netrw-mf">netrw-mf</a>)</div>
+<div class="old-help-para"><h3 class="help-heading">MARKING FILES BY LOCATION LIST<span class="help-heading-tags">					<a name="netrw-qL"></a><span class="help-tag">netrw-qL</span> {{{2</h3>	(also see <a href="pi_netrw.html#netrw-mf">netrw-mf</a>)</div>
 <div class="old-help-para">One may convert <a href="quickfix.html#location-list">location-list</a>s into a marked file list using "qL".
 You may then proceed with commands such as me (<a href="pi_netrw.html#netrw-me">netrw-me</a>) to edit them.</div>
-<div class="old-help-para"><h3 class="help-heading">MARKING FILES BY QUICKFIX LIST<span class="help-heading-tags">					<a name="netrw-qF"></a><span class="help-tag">netrw-qF</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0DYou%20may%20then%20proceed%20with%20commands%20such%20as%20me%20(%7Cnetrw-me%7C)%20to%20edit%20them.%0A%0A%0AMARKING%20FILES%20BY%20QUICKFIX%20LIST%09%09%09%09%09%2Anetrw-qF%2A%20%7B%7B%7B2%0A%09(also%20see%20%7Cnetrw-mf%7C)%0A%0AOne%20may%20convert%20%7Cquickfix-error-lists%7C%20into%20a%20marked%20file%20list%20using%20%22qF%22.%0D%60%60%60">{{{2</a></h3>	(also see <a href="pi_netrw.html#netrw-mf">netrw-mf</a>)</div>
+<div class="old-help-para"><h3 class="help-heading">MARKING FILES BY QUICKFIX LIST<span class="help-heading-tags">					<a name="netrw-qF"></a><span class="help-tag">netrw-qF</span> {{{2</h3>	(also see <a href="pi_netrw.html#netrw-mf">netrw-mf</a>)</div>
 <div class="old-help-para">One may convert <a href="quickfix.html#quickfix-error-lists">quickfix-error-lists</a> into a marked file list using "qF".
 You may then proceed with commands such as me (<a href="pi_netrw.html#netrw-me">netrw-me</a>) to edit them.
 Quickfix error lists are generated, for example, by calls to <a href="quickfix.html#%3Avimgrep">:vimgrep</a>.</div>
-<div class="old-help-para"><h3 class="help-heading">MARKING FILES BY REGULAR EXPRESSION<span class="help-heading-tags">				<a name="netrw-mr"></a><span class="help-tag">netrw-mr</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0DQuickfix%20error%20lists%20are%20generated%2C%20for%20example%2C%20by%20calls%20to%20%7C%3Avimgrep%7C.%0A%0A%0AMARKING%20FILES%20BY%20REGULAR%20EXPRESSION%09%09%09%09%2Anetrw-mr%2A%20%7B%7B%7B2%0A%09(also%20see%20%7Cnetrw-mf%7C)%0A%0AOne%20may%20also%20mark%20files%20by%20pressing%20%22mr%22%3B%20netrw%20will%20then%20issue%20a%20prompt%2C%0D%60%60%60">{{{2</a></h3>	(also see <a href="pi_netrw.html#netrw-mf">netrw-mf</a>)</div>
+<div class="old-help-para"><h3 class="help-heading">MARKING FILES BY REGULAR EXPRESSION<span class="help-heading-tags">				<a name="netrw-mr"></a><span class="help-tag">netrw-mr</span> {{{2</h3>	(also see <a href="pi_netrw.html#netrw-mf">netrw-mf</a>)</div>
 <div class="old-help-para">One may also mark files by pressing "mr"; netrw will then issue a prompt,
 "Enter regexp: ".  You may then enter a shell-style regular expression such
 as.c$ (see <a href="builtin.html#glob()">glob()</a>).  For remote systems, glob() doesn't work -- so netrw
@@ -1997,7 +1998,7 @@ from "mF" as the latter only unmarks files in the current directory whereas
 "mu" will unmark global and all buffer-local marked files.
 (see <a href="pi_netrw.html#netrw-mF">netrw-mF</a>)</div>
 <div class="old-help-para">				<a name="netrw-browser-settings"></a><code class="help-tag-right">netrw-browser-settings</code>
-<h3 class="help-heading">NETRW BROWSER VARIABLES<span class="help-heading-tags">		<a name="netrw-browser-options"></a><span class="help-tag">netrw-browser-options</span> <a name="netrw-browser-var"></a><span class="help-tag">netrw-browser-var</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A%0A%09%09%09%09%2Anetrw-browser-settings%2A%0ANETRW%20BROWSER%20VARIABLES%09%09%2Anetrw-browser-options%2A%20%2Anetrw-browser-var%2A%20%7B%7B%7B2%0A%0A(if%20you're%20interested%20in%20the%20netrw%20file%20transfer%20settings%2C%20see%20%7Cnetrw-options%7C%0A%20and%20%7Cnetrw-protocol%7C)%0D%60%60%60">{{{2</a></h3></div>
+<h3 class="help-heading">NETRW BROWSER VARIABLES<span class="help-heading-tags">		<a name="netrw-browser-options"></a><span class="help-tag">netrw-browser-options</span> <a name="netrw-browser-var"></a><span class="help-tag">netrw-browser-var</span> {{{2</h3></div>
 <div class="old-help-para">(if you're interested in the netrw file transfer settings, see <a href="pi_netrw.html#netrw-options">netrw-options</a>
  and <a href="pi_netrw.html#netrw-protocol">netrw-protocol</a>)</div>
 <div class="old-help-para">The &lt;netrw.vim&gt; browser provides settings in the form of variables which
@@ -2158,8 +2159,8 @@ Var                                Explanation
 				in the listing.  This pattern is used to
 				remove such embedded messages.  By default its
 				value is:
-				 '^total\s\+\d\+$\|</div>
-<div class="old-help-para">				 ^Trying\s\+\d\+.*$\|
+				 '^total\s\+\d\+$\|
+				 ^Trying\s\+\d\+.*$\|
 				 ^KERBEROS_V\d rejected\|
 				 ^Security extensions not\|
 				 No such file\|
@@ -2229,8 +2230,8 @@ Var                                Explanation
 				hiding all gitignored files.
 				For more details see <a href="pi_netrw.html#netrw-gitignore">netrw-gitignore</a>.</div>
 <div class="old-help-para">				Examples:
-				 let g:netrw_list_hide= '.*\.swp$'
-				 let g:netrw_list_hide= netrw_gitignore#Hide() .. '.*\.swp$'
+				 let g:netrw_list_hide= '.\.swp$'
+				 let g:netrw_list_hide= netrw_gitignore#Hide() .. '.\.swp$'
 				default: ""</div>
 <div class="old-help-para">  <a name="g%3Anetrw_localcopycmd"></a><code class="help-tag">g:netrw_localcopycmd</code>	="cp"           Linux/Unix/MacOS/Cygwin
 				=expand("$COMSPEC")             Windows
@@ -2346,7 +2347,8 @@ Var                                Explanation
 				comma-separated pattern sequence.  Note that
 				any filigree added to indicate filetypes
 				should be accounted for in your pattern.
-				 default: '[\/]$,*,\.bak$,\.o$,\.h$,				           \.info$,\.swp$,\.obj$'</div>
+				 default: '[\/]$,*,\.bak$,\.o$,\.h$,
+				           \.info$,\.swp$,\.obj$'</div>
 <div class="old-help-para">  <a name="g%3Anetrw_special_syntax"></a><code class="help-tag">g:netrw_special_syntax</code>	If true, then certain files will be shown
 				using special syntax in the browser:</div>
 <div class="old-help-para">					netrwBak     :.bak
@@ -2469,7 +2471,7 @@ hi netrwSymLink  term=NONE cterm=NONE gui=NONE ctermfg=220 ctermbg=27 guifg=grey
 				menu name; by default, it's "Netrw.".  If
 				you wish to change this, do so in your
 				.vimrc.</div>
-<div class="old-help-para"><h3 class="help-heading">NETRW BROWSING AND OPTION INCOMPATIBILITIES<span class="help-heading-tags">	<a name="netrw-incompatible"></a><span class="help-tag">netrw-incompatible</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%09%09you%20wish%20to%20change%20this%2C%20do%20so%20in%20your%0A%09%09%09%09.vimrc.%0A%0ANETRW%20BROWSING%20AND%20OPTION%20INCOMPATIBILITIES%09%2Anetrw-incompatible%2A%20%7B%7B%7B2%0A%0ANetrw%20has%20been%20designed%20to%20handle%20user%20options%20by%20saving%20them%2C%20setting%20the%0Aoptions%20to%20something%20that's%20compatible%20with%20netrw's%20needs%2C%20and%20then%20restoring%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">NETRW BROWSING AND OPTION INCOMPATIBILITIES<span class="help-heading-tags">	<a name="netrw-incompatible"></a><span class="help-tag">netrw-incompatible</span> {{{2</h3></div>
 <div class="old-help-para">Netrw has been designed to handle user options by saving them, setting the
 options to something that's compatible with netrw's needs, and then restoring
 them.  However, the autochdir option:<pre>:set acd</pre>
@@ -2477,7 +2479,7 @@ is problematic.  Autochdir sets the current directory to that containing the
 file you edit; this apparently also applies to directories.  In other words,
 autochdir sets the current directory to that containing the "file" (even if
 that "file" is itself a directory).</div>
-<div class="old-help-para"><h3 class="help-heading">NETRW SETTINGS WINDOW<span class="help-heading-tags">				<a name="netrw-settings-window"></a><span class="help-tag">netrw-settings-window</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0Dautochdir%20sets%20the%20current%20directory%20to%20that%20containing%20the%20%22file%22%20(even%20if%0Athat%20%22file%22%20is%20itself%20a%20directory).%0A%0ANETRW%20SETTINGS%20WINDOW%09%09%09%09%2Anetrw-settings-window%2A%20%7B%7B%7B2%0A%0AWith%20the%20NetrwSettings.vim%20plugin%2C%20%3E%0A%09%3ANetrwSettings%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">NETRW SETTINGS WINDOW<span class="help-heading-tags">				<a name="netrw-settings-window"></a><span class="help-tag">netrw-settings-window</span> {{{2</h3></div>
 <div class="old-help-para">With the NetrwSettings.vim plugin,<pre>:NetrwSettings</pre>
 will bring up a window with the many variables that netrw uses for its
 settings.  You may change any of their values; when you save the file, the
@@ -2516,7 +2518,7 @@ be placed in the netrw's current directory (ie. b:netrw_curdir).</div>
 <div class="old-help-para">If Lexplore (<a href="pi_netrw.html#netrw-%3ALexplore">netrw-:Lexplore</a>) is in use, the new file will be generated
 in the <a href="pi_netrw.html#g%3Anetrw_chgwin">g:netrw_chgwin</a> window.</div>
 <div class="old-help-para">Related topics:               <a href="pi_netrw.html#netrw-d">netrw-d</a></div>
-<div class="old-help-para"><h3 class="help-heading">PREVIEW WINDOW<span class="help-heading-tags">				<a name="netrw-p"></a><span class="help-tag">netrw-p</span> <a name="netrw-preview"></a><span class="help-tag">netrw-preview</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0DRelated%20topics%3A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7Cnetrw-d%7C%0A%0A%0APREVIEW%20WINDOW%09%09%09%09%2Anetrw-p%2A%20%2Anetrw-preview%2A%20%7B%7B%7B2%0A%0AOne%20may%20use%20a%20preview%20window%20by%20using%20the%20%22p%22%20key%20when%20the%20cursor%20is%20atop%20the%0Adesired%20filename%20to%20be%20previewed.%20%20The%20display%20will%20then%20split%20to%20show%20both%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">PREVIEW WINDOW<span class="help-heading-tags">				<a name="netrw-p"></a><span class="help-tag">netrw-p</span> <a name="netrw-preview"></a><span class="help-tag">netrw-preview</span> {{{2</h3></div>
 <div class="old-help-para">One may use a preview window by using the "p" key when the cursor is atop the
 desired filename to be previewed.  The display will then split to show both
 the browser (where the cursor will remain) and the file (see <a href="windows.html#%3Apedit">:pedit</a>).  By
@@ -2535,7 +2537,7 @@ These will:</div>
 <div class="old-help-para">	Related: if you like this idea, you may also find :Lexplore
 	         (<a href="pi_netrw.html#netrw-%3ALexplore">netrw-:Lexplore</a>) or <a href="pi_netrw.html#g%3Anetrw_chgwin">g:netrw_chgwin</a> of interest</div>
 <div class="old-help-para">Also see: <a href="pi_netrw.html#g%3Anetrw_chgwin">g:netrw_chgwin</a> <a href="pi_netrw.html#netrw-P">netrw-P</a> <a href="options.html#'previewwindow'">'previewwindow'</a> <a href="windows.html#CTRL-W_z">CTRL-W_z</a> <a href="windows.html#%3Apclose">:pclose</a></div>
-<div class="old-help-para"><h3 class="help-heading">PREVIOUS WINDOW<span class="help-heading-tags">					<a name="netrw-P"></a><span class="help-tag">netrw-P</span> <a name="netrw-prvwin"></a><span class="help-tag">netrw-prvwin</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0DAlso%20see%3A%20%7Cg%3Anetrw_chgwin%7C%20%7Cnetrw-P%7C%20%7C'previewwindow'%7C%20%7CCTRL-W_z%7C%20%7C%3Apclose%7C%0A%0A%0APREVIOUS%20WINDOW%09%09%09%09%09%2Anetrw-P%2A%20%2Anetrw-prvwin%2A%20%7B%7B%7B2%0A%0ATo%20edit%20a%20file%20or%20directory%20under%20the%20cursor%20in%20the%20previously%20used%20(last%0Aaccessed)%20window%20(see%20%3Ahe%20%7CCTRL-W_p%7C)%2C%20press%20a%20%22P%22.%20%20If%20there's%20only%20one%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">PREVIOUS WINDOW<span class="help-heading-tags">					<a name="netrw-P"></a><span class="help-tag">netrw-P</span> <a name="netrw-prvwin"></a><span class="help-tag">netrw-prvwin</span> {{{2</h3></div>
 <div class="old-help-para">To edit a file or directory under the cursor in the previously used (last
 accessed) window (see :he <a href="windows.html#CTRL-W_p">CTRL-W_p</a>), press a "P".  If there's only one
 window, then the one window will be horizontally split (by default).</div>
@@ -2551,16 +2553,16 @@ Associated setting variables:
    <a href="pi_netrw.html#g%3Anetrw_preview">g:netrw_preview</a> control horizontal vs vertical splitting
    <a href="pi_netrw.html#g%3Anetrw_winsize">g:netrw_winsize</a> control initial sizing</div>
 <div class="old-help-para">Also see: <a href="pi_netrw.html#g%3Anetrw_chgwin">g:netrw_chgwin</a> <a href="pi_netrw.html#netrw-p">netrw-p</a></div>
-<div class="old-help-para"><h3 class="help-heading">REFRESHING THE LISTING<span class="help-heading-tags">		<a name="netrw-refresh"></a><span class="help-tag">netrw-refresh</span> <a name="netrw-ctrl-l"></a><span class="help-tag">netrw-ctrl-l</span> <a name="netrw-ctrl_l"></a><span class="help-tag">netrw-ctrl_l</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0DAlso%20see%3A%20%7Cg%3Anetrw_chgwin%7C%20%7Cnetrw-p%7C%0A%0A%0AREFRESHING%20THE%20LISTING%09%09%2Anetrw-refresh%2A%20%2Anetrw-ctrl-l%2A%20%2Anetrw-ctrl_l%2A%20%7B%7B%7B2%0A%0ATo%20refresh%20either%20a%20local%20or%20remote%20directory%20listing%2C%20press%20ctrl-l%20(%3Cc-l%3E)%20or%0Ahit%20the%20%3Ccr%3E%20when%20atop%20the%20.%2F%20directory%20entry%20in%20the%20listing.%20%20One%20may%20also%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">REFRESHING THE LISTING<span class="help-heading-tags">		<a name="netrw-refresh"></a><span class="help-tag">netrw-refresh</span> <a name="netrw-ctrl-l"></a><span class="help-tag">netrw-ctrl-l</span> <a name="netrw-ctrl_l"></a><span class="help-tag">netrw-ctrl_l</span> {{{2</h3></div>
 <div class="old-help-para">To refresh either a local or remote directory listing, press ctrl-l (<code>&lt;c-l&gt;</code>) or
 hit the <code>&lt;cr&gt;</code> when atop the ./ directory entry in the listing.  One may also
 refresh a local directory by using ":e .".</div>
-<div class="old-help-para"><h3 class="help-heading">REVERSING SORTING ORDER<span class="help-heading-tags">		<a name="netrw-r"></a><span class="help-tag">netrw-r</span> <a name="netrw-reverse"></a><span class="help-tag">netrw-reverse</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0Drefresh%20a%20local%20directory%20by%20using%20%22%3Ae%20.%22.%0A%0A%0AREVERSING%20SORTING%20ORDER%09%09%2Anetrw-r%2A%20%2Anetrw-reverse%2A%20%7B%7B%7B2%0A%0AOne%20may%20toggle%20between%20normal%20and%20reverse%20sorting%20order%20by%20pressing%20the%0A%22r%22%20key.%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">REVERSING SORTING ORDER<span class="help-heading-tags">		<a name="netrw-r"></a><span class="help-tag">netrw-r</span> <a name="netrw-reverse"></a><span class="help-tag">netrw-reverse</span> {{{2</h3></div>
 <div class="old-help-para">One may toggle between normal and reverse sorting order by pressing the
 "r" key.</div>
 <div class="old-help-para">Related topics:              <a href="pi_netrw.html#netrw-s">netrw-s</a>
 Associated setting variable: <a href="pi_netrw.html#g%3Anetrw_sort_direction">g:netrw_sort_direction</a></div>
-<div class="old-help-para"><h3 class="help-heading">RENAMING FILES OR DIRECTORIES<span class="help-heading-tags">	<a name="netrw-move"></a><span class="help-tag">netrw-move</span> <a name="netrw-rename"></a><span class="help-tag">netrw-rename</span> <a name="netrw-R"></a><span class="help-tag">netrw-R</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0DAssociated%20setting%20variable%3A%20%7Cg%3Anetrw_sort_direction%7C%0A%0A%0ARENAMING%20FILES%20OR%20DIRECTORIES%09%2Anetrw-move%2A%20%2Anetrw-rename%2A%20%2Anetrw-R%2A%20%7B%7B%7B2%0A%0AIf%20there%20are%20no%20marked%20files%3A%20(see%20%7Cnetrw-mf%7C)%0A%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">RENAMING FILES OR DIRECTORIES<span class="help-heading-tags">	<a name="netrw-move"></a><span class="help-tag">netrw-move</span> <a name="netrw-rename"></a><span class="help-tag">netrw-rename</span> <a name="netrw-R"></a><span class="help-tag">netrw-R</span> {{{2</h3></div>
 <div class="old-help-para">If there are no marked files: (see <a href="pi_netrw.html#netrw-mf">netrw-mf</a>)</div>
 <div class="old-help-para">    Renaming files and directories involves moving the cursor to the
     file/directory to be moved (renamed) and pressing "R".  You will then be
@@ -2599,13 +2601,13 @@ V (<a href="visual.html#linewise-visual">linewise-visual</a>) when using thin st
 <div class="old-help-para">See <a href="cmdline.html#cmdline-editing">cmdline-editing</a> for more on how to edit the command line; in particular,
 you'll find <code>&lt;ctrl-f&gt;</code> (initiates cmdline window editing) and <code>&lt;ctrl-c&gt;</code> (uses the
 command line under the cursor) useful in conjunction with the R command.</div>
-<div class="old-help-para"><h3 class="help-heading">SELECTING SORTING STYLE<span class="help-heading-tags">			<a name="netrw-s"></a><span class="help-tag">netrw-s</span> <a name="netrw-sort"></a><span class="help-tag">netrw-sort</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0Dcommand%20line%20under%20the%20cursor)%20useful%20in%20conjunction%20with%20the%20R%20command.%0A%0A%0ASELECTING%20SORTING%20STYLE%09%09%09%2Anetrw-s%2A%20%2Anetrw-sort%2A%20%7B%7B%7B2%0A%0AOne%20may%20select%20the%20sorting%20style%20by%20name%2C%20time%2C%20or%20(file)%20size.%20%20The%20%22s%22%20map%0Aallows%20one%20to%20circulate%20amongst%20the%20three%20choices%3B%20the%20directory%20listing%20will%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">SELECTING SORTING STYLE<span class="help-heading-tags">			<a name="netrw-s"></a><span class="help-tag">netrw-s</span> <a name="netrw-sort"></a><span class="help-tag">netrw-sort</span> {{{2</h3></div>
 <div class="old-help-para">One may select the sorting style by name, time, or (file) size.  The "s" map
 allows one to circulate amongst the three choices; the directory listing will
 automatically be refreshed to reflect the selected style.</div>
 <div class="old-help-para">Related topics:               <a href="pi_netrw.html#netrw-r">netrw-r</a> <a href="pi_netrw.html#netrw-S">netrw-S</a>
 Associated setting variables: <a href="pi_netrw.html#g%3Anetrw_sort_by">g:netrw_sort_by</a> <a href="pi_netrw.html#g%3Anetrw_sort_sequence">g:netrw_sort_sequence</a></div>
-<div class="old-help-para"><h3 class="help-heading">SETTING EDITING WINDOW<span class="help-heading-tags">		<a name="netrw-editwindow"></a><span class="help-tag">netrw-editwindow</span> <a name="netrw-C"></a><span class="help-tag">netrw-C</span> <a name="netrw-%3ANetrwC"></a><span class="help-tag">netrw-:NetrwC</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0DAssociated%20setting%20variables%3A%20%7Cg%3Anetrw_sort_by%7C%20%7Cg%3Anetrw_sort_sequence%7C%0A%0A%0ASETTING%20EDITING%20WINDOW%09%09%2Anetrw-editwindow%2A%20%2Anetrw-C%2A%20%2Anetrw-%3ANetrwC%2A%20%7B%7B%7B2%0A%0AOne%20may%20select%20a%20netrw%20window%20for%20editing%20with%20the%20%22C%22%20mapping%2C%20using%20the%0A%3ANetrwC%20%5Bwin%23%5D%20command%2C%20or%20by%20setting%20%7Cg%3Anetrw_chgwin%7C%20to%20the%20selected%20window%0D%60%60%60">{{{2</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">SETTING EDITING WINDOW<span class="help-heading-tags">		<a name="netrw-editwindow"></a><span class="help-tag">netrw-editwindow</span> <a name="netrw-C"></a><span class="help-tag">netrw-C</span> <a name="netrw-%3ANetrwC"></a><span class="help-tag">netrw-:NetrwC</span> {{{2</h3></div>
 <div class="old-help-para">One may select a netrw window for editing with the "C" mapping, using the
 :NetrwC [win#] command, or by setting <a href="pi_netrw.html#g%3Anetrw_chgwin">g:netrw_chgwin</a> to the selected window
 number.  Subsequent selection of a file to edit (<a href="pi_netrw.html#netrw-cr">netrw-cr</a>) will use that
@@ -2646,7 +2648,7 @@ than a <code>&lt;c-tab&gt;</code>, too: (but you'll still need to have had <a hr
 nmap &lt;unique&gt; (whatever)        &lt;Plug&gt;NetrwShrink</pre></div>
 <div class="old-help-para">Related topics:			<a href="pi_netrw.html#%3ALexplore">:Lexplore</a>
 Associated setting variable:	<a href="pi_netrw.html#g%3Anetrw_usetab">g:netrw_usetab</a></div>
-<div class="old-help-para"><h3 class="help-heading">USER SPECIFIED MAPS<span class="help-heading-tags">					<a name="netrw-usermaps"></a><span class="help-tag">netrw-usermaps</span><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pi_netrw.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0DAssociated%20setting%20variable%3A%09%7Cg%3Anetrw_usetab%7C%0A%0A%0AUSER%20SPECIFIED%20MAPS%09%09%09%09%09%2Anetrw-usermaps%2A%20%7B%7B%7B1%0A%0AOne%20may%20make%20customized%20user%20maps.%20%20Specify%20a%20variable%2C%20%7Cg%3ANetrw_UserMaps%7C%2C%0Ato%20hold%20a%20%7CList%7C%20of%20lists%20of%20keymap%20strings%20and%20function%20names%3A%20%3E%0D%60%60%60">{{{1</a></h3></div>
+<div class="old-help-para"><h3 class="help-heading">USER SPECIFIED MAPS<span class="help-heading-tags">					<a name="netrw-usermaps"></a><span class="help-tag">netrw-usermaps</span> {{{1</h3></div>
 <div class="old-help-para">One may make customized user maps.  Specify a variable, <a href="pi_netrw.html#g%3ANetrw_UserMaps">g:Netrw_UserMaps</a>,
 to hold a <a href="eval.html#List">List</a> of lists of keymap strings and function names:<pre>
 [["keymap-sequence","ExampleUserMapFunc"],...]</pre></div>
@@ -3134,7 +3136,7 @@ NcampObell@SdrPchip.AorgM-NOSPAM</pre></div>
 		Nov 22, 2016	* (glacambre) reported that files containing
 				  spaces weren't being obtained properly via
 				  scp.  Fix: apparently using single quotes
-				  such as withfile name' wasn't enough; the
+				  such as with 'file name' wasn't enough; the
 				  spaces inside the quotes also had to be
 				  escaped (ie. 'file\ name').
 </div><div class="help-li" style=""> Also fixed obtain (<a href="pi_netrw.html#netrw-O">netrw-O</a>) to be able to
@@ -3581,10 +3583,10 @@ Modelines: {{{1</a>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:32 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 44 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+pi_netrw.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="  For Vim version 8.2.  Last change: 2020 Aug 15
+      parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+pi_netrw.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="  For Vim version 8.2.  Last change: 2020 Aug 15
 vim:tw=78:ts=8:ft=help:noet:norl:fdm=marker">noise_lines: 2</span>
       </div>
     <div>

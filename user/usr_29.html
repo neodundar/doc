@@ -125,36 +125,33 @@ function.
 it does.  So you position the cursor over the call to "write_char" and press
 <code>CTRL-]</code>.  Now you are at the definition of "write_char".</div>
 <div class="old-help-para">	+-------------------------------------+
-void write_block(char **s; int cnt)  |
-	|{				      |	|    int i;			      |
-	|    for (i = 0; i &lt; cnt; ++i)	      |
-	|       write_line(s[i]);	      |
-	<a href="motion.html#%7D">}</a>	    |				      |
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_29.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_29.html%0D%0DContext%3A%0D%0D%60%60%60%0DCTRL-%5D.%20%20Now%20you%20are%20at%20the%20definition%20of%20%22write_char%22.%0A%0A%09%2B-------------------------------------%2B%0A%09%7Cvoid%20write_block(char%20%2A%2As%3B%20int%20cnt)%20%20%7C%0A%09%7C%7B%09%09%09%09%20%20%20%20%20%20%7C%0A%09%7C%20%20%20int%20i%3B%09%09%09%20%20%20%20%20%20%7C%0A%09%7C%20%20%20for%20(i%20%3D%200%3B%20i%20%3C%20cnt%3B%20%2B%2Bi)%09%20%20%20%20%20%20%7C%0D%60%60%60">void</a> write_block(char **s; int cnt)  |
+	|{				      |
+	|   int i;			      |
+	|   for (i = 0; i &lt; cnt; ++i)	      |
+	|      write_line(s[i]);	      |
+	|}	    |			      |
 	+-----------|-------------------------+
 		    |
 	     <code>CTRL-]</code> |
-		    |		 +----------------------------+
-		    +--&gt;void write_line(char *s)    |
-			 |{			      |			 |    while (s != 0)	      |
-			 |		write_char(*s++);     |
-			 <a href="motion.html#%7D">}</a>	  |			      |
+		    |	 +----------------------------+
+		    +--&gt; |<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_29.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_29.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%20%20%20%20%7C%0A%09%20%20%20%20%20CTRL-%5D%20%7C%0A%09%09%20%20%20%20%7C%09%20%2B----------------------------%2B%0A%09%09%20%20%20%20%2B--%3E%20%7Cvoid%20write_line(char%20%2As)%20%20%20%20%7C%0A%09%09%09%20%7C%7B%09%09%09%20%20%20%20%20%20%7C%0A%09%09%09%20%7C%20%20%20while%20(%2As%20%21%3D%200)%09%20%20%20%20%20%20%7C%0A%09%09%09%20%7C%09write_char(%2As%2B%2B)%3B%20%20%20%20%20%7C%0D%60%60%60">void</a> write_line(chars)    |
+			 |{			      |
+			 |   while (s != 0)	      |
+			 |	write_char(s++);     |
+			 |}	  |		      |
 			 +--------|-------------------+
 				  |
 			   <code>CTRL-]</code> |
-				  |     +------------------------------------+
-				  +--&gt;void write_char(char c)		    |
-				       |{				    |				       |     putchar((int)(unsigned char)c); |
+				  |    +------------------------------------+
+				  +--&gt; |<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_29.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_29.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%09%09%20%20%7C%0A%09%09%09%20%20%20CTRL-%5D%20%7C%0A%09%09%09%09%20%20%7C%20%20%20%20%2B------------------------------------%2B%0A%09%09%09%09%20%20%2B--%3E%20%7Cvoid%20write_char(char%20c)%09%09%20%20%20%20%7C%0A%09%09%09%09%20%20%20%20%20%20%20%7C%7B%09%09%09%09%20%20%20%20%7C%0A%09%09%09%09%20%20%20%20%20%20%20%7C%20%20%20%20putchar((int)(unsigned%20char)c)%3B%20%7C%0A%09%09%09%09%20%20%20%20%20%20%20%7C%7D%09%09%09%09%20%20%20%20%7C%0D%60%60%60">void</a> write_char(char c)		    |
+				       |{				    |
+				       |    putchar((int)(unsigned char)c); |
 				       |}				    |
-				       +------------------------------------+
-
-The ":tags" command shows the list of tags that you traversed through:
-
-	:tags
-	  # TO tag	   FROM line  in file/text ~
-	  1  1 write_line	   8  write_block.c ~
-	  2  1 write_char	   7  write_line.c ~
-	&gt; ~
-&gt;
+				       +------------------------------------+</div>
+<div class="old-help-para">The ":tags" command shows the list of tags that you traversed through:</div>
+<div class="old-help-para">	:tags
+<div class="help-column_heading">	  # TO tag	   FROM line  in file/text</div><div class="help-column_heading">	  1  1 write_line	   8  write_block.c</div><div class="help-column_heading">	  2  1 write_char	   7  write_line.c</div><div class="help-column_heading">	&gt;</div><pre></pre>
 Now to go back.  The <code>CTRL-T</code> command goes to the preceding tag.  In the example
 above you get back to the "write_line" function, in the call to "write_char".
    This command takes a count argument that indicates how many tags to jump
@@ -330,15 +327,15 @@ pairs of {} at the same level.  "]}" jumps to the end.
    An overview:</div>
 <div class="old-help-para">			function(int a)
 	   +-&gt;		{
-	   |			    if (a)
-	   |		   +-&gt;	    {
-	[[ |		   |			for (;;)	       --+
-	   |		   |		  +-&gt;	{			 |
-	   |		[{ |		  |		    foo(32);		 |      --+
-	   |		   |    [{ |		    if (bar(a))  --+	 |  ]}	 |
-	   +--	   |		  +--		break;	   |  ]}  |		 |
-		   |			}		 &lt;-+	 |		 |  ][
-		   +--		foobar(a)		 |		 |
+	   |		    if (a)
+	   |	   +-&gt;	    {
+	[[ |	   |		for (;;)	       --+
+	   |	   |	  +-&gt;	{			 |
+	   |	[{ |	  |	    foo(32);		 |     --+
+	   |	   |   [{ |	    if (bar(a))  --+	 | ]}	 |
+	   +--	   |	  +--		break;	   | ]}  |	 |
+		   |		}		 &lt;-+	 |	 | ][
+		   +--		foobar(a)		 |	 |
 			    }			       &lt;-+	 |
 			}				       &lt;-+</div>
 <div class="old-help-para">When writing C++ or Java, the outer {} block is for the class.  The next level
@@ -352,14 +349,14 @@ by a "}" in the first column.</div>
 					return 1;
 		  +----------&gt;  }
 		  |
-	      []  |			int func2(void)
-		  |		   +-&gt;	{
-		  |     [[  |			if (flag)
+	      []  |		int func2(void)
+		  |	   +-&gt;	{
+		  |    [[  |		if (flag)
 	start	  +--	   +--			return flag;
-		  |     ][  |			return 2;
-		  |		   +-&gt;	}
+		  |    ][  |		return 2;
+		  |	   +-&gt;	}
 	      ]]  |
-		  |			int func3(void)
+		  |		int func3(void)
 		  +----------&gt;	{
 					return 3;
 				}</div>
@@ -377,12 +374,12 @@ work on () pairs instead of {} pairs.
 <div class="old-help-para">To move back to the start of a comment use "[/".  Move forward to the end of a
 comment with "]/".  This only works for /* -/ comments.</div>
 <div class="old-help-para">	  +-&gt;	  +-&gt; /*
-	  |     [/ |     * A comment about      --+
-       [/ |		  +--  * wonderful life.	|  ]/
-	  |	/		      &lt;-+
+	  |    [/ |    * A comment about      --+
+       [/ |	  +--  * wonderful life.	| ]/
+	  |/		      &lt;-+
 	  |
 	  +--	       foo = bar * 3;	      --+
-						|  ]/
+						| ]/
 		       /* a short comment/  &lt;-+</div>
 <div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="29.4"></a><span class="help-tag">29.4</span>	Finding global identifiers</h2></div>
 <div class="old-help-para">You are editing a C program and wonder if a variable is declared as "int" or
@@ -470,9 +467,9 @@ function that was declared locally ("static", in C terms).  Example (cursor on
 "counter"):</div>
 <div class="old-help-para">	   +-&gt;   static int counter = 0;
 	   |
-	   |      int get_counter(void)
-	gD |      {
-	   |		     ++counter;
+	   |     int get_counter(void)
+	gD |     {
+	   |	     ++counter;
 	   +--	     return counter;
 		 }</div>
 <div class="old-help-para">To restrict the search even further, and look only in the current function,
@@ -486,8 +483,8 @@ for the identifier.  Example (cursor on "idx"):</div>
 		{
 	   +-&gt;	    int idx;
 	   |
-	gd |		    for (idx = 0; idx &lt; table_len; ++idx)
-	   |			if (strcmp(table[idx].name, name) == 0)
+	gd |	    for (idx = 0; idx &lt; table_len; ++idx)
+	   |		if (strcmp(table[idx].name, name) == 0)
 	   +--		    return idx;
 		}</div>
 <div class="old-help-para"><a name="_-"></a><h2 class="help-heading"></h2>Next chapter: <a href="usr_30.html#usr_30.txt">usr_30.txt</a>  Editing programs</div>
@@ -528,10 +525,10 @@ for the identifier.  Example (cursor on "idx"):</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:32 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_29.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_29.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>
+      parse_errors: 3 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_29.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_29.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>
       </div>
     <div>
   </footer>

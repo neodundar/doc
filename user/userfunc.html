@@ -197,7 +197,7 @@ last defined. Example:<pre>
 			The end of a function definition.  Best is to put it
 			on a line by its own, without [argument].</div>
 <div class="old-help-para">			[argument] can be:
-				|  command	command to execute next
+				| command	command to execute next
 				\n command	command to execute next
 				" comment	always ignored
 				anything else	ignored, warning given when
@@ -346,7 +346,8 @@ allow for method chaining, e.g.:<pre>eval GetList()-&gt;Filter()-&gt;append('$')
 A function can also be called as part of evaluating an expression or when it
 is used as a method:<pre>let x = GetList()
 let y = GetList()-&gt;Filter()</pre>
-<a name="_-"></a><h2 class="help-heading"></h2><div class="help-column_heading">3. Automatically loading functions</div>							<a name="autoload-functions"></a><code class="help-tag-right">autoload-functions</code>
+<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+userfunc.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/userfunc.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09let%20y%20%3D%20GetList()-%3EFilter()%0A%0A%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0A%0A3.%20Automatically%20loading%20functions%20~%0A%09%09%09%09%09%09%09%2Aautoload-functions%2A%0AWhen%20using%20many%20or%20large%20functions%2C%20it's%20possible%20to%20automatically%20define%20them%0D%60%60%60">==============================================================================</a></div>
+<div class="old-help-para"><div class="help-column_heading">3. Automatically loading functions</div>							<a name="autoload-functions"></a><code class="help-tag-right">autoload-functions</code>
 When using many or large functions, it's possible to automatically define them
 only when they are used.  There are two methods: with an autocommand and with
 the "autoload" directory in <a href="options.html#'runtimepath'">'runtimepath'</a>.</div>
@@ -412,17 +413,15 @@ Avoid using the autoload functionality at the toplevel.</div>
 </a>
 </div><div class="help-toc-h1"><a href="#_-">
 </a>
-</div><div class="help-toc-h1"><a href="#_-">
-</a>
 </div></div>
 </div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:32 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+userfunc.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/userfunc.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim
+      parse_errors: 1 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+userfunc.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/userfunc.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim
 		  VIM REFERENCE MANUAL	  by Bram Moolenaar
 				      Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
  vim:tw=78:ts=8:noet:ft=help:norl:">noise_lines: 4</span>

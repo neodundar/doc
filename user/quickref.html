@@ -124,7 +124,7 @@
 			   when lines wrap)
 <a href="motion.html#gm">gm</a>	   gm		to middle of the screen line
 <a href="motion.html#gM">gM</a>	   gM		to middle of the line
-<a href="motion.html#bar">bar</a>	N  |			to column N (default: 1)
+<a href="motion.html#bar">bar</a>	N  |		to column N (default: 1)
 <a href="motion.html#f">f</a>	N  f{char}	to the Nth occurrence of <code>{char}</code> to the right
 <a href="motion.html#F">F</a>	N  F{char}	to the Nth occurrence of <code>{char}</code> to the left
 <a href="motion.html#t">t</a>	N  t{char}	till before the Nth occurrence of <code>{char}</code> to the right
@@ -135,7 +135,7 @@
 <div class="old-help-para"><h3 class="help-heading"><span class="help-heading-tags"><a name="Q_ud"></a><span class="help-tag">Q_ud</span>		Up-down motions</h3></div>
 <div class="old-help-para"><a href="motion.html#k">k</a>	N  k		up N lines (also: <code>CTRL-P</code> and <code>&lt;Up&gt;</code>)
 <a href="motion.html#j">j</a>	N  j		down N lines (also: <code>CTRL-J</code>, <code>CTRL-N</code>, <code>&lt;NL&gt;</code>, and <code>&lt;Down&gt;</code>)
-<a href="motion.html#-">-</a>	N  -		up N lines, on the first non-blank character
+<a href="motion.html#-">-</a>	N  -			up N lines, on the first non-blank character
 <a href="motion.html#%2B">+</a>	N  +		down N lines, on the first non-blank character (also:
 			   <code>CTRL-M</code> and <code>&lt;CR&gt;</code>)
 <a href="motion.html#_">_</a>	N  _		down N-1 lines, on the first non-blank character
@@ -157,9 +157,9 @@
 <a href="motion.html#ge">ge</a>	N  ge		backward to the end of the Nth word
 <a href="motion.html#gE">gE</a>	N  gE		backward to the end of the Nth blank-separated <a href="motion.html#WORD">WORD</a></div>
 <div class="old-help-para"><a href="motion.html#)">)</a>	N  )		N sentences forward
-<a href="motion.html#(">(</a>	N  (		N sentences backward
-<a href="motion.html#%7D">}</a>	N  }		N paragraphs forward
-<a href="motion.html#%7B">{</a>	N  {		N paragraphs backward
+|(|	N  (		N sentences backward
+|}|	N  }		N paragraphs forward
+|{|	N  {		N paragraphs backward
 <a href="motion.html#%5D%5D">]]</a>	N  ]]		N sections forward, at start of section
 <a href="motion.html#%5B%5B">[[</a>	N  [[		N sections backward, at start of section
 <a href="motion.html#%5D%5B">][</a>	N  ][		N sections forward, at end of section
@@ -233,18 +233,18 @@
 <div class="old-help-para"><h3 class="help-heading"><span class="help-heading-tags"><a name="Q_ma"></a><span class="help-tag">Q_ma</span>		Marks and motions</h3></div>
 <div class="old-help-para"><a href="motion.html#m">m</a>        m{a-zA-Z}	mark current position with mark <code>{a-zA-Z}</code>
 <a href="motion.html#%60a">`a</a>{a-z}	go to mark {a-z} within current file
-|A|{A-Z}	go to mark {A-Z} in any file
-|0|{0-9}	go to the position where Vim was previously exited
-|<code>|</code>		go to the position before the last jump
-|quote|"		go to the position when last editing this file
-|[|[		go to the start of the previously operated or put text
-|]|]		go to the end of the previously operated or put text
-|&lt;|&lt;		go to the start of the (previous) Visual area
-|&gt;|&gt;		go to the end of the (previous) Visual area
-|.|       `.		go to the position of the last change in this file
+<a href="motion.html#%60A">`A</a>{A-Z}	go to mark {A-Z} in any file
+<a href="motion.html#%600">`0</a>{0-9}	go to the position where Vim was previously exited
+<a href="motion.html#%60%60">``</a>       ``		go to the position before the last jump
+<a href="motion.html#%60quote">`quote</a>"		go to the position when last editing this file
+<a href="motion.html#%60%5B">`[</a>[		go to the start of the previously operated or put text
+<a href="motion.html#%60%5D">`]</a>]		go to the end of the previously operated or put text
+<a href="motion.html#%60%3C">`&lt;</a>&lt;		go to the start of the (previous) Visual area
+<a href="motion.html#%60%3E">`&gt;</a>&gt;		go to the end of the (previous) Visual area
+<a href="motion.html#%60.">`.</a>.		go to the position of the last change in this file
 |'|        '{a-zA-Z0-9[]'"&lt;&gt;.}
-<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+quickref.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/quickref.html%0D%0DContext%3A%0D%0D%60%60%60%0D%7C%60%3E%7C%20%20%20%20%20%20%20%60%3E%09%09go%20to%20the%20end%20of%20the%20(previous)%20Visual%20area%0A%7C%60.%7C%20%20%20%20%20%20%20%60.%09%09go%20to%20the%20position%20of%20the%20last%20change%20in%20this%20file%0A%7C'%7C%20%20%20%20%20%20%20%20'%7Ba-zA-Z0-9%5B%5D'%22%3C%3E.%7D%0A%09%09%09same%20as%20%60%2C%20but%20on%20the%20first%20non-blank%20in%20the%20line%0A%7C%3Amarks%7C%20%20%3Amarks%09print%20the%20active%20marks%0A%7CCTRL-O%7C%20%20N%20%20CTRL-O%09go%20to%20Nth%20older%20position%20in%20jump%20list%0A%7CCTRL-I%7C%20%20N%20%20CTRL-I%09go%20to%20Nth%20newer%20position%20in%20jump%20list%0D%60%60%60">same as `, but on the first non-blank in the line</a></div>
-<div class="old-help-para"><a href="motion.html#%3Amarks">:marks</a>  :marks	print the active marks
+			same as, but on the first non-blank in the line
+<a href="motion.html#%3Amarks">:marks</a>  :marks	print the active marks
 <a href="motion.html#CTRL-O">CTRL-O</a>  N  <code>CTRL-O</code>	go to Nth older position in jump list
 <a href="motion.html#CTRL-I">CTRL-I</a>  N  <code>CTRL-I</code>	go to Nth newer position in jump list
 <a href="motion.html#%3Aju">:ju</a>     :ju[mps]	print the jump list</div>
@@ -412,7 +412,7 @@
 			   lines with the entered text
 <a href="visual.html#v_b_C">v_b_C</a>	     <code>{visual}</code>C	in Visual block mode: Change each of the selected
 			   lines until end-of-line with the entered text</div>
-<div class="old-help-para"><a href="change.html#~">~</a>	  N  ~		switch case for N characters and advance cursor
+<div class="old-help-para">|~|	  N  ~		switch case for N characters and advance cursor
 <a href="change.html#v_~">v_~</a>	     <code>{visual}</code>~	switch case for highlighted text
 <a href="change.html#v_u">v_u</a>	     <code>{visual}</code>u	make highlighted text lowercase
 <a href="change.html#v_U">v_U</a>	     <code>{visual}</code>U	make highlighted text uppercase
@@ -1038,7 +1038,7 @@ previewpopuppvp     use popup window for preview
 <a href="cmdline.html#%3Arange">:range</a>	$		the last line in the file
 <a href="cmdline.html#%3Arange">:range</a>	%		equal to 1,$ (the entire file)
 <a href="cmdline.html#%3Arange">:range</a>	*		equal to '&lt;,'&gt; (visual area)
-<a href="cmdline.html#%3Arange">:range</a>	't		position of mark t
+<a href="cmdline.html#%3Arange">:range</a>	'<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+quickref.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/quickref.html%0D%0DContext%3A%0D%0D%60%60%60%0D%7C%3Arange%7C%09%24%09%09the%20last%20line%20in%20the%20file%0A%7C%3Arange%7C%09%25%09%09equal%20to%201%2C%24%20(the%20entire%20file)%0A%7C%3Arange%7C%09%2A%09%09equal%20to%20'%3C%2C'%3E%20(visual%20area)%0A%7C%3Arange%7C%09't%09%09position%20of%20mark%20t%0A%7C%3Arange%7C%09%2F%7Bpattern%7D%5B%2F%5D%09the%20next%20line%20where%20%7Bpattern%7D%20matches%0A%7C%3Arange%7C%09%3F%7Bpattern%7D%5B%3F%5D%09the%20previous%20line%20where%20%7Bpattern%7D%20matches%0A%0D%60%60%60">t</a>		position of mark t
 <a href="cmdline.html#%3Arange">:range</a>	/{pattern}[/]	the next line where <code>{pattern}</code> matches
 <a href="cmdline.html#%3Arange">:range</a>	?{pattern}[?]	the previous line where <code>{pattern}</code> matches</div>
 <div class="old-help-para"><a href="cmdline.html#%3Arange">:range</a>	+[num]		add [num] to the preceding line number
@@ -1046,7 +1046,7 @@ previewpopuppvp     use popup window for preview
 <a href="cmdline.html#%3Arange">:range</a>	-[num]		subtract [num] from the preceding line
 				   number (default: 1)</div>
 <div class="old-help-para"><h3 class="help-heading"><span class="help-heading-tags"><a name="Q_ex"></a><span class="help-tag">Q_ex</span>		Special Ex characters</h3></div>
-<div class="old-help-para"><a href="cmdline.html#%3Abar">:bar</a>      |			separates two commands (not for ":global" and ":!")
+<div class="old-help-para"><a href="cmdline.html#%3Abar">:bar</a>      |		separates two commands (not for ":global" and ":!")
 <a href="cmdline.html#%3Aquote">:quote</a>    "		begins comment</div>
 <div class="old-help-para"><a href="cmdline.html#%3A_%25">:_%</a>       %		current file name (only where a file name is expected)
 <a href="cmdline.html#%3A_%23">:_#</a>       #[num]	alternate file name [num] (only where a file name is
@@ -1075,7 +1075,7 @@ previewpopuppvp     use popup window for preview
 		<a href="cmdline.html#%3A%3As">::s</a>	    :s/{pat}/{repl}/	substitute <code>{pat}</code> with <code>{repl}</code></div>
 <div class="old-help-para"><h3 class="help-heading"><span class="help-heading-tags"><a name="Q_st"></a><span class="help-tag">Q_st</span>		Starting Vim</h3></div>
 <div class="old-help-para"><a href="starting.html#-file">-file</a>	   vim [options] <code>{file}</code> ..	start editing one or more files
-<a href="starting.html#--">--</a>	   vim [options] -		read file from stdin
+<a href="starting.html#--">--</a>	   vim [options] -			read file from stdin
 <a href="starting.html#-tag">-tag</a>	   vim [options] -t <code>{tag}</code>	edit the file associated with <code>{tag}</code>
 <a href="starting.html#-qf">-qf</a>	   vim [options] -q [fname]	start editing in QuickFix mode,
 					   display the first error</div>
@@ -1104,7 +1104,7 @@ previewpopuppvp     use popup window for preview
 <a href="starting.html#---">---</a>	--		    end of options, other arguments are file names
 <a href="starting.html#--help">--help</a>    --help	    show list of arguments and exit
 <a href="starting.html#--version">--version</a> --version	    show version info and exit
-<a href="starting.html#--">--</a>	-		    read file from stdin</div>
+<a href="starting.html#--">--</a>	-			    read file from stdin</div>
 <div class="old-help-para"><h3 class="help-heading"><span class="help-heading-tags"><a name="Q_ed"></a><span class="help-tag">Q_ed</span>		Editing a file</h3></div>
 <div class="old-help-para">	   Without !: Fail if changes have been made to the current buffer.
 	      With !: Discard any changes to the current buffer.
@@ -1116,7 +1116,7 @@ previewpopuppvp     use popup window for preview
 <a href="editing.html#gf">gf</a>          gf  or ]f		edit the file whose name is under the cursor
 <a href="editing.html#%3Apwd">:pwd</a>     :pwd			print the current directory name
 <a href="editing.html#%3Acd">:cd</a>      :cd [path]		change the current directory to [path]
-<a href="editing.html#%3Acd-">:cd-</a>     :cd -		back to previous current directory
+<a href="editing.html#%3Acd-">:cd-</a>     :cd -			back to previous current directory
 <a href="editing.html#%3Afile">:file</a>    :f[ile]		print the current file name and the cursor
 				   position
 <a href="editing.html#%3Afile">:file</a>    :f[ile] <code>{name}</code>	set the current file name to <code>{name}</code>
@@ -1223,13 +1223,13 @@ previewpopuppvp     use popup window for preview
 <a href="windows.html#CTRL-W_R">CTRL-W_R</a>	<code>CTRL-W</code> R		rotate windows upwards
 <a href="windows.html#CTRL-W_x">CTRL-W_x</a>	<code>CTRL-W</code> x		exchange current window with next one</div>
 <div class="old-help-para"><a href="windows.html#CTRL-W_%3D">CTRL-W_=</a>	<code>CTRL-W</code> =		make all windows equal height &amp; width
-<a href="windows.html#CTRL-W_-">CTRL-W_-</a>	<code>CTRL-W</code> -		decrease current window height
+<a href="windows.html#CTRL-W_-">CTRL-W_-</a>	<code>CTRL-W</code> -			decrease current window height
 <a href="windows.html#CTRL-W_%2B">CTRL-W_+</a>	<code>CTRL-W</code> +		increase current window height
 <a href="windows.html#CTRL-W__">CTRL-W__</a>	<code>CTRL-W</code> _		set current window height (default:
 					   very high)</div>
 <div class="old-help-para"><a href="windows.html#CTRL-W_%3C">CTRL-W_&lt;</a>	<code>CTRL-W</code> &lt;		decrease current window width
 <a href="windows.html#CTRL-W_%3E">CTRL-W_&gt;</a>	<code>CTRL-W</code> &gt;		increase current window width
-<a href="windows.html#CTRL-W_bar">CTRL-W_bar</a>	<code>CTRL-W</code> |			set current window width (default:
+<a href="windows.html#CTRL-W_bar">CTRL-W_bar</a>	<code>CTRL-W</code> |		set current window width (default:
 					   widest possible)</div>
 <div class="old-help-para"><h3 class="help-heading"><span class="help-heading-tags"><a name="Q_bu"></a><span class="help-tag">Q_bu</span>		Buffer list commands</h3></div>
 <div class="old-help-para"><a href="windows.html#%3Abuffers">:buffers</a>	:buffers  or  :files	list all known buffer and file names</div>
@@ -1255,7 +1255,7 @@ previewpopuppvp     use popup window for preview
 					add syntax match item
 <a href="syntax.html#%3Asyn-region">:syn-region</a>	:syntax region <code>{group-name}</code> <code>{pattern}</code> ...
 					add syntax region item
-<a href="syntax.html#%3Asyn-sync">:syn-sync</a>	:syntax sync [ccomment |  lines <code>{N}</code> |  ...]
+<a href="syntax.html#%3Asyn-sync">:syn-sync</a>	:syntax sync [ccomment | lines <code>{N}</code> | ...]
 					tell syntax how to sync
 <a href="syntax.html#%3Asyntax">:syntax</a>	:syntax [list]		list current syntax items
 <a href="syntax.html#%3Asyn-clear">:syn-clear</a>	:syntax clear		clear all syntax info</div>
@@ -1392,7 +1392,7 @@ Quick reference guide</a>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:32 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 1 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+quickref.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/quickref.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="  Nvim

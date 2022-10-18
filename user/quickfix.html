@@ -1189,7 +1189,7 @@ rest is ignored.  Items can only be 1023 bytes long.</div>
 	%n		error number (finds a number)
 	%m		error message (finds a string)
 	%r		matches the "rest" of a single-line file message %O/P/Q
-	%p		pointer line (finds a sequence of '-', '.', '  '  or
+	%p		pointer line (finds a sequence of '-', '.', ' ' or
 			tabs and uses the length for the column number)
 	%*{conv}	any scanf non-assignable conversion
 	%%		the single '%' character
@@ -1251,10 +1251,10 @@ These can be used with '+' and '-', see <a href="quickfix.html#efm-ignore">efm-i
 <div class="old-help-para">Using "\n" in the pattern won't work to match multi-line messages.</div>
 <div class="old-help-para">Example: Your compiler happens to write out errors in the following format
 (leading line numbers not being part of the actual output):</div>
-<div class="old-help-para"><div class="help-column_heading">     1	Error 275</div><div class="help-column_heading">     2	line 42</div><div class="help-column_heading">     3	column 3</div><div class="help-column_heading">     4	'  '  expected after '--'</div></div>
+<div class="old-help-para"><div class="help-column_heading">     1	Error 275</div><div class="help-column_heading">     2	line 42</div><div class="help-column_heading">     3	column 3</div><div class="help-column_heading">     4	' ' expected after '--'</div></div>
 <div class="old-help-para">The appropriate error format string has to look like this:<pre>:set efm=%EError\ %n,%Cline\ %l,%Ccolumn\ %c,%Z%m</pre>
 And the <a href="quickfix.html#%3Aclist">:clist</a> error message generated for this error is:</div>
-<div class="old-help-para"> 1:42 col 3 error 275:  '  '  expected after '--'</div>
+<div class="old-help-para"> 1:42 col 3 error 275:  ' ' expected after '--'</div>
 <div class="old-help-para">Another example: Think of a Python interpreter that produces the following
 error message (line numbers are not part of the actual output):</div>
 <div class="old-help-para">     1	==============================================================
@@ -1275,7 +1275,7 @@ namely:
  5 unittests/dbfacadeTest.py:89:  AssertionError: 34 != 33</div>
 <div class="old-help-para">Then the error format string could be defined as follows:<pre>:set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m</pre>
 Note that the %C string is given before the %A here: since the expression
-'  %.%#' (which stands for the regular expression '  .*') matches every line
+' %.%#' (which stands for the regular expression ' .*') matches every line
 starting with a space, followed by any characters to the end of the line,
 it also hides line 7 which would trigger a separate error message otherwise.
 Error format strings are always parsed pattern by pattern until the first
@@ -1347,7 +1347,7 @@ be escaped), meta symbols have to be written with leading '%':
 	%\		The single '\' character.  Note that this has to be
 			escaped ("%\\") in ":set errorformat=" definitions.
 	%.		The single '.' character.
-	%#		The single '*'(!) character.
+	%#		The single ''(!) character.
 	%^		The single '^' character.  Note that this is not
 			useful, the pattern already matches start of line.
 	%$		The single '$' character.  Note that this is not
@@ -1394,8 +1394,9 @@ correct file.  You will have to do this by hand.</div>
 %f\ %l\ %t%*[^0-9]%n:\ %m		for SAS C
 \"%f\"\\,%*[^0-9]%l:\ %m		for generic C compilers
 %f:%l:\ %m				for GCC
-%f:%l:\ %m,%Dgmake[%*\\d]:\ Entering\ directory\ `%f',
-%Dgmake[%*\\d]:\ Leaving\ directory\ `%f'					for GCC with gmake (concat the lines!)
+%f:%l:\ %m,%Dgmake[%*\\d]:\ Entering\ directory\%f',
+%Dgmake[%*\\d]:\ Leaving\ directory\%f'
+					for GCC with gmake (concat the lines!)
 %f(%l)\ :\ %*[^:]:\ %m			old SCO C compiler (pre-OS5)
 %f(%l)\ :\ %t%*[^0-9]%n:\ %m		idem, with error type and number
 %f:%l:\ %m,In\ file\ included\ from\ %f:%l:,\^I\^Ifrom\ %f:%l%m
@@ -1682,7 +1683,7 @@ endfunc</pre></div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:32 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 2 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+quickfix.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/quickfix.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="  Nvim

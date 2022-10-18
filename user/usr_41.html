@@ -1081,7 +1081,7 @@ functions:<pre>
 <div class="old-help-para"><div class="help-column_heading">	function Show(start, ...)</div><div class="help-column_heading">	function GetVimIndent()</div><div class="help-column_heading">	function SetSyn(name)</div></div>
 <div class="old-help-para">To see what a function does, use its name as an argument for ":function":<pre>
 :function SetSyn</pre></div>
-<div class="old-help-para">1     if &amp;syntax == ''<div class="help-column_heading">	2       let &amp;syntax = a:name</div><div class="help-column_heading">	3     endif</div><div class="help-column_heading">	   endfunction</div></div>
+<div class="old-help-para"><div class="help-column_heading">	1     if &amp;syntax == ''</div><div class="help-column_heading">	2       let &amp;syntax = a:name</div><div class="help-column_heading">	3     endif</div><div class="help-column_heading">	   endfunction</div></div>
 <div class="old-help-para"><a name="_debugging"></a><h3 class="help-heading">DEBUGGING</h3></div>
 <div class="old-help-para">The line number is useful for when you get an error message or when debugging.
 See <a href="repeat.html#debug-scripts">debug-scripts</a> about debugging mode.
@@ -1392,7 +1392,7 @@ examples below.  A comment can start on any character position on the line.</div
 :execute cmd                        " do it
 :!ls *.c                        " list C files</pre>
 The abbreviation "dev" will be expanded todevelopment     " shorthand'.  The
-mapping of <code>&lt;F3&gt;</code> will actually be the whole line after the<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_41.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_41.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%3A%21ls%20%2A.c%09%09%09%22%20list%20C%20files%0A%0AThe%20abbreviation%20%22dev%22%20will%20be%20expanded%20to%20'development%20%20%20%20%20%22%20shorthand'.%20%20The%0Amapping%20of%20%3CF3%3E%20will%20actually%20be%20the%20whole%20line%20after%20the%20'o%23%20....'%20including%0Athe%20'%22%20insert%20include'.%20%20The%20%22execute%22%20command%20will%20give%20an%20error.%20%20The%20%22%21%22%0Acommand%20will%20send%20everything%20after%20it%20to%20the%20shell%2C%20causing%20an%20error%20for%20an%0Aunmatched%20'%22'%20character.%0D%60%60%60">....</a> including
+mapping of <code>&lt;F3&gt;</code> will actually be the whole line after the 'o# ....' including
 the '" insert include'.  The "execute" command will give an error.  The "!"
 command will send everything after it to the shell, causing an error for an
 unmatched '"' character.
@@ -1446,9 +1446,9 @@ What this does:<pre>ma"aYHmbgg"aP`bzt`a</pre></div>
 	     Hmb		go to top line in window and set mark b there
 		gg		go to first line in file
 		  "aP		put the yanked line above it
-		     `b		go back to top line in display</div>
-<div class="old-help-para">		       zt	position the text in the window as before
-			 `a	go back to saved cursor position</div>
+b		go back to top line in display
+		       zt	position the text in the window as before
+a	go back to saved cursor position</div>
 <div class="old-help-para"><a name="_packaging"></a><h3 class="help-heading">PACKAGING</h3></div>
 <div class="old-help-para">To avoid your function names to interfere with functions that you get from
 others, use this scheme:
@@ -2096,10 +2096,10 @@ utility is recommended.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:32 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 1 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_41.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_41.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim
+      parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_41.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_41.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim
 help.txt &lt;a href="index.html#local-additions"&gt;local-additions&lt;/a&gt;.  The first "*" must be in the first column of the">noise_lines: 2</span>
       </div>
     <div>

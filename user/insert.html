@@ -177,7 +177,7 @@ CTRL-P		Find previous keyword (see <a href="insert.html#i_CTRL-P">i_CTRL-P</a>).
 				the last delete or yank
 			'%'	the current file name
 			'#'	the alternate file name
-			'*'	the clipboard contents (X11: primary selection)
+			''	the clipboard contents (X11: primary selection)
 			'+'	the clipboard contents
 			'/'	the last search pattern
 			':'	the last command-line
@@ -303,7 +303,8 @@ CTRL-_		Switch between languages, as follows:
 <code>CTRL-]</code>		Trigger abbreviation, without inserting a character.</div>
 <div class="old-help-para">						<a name="i_%3CInsert%3E"></a><code class="help-tag-right">i_&lt;Insert&gt;</code>
 <code>&lt;Insert&gt;</code>	Toggle between Insert and Replace mode.
-<a name="_-"></a><h3 class="help-heading"></h3>						<a name="i_backspacing"></a><code class="help-tag-right">i_backspacing</code>
+<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+insert.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/insert.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A%09%09%09%09%09%09%2Ai_%3CInsert%3E%2A%0A%3CInsert%3E%09Toggle%20between%20Insert%20and%20Replace%20mode.%0A-----------------------------------------------------------------------%0A%0A%09%09%09%09%09%09%2Ai_backspacing%2A%0AThe%20effect%20of%20the%20%3CBS%3E%2C%20CTRL-W%2C%20and%20CTRL-U%20depend%20on%20the%20'backspace'%20option%0A(unless%20'revins'%20is%20set).%20%20This%20is%20a%20comma-separated%20list%20of%20items%3A%0D%60%60%60">-----------------------------------------------------------------------</a></div>
+<div class="old-help-para">						<a name="i_backspacing"></a><code class="help-tag-right">i_backspacing</code>
 The effect of the <code>&lt;BS&gt;</code>, <code>CTRL-W</code>, and <code>CTRL-U</code> depend on the <a href="options.html#'backspace'">'backspace'</a> option
 (unless <a href="options.html#'revins'">'revins'</a> is set).  This is a comma-separated list of items:</div>
 <div class="old-help-para"><div class="help-column_heading">item	    action</div>indent	    allow backspacing over autoindent
@@ -398,7 +399,8 @@ CTRL-G u	close undo sequence, start new change	     <a name="i_CTRL-G_u"></a><co
 CTRL-G U	don't start a new undo block with the next   <a name="i_CTRL-G_U"></a><code class="help-tag">i_CTRL-G_U</code>
 		left/right cursor movement, if the cursor
 		stays within the same line
-<a name="_-"></a><h3 class="help-heading"></h3>The <code>CTRL-O</code> command sometimes has a side effect: If the cursor was beyond the
+<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+insert.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/insert.html%0D%0DContext%3A%0D%0D%60%60%60%0DCTRL-G%20U%09don't%20start%20a%20new%20undo%20block%20with%20the%20next%20%20%20%2Ai_CTRL-G_U%2A%0A%09%09left%2Fright%20cursor%20movement%2C%20if%20the%20cursor%0A%09%09stays%20within%20the%20same%20line%0A-----------------------------------------------------------------------%0A%0AThe%20CTRL-O%20command%20sometimes%20has%20a%20side%20effect%3A%20If%20the%20cursor%20was%20beyond%20the%0Aend%20of%20the%20line%2C%20it%20will%20be%20put%20on%20the%20last%20character%20in%20the%20line.%20%20In%0Amappings%20it's%20often%20better%20to%20use%20%3CEsc%3E%20(first%20put%20an%20%22x%22%20in%20the%20text%2C%20%3CEsc%3E%0D%60%60%60">-----------------------------------------------------------------------</a></div>
+<div class="old-help-para">The <code>CTRL-O</code> command sometimes has a side effect: If the cursor was beyond the
 end of the line, it will be put on the last character in the line.  In
 mappings it's often better to use <code>&lt;Esc&gt;</code> (first put an "x" in the text, <code>&lt;Esc&gt;</code>
 will then always put the cursor on it).  Or use <code>CTRL-\</code> <code>CTRL-O</code>, but then
@@ -703,7 +705,7 @@ CTRL-X <code>CTRL-N</code> can be used to expand words of just one character.
 	you can type:
 		M^N^P^X^P^X^P
 CTRL-N starts the expansion and then <code>CTRL-P</code> takes back the single character
-"M", the next two <code>CTRL-X</code> <code>CTRL-P</code>'s get the words "&amp;eacute" and ";xico".</div>
+"M", the next two <code>CTRL-X</code> <code>CTRL-P</code>'<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+insert.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/insert.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09you%20can%20type%3A%0A%09%09M%5EN%5EP%5EX%5EP%5EX%5EP%0ACTRL-N%20starts%20the%20expansion%20and%20then%20CTRL-P%20takes%20back%20the%20single%20character%0A%22M%22%2C%20the%20next%20two%20CTRL-X%20CTRL-P's%20get%20the%20words%20%22%26eacute%22%20and%20%22%3Bxico%22.%0A%0AIf%20the%20previous%20expansion%20was%20split%2C%20because%20it%20got%20longer%20than%20'textwidth'%2C%0Athen%20just%20the%20text%20in%20the%20current%20line%20will%20be%20used.%0D%60%60%60">s</a> get the words "&amp;eacute" and ";xico".</div>
 <div class="old-help-para">If the previous expansion was split, because it got longer than <a href="options.html#'textwidth'">'textwidth'</a>,
 then just the text in the current line will be used.</div>
 <div class="old-help-para">If the match found is at the end of a line, then the first word in the next
@@ -1181,7 +1183,7 @@ other versions of HTML. Features:</div>
 <div class="old-help-para"><div class="help-li" style=""> after "&lt;" complete tag name depending on context (no div suggestion inside
   of an a tag); '/&gt;' indicates empty tags
 </div><div class="help-li" style=""> inside of tag complete proper attributes (no width attribute for an a tag);
-  show also type of attribute; '*' indicates required attributes
+  show also type of attribute; '' indicates required attributes
 </div><div class="help-li" style=""> when attribute has limited number of possible values help to complete them
 </div><div class="help-li" style=""> complete names of entities
 </div><div class="help-li" style=""> complete values of "class" and "id" attributes with data obtained from
@@ -1228,7 +1230,8 @@ of external files).</div>
 Explorer and Mozilla Firefox. These two applications are covering over 90% of
 market. Theoretically standards are created by W3C organisation
 (<a href="https://www.w3.org/">https://www.w3.org/</a>) but they are not always followed/implemented.</div>
-<div class="old-help-para"><div class="help-column_heading">		IE	FF	W3C  Omni completion</div><div class="help-column_heading">		+/-	+/-	+    +</div>+	+	-    ++	-	-    --	+	-    -</div>
+<div class="old-help-para"><div class="help-column_heading">		IE	FF	W3C  Omni completion</div><div class="help-column_heading">		+/-	+/-	+    +</div><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+insert.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/insert.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A%09%09IE%09FF%09W3C%20%20Omni%20completion%20~%0A%09%09%2B%2F-%09%2B%2F-%09%2B%20%20%20%20%2B%09%09%20%20%20%20%20~%0A%09%09%2B%09%2B%09-%20%20%20%20%2B%09%09%20%20%20%20%20~%0A%09%09%2B%09-%09-%20%20%20%20-%09%09%20%20%20%20%20~%0A%09%09-%09%2B%09-%20%20%20%20-%09%09%20%20%20%20%20~%0A%0D%60%60%60">+	+	-    +</a>		     ~
+<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+insert.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/insert.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09IE%09FF%09W3C%20%20Omni%20completion%20~%0A%09%09%2B%2F-%09%2B%2F-%09%2B%20%20%20%20%2B%09%09%20%20%20%20%20~%0A%09%09%2B%09%2B%09-%20%20%20%20%2B%09%09%20%20%20%20%20~%0A%09%09%2B%09-%09-%20%20%20%20-%09%09%20%20%20%20%20~%0A%09%09-%09%2B%09-%20%20%20%20-%09%09%20%20%20%20%20~%0A%0ARegardless%20from%20state%20of%20implementation%20in%20browsers%20but%20if%20element%20is%20defined%0D%60%60%60">+</a><div class="help-column_heading">	-		-    -	</div><div class="help-column_heading">		-		+	-    -	</div></div>
 <div class="old-help-para">Regardless from state of implementation in browsers but if element is defined
 in standards, completion plugin will place element in suggestion list. When
 both major engines implemented element, even if this is not in standards it
@@ -1250,7 +1253,7 @@ $myVar-&gt;</pre>
 </div></div>
 <div class="old-help-para">    Still, to find myClass contents tags file is required.</div>
 <div class="old-help-para"><div class="help-li" style=""> function names with additional info:
-</div><div class="help-li" style="margin-left: 3rem;"> in case of built-in functions list of possible arguments and after |  type
+</div><div class="help-li" style="margin-left: 3rem;"> in case of built-in functions list of possible arguments and after | type
     data returned by function
 </div><div class="help-li" style="margin-left: 3rem;"> in case of user function arguments and name of file where function was
     defined (if it is not current file)
@@ -1469,7 +1472,7 @@ namespace.  The XMLent command should be used in case when there is no default
 namespace:<pre>
 :XMLent xhtml10s</pre>
 Usage</div>
-<div class="old-help-para">While used in this situation (after declarations from previous part, |  is
+<div class="old-help-para">While used in this situation (after declarations from previous part, | is
 cursor position):<pre>
 &lt;|</pre>
 Will complete to an appropriate XHTML tag, and in this situation:<pre>
@@ -1669,14 +1672,10 @@ self explanatory.  Using the long or the short version depends on the
 <div class="help-toc-h2"><a href="#i_CTRL-%5B">
 						</a></div>
 <div class="help-toc-h2"><a href="#i_CTRL-SHIFT-V">CTRL-SHIFT-V				</a></div>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
 </div><div class="help-toc-h1"><a href="#ins-special-special">
 2. Special special keys				</a>
 <div class="help-toc-h2"><a href="#i_%3CUp%3E">
 <Up>		cursor one line up			     </a></div>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
 </div><div class="help-toc-h1"><a href="#ins-textwidth">
 3. 'textwidth' and 'wrapmargin' options			</a>
 </div><div class="help-toc-h1"><a href="#ins-expandtab">
@@ -1710,10 +1709,10 @@ self explanatory.  Using the long or the short version depends on the
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:31 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+insert.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/insert.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim
+      parse_errors: 5 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+insert.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/insert.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim
 		  VIM REFERENCE MANUAL    by Bram Moolenaar
                                       Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
  vim:tw=78:ts=8:noet:ft=help:norl:">noise_lines: 4</span>

@@ -108,12 +108,14 @@ Table of contents: <a href="usr_toc.html#usr_toc.txt">usr_toc.txt</a></div>
 This command splits the screen into two windows and leaves the cursor in the
 top one:</div>
 <div class="old-help-para">	+----------------------------------+
-/* file one.c */		   |
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_08.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0Dtop%20one%3A%0A%0A%09%2B----------------------------------%2B%0A%09%7C%2F%2A%20file%20one.c%20%2A%2F%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0A%09%7Cone.c%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%7C%0D%60%60%60">/* file one.c */</a>		   |
 	|~				   |
-	|~				   |one.c=============================
-/* file one.c */		   |
-	|~				   |one.c=============================
-	|					   |
+	|~				   |
+one.c=============================
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_08.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%7C~%09%09%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0A%09%7Cone.c%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%7C%0A%09%7C%2F%2A%20file%20one.c%20%2A%2F%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0A%09%7Cone.c%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%7C%0A%09%7C%09%09%09%09%20%20%20%7C%0D%60%60%60">/* file one.c */</a>		   |
+	|~				   |
+one.c=============================
+	|				   |
 	+----------------------------------+</div>
 <div class="old-help-para">What you see here is two windows on the same file.  The line with "====" is
 the status line.  It displays information about the window above it.  (In
@@ -143,12 +145,14 @@ closed.</div>
 <pre>:split two.c</pre>
 If you were editing one.c, then the result looks like this:</div>
 <div class="old-help-para">	+----------------------------------+
-/* file two.c */		   |
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_08.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0DIf%20you%20were%20editing%20one.c%2C%20then%20the%20result%20looks%20like%20this%3A%0A%0A%09%2B----------------------------------%2B%0A%09%7C%2F%2A%20file%20two.c%20%2A%2F%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0A%09%7Ctwo.c%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%7C%0D%60%60%60">/* file two.c */</a>		   |
 	|~				   |
-	|~				   |two.c=============================
-/* file one.c */		   |
-	|~				   |one.c=============================
-	|					   |
+	|~				   |
+two.c=============================
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_08.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%7C~%09%09%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0A%09%7Ctwo.c%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%7C%0A%09%7C%2F%2A%20file%20one.c%20%2A%2F%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0A%09%7Cone.c%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%7C%0A%09%7C%09%09%09%09%20%20%20%7C%0D%60%60%60">/* file one.c */</a>		   |
+	|~				   |
+one.c=============================
+	|				   |
 	+----------------------------------+</div>
 <div class="old-help-para">To open a window on a new, empty file, use this:<pre>
 :new</pre>
@@ -194,13 +198,14 @@ the window appear at the left side, use:<pre>
 or:<pre>:vsplit two.c</pre>
 The result looks something like this:</div>
 <div class="old-help-para">	+--------------------------------------+
-/* file two.c/   |/ file one.c */  |
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_08.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0DThe%20result%20looks%20something%20like%20this%3A%0A%0A%09%2B--------------------------------------%2B%0A%09%7C%2F%2A%20file%20two.c%20%2A%2F%20%20%20%7C%2F%2A%20file%20one.c%20%2A%2F%20%20%7C%0A%09%7C~%09%09%20%20%20%20%7C~%09%09%20%20%20%20%20%20%20%7C%0A%09%7C~%09%09%20%20%20%20%7C~%09%09%20%20%20%20%20%20%20%7C%0A%09%7C~%09%09%20%20%20%20%7C~%09%09%20%20%20%20%20%20%20%7C%0D%60%60%60">/* file two.c */</a>   |<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_08.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0DThe%20result%20looks%20something%20like%20this%3A%0A%0A%09%2B--------------------------------------%2B%0A%09%7C%2F%2A%20file%20two.c%20%2A%2F%20%20%20%7C%2F%2A%20file%20one.c%20%2A%2F%20%20%7C%0A%09%7C~%09%09%20%20%20%20%7C~%09%09%20%20%20%20%20%20%20%7C%0A%09%7C~%09%09%20%20%20%20%7C~%09%09%20%20%20%20%20%20%20%7C%0A%09%7C~%09%09%20%20%20%20%7C~%09%09%20%20%20%20%20%20%20%7C%0D%60%60%60">/*</a> file one.c/  |
 	|~		    |~		       |
 	|~		    |~		       |
-	|~		    |~		       |two.c===============one.c=============
-	|					       |
+	|~		    |~		       |
+two.c===============one.c=============
+	|				       |
 	+--------------------------------------+</div>
-<div class="old-help-para">Actually, the |  lines in the middle will be in reverse video.  This is called
+<div class="old-help-para">Actually, the | lines in the middle will be in reverse video.  This is called
 the vertical separator.  It separates the two windows left and right of it.</div>
 <div class="old-help-para">There is also the ":vnew" command, to open a vertically split window on a new,
 empty file.  Another way to do this:<pre>
@@ -227,15 +232,18 @@ cursor keys can also be used, if you like.
 need a command to move the window somewhere else.  For example, you have three
 windows like this:</div>
 <div class="old-help-para">	+----------------------------------+
-/* file two.c */		   |
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_08.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0Dwindows%20like%20this%3A%0A%0A%09%2B----------------------------------%2B%0A%09%7C%2F%2A%20file%20two.c%20%2A%2F%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0A%09%7Ctwo.c%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%7C%0D%60%60%60">/* file two.c */</a>		   |
 	|~				   |
-	|~				   |two.c=============================
-/* file three.c */		   |
 	|~				   |
-	|~				   |three.c===========================
-/* file one.c */		   |
-	|~				   |one.c=============================
-	|					   |
+two.c=============================
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_08.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%7C~%09%09%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0A%09%7Ctwo.c%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%7C%0A%09%7C%2F%2A%20file%20three.c%20%2A%2F%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0A%09%7Cthree.c%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%7C%0D%60%60%60">/* file three.c */</a>		   |
+	|~				   |
+	|~				   |
+three.c===========================
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_08.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%7C~%09%09%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0A%09%7Cthree.c%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%7C%0A%09%7C%2F%2A%20file%20one.c%20%2A%2F%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0A%09%7Cone.c%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%7C%0A%09%7C%09%09%09%09%20%20%20%7C%0D%60%60%60">/* file one.c */</a>		   |
+	|~				   |
+one.c=============================
+	|				   |
 	+----------------------------------+</div>
 <div class="old-help-para">Clearly the last one should be at the top.  Go to that window (using <code>CTRL-W</code> w)
 and then type this command:<pre>
@@ -246,22 +254,25 @@ the very top.  You will notice that K is again used for moving upwards.
 top and make it occupy the full width of the Vim window.  If this is your
 layout:</div>
 <div class="old-help-para">	+-------------------------------------------+
-	|/* two.c */  |/* three.c */  |/* one.c */  |
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_08.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0Dlayout%3A%0A%0A%09%2B-------------------------------------------%2B%0A%09%7C%2F%2A%20two.c%20%2A%2F%20%20%7C%2F%2A%20three.c%20%2A%2F%20%20%7C%2F%2A%20one.c%20%2A%2F%20%20%7C%0A%09%7C~%09%20%20%20%20%20%20%7C~%09%20%20%20%20%20%20%7C~%09%20%20%20%20%7C%0A%09%7C~%09%20%20%20%20%20%20%7C~%09%20%20%20%20%20%20%7C~%09%20%20%20%20%7C%0A%09%7C~%09%20%20%20%20%20%20%7C~%09%20%20%20%20%20%20%7C~%09%20%20%20%20%7C%0D%60%60%60">/* two.c */  |/* three.c */  |/* one.c */</a>  |
 	|~	      |~	      |~	    |
 	|~	      |~	      |~	    |
 	|~	      |~	      |~	    |
 	|~	      |~	      |~	    |
-	|~	      |~	      |~	    |two.c=========three.c=========one.c========
-	|						    |
+	|~	      |~	      |~	    |
+two.c=========three.c=========one.c========
+	|					    |
 	+-------------------------------------------+</div>
 <div class="old-help-para">Then using <code>CTRL-W</code> K in the middle window (three.c) will result in:</div>
 <div class="old-help-para">	+-------------------------------------------+
-/* three.c */				    |
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_08.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0DThen%20using%20CTRL-W%20K%20in%20the%20middle%20window%20(three.c)%20will%20result%20in%3A%0A%0A%09%2B-------------------------------------------%2B%0A%09%7C%2F%2A%20three.c%20%2A%2F%09%09%09%09%20%20%20%20%7C%0A%09%7C~%09%09%09%09%09%20%20%20%20%7C%0A%09%7C~%09%09%09%09%09%20%20%20%20%7C%0A%09%7Cthree.c%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%7C%0D%60%60%60">/* three.c */</a>				    |
 	|~					    |
-	|~					    |three.c====================================
-	|/* two.c */	       |/* one.c */	    |
-	|~		       |~		    |two.c==================one.c===============
-	|						    |
+	|~					    |
+three.c====================================
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_08.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%7C~%09%09%09%09%09%20%20%20%20%7C%0A%09%7C~%09%09%09%09%09%20%20%20%20%7C%0A%09%7Cthree.c%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%7C%0A%09%7C%2F%2A%20two.c%20%2A%2F%09%20%20%20%20%20%20%20%7C%2F%2A%20one.c%20%2A%2F%09%20%20%20%20%7C%0A%09%7C~%09%09%20%20%20%20%20%20%20%7C~%09%09%20%20%20%20%7C%0A%09%7Ctwo.c%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3Done.c%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%7C%0A%09%7C%09%09%09%09%09%20%20%20%20%7C%0D%60%60%60">/* two.c */	       |/* one.c */</a>	    |
+	|~		       |~		    |
+two.c==================one.c===============
+	|					    |
 	+-------------------------------------------+</div>
 <div class="old-help-para">The other three similar commands (you can probably guess these now):</div>
 <div class="old-help-para">	<code>CTRL-W</code> H	move window to the far left
@@ -293,13 +304,16 @@ Be careful, there is no way to undo this command!</div>
 vim -o one.txt two.txt three.txt</pre>
 This results in:</div>
 <div class="old-help-para">	+-------------------------------+
-file one.txt			|
-	|~				|one.txt========================
-file two.txt			|
-	|~				|two.txt========================
-file three.txt			|
-	|~				|three.txt======================
-	|					|
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_08.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0DThis%20results%20in%3A%0A%0A%09%2B-------------------------------%2B%0A%09%7Cfile%20one.txt%09%09%09%7C%0A%09%7C~%09%09%09%09%7C%0A%09%7Cone.txt%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%7C%0A%09%7Cfile%20two.txt%09%09%09%7C%0D%60%60%60">file</a> one.txt			|
+	|~				|
+one.txt========================
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_08.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%7Cfile%20one.txt%09%09%09%7C%0A%09%7C~%09%09%09%09%7C%0A%09%7Cone.txt%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%7C%0A%09%7Cfile%20two.txt%09%09%09%7C%0A%09%7C~%09%09%09%09%7C%0A%09%7Ctwo.txt%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%7C%0A%09%7Cfile%20three.txt%09%09%09%7C%0D%60%60%60">file</a> two.txt			|
+	|~				|
+two.txt========================
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_08.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%7Cfile%20two.txt%09%09%09%7C%0A%09%7C~%09%09%09%09%7C%0A%09%7Ctwo.txt%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%7C%0A%09%7Cfile%20three.txt%09%09%09%7C%0A%09%7C~%09%09%09%09%7C%0A%09%7Cthree.txt%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%7C%0A%09%7C%09%09%09%09%7C%0D%60%60%60">file</a> three.txt			|
+	|~				|
+three.txt======================
+	|				|
 	+-------------------------------+</div>
 <div class="old-help-para">The "-O" argument is used to get vertically split windows.
    When Vim is already running, the ":all" command opens a window for each
@@ -315,21 +329,21 @@ Vim will start, with two windows side by side.  You will only see the line
 in which you added characters, and a few lines above and below it.</div>
 <div class="old-help-para">	 VV		      VV
 	+-----------------------------------------+
-	<a href="motion.html#%2B">+</a> +--123 lines: /* a|+ +--123 lines: /* a|  &lt;- fold
-	|   text		     |		text		  |
-	|   text		     |		text		  |
-	|   text		     |		text		  |
-	|   text		     |		changed text	  |   &lt;- changed line
-	|   text		     |		text		  |
-	|   text		     |		------------------|  &lt;- deleted line
-	|   text		     |		text		  |
-	|   text		     |		text		  |
-	|   text		     |		text		  |
-	<a href="motion.html#%2B">+</a> +--432 lines: text|+ +--432 lines: text|  &lt;- fold
-	|   ~		     |		~		  |
-	|   ~		     |		~		  |
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_08.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A%09%20VV%09%09%20%20%20%20%20%20VV%0A%09%2B-----------------------------------------%2B%0A%09%7C%2B%20%2B--123%20lines%3A%20%2F%2A%20a%7C%2B%20%2B--123%20lines%3A%20%2F%2A%20a%7C%20%20%3C-%20fold%0A%09%7C%20%20text%09%09%20%20%20%20%20%7C%09text%09%09%20%20%7C%0A%09%7C%20%20text%09%09%20%20%20%20%20%7C%09text%09%09%20%20%7C%0A%09%7C%20%20text%09%09%20%20%20%20%20%7C%09text%09%09%20%20%7C%0D%60%60%60">+</a> +--123 lines: /* a|+ +--123 lines: /* a|  &lt;- fold
+	|  text		     |	text		  |
+	|  text		     |	text		  |
+	|  text		     |	text		  |
+	|  text		     |	changed text	  |  &lt;- changed line
+	|  text		     |	text		  |
+	|  text		     |	------------------|  &lt;- deleted line
+	|  text		     |	text		  |
+	|  text		     |	text		  |
+	|  text		     |	text		  |
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_08.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%7C%20%20text%09%09%20%20%20%20%20%7C%09text%09%09%20%20%7C%0A%09%7C%20%20text%09%09%20%20%20%20%20%7C%09text%09%09%20%20%7C%0A%09%7C%20%20text%09%09%20%20%20%20%20%7C%09text%09%09%20%20%7C%0A%09%7C%2B%20%2B--432%20lines%3A%20text%7C%2B%20%2B--432%20lines%3A%20text%7C%20%20%3C-%20fold%0A%09%7C%20%20~%09%09%20%20%20%20%20%7C%09~%09%09%20%20%7C%0A%09%7C%20%20~%09%09%20%20%20%20%20%7C%09~%09%09%20%20%7C%0A%09%7Cmain.c~%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3Dmain.c%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%7C%0D%60%60%60">+</a> +--432 lines: text|+ +--432 lines: text|  &lt;- fold
+	|  ~		     |	~		  |
+	|  ~		     |	~		  |
 main.c~==============main.c==============
-	|						  |
+	|					  |
 	+-----------------------------------------+</div>
 <div class="old-help-para">(This picture doesn't show the highlighting, use "nvim -d" for that.)</div>
 <div class="old-help-para">The lines that were not modified have been collapsed into one line.  This is
@@ -436,26 +450,28 @@ out of screen space.  The solution for this is called Tab pages.</div>
 This will edit the file "thatfile" in a window that occupies the whole Vim
 window.  And you will notice a bar at the top with the two file names:</div>
 <div class="old-help-para">	+----------------------------------+
-	|  thisfile |  /thatfile/ __________X|    (thatfile is bold)
-/* thatfile */			   |
-	|that				   |
-	|that				   |
+	| thisfile | /thatfile/ __________X|    (thatfile is bold)
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_08.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A%09%2B----------------------------------%2B%0A%09%7C%20thisfile%20%7C%20%2Fthatfile%2F%20__________X%7C%20%20%20%20(thatfile%20is%20bold)%0A%09%7C%2F%2A%20thatfile%20%2A%2F%09%09%09%20%20%20%7C%0A%09%7Cthat%09%09%09%09%20%20%20%7C%0A%09%7Cthat%09%09%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0D%60%60%60">/* thatfile */</a>			   |
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_08.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%2B----------------------------------%2B%0A%09%7C%20thisfile%20%7C%20%2Fthatfile%2F%20__________X%7C%20%20%20%20(thatfile%20is%20bold)%0A%09%7C%2F%2A%20thatfile%20%2A%2F%09%09%09%20%20%20%7C%0A%09%7Cthat%09%09%09%09%20%20%20%7C%0A%09%7Cthat%09%09%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0D%60%60%60">that</a>				   |
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_08.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%7C%20thisfile%20%7C%20%2Fthatfile%2F%20__________X%7C%20%20%20%20(thatfile%20is%20bold)%0A%09%7C%2F%2A%20thatfile%20%2A%2F%09%09%09%20%20%20%7C%0A%09%7Cthat%09%09%09%09%20%20%20%7C%0A%09%7Cthat%09%09%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0D%60%60%60">that</a>				   |
 	|~				   |
 	|~				   |
-	|~				   |	|					   |
+	|~				   |
+	|				   |
 	+----------------------------------+</div>
 <div class="old-help-para">You now have two tab pages.  The first one has a window for "thisfile" and the
 second one a window for "thatfile".  It's like two pages that are on top of
 each other, with a tab sticking out of each page showing the file name.</div>
 <div class="old-help-para">Now use the mouse to click on "thisfile" in the top line.  The result is</div>
 <div class="old-help-para">	+----------------------------------+
-	|  /thisfile/ |  thatfile __________X|    (thisfile is bold)
-/* thisfile */			   |
-	|this				   |
-	|this				   |
+	| /thisfile/ | thatfile __________X|    (thisfile is bold)
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_08.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A%09%2B----------------------------------%2B%0A%09%7C%20%2Fthisfile%2F%20%7C%20thatfile%20__________X%7C%20%20%20%20(thisfile%20is%20bold)%0A%09%7C%2F%2A%20thisfile%20%2A%2F%09%09%09%20%20%20%7C%0A%09%7Cthis%09%09%09%09%20%20%20%7C%0A%09%7Cthis%09%09%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0D%60%60%60">/* thisfile */</a>			   |
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_08.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%2B----------------------------------%2B%0A%09%7C%20%2Fthisfile%2F%20%7C%20thatfile%20__________X%7C%20%20%20%20(thisfile%20is%20bold)%0A%09%7C%2F%2A%20thisfile%20%2A%2F%09%09%09%20%20%20%7C%0A%09%7Cthis%09%09%09%09%20%20%20%7C%0A%09%7Cthis%09%09%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0D%60%60%60">this</a>				   |
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_08.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%7C%20%2Fthisfile%2F%20%7C%20thatfile%20__________X%7C%20%20%20%20(thisfile%20is%20bold)%0A%09%7C%2F%2A%20thisfile%20%2A%2F%09%09%09%20%20%20%7C%0A%09%7Cthis%09%09%09%09%20%20%20%7C%0A%09%7Cthis%09%09%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%7C%0D%60%60%60">this</a>				   |
 	|~				   |
 	|~				   |
-	|~				   |	|					   |
+	|~				   |
+	|				   |
 	+----------------------------------+</div>
 <div class="old-help-para">Thus you can switch between tab pages by clicking on the label in the top
 line.  If you don't have a mouse or don't want to use it, you can use the "gt"
@@ -465,13 +481,14 @@ command.  Mnemonic: Goto Tab.</div>
 This makes a new tab page with one window that is editing the same buffer as
 the window we were in:</div>
 <div class="old-help-para">	+-------------------------------------+
-	|  thisfile |  /thisfile/ |  thatfile __X|   (thisfile is bold)
-/* thisfile */			      |
-	|this				      |
-	|this				      |
+	| thisfile | /thisfile/ | thatfile __X|   (thisfile is bold)
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_08.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A%09%2B-------------------------------------%2B%0A%09%7C%20thisfile%20%7C%20%2Fthisfile%2F%20%7C%20thatfile%20__X%7C%20%20%20(thisfile%20is%20bold)%0A%09%7C%2F%2A%20thisfile%20%2A%2F%09%09%09%20%20%20%20%20%20%7C%0A%09%7Cthis%09%09%09%09%20%20%20%20%20%20%7C%0A%09%7Cthis%09%09%09%09%20%20%20%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%20%20%20%7C%0D%60%60%60">/* thisfile */</a>			      |
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_08.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%2B-------------------------------------%2B%0A%09%7C%20thisfile%20%7C%20%2Fthisfile%2F%20%7C%20thatfile%20__X%7C%20%20%20(thisfile%20is%20bold)%0A%09%7C%2F%2A%20thisfile%20%2A%2F%09%09%09%20%20%20%20%20%20%7C%0A%09%7Cthis%09%09%09%09%20%20%20%20%20%20%7C%0A%09%7Cthis%09%09%09%09%20%20%20%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%20%20%20%7C%0D%60%60%60">this</a>				      |
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_08.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%7C%20thisfile%20%7C%20%2Fthisfile%2F%20%7C%20thatfile%20__X%7C%20%20%20(thisfile%20is%20bold)%0A%09%7C%2F%2A%20thisfile%20%2A%2F%09%09%09%20%20%20%20%20%20%7C%0A%09%7Cthis%09%09%09%09%20%20%20%20%20%20%7C%0A%09%7Cthis%09%09%09%09%20%20%20%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%20%20%20%7C%0A%09%7C~%09%09%09%09%20%20%20%20%20%20%7C%0D%60%60%60">this</a>				      |
 	|~				      |
 	|~				      |
-	|~				      |	|					      |
+	|~				      |
+	|				      |
 	+-------------------------------------+</div>
 <div class="old-help-para">You can put ":tab" before any Ex command that opens a window.  The window will
 be opened in a new tab page.  Another example:<pre>
@@ -537,10 +554,10 @@ Will show the help text for "gt" in a new tab page.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:32 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_08.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>
+      parse_errors: 26 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_08.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_08.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>
       </div>
     <div>
   </footer>

@@ -108,7 +108,7 @@ overrides the previous if it is enabled, or non-empty for <a href="options.html#
 The rest of this section describes the <a href="options.html#'cindent'">'cindent'</a> option.</div>
 <div class="old-help-para">Note that <a href="options.html#'cindent'">'cindent'</a> indenting does not work for every code scenario.  Vim
 is not a C compiler: it does not recognize all syntax.  One requirement is
-that toplevel functions have a '{' in the first column.  Otherwise they are
+that toplevel functions have a '<code>{' in the first column.  Otherwise they are}</code>
 easily confused with declarations.</div>
 <div class="old-help-para">These five options control C program indenting:
 <a href="options.html#'cindent'">'cindent'</a>	Enables Vim to perform C program indenting automatically.
@@ -127,7 +127,7 @@ only triggers C-indenting.  When <a href="options.html#'indentexpr'">'indentexpr
 used instead.  The format of <a href="options.html#'cinkeys'">'cinkeys'</a> and <a href="options.html#'indentkeys'">'indentkeys'</a> is equal.</div>
 <div class="old-help-para">The default is "0{,0},0),0],:,0#,!^F,o,O,e" which specifies that indenting
 occurs as follows:</div>
-<div class="old-help-para">	"0{"	if you type '{' as the first character in a line
+<div class="old-help-para">	"0{"	if you type '<code>{' as the first character in a line}</code>
 	"0}"	if you type '}' as the first character in a line
 	"0)"	if you type ')' as the first character in a line
 	"0]"	if you type ']' as the first character in a line
@@ -145,14 +145,14 @@ occurs as follows:</div>
 	command key for reindenting the current line.  <code>CTRL-F</code> is the default
 	key for this.  Be careful if you define <code>CTRL-I</code> for this because <code>CTRL-I</code>
 	is the ASCII code for <code>&lt;Tab&gt;</code>.
-*	When a '*' precedes the key, Vim will reindent the line before
+*	When a '' precedes the key, Vim will reindent the line before
 	inserting the key.  If <a href="options.html#'cinkeys'">'cinkeys'</a> contains "*&lt;Return&gt;", Vim reindents
 	the current line before opening a new line.
-0	When a zero precedes the key (but appears after '!' or '*') Vim will
+0	When a zero precedes the key (but appears after '!' or '') Vim will
 	reindent the line only if the key is the first character you type in
 	the line.  When used before "=" Vim will only reindent the line if
 	there is only white space before the word.</div>
-<div class="old-help-para">When neither '!' nor '*' precedes the key, Vim reindents the line after you
+<div class="old-help-para">When neither '!' nor '' precedes the key, Vim reindents the line after you
 type the key.  So ';' sets the indentation of a line which includes the ';'.</div>
 <div class="old-help-para">Special key names:</div>
 <div class="old-help-para">&gt;	Angle brackets mean spelled-out names of keys.  For example: "&lt;Up&gt;",
@@ -175,7 +175,7 @@ e	Reindent a line that starts with "else" when you type the second 'e'.
 	the word.
 =~word	Like =word, but ignore case.</div>
 <div class="old-help-para">If you really want to reindent when you type 'o', 'O', 'e', '0', '&lt;', '&gt;',
-'*', ':' or '!', use "&lt;o&gt;", "&lt;O&gt;", "&lt;e&gt;", "&lt;0&gt;", "&lt;&lt;&gt;", "&lt;&gt;&gt;", "&lt;*&gt;", "&lt;:&gt;" or
+'', ':' or '!', use "&lt;o&gt;", "&lt;O&gt;", "&lt;e&gt;", "&lt;0&gt;", "&lt;&lt;&gt;", "&lt;&gt;&gt;", "&lt;*&gt;", "&lt;:&gt;" or
 "&lt;!&gt;", respectively, for those keys.</div>
 <div class="old-help-para">For an emacs-style indent mode where lines aren't indented every time you
 press <code>&lt;Enter&gt;</code> but only if you press <code>&lt;Tab&gt;</code>, I suggest:
@@ -210,8 +210,8 @@ The examples below assume a <a href="options.html#'shiftwidth'">'shiftwidth'</a>
 	eN    Add N to the prevailing indent inside a set of braces if the
 	      opening brace at the End of the line (more precise: is not the
 	      first character in a line).  This is useful if you want a
-	      different indent when the '{' is at the start of the line from
-	      when '{' is at the end of the line.  (default 0).</div>
+	      different indent when the '<code>{' is at the start of the line from}</code>
+	      when '<code>{' is at the end of the line.  (default 0).}</code></div>
 <div class="old-help-para">		cino=		    cino=e2		cino=e-2<pre>if (cond) {              if (cond) {          if (cond) {
     foo;                    foo;            foo;
 }                      }                          }
@@ -223,7 +223,7 @@ else                      else                  else
 	nN    Add N to the prevailing indent for a statement after an "if",
 	      "while", etc., if it is NOT inside a set of braces.  This is
 	      useful if you want a different indent when there is no '{'
-	      before the statement from when there is a '{' before it.
+	      before the statement from when there is a '<code>{' before it.}</code>
 	      (default 0).</div>
 <div class="old-help-para">		cino=		    cino=n2		cino=n-2<pre>if (cond)              if (cond)                  if (cond)
     foo;                    foo;            foo;
@@ -240,7 +240,8 @@ else                      else                  else
 {                        {                      {
     int foo;                    int foo;                  int foo;</pre></div>
 <div class="old-help-para">							<a name="cino-%7B"></a><code class="help-tag-right">cino-{</code>
-	{<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+indent.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/indent.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%20%20%20%20%20%20int%20foo%3B%09%09%20%20%20%20int%20foo%3B%09%09%20%20int%20foo%3B%0A%3C%0A%09%09%09%09%09%09%09%2Acino-%7B%2A%0A%09%7BN%20%20%20%20Place%20opening%20braces%20N%20characters%20from%20the%20prevailing%20indent.%0A%09%20%20%20%20%20%20This%20applies%20only%20for%20opening%20braces%20that%20are%20inside%20other%0A%09%20%20%20%20%20%20braces.%20%20(default%200).%0A%0A%09%09cino%3D%09%09%20%20%20%20cino%3D%7B.5s%09%09cino%3D%7B1s%20%3E%0D%60%60%60">N    Place opening braces N characters from the prevailing indent.</a>	      This applies only for opening braces that are inside other
+	<code>{N    Place opening braces N characters from the prevailing indent.}</code>
+	      This applies only for opening braces that are inside other
 	      braces.  (default 0).</div>
 <div class="old-help-para">		cino=		    cino={.5s		cino={1s<pre>if (cond)              if (cond)                  if (cond)
 {                        {                      {
@@ -716,13 +717,15 @@ To not enable auto-formatting of comments by default (if you want to use your
 own <a href="options.html#'formatoptions'">'formatoptions'</a>):<pre>:let g:PHP_autoformatcomment = 0</pre>
 Else, 't' will be removed from the <a href="options.html#'formatoptions'">'formatoptions'</a> string and "qrowcb" will be
 added, see <a href="change.html#fo-table">fo-table</a> for more information.
-<a name="_-"></a><h3 class="help-heading"></h3>							<a name="PHP_outdentSLComments"></a><code class="help-tag-right">PHP_outdentSLComments</code>
+<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+indent.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/indent.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0AElse%2C%20't'%20will%20be%20removed%20from%20the%20'formatoptions'%20string%20and%20%22qrowcb%22%20will%20be%0Aadded%2C%20see%20%7Cfo-table%7C%20for%20more%20information.%0A-------------%0A%0A%09%09%09%09%09%09%09%2APHP_outdentSLComments%2A%0ATo%20add%20extra%20indentation%20to%20single-line%20comments%3A%20%3E%0A%20%20%20%20%3Alet%20g%3APHP_outdentSLComments%20%3D%20N%0D%60%60%60">-------------</a></div>
+<div class="old-help-para">							<a name="PHP_outdentSLComments"></a><code class="help-tag-right">PHP_outdentSLComments</code>
 To add extra indentation to single-line comments:<pre>:let g:PHP_outdentSLComments = N</pre>
 With N being the number of <a href="options.html#'shiftwidth'">'shiftwidth'</a> to add.</div>
 <div class="old-help-para">Only single-line comments will be affected such as:<pre># Comment
 // Comment
 /* Comment */</pre>
-<a name="_-"></a><h3 class="help-heading"></h3>							<a name="PHP_default_indenting"></a><code class="help-tag-right">PHP_default_indenting</code>
+<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+indent.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/indent.html%0D%0DContext%3A%0D%0D%60%60%60%0D%20%20%20%20%23%20Comment%0A%20%20%20%20%2F%2F%20Comment%0A%20%20%20%20%2F%2A%20Comment%20%2A%2F%0A-------------%0A%0A%09%09%09%09%09%09%09%2APHP_default_indenting%2A%0ATo%20add%20extra%20indentation%20to%20every%20PHP%20lines%20with%20N%20being%20the%20number%20of%0A'shiftwidth'%20to%20add%3A%20%3E%0D%60%60%60">-------------</a></div>
+<div class="old-help-para">							<a name="PHP_default_indenting"></a><code class="help-tag-right">PHP_default_indenting</code>
 To add extra indentation to every PHP lines with N being the number of
 <a href="options.html#'shiftwidth'">'shiftwidth'</a> to add:<pre>:let g:PHP_default_indenting = N</pre>
 For example, with N = 1, this will give:
@@ -737,12 +740,15 @@ For example, with N = 1, this will give:
     $command_hist = TRUE;
 ?&gt;</pre>
 (Notice the extra indentation between the PHP container markers and the code)
-<a name="_-"></a><h3 class="help-heading"></h3>							<a name="PHP_outdentphpescape"></a><code class="help-tag-right">PHP_outdentphpescape</code>
+<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+indent.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/indent.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%24command_hist%20%3D%20TRUE%3B%0A%20%20%20%20%3F%3E%0A(Notice%20the%20extra%20indentation%20between%20the%20PHP%20container%20markers%20and%20the%20code)%0A-------------%0A%0A%09%09%09%09%09%09%09%2APHP_outdentphpescape%2A%0ATo%20indent%20PHP%20escape%20tags%20as%20the%20surrounding%20non-PHP%20code%20(only%20affects%20the%0APHP%20escape%20tags)%3A%20%3E%0D%60%60%60">-------------</a></div>
+<div class="old-help-para">							<a name="PHP_outdentphpescape"></a><code class="help-tag-right">PHP_outdentphpescape</code>
 To indent PHP escape tags as the surrounding non-PHP code (only affects the
 PHP escape tags):<pre>:let g:PHP_outdentphpescape = 0</pre>
-<a name="_-"></a><h3 class="help-heading"></h3>							<a name="PHP_removeCRwhenUnix"></a><code class="help-tag-right">PHP_removeCRwhenUnix</code>
+<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+indent.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/indent.html%0D%0DContext%3A%0D%0D%60%60%60%0DTo%20indent%20PHP%20escape%20tags%20as%20the%20surrounding%20non-PHP%20code%20(only%20affects%20the%0APHP%20escape%20tags)%3A%20%3E%0A%20%20%20%20%3Alet%20g%3APHP_outdentphpescape%20%3D%200%0A-------------%0A%0A%09%09%09%09%09%09%09%2APHP_removeCRwhenUnix%2A%0ATo%20automatically%20remove%20'%5Cr'%20characters%20when%20the%20'fileformat'%20is%20set%20to%20Unix%3A%20%3E%0A%20%20%20%20%3Alet%20g%3APHP_removeCRwhenUnix%20%3D%201%0D%60%60%60">-------------</a></div>
+<div class="old-help-para">							<a name="PHP_removeCRwhenUnix"></a><code class="help-tag-right">PHP_removeCRwhenUnix</code>
 To automatically remove '\r' characters when the <a href="options.html#'fileformat'">'fileformat'</a> is set to Unix:<pre>:let g:PHP_removeCRwhenUnix = 1</pre>
-<a name="_-"></a><h3 class="help-heading"></h3>							<a name="PHP_BracesAtCodeLevel"></a><code class="help-tag-right">PHP_BracesAtCodeLevel</code>
+<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+indent.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/indent.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%09%09%09%09%09%2APHP_removeCRwhenUnix%2A%0ATo%20automatically%20remove%20'%5Cr'%20characters%20when%20the%20'fileformat'%20is%20set%20to%20Unix%3A%20%3E%0A%20%20%20%20%3Alet%20g%3APHP_removeCRwhenUnix%20%3D%201%0A-------------%0A%0A%09%09%09%09%09%09%09%2APHP_BracesAtCodeLevel%2A%0ATo%20indent%20braces%20at%20the%20same%20level%20than%20the%20code%20they%20contain%3A%20%3E%0A%20%20%20%20%3Alet%20g%3APHP_BracesAtCodeLevel%20%3D%201%0D%60%60%60">-------------</a></div>
+<div class="old-help-para">							<a name="PHP_BracesAtCodeLevel"></a><code class="help-tag-right">PHP_BracesAtCodeLevel</code>
 To indent braces at the same level than the code they contain:<pre>:let g:PHP_BracesAtCodeLevel = 1</pre>
 This will give the following result:<pre>if ($foo)
     {
@@ -754,13 +760,15 @@ Instead of:<pre>if ($foo)
 }</pre>
 NOTE:	Indenting will be a bit slower if this option is used because some
 	optimizations won't be available.
-<a name="_-"></a><h3 class="help-heading"></h3>					<a name="PHP_vintage_case_default_indent"></a><code class="help-tag-right">PHP_vintage_case_default_indent</code>
+<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+indent.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/indent.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0ANOTE%3A%09Indenting%20will%20be%20a%20bit%20slower%20if%20this%20option%20is%20used%20because%20some%0A%09optimizations%20won't%20be%20available.%0A-------------%0A%0A%09%09%09%09%09%2APHP_vintage_case_default_indent%2A%0ATo%20indent%20'case%3A'%20and%20'default%3A'%20statements%20in%20switch()%20blocks%3A%20%3E%0A%20%20%20%20%3Alet%20g%3APHP_vintage_case_default_indent%20%3D%201%0D%60%60%60">-------------</a></div>
+<div class="old-help-para">					<a name="PHP_vintage_case_default_indent"></a><code class="help-tag-right">PHP_vintage_case_default_indent</code>
 To indent 'case:' and 'default:' statements in switch() blocks:<pre>:let g:PHP_vintage_case_default_indent = 1</pre>
 In PHP braces are not required inside 'case/default' blocks therefore 'case:'
 and 'default:' are indented at the same level than the 'switch()' to avoid
 meaningless indentation. You can use the above option to return to the
 traditional way.
-<a name="_-"></a><h3 class="help-heading"></h3>							<a name="PHP_noArrowMatching"></a><code class="help-tag-right">PHP_noArrowMatching</code>
+<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+indent.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/indent.html%0D%0DContext%3A%0D%0D%60%60%60%0Dand%20'default%3A'%20are%20indented%20at%20the%20same%20level%20than%20the%20'switch()'%20to%20avoid%0Ameaningless%20indentation.%20You%20can%20use%20the%20above%20option%20to%20return%20to%20the%0Atraditional%20way.%0A-------------%0A%0A%09%09%09%09%09%09%09%2APHP_noArrowMatching%2A%0ABy%20default%20the%20indent%20script%20will%20indent%20multi-line%20chained%20calls%20by%20matching%0Athe%20position%20of%20the%20'-%3E'%3A%20%3E%0D%60%60%60">-------------</a></div>
+<div class="old-help-para">							<a name="PHP_noArrowMatching"></a><code class="help-tag-right">PHP_noArrowMatching</code>
 By default the indent script will indent multi-line chained calls by matching
 the position of the '-&gt;':<pre>
 $user_name_very_long-&gt;name()
@@ -771,7 +779,8 @@ You will obtain the following result:<pre>
 $user_name_very_long-&gt;name()
     -&gt;age()
     -&gt;info();</pre>
-<a name="_-"></a><h3 class="help-heading"></h3>					<a name="PHP_IndentFunctionCallParameters"></a><code class="help-tag-right">PHP_IndentFunctionCallParameters</code>
+<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+indent.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/indent.html%0D%0DContext%3A%0D%0D%60%60%60%0D%20%20%20%20%20%20%20%20-%3Eage()%0A%20%20%20%20%20%20%20%20-%3Einfo()%3B%0A%0A-------------%0A%0A%09%09%09%09%09%2APHP_IndentFunctionCallParameters%2A%0AExtra%20indentation%20levels%20to%20add%20to%20parameters%20in%20multi-line%20function%20calls.%20%3E%0A%20%20%20%20let%20g%3APHP_IndentFunctionCallParameters%20%3D%201%0D%60%60%60">-------------</a></div>
+<div class="old-help-para">					<a name="PHP_IndentFunctionCallParameters"></a><code class="help-tag-right">PHP_IndentFunctionCallParameters</code>
 Extra indentation levels to add to parameters in multi-line function calls.<pre>let g:PHP_IndentFunctionCallParameters = 1</pre>
 Function call arguments will indent 1 extra level. For two-space indentation:<pre>
 function call_the_thing(
@@ -783,7 +792,8 @@ function call_the_thing(
       $and_that
   );
 }</pre>
-<a name="_-"></a><h3 class="help-heading"></h3>				<a name="PHP_IndentFunctionDeclarationParameters"></a><code class="help-tag-right">PHP_IndentFunctionDeclarationParameters</code>
+<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+indent.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/indent.html%0D%0DContext%3A%0D%0D%60%60%60%0D%20%20%20%20%20%20)%3B%0A%20%20%20%20%7D%0A%0A-------------%0A%0A%09%09%09%09%2APHP_IndentFunctionDeclarationParameters%2A%0AExtra%20indentation%20levels%20to%20add%20to%20arguments%20in%20multi-line%20function%0Adefinitions.%20%3E%0D%60%60%60">-------------</a></div>
+<div class="old-help-para">				<a name="PHP_IndentFunctionDeclarationParameters"></a><code class="help-tag-right">PHP_IndentFunctionDeclarationParameters</code>
 Extra indentation levels to add to arguments in multi-line function
 definitions.<pre>let g:PHP_IndentFunctionDeclarationParameters = 1</pre>
 Function arguments in declarations will indent 1 extra level. For two-space
@@ -910,7 +920,8 @@ PORT (
   data_out   : OUT STD_LOGIC
 );
 END ENTITY sync;</pre>
-<a name="_-"></a><h3 class="help-heading"></h3>Alignment of right-hand side assignment "&lt;=" statements are performed by
+<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+indent.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/indent.html%0D%0DContext%3A%0D%0D%60%60%60%0D%20%20)%3B%0A%20%20END%20ENTITY%20sync%3B%0A%0A----------------------------------------%0A%0AAlignment%20of%20right-hand%20side%20assignment%20%22%3C%3D%22%20statements%20are%20performed%20by%0Adefault.%20This%20causes%20the%20following%20alignment%20example%3A%20%3E%0A%0D%60%60%60">----------------------------------------</a></div>
+<div class="old-help-para">Alignment of right-hand side assignment "&lt;=" statements are performed by
 default. This causes the following alignment example:<pre>
 sig_out &lt;= (bus_a(1) AND
            (sig_b OR sig_c)) OR
@@ -921,7 +932,8 @@ to the vimrc file, which causes the previous alignment example to change:<pre>
 sig_out &lt;= (bus_a(1) AND
   (sig_b OR sig_c)) OR
   (bus_a(0) AND sig_d);</pre>
-<a name="_-"></a><h3 class="help-heading"></h3>Full-line comments (lines that begin with "--") are indented to be aligned with
+<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+indent.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/indent.html%0D%0DContext%3A%0D%0D%60%60%60%0D%20%20%20%20(sig_b%20OR%20sig_c))%20OR%0A%20%20%20%20(bus_a(0)%20AND%20sig_d)%3B%0A%0A----------------------------------------%0A%0AFull-line%20comments%20(lines%20that%20begin%20with%20%22--%22)%20are%20indented%20to%20be%20aligned%20with%0Athe%20very%20previous%20line's%20comment%2C%20PROVIDED%20that%20a%20whitespace%20follows%20after%0A%22--%22.%0D%60%60%60">----------------------------------------</a></div>
+<div class="old-help-para">Full-line comments (lines that begin with "--") are indented to be aligned with
 the very previous line's comment, PROVIDED that a whitespace follows after
 "--".</div>
 <div class="old-help-para">For example:<pre>
@@ -989,42 +1001,20 @@ Three times shiftwidth is the default value.</div>
 <div class="help-toc-h2"><a href="#ft-html-indent">HTML				</a></div>
 <div class="help-toc-h2"><a href="#ft-matlab-indent">MATLAB			</a></div>
 <div class="help-toc-h2"><a href="#ft-php-indent">PHP				</a></div>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
 <div class="help-toc-h2"><a href="#ft-python-indent">PYTHON							</a></div>
 <div class="help-toc-h2"><a href="#ft-sh-indent">SHELL							</a></div>
 <div class="help-toc-h2"><a href="#ft-verilog-indent">VERILOG							</a></div>
 <div class="help-toc-h2"><a href="#ft-vhdl-indent">VHDL							</a></div>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
 <div class="help-toc-h2"><a href="#ft-vim-indent">VIM							</a></div>
 </div></div>
 </div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:31 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 1 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+indent.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/indent.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim
+      parse_errors: 11 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+indent.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/indent.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim
 		  VIM REFERENCE MANUAL    by Bram Moolenaar
                                       Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
  vim:tw=78:ts=8:noet:ft=help:norl:">noise_lines: 4</span>

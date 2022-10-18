@@ -117,7 +117,7 @@ inactive: The buffer is not displayed and does not contain anything.  Options
 <div class="old-help-para">In a table:</div>
 <div class="old-help-para"><div class="help-column_heading">state		displayed	loaded		":buffers"</div><div class="help-column_heading">		in window			shows</div>active		  yes		 yes		  'a'
 hidden		  no		 yes		  'h'
-inactive	  no		 no		  '  '</div>
+inactive	  no		 no		  ' '</div>
 <div class="old-help-para">Note: All <code>CTRL-W</code> commands can also be executed with <a href="windows.html#%3Awincmd">:wincmd</a>, for those
 places where a Normal mode command can't be used or is inconvenient.</div>
 <div class="old-help-para">The main Vim window can hold several split windows.  There are also tab pages
@@ -310,7 +310,8 @@ occupy the full height.  Example:<pre>:vertical topleft split tags</pre>
 Opens a vertically split, full-height window on the "tags" file at the far
 left of the Vim window.</div>
 <div class="old-help-para">Closing a window
-<a name="_-"></a><h3 class="help-heading"></h3>:q[uit]
+<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+windows.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/windows.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A%0AClosing%20a%20window%0A----------------%0A%0A%3Aq%5Buit%5D%0A%3A%7Bcount%7Dq%5Buit%5D%09%09%09%09%09%09%2A%3Acount_quit%2A%0ACTRL-W%20q%09%09%09%09%09%09%2ACTRL-W_q%2A%0D%60%60%60">----------------</a></div>
+<div class="old-help-para">:q[uit]
 :{count}q[uit]						<a name="%3Acount_quit"></a><code class="help-tag-right">:count_quit</code>
 CTRL-W q						<a name="CTRL-W_q"></a><code class="help-tag-right">CTRL-W_q</code>
 CTRL-W <code>CTRL-Q</code>						<a name="CTRL-W_CTRL-Q"></a><code class="help-tag-right">CTRL-W_CTRL-Q</code>
@@ -517,7 +518,7 @@ CTRL-W =	Make all windows (almost) equally high and wide, but use
 		To equalize only horizontally (make window equally wide) use
 		<code>horizontal wincmd =</code></div>
 <div class="old-help-para">:res[ize] -N					<a name="%3Ares"></a><code class="help-tag-right">:res</code> <a name="%3Aresize"></a><code class="help-tag">:resize</code> <a name="CTRL-W_-"></a><code class="help-tag">CTRL-W_-</code>
-CTRL-W -	Decrease current window height by N (default 1).
+CTRL-W -		Decrease current window height by N (default 1).
 		If used after <a href="windows.html#%3Avertical">:vertical</a>: decrease width by N.</div>
 <div class="old-help-para">:res[ize] +N					<a name="CTRL-W_%2B"></a><code class="help-tag-right">CTRL-W_+</code>
 CTRL-W +	Increase current window height by N (default 1).
@@ -534,7 +535,7 @@ CTRL-W &lt;	Decrease current window width by N (default 1).</div>
 <div class="old-help-para">						<a name="CTRL-W_%3E"></a><code class="help-tag-right">CTRL-W_&gt;</code>
 CTRL-W &gt;	Increase current window width by N (default 1).</div>
 <div class="old-help-para">:vert[ical] res[ize] [N]			<a name="%3Avertical-resize"></a><code class="help-tag-right">:vertical-resize</code> <a name="CTRL-W_bar"></a><code class="help-tag">CTRL-W_bar</code>
-CTRL-W |		Set current window width to N (default: widest possible).</div>
+CTRL-W |	Set current window width to N (default: widest possible).</div>
 <div class="old-help-para">You can also resize a window by dragging a status line up or down with the
 mouse.  Or by dragging a vertical separator line left or right.  This only
 works if the version of Vim that is being used supports the mouse and the
@@ -596,7 +597,8 @@ it).</div>
 <div class="old-help-para">Note: ":next" is an exception, because it must accept a list of file names
 for compatibility with Vi.</div>
 <div class="old-help-para">The argument list and multiple windows
-<a name="_-"></a><h3 class="help-heading"></h3>The current position in the argument list can be different for each window.
+<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+windows.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/windows.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A%0AThe%20argument%20list%20and%20multiple%20windows%0A--------------------------------------%0A%0AThe%20current%20position%20in%20the%20argument%20list%20can%20be%20different%20for%20each%20window.%0ARemember%20that%20when%20doing%20%22%3Ae%20file%22%2C%20the%20position%20in%20the%20argument%20list%20stays%0Athe%20same%2C%20but%20you%20are%20not%20editing%20the%20file%20at%20that%20position.%20%20To%20indicate%0D%60%60%60">--------------------------------------</a></div>
+<div class="old-help-para">The current position in the argument list can be different for each window.
 Remember that when doing ":e file", the position in the argument list stays
 the same, but you are not editing the file at that position.  To indicate
 this, the file message (and the title, if you have one) shows
@@ -627,21 +629,21 @@ can also get to them with the buffer list commands, like ":bnext".</div>
 		If autocommands change the window layout while this command is
 		busy an error will be given. <a name="E249"></a><code class="help-tag">E249</code></div>
 <div class="old-help-para">:[N]sa[rgument][!] [++opt] [+cmd] [N]			<a name="%3Asa"></a><code class="help-tag-right">:sa</code> <a name="%3Asargument"></a><code class="help-tag">:sargument</code>
-		Short for ":split |  argument [N]": split window and go to Nth
+		Short for ":split | argument [N]": split window and go to Nth
 		argument.  But when there is no such argument, the window is
 		not split.  Also see <a href="editing.html#%2B%2Bopt">++opt</a> and <a href="editing.html#%2Bcmd">+cmd</a>.</div>
 <div class="old-help-para">:[N]sn[ext][!] [++opt] [+cmd] [file ..]			<a name="%3Asn"></a><code class="help-tag-right">:sn</code> <a name="%3Asnext"></a><code class="help-tag">:snext</code>
-		Short for ":split |  [N]next": split window and go to Nth next
+		Short for ":split | [N]next": split window and go to Nth next
 		argument.  But when there is no next file, the window is not
 		split.  Also see <a href="editing.html#%2B%2Bopt">++opt</a> and <a href="editing.html#%2Bcmd">+cmd</a>.</div>
 <div class="old-help-para">:[N]spr[evious][!] [++opt] [+cmd] [N]			<a name="%3Aspr"></a><code class="help-tag-right">:spr</code> <a name="%3Asprevious"></a><code class="help-tag">:sprevious</code>
 :[N]sN[ext][!] [++opt] [+cmd] [N]			<a name="%3AsN"></a><code class="help-tag-right">:sN</code> <a name="%3AsNext"></a><code class="help-tag">:sNext</code>
-		Short for ":split |  [N]Next": split window and go to Nth
+		Short for ":split | [N]Next": split window and go to Nth
 		previous argument.  But when there is no previous file, the
 		window is not split.  Also see <a href="editing.html#%2B%2Bopt">++opt</a> and <a href="editing.html#%2Bcmd">+cmd</a>.</div>
 <div class="old-help-para">						<a name="%3Asre"></a><code class="help-tag-right">:sre</code> <a name="%3Asrewind"></a><code class="help-tag">:srewind</code>
 :sre[wind][!] [++opt] [+cmd]
-		Short for ":split |  rewind": split window and go to first
+		Short for ":split | rewind": split window and go to first
 		argument.  But when there is no argument list, the window is
 		not split.  Also see <a href="editing.html#%2B%2Bopt">++opt</a> and <a href="editing.html#%2Bcmd">+cmd</a>.</div>
 <div class="old-help-para">						<a name="%3Asfir"></a><code class="help-tag-right">:sfir</code> <a name="%3Asfirst"></a><code class="help-tag">:sfirst</code>
@@ -649,7 +651,7 @@ can also get to them with the buffer list commands, like ":bnext".</div>
 		Same as ":srewind".</div>
 <div class="old-help-para">						<a name="%3Asla"></a><code class="help-tag-right">:sla</code> <a name="%3Aslast"></a><code class="help-tag">:slast</code>
 :sla[st][!] [++opt] [+cmd]
-		Short for ":split |  last": split window and go to last
+		Short for ":split | last": split window and go to last
 		argument.  But when there is no argument list, the window is
 		not split.  Also see <a href="editing.html#%2B%2Bopt">++opt</a> and <a href="editing.html#%2Bcmd">+cmd</a>.</div>
 <div class="old-help-para">						<a name="%3Adr"></a><code class="help-tag-right">:dr</code> <a name="%3Adrop"></a><code class="help-tag">:drop</code>
@@ -920,17 +922,17 @@ list of buffers. <a href="windows.html#unlisted-buffer">unlisted-buffer</a></div
 		  a	an active buffer: it is loaded and visible
 		  h	a hidden buffer: It is loaded, but currently not
 			   displayed in a window <a href="windows.html#hidden-buffer">hidden-buffer</a>
-<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+windows.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/windows.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%20%20a%09an%20active%20buffer%3A%20it%20is%20loaded%20and%20visible%0A%09%09%20%20h%09a%20hidden%20buffer%3A%20It%20is%20loaded%2C%20but%20currently%20not%0A%09%09%09%20%20%20displayed%20in%20a%20window%20%7Chidden-buffer%7C%0A%09%09%20%20%20-%09a%20buffer%20with%20'modifiable'%20off%0A%09%09%20%20%20%3D%09a%20readonly%20buffer%0A%09%09%20%20%20R%09a%20terminal%20buffer%20with%20a%20running%20job%0A%09%09%20%20%20F%09a%20terminal%20buffer%20with%20a%20finished%20job%0D%60%60%60">-	a buffer with</a> <a href="options.html#'modifiable'">'modifiable'</a> off
+		   -		a buffer with <a href="options.html#'modifiable'">'modifiable'</a> off
 		   =	a readonly buffer
 		   R	a terminal buffer with a running job
 		   F	a terminal buffer with a finished job
 		   ?    a terminal buffer without a job: <code>:terminal NONE</code>
-		    +	a modified buffer
-		    x   a buffer with read errors</div>
+<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+windows.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/windows.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%20%20%20R%09a%20terminal%20buffer%20with%20a%20running%20job%0A%09%09%20%20%20F%09a%20terminal%20buffer%20with%20a%20finished%20job%0A%09%09%20%20%20%3F%20%20%20%20a%20terminal%20buffer%20without%20a%20job%3A%20%60%3Aterminal%20NONE%60%0A%09%09%20%20%20%20%2B%09a%20modified%20buffer%0A%09%09%20%20%20%20x%20%20%20a%20buffer%20with%20read%20errors%0A%0A%09%09%5Bflags%5D%20can%20be%20a%20combination%20of%20the%20following%20characters%2C%0D%60%60%60">+	a modified buffer</a></div>
+<div class="old-help-para">		    x   a buffer with read errors</div>
 <div class="old-help-para">		[flags] can be a combination of the following characters,
 		which restrict the buffers to be listed:
-			+	modified buffers
-<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+windows.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/windows.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%5Bflags%5D%20can%20be%20a%20combination%20of%20the%20following%20characters%2C%0A%09%09which%20restrict%20the%20buffers%20to%20be%20listed%3A%0A%09%09%09%2B%09modified%20buffers%0A%09%09%09-%09buffers%20with%20'modifiable'%20off%0A%09%09%09%3D%09readonly%20buffers%0A%09%09%09a%09active%20buffers%0A%09%09%09u%09unlisted%20buffers%20(overrides%20the%20%22%21%22)%0D%60%60%60">-	buffers with</a> <a href="options.html#'modifiable'">'modifiable'</a> off
+<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+windows.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/windows.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A%09%09%5Bflags%5D%20can%20be%20a%20combination%20of%20the%20following%20characters%2C%0A%09%09which%20restrict%20the%20buffers%20to%20be%20listed%3A%0A%09%09%09%2B%09modified%20buffers%0A%09%09%09-%09buffers%20with%20'modifiable'%20off%0A%09%09%09%3D%09readonly%20buffers%0A%09%09%09a%09active%20buffers%0D%60%60%60">+	modified buffers</a></div>
+<div class="old-help-para">			-		buffers with <a href="options.html#'modifiable'">'modifiable'</a> off
 			=	readonly buffers
 			a	active buffers
 			u	unlisted buffers (overrides the "!")
@@ -1172,8 +1174,6 @@ unlisted	The buffer is not in the buffer list.  It is not used for
 </div><div class="help-toc-h1"><a href="#opening-window">
 3. Opening and closing a window				</a>
 <div class="help-toc-h2"><a href="#CTRL-W_CTRL-N">CTRL-W CTRL_N						</a></div>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
 </div><div class="help-toc-h1"><a href="#window-move-cursor">
 4. Moving cursor to other windows			</a>
 </div><div class="help-toc-h1"><a href="#window-moving">
@@ -1182,8 +1182,6 @@ unlisted	The buffer is not in the buffer list.  It is not used for
 6. Window resizing					</a>
 </div><div class="help-toc-h1"><a href="#buffer-list">
 7. Argument and buffer list commands			</a>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
 </div><div class="help-toc-h1"><a href="#list-repeat">
 8. Do a command in all buffers or windows			</a>
 </div><div class="help-toc-h1"><a href="#window-tag">
@@ -1199,10 +1197,10 @@ unlisted	The buffer is not in the buffer list.  It is not used for
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:32 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 2 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+windows.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/windows.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim
+      parse_errors: 4 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+windows.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/windows.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim
 		  VIM REFERENCE MANUAL    by Bram Moolenaar
                                       Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
  vim:tw=78:ts=8:noet:ft=help:norl:">noise_lines: 4</span>

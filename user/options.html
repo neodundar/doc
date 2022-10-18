@@ -189,7 +189,7 @@ include the "|" in the option value, use "\|" instead.  This example sets the
 This sets the <a href="options.html#'titlestring'">'titlestring'</a> option to "hi" and <a href="options.html#'iconstring'">'iconstring'</a> to "there":<pre>:set titlestring=hi|set iconstring=there</pre>
 Similarly, the double quote character starts a comment.  To include the '"' in
 the option value, use '\"' instead.  This example sets the <a href="options.html#'titlestring'">'titlestring'</a>
-option to <a href="options.html#'hi'">'hi'</a> "there"':<pre>:set titlestring=hi\ \"there\"</pre>
+option to '<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+options.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/options.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0ASimilarly%2C%20the%20double%20quote%20character%20starts%20a%20comment.%20%20To%20include%20the%20'%22'%20in%0Athe%20option%20value%2C%20use%20'%5C%22'%20instead.%20%20This%20example%20sets%20the%20'titlestring'%0Aoption%20to%20'hi%20%22there%22'%3A%20%3E%0A%20%20%20%3Aset%20titlestring%3Dhi%5C%20%5C%22there%5C%22%0A%0AFor%20Win32%20backslashes%20in%20file%20names%20are%20mostly%20not%20removed.%20%20More%20precise%3A%20For%0D%60%60%60">hi</a> "there"':<pre>:set titlestring=hi\ \"there\"</pre>
 For Win32 backslashes in file names are mostly not removed.  More precise: For
 options that expect a file name (those where environment variables are
 expanded) a backslash before a normal file name character is not removed.  But
@@ -291,10 +291,10 @@ wiped out <a href="windows.html#%3Abwipe">:bwipe</a>.</div>
 			options which are different from the default.</div>
 <div class="old-help-para">For buffer-local and window-local options:
 <div class="help-column_heading">	Command		 global value	    local value</div>      :set option=value	     set		set
- :setlocal option=value	      -			set
+ :setlocal option=value	      -				set
 :setglobal option=value	     set		 -
-      :set option?	      -		       display
- :setlocal option?	      -		       display
+      :set option?	      -			       display
+ :setlocal option?	      -			       display
 :setglobal option?	    display		 -</div>
 <div class="old-help-para">Global options with a local value			<a name="global-local"></a><code class="help-tag-right">global-local</code></div>
 <div class="old-help-para">Options are global when you mostly use one value for all buffers and windows.
@@ -362,7 +362,7 @@ option and after a space or comma.</div>
 of user "user".  Example:<pre>:set path=~mool/include,/usr/include,.</pre>
 On Unix systems the form "${HOME}" can be used too.  The name between {} can
 contain non-id characters then.  Note that if you want to use this for the
-"gf" command, you need to add the '{' and '}' characters to <a href="options.html#'isfname'">'isfname'</a>.</div>
+"gf" command, you need to add the '<code>{' and '}</code>' characters to <a href="options.html#'isfname'">'isfname'</a>.</div>
 <div class="old-help-para">NOTE: expanding environment variables and "~/" is only done with the ":set"
 command, not when assigning a value to an option with ":let".</div>
 <div class="old-help-para">							<a name="%24HOME-windows"></a><code class="help-tag-right">$HOME-windows</code>
@@ -620,7 +620,8 @@ A jump table for the options with a short description can be found at <a href="q
 	a different way.
 	The <a href="options.html#'autoindent'">'autoindent'</a> option is reset when the <a href="options.html#'paste'">'paste'</a> option is set and
 	restored when <a href="options.html#'paste'">'paste'</a> is reset.
-	{<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+options.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/options.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09a%20different%20way.%0A%09The%20'autoindent'%20option%20is%20reset%20when%20the%20'paste'%20option%20is%20set%20and%0A%09restored%20when%20'paste'%20is%20reset.%0A%09%7Bsmall%20difference%20from%20Vi%3A%20After%20the%20indent%20is%20deleted%20when%20typing%0A%09%3CEsc%3E%20or%20%3CCR%3E%2C%20the%20cursor%20position%20when%20moving%20up%20or%20down%20is%20after%20the%0A%09deleted%20indent%3B%20Vi%20puts%20the%20cursor%20somewhere%20in%20the%20deleted%20indent%7D.%0A%0A%09%09%09%09%20%2A'autoread'%2A%20%2A'ar'%2A%20%2A'noautoread'%2A%20%2A'noar'%2A%0D%60%60%60">small difference from Vi: After the indent is deleted when typing</a>	<code>&lt;Esc&gt;</code> or <code>&lt;CR&gt;</code>, the cursor position when moving up or down is after the
+	<code>{small difference from Vi: After the indent is deleted when typing}</code>
+	<code>&lt;Esc&gt;</code> or <code>&lt;CR&gt;</code>, the cursor position when moving up or down is after the
 	deleted indent; Vi puts the cursor somewhere in the deleted indent}.</div>
 <div class="old-help-para">				 <a name="'autoread'"></a><code class="help-tag-right">'autoread'</code> <a name="'ar'"></a><code class="help-tag">'ar'</code> <a name="'noautoread'"></a><code class="help-tag">'noautoread'</code> <a name="'noar'"></a><code class="help-tag">'noar'</code>
 <a href="options.html#'autoread'">'autoread'</a> <a href="options.html#'ar'">'ar'</a>		boolean	(default on)
@@ -638,7 +639,8 @@ A jump table for the options with a short description can be found at <a href="q
 	Write the contents of the file, if it has been modified, on each
 	<code>:next</code>, <code>:rewind</code>, <code>:last</code>, <code>:first</code>, <code>:previous</code>, <code>:stop</code>,
 	<code>:suspend</code>, <code>:tag</code>, <code>:!</code>, <code>:make</code>, <code>CTRL-]</code> and <code>CTRL-^</code> command; and when
-	a <code>:buffer</code>, <code>CTRL-O</code>, <code>CTRL-I</code>, '{A-Z0-9}, or `{A-Z0-9} command takes one	to another file.
+	a <code>:buffer</code>, <code>CTRL-O</code>, <code>CTRL-I</code>, '<code>{A-Z0-9}</code>, or{A-Z0-9} command takes one
+	to another file.
 	A buffer is not written if it becomes hidden, e.g. when <a href="options.html#'bufhidden'">'bufhidden'</a> is
 	set to "hide" and <code>:next</code> is used.
 	Note that for some commands the <a href="options.html#'autowrite'">'autowrite'</a> option is not used, see
@@ -1177,7 +1179,7 @@ endfun</pre></div>
 	This option is a list of comma-separated names.
 	These names are recognized:</div>
 <div class="old-help-para">						<a name="clipboard-unnamed"></a><code class="help-tag-right">clipboard-unnamed</code>
-	unnamed		When included, Vim will use the clipboard register '*'
+	unnamed		When included, Vim will use the clipboard register ''
 			for all yank, delete, change and put operations which
 			would normally go to the unnamed register.  When a
 			register is explicitly specified, it will always be
@@ -1188,12 +1190,12 @@ endfun</pre></div>
 <div class="old-help-para">						<a name="clipboard-unnamedplus"></a><code class="help-tag-right">clipboard-unnamedplus</code>
 	unnamedplus	A variant of the "unnamed" flag which uses the
 			clipboard register '+' (<a href="provider.html#quoteplus">quoteplus</a>) instead of
-			register '*' for all yank, delete, change and put
+			register '' for all yank, delete, change and put
 			operations which would normally go to the unnamed
 			register.  When "unnamed" is also included to the
 			option, yank and delete operations (but not put)
 			will additionally copy the text into register
-			'*'. See <a href="provider.html#clipboard">clipboard</a>.</div>
+			''. See <a href="provider.html#clipboard">clipboard</a>.</div>
 <div class="old-help-para">						<a name="'cmdheight'"></a><code class="help-tag-right">'cmdheight'</code> <a name="'ch'"></a><code class="help-tag">'ch'</code>
 <a href="options.html#'cmdheight'">'cmdheight'</a> <a href="options.html#'ch'">'ch'</a>	number	(default 1)
 			global or local to tab page
@@ -1689,7 +1691,8 @@ au WinEnter * set cursorline cursorcolumn</pre></div>
 <div class="old-help-para">	You can also use "\ze" just before the name and continue the pattern
 	to check what is following.  E.g. for Javascript, if a function is
 	defined with "func_name = function(args)":<pre>^\s*\ze\i\+\s*=\s*function(</pre></div>
-<div class="old-help-para">	If the function is defined with "func_name : function() {<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+options.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/options.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09to%20check%20what%20is%20following.%20%20E.g.%20for%20Javascript%2C%20if%20a%20function%20is%0A%09defined%20with%20%22func_name%20%3D%20function(args)%22%3A%20%3E%0A%09%09%5E%5Cs%2A%5Cze%5Ci%5C%2B%5Cs%2A%3D%5Cs%2Afunction(%0A%3C%09If%20the%20function%20is%20defined%20with%20%22func_name%20%3A%20function()%20%7B...%22%3A%20%3E%0A%09%20%20%20%20%20%20%20%20%5E%5Cs%2A%5Cze%5Ci%5C%2B%5Cs%2A%5B%3A%5D%5Cs%2A(%2Afunction%5Cs%2A(%0A%3C%09When%20using%20the%20%22%3Aset%22%20command%2C%20you%20need%20to%20double%20the%20backslashes%21%0A%09To%20avoid%20that%20use%20%60%3Alet%60%20with%20a%20single%20quote%20string%3A%20%3E%0A%09%09let%20%26l%3Adefine%20%3D%20'%5E%5Cs%2A%5Cze%5Ck%5C%2B%5Cs%2A%3D%5Cs%2Afunction('%0D%60%60%60">...": &gt;</a>	        ^\s*\ze\i\+\s*[:]\s*(*function\s*(</div>
+<div class="old-help-para">	If the function is defined with "func_name : function() {<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+options.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/options.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09to%20check%20what%20is%20following.%20%20E.g.%20for%20Javascript%2C%20if%20a%20function%20is%0A%09defined%20with%20%22func_name%20%3D%20function(args)%22%3A%20%3E%0A%09%09%5E%5Cs%2A%5Cze%5Ci%5C%2B%5Cs%2A%3D%5Cs%2Afunction(%0A%3C%09If%20the%20function%20is%20defined%20with%20%22func_name%20%3A%20function()%20%7B...%22%3A%20%3E%0A%09%20%20%20%20%20%20%20%20%5E%5Cs%2A%5Cze%5Ci%5C%2B%5Cs%2A%5B%3A%5D%5Cs%2A(%2Afunction%5Cs%2A(%0A%3C%09When%20using%20the%20%22%3Aset%22%20command%2C%20you%20need%20to%20double%20the%20backslashes%21%0A%09To%20avoid%20that%20use%20%60%3Alet%60%20with%20a%20single%20quote%20string%3A%20%3E%0D%60%60%60">...": &gt;</a>
+	        ^\s*\ze\i\+\s*[:]\s*(*function\s*(</div>
 <div class="old-help-para">	When using the ":set" command, you need to double the backslashes!
 	To avoid that use <code>:let</code> with a single quote string:<pre>let &amp;l:define = '^\s*\ze\k\+\s*=\s*function('</pre></div>
 <div class="old-help-para">			<a name="'delcombine'"></a><code class="help-tag-right">'delcombine'</code> <a name="'deco'"></a><code class="help-tag">'deco'</code> <a name="'nodelcombine'"></a><code class="help-tag">'nodelcombine'</code> <a name="'nodeco'"></a><code class="help-tag">'nodeco'</code>
@@ -2175,9 +2178,9 @@ au WinEnter * set cursorline cursorcolumn</pre></div>
 	lines in the window.
 	It is a comma-separated list of items.  Each item has a name, a colon
 	and the value of that item:</div>
-<div class="old-help-para"><div class="help-column_heading">	  item		default		Used for</div>	  stl		'  '  or '^'	statusline of the current window
-	  stlnc		'  '  or '='	statusline of the non-current windows
-	  wbr		'  '			window bar
+<div class="old-help-para"><div class="help-column_heading">	  item		default		Used for</div>	  stl		' ' or '^'	statusline of the current window
+	  stlnc		' ' or '='	statusline of the non-current windows
+	  wbr		' '		window bar
 	  horiz		'─' or '-'	horizontal separators <a href="windows.html#%3Asplit">:split</a>
 	  horizup	'┴' or '-'	upwards facing horizontal separator
 	  horizdown	'┬' or '-'	downwards facing horizontal separator
@@ -2191,7 +2194,7 @@ au WinEnter * set cursorline cursorcolumn</pre></div>
 	  foldclose	'+'		show a closed fold
 	  foldsep	'│' or '|'      open fold middle marker
 	  diff		'-'		deleted lines of the <a href="options.html#'diff'">'diff'</a> option
-	  msgsep	'  '			message separator <a href="options.html#'display'">'display'</a>
+	  msgsep	' '		message separator <a href="options.html#'display'">'display'</a>
 	  eob		'~'		empty lines at the end of a buffer
 	  lastline	'@'		<a href="options.html#'display'">'display'</a> contains lastline/truncate</div>
 <div class="old-help-para">	Any one that is omitted will fall back to the default.  For "stl" and
@@ -2652,9 +2655,9 @@ au WinEnter * set cursorline cursorcolumn</pre></div>
 								<a name="'go-A'"></a><code class="help-tag-right">'go-A'</code>
 	  'A'	Autoselect for the modeless selection.  Like 'a', but only
 		applies to the modeless selection.</div>
-<div class="old-help-para"><div class="help-column_heading">		    <a href="options.html#'guioptions'">'guioptions'</a>   autoselect Visual  autoselect modeless</div>			 ""		 -			 -
+<div class="old-help-para"><div class="help-column_heading">		    <a href="options.html#'guioptions'">'guioptions'</a>   autoselect Visual  autoselect modeless</div>			 ""		 -				 -
 			 "a"		yes			yes
-			 "A"		 -			yes
+			 "A"		 -				yes
 			 "aA"		yes			yes</div>
 <div class="old-help-para">								<a name="'go-c'"></a><code class="help-tag-right">'go-c'</code>
 	  'c'	Use console dialogs instead of popup dialogs for simple
@@ -3096,7 +3099,7 @@ augroup END</pre></div>
 	that is not white space or punctuation).
 	For C programs you could use "a-z,A-Z,48-57,_,.,-,&gt;".
 	For a help file it is set to all non-blank printable characters except
-	'*', '"' and '|' (so that <code>CTRL-]</code> on a command finds the help for that
+	'', '"' and '|' (so that <code>CTRL-]</code> on a command finds the help for that
 	command).
 	When the <a href="options.html#'lisp'">'lisp'</a> option is on the '-' character is always included.
 	This option also influences syntax highlighting, unless the syntax
@@ -3773,7 +3776,7 @@ set listchars=eol:\\U000021b5</pre></div>
 <div class="old-help-para"><div class="help-column_heading">			Others:</div>		c	appending to the command-line
 		ci	inserting in the command-line
 		cr	replacing in the command-line
-		m	at the<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+options.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/options.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09c%09appending%20to%20the%20command-line%0A%09%09ci%09inserting%20in%20the%20command-line%0A%09%09cr%09replacing%20in%20the%20command-line%0A%09%09m%09at%20the%20'Hit%20ENTER'%20or%20'More'%20prompts%0A%09%09ml%09idem%2C%20but%20cursor%20in%20the%20last%20line%0A%09%09e%09any%20mode%2C%20pointer%20below%20last%20window%0A%09%09s%09any%20mode%2C%20pointer%20on%20a%20status%20line%0D%60%60%60">ENTER</a> or 'More' prompts
+		m	at the 'Hit ENTER' or 'More' prompts
 		ml	idem, but cursor in the last line
 		e	any mode, pointer below last window
 		s	any mode, pointer on a status line
@@ -3788,7 +3791,7 @@ set listchars=eol:\\U000021b5</pre></div>
 	w x	updown		up-down sizing arrows
 	w x	leftright	left-right sizing arrows
 	w x	busy		The system's usual busy pointer
-	w x	no		The system's usualno input' pointer
+	w x	no		The system's usual '<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+options.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/options.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09w%20x%09updown%09%09up-down%20sizing%20arrows%0A%09w%20x%09leftright%09left-right%20sizing%20arrows%0A%09w%20x%09busy%09%09The%20system's%20usual%20busy%20pointer%0A%09w%20x%09no%09%09The%20system's%20usual%20'no%20input'%20pointer%0A%09%20%20x%09udsizing%09indicates%20up-down%20resizing%0A%09%20%20x%09lrsizing%09indicates%20left-right%20resizing%0A%09%20%20x%09crosshair%09like%20a%20big%20thin%20%2B%0D%60%60%60">no</a> input' pointer
 	  x	udsizing	indicates up-down resizing
 	  x	lrsizing	indicates left-right resizing
 	  x	crosshair	like a big thin +
@@ -3858,10 +3861,10 @@ set listchars=eol:\\U000021b5</pre></div>
 	four combinations (cursor in line 3):</div>
 <div class="old-help-para">		<a href="options.html#'nonu'">'nonu'</a>          <a href="options.html#'nu'">'nu'</a>            <a href="options.html#'nonu'">'nonu'</a>          <a href="options.html#'nu'">'nu'</a>
 		<a href="options.html#'nornu'">'nornu'</a>         <a href="options.html#'nornu'">'nornu'</a>         <a href="options.html#'rnu'">'rnu'</a>           <a href="options.html#'rnu'">'rnu'</a></div>
-<div class="old-help-para">apple          |   1 apple      |   2 apple      |   2 apple
-pear           |   2 pear       |   1 pear       |   1 pear
-nobody         |   3 nobody     |   0 nobody3   nobody
-there          |   4 there      |   1 there      |   1 there</div>
+<div class="old-help-para">	    |<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+options.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/options.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09'nonu'%20%20%20%20%20%20%20%20%20%20'nu'%20%20%20%20%20%20%20%20%20%20%20%20'nonu'%20%20%20%20%20%20%20%20%20%20'nu'%0A%09%09'nornu'%20%20%20%20%20%20%20%20%20'nornu'%20%20%20%20%20%20%20%20%20'rnu'%20%20%20%20%20%20%20%20%20%20%20'rnu'%0A%0A%09%20%20%20%20%7Capple%20%20%20%20%20%20%20%20%20%20%7C%20%201%20apple%20%20%20%20%20%20%7C%20%202%20apple%20%20%20%20%20%20%7C%20%202%20apple%0A%09%20%20%20%20%7Cpear%20%20%20%20%20%20%20%20%20%20%20%7C%20%202%20pear%20%20%20%20%20%20%20%7C%20%201%20pear%20%20%20%20%20%20%20%7C%20%201%20pear%0A%09%20%20%20%20%7Cnobody%20%20%20%20%20%20%20%20%20%7C%20%203%20nobody%20%20%20%20%20%7C%20%200%20nobody%20%20%20%20%20%7C3%20%20%20nobody%0A%09%20%20%20%20%7Cthere%20%20%20%20%20%20%20%20%20%20%7C%20%204%20there%20%20%20%20%20%20%7C%20%201%20there%20%20%20%20%20%20%7C%20%201%20there%0D%60%60%60">apple</a>          |  1 apple      |  2 apple      |  2 apple
+	    |<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+options.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/options.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09'nornu'%20%20%20%20%20%20%20%20%20'nornu'%20%20%20%20%20%20%20%20%20'rnu'%20%20%20%20%20%20%20%20%20%20%20'rnu'%0A%0A%09%20%20%20%20%7Capple%20%20%20%20%20%20%20%20%20%20%7C%20%201%20apple%20%20%20%20%20%20%7C%20%202%20apple%20%20%20%20%20%20%7C%20%202%20apple%0A%09%20%20%20%20%7Cpear%20%20%20%20%20%20%20%20%20%20%20%7C%20%202%20pear%20%20%20%20%20%20%20%7C%20%201%20pear%20%20%20%20%20%20%20%7C%20%201%20pear%0A%09%20%20%20%20%7Cnobody%20%20%20%20%20%20%20%20%20%7C%20%203%20nobody%20%20%20%20%20%7C%20%200%20nobody%20%20%20%20%20%7C3%20%20%20nobody%0A%09%20%20%20%20%7Cthere%20%20%20%20%20%20%20%20%20%20%7C%20%204%20there%20%20%20%20%20%20%7C%20%201%20there%20%20%20%20%20%20%7C%20%201%20there%0A%0D%60%60%60">pear</a>           |  2 pear       |  1 pear       |  1 pear
+	    |<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+options.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/options.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A%09%20%20%20%20%7Capple%20%20%20%20%20%20%20%20%20%20%7C%20%201%20apple%20%20%20%20%20%20%7C%20%202%20apple%20%20%20%20%20%20%7C%20%202%20apple%0A%09%20%20%20%20%7Cpear%20%20%20%20%20%20%20%20%20%20%20%7C%20%202%20pear%20%20%20%20%20%20%20%7C%20%201%20pear%20%20%20%20%20%20%20%7C%20%201%20pear%0A%09%20%20%20%20%7Cnobody%20%20%20%20%20%20%20%20%20%7C%20%203%20nobody%20%20%20%20%20%7C%20%200%20nobody%20%20%20%20%20%7C3%20%20%20nobody%0A%09%20%20%20%20%7Cthere%20%20%20%20%20%20%20%20%20%20%7C%20%204%20there%20%20%20%20%20%20%7C%20%201%20there%20%20%20%20%20%20%7C%20%201%20there%0A%0A%09%09%09%09%09%09%2A'numberwidth'%2A%20%2A'nuw'%2A%0D%60%60%60">nobody</a>         |  3 nobody     |  0 nobody     |<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+options.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/options.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A%09%20%20%20%20%7Capple%20%20%20%20%20%20%20%20%20%20%7C%20%201%20apple%20%20%20%20%20%20%7C%20%202%20apple%20%20%20%20%20%20%7C%20%202%20apple%0A%09%20%20%20%20%7Cpear%20%20%20%20%20%20%20%20%20%20%20%7C%20%202%20pear%20%20%20%20%20%20%20%7C%20%201%20pear%20%20%20%20%20%20%20%7C%20%201%20pear%0A%09%20%20%20%20%7Cnobody%20%20%20%20%20%20%20%20%20%7C%20%203%20nobody%20%20%20%20%20%7C%20%200%20nobody%20%20%20%20%20%7C3%20%20%20nobody%0A%09%20%20%20%20%7Cthere%20%20%20%20%20%20%20%20%20%20%7C%20%204%20there%20%20%20%20%20%20%7C%20%201%20there%20%20%20%20%20%20%7C%20%201%20there%0A%0A%09%09%09%09%09%09%2A'numberwidth'%2A%20%2A'nuw'%2A%0D%60%60%60">3</a>   nobody
+	    |<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+options.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/options.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%20%20%20%20%7Capple%20%20%20%20%20%20%20%20%20%20%7C%20%201%20apple%20%20%20%20%20%20%7C%20%202%20apple%20%20%20%20%20%20%7C%20%202%20apple%0A%09%20%20%20%20%7Cpear%20%20%20%20%20%20%20%20%20%20%20%7C%20%202%20pear%20%20%20%20%20%20%20%7C%20%201%20pear%20%20%20%20%20%20%20%7C%20%201%20pear%0A%09%20%20%20%20%7Cnobody%20%20%20%20%20%20%20%20%20%7C%20%203%20nobody%20%20%20%20%20%7C%20%200%20nobody%20%20%20%20%20%7C3%20%20%20nobody%0A%09%20%20%20%20%7Cthere%20%20%20%20%20%20%20%20%20%20%7C%20%204%20there%20%20%20%20%20%20%7C%20%201%20there%20%20%20%20%20%20%7C%20%201%20there%0A%0A%09%09%09%09%09%09%2A'numberwidth'%2A%20%2A'nuw'%2A%0A'numberwidth'%20'nuw'%09number%09(default%3A%204)%0D%60%60%60">there</a>          |  4 there      |  1 there      |  1 there</div>
 <div class="old-help-para">						<a name="'numberwidth'"></a><code class="help-tag-right">'numberwidth'</code> <a name="'nuw'"></a><code class="help-tag">'nuw'</code>
 <a href="options.html#'numberwidth'">'numberwidth'</a> <a href="options.html#'nuw'">'nuw'</a>	number	(default: 4)
 			local to window
@@ -4180,7 +4183,8 @@ there          |   4 there      |   1 there      |   1 there</div>
 	newly edited buffer.
 	See <a href="options.html#'modifiable'">'modifiable'</a> for disallowing changes to the buffer.</div>
 <div class="old-help-para">						<a name="'redrawdebug'"></a><code class="help-tag-right">'redrawdebug'</code> <a name="'rdb'"></a><code class="help-tag">'rdb'</code>
-<a href="options.html#'redrawdebug'">'redrawdebug'</a> <a href="options.html#'rdb'">'rdb'</a>	string	(default '')			global
+<a href="options.html#'redrawdebug'">'redrawdebug'</a> <a href="options.html#'rdb'">'rdb'</a>	string	(default '')
+			global
 	Flags to change the way redrawing works, for debugging purposes.
 	Most useful with <a href="options.html#'writedelay'">'writedelay'</a> set to some reasonable value.
 	Supports the following flags:
@@ -4432,7 +4436,7 @@ there          |   4 there      |   1 there      |   1 there</div>
 	See <a href="options.html#'scrollopt'">'scrollopt'</a> for options that determine how this option should be
 	interpreted.
 	This option is mostly reset when splitting a window to edit another
-	file.  This means that ":split |  edit file" results in two windows
+	file.  This means that ":split | edit file" results in two windows
 	with scroll-binding, but ":split file" does not.</div>
 <div class="old-help-para">						<a name="'scrolljump'"></a><code class="help-tag-right">'scrolljump'</code> <a name="'sj'"></a><code class="help-tag">'sj'</code>
 <a href="options.html#'scrolljump'">'scrolljump'</a> <a href="options.html#'sj'">'sj'</a>	number	(default 1)
@@ -4608,7 +4612,7 @@ setlocal scrolloff=-1</pre></div>
 		number of buffers that are stored.  Without a number all
 		buffers are stored.
 							<a name="shada-'"></a><code class="help-tag-right">shada-'</code>
-	'		Maximum number of previously edited files for which the marks
+	'	Maximum number of previously edited files for which the marks
 		are remembered.  This parameter must always be included when
 		<a href="options.html#'shada'">'shada'</a> is non-empty.
 		Including this item also means that the <a href="motion.html#jumplist">jumplist</a> and the
@@ -4634,7 +4638,8 @@ setlocal scrolloff=-1</pre></div>
 		effect: ShaDa always uses UTF-8 and <a href="options.html#'encoding'">'encoding'</a> value is fixed
 		to UTF-8 as well.
 							<a name="shada-f"></a><code class="help-tag-right">shada-f</code>
-	f	Whether file marks need to be stored.  If zero, file marks ('0		to '9, 'A to 'Z) are not stored.  When not present or when
+	f	Whether file marks need to be stored.  If zero, file marks ('0
+		to '9, 'A to 'Z) are not stored.  When not present or when
 		non-zero, they are all stored.  '0 is used for the current
 		cursor position (when exiting or when doing <a href="starting.html#%3Awshada">:wshada</a>).
 							<a name="shada-h"></a><code class="help-tag-right">shada-h</code>
@@ -5052,7 +5057,7 @@ setlocal sidescrolloff=-1</pre></div>
 	                number (maximum 9), e.g. "yes:3"
 	   "number"	display signs in the <a href="options.html#'number'">'number'</a> column. If the number
 			column is not present, then behaves like "auto".</div>
-<div class="old-help-para">	Note regardingorphaned signs': with signcolumn numbers higher than
+<div class="old-help-para">	Note regarding '<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+options.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/options.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%20%20%20%22number%22%09display%20signs%20in%20the%20'number'%20column.%20If%20the%20number%0A%09%09%09column%20is%20not%20present%2C%20then%20behaves%20like%20%22auto%22.%0A%0A%09Note%20regarding%20'orphaned%20signs'%3A%20with%20signcolumn%20numbers%20higher%20than%0A%091%2C%20deleting%20lines%20will%20also%20remove%20the%20associated%20signs%20automatically%2C%0A%09in%20contrast%20to%20the%20default%20Vim%20behavior%20of%20keeping%20and%20grouping%20them.%0A%09This%20is%20done%20in%20order%20for%20the%20signcolumn%20appearance%20not%20appear%20weird%0D%60%60%60">orphaned</a> signs': with signcolumn numbers higher than
 	1, deleting lines will also remove the associated signs automatically,
 	in contrast to the default Vim behavior of keeping and grouping them.
 	This is done in order for the signcolumn appearance not appear weird
@@ -5077,8 +5082,8 @@ setlocal sidescrolloff=-1</pre></div>
 	alternative.
 	Normally <a href="options.html#'autoindent'">'autoindent'</a> should also be on when using <a href="options.html#'smartindent'">'smartindent'</a>.
 	An indent is automatically inserted:
-<div class="help-li" style=""> After a line ending in '{'.
-</div><div class="help-li" style=""> After a line starting with a keyword from <a href="options.html#'cinwords'">'cinwords'</a>.
+<div class="help-li" style=""> After a line ending in '{
+'.</div><div class="help-li" style=""> After a line starting with a keyword from <a href="options.html#'cinwords'">'cinwords'</a>.
 </div><div class="help-li" style=""> Before a line starting with '}' (only with the "O" command).
 	When typing '}' as the first character in a new line, that line is
 	given the same indent as the matching '{'.
@@ -5324,7 +5329,7 @@ setlocal sidescrolloff=-1</pre></div>
 	empty to avoid further errors.  Otherwise screen updating would loop.</div>
 <div class="old-help-para">	Note that the only effect of <a href="options.html#'ruler'">'ruler'</a> when this option is set (and
 	<a href="options.html#'laststatus'">'laststatus'</a> is 2 or 3) is controlling the output of <a href="editing.html#CTRL-G">CTRL-G</a>.</div>
-<div class="old-help-para"><div class="help-column_heading">	field	    meaning</div>	-	    Left justify the item.  The default is right justified
+<div class="old-help-para"><div class="help-column_heading">	field	    meaning</div>	-		    Left justify the item.  The default is right justified
 		    when minwid is larger than the length of the item.
 	0	    Leading zeroes in numeric items.  Overridden by '-'.
 	minwid	    Minimum width of the item, padding as set by '-' &amp; '0'.
@@ -5377,7 +5382,7 @@ setlocal sidescrolloff=-1</pre></div>
 	      translated.
 	a S   Argument list status as in default title.  (<code>{current}</code> of <code>{max}</code>)
 	      Empty if the argument file count is zero or one.
-	{ NF  Evaluate expression between '%{' and '}' and substitute result.
+	{ NF  Evaluate expression between '%<code>{' and '}</code>' and substitute result.
 	      Note that there is no '%' before the closing '}'.  The
 	      expression cannot contain a '}' character, call a function to
 	      work around that.  See <a href="options.html#stl-%25%7B">stl-%{</a> below.
@@ -5406,7 +5411,7 @@ endfunc</pre></div>
 	      end the label, e.g.: %10@SwitchBuffer@foo.c%X.  Clicking this
 	      label runs specified function: in the example when clicking once
 	      using left mouse button on "foo.c" "SwitchBuffer(10, 1, 'l',
-	      '     ')" expression will be run.  Function receives the
+	      '    ')" expression will be run.  Function receives the
 	      following arguments in order:
 	      1. minwid field value or zero if no N was specified
 	      2. number of mouse clicks to detect multiple clicks
@@ -5759,7 +5764,7 @@ endfunc</pre></div>
 <div class="old-help-para">	   ESC	    Escape</div>
 <div class="old-help-para">	   DEL	    DEL</div>
 <div class="old-help-para">	   C0	    Other control characters, excluding Line feed and
-		    Carriage return &lt; '  '</div>
+		    Carriage return &lt; ' '</div>
 <div class="old-help-para">	   C1	    Control characters 0x80...0x9F</div>
 <div class="old-help-para">						<a name="'textwidth'"></a><code class="help-tag-right">'textwidth'</code> <a name="'tw'"></a><code class="help-tag">'tw'</code>
 <a href="options.html#'textwidth'">'textwidth'</a> <a href="options.html#'tw'">'tw'</a>	number	(default 0)
@@ -5835,7 +5840,7 @@ endfunc</pre></div>
 		filename [+=-] (path) - NVIM
 	Where:
 		filename	the name of the file being edited
-		-		indicates the file cannot be modified, <a href="options.html#'ma'">'ma'</a> off
+		-			indicates the file cannot be modified, <a href="options.html#'ma'">'ma'</a> off
 		+		indicates the file was modified
 		=		indicates the file is read-only
 		=+		indicates the file is read-only and modified
@@ -6440,10 +6445,10 @@ endfunc</pre></div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:32 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 3 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+options.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/options.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim
+      parse_errors: 9 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+options.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/options.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim
 		  VIM REFERENCE MANUAL	  by Bram Moolenaar
 				      Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
  vim:tw=78:ts=8:noet:ft=help:norl:">noise_lines: 4</span>

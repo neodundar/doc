@@ -562,7 +562,7 @@ it to the Vim maintainer for inclusion in the distribution:
 <div class="old-help-para"><h3 class="help-heading">HEBREW KEYMAP<span class="help-heading-tags">						<a name="keymap-hebrew"></a><span class="help-tag">keymap-hebrew</span></h3></div>
 <div class="old-help-para">This file explains what characters are available in UTF-8 and CP1255 encodings,
 and what the keymaps are to get those characters:</div>
-<div class="old-help-para"><div class="help-column_heading">glyph   encoding	   keymap</div><div class="help-column_heading">Char UTF-8 cp1255  hebrew  hebrewp  name</div>א    0x5d0  0xe0     t	      a     'alef
+<div class="old-help-para"><div class="help-column_heading">glyph   encoding	   keymap</div><div class="help-column_heading">Char UTF-8 cp1255  hebrew  hebrewp  name</div>א    0x5d0  0xe0     t	      a     '<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+mbyte.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/mbyte.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0Aglyph%20%20%20encoding%09%20%20%20keymap%20~%0AChar%20UTF-8%20cp1255%20%20hebrew%20%20hebrewp%20%20name%20~%0A%D7%90%20%20%20%200x5d0%20%200xe0%20%20%20%20%20t%09%20%20%20%20%20%20a%20%20%20%20%20'alef%0A%D7%91%20%20%20%200x5d1%20%200xe1%20%20%20%20%20c%09%20%20%20%20%20%20b%20%20%20%20%20bet%0A%D7%92%20%20%20%200x5d2%20%200xe2%20%20%20%20%20d%09%20%20%20%20%20%20g%20%20%20%20%20gimel%0A%D7%93%20%20%20%200x5d3%20%200xe3%20%20%20%20%20s%09%20%20%20%20%20%20d%20%20%20%20%20dalet%0D%60%60%60">alef</a>
 ב    0x5d1  0xe1     c	      b     bet
 ג    0x5d2  0xe2     d	      g     gimel
 ד    0x5d3  0xe3     s	      d     dalet
@@ -580,7 +580,7 @@ and what the keymaps are to get those characters:</div>
 ן    0x5df  0xef     i	      N     nun sofit
 נ    0x5e0  0xf0     b	      n     nun
 ס    0x5e1  0xf1     x	      s     samech
-ע    0x5e2  0xf2     g	      u     `ayin
+ע    0x5e2  0xf2     g	      uayin
 ף    0x5e3  0xf3     ;	      P     pe sofit
 פ    0x5e4  0xf4     p	      p     pe
 ץ    0x5e5  0xf5     .	      X     tsadi sofit
@@ -638,8 +638,8 @@ Char UTF-8 hebrew name
 ב֮    0x5ae   Cn   zinor
 ב֯    0x5af   CC   masora circle</div>
 <div class="old-help-para">Combining forms:
-ﬠ    0xfb20  X`   Alternative `ayin
-ﬡ    0xfb21  X'   Alternative 'alef
+ﬠ    0xfb20  X`   Alternativeayin
+ﬡ    0xfb21  X'   Alternative '<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+mbyte.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/mbyte.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0ACombining%20forms%3A%0A%EF%AC%A0%20%20%20%200xfb20%20%20X%60%20%20%20Alternative%20%60ayin%0A%EF%AC%A1%20%20%20%200xfb21%20%20X'%20%20%20Alternative%20'alef%0A%EF%AC%A2%20%20%20%200xfb22%20%20X-d%20%20Alternative%20dalet%0A%EF%AC%A3%20%20%20%200xfb23%20%20X-h%20%20Alternative%20he%0A%EF%AC%A4%20%20%20%200xfb24%20%20X-k%20%20Alternative%20kaf%0D%60%60%60">alef</a>
 ﬢ    0xfb22  X-d  Alternative dalet
 ﬣ    0xfb23  X-h  Alternative he
 ﬤ    0xfb24  X-k  Alternative kaf
@@ -835,10 +835,10 @@ Overview of options					</a>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:32 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+mbyte.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/mbyte.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="     Nvim
+      parse_errors: 2 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+mbyte.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/mbyte.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="     Nvim
 		  VIM REFERENCE MANUAL	  by Bram Moolenaar et al.
                                       Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
  vim:tw=78:ts=8:noet:ft=help:norl:">noise_lines: 4</span>

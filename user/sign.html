@@ -414,7 +414,7 @@ sign_getplaced([{buf} [, <code>{dict}</code>]])			<a name="sign_getplaced()"></a
 		   id		select sign with this identifier
 		   lnum		select signs placed in this line. For the use
 				of <code>{lnum}</code>, see <a href="builtin.html#line()">line()</a>.
-		If <code>{group}</code> is '*', then signs in all the groups including the
+		If <code>{group}</code> is '', then signs in all the groups including the
 		global group are returned. If <code>{group}</code> is not supplied or is an
 		empty string, then only signs in the global group are
 		returned.  If no arguments are supplied, then signs in the
@@ -587,7 +587,7 @@ sign_unplace(<code>{group}</code> [, <code>{dict}</code>])			<a name="sign_unpla
 		Remove a previously placed sign in one or more buffers.  This
 		is similar to the <a href="sign.html#%3Asign-unplace">:sign-unplace</a> command.</div>
 <div class="old-help-para">		<code>{group}</code> is the sign group name. To use the global sign group,
-		use an empty string.  If <code>{group}</code> is set to '*', then all the
+		use an empty string.  If <code>{group}</code> is set to '', then all the
 		groups including the global group are used.
 		The signs in <code>{group}</code> are selected based on the entries in
 		<code>{dict}</code>.  The following optional entries in <code>{dict}</code> are
@@ -632,7 +632,7 @@ call sign_unplace('*')</pre></div>
 				the buffers.
 		    group	sign group name. If not specified or set to an
 				empty string, then the global sign group is
-				used. If set to '*', then all the groups
+				used. If set to '', then all the groups
 				including the global group are used.
 		    id		sign identifier. If not specified, then all
 				the signs in the specified group are removed.</div>
@@ -667,7 +667,7 @@ call sign_unplacelist([
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:32 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+sign.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/sign.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="      Nvim

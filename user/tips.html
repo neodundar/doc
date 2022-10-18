@@ -207,9 +207,9 @@ Breaking up saving the position:
 	H	go to the first line in the window
 	mt	store this position in the 't' mark</div>
 <div class="old-help-para">Breaking up restoring the position:
-	't	go to the line previously at the top of the window
+	'<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+tips.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/tips.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09mt%09store%20this%20position%20in%20the%20't'%20mark%0A%0ABreaking%20up%20restoring%20the%20position%3A%0A%09't%09go%20to%20the%20line%20previously%20at%20the%20top%20of%20the%20window%0A%09zt%09scroll%20to%20move%20this%20line%20to%20the%20top%20of%20the%20window%0A%09%60s%09jump%20to%20the%20original%20position%20of%20the%20cursor%0A%0D%60%60%60">t</a>	go to the line previously at the top of the window
 	zt	scroll to move this line to the top of the window
-	`s	jump to the original position of the cursor</div>
+s	jump to the original position of the cursor</div>
 <div class="old-help-para">For something more advanced see <a href="builtin.html#winsaveview()">winsaveview()</a> and <a href="builtin.html#winrestview()">winrestview()</a>.</div>
 <div class="old-help-para"><h2 class="help-heading">Renaming files<span class="help-heading-tags">						<a name="rename-files"></a><span class="help-tag">rename-files</span></h2></div>
 <div class="old-help-para">Say I have a directory with the following files in them (directory picked at
@@ -291,7 +291,7 @@ be able to give comments to the parts of the mapping.<pre>
 :execute m                              |" define the mapping</pre>
 (&lt;&gt; notation <a href="intro.html#%3C%3E">&lt;&gt;</a>.  Note that this is all typed literally.  ^W is "^" "W", not
 <a name="_ctrl-w.)"></a><h3 class="help-heading">CTRL-W.)</h3></div>
-<div class="old-help-para">Note that the last comment starts with", because the ":execute" command
+<div class="old-help-para">Note that the last comment starts with |<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+tips.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/tips.html%0D%0DContext%3A%0D%0D%60%60%60%0D(%3C%3E%20notation%20%7C%3C%3E%7C.%20%20Note%20that%20this%20is%20all%20typed%20literally.%20%20%5EW%20is%20%22%5E%22%20%22W%22%2C%20not%0ACTRL-W.)%0A%0ANote%20that%20the%20last%20comment%20starts%20with%20%7C%22%2C%20because%20the%20%22%3Aexecute%22%20command%0Adoesn't%20accept%20a%20comment%20directly.%0A%0AYou%20also%20need%20to%20set%20'textwidth'%20to%20a%20non-zero%20value%2C%20e.g.%2C%20%3E%0D%60%60%60">",</a> because the ":execute" command
 doesn't accept a comment directly.</div>
 <div class="old-help-para">You also need to set <a href="options.html#'textwidth'">'textwidth'</a> to a non-zero value, e.g.,<pre>:set tw=70</pre>
 A mapping that does about the same, but takes the indent for the list from the
@@ -470,10 +470,10 @@ Opening help in the current window				</a>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:32 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+tips.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/tips.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="      Nvim
+      parse_errors: 2 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+tips.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/tips.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="      Nvim
 		  VIM REFERENCE MANUAL    by Bram Moolenaar
                                       Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
  vim:tw=78:ts=8:noet:ft=help:norl:">noise_lines: 4</span>

@@ -388,7 +388,7 @@ of the previous line "al." will be flagged as an error.  And when you type
 "the&lt;CR&gt;the" the highlighting doesn't appear until the first line is redrawn.
 Use <a href="various.html#CTRL-L">CTRL-L</a> to redraw right away.  "[s" will also stop at a word combination
 with a line break.</div>
-<div class="old-help-para">When encountering a line break Vim skips characters such as '*', '&gt;' and '"',
+<div class="old-help-para">When encountering a line break Vim skips characters such as '', '&gt;' and '"',
 so that comments in C, shell and Vim code can be spell checked.</div>
 <div class="old-help-para"><h3 class="help-heading">SYNTAX HIGHLIGHTING<span class="help-heading-tags">					<a name="spell-syntax"></a><span class="help-tag">spell-syntax</span></h3></div>
 <div class="old-help-para">Files that use syntax highlighting can specify where spell checking should be
@@ -633,7 +633,7 @@ extension.</div>
 	blah/12					word for regions "us" and "ca"
 	vim/!					bad word
 	Campbell/?3				rare word in region 3 "gb"
-	's mornings/=				keep-case word</div>
+	'<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+spell.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/spell.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09blah%2F12%09%09%09%09%09word%20for%20regions%20%22us%22%20and%20%22ca%22%0A%09vim%2F%21%09%09%09%09%09bad%20word%0A%09Campbell%2F%3F3%09%09%09%09rare%20word%20in%20region%203%20%22gb%22%0A%09's%20mornings%2F%3D%09%09%09%09keep-case%20word%0A%0ANote%20that%20when%20%22%2F%3D%22%20is%20used%20the%20same%20word%20with%20all%20upper-case%20letters%20is%20not%0Aaccepted.%20%20This%20is%20different%20from%20a%20word%20with%20mixed%20case%20that%20is%20automatically%0D%60%60%60">s</a> mornings/=				keep-case word</div>
 <div class="old-help-para">Note that when "/=" is used the same word with all upper-case letters is not
 accepted.  This is different from a word with mixed case that is automatically
 marked as keep-case, those words may appear in all upper-case letters.</div>
@@ -660,7 +660,7 @@ that the same files can often be used.  One other project that offers more
 than Myspell is Hunspell ( <a href="https://hunspell.github.io">https://hunspell.github.io</a> ).</div>
 <div class="old-help-para"><h3 class="help-heading">WORD LIST FORMAT<span class="help-heading-tags">				<a name="spell-dic-format"></a><span class="help-tag">spell-dic-format</span></h3></div>
 <div class="old-help-para">A short example, with line numbers:</div>
-<div class="old-help-para"><div class="help-column_heading">	1	1234</div><div class="help-column_heading">	2	aan</div><div class="help-column_heading">	3	Als</div><div class="help-column_heading">	4	Etten-Leur</div><div class="help-column_heading">	5	et al.</div>6	's-Gravenhage7	's-Gravenhaags<div class="help-column_heading">	8	# word that differs between regions</div><div class="help-column_heading">	9	kado/1</div><div class="help-column_heading">	10	cadeau/2</div><div class="help-column_heading">	11	TCP,IP</div><div class="help-column_heading">	12	/the S affix may add a 's'</div><div class="help-column_heading">	13	bedel/S</div></div>
+<div class="old-help-para"><div class="help-column_heading">	1	1234</div><div class="help-column_heading">	2	aan</div><div class="help-column_heading">	3	Als</div><div class="help-column_heading">	4	Etten-Leur</div><div class="help-column_heading">	5	et al.</div><div class="help-column_heading">	6	's-Gravenhage</div><div class="help-column_heading">	7	's-Gravenhaags</div><div class="help-column_heading">	8	# word that differs between regions</div><div class="help-column_heading">	9	kado/1</div><div class="help-column_heading">	10	cadeau/2</div><div class="help-column_heading">	11	TCP,IP</div><div class="help-column_heading">	12	/the S affix may add a 's'</div><div class="help-column_heading">	13	bedel/S</div></div>
 <div class="old-help-para">The first line contains the number of words.  Vim ignores it, but you do get
 an error message if it's not there.  <a name="E760"></a><code class="help-tag">E760</code></div>
 <div class="old-help-para">What follows is one word per line.  White space at the end of the line is
@@ -783,7 +783,7 @@ the word.  This is needed to detect a spelling error such as they'are.  That
 should be they're, but since "they" and "are" are words themselves that would
 go unnoticed.</div>
 <div class="old-help-para">These characters are defined with MIDWORD in the .aff file.  Example:</div>
-<div class="old-help-para">MIDWORD	'-</div>
+<div class="old-help-para"><div class="help-column_heading">	MIDWORD	'-</div></div>
 <div class="old-help-para"><h3 class="help-heading">FLAG TYPES<span class="help-heading-tags">						<a name="spell-FLAG"></a><span class="help-tag">spell-FLAG</span></h3></div>
 <div class="old-help-para">Flags are used to specify the affixes that can be used with a word and for
 other properties of the word.  Normally single-character flags are used.  This
@@ -845,7 +845,7 @@ documentation or the Aspell manual:
 </div></div>
 <div class="old-help-para"><code>{extra}</code>		Optional extra text:
 		    # comment		Comment is ignored
-		    -			Hunspell uses this, ignored</div>
+		    -				Hunspell uses this, ignored</div>
 <div class="old-help-para">For PFX the fields are the same, but the <code>{strip}</code>, <code>{add}</code> and <code>{condition}</code> apply
 to the start of the word.</div>
 <div class="old-help-para">Note: Myspell ignores any extra text after the relevant info.  Vim requires
@@ -926,8 +926,8 @@ for keep-case words.  Example:</div>
 <div class="old-help-para">This flag is not supported by Myspell.  It has the meaning that case matters.
 This can be used if the word does not have the first letter in upper case at
 the start of a sentence.  Example:</div>
-<div class="old-help-para"><div class="help-column_heading">    word list	    matches		    does not match</div>    's morgens/=    's morgens		    'S morgens 's Morgens 'S MORGENS
-    's Morgens	    's Morgens 'S MORGENS   'S morgens 's morgens</div>
+<div class="old-help-para"><div class="help-column_heading">    word list	    matches		    does not match</div>    '<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+spell.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/spell.html%0D%0DContext%3A%0D%0D%60%60%60%0Dthe%20start%20of%20a%20sentence.%20%20Example%3A%0A%0A%20%20%20%20word%20list%09%20%20%20%20matches%09%09%20%20%20%20does%20not%20match%20~%0A%20%20%20%20's%20morgens%2F%3D%20%20%20%20's%20morgens%09%09%20%20%20%20'S%20morgens%20's%20Morgens%20'S%20MORGENS%0A%20%20%20%20's%20Morgens%09%20%20%20%20's%20Morgens%20'S%20MORGENS%20%20%20'S%20morgens%20's%20morgens%0A%0AThe%20flag%20can%20also%20be%20used%20to%20avoid%20that%20the%20word%20matches%20when%20it%20is%20in%20all%0D%60%60%60">s</a> morgens/=    '<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+spell.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/spell.html%0D%0DContext%3A%0D%0D%60%60%60%0Dthe%20start%20of%20a%20sentence.%20%20Example%3A%0A%0A%20%20%20%20word%20list%09%20%20%20%20matches%09%09%20%20%20%20does%20not%20match%20~%0A%20%20%20%20's%20morgens%2F%3D%20%20%20%20's%20morgens%09%09%20%20%20%20'S%20morgens%20's%20Morgens%20'S%20MORGENS%0A%20%20%20%20's%20Morgens%09%20%20%20%20's%20Morgens%20'S%20MORGENS%20%20%20'S%20morgens%20's%20morgens%0A%0AThe%20flag%20can%20also%20be%20used%20to%20avoid%20that%20the%20word%20matches%20when%20it%20is%20in%20all%0D%60%60%60">s</a> morgens		    'S morgens '<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+spell.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/spell.html%0D%0DContext%3A%0D%0D%60%60%60%0Dthe%20start%20of%20a%20sentence.%20%20Example%3A%0A%0A%20%20%20%20word%20list%09%20%20%20%20matches%09%09%20%20%20%20does%20not%20match%20~%0A%20%20%20%20's%20morgens%2F%3D%20%20%20%20's%20morgens%09%09%20%20%20%20'S%20morgens%20's%20Morgens%20'S%20MORGENS%0A%20%20%20%20's%20Morgens%09%20%20%20%20's%20Morgens%20'S%20MORGENS%20%20%20'S%20morgens%20's%20morgens%0A%0AThe%20flag%20can%20also%20be%20used%20to%20avoid%20that%20the%20word%20matches%20when%20it%20is%20in%20all%0D%60%60%60">s</a> Morgens 'S MORGENS
+    '<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+spell.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/spell.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A%20%20%20%20word%20list%09%20%20%20%20matches%09%09%20%20%20%20does%20not%20match%20~%0A%20%20%20%20's%20morgens%2F%3D%20%20%20%20's%20morgens%09%09%20%20%20%20'S%20morgens%20's%20Morgens%20'S%20MORGENS%0A%20%20%20%20's%20Morgens%09%20%20%20%20's%20Morgens%20'S%20MORGENS%20%20%20'S%20morgens%20's%20morgens%0A%0AThe%20flag%20can%20also%20be%20used%20to%20avoid%20that%20the%20word%20matches%20when%20it%20is%20in%20all%0Aupper-case%20letters.%0D%60%60%60">s</a> Morgens	    '<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+spell.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/spell.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A%20%20%20%20word%20list%09%20%20%20%20matches%09%09%20%20%20%20does%20not%20match%20~%0A%20%20%20%20's%20morgens%2F%3D%20%20%20%20's%20morgens%09%09%20%20%20%20'S%20morgens%20's%20Morgens%20'S%20MORGENS%0A%20%20%20%20's%20Morgens%09%20%20%20%20's%20Morgens%20'S%20MORGENS%20%20%20'S%20morgens%20's%20morgens%0A%0AThe%20flag%20can%20also%20be%20used%20to%20avoid%20that%20the%20word%20matches%20when%20it%20is%20in%20all%0Aupper-case%20letters.%0D%60%60%60">s</a> Morgens 'S MORGENS   'S morgens '<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+spell.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/spell.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A%20%20%20%20word%20list%09%20%20%20%20matches%09%09%20%20%20%20does%20not%20match%20~%0A%20%20%20%20's%20morgens%2F%3D%20%20%20%20's%20morgens%09%09%20%20%20%20'S%20morgens%20's%20Morgens%20'S%20MORGENS%0A%20%20%20%20's%20Morgens%09%20%20%20%20's%20Morgens%20'S%20MORGENS%20%20%20'S%20morgens%20's%20morgens%0A%0AThe%20flag%20can%20also%20be%20used%20to%20avoid%20that%20the%20word%20matches%20when%20it%20is%20in%20all%0Aupper-case%20letters.%0D%60%60%60">s</a> morgens</div>
 <div class="old-help-para">The flag can also be used to avoid that the word matches when it is in all
 upper-case letters.</div>
 <div class="old-help-para"><h3 class="help-heading">RARE WORDS<span class="help-heading-tags">						<a name="spell-RARE"></a><span class="help-tag">spell-RARE</span></h3></div>
@@ -991,11 +991,10 @@ one or more groups, where each group can be:
 	one flag			e.g., c
 	alternate flags inside []	e.g., [abc]
 Optionally this may be followed by:
-	*	the group appears zero or more times, e.g., sm*e
-	+	the group appears one or more times, e.g., c+
-	?	the group appears zero times or once, e.g., x?
-
-This is similar to the regexp pattern syntax (but not the same!).  A few
+	*	the group appears zero or more times, e.g., sm*e</div>
+<div class="old-help-para">	+	the group appears one or more times, e.g., c+
+	?	the group appears zero times or once, e.g., x?</div>
+<div class="old-help-para">This is similar to the regexp pattern syntax (but not the same!).  A few
 examples with the sequence of word flags they require:
     COMPOUNDRULE x+	    x xx xxx etc.
     COMPOUNDRULE yz	    yz
@@ -1406,10 +1405,10 @@ count.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:32 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+spell.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/spell.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="     Nvim
+      parse_errors: 7 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+spell.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/spell.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="     Nvim
 		  VIM REFERENCE MANUAL	  by Bram Moolenaar
                                       Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
  vim:tw=78:sw=4:ts=8:noet:ft=help:norl:">noise_lines: 4</span>

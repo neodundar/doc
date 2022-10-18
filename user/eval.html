@@ -580,7 +580,7 @@ MY_VAR_6		shada file</div>
 				instance</div>
 <div class="old-help-para"><a href="eval.html#expr5">expr5</a>	expr6
 	expr6 +	 expr6 ...	number addition, list or blob concatenation
-	expr6 -	 expr6 ...	number subtraction
+	expr6 -		 expr6 ...	number subtraction
 	expr6 .	 expr6 ...	string concatenation
 	expr6 .. expr6 ...	string concatenation</div>
 <div class="old-help-para"><a href="eval.html#expr6">expr6</a>	expr7
@@ -600,7 +600,7 @@ MY_VAR_6		shada file</div>
 	expr8-&gt;name(expr1, ...)	<a href="eval.html#method">method</a> call</div>
 <div class="old-help-para"><a href="eval.html#expr9">expr9</a>	number			number constant
 	"string"		string constant, backslash is special
-string		string constant, '  is doubled
+string		string constant, ' is doubled
 	[expr1, ...]		<a href="eval.html#List">List</a>
 	<code>{expr1: expr1, ...}</code>	<a href="eval.html#Dictionary">Dictionary</a>
 	#{key: expr1, ...}	<a href="eval.html#Dictionary">Dictionary</a>
@@ -634,7 +634,8 @@ To keep this readable, using <a href="repeat.html#line-continuation">line-contin
 You should always put a space before the ':', otherwise it can be mistaken for
 use in a variable such as "a:1".</div>
 <div class="old-help-para">expr2 and expr3						<a name="expr2"></a><code class="help-tag-right">expr2</code> <a name="expr3"></a><code class="help-tag">expr3</code>
-<a name="_-"></a><h3 class="help-heading"></h3>expr3 || expr3 ..	logical OR		<a name="expr-barbar"></a><code class="help-tag-right">expr-barbar</code>
+<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+eval.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/eval.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A%0Aexpr2%20and%20expr3%09%09%09%09%09%09%2Aexpr2%2A%20%2Aexpr3%2A%0A---------------%0A%0Aexpr3%20%7C%7C%20expr3%20..%09logical%20OR%09%09%2Aexpr-barbar%2A%0Aexpr4%20%26%26%20expr4%20..%09logical%20AND%09%09%2Aexpr-%26%26%2A%0A%0D%60%60%60">---------------</a></div>
+<div class="old-help-para">expr3 || expr3 ..	logical OR		<a name="expr-barbar"></a><code class="help-tag-right">expr-barbar</code>
 expr4 &amp;&amp; expr4 ..	logical AND		<a name="expr-%26%26"></a><code class="help-tag-right">expr-&amp;&amp;</code></div>
 <div class="old-help-para">The "||" and "&amp;&amp;" operators take one argument on each side.  The arguments
 are (converted to) Numbers.  The result is:</div>
@@ -758,7 +759,7 @@ As:<pre>(1 . 90) + 90.0</pre>
 That works, since the String "190" is automatically converted to the Number
 190, which can be added to the Float 90.0.  However:<pre>1 . 90 * 90.0</pre>
 Should be read as:<pre>1 . (90 * 90.0)</pre>
-Since '.' has lower precedence than '*'.  This does NOT work, since this
+Since '.' has lower precedence than ''.  This does NOT work, since this
 attempts to concatenate a Float and a String.</div>
 <div class="old-help-para">When dividing a Number by zero the result depends on the value:
 	  0 / 0  = -0x80000000	(like NaN for Float)
@@ -968,7 +969,8 @@ function.  Example:<pre>:echo printf('%.15e', atan(1))</pre></div>
 encodings.  Use "\u00ff" to store character 255 correctly as UTF-8.</div>
 <div class="old-help-para">Note that "\000" and "\x00" force the end of the string.</div>
 <div class="old-help-para">blob-literal				<a name="blob-literal"></a><code class="help-tag-right">blob-literal</code> <a name="E973"></a><code class="help-tag">E973</code>
-<a name="_-"></a><h3 class="help-heading"></h3>Hexadecimal starting with 0z or 0Z, with an arbitrary number of bytes.
+<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+eval.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/eval.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A%0Ablob-literal%09%09%09%09%2Ablob-literal%2A%20%2AE973%2A%0A------------%0A%0AHexadecimal%20starting%20with%200z%20or%200Z%2C%20with%20an%20arbitrary%20number%20of%20bytes.%0AThe%20sequence%20must%20be%20an%20even%20number%20of%20hex%20characters.%20%20Example%3A%20%3E%0A%09%3Alet%20b%20%3D%200zFF00ED015DAF%0D%60%60%60">------------</a></div>
+<div class="old-help-para">Hexadecimal starting with 0z or 0Z, with an arbitrary number of bytes.
 The sequence must be an even number of hex characters.  Example:<pre>:let b = 0zFF00ED015DAF</pre>
 literal-string						<a name="literal-string"></a><code class="help-tag-right">literal-string</code> <a name="E115"></a><code class="help-tag">E115</code>
 <h3 class="help-heading">string		string constant<span class="help-heading-tags">			<a name="expr-'"></a><span class="help-tag">expr-'</span></h3></div>
@@ -1067,7 +1069,7 @@ The closure uses "x" from the function scope, and "F" in that same scope
 refers to the closure.  This cycle results in the memory not being freed.
 Recommendation: don't do this.</div>
 <div class="old-help-para">Notice how execute() is used to execute an Ex command.  That's ugly though.</div>
-<div class="old-help-para">Lambda expressions have internal names like '&lt;lambda&gt;42'.  If you get an error
+<div class="old-help-para">Lambda expressions have internal names like '<code>&lt;lambda&gt;</code>42'.  If you get an error
 for a lambda expression, you can find what it is with the following command:<pre>:function &lt;lambda&gt;42</pre>
 See also: <a href="eval.html#numbered-function">numbered-function</a></div>
 <div class="old-help-para"><h2 class="help-heading">3. Internal variable<span class="help-heading-tags">				<a name="internal-variables"></a><span class="help-tag">internal-variables</span> <a name="E461"></a><span class="help-tag">E461</span></span></h2></div>
@@ -1088,7 +1090,7 @@ specified by what is prepended:</div>
 <a href="eval.html#tabpage-variable">tabpage-variable</a>   t:	  Local to the current tab page.
 <a href="eval.html#global-variable">global-variable</a>    g:	  Global.
 <a href="eval.html#local-variable">local-variable</a>     l:	  Local to a function.
-<a href="eval.html#script-variable">script-variable</a>    s:	  Local to a <a href="repeat.html#%3Asource">:source</a><a href="vim_diff.html#'ed'">'ed'</a> Vim script.
+<a href="eval.html#script-variable">script-variable</a>    s:	  Local to a <a href="repeat.html#%3Asource">:source</a>'<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+eval.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/eval.html%0D%0DContext%3A%0D%0D%60%60%60%0D%7Ctabpage-variable%7C%20%20%20t%3A%09%20%20Local%20to%20the%20current%20tab%20page.%0A%7Cglobal-variable%7C%20%20%20%20g%3A%09%20%20Global.%0A%7Clocal-variable%7C%20%20%20%20%20l%3A%09%20%20Local%20to%20a%20function.%0A%7Cscript-variable%7C%20%20%20%20s%3A%09%20%20Local%20to%20a%20%7C%3Asource%7C'ed%20Vim%20script.%0A%7Cfunction-argument%7C%20%20a%3A%09%20%20Function%20argument%20(only%20inside%20a%20function).%0A%7Cvim-variable%7C%20%20%20%20%20%20%20v%3A%09%20%20Global%2C%20predefined%20by%20Vim.%0A%0D%60%60%60">ed</a> Vim script.
 <a href="userfunc.html#function-argument">function-argument</a>  a:	  Function argument (only inside a function).
 <a href="eval.html#vim-variable">vim-variable</a>       v:	  Global, predefined by Vim.</div>
 <div class="old-help-para">The scope name by itself can be used as a <a href="eval.html#Dictionary">Dictionary</a>.  For example, to
@@ -1529,7 +1531,7 @@ v:numbersize	Number of bits in a Number.  This is normally 64, but on some
 <div class="old-help-para">					<a name="v%3Aoldfiles"></a><code class="help-tag-right">v:oldfiles</code> <a name="oldfiles-variable"></a><code class="help-tag">oldfiles-variable</code>
 v:oldfiles	List of file names that is loaded from the <a href="starting.html#shada">shada</a> file on
 		startup.  These are the files that Vim remembers marks for.
-		The length of the List is limited by the '  argument of the
+		The length of the List is limited by the ' argument of the
 		<a href="options.html#'shada'">'shada'</a> option (default is 100).
 		When the <a href="starting.html#shada">shada</a> file is not used the List is empty.
 		Also see <a href="starting.html#%3Aoldfiles">:oldfiles</a> and <a href="cmdline.html#c_%23%3C">c_#&lt;</a>.
@@ -1596,7 +1598,7 @@ v:register	The name of the register in effect for the current normal mode
 		(use this in custom commands that take a register).
 		If none is supplied it is the default register '"', unless
 		<a href="options.html#'clipboard'">'clipboard'</a> contains "unnamed" or "unnamedplus", then it is
-		'*' or '+'.
+		'' or '+'.
 		Also see <a href="builtin.html#getreg()">getreg()</a> and <a href="builtin.html#setreg()">setreg()</a></div>
 <div class="old-help-para">					<a name="v%3Ascrollstart"></a><code class="help-tag-right">v:scrollstart</code> <a name="scrollstart-variable"></a><code class="help-tag">scrollstart-variable</code>
 v:scrollstart	String describing the script or function that caused the
@@ -1606,10 +1608,11 @@ v:scrollstart	String describing the script or function that caused the
 		This can be used to find out why your script causes the
 		hit-enter prompt.</div>
 <div class="old-help-para">					<a name="v%3Aservername"></a><code class="help-tag-right">v:servername</code> <a name="servername-variable"></a><code class="help-tag">servername-variable</code>
-v:servername	Primary listen-address of the current Nvim instance, the first
-		item returned by <a href="builtin.html#serverlist()">serverlist()</a>.  Can be set by <a href="starting.html#--listen">--listen</a> or
-		<a href="deprecated.html#%24NVIM_LISTEN_ADDRESS">$NVIM_LISTEN_ADDRESS</a> (deprecated) at startup.
-		See also <a href="builtin.html#serverstart()">serverstart()</a> <a href="builtin.html#serverstop()">serverstop()</a>.
+v:servername	Primary listen-address of Nvim, the first item returned by
+		<a href="builtin.html#serverlist()">serverlist()</a>. Usually this is the named pipe created by Nvim
+		at <a href="starting.html#startup">startup</a> or given by <a href="starting.html#--listen">--listen</a> (or the deprecated
+		<a href="deprecated.html#%24NVIM_LISTEN_ADDRESS">$NVIM_LISTEN_ADDRESS</a> env var).</div>
+<div class="old-help-para">		See also <a href="builtin.html#serverstart()">serverstart()</a> <a href="builtin.html#serverstop()">serverstop()</a>.
 		Read-only.</div>
 <div class="old-help-para">								       <a name="%24NVIM"></a><code class="help-tag-right">$NVIM</code>
 		$NVIM is set by <a href="nvim_terminal_emulator.html#terminal">terminal</a> and <a href="builtin.html#jobstart()">jobstart()</a>, and is thus
@@ -1959,10 +1962,8 @@ DATA</pre></div>
 			variable is indicated before the value:
 			    <code>&lt;nothing&gt;</code>	String
 				#	Number
-				*	Funcref
-
-
-:unl[et][!] <code>{name}</code> ...				<a name="%3Aunlet"></a><code class="help-tag-right">:unlet</code> <a name="%3Aunl"></a><code class="help-tag">:unl</code> <a name="E108"></a><code class="help-tag">E108</code> <a name="E795"></a><code class="help-tag">E795</code>
+				*	Funcref</div>
+<div class="old-help-para">:unl[et][!] <code>{name}</code> ...				<a name="%3Aunlet"></a><code class="help-tag-right">:unlet</code> <a name="%3Aunl"></a><code class="help-tag">:unl</code> <a name="E108"></a><code class="help-tag">E108</code> <a name="E795"></a><code class="help-tag">E795</code>
 			Remove the internal variable <code>{name}</code>.  Several variable
 			names can be given, they are all removed.  The name
 			may also be a <a href="eval.html#List">List</a> or <a href="eval.html#Dictionary">Dictionary</a> item.
@@ -3426,10 +3427,10 @@ Command-line expressions highlighting		</a>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:31 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+eval.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/eval.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim
+      parse_errors: 3 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+eval.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/eval.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim
 		  VIM REFERENCE MANUAL	  by Bram Moolenaar
 				      Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
  vim:tw=78:ts=8:noet:ft=help:norl:">noise_lines: 4</span>

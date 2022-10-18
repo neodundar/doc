@@ -216,14 +216,14 @@ on line 33.  (For a better way of going through a compiler's error list, see
    With no argument, "G" positions you at the end of the file.  A quick way to
 go to the start of a file use "gg".  "1G" will do the same, but is a tiny bit
 more typing.</div>
-<div class="old-help-para">	    |		first line of a file   ^
-	    |		text text text text    |
-	    |		text text text text    |   gg
-	7G  |		text text text text    |
-	    |		text text text text
-	    |		text text text text
+<div class="old-help-para">	    |	first line of a file   ^
+	    |	text text text text    |
+	    |	text text text text    |  gg
+	7G  |	text text text text    |
+	    |	text text text text
+	    |	text text text text
 	    V	text text text text    |
-		text text text text    |   G
+		text text text text    |  G
 		text text text text    |
 		last line of a file    V</div>
 <div class="old-help-para">Another way to move to a line is using the "%" command with a count.  For
@@ -233,15 +233,15 @@ end.</div>
 it's currently visible or not.  What if you want to move to one of the lines
 you can see?  This figure shows the three commands you can use:</div>
 <div class="old-help-para">			+---------------------------+
-		H --&gt;	|  text sample text	    |
-			|  sample text		    |
-			|  text sample text	    |
-			|  sample text		    |
-		M --&gt;	|  text sample text	    |
-			|  sample text		    |
-			|  text sample text	    |
-			|  sample text		    |
-		L --&gt;	|  text sample text	    |
+		H --&gt;	| text sample text	    |
+			| sample text		    |
+			| text sample text	    |
+			| sample text		    |
+		M --&gt;	| text sample text	    |
+			| sample text		    |
+			| text sample text	    |
+			| sample text		    |
+		L --&gt;	| text sample text	    |
 			+---------------------------+</div>
 <div class="old-help-para">Hints: "H" stands for Home, "M" for Middle and "L" for Last.  Alternatively,
 "H" for high, "M" for Middle and "L" for low.</div>
@@ -282,21 +282,21 @@ which end is up.  Most users have the same problem.
    The <code>CTRL-D</code> command moves the viewing window down half a screen in the file,
 thus scrolls the text up half a screen.</div>
 <div class="old-help-para">				       +----------------+
-				       |  some text	|
-				       |  some text	|
-				       |  some text	|
-	+---------------+	       |  some text	|
-	|  some text	|   <code>CTRL-U</code>  --&gt; |			|
-	|			|		       |  123456		|
-	|  123456	|		       +----------------+
-	|  7890		|
-	|			|		       +----------------+
-	|  example	|   <code>CTRL-D</code> --&gt;  |  7890		|
-	+---------------+	       |			|
-				       |  example	|
-				       |  example	|
-				       |  example	|
-				       |  example	|
+				       | some text	|
+				       | some text	|
+				       | some text	|
+	+---------------+	       | some text	|
+	| some text	|  <code>CTRL-U</code>  --&gt; |		|
+	|		|	       | 123456		|
+	| 123456	|	       +----------------+
+	| 7890		|
+	|		|	       +----------------+
+	| example	|  <code>CTRL-D</code> --&gt;  | 7890		|
+	+---------------+	       |		|
+				       | example	|
+				       | example	|
+				       | example	|
+				       | example	|
 				       +----------------+</div>
 <div class="old-help-para">To scroll one line at a time use <code>CTRL-E</code> (scroll up) and <code>CTRL-Y</code> (scroll down).
 Think of <code>CTRL-E</code> to give you one line Extra.  (If you use MS-Windows compatible
@@ -308,13 +308,13 @@ Forwards and B for Backwards.</div>
 the bottom of the screen.  You would like to see the context of the line with
 the cursor.  That's done with the "zz" command.</div>
 <div class="old-help-para">	+------------------+		 +------------------+
-	|  earlier text	   |			 |  earlier text	    |
-	|  earlier text	   |			 |  earlier text	    |
-	|  earlier text	   |			 |  earlier text	    |
-	|  earlier text	   |    zz  --&gt;	 |  line with cursor |
-	|  earlier text	   |			 |  later text	    |
-	|  earlier text	   |			 |  later text	    |
-	|  line with cursor |			 |  later text	    |
+	| earlier text	   |		 | earlier text	    |
+	| earlier text	   |		 | earlier text	    |
+	| earlier text	   |		 | earlier text	    |
+	| earlier text	   |   zz  --&gt;	 | line with cursor |
+	| earlier text	   |		 | later text	    |
+	| earlier text	   |		 | later text	    |
+	| line with cursor |		 | later text	    |
 	+------------------+		 +------------------+</div>
 <div class="old-help-para">The "zt" command puts the cursor line at the top, "zb" at the bottom.  There
 are a few more scrolling commands, see <a href="quickref.html#Q_sc">Q_sc</a>.  To always keep a few lines of
@@ -466,7 +466,8 @@ putting a backslash before it.
 position from before this jump.  This position is called a mark.  To go back
 where you came from, use this command:<pre>
 ``</pre>
-This ` is a backtick or open single-quote character.   If you use the same command a second time you will jump back again.  That's
+This is a backtick or open single-quote character.
+   If you use the same command a second time you will jump back again.  That's
 because the "`" command is a jump itself, and the position from before this
 jump is remembered.</div>
 <div class="old-help-para">Generally, every time you do a command that can move the cursor further than
@@ -486,13 +487,13 @@ You first jump to line 33, then search for a line that starts with "The".
 Then with <code>CTRL-O</code> you jump back to line 33.  Another <code>CTRL-O</code> takes you back to
 where you started.  If you now use <code>CTRL-I</code> you jump to line 33 again.  And
 to the match for "The" with another <code>CTRL-I</code>.</div>
-<div class="old-help-para">	     |		example text   ^	     |
-	33G  |		example text   |   <code>CTRL-O</code>     |  <code>CTRL-I</code>
-	     |		example text   |		     |
+<div class="old-help-para">	     |	example text   ^	     |
+	33G  |	example text   |  <code>CTRL-O</code>     | <code>CTRL-I</code>
+	     |	example text   |	     |
 	     V	line 33 text   ^	     V
-	     |		example text   |		     |
-       /^The |		example text   |   <code>CTRL-O</code>     |  <code>CTRL-I</code>
-	     V	There you are  |		     V
+	     |	example text   |	     |
+       /^The |	example text   |  <code>CTRL-O</code>     | <code>CTRL-I</code>
+	     V	There you are  |	     V
 		example text</div>
 <div class="old-help-para">	Note:
 	<code>CTRL-I</code> is the same as <code>&lt;Tab&gt;</code>.</div>
@@ -502,7 +503,8 @@ you used last is marked with a "&gt;".</div>
 <div class="old-help-para">Vim enables you to place your own marks in the text.  The command "ma" marks
 the place under the cursor as mark a.  You can place 26 marks (a through z) in
 your text.  You can't see them, it's just a position that Vim remembers.
-   To go to a mark, use the command `{mark}, where {mark} is the mark letter.Thus to move to the a mark:
+   To go to a mark, use the command{mark}, where {mark} is the mark letter.
+Thus to move to the a mark:
 <pre>`a</pre>
 The command "'mark" (single quotation mark, or apostrophe) moves you to the
 beginning of the line containing the mark.  This differs from the "`mark"
@@ -517,14 +519,14 @@ me</pre>
 Now you can move around, and when you want to look at the start of the file,
 you use this to jump there:<pre>
 's</pre>
-Then you can use '' to jump back to where you were, or 'e to jump to the text
+Then you can use '' to jump back to where you were, or '<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_03.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_03.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A%09's%0A%0AThen%20you%20can%20use%20''%20to%20jump%20back%20to%20where%20you%20were%2C%20or%20'e%20to%20jump%20to%20the%20text%0Ayou%20were%20working%20on%20at%20the%20end.%0A%20%20%20There%20is%20nothing%20special%20about%20using%20s%20for%20start%20and%20e%20for%20end%2C%20they%20are%0Ajust%20easy%20to%20remember.%0D%60%60%60">e</a> to jump to the text
 you were working on at the end.
    There is nothing special about using s for start and e for end, they are
 just easy to remember.</div>
 <div class="old-help-para">You can use this command to get a list of marks:<pre>
 :marks</pre>
 You will notice a few special marks.  These include:</div>
-<div class="old-help-para">	'		The cursor position before doing a jump
+<div class="old-help-para">	'	The cursor position before doing a jump
 	"	The cursor position when last editing the file
 	[	Start of the last change
 	]	End of the last change</div>
@@ -573,10 +575,10 @@ You will notice a few special marks.  These include:</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:32 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_03.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_03.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>
+      parse_errors: 1 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_03.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_03.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>
       </div>
     <div>
   </footer>

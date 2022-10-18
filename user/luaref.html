@@ -2238,7 +2238,8 @@ lua_Alloc                                                          <a name="lua_
         <code>NULL</code> if and only if it cannot fill the request. When <code>nsize</code> is not
         zero and <code>osize</code> is zero, the allocator should behave like <code>malloc</code>.
         When <code>nsize</code> and <code>osize</code> are not zero, the allocator behaves like
-        <code>realloc</code>. Lua assumes that the allocator never fails when `osize &gt;=        nsize`.
+        <code>realloc</code>. Lua assumes that the allocator never fails whenosize &gt;=
+        nsize`.
 
 </div>
 <div class="help-para">
@@ -4807,7 +4808,8 @@ collectgarbage(<code>{opt}</code> [, <code>{arg}</code>])                       
                      <code>true</code> if the step finished a collection cycle.
         <code>"setpause"</code>   sets <code>{arg}</code> /100 as the new value for the <code>pause</code> of
                      the collector (see <a href="luaref.html#luaref-langGC">luaref-langGC</a>).
-        <code>"setstepmul"</code> sets <code>{arg}</code> /100 as the new value for the `step                     multiplier` of the collector (see <a href="luaref.html#luaref-langGC">luaref-langGC</a>).
+        <code>"setstepmul"</code> sets <code>{arg}</code> /100 as the new value for thestep
+                     multiplier` of the collector (see <a href="luaref.html#luaref-langGC">luaref-langGC</a>).
 
 </div>
 <div class="help-para">
@@ -4923,7 +4925,8 @@ next(<code>{table}</code> [, <code>{index}</code>])                             
 
 </div>
 <div class="help-para">
-        The order in which the indices are enumerated is not specified, `even        for` <code>numeric indices</code>. (To traverse a table in numeric order, use a
+        The order in which the indices are enumerated is not specified,even
+        for` <code>numeric indices</code>. (To traverse a table in numeric order, use a
         numerical <code>for</code> or the <code>ipairs</code> <a href="luaref.html#luaref-ipairs()">luaref-ipairs()</a> function.)
 
 </div>
@@ -6504,7 +6507,8 @@ debug.sethook([{thread},] <code>{hook}</code>, <code>{mask}</code> [, <code>{cou
 </div>
 <div class="help-para">
         When the hook is called, its first parameter is a string describing
-        the event that triggered its call: <code>"call"</code>, <code>"return"</code> (or `"tail        return"`), <code>"line"</code>, and <code>"count"</code>. For line events, the hook also
+        the event that triggered its call: <code>"call"</code>, <code>"return"</code> (or"tail
+        return"`), <code>"line"</code>, and <code>"count"</code>. For line events, the hook also
         gets the new line number as its second parameter. Inside a hook, you
         can call <code>getinfo</code> with level 2 to get more information about the
         running function (level 0 is the <code>getinfo</code> function, and level 1 is
@@ -6734,7 +6738,7 @@ C  LUAREF DOC                 </a>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:31 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+luaref.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/luaref.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="           Nvim

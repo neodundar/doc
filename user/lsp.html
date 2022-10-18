@@ -235,7 +235,7 @@ function(err, result, ctx, config)</pre></div>
                         When the language server is unable to complete a
                         request, a table with information about the error is
                         sent. Otherwise, it is <code>nil</code>. See <a href="lsp.html#lsp-response">lsp-response</a>.
-        <code>{result}</code>    (Result |  Params |  nil)
+        <code>{result}</code>    (Result | Params | nil)
                         When the language server is able to successfully
                         complete a request, this contains the <code>result</code> key of
                         the response. See <a href="lsp.html#lsp-response">lsp-response</a>.
@@ -289,7 +289,7 @@ function(err, result, ctx, config)</pre></div>
                             <a href="lsp.html#vim.lsp.diagnostic.on_publish_diagnostics()">vim.lsp.diagnostic.on_publish_diagnostics()</a></div>
 <div class="old-help-para">                        To configure a particular <a href="lsp.html#lsp-handler">lsp-handler</a>, see:
                             <a href="lsp.html#lsp-handler-configuration">lsp-handler-configuration</a></div>
-<div class="old-help-para"><div class="help-column_heading">    Returns:</div>        The <a href="lsp.html#lsp-handler">lsp-handler</a>'s return value will be ignored.</div>
+<div class="old-help-para"><div class="help-column_heading">    Returns:</div>        The <a href="lsp.html#lsp-handler">lsp-handler</a>'<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+lsp.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/lsp.html%0D%0DContext%3A%0D%0D%60%60%60%0D%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7Clsp-handler-configuration%7C%0A%0A%20%20%20%20Returns%3A%20~%0A%20%20%20%20%20%20%20%20The%20%7Clsp-handler%7C's%20return%20value%20will%20be%20ignored.%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2Alsp-handler-configuration%2A%0A%0D%60%60%60">s</a> return value will be ignored.</div>
 <div class="old-help-para">                                                   <a name="lsp-handler-configuration"></a><code class="help-tag-right">lsp-handler-configuration</code></div>
 <div class="old-help-para">To configure the behavior of a builtin <a href="lsp.html#lsp-handler">lsp-handler</a>, the convenient method
 <a href="lsp.html#vim.lsp.with()">vim.lsp.with()</a> is provided for users.</div>
@@ -570,7 +570,7 @@ buf_request_sync(<code>{bufnr}</code>, <code>{method}</code>, <code>{params}</co
 </div><div class="help-li" style="margin-left: 3rem;"> <code>{rpc}</code> (table): RPC client object, for low level interaction with the
         client. See <a href="lsp.html#vim.lsp.rpc.start()">vim.lsp.rpc.start()</a>.
 </div><div class="help-li" style="margin-left: 3rem;"> <code>{offset_encoding}</code> (string): The encoding used for communicating with
-        the server. You can modify this in the <code>config</code>'s <code>on_init</code> method
+        the server. You can modify this in the <code>config</code>'<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+lsp.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/lsp.html%0D%0DContext%3A%0D%0D%60%60%60%0D%20%20%20%20%20%20%E2%80%A2%20%7Brpc%7D%20(table)%3A%20RPC%20client%20object%2C%20for%20low%20level%20interaction%20with%20the%0A%20%20%20%20%20%20%20%20client.%20See%20%7Cvim.lsp.rpc.start()%7C.%0A%20%20%20%20%20%20%E2%80%A2%20%7Boffset_encoding%7D%20(string)%3A%20The%20encoding%20used%20for%20communicating%20with%0A%20%20%20%20%20%20%20%20the%20server.%20You%20can%20modify%20this%20in%20the%20%60config%60's%20%60on_init%60%20method%0A%20%20%20%20%20%20%20%20before%20text%20is%20sent%20to%20the%20server.%0A%20%20%20%20%20%20%E2%80%A2%20%7Bhandlers%7D%20(table)%3A%20The%20handlers%20used%20by%20the%20client%20as%20described%20in%0A%20%20%20%20%20%20%20%20%7Clsp-handler%7C.%0D%60%60%60">s</a> <code>on_init</code> method
         before text is sent to the server.
 </div><div class="help-li" style="margin-left: 3rem;"> <code>{handlers}</code> (table): The handlers used by the client as described in
         <a href="lsp.html#lsp-handler">lsp-handler</a>.
@@ -603,8 +603,10 @@ end)</pre>
 <div class="old-help-para">formatexpr(<code>{opts}</code>)                                      <a name="vim.lsp.formatexpr()"></a><code class="help-tag-right">vim.lsp.formatexpr()</code>
     Provides an interface between the built-in client and a <code>formatexpr</code>
     function.</div>
-<div class="old-help-para">    Currently only supports a single client. This can be set via `setlocal    formatexpr=v:lua.vim.lsp.formatexpr()` but will typically or in
-    <code>on_attach</code> via `vim.api.nvim_buf_set_option(bufnr, 'formatexpr',    'v:lua.vim.lsp.formatexpr(#{timeout_ms:250})')`.</div>
+<div class="old-help-para">    Currently only supports a single client. This can be set viasetlocal
+    formatexpr=v:lua.vim.lsp.formatexpr()` but will typically or in
+    <code>on_attach</code> viavim.api.nvim_buf_set_option(bufnr, 'formatexpr',
+    'v:lua.vim.lsp.formatexpr(#{timeout_ms:250})')`.</div>
 <div class="old-help-para"><div class="help-column_heading">    Parameters:</div><div class="help-li" style=""> <code>{opts}</code>  (table) options for customizing the formatting expression
                 which takes the following optional keys:
 </div><div class="help-li" style="margin-left: 3rem;"> timeout_ms (default 500ms). The timeout period for the
@@ -799,7 +801,7 @@ vim.lsp.start({
 </div><div class="help-li" style="margin-left: 3rem;"> client_id: client handle
 </div><div class="help-li" style=""> <code>{on_attach}</code>          Callback (client, bufnr) invoked when client
                              attaches to a buffer.
-</div><div class="help-li" style=""> <code>{trace}</code>              "off" |  "messages" |  "verbose" |  nil passed
+</div><div class="help-li" style=""> <code>{trace}</code>              "off" | "messages" | "verbose" | nil passed
                              directly to the language server in the initialize
                              request. Invalid/empty values will default to
                              "off"
@@ -1171,11 +1173,11 @@ character_offset(<code>{buf}</code>, <code>{row}</code>, <code>{col}</code>, <co
         <code>{row}</code> column <code>{col}</code> in buffer <code>{buf}</code></div>
 <div class="old-help-para">                              <a name="vim.lsp.util.convert_input_to_markdown_lines()"></a><code class="help-tag-right">vim.lsp.util.convert_input_to_markdown_lines()</code>
 convert_input_to_markdown_lines(<code>{input}</code>, <code>{contents}</code>)
-    Converts any of <code>MarkedString</code> |  <code>MarkedString[]</code> |  <code>MarkupContent</code> into a
+    Converts any of <code>MarkedString</code> | <code>MarkedString[]</code> | <code>MarkupContent</code> into a
     list of lines containing valid markdown. Useful to populate the hover
     window for <code>textDocument/hover</code>, for parsing the result of
     <code>textDocument/signatureHelp</code>, and potentially others.</div>
-<div class="old-help-para"><div class="help-column_heading">    Parameters:</div><div class="help-li" style=""> <code>{input}</code>     (<code>MarkedString</code> |  <code>MarkedString[]</code> |  <code>MarkupContent</code>)
+<div class="old-help-para"><div class="help-column_heading">    Parameters:</div><div class="help-li" style=""> <code>{input}</code>     (<code>MarkedString</code> | <code>MarkedString[]</code> | <code>MarkupContent</code>)
 </div><div class="help-li" style=""> <code>{contents}</code>  (table, optional, default <code>{}</code>) List of strings to extend
                     with converted lines
 </div></div>
@@ -1208,7 +1210,8 @@ extract_completion_items(<code>{result}</code>)
 <div class="old-help-para">                                             <a name="vim.lsp.util.jump_to_location()"></a><code class="help-tag-right">vim.lsp.util.jump_to_location()</code>
 jump_to_location(<code>{location}</code>, <code>{offset_encoding}</code>, <code>{reuse_win}</code>)
     Jumps to a location.</div>
-<div class="old-help-para"><div class="help-column_heading">    Parameters:</div><div class="help-li" style=""> <code>{location}</code>         (table) (<code>Location</code>|`LocationLink`)      • <code>{offset_encoding}</code>  "utf-8" |  "utf-16" |  "utf-32"
+<div class="old-help-para"><div class="help-column_heading">    Parameters:</div><div class="help-li" style=""> <code>{location}</code>         (table) (<code>Location</code>`LocationLink`)
+</div><div class="help-li" style=""> <code>{offset_encoding}</code>  "utf-8" | "utf-16" | "utf-32"
 </div><div class="help-li" style=""> <code>{reuse_win}</code>        (boolean) Jump to existing window if buffer is
                            already open.
 </div></div>
@@ -1365,7 +1368,8 @@ open_floating_preview(<code>{contents}</code>, <code>{syntax}</code>, <code>{opt
 <div class="old-help-para">                                                <a name="vim.lsp.util.show_document()"></a><code class="help-tag-right">vim.lsp.util.show_document()</code>
 show_document(<code>{location}</code>, <code>{offset_encoding}</code>, <code>{opts}</code>)
     Shows document and optionally jumps to the location.</div>
-<div class="old-help-para"><div class="help-column_heading">    Parameters:</div><div class="help-li" style=""> <code>{location}</code>         (table) (<code>Location</code>|`LocationLink`)      • <code>{offset_encoding}</code>  "utf-8" |  "utf-16" |  "utf-32"
+<div class="old-help-para"><div class="help-column_heading">    Parameters:</div><div class="help-li" style=""> <code>{location}</code>         (table) (<code>Location</code>`LocationLink`)
+</div><div class="help-li" style=""> <code>{offset_encoding}</code>  "utf-8" | "utf-16" | "utf-32"
 </div><div class="help-li" style=""> <code>{opts}</code>             (table) options
 </div><div class="help-li" style="margin-left: 3rem;"> reuse_win (boolean) Jump to existing window if
                              buffer is already open.
@@ -1580,10 +1584,10 @@ Lua module: vim.lsp.protocol                                    </a>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:31 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+lsp.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/lsp.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   LSP
+      parse_errors: 2 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+lsp.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/lsp.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   LSP
                             NVIM REFERENCE MANUAL
                                       Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
  vim:tw=78:ts=8:sw=4:sts=4:et:ft=help:norl:">noise_lines: 4</span>

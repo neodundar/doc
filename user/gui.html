@@ -112,24 +112,24 @@ happens after other <a href="starting.html#initialization">initialization</a>s, 
 configure which ones appear with the <a href="options.html#'guioptions'">'guioptions'</a> option.</div>
 <div class="old-help-para">The interface looks like this (with ":set guioptions=mlrb"):</div>
 <div class="old-help-para">		       +------------------------------+ `
-		       |  File  Edit		 Help |  &lt;- Menu bar (m) `
+		       | File  Edit		 Help | &lt;- Menu bar (m) `
 		       +-+--------------------------+-+ `
 		       <a href="motion.html#%5E">^</a>			    <a href="motion.html#%5E">^</a> `
 		       <a href="pattern.html#%23">#</a> Text area.		    <a href="pattern.html#%23">#</a> `
-		       |  |				    |  |  `
+		       | |			    | | `
 		       <a href="visual.html#v">v</a>__________________________|v| `
- Normal status line -&gt; <a href="starting.html#-%2B">-+</a> File.c	       5,2  +-| `
+ Normal status line -&gt; |<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+gui.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/gui.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%20%20%20%20%20%20%20%7C%23%7C%20Text%20area.%09%09%20%20%20%20%7C%23%7C%20%60%0A%09%09%20%20%20%20%20%20%20%7C%20%7C%09%09%09%20%20%20%20%7C%20%7C%20%60%0A%09%09%20%20%20%20%20%20%20%7Cv%7C__________________________%7Cv%7C%20%60%0A%20Normal%20status%20line%20-%3E%20%7C-%2B%20File.c%09%20%20%20%20%20%20%205%2C2%20%20%2B-%7C%20%60%0A%20between%20Vim%20windows%20%20%20%7C%5E%7C%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%7C%5E%7C%20%60%0A%09%09%20%20%20%20%20%20%20%7C%20%7C%09%09%09%20%20%20%20%7C%20%7C%20%60%0A%09%09%20%20%20%20%20%20%20%7C%20%7C%20Another%20file%20buffer.%20%20%20%20%20%7C%20%7C%20%60%0D%60%60%60">-+</a> File.c	       5,2  +-| `
  between Vim windows   <a href="motion.html#%5E">^</a>""""""""""""""""""""""""""|^| `
-		       |  |				    |  |  `
-		       |  |  Another file buffer.     |  |  `
-		       |  |				    |  |  `
+		       | |			    | | `
+		       | | Another file buffer.     | | `
+		       | |			    | | `
 		       <a href="pattern.html#%23">#</a>			    <a href="pattern.html#%23">#</a> `
  Left scrollbar (l) -&gt; <a href="pattern.html#%23">#</a>			    <a href="pattern.html#%23">#</a> &lt;- Right `
 		       <a href="pattern.html#%23">#</a>			    <a href="pattern.html#%23">#</a>    scrollbar (r) `
-		       |  |				    |  |  `
+		       | |			    | | `
 		       <a href="visual.html#v">v</a>			    <a href="visual.html#v">v</a> `
 		       +-+--------------------------+-+ `
-		       |  <a href="change.html#%3C">&lt;</a> ####		   &gt;| |  &lt;- Bottom `
+		       | |<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+gui.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/gui.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%20%20%20%20%20%20%20%7C%20%7C%09%09%09%20%20%20%20%7C%20%7C%20%60%0A%09%09%20%20%20%20%20%20%20%7Cv%7C%09%09%09%20%20%20%20%7Cv%7C%20%60%0A%09%09%20%20%20%20%20%20%20%2B-%2B--------------------------%2B-%2B%20%60%0A%09%09%20%20%20%20%20%20%20%7C%20%7C%3C%20%23%23%23%23%09%09%20%20%20%3E%7C%20%7C%20%3C-%20Bottom%20%60%0A%09%09%20%20%20%20%20%20%20%2B-%2B--------------------------%2B-%2B%20%20%20%20scrollbar%20(b)%20%60%0A%0AAny%20of%20the%20scrollbar%20or%20menu%20components%20may%20be%20turned%20off%20by%20not%20putting%20the%0D%60%60%60">&lt;</a> ####		   &gt;| | &lt;- Bottom `
 		       +-+--------------------------+-+    scrollbar (b) `</div>
 <div class="old-help-para">Any of the scrollbar or menu components may be turned off by not putting the
 appropriate letter in the <a href="options.html#'guioptions'">'guioptions'</a> string.  The bottom scrollbar is
@@ -439,14 +439,13 @@ specified is a submenu, then all menus under that hierarchy will be shown.
 If no argument is given after :menu at all, then ALL menu items are shown
 for the appropriate mode (e.g., Command-line mode for :cmenu).</div>
 <div class="old-help-para">Special characters in the list, just before the rhs:
-*	The menu was defined with "nore" to disallow remapping.
-&amp;	The menu was defined with "&lt;script&gt;" to allow remapping script-local
+*	The menu was defined with "nore" to disallow remapping.</div>
+<div class="old-help-para">&amp;	The menu was defined with "&lt;script&gt;" to allow remapping script-local
 	mappings only.
 s	The menu was defined with "&lt;silent&gt;" to avoid showing what it is
 	mapped to when triggered.
--	The menu was disabled.
-
-Note that hitting <code>&lt;Tab&gt;</code> while entering a menu name after a menu command may
+-		The menu was disabled.</div>
+<div class="old-help-para">Note that hitting <code>&lt;Tab&gt;</code> while entering a menu name after a menu command may
 be used to complete the name of the menu item.</div>
 <div class="old-help-para">Executing Menus						<a name="execute-menus"></a><code class="help-tag-right">execute-menus</code></div>
 <div class="old-help-para">						<a name="%3Aem"></a><code class="help-tag-right">:em</code>  <a name="%3Aemenu"></a><code class="help-tag">:emenu</code> <a name="E334"></a><code class="help-tag">E334</code> <a name="E335"></a><code class="help-tag">E335</code>
@@ -511,7 +510,8 @@ the <code>&lt;CR&gt;</code> key.  <a href="intro.html#%3C%3E">&lt;&gt;</a>)</div
 Tooltips &amp; Menu tips</div>
 <div class="old-help-para">See section <a href="usr_42.html#42.4">42.4</a> in the user manual.</div>
 <div class="old-help-para">							<a name="%3Atmenu"></a><code class="help-tag-right">:tmenu</code>
-:tm[enu] <code>{menupath}</code> <code>{rhs}</code>	Define a tip for a menu or tool.  <code>{only in<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+gui.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/gui.html%0D%0DContext%3A%0D%0D%60%60%60%0DSee%20section%20%7C42.4%7C%20in%20the%20user%20manual.%0A%0A%09%09%09%09%09%09%09%2A%3Atmenu%2A%0A%3Atm%5Benu%5D%20%7Bmenupath%7D%20%7Brhs%7D%09Define%20a%20tip%20for%20a%20menu%20or%20tool.%20%20%7Bonly%20in%0A%09%09%09%09X11%20and%20Win32%20GUI%7D%0A%0A%3Atm%5Benu%5D%20%5Bmenupath%5D%09%09List%20menu%20tips.%20%7Bonly%20in%20X11%20and%20Win32%20GUI%7D%0A%0D%60%60%60">X11 and Win32 GUI</a>}</code></div>
+:tm[enu] <code>{menupath}</code> <code>{rhs}</code>	Define a tip for a menu or tool.  {<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+gui.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/gui.html%0D%0DContext%3A%0D%0D%60%60%60%0DSee%20section%20%7C42.4%7C%20in%20the%20user%20manual.%0A%0A%09%09%09%09%09%09%09%2A%3Atmenu%2A%0A%3Atm%5Benu%5D%20%7Bmenupath%7D%20%7Brhs%7D%09Define%20a%20tip%20for%20a%20menu%20or%20tool.%20%20%7Bonly%20in%0A%09%09%09%09X11%20and%20Win32%20GUI%7D%0A%0A%3Atm%5Benu%5D%20%5Bmenupath%5D%09%09List%20menu%20tips.%20%7Bonly%20in%20X11%20and%20Win32%20GUI%7D%0D%60%60%60">only in</a>
+				X11 and Win32 GUI}</div>
 <div class="old-help-para">:tm[enu] [menupath]		List menu tips. <code>{only in X11 and Win32 GUI}</code></div>
 <div class="old-help-para">							<a name="%3Atunmenu"></a><code class="help-tag-right">:tunmenu</code>
 :tu[nmenu] <code>{menupath}</code>		Remove a tip for a menu or tool.
@@ -576,10 +576,10 @@ Menus							</a>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:31 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 1 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+gui.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/gui.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="       Nvim
+      parse_errors: 3 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+gui.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/gui.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="       Nvim
 		  VIM REFERENCE MANUAL    by Bram Moolenaar
                                       Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
  vim:tw=78:sw=4:ts=8:noet:ft=help:norl:">noise_lines: 4</span>

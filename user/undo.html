@@ -114,8 +114,8 @@ U			Undo all latest changes on one line, the line where
 to revert the text to how it was before each change.  You can also apply the
 changes again, getting back the text before the undo.</div>
 <div class="old-help-para">The "U" command is treated by undo/redo just like any other command.  Thus a
-"u" command undoes a "U" command and a 'CTRL-R' command redoes it again.  When
-mixing "U", "u" and 'CTRL-R' you will notice that the "U" command will
+"u" command undoes a "U" command and a '<code>CTRL-R</code>' command redoes it again.  When
+mixing "U", "u" and '<code>CTRL-R</code>' you will notice that the "U" command will
 restore the situation of a line to before the previous "U" command.  This may
 be confusing.  Try it out to get used to it.
 The "U" command will always mark the buffer as changed.  When "U" changes the
@@ -348,7 +348,7 @@ information you can use these commands:<pre>:let old_undolevels = &amp;undolevel
 :exe "normal a \&lt;BS&gt;\&lt;Esc&gt;"
 :let &amp;undolevels = old_undolevels
 :unlet old_undolevels</pre>
-Marks for the buffer ('a to 'z) are also saved and restored, together with the
+Marks for the buffer ('<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+undo.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/undo.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%3Alet%20%26undolevels%20%3D%20old_undolevels%0A%09%3Aunlet%20old_undolevels%0A%0AMarks%20for%20the%20buffer%20('a%20to%20'z)%20are%20also%20saved%20and%20restored%2C%20together%20with%20the%0Atext.%0A%0AWhen%20all%20changes%20have%20been%20undone%2C%20the%20buffer%20is%20not%20considered%20to%20be%20changed.%0D%60%60%60">a</a> to 'z) are also saved and restored, together with the
 text.</div>
 <div class="old-help-para">When all changes have been undone, the buffer is not considered to be changed.
 It is then possible to exit Vim with ":q" instead of ":q!".
@@ -402,10 +402,10 @@ first put, and repeat the put command for the second register.  Repeat the
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:32 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+undo.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/undo.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="      Nvim
+      parse_errors: 1 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+undo.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/undo.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="      Nvim
 		  VIM REFERENCE MANUAL    by Bram Moolenaar
                                       Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
  vim:tw=78:ts=8:noet:ft=help:norl:">noise_lines: 4</span>

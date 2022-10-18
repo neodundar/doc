@@ -201,7 +201,7 @@ CTRL-K <code>{char1}</code> <code>{char2}</code>					<a name="c_CTRL-K"></a><cod
 				the last delete or yank
 			'%'	the current file name
 			'#'	the alternate file name
-			'*'	the clipboard contents (X11: primary selection)
+			''	the clipboard contents (X11: primary selection)
 			'+'	the clipboard contents
 			'/'	the last search pattern
 			':'	the last command-line
@@ -454,8 +454,8 @@ CTRL-T		When <a href="options.html#'incsearch'">'incsearch'</a> is set, entering
 		Use <code>CTRL-G</code> to move to the next match.  Hint: on a regular
 		keyboard T is above G.</div>
 <div class="old-help-para">The <a href="options.html#'wildchar'">'wildchar'</a> option defaults to <code>&lt;Tab&gt;</code> (<code>CTRL-E</code> when in Vi compatible mode; in
-a previous version <code>&lt;Esc&gt;</code> was used).  In the pattern standard wildcards '*' and
-'?' are accepted when matching file names.  '*' matches any string, '?'
+a previous version <code>&lt;Esc&gt;</code> was used).  In the pattern standard wildcards '' and
+'?' are accepted when matching file names.  '' matches any string, '?'
 matches exactly one character.</div>
 <div class="old-help-para">When repeating <a href="options.html#'wildchar'">'wildchar'</a> or <code>CTRL-N</code> you cycle through the matches, eventually
 ending up back to what was typed.  If the first match is not what you wanted,
@@ -652,7 +652,7 @@ one(s) will be ignored.</div>
 	.		the current line			  <a name="%3A."></a><code class="help-tag-right">:.</code>
 	$		the last line in the file		  <a name="%3A%24"></a><code class="help-tag-right">:$</code>
 	%		equal to 1,$ (the entire file)		  <a name="%3A%25"></a><code class="help-tag-right">:%</code>
-	't		position of mark t (lowercase)		  <a name="%3A'"></a><code class="help-tag-right">:'</code>
+	'<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+cmdline.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/cmdline.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09.%09%09the%20current%20line%09%09%09%20%20%2A%3A.%2A%0A%09%24%09%09the%20last%20line%20in%20the%20file%09%09%20%20%2A%3A%24%2A%0A%09%25%09%09equal%20to%201%2C%24%20(the%20entire%20file)%09%09%20%20%2A%3A%25%2A%0A%09't%09%09position%20of%20mark%20t%20(lowercase)%09%09%20%20%2A%3A'%2A%0A%09'T%09%09position%20of%20mark%20T%20(uppercase)%3B%20when%20the%20mark%20is%20in%0A%09%09%09another%20file%20it%20cannot%20be%20used%20in%20a%20range%0A%09%2F%7Bpattern%7D%5B%2F%5D%09the%20next%20line%20where%20%7Bpattern%7D%20matches%09%20%20%2A%3A%2F%2A%0D%60%60%60">t</a>		position of mark t (lowercase)		  <a name="%3A'"></a><code class="help-tag-right">:'</code>
 	'T		position of mark T (uppercase); when the mark is in
 			another file it cannot be used in a range
 	/{pattern}[/]	the next line where <code>{pattern}</code> matches	  <a name="%3A%2F"></a><code class="help-tag-right">:/</code>
@@ -1055,7 +1055,7 @@ The character used for the pattern indicates the type of command-line:
 	?	backward search string
 	=	expression for "= <a href="eval.html#expr-register">expr-register</a>
 	@	string for <a href="builtin.html#input()">input()</a>
-<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+cmdline.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/cmdline.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%3F%09backward%20search%20string%0A%09%3D%09expression%20for%20%22%3D%20%7Cexpr-register%7C%0A%09%40%09string%20for%20%7Cinput()%7C%0A%09-%09text%20for%20%7C%3Ainsert%7C%20or%20%7C%3Aappend%7C%0A%0A%20vim%3Atw%3D78%3Ats%3D8%3Anoet%3Aft%3Dhelp%3Anorl%3A%0D%60%60%60">-	text for</a> <a href="insert.html#%3Ainsert">:insert</a> or <a href="insert.html#%3Aappend">:append</a></div>
+	-		text for <a href="insert.html#%3Ainsert">:insert</a> or <a href="insert.html#%3Aappend">:append</a></div>
 
   </div>
       <div class="col-narrow toc">
@@ -1089,7 +1089,7 @@ The character used for the pattern indicates the type of command-line:
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:31 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:36 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 1 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+cmdline.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/cmdline.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim

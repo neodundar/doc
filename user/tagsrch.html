@@ -128,8 +128,8 @@ below.</div>
 <code>CTRL-]</code> is the default telnet escape key.  When you type <code>CTRL-]</code> to jump to a
 tag, you will get the telnet prompt instead.  Most versions of telnet allow
 changing or disabling the default escape key.  See the telnet man page.  You
-cantelnet -E <code>{Hostname}</code>'  to disable the escape character, ortelnet -e
-<code>{EscapeCharacter}</code> <code>{Hostname}</code>'  to specify another escape character.  If
+can '<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+tagsrch.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/tagsrch.html%0D%0DContext%3A%0D%0D%60%60%60%0DCTRL-%5D%20is%20the%20default%20telnet%20escape%20key.%20%20When%20you%20type%20CTRL-%5D%20to%20jump%20to%20a%0Atag%2C%20you%20will%20get%20the%20telnet%20prompt%20instead.%20%20Most%20versions%20of%20telnet%20allow%0Achanging%20or%20disabling%20the%20default%20escape%20key.%20%20See%20the%20telnet%20man%20page.%20%20You%0Acan%20'telnet%20-E%20%7BHostname%7D'%20to%20disable%20the%20escape%20character%2C%20or%20'telnet%20-e%0A%7BEscapeCharacter%7D%20%7BHostname%7D'%20to%20specify%20another%20escape%20character.%20%20If%0Apossible%2C%20try%20to%20use%20%22ssh%22%20instead%20of%20%22telnet%22%20to%20avoid%20this%20problem.%0A%0D%60%60%60">telnet</a> -E <code>{Hostname}</code>' to disable the escape character, or '<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+tagsrch.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/tagsrch.html%0D%0DContext%3A%0D%0D%60%60%60%0DCTRL-%5D%20is%20the%20default%20telnet%20escape%20key.%20%20When%20you%20type%20CTRL-%5D%20to%20jump%20to%20a%0Atag%2C%20you%20will%20get%20the%20telnet%20prompt%20instead.%20%20Most%20versions%20of%20telnet%20allow%0Achanging%20or%20disabling%20the%20default%20escape%20key.%20%20See%20the%20telnet%20man%20page.%20%20You%0Acan%20'telnet%20-E%20%7BHostname%7D'%20to%20disable%20the%20escape%20character%2C%20or%20'telnet%20-e%0A%7BEscapeCharacter%7D%20%7BHostname%7D'%20to%20specify%20another%20escape%20character.%20%20If%0Apossible%2C%20try%20to%20use%20%22ssh%22%20instead%20of%20%22telnet%22%20to%20avoid%20this%20problem.%0A%0D%60%60%60">telnet</a> -e
+<code>{EscapeCharacter}</code> <code>{Hostname}</code>' to specify another escape character.  If
 possible, try to use "ssh" instead of "telnet" to avoid this problem.</div>
 <div class="old-help-para">							<a name="tag-priority"></a><code class="help-tag-right">tag-priority</code>
 When there are multiple matches for a tag, this priority is used:
@@ -398,7 +398,8 @@ is added to the command and on the <a href="options.html#'autowrite'">'autowrite
     no		yes	no    on  write current file, read other file, goto
 				  tag
     no		yes	no   off  fail
-<a name="_-"></a><h3 class="help-heading"></h3><div class="help-li" style=""> If the tag is in the current file, the command will always work.
+<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+tagsrch.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/tagsrch.html%0D%0DContext%3A%0D%0D%60%60%60%0D%20%20%20%20no%09%09yes%09no%20%20%20%20on%20%20write%20current%20file%2C%20read%20other%20file%2C%20goto%0A%09%09%09%09%20%20tag%0A%20%20%20%20no%09%09yes%09no%20%20%20off%20%20fail%0A-----------------------------------------------------------------------------%0A%0A-%20If%20the%20tag%20is%20in%20the%20current%20file%2C%20the%20command%20will%20always%20work.%0A-%20If%20the%20tag%20is%20in%20another%20file%20and%20the%20current%20file%20was%20not%20changed%2C%20the%0A%20%20other%20file%20will%20be%20made%20the%20current%20file%20and%20read%20into%20the%20buffer.%0D%60%60%60">-----------------------------------------------------------------------------</a></div>
+<div class="old-help-para"><div class="help-li" style=""> If the tag is in the current file, the command will always work.
 </div><div class="help-li" style=""> If the tag is in another file and the current file was not changed, the
   other file will be made the current file and read into the buffer.
 </div><div class="help-li" style=""> If the tag is in another file, the current file was changed and a ! is
@@ -519,7 +520,7 @@ ctags).</div>
 		with Vi, it ignores the following fields. Example:
 			APP	file	/^static int APP;$/;"	v
 		When <code>{tagaddress}</code> is not a line number or search pattern, then
-		<code>{term}</code> must be;".  Here the bar ends the command (excluding
+		<code>{term}</code> must be |<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+tagsrch.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/tagsrch.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09with%20Vi%2C%20it%20ignores%20the%20following%20fields.%20Example%3A%0A%09%09%09APP%09file%09%2F%5Estatic%20int%20APP%3B%24%2F%3B%22%09v%0A%09%09When%20%7Btagaddress%7D%20is%20not%20a%20line%20number%20or%20search%20pattern%2C%20then%0A%09%09%7Bterm%7D%20must%20be%20%7C%3B%22.%20%20Here%20the%20bar%20ends%20the%20command%20(excluding%0A%09%09the%20bar)%20and%20%3B%22%20is%20used%20to%20have%20Vi%20ignore%20the%20rest%20of%20the%0A%09%09line.%20%20Example%3A%0A%09%09%09APP%09file.c%09call%20cursor(3%2C%204)%7C%3B%22%09v%0D%60%60%60">;".</a>  Here the bar ends the command (excluding
 		the bar) and ;" is used to have Vi ignore the rest of the
 		line.  Example:
 			APP	file.c	call cursor(3, 4)|;"	v</div>
@@ -834,8 +835,6 @@ set tagfunc=TagFunc</pre></div>
 4. Tags details						</a>
 <div class="help-toc-h2"><a href="#_-yes-x-x-x-goto-tag">
     yes		 x	x     x	  goto tag</a></div>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
 </div><div class="help-toc-h1"><a href="#tags-file-format">
 5. Tags file format				</a>
 </div><div class="help-toc-h1"><a href="#include-search">
@@ -847,10 +846,10 @@ set tagfunc=TagFunc</pre></div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:32 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+tagsrch.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/tagsrch.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim
+      parse_errors: 4 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+tagsrch.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/tagsrch.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim
 		  VIM REFERENCE MANUAL    by Bram Moolenaar
                                       Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
  vim:tw=78:ts=8:noet:ft=help:norl:">noise_lines: 4</span>

@@ -292,7 +292,8 @@ The next time edit a SQL file the following scripts will be automatically
 loaded by Vim:<pre>ftplugin/sql.vim
 syntax/sqlinformix.vim
 indent/sql.vim</pre>
-<pre><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+ft_sql.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/ft_sql.html%0D%0DContext%3A%0D%0D%60%60%60%0D%20%20%20%20syntax%2Fsqlinformix.vim%0A%20%20%20%20indent%2Fsql.vim%0A%3E%0ANotice%20indent%2Fsqlinformix.sql%20was%20not%20loaded.%20%20There%20is%20no%20indent%20file%0Afor%20Informix%2C%20Vim%20loads%20the%20default%20files%20if%20the%20specified%20files%20does%20not%0Aexist.%0A%0D%60%60%60">Notice indent/sqlinformix.sql was not loaded.  There is no indent file</a></pre>
+<pre></pre>
+Notice indent/sqlinformix.sql was not loaded.  There is no indent file
 for Informix, Vim loads the default files if the specified files does not
 exist.</div>
 <div class="old-help-para"><h2 class="help-heading">3. Adding new SQL Dialects<span class="help-heading-tags">			<a name="sql-adding-dialects"></a><span class="help-tag">sql-adding-dialects</span></h2></div>
@@ -327,8 +328,8 @@ imap &lt;buffer&gt; &lt;C-C&gt;T &lt;C-\&gt;&lt;C-O&gt;:call sqlcomplete#Map('sq
 imap &lt;buffer&gt; &lt;C-C&gt;s &lt;C-\&gt;&lt;C-O&gt;:call sqlcomplete#Map('sqlStatement')&lt;CR&gt;&lt;C-X&gt;&lt;C-O&gt;</pre>
 The use of "&lt;C-C&gt;" can be user chosen by using the following in your <a href="starting.html#init.vim">init.vim</a>
 as it may not work properly on all platforms:<pre>let g:ftplugin_sql_omni_key = '&lt;C-C&gt;'</pre>
-<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+ft_sql.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/ft_sql.html%0D%0DContext%3A%0D%0D%60%60%60%0DThe%20use%20of%20%22%3CC-C%3E%22%20can%20be%20user%20chosen%20by%20using%20the%20following%20in%20your%20%7Cinit.vim%7C%0Aas%20it%20may%20not%20work%20properly%20on%20all%20platforms%3A%20%3E%0A%20%20%20%20let%20g%3Aftplugin_sql_omni_key%20%3D%20'%3CC-C%3E'%0A%3E%0AThe%20static%20maps%20(which%20are%20based%20on%20the%20syntax%20highlight%20groups)%20follow%20this%0Aformat%3A%20%3E%0A%20%20%20%20imap%20%3Cbuffer%3E%20%3CC-C%3Ek%20%3CC-%5C%3E%3CC-O%3E%3Acall%20sqlcomplete%23Map('sqlKeyword')%3CCR%3E%3CC-X%3E%3CC-O%3E%0A%20%20%20%20imap%20%3Cbuffer%3E%20%3CC-C%3Ek%20%3CC-%5C%3E%3CC-O%3E%3Acall%20sqlcomplete%23Map('sqlKeyword%5Cw%2A')%3CCR%3E%3CC-X%3E%3CC-O%3E%0D%60%60%60">&gt;
-The static maps</a> (which are based on the syntax highlight groups) follow this
+<pre></pre>
+The static maps (which are based on the syntax highlight groups) follow this
 format:<pre>imap &lt;buffer&gt; &lt;C-C&gt;k &lt;C-\&gt;&lt;C-O&gt;:call sqlcomplete#Map('sqlKeyword')&lt;CR&gt;&lt;C-X&gt;&lt;C-O&gt;
 imap &lt;buffer&gt; &lt;C-C&gt;k &lt;C-\&gt;&lt;C-O&gt;:call sqlcomplete#Map('sqlKeyword\w*')&lt;CR&gt;&lt;C-X&gt;&lt;C-O&gt;</pre>
 This command breaks down as:<pre>imap                   - Create an insert map
@@ -534,7 +535,8 @@ procedures stored within the database.</div>
 <div class="old-help-para">Similar to the table list, <code>&lt;C-C&gt;</code>v, will display a list of views in the
 database.</div>
 <div class="old-help-para">4.4 Completion Customization			<a name="sql-completion-customization"></a><code class="help-tag-right">sql-completion-customization</code>
-<a name="_-"></a><h3 class="help-heading"></h3>The SQL completion plugin can be customized through various options set in
+<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+ft_sql.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/ft_sql.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A%0A4.4%20Completion%20Customization%09%09%09%2Asql-completion-customization%2A%0A----------------------------%0A%0AThe%20SQL%20completion%20plugin%20can%20be%20customized%20through%20various%20options%20set%20in%0Ayour%20%7Cinit.vim%7C%3A%20%3E%0A%20%20%20%20omni_sql_no_default_maps%0D%60%60%60">----------------------------</a></div>
+<div class="old-help-para">The SQL completion plugin can be customized through various options set in
 your <a href="starting.html#init.vim">init.vim</a>:<pre>omni_sql_no_default_maps</pre>
 <div class="help-li" style=""> Default: This variable is not defined
 </div><div class="help-li" style=""> If this variable is defined, no maps are created for OMNI
@@ -585,7 +587,8 @@ omni_sql_precache_syntax_groups</pre>
 &gt;
 </div></div>
 <div class="old-help-para">4.5 SQL Maps					<a name="sql-completion-maps"></a><code class="help-tag-right">sql-completion-maps</code>
-<a name="_-"></a><h3 class="help-heading"></h3>The default SQL maps have been described in other sections of this document in
+<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+ft_sql.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/ft_sql.html%0D%0DContext%3A%0D%0D%60%60%60%0D%3E%0A%0A4.5%20SQL%20Maps%09%09%09%09%09%2Asql-completion-maps%2A%0A------------%0A%0AThe%20default%20SQL%20maps%20have%20been%20described%20in%20other%20sections%20of%20this%20document%20in%0Agreater%20detail.%20%20Here%20is%20a%20list%20of%20the%20maps%20with%20a%20brief%20description%20of%20each.%0A%0D%60%60%60">------------</a></div>
+<div class="old-help-para">The default SQL maps have been described in other sections of this document in
 greater detail.  Here is a list of the maps with a brief description of each.</div>
 <div class="old-help-para">Static Maps
 -----------
@@ -635,7 +638,8 @@ maps from the ftplugin/sql.vim in it using your own key strokes.  <code>&lt;C-C&
 chosen since it will work on both Windows andnix platforms.  On the windows
 platform you can also use <code>&lt;C-Space&gt;</code> or ALT keys.</div>
 <div class="old-help-para">4.6 Using with other filetypes			<a name="sql-completion-filetypes"></a><code class="help-tag-right">sql-completion-filetypes</code>
-<a name="_-"></a><h3 class="help-heading"></h3>Many times SQL can be used with different filetypes.  For example Perl, Java,
+<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+ft_sql.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/ft_sql.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A%0A4.6%20Using%20with%20other%20filetypes%09%09%09%2Asql-completion-filetypes%2A%0A------------------------------%0A%0AMany%20times%20SQL%20can%20be%20used%20with%20different%20filetypes.%20%20For%20example%20Perl%2C%20Java%2C%0APHP%2C%20Javascript%20can%20all%20interact%20with%20a%20database.%20%20Often%20you%20need%20both%20the%20SQL%0Acompletion%20and%20the%20completion%20capabilities%20for%20the%20current%20language%20you%20are%0D%60%60%60">------------------------------</a></div>
+<div class="old-help-para">Many times SQL can be used with different filetypes.  For example Perl, Java,
 PHP, Javascript can all interact with a database.  Often you need both the SQL
 completion and the completion capabilities for the current language you are
 editing.</div>
@@ -698,23 +702,17 @@ Dynamic mode populates the popups with data directly from a database.  In</a></d
 To take you through the various lists, simply enter insert mode, hit:</a></div>
 <div class="help-toc-h2"><a href="#_-to-take-advantage-of-the-dynamic-features-you-must-first-install-the">
 To take advantage of the dynamic features you must first install the</a></div>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
 <div class="help-toc-h2"><a href="#_-you-can-create-as-many-additional-key-maps-as-you-like.-generally,-the-maps">
 You can create as many additional key maps as you like.  Generally, the maps</a></div>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
 </div></div>
 </div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:31 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 2 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+ft_sql.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/ft_sql.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim
+      parse_errors: 3 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+ft_sql.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/ft_sql.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim
 vim:tw=78:ts=8:noet:ft=help:norl:">noise_lines: 2</span>
       </div>
     <div>

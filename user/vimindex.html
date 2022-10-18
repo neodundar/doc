@@ -93,7 +93,8 @@ to look for deleting something, use: "/delete".</div>
 For an overview of built-in functions see <a href="eval.html#functions">functions</a>.
 For a list of Vim variables see <a href="eval.html#vim-variable">vim-variable</a>.</div>
 <div class="old-help-para"><h2 class="help-heading">1. Insert mode<span class="help-heading-tags">						<a name="insert-index"></a><span class="help-tag">insert-index</span></h2></div>
-<div class="old-help-para"><div class="help-column_heading">tag		char		action in Insert mode</div><a name="_-"></a><h3 class="help-heading"></h3><a href="insert.html#i_CTRL-%40">i_CTRL-@</a>	<code>CTRL-@</code>		insert previously inserted text and stop
+<div class="old-help-para"><div class="help-column_heading">tag		char		action in Insert mode</div><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+index.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/vimindex.html%0D%0DContext%3A%0D%0D%60%60%60%0D1.%20Insert%20mode%09%09%09%09%09%09%2Ainsert-index%2A%0A%0Atag%09%09char%09%09action%20in%20Insert%20mode%09~%0A-----------------------------------------------------------------------%0A%0A%7Ci_CTRL-%40%7C%09CTRL-%40%09%09insert%20previously%20inserted%20text%20and%20stop%0A%09%09%09%09insert%0A%7Ci_CTRL-A%7C%09CTRL-A%09%09insert%20previously%20inserted%20text%0D%60%60%60">-----------------------------------------------------------------------</a></div>
+<div class="old-help-para"><a href="insert.html#i_CTRL-%40">i_CTRL-@</a>	<code>CTRL-@</code>		insert previously inserted text and stop
 				insert
 <a href="insert.html#i_CTRL-A">i_CTRL-A</a>	<code>CTRL-A</code>		insert previously inserted text
 <a href="insert.html#i_CTRL-C">i_CTRL-C</a>	<code>CTRL-C</code>		quit insert mode, without checking for
@@ -240,7 +241,8 @@ N	 a number entered before the command
 Nmove	 the text that is moved over with a <code>{motion}</code>
 SECTION	 a section that possibly starts with '}' instead of '{'</div>
 <div class="old-help-para">note: 1 = cursor movement command; 2 = can be undone/redone</div>
-<div class="old-help-para"><div class="help-column_heading">tag		char	      note action in Normal mode</div><a name="_-"></a><h3 class="help-heading"></h3>		<code>CTRL-@</code>		   not used
+<div class="old-help-para"><div class="help-column_heading">tag		char	      note action in Normal mode</div><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+index.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/vimindex.html%0D%0DContext%3A%0D%0D%60%60%60%0Dnote%3A%201%20%3D%20cursor%20movement%20command%3B%202%20%3D%20can%20be%20undone%2Fredone%0A%0Atag%09%09char%09%20%20%20%20%20%20note%20action%20in%20Normal%20mode%09~%0A------------------------------------------------------------------------------%0A%0A%09%09CTRL-%40%09%09%20%20%20not%20used%0A%7CCTRL-A%7C%09CTRL-A%09%092%20%20add%20N%20to%20number%20at%2Fafter%20cursor%0A%7CCTRL-B%7C%09CTRL-B%09%091%20%20scroll%20N%20screens%20Backwards%0D%60%60%60">------------------------------------------------------------------------------</a></div>
+<div class="old-help-para">		<code>CTRL-@</code>		   not used
 <a href="change.html#CTRL-A">CTRL-A</a>	<code>CTRL-A</code>		2  add N to number at/after cursor
 <a href="scroll.html#CTRL-B">CTRL-B</a>	<code>CTRL-B</code>		1  scroll N screens Backwards
 <a href="pattern.html#CTRL-C">CTRL-C</a>	<code>CTRL-C</code>		   interrupt current (search) command
@@ -299,7 +301,7 @@ SECTION	 a section that possibly starts with '}' instead of '{'</div>
 				   preprocessor directive.
 <a href="motion.html#N%25">N%</a>		<code>{count}</code>%	1  go to N percentage in the file
 <a href="change.html#%26">&amp;</a>		&amp;		2  repeat last :s
-<a href="motion.html#'">'</a>		'{a-zA-Z0-9}	1  cursor to the first CHAR on the line with
+|'|		'{a-zA-Z0-9}	1  cursor to the first CHAR on the line with
 				   mark <code>{a-zA-Z0-9}</code>
 <a href="motion.html#''">''</a>		''		1  cursor to the first CHAR of the line where
 				   the cursor was before the latest jump.
@@ -323,14 +325,14 @@ SECTION	 a section that possibly starts with '}' instead of '{'</div>
 				   start of the current paragraph
 <a href="motion.html#'%7D">'}</a>		'}		1  cursor to the first CHAR on the line of the
 				   end of the current paragraph
-<a href="motion.html#(">(</a>		(		1  cursor N sentences backward
+|(|		(		1  cursor N sentences backward
 <a href="motion.html#)">)</a>		)		1  cursor N sentences forward
 <a href="pattern.html#star">star</a>		*		1  search forward for the Nth occurrence of
 				   the ident under the cursor
 <a href="motion.html#%2B">+</a>		+		1  same as <code>&lt;CR&gt;</code>
 <a href="motion.html#%2C">,</a>		,		1  repeat latest f, t, F or T in opposite
 				   direction N times
-<a href="motion.html#-">-</a>		-		1  cursor to the first CHAR N lines higher
+<a href="motion.html#-">-</a>		-			1  cursor to the first CHAR N lines higher
 <a href="repeat.html#.">.</a>		.		2  repeat last change with count replaced with
 				   N
 <a href="pattern.html#%2F">/</a>		/{pattern}&lt;CR&gt;	1  search forward for the Nth occurrence of
@@ -413,17 +415,19 @@ SECTION	 a section that possibly starts with '}' instead of '{'</div>
 <a href="vimindex.html#%5D">]</a>		]{char}		   square bracket command (see <a href="vimindex.html#%5D">]</a> below)
 <a href="motion.html#%5E">^</a>		^		1  cursor to the first CHAR of the line
 <a href="motion.html#_">_</a>		_		1  cursor to the first CHAR N - 1 lines lower
-<a href="motion.html#%60">`</a>{a-zA-Z0-9}	1  cursor to the mark {a-zA-Z0-9}
-|(|	(		1  cursor to the start of the current sentence
-|)|)		1  cursor to the end of the current sentence
-|&lt;|&lt;		1  cursor to the start of the highlighted area
-|&gt;|&gt;		1  cursor to the end of the highlighted area
-|[|		`[		1  cursor to the start of last operated text				   or start of putted text
-<a href="motion.html#%60%5D">`]</a>		`]		1  cursor to the end of last operated text or				   end of putted text
+|<code>|</code><code>{a-zA-Z0-9}</code>	1  cursor to the mark <code>{a-zA-Z0-9}</code>
+<a href="motion.html#%60(">`(</a>(		1  cursor to the start of the current sentence
+<a href="motion.html#%60)">`)</a>)		1  cursor to the end of the current sentence
+<a href="motion.html#%60%3C">`&lt;</a>&lt;		1  cursor to the start of the highlighted area
+<a href="motion.html#%60%3E">`&gt;</a>&gt;		1  cursor to the end of the highlighted area
+<a href="motion.html#%60%5B">`[</a>[		1  cursor to the start of last operated text
+				   or start of putted text
+<a href="motion.html#%60%5D">`]</a>]		1  cursor to the end of last operated text or
+				   end of putted text
 <a href="motion.html#%60%60">``</a>		``		1  cursor to the position before latest jump
 <a href="motion.html#%60%7B">`{</a>{		1  cursor to the start of the current paragraph
-|}|			`}		1  cursor to the end of the current paragraph
-|a|		a		2  append text after the cursor N times
+<a href="motion.html#%60%7D">`}</a>}		1  cursor to the end of the current paragraph
+<a href="insert.html#a">a</a>		a		2  append text after the cursor N times
 <a href="motion.html#b">b</a>		b		1  cursor N words backward
 <a href="change.html#c">c</a>		["x]c{motion}	2  delete Nmove text [into register x] and
 				   start insert
@@ -468,13 +472,13 @@ SECTION	 a section that possibly starts with '}' instead of '{'</div>
 <a href="change.html#y">y</a>		["x]y{motion}	   yank Nmove text [into register x]
 <a href="change.html#yy">yy</a>		["x]yy		   yank N lines [into register x]
 <a href="vimindex.html#z">z</a>		z{char}		   commands starting with 'z', see <a href="vimindex.html#z">z</a> below
-<a href="motion.html#%7B">{</a>		{		1  cursor N paragraphs backward
-<a href="motion.html#bar">bar</a>		|			1  cursor to column N
-<a href="motion.html#%7D">}</a>		}		1  cursor N paragraphs forward
-<a href="change.html#~">~</a>		~		2  <a href="options.html#'tildeop'">'tildeop'</a> off: switch case of N characters
+|{|		{		1  cursor N paragraphs backward
+<a href="motion.html#bar">bar</a>		|		1  cursor to column N
+|}|		}		1  cursor N paragraphs forward
+|~|		~		2  <a href="options.html#'tildeop'">'tildeop'</a> off: switch case of N characters
 				   under cursor and move the cursor N
 				   characters to the right
-<a href="change.html#~">~</a>		~{motion}	   <a href="options.html#'tildeop'">'tildeop'</a> on: switch case of Nmove text
+|~|		~<code>{motion}</code>	   <a href="options.html#'tildeop'">'tildeop'</a> on: switch case of Nmove text
 <a href="motion.html#%3CC-End%3E">&lt;C-End&gt;</a>	<code>&lt;C-End&gt;</code>		1  same as "G"
 <a href="motion.html#%3CC-Home%3E">&lt;C-Home&gt;</a>	<code>&lt;C-Home&gt;</code>	1  same as "gg"
 <a href="motion.html#%3CC-Left%3E">&lt;C-Left&gt;</a>	<code>&lt;C-Left&gt;</code>	1  same as "b"
@@ -516,7 +520,8 @@ SECTION	 a section that possibly starts with '}' instead of '{'</div>
 <a name="%3CS-ScrollWheelRight%3E"></a><code class="help-tag">&lt;S-ScrollWheelRight&gt;</code>	<code>&lt;S-ScrollWheelRight&gt;</code>	move window one page right</div>
 <div class="old-help-para"><h2 class="help-heading">2.1 Text objects<span class="help-heading-tags">						<a name="objects"></a><span class="help-tag">objects</span></h2></div>
 <div class="old-help-para">These can be used after an operator or in Visual mode to select an object.</div>
-<div class="old-help-para"><div class="help-column_heading">tag		command		   action in op-pending and Visual mode</div><a name="_-"></a><h3 class="help-heading"></h3><a href="motion.html#v_aquote">v_aquote</a>	a"		   double quoted string
+<div class="old-help-para"><div class="help-column_heading">tag		command		   action in op-pending and Visual mode</div><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+index.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/vimindex.html%0D%0DContext%3A%0D%0D%60%60%60%0DThese%20can%20be%20used%20after%20an%20operator%20or%20in%20Visual%20mode%20to%20select%20an%20object.%0A%0Atag%09%09command%09%09%20%20%20action%20in%20op-pending%20and%20Visual%20mode%09~%0A------------------------------------------------------------------------------%0A%0A%7Cv_aquote%7C%09a%22%09%09%20%20%20double%20quoted%20string%0A%7Cv_a'%7C%09%09a'%09%09%20%20%20single%20quoted%20string%0A%7Cv_a(%7C%09%09a(%09%09%20%20%20same%20as%20ab%0D%60%60%60">------------------------------------------------------------------------------</a></div>
+<div class="old-help-para"><a href="motion.html#v_aquote">v_aquote</a>	a"		   double quoted string
 <a href="motion.html#v_a'">v_a'</a>		a'		   single quoted string
 <a href="motion.html#v_a(">v_a(</a>		a(		   same as ab
 <a href="motion.html#v_a)">v_a)</a>		a)		   same as ab
@@ -553,7 +558,8 @@ SECTION	 a section that possibly starts with '}' instead of '{'</div>
 <a href="motion.html#v_i%7B">v_i{</a>		i{		   same as iB
 <a href="motion.html#v_i%7D">v_i}</a>		i}		   same as iB</div>
 <div class="old-help-para"><h2 class="help-heading">2.2 Window commands<span class="help-heading-tags">						<a name="CTRL-W"></a><span class="help-tag">CTRL-W</span></h2></div>
-<div class="old-help-para"><div class="help-column_heading">tag		command		   action in Normal mode</div><a name="_-"></a><h3 class="help-heading"></h3><a href="windows.html#CTRL-W_CTRL-B">CTRL-W_CTRL-B</a>	<code>CTRL-W</code> <code>CTRL-B</code>	   same as "CTRL-W b"
+<div class="old-help-para"><div class="help-column_heading">tag		command		   action in Normal mode</div><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+index.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/vimindex.html%0D%0DContext%3A%0D%0D%60%60%60%0D2.2%20Window%20commands%09%09%09%09%09%09%2ACTRL-W%2A%0A%0Atag%09%09command%09%09%20%20%20action%20in%20Normal%20mode%09~%0A------------------------------------------------------------------------------%0A%0A%7CCTRL-W_CTRL-B%7C%09CTRL-W%20CTRL-B%09%20%20%20same%20as%20%22CTRL-W%20b%22%0A%7CCTRL-W_CTRL-C%7C%09CTRL-W%20CTRL-C%09%20%20%20same%20as%20%22CTRL-W%20c%22%0A%7CCTRL-W_CTRL-D%7C%09CTRL-W%20CTRL-D%09%20%20%20same%20as%20%22CTRL-W%20d%22%0D%60%60%60">------------------------------------------------------------------------------</a></div>
+<div class="old-help-para"><a href="windows.html#CTRL-W_CTRL-B">CTRL-W_CTRL-B</a>	<code>CTRL-W</code> <code>CTRL-B</code>	   same as "CTRL-W b"
 <a href="windows.html#CTRL-W_CTRL-C">CTRL-W_CTRL-C</a>	<code>CTRL-W</code> <code>CTRL-C</code>	   same as "CTRL-W c"
 <a href="tagsrch.html#CTRL-W_CTRL-D">CTRL-W_CTRL-D</a>	<code>CTRL-W</code> <code>CTRL-D</code>	   same as "CTRL-W d"
 <a href="windows.html#CTRL-W_CTRL-F">CTRL-W_CTRL-F</a>	<code>CTRL-W</code> <code>CTRL-F</code>	   same as "CTRL-W f"
@@ -578,7 +584,7 @@ SECTION	 a section that possibly starts with '}' instead of '{'</div>
 <a href="windows.html#CTRL-W_CTRL-%5E">CTRL-W_CTRL-^</a>	<code>CTRL-W</code> <code>CTRL-^</code>	   same as "CTRL-W ^"
 <a href="windows.html#CTRL-W_CTRL-_">CTRL-W_CTRL-_</a>	<code>CTRL-W</code> <code>CTRL-_</code>	   same as "CTRL-W _"
 <a href="windows.html#CTRL-W_%2B">CTRL-W_+</a>	<code>CTRL-W</code> +	   increase current window height N lines
-<a href="windows.html#CTRL-W_-">CTRL-W_-</a>	<code>CTRL-W</code> -	   decrease current window height N lines
+<a href="windows.html#CTRL-W_-">CTRL-W_-</a>	<code>CTRL-W</code> -		   decrease current window height N lines
 <a href="windows.html#CTRL-W_%3C">CTRL-W_&lt;</a>	<code>CTRL-W</code> &lt;	   decrease current window width N columns
 <a href="windows.html#CTRL-W_%3D">CTRL-W_=</a>	<code>CTRL-W</code> =	   make all windows the same height &amp; width
 <a href="windows.html#CTRL-W_%3E">CTRL-W_&gt;</a>	<code>CTRL-W</code> &gt;	   increase current window width N columns
@@ -639,14 +645,15 @@ SECTION	 a section that possibly starts with '}' instead of '{'</div>
 <a href="windows.html#CTRL-W_x">CTRL-W_x</a>	<code>CTRL-W</code> x	   exchange current window with window N
 				   (default: next window)
 <a href="windows.html#CTRL-W_z">CTRL-W_z</a>	<code>CTRL-W</code> z	   close preview window
-<a href="windows.html#CTRL-W_bar">CTRL-W_bar</a>	<code>CTRL-W</code> |		   set window width to N columns
+<a href="windows.html#CTRL-W_bar">CTRL-W_bar</a>	<code>CTRL-W</code> |	   set window width to N columns
 <a href="windows.html#CTRL-W_%7D">CTRL-W_}</a>	<code>CTRL-W</code> }	   show tag under cursor in preview window
 <a href="windows.html#CTRL-W_%3CDown%3E">CTRL-W_&lt;Down&gt;</a>	<code>CTRL-W</code> <code>&lt;Down&gt;</code>	   same as "CTRL-W j"
 <a href="windows.html#CTRL-W_%3CUp%3E">CTRL-W_&lt;Up&gt;</a>	<code>CTRL-W</code> <code>&lt;Up&gt;</code>	   same as "CTRL-W k"
 <a href="windows.html#CTRL-W_%3CLeft%3E">CTRL-W_&lt;Left&gt;</a>	<code>CTRL-W</code> <code>&lt;Left&gt;</code>	   same as "CTRL-W h"
 <a href="windows.html#CTRL-W_%3CRight%3E">CTRL-W_&lt;Right&gt;</a> <code>CTRL-W</code> <code>&lt;Right&gt;</code>	   same as "CTRL-W l"</div>
 <div class="old-help-para"><h2 class="help-heading">2.3 Square bracket commands<span class="help-heading-tags">					<a name="%5B"></a><span class="help-tag">[</span> <a name="%5D"></a><span class="help-tag">]</span></span></h2></div>
-<div class="old-help-para"><div class="help-column_heading">tag		char	      note action in Normal mode</div><a name="_-"></a><h3 class="help-heading"></h3><a href="tagsrch.html#%5B_CTRL-D">[_CTRL-D</a>	[ <code>CTRL-D</code>	   jump to first #define found in current and
+<div class="old-help-para"><div class="help-column_heading">tag		char	      note action in Normal mode</div><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+index.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/vimindex.html%0D%0DContext%3A%0D%0D%60%60%60%0D2.3%20Square%20bracket%20commands%09%09%09%09%09%2A%5B%2A%20%2A%5D%2A%0A%0Atag%09%09char%09%20%20%20%20%20%20note%20action%20in%20Normal%20mode%09~%0A------------------------------------------------------------------------------%0A%0A%7C%5B_CTRL-D%7C%09%5B%20CTRL-D%09%20%20%20jump%20to%20first%20%23define%20found%20in%20current%20and%0A%09%09%09%09%20%20%20included%20files%20matching%20the%20word%20under%20the%0A%09%09%09%09%20%20%20cursor%2C%20start%20searching%20at%20beginning%20of%0D%60%60%60">------------------------------------------------------------------------------</a></div>
+<div class="old-help-para"><a href="tagsrch.html#%5B_CTRL-D">[_CTRL-D</a>	[ <code>CTRL-D</code>	   jump to first #define found in current and
 				   included files matching the word under the
 				   cursor, start searching at beginning of
 				   current file
@@ -730,7 +737,8 @@ SECTION	 a section that possibly starts with '}' instead of '{'</div>
 <a href="motion.html#%5D%7D">]}</a>		]}		1  cursor N times forward to unmatched '}'
 <a href="change.html#%5D%3CMiddleMouse%3E">]&lt;MiddleMouse&gt;</a> ]&lt;MiddleMouse&gt;	2  same as "]p"</div>
 <div class="old-help-para"><h2 class="help-heading">2.4 Commands starting with 'g'<span class="help-heading-tags">						<a name="g"></a><span class="help-tag">g</span></h2></div>
-<div class="old-help-para"><div class="help-column_heading">tag		char	      note action in Normal mode</div><a name="_-"></a><h3 class="help-heading"></h3>g_CTRL-A	g <code>CTRL-A</code>	   dump a memory profile
+<div class="old-help-para"><div class="help-column_heading">tag		char	      note action in Normal mode</div><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+index.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/vimindex.html%0D%0DContext%3A%0D%0D%60%60%60%0D2.4%20Commands%20starting%20with%20'g'%09%09%09%09%09%09%2Ag%2A%0A%0Atag%09%09char%09%20%20%20%20%20%20note%20action%20in%20Normal%20mode%09~%0A------------------------------------------------------------------------------%0A%0Ag_CTRL-A%09g%20CTRL-A%09%20%20%20dump%20a%20memory%20profile%0A%7Cg_CTRL-G%7C%09g%20CTRL-G%09%20%20%20show%20information%20about%20current%20cursor%0A%09%09%09%09%20%20%20position%0D%60%60%60">------------------------------------------------------------------------------</a></div>
+<div class="old-help-para">g_CTRL-A	g <code>CTRL-A</code>	   dump a memory profile
 <a href="editing.html#g_CTRL-G">g_CTRL-G</a>	g <code>CTRL-G</code>	   show information about current cursor
 				   position
 <a href="visual.html#g_CTRL-H">g_CTRL-H</a>	g <code>CTRL-H</code>	   start Select block mode
@@ -741,8 +749,8 @@ SECTION	 a section that possibly starts with '}' instead of '{'</div>
 				   when <a href="options.html#'wrap'">'wrap'</a> on go to the rightmost character
 				   of the current screen line
 <a href="change.html#g%26">g&amp;</a>		g&amp;		2  repeat last ":s" on all lines
-<a href="motion.html#g'">g'</a>		g'{mark}	1  like <a href="motion.html#'">'</a> but without changing the jumplist
-<a href="motion.html#g%60">g`</a>		g`{mark}	1  like <a href="motion.html#%60">`</a> but without changing the jumplist
+<a href="motion.html#g'">g'</a>		g'{mark}	1  like |'| but without changing the jumplist
+<a href="motion.html#g%60">g`</a>		g`{mark}	1  like || but without changing the jumplist
 <a href="pattern.html#gstar">gstar</a>		g*		1  like "*", but without using "\&lt;" and "\&gt;"
 <a href="undo.html#g%2B">g+</a>		g+		   go to newer text state N times
 <a href="motion.html#g%2C">g,</a>		g,		1  go to N newer position in change list
@@ -828,7 +836,8 @@ SECTION	 a section that possibly starts with '}' instead of '{'</div>
 <a href="tabpage.html#g%3CTab%3E">g&lt;Tab&gt;</a>	g&lt;Tab&gt;		   go to last accessed tab page
 <a href="motion.html#g%3CUp%3E">g&lt;Up&gt;</a>		g&lt;Up&gt;		1  same as "gk"</div>
 <div class="old-help-para"><h2 class="help-heading">2.5 Commands starting with 'z'<span class="help-heading-tags">						<a name="z"></a><span class="help-tag">z</span></h2></div>
-<div class="old-help-para"><div class="help-column_heading">tag		char	      note action in Normal mode</div><a name="_-"></a><h3 class="help-heading"></h3><a href="scroll.html#z%3CCR%3E">z&lt;CR&gt;</a>		z&lt;CR&gt;		   redraw, cursor line to top of window,
+<div class="old-help-para"><div class="help-column_heading">tag		char	      note action in Normal mode</div><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+index.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/vimindex.html%0D%0DContext%3A%0D%0D%60%60%60%0D2.5%20Commands%20starting%20with%20'z'%09%09%09%09%09%09%2Az%2A%0A%0Atag%09%09char%09%20%20%20%20%20%20note%20action%20in%20Normal%20mode%09~%0A------------------------------------------------------------------------------%0A%0A%7Cz%3CCR%3E%7C%09%09z%3CCR%3E%09%09%20%20%20redraw%2C%20cursor%20line%20to%20top%20of%20window%2C%0A%09%09%09%09%20%20%20cursor%20on%20first%20non-blank%0A%7CzN%3CCR%3E%7C%09z%7Bheight%7D%3CCR%3E%09%20%20%20redraw%2C%20make%20window%20%7Bheight%7D%20lines%20high%0D%60%60%60">------------------------------------------------------------------------------</a></div>
+<div class="old-help-para"><a href="scroll.html#z%3CCR%3E">z&lt;CR&gt;</a>		z&lt;CR&gt;		   redraw, cursor line to top of window,
 				   cursor on first non-blank
 <a href="scroll.html#zN%3CCR%3E">zN&lt;CR&gt;</a>	z{height}&lt;CR&gt;	   redraw, make window <code>{height}</code> lines high
 <a href="scroll.html#z%2B">z+</a>		z+		   cursor on line N (default line below
@@ -896,13 +905,15 @@ SECTION	 a section that possibly starts with '}' instead of '{'</div>
 <a href="scroll.html#z%3CRight%3E">z&lt;Right&gt;</a>	z&lt;Right&gt;	   same as "zl"</div>
 <div class="old-help-para"><h2 class="help-heading">2.6 Operator-pending mode<span class="help-heading-tags">			<a name="operator-pending-index"></a><span class="help-tag">operator-pending-index</span></h2></div>
 <div class="old-help-para">These can be used after an operator, but before a <code>{motion}</code> has been entered.</div>
-<div class="old-help-para"><div class="help-column_heading">tag		char		action in Operator-pending mode</div><a name="_-"></a><h3 class="help-heading"></h3><a href="motion.html#o_v">o_v</a>		v		force operator to work charwise
+<div class="old-help-para"><div class="help-column_heading">tag		char		action in Operator-pending mode</div><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+index.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/vimindex.html%0D%0DContext%3A%0D%0D%60%60%60%0DThese%20can%20be%20used%20after%20an%20operator%2C%20but%20before%20a%20%7Bmotion%7D%20has%20been%20entered.%0A%0Atag%09%09char%09%09action%20in%20Operator-pending%20mode%09~%0A-----------------------------------------------------------------------%0A%0A%7Co_v%7C%09%09v%09%09force%20operator%20to%20work%20charwise%0A%7Co_V%7C%09%09V%09%09force%20operator%20to%20work%20linewise%0A%7Co_CTRL-V%7C%09CTRL-V%09%09force%20operator%20to%20work%20blockwise%0D%60%60%60">-----------------------------------------------------------------------</a></div>
+<div class="old-help-para"><a href="motion.html#o_v">o_v</a>		v		force operator to work charwise
 <a href="motion.html#o_V">o_V</a>		V		force operator to work linewise
 <a href="motion.html#o_CTRL-V">o_CTRL-V</a>	<code>CTRL-V</code>		force operator to work blockwise</div>
 <div class="old-help-para"><h2 class="help-heading">3. Visual mode<span class="help-heading-tags">						<a name="visual-index"></a><span class="help-tag">visual-index</span></h2></div>
 <div class="old-help-para">Most commands in Visual mode are the same as in Normal mode.  The ones listed
 here are those that are different.</div>
-<div class="old-help-para"><div class="help-column_heading">tag		command	      note action in Visual mode</div><a name="_-"></a><h3 class="help-heading"></h3><a href="intro.html#v_CTRL-%5C_CTRL-N">v_CTRL-\_CTRL-N</a> <code>CTRL-\</code> <code>CTRL-N</code>	   stop Visual mode
+<div class="old-help-para"><div class="help-column_heading">tag		command	      note action in Visual mode</div><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+index.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/vimindex.html%0D%0DContext%3A%0D%0D%60%60%60%0Dhere%20are%20those%20that%20are%20different.%0A%0Atag%09%09command%09%20%20%20%20%20%20note%20action%20in%20Visual%20mode%09~%0A------------------------------------------------------------------------------%0A%0A%7Cv_CTRL-%5C_CTRL-N%7C%20CTRL-%5C%20CTRL-N%09%20%20%20stop%20Visual%20mode%0A%7Cv_CTRL-%5C_CTRL-G%7C%20CTRL-%5C%20CTRL-G%09%20%20%20go%20to%20Normal%20mode%0A%7Cv_CTRL-A%7C%09CTRL-A%09%092%20%20add%20N%20to%20number%20in%20highlighted%20text%0D%60%60%60">------------------------------------------------------------------------------</a></div>
+<div class="old-help-para"><a href="intro.html#v_CTRL-%5C_CTRL-N">v_CTRL-\_CTRL-N</a> <code>CTRL-\</code> <code>CTRL-N</code>	   stop Visual mode
 <a href="intro.html#v_CTRL-%5C_CTRL-G">v_CTRL-\_CTRL-G</a> <code>CTRL-\</code> <code>CTRL-G</code>	   go to Normal mode
 <a href="change.html#v_CTRL-A">v_CTRL-A</a>	<code>CTRL-A</code>		2  add N to number in highlighted text
 <a href="visual.html#v_CTRL-C">v_CTRL-C</a>	<code>CTRL-C</code>		   stop Visual mode
@@ -1016,7 +1027,8 @@ here are those that are different.</div>
 Normal characters are inserted at the current cursor position.
 "Completion" below refers to context-sensitive completion.  It will complete
 file names, tags, commands etc. as appropriate.</div>
-<div class="old-help-para"><div class="help-column_heading">tag		command		action in Command-line editing mode</div><a name="_-"></a><h3 class="help-heading"></h3>		<code>CTRL-@</code>		not used
+<div class="old-help-para"><div class="help-column_heading">tag		command		action in Command-line editing mode</div><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+index.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/vimindex.html%0D%0DContext%3A%0D%0D%60%60%60%0Dfile%20names%2C%20tags%2C%20commands%20etc.%20as%20appropriate.%0A%0Atag%09%09command%09%09action%20in%20Command-line%20editing%20mode%09~%0A------------------------------------------------------------------------------%0A%0A%09%09CTRL-%40%09%09not%20used%0A%7Cc_CTRL-A%7C%09CTRL-A%09%09do%20completion%20on%20the%20pattern%20in%20front%20of%20the%0A%09%09%09%09cursor%20and%20insert%20all%20matches%0D%60%60%60">------------------------------------------------------------------------------</a></div>
+<div class="old-help-para">		<code>CTRL-@</code>		not used
 <a href="cmdline.html#c_CTRL-A">c_CTRL-A</a>	<code>CTRL-A</code>		do completion on the pattern in front of the
 				cursor and insert all matches
 <a href="cmdline.html#c_CTRL-B">c_CTRL-B</a>	<code>CTRL-B</code>		cursor to begin of command-line
@@ -1114,7 +1126,8 @@ to terminal mode.</div>
 <div class="old-help-para">This is a brief but complete listing of all the ":" commands, without
 mentioning any arguments.  The optional part of the command name is inside [].
 The commands are sorted on the non-optional part of their name.</div>
-<div class="old-help-para"><div class="help-column_heading">tag		command		action</div><a name="_-"></a><h3 class="help-heading"></h3><a href="cmdline.html#%3A">:</a>		:		nothing
+<div class="old-help-para"><div class="help-column_heading">tag		command		action</div><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+index.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/vimindex.html%0D%0DContext%3A%0D%0D%60%60%60%0DThe%20commands%20are%20sorted%20on%20the%20non-optional%20part%20of%20their%20name.%0A%0Atag%09%09command%09%09action%20~%0A------------------------------------------------------------------------------%0A%0A%7C%3A%7C%09%09%3A%09%09nothing%0A%7C%3Arange%7C%09%3A%7Brange%7D%09go%20to%20last%20line%20in%20%7Brange%7D%0A%7C%3A%21%7C%09%09%3A%21%09%09filter%20lines%20or%20execute%20an%20external%20command%0D%60%60%60">------------------------------------------------------------------------------</a></div>
+<div class="old-help-para"><a href="cmdline.html#%3A">:</a>		:		nothing
 <a href="cmdline.html#%3Arange">:range</a>	:{range}	go to last line in <code>{range}</code>
 <a href="various.html#%3A%21">:!</a>		:!		filter lines or execute an external command
 <a href="various.html#%3A%21%21">:!!</a>		:!!		repeat last ":!" command
@@ -1701,59 +1714,37 @@ The commands are sorted on the non-optional part of their name.</div>
       <hr/>
   <div class="help-toc-h1"><a href="#insert-index">
 1. Insert mode						</a>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
 </div><div class="help-toc-h1"><a href="#normal-index">
 2. Normal mode						</a>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
 </div><div class="help-toc-h1"><a href="#objects">
 2.1 Text objects						</a>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
 </div><div class="help-toc-h1"><a href="#CTRL-W">
 2.2 Window commands						</a>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
 </div><div class="help-toc-h1"><a href="#%5B">
 2.3 Square bracket commands					</a>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
 </div><div class="help-toc-h1"><a href="#g">
 2.4 Commands starting with 'g'						</a>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
 </div><div class="help-toc-h1"><a href="#z">
 2.5 Commands starting with 'z'						</a>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
 </div><div class="help-toc-h1"><a href="#operator-pending-index">
 2.6 Operator-pending mode			</a>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
 </div><div class="help-toc-h1"><a href="#visual-index">
 3. Visual mode						</a>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
 </div><div class="help-toc-h1"><a href="#ex-edit-index">
 4. Command-line editing					</a>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
 </div><div class="help-toc-h1"><a href="#terminal-mode-index">
 5. Terminal mode				</a>
 </div><div class="help-toc-h1"><a href="#ex-commands">
 6. EX commands				</a>
-<div class="help-toc-h2"><a href="#_-">
-</a></div>
 </div></div>
 </div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:31 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+index.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/vimindex.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="     Nvim
+      parse_errors: 11 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+index.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/vimindex.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="     Nvim
 		  VIM REFERENCE MANUAL    by Bram Moolenaar
                                       Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
  vim:tw=78:ts=8:noet:ft=help:norl:">noise_lines: 4</span>

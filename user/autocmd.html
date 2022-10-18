@@ -568,11 +568,13 @@ ExitPre				When using <code>:quit</code>, <code>:wq</code> in a way it makes
 				See also <a href="autocmd.html#QuitPre">QuitPre</a>, <a href="autocmd.html#WinClosed">WinClosed</a>.
 							<a name="FileAppendCmd"></a><code class="help-tag-right">FileAppendCmd</code>
 FileAppendCmd			Before appending to a file.  Should do the
-				appending to the file.  Use the '[ and ']				marks for the range of lines. <a href="autocmd.html#Cmd-event">Cmd-event</a>
+				appending to the file.  Use the '[ and ']
+				marks for the range of lines. <a href="autocmd.html#Cmd-event">Cmd-event</a>
 							<a name="FileAppendPost"></a><code class="help-tag-right">FileAppendPost</code>
 FileAppendPost			After appending to a file.
 							<a name="FileAppendPre"></a><code class="help-tag-right">FileAppendPre</code>
-FileAppendPre			Before appending to a file.  Use the '[ and ']				marks for the range of lines.
+FileAppendPre			Before appending to a file.  Use the '[ and ']
+				marks for the range of lines.
 							<a name="FileChangedRO"></a><code class="help-tag-right">FileChangedRO</code>
 FileChangedRO			Before making the first change to a read-only
 				file.  Can be used to checkout the file from
@@ -637,7 +639,8 @@ FileType			When the <a href="options.html#'filetype'">'filetype'</a> option has 
 FileWriteCmd			Before writing to a file, when not writing the
 				whole buffer.  Should do the writing to the
 				file.  Should not change the buffer.  Use the
-				'[ and '] marks for the range of lines.				<a href="autocmd.html#Cmd-event">Cmd-event</a>
+				'[ and '] marks for the range of lines.
+				<a href="autocmd.html#Cmd-event">Cmd-event</a>
 							<a name="FileWritePost"></a><code class="help-tag-right">FileWritePost</code>
 FileWritePost			After writing to a file, when not writing the
 				whole buffer.
@@ -1116,7 +1119,7 @@ Set the <a href="options.html#'cindent'">'cindent'</a> option for C files in the
 :autocmd BufRead /tmp/*.c        set ts=5</pre>
 If you have a link from "/tmp/test.c" to "/home/nobody/vim/src/test.c", and
 you start editing "/tmp/test.c", this autocommand will match.</div>
-<div class="old-help-para">Note:  To match part of a path, but not from the root directory, use a '*' as
+<div class="old-help-para">Note:  To match part of a path, but not from the root directory, use a '' as
 the first character.  Example:<pre>:autocmd BufRead */doc/*.txt        set tw=78</pre>
 This autocommand will for example be executed for "/tmp/doc/xx.txt" and
 "/usr/home/piet/doc/yy.txt".  The number of directories does not matter here.</div>
@@ -1133,8 +1136,8 @@ The environment variable is expanded when the autocommand is defined, not when
 the autocommand is executed.  This is different from the command!</div>
 <div class="old-help-para">							<a name="file-pattern"></a><code class="help-tag-right">file-pattern</code>
 The pattern is interpreted like mostly used in file names:
-	*	matches any sequence of characters; Unusual: includes path
-		separators
+	*	matches any sequence of characters; Unusual: includes path</div>
+<div class="old-help-para">		separators
 	?	matches any single character
 	\?	matches a '?'
 	.	matches a '.'
@@ -1320,8 +1323,8 @@ which the lines are to be written.</div>
   the new lines will be inserted.
 </div><div class="help-li" style=""> Before theReadPost event the '[ mark is set to the first line that was
   just read, the '] mark to the last line.
-</div><div class="help-li" style=""> Before executing the
- *WriteCmd, *WritePre and *AppendPre autocommands the '[  mark is set to the first line that will be written, the '] mark to the last
+</div><div class="help-li" style=""> Before executing the *WriteCmd, *WritePre and *AppendPre autocommands the '[
+  mark is set to the first line that will be written, the '] mark to the last
   line.
 Careful: '[ and '] change when using commands that change the buffer.
 </div></div>
@@ -1421,7 +1424,7 @@ of the file for this to work.  Vim replaces &lt;date time&gt; (and anything in t
 same line after it) with the current date and time.  Explanation:
 	ks		mark current position with mark 's'
 	call LastMod()  call the LastMod() function to do the work
-	's		return the cursor to the old position
+	'<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+autocmd.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/autocmd.html%0D%0DContext%3A%0D%0D%60%60%60%0Dsame%20line%20after%20it)%20with%20the%20current%20date%20and%20time.%20%20Explanation%3A%0A%09ks%09%09mark%20current%20position%20with%20mark%20's'%0A%09call%20LastMod()%20%20call%20the%20LastMod()%20function%20to%20do%20the%20work%0A%09's%09%09return%20the%20cursor%20to%20the%20old%20position%0AThe%20LastMod()%20function%20checks%20if%20the%20file%20is%20shorter%20than%2020%20lines%2C%20and%20then%0Auses%20the%20%22%3Ag%22%20command%20to%20find%20lines%20that%20contain%20%22Last%20modified%3A%20%22.%20%20For%20those%0Alines%20the%20%22%3As%22%20command%20is%20executed%20to%20replace%20the%20existing%20date%20with%20the%0D%60%60%60">s</a>		return the cursor to the old position
 The LastMod() function checks if the file is shorter than 20 lines, and then
 uses the ":g" command to find lines that contain "Last modified: ".  For those
 lines the ":s" command is executed to replace the existing date with the
@@ -1515,10 +1518,10 @@ This specifically applies to <a href="autocmd.html#CursorMoved">CursorMoved</a> 
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:31 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:36 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+autocmd.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/autocmd.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim
+      parse_errors: 1 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+autocmd.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/autocmd.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim
 		  VIM REFERENCE MANUAL    by Bram Moolenaar
 				      Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
  vim:tw=78:ts=8:noet:ft=help:norl:">noise_lines: 4</span>

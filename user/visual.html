@@ -393,10 +393,10 @@ it.  In a future release ":" may work on partial lines.</div>
 need to remove the 'B' flag from <a href="options.html#'cpoptions'">'cpoptions'</a>)</div>
 <div class="old-help-para">What this does is:
 <code>&lt;Esc&gt;</code>		stop Visual mode
-`&gt;		go to the end of the Visual area</div>
-<div class="old-help-para">a&lt;CR&gt;&lt;Esc&gt;	break the line after the Visual area
-`&lt;		jump to the start of the Visual area</div>
-<div class="old-help-para">i&lt;CR&gt;&lt;Esc&gt;	break the line before the Visual area
+&gt;		go to the end of the Visual area
+a&lt;CR&gt;&lt;Esc&gt;	break the line after the Visual area
+&lt;		jump to the start of the Visual area
+i&lt;CR&gt;&lt;Esc&gt;	break the line before the Visual area
 !!date&lt;CR&gt;	filter the Visual text through date
 kJJ		Join the lines back together</div>
 <div class="old-help-para">							<a name="visual-search"></a><code class="help-tag-right">visual-search</code>
@@ -404,7 +404,7 @@ Here is an idea for a mapping that makes it possible to do a search for the
 selected text:<pre>:vmap X y/&lt;C-R&gt;"&lt;CR&gt;</pre>
 (In the &lt;&gt; notation <a href="intro.html#%3C%3E">&lt;&gt;</a>, when typing it you should type it literally; you
 need to remove the 'B' flag from <a href="options.html#'cpoptions'">'cpoptions'</a>)</div>
-<div class="old-help-para">Note that special characters (like '.' and '*') will cause problems.</div>
+<div class="old-help-para">Note that special characters (like '.' and '') will cause problems.</div>
 <div class="old-help-para">Visual-block Examples					<a name="blockwise-examples"></a><code class="help-tag-right">blockwise-examples</code>
 With the following text, I will indicate the commands to produce the block and
 the results below.  In all cases, the cursor begins on the 'a' in the first
@@ -543,7 +543,7 @@ g <code>CTRL-H</code>		Start Select mode, blockwise.  This is like <code>CTRL-V<
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 06:32 from <code><a href="https://github.com/neovim/neovim/commit/bd7ca10fdd762f8846dc0ef9db0a723bb8f3610a">bd7ca10</a></code>
+        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+visual.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/visual.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim
