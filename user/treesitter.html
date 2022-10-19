@@ -336,6 +336,57 @@ instance, to highlight comments differently per language:<pre>
 hi @comment.c guifg=Blue
 hi @comment.lua @guifg=DarkBlue
 hi link @comment.doc.java String</pre></div>
+<div class="old-help-para">The following captures are linked by default to standard <a href="syntax.html#group-name">group-name</a>s:
+<pre>@text.literal      Comment
+@text.reference    Identifier
+@text.title        Title
+@text.uri          Underlined
+@text.underline    Underlined
+@text.todo         Todo
+
+@comment           Comment
+@punctuation       Delimiter
+
+@constant          Constant
+@constant.builtin  Special
+@constant.macro    Define
+@define            Define
+@macro             Macro
+@string            String
+@string.escape     SpecialChar
+@string.special    SpecialChar
+@character         Character
+@character.special SpecialChar
+@number            Number
+@boolean           Boolean
+@float             Float
+
+@function          Function
+@function.builtin  Special
+@function.macro    Macro
+@parameter         Identifier
+@method            Function
+@field             Identifier
+@property          Identifier
+@constructor       Special
+
+@conditional       Conditional
+@repeat            Repeat
+@label             Label
+@operator          Operator
+@keyword           Keyword
+@exception         Exception
+
+@variable          Identifier
+@type              Type
+@type.definition   Typedef
+@storageclass      StorageClass
+@structure         Structure
+@namespace         Identifier
+@include           Include
+@preproc           PreProc
+@debug             Debug
+@tag               Tag</pre></div>
 <div class="old-help-para">                                                  <a name="treesitter-highlight-spell"></a><code class="help-tag-right">treesitter-highlight-spell</code>
 The special <code>@spell</code> capture can be used to indicate that a node should be
 spell checked by Nvim's builtin <a href="spell.html#spell">spell</a> checker. For example, the following
@@ -787,7 +838,7 @@ Lua module: vim.treesitter.languagetree          </a>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-18 14:37 from <code><a href="https://github.com/neovim/neovim/commit/ef4c339fb9de87f7534303e006c281e40327f803">ef4c339</a></code>
+        Generated at 2022-10-19 06:30 from <code><a href="https://github.com/neovim/neovim/commit/96cf385a7f4ab29f6987c10b5c3625d99b22f6fc">96cf385</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+treesitter.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/treesitter.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim
