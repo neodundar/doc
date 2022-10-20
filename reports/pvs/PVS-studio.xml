@@ -10,6 +10,24 @@
     <CWECode>CWE-1164</CWECode>
   </PVS-Studio_Analysis_Log>
   <PVS-Studio_Analysis_Log>
+    <Level>2</Level>
+    <ErrorType>warning</ErrorType>
+    <ErrorCode>V1086</ErrorCode>
+    <Message>A call of the 'memcpy' function will lead to underflow of the buffer 'dst'.</Message>
+    <Line>137</Line>
+    <File>./src/mpack/object.c</File>
+    <CWECode>CWE-682</CWECode>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <Level>2</Level>
+    <ErrorType>warning</ErrorType>
+    <ErrorCode>V1086</ErrorCode>
+    <Message>A call of the 'memcpy' function will lead to underflow of the buffer 'src'.</Message>
+    <Line>137</Line>
+    <File>./src/mpack/object.c</File>
+    <CWECode>CWE-682</CWECode>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
     <Level>1</Level>
     <ErrorType>error</ErrorType>
     <ErrorCode>V610</ErrorCode>
@@ -29,24 +47,6 @@
     <Positions>
       <Position lines="31,482,483,484,485,481">./src/mpack/mpack_core.c</Position>
     </Positions>
-  </PVS-Studio_Analysis_Log>
-  <PVS-Studio_Analysis_Log>
-    <Level>2</Level>
-    <ErrorType>warning</ErrorType>
-    <ErrorCode>V1086</ErrorCode>
-    <Message>A call of the 'memcpy' function will lead to underflow of the buffer 'dst'.</Message>
-    <Line>137</Line>
-    <File>./src/mpack/object.c</File>
-    <CWECode>CWE-682</CWECode>
-  </PVS-Studio_Analysis_Log>
-  <PVS-Studio_Analysis_Log>
-    <Level>2</Level>
-    <ErrorType>warning</ErrorType>
-    <ErrorCode>V1086</ErrorCode>
-    <Message>A call of the 'memcpy' function will lead to underflow of the buffer 'src'.</Message>
-    <Line>137</Line>
-    <File>./src/mpack/object.c</File>
-    <CWECode>CWE-682</CWECode>
   </PVS-Studio_Analysis_Log>
   <PVS-Studio_Analysis_Log>
     <Level>2</Level>
