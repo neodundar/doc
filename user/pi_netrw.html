@@ -362,14 +362,14 @@ preferences.  One way to look at them is via the command :NetrwSettings (see
 <a href="pi_netrw.html#netrw-settings">netrw-settings</a>) which will display your current netrw settings.  Most such
 settings are described below, in <a href="pi_netrw.html#netrw-browser-options">netrw-browser-options</a>, and in
 <a href="pi_netrw.html#netrw-externapp">netrw-externapp</a>:</div>
-<div class="old-help-para"> <a name="b%3Anetrw_lastfile"></a><code class="help-tag">b:netrw_lastfile</code>	last file Network-read/written retained on a
+<div class="old-help-para"> <a name="b%3Anetrw_lastfile"></a><code class="help-tag">b:netrw_lastfile</code>  	last file Network-read/written retained on a
 			per-buffer basis (supports plain :Nw )</div>
-<div class="old-help-para"> <a name="g%3Anetrw_bufsettings"></a><code class="help-tag">g:netrw_bufsettings</code>	the settings that netrw buffers have
+<div class="old-help-para"> <a name="g%3Anetrw_bufsettings"></a><code class="help-tag">g:netrw_bufsettings</code>  	the settings that netrw buffers have
 			(default) noma nomod nonu nowrap ro nobl</div>
-<div class="old-help-para"> <a name="g%3Anetrw_chgwin"></a><code class="help-tag">g:netrw_chgwin</code>	specifies a window number where subsequent file edits
+<div class="old-help-para"> <a name="g%3Anetrw_chgwin"></a><code class="help-tag">g:netrw_chgwin</code>  	specifies a window number where subsequent file edits
 			will take place.  (also see <a href="pi_netrw.html#netrw-C">netrw-C</a>)
 			(default) -1</div>
-<div class="old-help-para"> <a name="g%3ANetrw_funcref"></a><code class="help-tag">g:Netrw_funcref</code>	specifies a function (or functions) to be called when
+<div class="old-help-para"> <a name="g%3ANetrw_funcref"></a><code class="help-tag">g:Netrw_funcref</code>  	specifies a function (or functions) to be called when
 			netrw edits a file.  The file is first edited, and
 			then the function reference (<a href="eval.html#Funcref">Funcref</a>) is called.
 			This variable may also hold a <a href="eval.html#List">List</a> of Funcrefs.
@@ -379,10 +379,10 @@ settings are described below, in <a href="pi_netrw.html#netrw-browser-options">n
 fun! MyFuncRef()
 endfun
 let g:Netrw_funcref= function("MyFuncRef")</pre></div>
-<div class="old-help-para"> <a name="g%3ANetrw_UserMaps"></a><code class="help-tag">g:Netrw_UserMaps</code>	specifies a function or <a href="eval.html#List">List</a> of functions which can
+<div class="old-help-para"> <a name="g%3ANetrw_UserMaps"></a><code class="help-tag">g:Netrw_UserMaps</code>  	specifies a function or <a href="eval.html#List">List</a> of functions which can
 			be used to set up user-specified maps and functionality.
 			See <a href="pi_netrw.html#netrw-usermaps">netrw-usermaps</a></div>
-<div class="old-help-para"> <a name="g%3Anetrw_ftp"></a><code class="help-tag">g:netrw_ftp</code>		   if it doesn't exist, use default ftp
+<div class="old-help-para"> <a name="g%3Anetrw_ftp"></a><code class="help-tag">g:netrw_ftp</code>  		   if it doesn't exist, use default ftp
 			=0 use default ftp		       (uid password)
 			=1 use alternate ftp method	  (user uid password)
 			   If you're having trouble with ftp, try changing the
@@ -394,24 +394,24 @@ let g:Netrw_funcref= function("MyFuncRef")</pre></div>
 			 However, it appears that not all ftp implementations
 			 support this (ex. ncftp).
 		        ="-i -n"</div>
-<div class="old-help-para"> <a name="g%3Anetrw_ftpextracmd"></a><code class="help-tag">g:netrw_ftpextracmd</code>	default: doesn't exist
+<div class="old-help-para"> <a name="g%3Anetrw_ftpextracmd"></a><code class="help-tag">g:netrw_ftpextracmd</code>  	default: doesn't exist
 			If this variable exists, then any string it contains
 			will be placed into the commands set to your ftp
 			client.  As an example:
 			   ="passive"</div>
-<div class="old-help-para"> <a name="g%3Anetrw_ftpmode"></a><code class="help-tag">g:netrw_ftpmode</code>	="binary"				    (default)
+<div class="old-help-para"> <a name="g%3Anetrw_ftpmode"></a><code class="help-tag">g:netrw_ftpmode</code>  	="binary"				    (default)
 			="ascii"</div>
-<div class="old-help-para"> <a name="g%3Anetrw_ignorenetrc"></a><code class="help-tag">g:netrw_ignorenetrc</code>	=0 (default for linux, cygwin)
+<div class="old-help-para"> <a name="g%3Anetrw_ignorenetrc"></a><code class="help-tag">g:netrw_ignorenetrc</code>  	=0 (default for linux, cygwin)
 			=1 If you have a &lt;.netrc&gt; file but it doesn't work and
 			   you want it ignored, then set this variable as
 			   shown. (default for Windows + cmd.exe)</div>
-<div class="old-help-para"> <a name="g%3Anetrw_menu"></a><code class="help-tag">g:netrw_menu</code>		=0 disable netrw's menu
+<div class="old-help-para"> <a name="g%3Anetrw_menu"></a><code class="help-tag">g:netrw_menu</code>  		=0 disable netrw's menu
 			=1 (default) netrw's menu enabled</div>
-<div class="old-help-para"> <a name="g%3Anetrw_nogx"></a><code class="help-tag">g:netrw_nogx</code>		if this variable exists, then the "gx" map will not
+<div class="old-help-para"> <a name="g%3Anetrw_nogx"></a><code class="help-tag">g:netrw_nogx</code>  		if this variable exists, then the "gx" map will not
 			be available (see <a href="pi_netrw.html#netrw-gx">netrw-gx</a>)</div>
-<div class="old-help-para"> <a name="g%3Anetrw_uid"></a><code class="help-tag">g:netrw_uid</code>		(ftp) user-id,      retained on a per-vim-session basis
- <a name="s%3Anetrw_passwd"></a><code class="help-tag">s:netrw_passwd</code>	(ftp) password,     retained on a per-vim-session basis</div>
-<div class="old-help-para"> <a name="g%3Anetrw_preview"></a><code class="help-tag">g:netrw_preview</code>	=0 (default) preview window shown in a horizontally
+<div class="old-help-para"> <a name="g%3Anetrw_uid"></a><code class="help-tag">g:netrw_uid</code>  		(ftp) user-id,      retained on a per-vim-session basis
+ <a name="s%3Anetrw_passwd"></a><code class="help-tag">s:netrw_passwd</code>  	(ftp) password,     retained on a per-vim-session basis</div>
+<div class="old-help-para"> <a name="g%3Anetrw_preview"></a><code class="help-tag">g:netrw_preview</code>  	=0 (default) preview window shown in a horizontally
 			   split window
 			=1 preview window shown in a vertically split window.
 			   Also affects the "previous window" (see <a href="pi_netrw.html#netrw-P">netrw-P</a>)
@@ -424,14 +424,14 @@ let g:Netrw_funcref= function("MyFuncRef")</pre></div>
 				         1             0     <a href="windows.html#%3Atopleft">:topleft</a>
 				         1             1     <a href="windows.html#%3Abotright">:botright</a>
 			To control sizing, see <a href="pi_netrw.html#g%3Anetrw_winsize">g:netrw_winsize</a></div>
-<div class="old-help-para"> <a name="g%3Anetrw_scpport"></a><code class="help-tag">g:netrw_scpport</code>	= "-P" : option to use to set port for scp
- <a name="g%3Anetrw_sshport"></a><code class="help-tag">g:netrw_sshport</code>	= "-p" : option to use to set port for ssh</div>
-<div class="old-help-para"> <a name="g%3Anetrw_sepchr"></a><code class="help-tag">g:netrw_sepchr</code>	=\0xff
+<div class="old-help-para"> <a name="g%3Anetrw_scpport"></a><code class="help-tag">g:netrw_scpport</code>  	= "-P" : option to use to set port for scp
+ <a name="g%3Anetrw_sshport"></a><code class="help-tag">g:netrw_sshport</code>  	= "-p" : option to use to set port for ssh</div>
+<div class="old-help-para"> <a name="g%3Anetrw_sepchr"></a><code class="help-tag">g:netrw_sepchr</code>  	=\0xff
 			=\0x01 for enc == euc-jp (and perhaps it should be for
 			   others, too, please let me know)
 			   Separates priority codes from filenames internally.
 			   See <a href="pi_netrw.html#netrw-p12">netrw-p12</a>.</div>
-<div class="old-help-para">  <a name="g%3Anetrw_silent"></a><code class="help-tag">g:netrw_silent</code>	=0 : transfers done normally
+<div class="old-help-para">  <a name="g%3Anetrw_silent"></a><code class="help-tag">g:netrw_silent</code>  	=0 : transfers done normally
 			=1 : transfers done silently</div>
 <div class="old-help-para"> <a name="g%3Anetrw_use_errorwindow"></a><code class="help-tag">g:netrw_use_errorwindow</code> =2: messages from netrw will use a popup window
 			     Move the mouse and pause to remove the popup window.
@@ -443,16 +443,16 @@ let g:Netrw_funcref= function("MyFuncRef")</pre></div>
 			 =0 : messages from netrw will use echoerr ;
 			      messages don't always seem to show up this
 			      way, but one doesn't have to quit the window.</div>
-<div class="old-help-para"> <a name="g%3Anetrw_win95ftp"></a><code class="help-tag">g:netrw_win95ftp</code>	=1 if using Win95, will remove four trailing blank
+<div class="old-help-para"> <a name="g%3Anetrw_win95ftp"></a><code class="help-tag">g:netrw_win95ftp</code>  	=1 if using Win95, will remove four trailing blank
 			   lines that o/s's ftp "provides" on transfers
 			=0 force normal ftp behavior (no trailing line removal)</div>
-<div class="old-help-para"> <a name="g%3Anetrw_cygwin"></a><code class="help-tag">g:netrw_cygwin</code>	=1 assume scp under windows is from cygwin. Also
+<div class="old-help-para"> <a name="g%3Anetrw_cygwin"></a><code class="help-tag">g:netrw_cygwin</code>  	=1 assume scp under windows is from cygwin. Also
 			   permits network browsing to use ls with time and
 			   size sorting (default if windows)
 			=0 assume Windows' scp accepts windows-style paths
 			   Network browsing uses dir instead of ls
 			   This option is ignored if you're using unix</div>
-<div class="old-help-para"> <a name="g%3Anetrw_use_nt_rcp"></a><code class="help-tag">g:netrw_use_nt_rcp</code>	=0 don't use the rcp of WinNT, Win2000 and WinXP
+<div class="old-help-para"> <a name="g%3Anetrw_use_nt_rcp"></a><code class="help-tag">g:netrw_use_nt_rcp</code>  	=0 don't use the rcp of WinNT, Win2000 and WinXP
 			=1 use WinNT's rcp in binary mode         (default)</div>
 <div class="old-help-para"><h3 class="help-heading">PATHS<span class="help-heading-tags">							<a name="netrw-path"></a><span class="help-tag">netrw-path</span> {{{2</h3></div>
 <div class="old-help-para">Paths to files are generally user-directory relative for most protocols.
@@ -1054,7 +1054,7 @@ default, its stored on the first directory on the user's <a href="options.html#'
 	<a href="pi_netrw.html#netrw-mB">netrw-mB</a> how to delete bookmarks
 	<a href="pi_netrw.html#netrw-qb">netrw-qb</a> how to list bookmarks
 	<a href="pi_netrw.html#g%3Anetrw_home">g:netrw_home</a> controls where .netrwbook is kept</div>
-<div class="old-help-para"><h3 class="help-heading">BROWSING<span class="help-heading-tags">					<a name="netrw-enter"></a><span class="help-tag">netrw-enter</span>	<a name="netrw-cr"></a><span class="help-tag">netrw-cr</span> {{{2</h3></div>
+<div class="old-help-para"><h3 class="help-heading">BROWSING<span class="help-heading-tags">					<a name="netrw-enter"></a><span class="help-tag">netrw-enter</span>  	<a name="netrw-cr"></a><span class="help-tag">netrw-cr</span> {{{2</h3></div>
 <div class="old-help-para">Browsing is simple: move the cursor onto a file or directory of interest.
 Hitting the <code>&lt;cr&gt;</code> (the return key) will select the file or directory.
 Directories will themselves be listed, and files will be opened using the
@@ -1099,13 +1099,13 @@ nmap &lt;buffer&gt; &lt;silent&gt; &lt;nowait&gt; YOURKEYCOMBO  &lt;Plug&gt;Netr
 <div class="old-help-para">Put this line in $HOME/ftplugin/netrw/netrw.vim; it needs to be generated
 for netrw buffers only.</div>
 <div class="old-help-para">Related topics:
-	<a href="pi_netrw.html#netrw-ctrl-r">netrw-ctrl-r</a>	<a href="pi_netrw.html#netrw-o">netrw-o</a>	<a href="pi_netrw.html#netrw-p">netrw-p</a>
-	<a href="pi_netrw.html#netrw-P">netrw-P</a>	<a href="pi_netrw.html#netrw-t">netrw-t</a>	<a href="pi_netrw.html#netrw-v">netrw-v</a>
+	<a href="pi_netrw.html#netrw-ctrl-r">netrw-ctrl-r</a>  	<a href="pi_netrw.html#netrw-o">netrw-o</a>  	<a href="pi_netrw.html#netrw-p">netrw-p</a>
+	<a href="pi_netrw.html#netrw-P">netrw-P</a>  	<a href="pi_netrw.html#netrw-t">netrw-t</a>  	<a href="pi_netrw.html#netrw-v">netrw-v</a>
 Associated setting variables:
-   <a href="pi_netrw.html#g%3Anetrw_browse_split">g:netrw_browse_split</a>	<a href="pi_netrw.html#g%3Anetrw_fastbrowse">g:netrw_fastbrowse</a>
-   <a href="pi_netrw.html#g%3Anetrw_ftp_list_cmd">g:netrw_ftp_list_cmd</a>	<a href="pi_netrw.html#g%3Anetrw_ftp_sizelist_cmd">g:netrw_ftp_sizelist_cmd</a>
-   <a href="pi_netrw.html#g%3Anetrw_ftp_timelist_cmd">g:netrw_ftp_timelist_cmd</a>	<a href="pi_netrw.html#g%3Anetrw_ssh_browse_reject">g:netrw_ssh_browse_reject</a>
-   <a href="pi_netrw.html#g%3Anetrw_ssh_cmd">g:netrw_ssh_cmd</a>		<a href="pi_netrw.html#g%3Anetrw_use_noswf">g:netrw_use_noswf</a></div>
+   <a href="pi_netrw.html#g%3Anetrw_browse_split">g:netrw_browse_split</a>  	<a href="pi_netrw.html#g%3Anetrw_fastbrowse">g:netrw_fastbrowse</a>
+   <a href="pi_netrw.html#g%3Anetrw_ftp_list_cmd">g:netrw_ftp_list_cmd</a>  	<a href="pi_netrw.html#g%3Anetrw_ftp_sizelist_cmd">g:netrw_ftp_sizelist_cmd</a>
+   <a href="pi_netrw.html#g%3Anetrw_ftp_timelist_cmd">g:netrw_ftp_timelist_cmd</a>  	<a href="pi_netrw.html#g%3Anetrw_ssh_browse_reject">g:netrw_ssh_browse_reject</a>
+   <a href="pi_netrw.html#g%3Anetrw_ssh_cmd">g:netrw_ssh_cmd</a>  		<a href="pi_netrw.html#g%3Anetrw_use_noswf">g:netrw_use_noswf</a></div>
 <div class="old-help-para">BROWSING WITH A HORIZONTALLY SPLIT WINDOW	<a name="netrw-o"></a><code class="help-tag">netrw-o</code> <a name="netrw-horiz"></a><code class="help-tag">netrw-horiz</code> {{{2</div>
 <div class="old-help-para">Normally one enters a file or directory using the <code>&lt;cr&gt;</code>.  However, the "o" map
 allows one to open a new window to hold the new directory listing or file.  A
@@ -1114,8 +1114,8 @@ horizontal split is used.  (for vertical splitting, see <a href="pi_netrw.html#n
 cursor at the top.</div>
 <div class="old-help-para">Associated setting variables: <a href="pi_netrw.html#g%3Anetrw_alto">g:netrw_alto</a> <a href="pi_netrw.html#g%3Anetrw_winsize">g:netrw_winsize</a></div>
 <div class="old-help-para">Related topics:
-	<a href="pi_netrw.html#netrw-ctrl-r">netrw-ctrl-r</a>	<a href="pi_netrw.html#netrw-o">netrw-o</a>	<a href="pi_netrw.html#netrw-p">netrw-p</a>
-	<a href="pi_netrw.html#netrw-P">netrw-P</a>	<a href="pi_netrw.html#netrw-t">netrw-t</a>	<a href="pi_netrw.html#netrw-v">netrw-v</a>
+	<a href="pi_netrw.html#netrw-ctrl-r">netrw-ctrl-r</a>  	<a href="pi_netrw.html#netrw-o">netrw-o</a>  	<a href="pi_netrw.html#netrw-p">netrw-p</a>
+	<a href="pi_netrw.html#netrw-P">netrw-P</a>  	<a href="pi_netrw.html#netrw-t">netrw-t</a>  	<a href="pi_netrw.html#netrw-v">netrw-v</a>
 Associated setting variables:
    <a href="pi_netrw.html#g%3Anetrw_alto">g:netrw_alto</a>    control above/below splitting
    <a href="pi_netrw.html#g%3Anetrw_winsize">g:netrw_winsize</a> control initial sizing</div>
@@ -1125,8 +1125,8 @@ allows one to open a new window holding the new directory listing or file in
 a new tab.</div>
 <div class="old-help-para">If you'd like to have the new listing in a background tab, use <a href="tabpage.html#gT">gT</a>.</div>
 <div class="old-help-para">Related topics:
-	<a href="pi_netrw.html#netrw-ctrl-r">netrw-ctrl-r</a>	<a href="pi_netrw.html#netrw-o">netrw-o</a>	<a href="pi_netrw.html#netrw-p">netrw-p</a>
-	<a href="pi_netrw.html#netrw-P">netrw-P</a>	<a href="pi_netrw.html#netrw-t">netrw-t</a>	<a href="pi_netrw.html#netrw-v">netrw-v</a>
+	<a href="pi_netrw.html#netrw-ctrl-r">netrw-ctrl-r</a>  	<a href="pi_netrw.html#netrw-o">netrw-o</a>  	<a href="pi_netrw.html#netrw-p">netrw-p</a>
+	<a href="pi_netrw.html#netrw-P">netrw-P</a>  	<a href="pi_netrw.html#netrw-t">netrw-t</a>  	<a href="pi_netrw.html#netrw-v">netrw-v</a>
 Associated setting variables:
    <a href="pi_netrw.html#g%3Anetrw_winsize">g:netrw_winsize</a> control initial sizing</div>
 <div class="old-help-para">BROWSING WITH A VERTICALLY SPLIT WINDOW			<a name="netrw-v"></a><code class="help-tag-right">netrw-v</code> {{{2</div>
@@ -1138,8 +1138,8 @@ cursor at the left.</div>
 <div class="old-help-para">There is only one tree listing buffer; using "v" on a displayed subdirectory
 will split the screen, but the same buffer will be shown twice.</div>
 <div class="old-help-para">Related topics:
-	<a href="pi_netrw.html#netrw-ctrl-r">netrw-ctrl-r</a>	<a href="pi_netrw.html#netrw-o">netrw-o</a>	<a href="pi_netrw.html#netrw-p">netrw-p</a>
-	<a href="pi_netrw.html#netrw-P">netrw-P</a>	<a href="pi_netrw.html#netrw-t">netrw-t</a>	<a href="pi_netrw.html#netrw-v">netrw-v</a>
+	<a href="pi_netrw.html#netrw-ctrl-r">netrw-ctrl-r</a>  	<a href="pi_netrw.html#netrw-o">netrw-o</a>  	<a href="pi_netrw.html#netrw-p">netrw-p</a>
+	<a href="pi_netrw.html#netrw-P">netrw-P</a>  	<a href="pi_netrw.html#netrw-t">netrw-t</a>  	<a href="pi_netrw.html#netrw-v">netrw-v</a>
 Associated setting variables:
    <a href="pi_netrw.html#g%3Anetrw_altv">g:netrw_altv</a>    control right/left splitting
    <a href="pi_netrw.html#g%3Anetrw_winsize">g:netrw_winsize</a> control initial sizing</div>
@@ -1149,8 +1149,8 @@ Use the <code>&lt;c-r&gt;</code> map on a file (not a directory) in the netrw br
 will use a gvim server (see <a href="pi_netrw.html#g%3Anetrw_servername">g:netrw_servername</a>).  Subsequent use of <code>&lt;cr&gt;</code>
 (see <a href="pi_netrw.html#netrw-cr">netrw-cr</a>) will re-use that server for editing files.</div>
 <div class="old-help-para">Related topics:
-	<a href="pi_netrw.html#netrw-ctrl-r">netrw-ctrl-r</a>	<a href="pi_netrw.html#netrw-o">netrw-o</a>	<a href="pi_netrw.html#netrw-p">netrw-p</a>
-	<a href="pi_netrw.html#netrw-P">netrw-P</a>	<a href="pi_netrw.html#netrw-t">netrw-t</a>	<a href="pi_netrw.html#netrw-v">netrw-v</a>
+	<a href="pi_netrw.html#netrw-ctrl-r">netrw-ctrl-r</a>  	<a href="pi_netrw.html#netrw-o">netrw-o</a>  	<a href="pi_netrw.html#netrw-p">netrw-p</a>
+	<a href="pi_netrw.html#netrw-P">netrw-P</a>  	<a href="pi_netrw.html#netrw-t">netrw-t</a>  	<a href="pi_netrw.html#netrw-v">netrw-v</a>
 Associated setting variables:
 	<a href="pi_netrw.html#g%3Anetrw_servername">g:netrw_servername</a>   : sets name of server
 	<a href="pi_netrw.html#g%3Anetrw_browse_split">g:netrw_browse_split</a> : controls how <code>&lt;cr&gt;</code> will open files</div>
@@ -1280,8 +1280,8 @@ expand("&lt;cfile&gt;") depends on the <a href="options.html#'isfname'">'isfname
 select the text to be used by gx by making a visual selection (see
 <a href="visual.html#visual-block">visual-block</a>) and then pressing gx.</div>
 <div class="old-help-para">Associated setting variables:
-	<a href="pi_netrw.html#g%3Anetrw_gx">g:netrw_gx</a>	control how gx picks up the text under the cursor
-	<a href="pi_netrw.html#g%3Anetrw_nogx">g:netrw_nogx</a>	prevent gx map while editing
+	<a href="pi_netrw.html#g%3Anetrw_gx">g:netrw_gx</a>  	control how gx picks up the text under the cursor
+	<a href="pi_netrw.html#g%3Anetrw_nogx">g:netrw_nogx</a>  	prevent gx map while editing
 	<a href="pi_netrw.html#g%3Anetrw_suppress_gx_mesg">g:netrw_suppress_gx_mesg</a> controls gx's suppression of browser messages</div>
 <div class="old-help-para">							<a name="netrw_filehandler"></a><code class="help-tag-right">netrw_filehandler</code></div>
 <div class="old-help-para">When <a href="pi_netrw.html#g%3Anetrw_browsex_viewer">g:netrw_browsex_viewer</a> exists and is "-", then netrw will attempt to
@@ -1684,7 +1684,7 @@ directory.</div>
 <div class="old-help-para"><a href="pi_netrw.html#netrw-cd">netrw-cd</a> : This map's name was changed from "c" to cd (see <a href="pi_netrw.html#netrw-cd">netrw-cd</a>).
            This change was done to allow for <a href="pi_netrw.html#netrw-cb">netrw-cb</a> and <a href="pi_netrw.html#netrw-cB">netrw-cB</a> maps.</div>
 <div class="old-help-para">Associated setting variable: <a href="pi_netrw.html#g%3Anetrw_keepdir">g:netrw_keepdir</a></div>
-<div class="old-help-para"><h3 class="help-heading">MARKING FILES<span class="help-heading-tags">					<a name="netrw-%3AMF"></a><span class="help-tag">netrw-:MF</span>	<a name="netrw-mf"></a><span class="help-tag">netrw-mf</span> {{{2</h3>	(also see <a href="pi_netrw.html#netrw-mr">netrw-mr</a>)</div>
+<div class="old-help-para"><h3 class="help-heading">MARKING FILES<span class="help-heading-tags">					<a name="netrw-%3AMF"></a><span class="help-tag">netrw-:MF</span>  	<a name="netrw-mf"></a><span class="help-tag">netrw-mf</span> {{{2</h3>	(also see <a href="pi_netrw.html#netrw-mr">netrw-mr</a>)</div>
 <div class="old-help-para">Netrw provides several ways to mark files:</div>
 <div class="old-help-para"><div class="help-li" style=""> One may mark files with the cursor atop a filename and
 	  then pressing "mf".
@@ -1707,28 +1707,28 @@ directory.</div>
 	  (<a href="quickfix.html#quickfix-error-lists">quickfix-error-lists</a>)
 </div></div>
 <div class="old-help-para">The following netrw maps make use of marked files:</div>
-<div class="old-help-para">    <a href="pi_netrw.html#netrw-a">netrw-a</a>	Hide marked files/directories
-    <a href="pi_netrw.html#netrw-D">netrw-D</a>	Delete marked files/directories
-    <a href="pi_netrw.html#netrw-ma">netrw-ma</a>	Move marked files' names to <a href="editing.html#arglist">arglist</a>
-    <a href="pi_netrw.html#netrw-mA">netrw-mA</a>	Move <a href="editing.html#arglist">arglist</a> filenames to marked file list
-    <a href="pi_netrw.html#netrw-mb">netrw-mb</a>	Append marked files to bookmarks
-    <a href="pi_netrw.html#netrw-mB">netrw-mB</a>	Delete marked files from bookmarks
-    <a href="pi_netrw.html#netrw-mc">netrw-mc</a>	Copy marked files to target
-    <a href="pi_netrw.html#netrw-md">netrw-md</a>	Apply vimdiff to marked files
-    <a href="pi_netrw.html#netrw-me">netrw-me</a>	Edit marked files
-    <a href="pi_netrw.html#netrw-mF">netrw-mF</a>	Unmark marked files
-    <a href="pi_netrw.html#netrw-mg">netrw-mg</a>	Apply vimgrep to marked files
-    <a href="pi_netrw.html#netrw-mm">netrw-mm</a>	Move marked files to target
-    <a href="pi_netrw.html#netrw-mp">netrw-mp</a>	Print marked files
-    <a href="pi_netrw.html#netrw-ms">netrw-ms</a>	Netrw will source marked files
-    <a href="pi_netrw.html#netrw-mt">netrw-mt</a>	Set target for <a href="pi_netrw.html#netrw-mm">netrw-mm</a> and <a href="pi_netrw.html#netrw-mc">netrw-mc</a>
-    <a href="pi_netrw.html#netrw-mT">netrw-mT</a>	Generate tags using marked files
-    <a href="pi_netrw.html#netrw-mv">netrw-mv</a>	Apply vim command to marked files
-    <a href="pi_netrw.html#netrw-mx">netrw-mx</a>	Apply shell command to marked files
-    <a href="pi_netrw.html#netrw-mX">netrw-mX</a>	Apply shell command to marked files, en bloc
-    <a href="pi_netrw.html#netrw-mz">netrw-mz</a>	Compress/Decompress marked files
-    <a href="pi_netrw.html#netrw-O">netrw-O</a>	Obtain marked files
-    <a href="pi_netrw.html#netrw-R">netrw-R</a>	Rename marked files</div>
+<div class="old-help-para">    <a href="pi_netrw.html#netrw-a">netrw-a</a>  	Hide marked files/directories
+    <a href="pi_netrw.html#netrw-D">netrw-D</a>  	Delete marked files/directories
+    <a href="pi_netrw.html#netrw-ma">netrw-ma</a>  	Move marked files' names to <a href="editing.html#arglist">arglist</a>
+    <a href="pi_netrw.html#netrw-mA">netrw-mA</a>  	Move <a href="editing.html#arglist">arglist</a> filenames to marked file list
+    <a href="pi_netrw.html#netrw-mb">netrw-mb</a>  	Append marked files to bookmarks
+    <a href="pi_netrw.html#netrw-mB">netrw-mB</a>  	Delete marked files from bookmarks
+    <a href="pi_netrw.html#netrw-mc">netrw-mc</a>  	Copy marked files to target
+    <a href="pi_netrw.html#netrw-md">netrw-md</a>  	Apply vimdiff to marked files
+    <a href="pi_netrw.html#netrw-me">netrw-me</a>  	Edit marked files
+    <a href="pi_netrw.html#netrw-mF">netrw-mF</a>  	Unmark marked files
+    <a href="pi_netrw.html#netrw-mg">netrw-mg</a>  	Apply vimgrep to marked files
+    <a href="pi_netrw.html#netrw-mm">netrw-mm</a>  	Move marked files to target
+    <a href="pi_netrw.html#netrw-mp">netrw-mp</a>  	Print marked files
+    <a href="pi_netrw.html#netrw-ms">netrw-ms</a>  	Netrw will source marked files
+    <a href="pi_netrw.html#netrw-mt">netrw-mt</a>  	Set target for <a href="pi_netrw.html#netrw-mm">netrw-mm</a> and <a href="pi_netrw.html#netrw-mc">netrw-mc</a>
+    <a href="pi_netrw.html#netrw-mT">netrw-mT</a>  	Generate tags using marked files
+    <a href="pi_netrw.html#netrw-mv">netrw-mv</a>  	Apply vim command to marked files
+    <a href="pi_netrw.html#netrw-mx">netrw-mx</a>  	Apply shell command to marked files
+    <a href="pi_netrw.html#netrw-mX">netrw-mX</a>  	Apply shell command to marked files, en bloc
+    <a href="pi_netrw.html#netrw-mz">netrw-mz</a>  	Compress/Decompress marked files
+    <a href="pi_netrw.html#netrw-O">netrw-O</a>  	Obtain marked files
+    <a href="pi_netrw.html#netrw-R">netrw-R</a>  	Rename marked files</div>
 <div class="old-help-para">One may unmark files one at a time the same way one marks them; ie. place
 the cursor atop a marked file and press "mf".  This process also works
 with <code>&lt;s-leftmouse&gt;</code> using gvim.  One may unmark all files by pressing
@@ -1851,8 +1851,8 @@ will query you for a directory to copy to.</div>
 <div class="old-help-para">One may also copy directories and their contents (local only) to a target
 directory.</div>
 <div class="old-help-para">Associated setting variables:
-	<a href="pi_netrw.html#g%3Anetrw_localcopycmd">g:netrw_localcopycmd</a>		<a href="pi_netrw.html#g%3Anetrw_localcopycmdopt">g:netrw_localcopycmdopt</a>
-	<a href="pi_netrw.html#g%3Anetrw_localcopydircmd">g:netrw_localcopydircmd</a>	<a href="pi_netrw.html#g%3Anetrw_localcopydircmdopt">g:netrw_localcopydircmdopt</a>
+	<a href="pi_netrw.html#g%3Anetrw_localcopycmd">g:netrw_localcopycmd</a>  		<a href="pi_netrw.html#g%3Anetrw_localcopycmdopt">g:netrw_localcopycmdopt</a>
+	<a href="pi_netrw.html#g%3Anetrw_localcopydircmd">g:netrw_localcopydircmd</a>  	<a href="pi_netrw.html#g%3Anetrw_localcopydircmdopt">g:netrw_localcopydircmdopt</a>
 	<a href="pi_netrw.html#g%3Anetrw_ssh_cmd">g:netrw_ssh_cmd</a></div>
 <div class="old-help-para">MARKED FILES: DIFF						<a name="netrw-md"></a><code class="help-tag-right">netrw-md</code> {{{2
 	    (See <a href="pi_netrw.html#netrw-mf">netrw-mf</a> and <a href="pi_netrw.html#netrw-mr">netrw-mr</a> for how to mark files)
@@ -1929,7 +1929,7 @@ close the one-line window.</div>
 <div class="old-help-para"><div class="help-li" style=""> However, if the cursor is atop a directory name, then that directory is
     used for the copy/move-to target
 </div></div>
-<div class="old-help-para"><div class="help-li" style=""> One may use the :MT [directory] command to set the target	<a name="netrw-%3AMT"></a><code class="help-tag">netrw-:MT</code>
+<div class="old-help-para"><div class="help-li" style=""> One may use the :MT [directory] command to set the target	<a name="netrw-%3AMT"></a><code class="help-tag">netrw-:MT</code>  
     This command uses <a href="map.html#%3Cq-args%3E">&lt;q-args&gt;</a>, so spaces in the directory name are
     permitted without escaping.
 </div></div>
@@ -2007,26 +2007,26 @@ your browsing preferences.  (see also: <a href="pi_netrw.html#netrw-settings">ne
 <pre>---                                -----------
 Var                                Explanation
 ---                                -----------</pre></div>
-<div class="old-help-para">  <a name="g%3Anetrw_altfile"></a><code class="help-tag">g:netrw_altfile</code>		some like <a href="editing.html#CTRL-%5E">CTRL-^</a> to return to the last
+<div class="old-help-para">  <a name="g%3Anetrw_altfile"></a><code class="help-tag">g:netrw_altfile</code>  		some like <a href="editing.html#CTRL-%5E">CTRL-^</a> to return to the last
 				edited file.  Choose that by setting this
 				parameter to 1.
 				Others like <a href="editing.html#CTRL-%5E">CTRL-^</a> to return to the
 				netrw browsing buffer.  Choose that by setting
 				this parameter to 0.
 				 default: =0</div>
-<div class="old-help-para">  <a name="g%3Anetrw_alto"></a><code class="help-tag">g:netrw_alto</code>		change from above splitting to below splitting
+<div class="old-help-para">  <a name="g%3Anetrw_alto"></a><code class="help-tag">g:netrw_alto</code>  		change from above splitting to below splitting
 				by setting this variable (see <a href="pi_netrw.html#netrw-o">netrw-o</a>)
 				 default: =&amp;sb           (see <a href="options.html#'sb'">'sb'</a>)</div>
-<div class="old-help-para">  <a name="g%3Anetrw_altv"></a><code class="help-tag">g:netrw_altv</code>		change from left splitting to right splitting
+<div class="old-help-para">  <a name="g%3Anetrw_altv"></a><code class="help-tag">g:netrw_altv</code>  		change from left splitting to right splitting
 				by setting this variable (see <a href="pi_netrw.html#netrw-v">netrw-v</a>)
 				 default: =&amp;spr          (see <a href="options.html#'spr'">'spr'</a>)</div>
-<div class="old-help-para">  <a name="g%3Anetrw_banner"></a><code class="help-tag">g:netrw_banner</code>		enable/suppress the banner
+<div class="old-help-para">  <a name="g%3Anetrw_banner"></a><code class="help-tag">g:netrw_banner</code>  		enable/suppress the banner
 				=0: suppress the banner
 				=1: banner is enabled (default)</div>
-<div class="old-help-para">  <a name="g%3Anetrw_bannerbackslash"></a><code class="help-tag">g:netrw_bannerbackslash</code>	if this variable exists and is not zero, the
+<div class="old-help-para">  <a name="g%3Anetrw_bannerbackslash"></a><code class="help-tag">g:netrw_bannerbackslash</code>  	if this variable exists and is not zero, the
 				banner will be displayed with backslashes
 				rather than forward slashes.</div>
-<div class="old-help-para">  <a name="g%3Anetrw_browse_split"></a><code class="help-tag">g:netrw_browse_split</code>	when browsing, <code>&lt;cr&gt;</code> will open the file by:
+<div class="old-help-para">  <a name="g%3Anetrw_browse_split"></a><code class="help-tag">g:netrw_browse_split</code>  	when browsing, <code>&lt;cr&gt;</code> will open the file by:
 				=0: re-using the same window  (default)
 				=1: horizontally splitting the window first
 				=2: vertically   splitting the window first
@@ -2044,10 +2044,10 @@ Var                                Explanation
 				This option does not affect the production of
 				<a href="pi_netrw.html#%3ALexplore">:Lexplore</a> windows.</div>
 <div class="old-help-para">				Related topics:
-				    <a href="pi_netrw.html#g%3Anetrw_alto">g:netrw_alto</a>	<a href="pi_netrw.html#g%3Anetrw_altv">g:netrw_altv</a>
-				    <a href="pi_netrw.html#netrw-C">netrw-C</a>		<a href="pi_netrw.html#netrw-cr">netrw-cr</a>
+				    <a href="pi_netrw.html#g%3Anetrw_alto">g:netrw_alto</a>  	<a href="pi_netrw.html#g%3Anetrw_altv">g:netrw_altv</a>
+				    <a href="pi_netrw.html#netrw-C">netrw-C</a>  		<a href="pi_netrw.html#netrw-cr">netrw-cr</a>
 				    <a href="pi_netrw.html#netrw-ctrl-r">netrw-ctrl-r</a></div>
-<div class="old-help-para">  <a name="g%3Anetrw_browsex_viewer"></a><code class="help-tag">g:netrw_browsex_viewer</code>	specify user's preference for a viewer:<pre>"kfmclient exec"
+<div class="old-help-para">  <a name="g%3Anetrw_browsex_viewer"></a><code class="help-tag">g:netrw_browsex_viewer</code>  	specify user's preference for a viewer:<pre>"kfmclient exec"
 "gnome-open"</pre></div>
 <div class="old-help-para">				If<pre>"-"</pre></div>
 <div class="old-help-para">				is used, then netrwFileHandler() will look for
@@ -2056,10 +2056,10 @@ Var                                Explanation
 <div class="old-help-para">  <a name="g%3Anetrw_browsex_support_remote"></a><code class="help-tag">g:netrw_browsex_support_remote</code>
 				specify if the specified viewer supports a
 				remote URL.  (see <a href="pi_netrw.html#netrw-handler">netrw-handler</a>).</div>
-<div class="old-help-para">  <a name="g%3Anetrw_chgperm"></a><code class="help-tag">g:netrw_chgperm</code>		Unix/Linux: "chmod PERM FILENAME"
+<div class="old-help-para">  <a name="g%3Anetrw_chgperm"></a><code class="help-tag">g:netrw_chgperm</code>  		Unix/Linux: "chmod PERM FILENAME"
 				Windows:    "cacls FILENAME /e /p PERM"
 				Used to change access permission for a file.</div>
-<div class="old-help-para">  <a name="g%3Anetrw_clipboard"></a><code class="help-tag">g:netrw_clipboard</code>		=1
+<div class="old-help-para">  <a name="g%3Anetrw_clipboard"></a><code class="help-tag">g:netrw_clipboard</code>  		=1
   				By default, netrw will attempt to insure that
 				the clipboard's values will remain unchanged.
 				However, some users report that they have
@@ -2070,20 +2070,20 @@ Var                                Explanation
 				That means that if the clipboard is changed
 				(inadvertently) by normal netrw operation that
 				it will not be restored to its prior state.</div>
-<div class="old-help-para">  <a name="g%3Anetrw_compress"></a><code class="help-tag">g:netrw_compress</code>		="gzip"
+<div class="old-help-para">  <a name="g%3Anetrw_compress"></a><code class="help-tag">g:netrw_compress</code>  		="gzip"
 				Will compress marked files with this
 				command</div>
-<div class="old-help-para">  <a name="g%3ANetrw_corehandler"></a><code class="help-tag">g:Netrw_corehandler</code>		Allows one to specify something additional
+<div class="old-help-para">  <a name="g%3ANetrw_corehandler"></a><code class="help-tag">g:Netrw_corehandler</code>  		Allows one to specify something additional
 				to do when handling <code>&lt;core&gt;</code> files via netrw's
 				browser's "x" command (see <a href="pi_netrw.html#netrw-x">netrw-x</a>).  If
 				present, g:Netrw_corehandler specifies
 				either one or more function references
 				(see <a href="eval.html#Funcref">Funcref</a>).  (the capital g:Netrw...
 				is required its holding a function reference)</div>
-<div class="old-help-para">  <a name="g%3Anetrw_ctags"></a><code class="help-tag">g:netrw_ctags</code>		="ctags"
+<div class="old-help-para">  <a name="g%3Anetrw_ctags"></a><code class="help-tag">g:netrw_ctags</code>  		="ctags"
 				The default external program used to create
 				tags</div>
-<div class="old-help-para">  <a name="g%3Anetrw_cursor"></a><code class="help-tag">g:netrw_cursor</code>		= 2 (default)
+<div class="old-help-para">  <a name="g%3Anetrw_cursor"></a><code class="help-tag">g:netrw_cursor</code>  		= 2 (default)
 				This option controls the use of the
 				<a href="options.html#'cursorline'">'cursorline'</a> (cul) and <a href="options.html#'cursorcolumn'">'cursorcolumn'</a>
 				(cuc) settings by netrw:</div>
@@ -2108,7 +2108,7 @@ Var                                Explanation
 				  the <a href="options.html#'cuc'">'cuc'</a> and <a href="options.html#'cul'">'cul'</a> settings in effect when
 				  netrw last saw <a href="pi_netrw.html#g%3Anetrw_cursor">g:netrw_cursor</a> &gt;= 5 or when
 				  netrw was initially run.</div>
-<div class="old-help-para">  <a name="g%3Anetrw_decompress"></a><code class="help-tag">g:netrw_decompress</code>		= { ".gz"  : "gunzip" ,
+<div class="old-help-para">  <a name="g%3Anetrw_decompress"></a><code class="help-tag">g:netrw_decompress</code>  		= { ".gz"  : "gunzip" ,
 				    ".bz2" : "bunzip2" ,
 				    ".zip" : "unzip" ,
 				    ".tar" : "tar -xf"}
@@ -2121,12 +2121,12 @@ Var                                Explanation
 <div class="old-help-para">  <a name="g%3Anetrw_dynamic_maxfilenamelen"></a><code class="help-tag">g:netrw_dynamic_maxfilenamelen</code> =32: enables dynamic determination of
 				    <a href="pi_netrw.html#g%3Anetrw_maxfilenamelen">g:netrw_maxfilenamelen</a>, which affects
 				    local file long listing.</div>
-<div class="old-help-para">  <a name="g%3Anetrw_errorlvl"></a><code class="help-tag">g:netrw_errorlvl</code>		=0: error levels greater than or equal to
+<div class="old-help-para">  <a name="g%3Anetrw_errorlvl"></a><code class="help-tag">g:netrw_errorlvl</code>  		=0: error levels greater than or equal to
 				    this are permitted to be displayed
 				    0: notes
 				    1: warnings
 				    2: errors</div>
-<div class="old-help-para">  <a name="g%3Anetrw_fastbrowse"></a><code class="help-tag">g:netrw_fastbrowse</code>		=0: slow speed directory browsing;
+<div class="old-help-para">  <a name="g%3Anetrw_fastbrowse"></a><code class="help-tag">g:netrw_fastbrowse</code>  		=0: slow speed directory browsing;
 				    never re-uses directory listings;
 				    always obtains directory listings.
 				=1: medium speed directory browsing;
@@ -2148,13 +2148,13 @@ Var                                Explanation
 				This option gives the user the choice of
 				trading off accuracy (ie. up-to-date listing)
 				versus speed.</div>
-<div class="old-help-para">  <a name="g%3Anetrw_ffkeep"></a><code class="help-tag">g:netrw_ffkeep</code>		(default: doesn't exist)
+<div class="old-help-para">  <a name="g%3Anetrw_ffkeep"></a><code class="help-tag">g:netrw_ffkeep</code>  		(default: doesn't exist)
 				If this variable exists and is zero, then
 				netrw will not do a save and restore for
 				<a href="options.html#'fileformat'">'fileformat'</a>.</div>
-<div class="old-help-para">  <a name="g%3Anetrw_fname_escape"></a><code class="help-tag">g:netrw_fname_escape</code>	=' ?&amp;;%'
+<div class="old-help-para">  <a name="g%3Anetrw_fname_escape"></a><code class="help-tag">g:netrw_fname_escape</code>  	=' ?&amp;;%'
 				Used on filenames before remote reading/writing</div>
-<div class="old-help-para">  <a name="g%3Anetrw_ftp_browse_reject"></a><code class="help-tag">g:netrw_ftp_browse_reject</code>	ftp can produce a number of errors and warnings
+<div class="old-help-para">  <a name="g%3Anetrw_ftp_browse_reject"></a><code class="help-tag">g:netrw_ftp_browse_reject</code>  	ftp can produce a number of errors and warnings
 				that can show up as "directories" and "files"
 				in the listing.  This pattern is used to
 				remove such embedded messages.  By default its
@@ -2166,63 +2166,63 @@ Var                                Explanation
 				 No such file\|
 				 : connect to address [0-9a-fA-F:]*
 				 : No route to host$'</div>
-<div class="old-help-para">  <a name="g%3Anetrw_ftp_list_cmd"></a><code class="help-tag">g:netrw_ftp_list_cmd</code>	options for passing along to ftp for directory
+<div class="old-help-para">  <a name="g%3Anetrw_ftp_list_cmd"></a><code class="help-tag">g:netrw_ftp_list_cmd</code>  	options for passing along to ftp for directory
 				listing.  Defaults:
 				 unix or g:netrw_cygwin set: : "ls -lF"
 				 otherwise                     "dir"</div>
-<div class="old-help-para">  <a name="g%3Anetrw_ftp_sizelist_cmd"></a><code class="help-tag">g:netrw_ftp_sizelist_cmd</code>	options for passing along to ftp for directory
+<div class="old-help-para">  <a name="g%3Anetrw_ftp_sizelist_cmd"></a><code class="help-tag">g:netrw_ftp_sizelist_cmd</code>  	options for passing along to ftp for directory
 				listing, sorted by size of file.
 				Defaults:
 				 unix or g:netrw_cygwin set: : "ls -slF"
 				 otherwise                     "dir"</div>
-<div class="old-help-para">  <a name="g%3Anetrw_ftp_timelist_cmd"></a><code class="help-tag">g:netrw_ftp_timelist_cmd</code>	options for passing along to ftp for directory
+<div class="old-help-para">  <a name="g%3Anetrw_ftp_timelist_cmd"></a><code class="help-tag">g:netrw_ftp_timelist_cmd</code>  	options for passing along to ftp for directory
 				listing, sorted by time of last modification.
 				Defaults:
 				 unix or g:netrw_cygwin set: : "ls -tlF"
 				 otherwise                     "dir"</div>
-<div class="old-help-para">  <a name="g%3Anetrw_glob_escape"></a><code class="help-tag">g:netrw_glob_escape</code>		='[]*?`{~$'  (unix)
+<div class="old-help-para">  <a name="g%3Anetrw_glob_escape"></a><code class="help-tag">g:netrw_glob_escape</code>  		='[]*?`{~$'  (unix)
 				='[]*?`{$'  (windows
 				These characters in directory names are
 				escaped before applying glob()</div>
-<div class="old-help-para">  <a name="g%3Anetrw_gx"></a><code class="help-tag">g:netrw_gx</code>			="&lt;cfile&gt;"
+<div class="old-help-para">  <a name="g%3Anetrw_gx"></a><code class="help-tag">g:netrw_gx</code>  			="&lt;cfile&gt;"
  				This option controls how gx (<a href="pi_netrw.html#netrw-gx">netrw-gx</a>) picks
 				up the text under the cursor.  See <a href="builtin.html#expand()">expand()</a>
 				for possibilities.</div>
-<div class="old-help-para">  <a name="g%3Anetrw_hide"></a><code class="help-tag">g:netrw_hide</code>		Controlled by the "a" map (see <a href="pi_netrw.html#netrw-a">netrw-a</a>)
+<div class="old-help-para">  <a name="g%3Anetrw_hide"></a><code class="help-tag">g:netrw_hide</code>  		Controlled by the "a" map (see <a href="pi_netrw.html#netrw-a">netrw-a</a>)
 				=0 : show all
 				=1 : show not-hidden files
 				=2 : show hidden files only
 				 default: =1</div>
-<div class="old-help-para">  <a name="g%3Anetrw_home"></a><code class="help-tag">g:netrw_home</code>		The home directory for where bookmarks and
+<div class="old-help-para">  <a name="g%3Anetrw_home"></a><code class="help-tag">g:netrw_home</code>  		The home directory for where bookmarks and
 				history are saved (as .netrwbook and
 				.netrwhist).
 				Netrw uses <a href="builtin.html#expand()">expand()</a> on the string.
 				 default: stdpath("data") (see <a href="builtin.html#stdpath()">stdpath()</a>)</div>
-<div class="old-help-para">  <a name="g%3Anetrw_keepdir"></a><code class="help-tag">g:netrw_keepdir</code>		=1 (default) keep current directory immune from
+<div class="old-help-para">  <a name="g%3Anetrw_keepdir"></a><code class="help-tag">g:netrw_keepdir</code>  		=1 (default) keep current directory immune from
 				   the browsing directory.
 				=0 keep the current directory the same as the
 				   browsing directory.
 				The current browsing directory is contained in
 				b:netrw_curdir (also see <a href="pi_netrw.html#netrw-cd">netrw-cd</a>)</div>
-<div class="old-help-para">  <a name="g%3Anetrw_keepj"></a><code class="help-tag">g:netrw_keepj</code>		="keepj" (default) netrw attempts to keep the
+<div class="old-help-para">  <a name="g%3Anetrw_keepj"></a><code class="help-tag">g:netrw_keepj</code>  		="keepj" (default) netrw attempts to keep the
 				         <a href="motion.html#%3Ajumps">:jumps</a> table unaffected.
 				=""      netrw will not use <a href="motion.html#%3Akeepjumps">:keepjumps</a> with
 					 exceptions only for the
 					 saving/restoration of position.</div>
-<div class="old-help-para">  <a name="g%3Anetrw_list_cmd"></a><code class="help-tag">g:netrw_list_cmd</code>		command for listing remote directories
+<div class="old-help-para">  <a name="g%3Anetrw_list_cmd"></a><code class="help-tag">g:netrw_list_cmd</code>  		command for listing remote directories
 				 default: (if ssh is executable)
 				          "ssh HOSTNAME ls -FLa"</div>
-<div class="old-help-para">  <a name="g%3Anetrw_list_cmd_options"></a><code class="help-tag">g:netrw_list_cmd_options</code>	If this variable exists, then its contents are
+<div class="old-help-para">  <a name="g%3Anetrw_list_cmd_options"></a><code class="help-tag">g:netrw_list_cmd_options</code>  	If this variable exists, then its contents are
 				appended to the g:netrw_list_cmd.  For
 				example, use "2&gt;/dev/null" to get rid of banner
 				messages on unix systems.</div>
-<div class="old-help-para">  <a name="g%3Anetrw_liststyle"></a><code class="help-tag">g:netrw_liststyle</code>		Set the default listing style:
+<div class="old-help-para">  <a name="g%3Anetrw_liststyle"></a><code class="help-tag">g:netrw_liststyle</code>  		Set the default listing style:
                                 = 0: thin listing (one file per line)
                                 = 1: long listing (one file per line with time
 				     stamp information and file size)
 				= 2: wide listing (multiple files in columns)
 				= 3: tree style listing</div>
-<div class="old-help-para">  <a name="g%3Anetrw_list_hide"></a><code class="help-tag">g:netrw_list_hide</code>		comma-separated pattern list for hiding files
+<div class="old-help-para">  <a name="g%3Anetrw_list_hide"></a><code class="help-tag">g:netrw_list_hide</code>  		comma-separated pattern list for hiding files
 				Patterns are regular expressions (see <a href="pattern.html#regexp">regexp</a>)
 				There's some special support for git-ignore
 				files: you may add the output from the helper
@@ -2233,64 +2233,64 @@ Var                                Explanation
 				 let g:netrw_list_hide= '.\.swp$'
 				 let g:netrw_list_hide= netrw_gitignore#Hide() .. '.\.swp$'
 				default: ""</div>
-<div class="old-help-para">  <a name="g%3Anetrw_localcopycmd"></a><code class="help-tag">g:netrw_localcopycmd</code>	="cp"           Linux/Unix/MacOS/Cygwin
+<div class="old-help-para">  <a name="g%3Anetrw_localcopycmd"></a><code class="help-tag">g:netrw_localcopycmd</code>  	="cp"           Linux/Unix/MacOS/Cygwin
 				=expand("$COMSPEC")             Windows
 				Copies marked files (<a href="pi_netrw.html#netrw-mf">netrw-mf</a>) to target
 				directory (<a href="pi_netrw.html#netrw-mt">netrw-mt</a>, <a href="pi_netrw.html#netrw-mc">netrw-mc</a>)</div>
-<div class="old-help-para">  <a name="g%3Anetrw_localcopycmdopt"></a><code class="help-tag">g:netrw_localcopycmdopt</code>	=''             Linux/Unix/MacOS/Cygwin
+<div class="old-help-para">  <a name="g%3Anetrw_localcopycmdopt"></a><code class="help-tag">g:netrw_localcopycmdopt</code>  	=''             Linux/Unix/MacOS/Cygwin
   				=' \c copy'                     Windows
 				Options for the <a href="pi_netrw.html#g%3Anetrw_localcopycmd">g:netrw_localcopycmd</a></div>
-<div class="old-help-para">  <a name="g%3Anetrw_localcopydircmd"></a><code class="help-tag">g:netrw_localcopydircmd</code>	="cp"           Linux/Unix/MacOS/Cygwin
+<div class="old-help-para">  <a name="g%3Anetrw_localcopydircmd"></a><code class="help-tag">g:netrw_localcopydircmd</code>  	="cp"           Linux/Unix/MacOS/Cygwin
  				=expand("$COMSPEC")             Windows
 				Copies directories to target directory.
 				(<a href="pi_netrw.html#netrw-mc">netrw-mc</a>, <a href="pi_netrw.html#netrw-mt">netrw-mt</a>)</div>
-<div class="old-help-para">  <a name="g%3Anetrw_localcopydircmdopt"></a><code class="help-tag">g:netrw_localcopydircmdopt</code>	=" -R"          Linux/Unix/MacOS/Cygwin
+<div class="old-help-para">  <a name="g%3Anetrw_localcopydircmdopt"></a><code class="help-tag">g:netrw_localcopydircmdopt</code>  	=" -R"          Linux/Unix/MacOS/Cygwin
 				=" /c xcopy /e /c /h/ /i /k"    Windows
 				Options for <a href="pi_netrw.html#g%3Anetrw_localcopydircmd">g:netrw_localcopydircmd</a></div>
-<div class="old-help-para">  <a name="g%3Anetrw_localmkdir"></a><code class="help-tag">g:netrw_localmkdir</code>		="mkdir"        Linux/Unix/MacOS/Cygwin
+<div class="old-help-para">  <a name="g%3Anetrw_localmkdir"></a><code class="help-tag">g:netrw_localmkdir</code>  		="mkdir"        Linux/Unix/MacOS/Cygwin
 				=expand("$COMSPEC")             Windows
                                 command for making a local directory</div>
-<div class="old-help-para">  <a name="g%3Anetrw_localmkdiropt"></a><code class="help-tag">g:netrw_localmkdiropt</code>	=""             Linux/Unix/MacOS/Cygwin
+<div class="old-help-para">  <a name="g%3Anetrw_localmkdiropt"></a><code class="help-tag">g:netrw_localmkdiropt</code>  	=""             Linux/Unix/MacOS/Cygwin
 				=" /c mkdir"                    Windows
 				Options for <a href="pi_netrw.html#g%3Anetrw_localmkdir">g:netrw_localmkdir</a></div>
-<div class="old-help-para">  <a name="g%3Anetrw_localmovecmd"></a><code class="help-tag">g:netrw_localmovecmd</code>	="mv"           Linux/Unix/MacOS/Cygwin
+<div class="old-help-para">  <a name="g%3Anetrw_localmovecmd"></a><code class="help-tag">g:netrw_localmovecmd</code>  	="mv"           Linux/Unix/MacOS/Cygwin
 				=expand("$COMSPEC")             Windows
 				Moves marked files (<a href="pi_netrw.html#netrw-mf">netrw-mf</a>) to target
 				directory (<a href="pi_netrw.html#netrw-mt">netrw-mt</a>, <a href="pi_netrw.html#netrw-mm">netrw-mm</a>)</div>
-<div class="old-help-para">  <a name="g%3Anetrw_localmovecmdopt"></a><code class="help-tag">g:netrw_localmovecmdopt</code>	=""             Linux/Unix/MacOS/Cygwin
+<div class="old-help-para">  <a name="g%3Anetrw_localmovecmdopt"></a><code class="help-tag">g:netrw_localmovecmdopt</code>  	=""             Linux/Unix/MacOS/Cygwin
 				=" /c move"                     Windows
 				Options for <a href="pi_netrw.html#g%3Anetrw_localmovecmd">g:netrw_localmovecmd</a></div>
-<div class="old-help-para">  <a name="g%3Anetrw_localrmdir"></a><code class="help-tag">g:netrw_localrmdir</code>		="rmdir"        Linux/Unix/MacOS/Cygwin
+<div class="old-help-para">  <a name="g%3Anetrw_localrmdir"></a><code class="help-tag">g:netrw_localrmdir</code>  		="rmdir"        Linux/Unix/MacOS/Cygwin
  				=expand("$COMSPEC")             Windows
 				Remove directory command (rmdir)
 				This variable is only used if your vim is
 				earlier than 7.4 or if your vim doesn't
 				have patch#1107.  Otherwise, <a href="builtin.html#delete()">delete()</a>
 				is used with the "d" option.</div>
-<div class="old-help-para">  <a name="g%3Anetrw_localrmdiropt"></a><code class="help-tag">g:netrw_localrmdiropt</code>	=""             Linux/Unix/MacOS/Cygwin
+<div class="old-help-para">  <a name="g%3Anetrw_localrmdiropt"></a><code class="help-tag">g:netrw_localrmdiropt</code>  	=""             Linux/Unix/MacOS/Cygwin
 				=" /c rmdir"                    Windows
 				Options for <a href="pi_netrw.html#g%3Anetrw_localrmdir">g:netrw_localrmdir</a></div>
-<div class="old-help-para">  <a name="g%3Anetrw_maxfilenamelen"></a><code class="help-tag">g:netrw_maxfilenamelen</code>	=32 by default, selected so as to make long
+<div class="old-help-para">  <a name="g%3Anetrw_maxfilenamelen"></a><code class="help-tag">g:netrw_maxfilenamelen</code>  	=32 by default, selected so as to make long
 				    listings fit on 80 column displays.
 				If your screen is wider, and you have file
 				or directory names longer than 32 bytes,
 				you may set this option to keep listings
 				columnar.</div>
-<div class="old-help-para">  <a name="g%3Anetrw_mkdir_cmd"></a><code class="help-tag">g:netrw_mkdir_cmd</code>		command for making a remote directory
+<div class="old-help-para">  <a name="g%3Anetrw_mkdir_cmd"></a><code class="help-tag">g:netrw_mkdir_cmd</code>  		command for making a remote directory
 				via ssh  (also see <a href="pi_netrw.html#g%3Anetrw_remote_mkdir">g:netrw_remote_mkdir</a>)
 				 default: "ssh USEPORT HOSTNAME mkdir"</div>
-<div class="old-help-para">  <a name="g%3Anetrw_mousemaps"></a><code class="help-tag">g:netrw_mousemaps</code>		  =1 (default) enables mouse buttons while
+<div class="old-help-para">  <a name="g%3Anetrw_mousemaps"></a><code class="help-tag">g:netrw_mousemaps</code>  		  =1 (default) enables mouse buttons while
 				   browsing to:
 				     leftmouse       : open file/directory
 				     shift-leftmouse : mark file
 				     middlemouse     : same as P
 				     rightmouse      : remove file/directory
 				=0: disables mouse maps</div>
-<div class="old-help-para">  <a name="g%3Anetrw_nobeval"></a><code class="help-tag">g:netrw_nobeval</code>		doesn't exist (default)
+<div class="old-help-para">  <a name="g%3Anetrw_nobeval"></a><code class="help-tag">g:netrw_nobeval</code>  		doesn't exist (default)
 				If this variable exists, then balloon
 				evaluation will be suppressed
 				(see <a href="vim_diff.html#'ballooneval'">'ballooneval'</a>)</div>
-<div class="old-help-para"> <a name="g%3Anetrw_sizestyle"></a><code class="help-tag">g:netrw_sizestyle</code>		not defined: actual bytes (default)
+<div class="old-help-para"> <a name="g%3Anetrw_sizestyle"></a><code class="help-tag">g:netrw_sizestyle</code>  		not defined: actual bytes (default)
  				="b" : actual bytes       (default)
  				="h" : human-readable (ex. 5k, 4m, 3g)
 				       uses 1000 base
@@ -2299,14 +2299,14 @@ Var                                Explanation
 				The long listing (<a href="pi_netrw.html#netrw-i">netrw-i</a>) and query-file
 				maps (<a href="pi_netrw.html#netrw-qf">netrw-qf</a>) will display file size
 				using the specified style.</div>
-<div class="old-help-para">  <a name="g%3Anetrw_usetab"></a><code class="help-tag">g:netrw_usetab</code>		if this variable exists and is non-zero, then
+<div class="old-help-para">  <a name="g%3Anetrw_usetab"></a><code class="help-tag">g:netrw_usetab</code>  		if this variable exists and is non-zero, then
 				the <code>&lt;tab&gt;</code> map supporting shrinking/expanding a
 				Lexplore or netrw window will be enabled.
 				(see <a href="pi_netrw.html#netrw-c-tab">netrw-c-tab</a>)</div>
-<div class="old-help-para">  <a name="g%3Anetrw_remote_mkdir"></a><code class="help-tag">g:netrw_remote_mkdir</code>	command for making a remote directory
+<div class="old-help-para">  <a name="g%3Anetrw_remote_mkdir"></a><code class="help-tag">g:netrw_remote_mkdir</code>  	command for making a remote directory
 				via ftp  (also see <a href="pi_netrw.html#g%3Anetrw_mkdir_cmd">g:netrw_mkdir_cmd</a>)
 				 default: "mkdir"</div>
-<div class="old-help-para">  <a name="g%3Anetrw_retmap"></a><code class="help-tag">g:netrw_retmap</code>		if it exists and is set to one, then:
+<div class="old-help-para">  <a name="g%3Anetrw_retmap"></a><code class="help-tag">g:netrw_retmap</code>  		if it exists and is set to one, then:
 <div class="help-li" style=""> if in a netrw-selected file, AND
 </div><div class="help-li" style=""> no normal-mode <code>&lt;2-leftmouse&gt;</code> mapping exists,
 				then the <code>&lt;2-leftmouse&gt;</code> will be mapped for easy
@@ -2323,33 +2323,33 @@ Var                                Explanation
 <div class="old-help-para">				You may also use the <a href="pi_netrw.html#%3ARexplore">:Rexplore</a> command to do
 				the same thing.</div>
 <div class="old-help-para">				  default: =0</div>
-<div class="old-help-para">  <a name="g%3Anetrw_rm_cmd"></a><code class="help-tag">g:netrw_rm_cmd</code>		command for removing remote files
+<div class="old-help-para">  <a name="g%3Anetrw_rm_cmd"></a><code class="help-tag">g:netrw_rm_cmd</code>  		command for removing remote files
 				 default: "ssh USEPORT HOSTNAME rm"</div>
-<div class="old-help-para">  <a name="g%3Anetrw_rmdir_cmd"></a><code class="help-tag">g:netrw_rmdir_cmd</code>		command for removing remote directories
+<div class="old-help-para">  <a name="g%3Anetrw_rmdir_cmd"></a><code class="help-tag">g:netrw_rmdir_cmd</code>  		command for removing remote directories
 				 default: "ssh USEPORT HOSTNAME rmdir"</div>
-<div class="old-help-para">  <a name="g%3Anetrw_rmf_cmd"></a><code class="help-tag">g:netrw_rmf_cmd</code>		command for removing remote softlinks
+<div class="old-help-para">  <a name="g%3Anetrw_rmf_cmd"></a><code class="help-tag">g:netrw_rmf_cmd</code>  		command for removing remote softlinks
 				 default: "ssh USEPORT HOSTNAME rm -f"</div>
-<div class="old-help-para">  <a name="g%3Anetrw_servername"></a><code class="help-tag">g:netrw_servername</code>		use this variable to provide a name for
+<div class="old-help-para">  <a name="g%3Anetrw_servername"></a><code class="help-tag">g:netrw_servername</code>  		use this variable to provide a name for
 				<a href="pi_netrw.html#netrw-ctrl-r">netrw-ctrl-r</a> to use for its server.
 				 default: "NETRWSERVER"</div>
-<div class="old-help-para">  <a name="g%3Anetrw_sort_by"></a><code class="help-tag">g:netrw_sort_by</code>		sort by "name", "time", "size", or
+<div class="old-help-para">  <a name="g%3Anetrw_sort_by"></a><code class="help-tag">g:netrw_sort_by</code>  		sort by "name", "time", "size", or
   				"exten".
 				 default: "name"</div>
-<div class="old-help-para">  <a name="g%3Anetrw_sort_direction"></a><code class="help-tag">g:netrw_sort_direction</code>	sorting direction: "normal" or "reverse"
+<div class="old-help-para">  <a name="g%3Anetrw_sort_direction"></a><code class="help-tag">g:netrw_sort_direction</code>  	sorting direction: "normal" or "reverse"
 				 default: "normal"</div>
-<div class="old-help-para">  <a name="g%3Anetrw_sort_options"></a><code class="help-tag">g:netrw_sort_options</code>	sorting is done using <a href="change.html#%3Asort">:sort</a>; this
+<div class="old-help-para">  <a name="g%3Anetrw_sort_options"></a><code class="help-tag">g:netrw_sort_options</code>  	sorting is done using <a href="change.html#%3Asort">:sort</a>; this
 				variable's value is appended to the
 				sort command.  Thus one may ignore case,
 				for example, with the following in your
 				.vimrc:<pre>let g:netrw_sort_options="i"</pre></div>
 <div class="old-help-para">				 default: ""</div>
-<div class="old-help-para">  <a name="g%3Anetrw_sort_sequence"></a><code class="help-tag">g:netrw_sort_sequence</code>	when sorting by name, first sort by the
+<div class="old-help-para">  <a name="g%3Anetrw_sort_sequence"></a><code class="help-tag">g:netrw_sort_sequence</code>  	when sorting by name, first sort by the
 				comma-separated pattern sequence.  Note that
 				any filigree added to indicate filetypes
 				should be accounted for in your pattern.
 				 default: '[\/]$,*,\.bak$,\.o$,\.h$,
 				           \.info$,\.swp$,\.obj$'</div>
-<div class="old-help-para">  <a name="g%3Anetrw_special_syntax"></a><code class="help-tag">g:netrw_special_syntax</code>	If true, then certain files will be shown
+<div class="old-help-para">  <a name="g%3Anetrw_special_syntax"></a><code class="help-tag">g:netrw_special_syntax</code>  	If true, then certain files will be shown
 				using special syntax in the browser:</div>
 <div class="old-help-para">					netrwBak     :.bak
 					netrwCompress: *.gz *.bz2 *.Z *.zip
@@ -2398,27 +2398,27 @@ hi netrwTmp          term=NONE cterm=NONE gui=NONE ctermfg=12 guifg=red
 hi netrwTags          term=NONE cterm=NONE gui=NONE ctermfg=12 guifg=red
 hi netrwDoc          term=NONE cterm=NONE gui=NONE ctermfg=220 ctermbg=27 guifg=yellow2 guibg=Blue3
 hi netrwSymLink  term=NONE cterm=NONE gui=NONE ctermfg=220 ctermbg=27 guifg=grey60</pre></div>
-<div class="old-help-para">  <a name="g%3Anetrw_ssh_browse_reject"></a><code class="help-tag">g:netrw_ssh_browse_reject</code>	ssh can sometimes produce unwanted lines,
+<div class="old-help-para">  <a name="g%3Anetrw_ssh_browse_reject"></a><code class="help-tag">g:netrw_ssh_browse_reject</code>  	ssh can sometimes produce unwanted lines,
 				messages, banners, and whatnot that one doesn't
 				want masquerading as "directories" and "files".
 				Use this pattern to remove such embedded
 				messages.  By default its value is:
 					 '^total\s\+\d\+$'</div>
-<div class="old-help-para">  <a name="g%3Anetrw_ssh_cmd"></a><code class="help-tag">g:netrw_ssh_cmd</code>		One may specify an executable command
+<div class="old-help-para">  <a name="g%3Anetrw_ssh_cmd"></a><code class="help-tag">g:netrw_ssh_cmd</code>  		One may specify an executable command
 				to use instead of ssh for remote actions
 				such as listing, file removal, etc.
 				 default: ssh</div>
-<div class="old-help-para"> <a name="g%3Anetrw_suppress_gx_mesg"></a><code class="help-tag">g:netrw_suppress_gx_mesg</code>	=1 : browsers sometimes produce messages
+<div class="old-help-para"> <a name="g%3Anetrw_suppress_gx_mesg"></a><code class="help-tag">g:netrw_suppress_gx_mesg</code>  	=1 : browsers sometimes produce messages
 				which are normally unwanted intermixed
 				with the page.
 				However, when using links, for example,
 				those messages are what the browser produces.
 				By setting this option to 0, netrw will not
 				suppress browser messages.</div>
-<div class="old-help-para">  <a name="g%3Anetrw_tmpfile_escape"></a><code class="help-tag">g:netrw_tmpfile_escape</code>	=' &amp;;'
+<div class="old-help-para">  <a name="g%3Anetrw_tmpfile_escape"></a><code class="help-tag">g:netrw_tmpfile_escape</code>  	=' &amp;;'
 				escape() is applied to all temporary files
 				to escape these characters.</div>
-<div class="old-help-para">  <a name="g%3Anetrw_timefmt"></a><code class="help-tag">g:netrw_timefmt</code>		specify format string to vim's strftime().
+<div class="old-help-para">  <a name="g%3Anetrw_timefmt"></a><code class="help-tag">g:netrw_timefmt</code>  		specify format string to vim's strftime().
 				The default, "%c", is "the preferred date
 				and time representation for the current
 				locale" according to my manpage entry for
@@ -2427,7 +2427,7 @@ hi netrwSymLink  term=NONE cterm=NONE gui=NONE ctermfg=220 ctermbg=27 guifg=grey
 				 "%a %d %b %Y %T",
 				 " %a %Y-%m-%d  %I-%M-%S %p"
 				 default: "%c"</div>
-<div class="old-help-para">  <a name="g%3Anetrw_use_noswf"></a><code class="help-tag">g:netrw_use_noswf</code>		netrw normally avoids writing swapfiles
+<div class="old-help-para">  <a name="g%3Anetrw_use_noswf"></a><code class="help-tag">g:netrw_use_noswf</code>  		netrw normally avoids writing swapfiles
 				for browser buffers.  However, under some
 				systems this apparently is causing nasty
 				ml_get errors to appear; if you're getting
@@ -2435,7 +2435,7 @@ hi netrwSymLink  term=NONE cterm=NONE gui=NONE ctermfg=220 ctermbg=27 guifg=grey
 				  let g:netrw_use_noswf= 0
 				in your .vimrc.
 				  default: 1</div>
-<div class="old-help-para">  <a name="g%3Anetrw_winsize"></a><code class="help-tag">g:netrw_winsize</code>		specify initial size of new windows made with
+<div class="old-help-para">  <a name="g%3Anetrw_winsize"></a><code class="help-tag">g:netrw_winsize</code>  		specify initial size of new windows made with
 				"o" (see <a href="pi_netrw.html#netrw-o">netrw-o</a>), "v" (see <a href="pi_netrw.html#netrw-v">netrw-v</a>),
 				<a href="pi_netrw.html#%3AHexplore">:Hexplore</a> or <a href="pi_netrw.html#%3AVexplore">:Vexplore</a>.  The g:netrw_winsize
 				is an integer describing the percentage of the
@@ -2449,10 +2449,10 @@ hi netrwSymLink  term=NONE cterm=NONE gui=NONE ctermfg=220 ctermbg=27 guifg=grey
 				split will be made (ie. <a href="options.html#'equalalways'">'equalalways'</a> will
 				take effect, for example).
 				 default: 50  (for 50%)</div>
-<div class="old-help-para">  <a name="g%3Anetrw_wiw"></a><code class="help-tag">g:netrw_wiw</code>			=1 specifies the minimum window width to use
+<div class="old-help-para">  <a name="g%3Anetrw_wiw"></a><code class="help-tag">g:netrw_wiw</code>  			=1 specifies the minimum window width to use
 				when shrinking a netrw/Lexplore window
 				(see <a href="pi_netrw.html#netrw-c-tab">netrw-c-tab</a>).</div>
-<div class="old-help-para">  <a name="g%3Anetrw_xstrlen"></a><code class="help-tag">g:netrw_xstrlen</code>		Controls how netrw computes string lengths,
+<div class="old-help-para">  <a name="g%3Anetrw_xstrlen"></a><code class="help-tag">g:netrw_xstrlen</code>  		Controls how netrw computes string lengths,
 				including multi-byte characters' string
 				length. (thanks to N Weibull, T Mechelynck)
 				=0: uses Vim's built-in strlen()
@@ -2467,7 +2467,7 @@ hi netrwSymLink  term=NONE cterm=NONE gui=NONE ctermfg=220 ctermbg=27 guifg=grey
 				    rather than 1, Arabic alif as zero when
 				    immediately preceded by lam, one
 				    otherwise, etc)</div>
-<div class="old-help-para">  <a name="g%3ANetrwTopLvlMenu"></a><code class="help-tag">g:NetrwTopLvlMenu</code>		This variable specifies the top level
+<div class="old-help-para">  <a name="g%3ANetrwTopLvlMenu"></a><code class="help-tag">g:NetrwTopLvlMenu</code>  		This variable specifies the top level
 				menu name; by default, it's "Netrw.".  If
 				you wish to change this, do so in your
 				.vimrc.</div>
@@ -3583,7 +3583,7 @@ Modelines: {{{1</a>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 05:56 from <code><a href="https://github.com/neovim/neovim/commit/fad558b6affd54075654dd55922348f76a95e338">fad558b</a></code>
+        Generated at 2022-10-20 11:26 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+pi_netrw.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="  For Vim version 8.2.  Last change: 2020 Aug 15

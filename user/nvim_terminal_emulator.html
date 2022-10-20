@@ -278,14 +278,14 @@ In the window showing the source code these commands can be used to control
 gdb:
  <code>:Run</code> [args]	    run the program with [args] or the previous arguments
  <code>:Arguments</code> <code>{args}</code>  set arguments for the next <code>:Run</code></div>
-<div class="old-help-para"> <a name="%3ABreak"></a><code class="help-tag">:Break</code>	set a breakpoint at the current line; a sign will be displayed
- <a name="%3AClear"></a><code class="help-tag">:Clear</code>	delete the breakpoint at the current line</div>
-<div class="old-help-para"> <a name="%3AStep"></a><code class="help-tag">:Step</code>	execute the gdb "step" command
- <a name="%3AOver"></a><code class="help-tag">:Over</code>	execute the gdb "next" command (<code>:Next</code> is a Vim command)
- <a name="%3AUntil"></a><code class="help-tag">:Until</code>	execute the gdb "until" command
- <a name="%3AFinish"></a><code class="help-tag">:Finish</code>	execute the gdb "finish" command
- <a name="%3AContinue"></a><code class="help-tag">:Continue</code>	execute the gdb "continue" command
- <a name="%3AStop"></a><code class="help-tag">:Stop</code>	interrupt the program</div>
+<div class="old-help-para"> <a name="%3ABreak"></a><code class="help-tag">:Break</code>  	set a breakpoint at the current line; a sign will be displayed
+ <a name="%3AClear"></a><code class="help-tag">:Clear</code>  	delete the breakpoint at the current line</div>
+<div class="old-help-para"> <a name="%3AStep"></a><code class="help-tag">:Step</code>  	execute the gdb "step" command
+ <a name="%3AOver"></a><code class="help-tag">:Over</code>  	execute the gdb "next" command (<code>:Next</code> is a Vim command)
+ <a name="%3AUntil"></a><code class="help-tag">:Until</code>  	execute the gdb "until" command
+ <a name="%3AFinish"></a><code class="help-tag">:Finish</code>  	execute the gdb "finish" command
+ <a name="%3AContinue"></a><code class="help-tag">:Continue</code>  	execute the gdb "continue" command
+ <a name="%3AStop"></a><code class="help-tag">:Stop</code>  	interrupt the program</div>
 <div class="old-help-para">If gdb stops at a source line and there is no window currently showing the
 source code, a new window will be created for the source code.  This also
 happens if the buffer in the source code window has been modified and can't be
@@ -298,18 +298,18 @@ You can also use the <code>:Clear</code> command if the cursor is in the line wi
 breakpoint, or use the "Clear breakpoint" right-click menu entry.
 </div></div>
 <div class="old-help-para"><div class="help-column_heading">Inspecting variables</div>					<a name="termdebug-variables"></a><code class="help-tag-right">termdebug-variables</code> <a name="%3AEvaluate"></a><code class="help-tag">:Evaluate</code>
- <code>:Evaluate</code>	    evaluate the expression under the cursor
- <code>K</code>		    same (see <a href="nvim_terminal_emulator.html#termdebug_map_K">termdebug_map_K</a> to disable)
+ <code>:Evaluate</code>  	    evaluate the expression under the cursor
+ <code>K</code>  		    same (see <a href="nvim_terminal_emulator.html#termdebug_map_K">termdebug_map_K</a> to disable)
  <code>:Evaluate</code> <code>{expr}</code>   evaluate <code>{expr}</code>
  <code>:'&lt;,'&gt;Evaluate</code>     evaluate the Visually selected text</div>
 <div class="old-help-para">This is similar to using "print" in the gdb window.
 You can usually shorten <code>:Evaluate</code> to <code>:Ev</code>.</div>
 <div class="old-help-para"><div class="help-column_heading">Other commands</div>							<a name="termdebug-commands"></a><code class="help-tag-right">termdebug-commands</code>
- <a name="%3AGdb"></a><code class="help-tag">:Gdb</code>	     jump to the gdb window
+ <a name="%3AGdb"></a><code class="help-tag">:Gdb</code>  	     jump to the gdb window
  <a name="%3AProgram"></a><code class="help-tag">:Program</code>    jump to the window with the running program
  <a name="%3ASource"></a><code class="help-tag">:Source</code>     jump to the window with the source code, create it if there
 	     isn't one
- <a name="%3AAsm"></a><code class="help-tag">:Asm</code>	     jump to the window with the disassembly, create it if there
+ <a name="%3AAsm"></a><code class="help-tag">:Asm</code>  	     jump to the window with the disassembly, create it if there
 	     isn't one</div>
 <div class="old-help-para"><div class="help-column_heading">Events</div>							<a name="termdebug-events"></a><code class="help-tag-right">termdebug-events</code>
 Four autocommands can be used:<pre>au User TermdebugStartPre  echomsg 'debugging starting'
@@ -447,7 +447,7 @@ Status Variables				</a>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 05:55 from <code><a href="https://github.com/neovim/neovim/commit/fad558b6affd54075654dd55922348f76a95e338">fad558b</a></code>
+        Generated at 2022-10-20 11:25 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+nvim_terminal_emulator.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/nvim_terminal_emulator.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim

@@ -90,13 +90,13 @@
 <div class="old-help-para">No matter how many files you have, you can edit them without leaving Vim.
 Define a list of files to work on and jump from one to the other.  Copy text
 from one file and put it in another one.</div>
-<div class="old-help-para"><a href="usr_07.html#07.1">07.1</a>	Edit another file
-<a href="usr_07.html#07.2">07.2</a>	A list of files
-<a href="usr_07.html#07.3">07.3</a>	Jumping from file to file
-<a href="usr_07.html#07.4">07.4</a>	Backup files
-<a href="usr_07.html#07.5">07.5</a>	Copy text between files
-<a href="usr_07.html#07.6">07.6</a>	Viewing a file
-<a href="usr_07.html#07.7">07.7</a>	Changing the file name</div>
+<div class="old-help-para"><a href="usr_07.html#07.1">07.1</a>  	Edit another file
+<a href="usr_07.html#07.2">07.2</a>  	A list of files
+<a href="usr_07.html#07.3">07.3</a>  	Jumping from file to file
+<a href="usr_07.html#07.4">07.4</a>  	Backup files
+<a href="usr_07.html#07.5">07.5</a>  	Copy text between files
+<a href="usr_07.html#07.6">07.6</a>  	Viewing a file
+<a href="usr_07.html#07.7">07.7</a>  	Changing the file name</div>
 <div class="old-help-para">     Next chapter: <a href="usr_08.html#usr_08.txt">usr_08.txt</a>  Splitting windows
  Previous chapter: <a href="usr_06.html#usr_06.txt">usr_06.txt</a>  Using syntax highlighting
 Table of contents: <a href="usr_toc.html#usr_toc.txt">usr_toc.txt</a></div>
@@ -124,7 +124,7 @@ file yet, you can make it hidden:<pre>
 :hide edit foo.txt</pre>
 The text with changes is still there, but you can't see it.  This is further
 explained in section <a href="usr_22.html#22.4">22.4</a>: The buffer list.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="07.2"></a><span class="help-tag">07.2</span>	A list of files</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="07.2"></a><span class="help-tag">07.2</span>  	A list of files</h2></div>
 <div class="old-help-para">You can start Vim to edit a sequence of files.  For example:<pre>
 vim one.c two.c three.c</pre>
 This command starts Vim and tells it that you will be editing three files.
@@ -191,7 +191,7 @@ edit the last file in the list yet:</div>
 <div class="old-help-para"><div class="help-column_heading">	E173: 46 more files to edit</div></div>
 <div class="old-help-para">If you really want to exit, just do it again.  Then it will work (but not when
 you did other commands in between).</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="07.3"></a><span class="help-tag">07.3</span>	Jumping from file to file</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="07.3"></a><span class="help-tag">07.3</span>  	Jumping from file to file</h2></div>
 <div class="old-help-para">To quickly jump between two files, press <code>CTRL-^</code> (on English-US keyboards the ^
 is above the 6 key).  Example:<pre>
 :args one.c two.c three.c</pre>
@@ -248,7 +248,7 @@ You can also give several arguments:<pre>
 :marks MCP</pre>
 Don't forget that you can use <code>CTRL-O</code> and <code>CTRL-I</code> to jump to older and newer
 positions without placing marks there.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="07.4"></a><span class="help-tag">07.4</span>	Backup files</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="07.4"></a><span class="help-tag">07.4</span>  	Backup files</h2></div>
 <div class="old-help-para">Usually Vim does not produce a backup file.  If you want to have one, all you
 need to do is execute the following command:<pre>
 :set backup</pre>
@@ -285,7 +285,7 @@ the file, Vim will keep a copy of the unchanged file under the name
 then be called "data.txt~" (or whatever you specified with <a href="options.html#'backupext'">'backupext'</a>).
    If you leave <a href="options.html#'patchmode'">'patchmode'</a> empty (that is the default), the original file
 will not be kept.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="07.5"></a><span class="help-tag">07.5</span>	Copy text between files</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="07.5"></a><span class="help-tag">07.5</span>  	Copy text between files</h2></div>
 <div class="old-help-para">This explains how to copy text from one file to another.  Let's start with a
 simple example.  Edit the file that contains the text you want to copy.  Move
 the cursor to the start of the text and press "v".  This starts Visual mode.
@@ -347,7 +347,7 @@ and put them there.  Thus you save two steps.  But you can only append to the
 end of a file.
    To append only a few lines, select them in Visual mode before typing
 ":write".  In chapter 10 you will learn other ways to select a range of lines.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="07.6"></a><span class="help-tag">07.6</span>	Viewing a file</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="07.6"></a><span class="help-tag">07.6</span>  	Viewing a file</h2></div>
 <div class="old-help-para">Sometimes you only want to see what a file contains, without the intention to
 ever write it back.  There is the risk that you type ":w" without thinking and
 overwrite the original file anyway.  To avoid this, edit the file read-only.
@@ -372,7 +372,7 @@ for example.  If you try to make a change you get this error message:</div>
 only voluntary though, since these commands will remove the protection:<pre>
 :set modifiable
 :set write</pre>
-<h2 class="help-heading"><span class="help-heading-tags"><a name="07.7"></a><span class="help-tag">07.7</span>	Changing the file name</h2></div>
+<h2 class="help-heading"><span class="help-heading-tags"><a name="07.7"></a><span class="help-tag">07.7</span>  	Changing the file name</h2></div>
 <div class="old-help-para">A clever way to start editing a new file is by using an existing file that
 contains most of what you need.  For example, you start writing a new program
 to move a file.  You know that you already have a program that copies a file,
@@ -429,7 +429,7 @@ this message:</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 05:56 from <code><a href="https://github.com/neovim/neovim/commit/fad558b6affd54075654dd55922348f76a95e338">fad558b</a></code>
+        Generated at 2022-10-20 11:26 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_07.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_07.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>

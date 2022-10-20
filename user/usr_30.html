@@ -90,12 +90,12 @@
 <div class="old-help-para">Vim has various commands that aid in writing computer programs.  Compile a
 program and directly jump to reported errors.  Automatically set the indent
 for many languages and format comments.</div>
-<div class="old-help-para"><a href="usr_30.html#30.1">30.1</a>	Compiling
-<a href="usr_30.html#30.2">30.2</a>	Indenting C files
-<a href="usr_30.html#30.3">30.3</a>	Automatic indenting
-<a href="usr_30.html#30.4">30.4</a>	Other indenting
-<a href="usr_30.html#30.5">30.5</a>	Tabs and spaces
-<a href="usr_30.html#30.6">30.6</a>	Formatting comments</div>
+<div class="old-help-para"><a href="usr_30.html#30.1">30.1</a>  	Compiling
+<a href="usr_30.html#30.2">30.2</a>  	Indenting C files
+<a href="usr_30.html#30.3">30.3</a>  	Automatic indenting
+<a href="usr_30.html#30.4">30.4</a>  	Other indenting
+<a href="usr_30.html#30.5">30.5</a>  	Tabs and spaces
+<a href="usr_30.html#30.6">30.6</a>  	Formatting comments</div>
 <div class="old-help-para">     Next chapter: <a href="usr_31.html#usr_31.txt">usr_31.txt</a>  Exploiting the GUI
  Previous chapter: <a href="usr_29.html#usr_29.txt">usr_29.txt</a>  Moving through programs
 Table of contents: <a href="usr_toc.html#usr_toc.txt">usr_toc.txt</a></div>
@@ -207,7 +207,7 @@ to compile the program in another window and redirect the output into a file.
 Then have Vim read this file with:<pre>
 :cfile {filename}</pre>
 Jumping to errors will work like with the ":make" command.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="30.2"></a><span class="help-tag">30.2</span>	Indenting C style text</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="30.2"></a><span class="help-tag">30.2</span>  	Indenting C style text</h2></div>
 <div class="old-help-para">A program is much easier to understand when the lines have been properly
 indented.  Vim offers various ways to make this less work.  For C or C style
 programs like Java or C++, set the <a href="options.html#'cindent'">'cindent'</a> option.  Vim knows a lot about C
@@ -259,7 +259,7 @@ curly braces be placed like this:</div>
 <div class="old-help-para">Use this command:<pre>
 :set cinoptions+={2</pre>
 There are many of these items.  See <a href="indent.html#cinoptions-values">cinoptions-values</a>.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="30.3"></a><span class="help-tag">30.3</span>	Automatic indenting</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="30.3"></a><span class="help-tag">30.3</span>  	Automatic indenting</h2></div>
 <div class="old-help-para">You don't want to switch on the <a href="options.html#'cindent'">'cindent'</a> option manually every time you edit
 a C file.  This is how you make it work automatically:<pre>
 :filetype indent on</pre>
@@ -293,7 +293,7 @@ looks like this:</div>
 <div class="old-help-para"><div class="help-column_heading">	~/.config/nvim/indent/help.vim</div></div>
 <div class="old-help-para">Instead of switching the indenting off, you could write your own indent file.
 How to do that is explained here: <a href="indent.html#indent-expression">indent-expression</a>.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="30.4"></a><span class="help-tag">30.4</span>	Other indenting</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="30.4"></a><span class="help-tag">30.4</span>  	Other indenting</h2></div>
 <div class="old-help-para">The simplest form of automatic indenting is with the <a href="options.html#'autoindent'">'autoindent'</a> option.
 It uses the indent from the previous line.  A bit smarter is the <a href="options.html#'smartindent'">'smartindent'</a>
 option.  This is useful for languages where no indent file is available.
@@ -334,7 +334,7 @@ lines themselves are left unmodified.  "&gt;a{" includes them.  In this example
 the cursor is on "printf":</div>
 <div class="old-help-para">	original text		after "&gt;i{"		after "&gt;a{"</div>
 <div class="old-help-para"><div class="help-column_heading">	if (flag)		if (flag)		if (flag)</div><div class="help-column_heading">	{			{			    {</div><div class="help-column_heading">	printf("yes");		    printf("yes");	    printf("yes");</div><div class="help-column_heading">	flag = 0;		    flag = 0;		    flag = 0;</div><div class="help-column_heading">	}			}			    }</div></div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="30.5"></a><span class="help-tag">30.5</span>	Tabs and spaces</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="30.5"></a><span class="help-tag">30.5</span>  	Tabs and spaces</h2></div>
 <div class="old-help-para"><a href="options.html#'tabstop'">'tabstop'</a> is set to eight by default.  Although you can change it, you quickly
 run into trouble later.  Other programs won't know what tabstop value you
 used.  They probably use the default value of eight, and your text suddenly
@@ -410,7 +410,7 @@ It's recommended not to use hard tabs inside a string.  Replace them with
 <div class="old-help-para">The other way around works just as well:<pre>
 :set noexpandtab
 :%retab!</pre>
-<h2 class="help-heading"><span class="help-heading-tags"><a name="30.6"></a><span class="help-tag">30.6</span>	Formatting comments</h2></div>
+<h2 class="help-heading"><span class="help-heading-tags"><a name="30.6"></a><span class="help-tag">30.6</span>  	Formatting comments</h2></div>
 <div class="old-help-para">One of the great things about Vim is that it understands comments.  You can
 ask Vim to format a comment and it will do the right thing.
    Suppose, for example, that you have the following comment:</div>
@@ -529,7 +529,7 @@ typing / will remove the extra space.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 05:56 from <code><a href="https://github.com/neovim/neovim/commit/fad558b6affd54075654dd55922348f76a95e338">fad558b</a></code>
+        Generated at 2022-10-20 11:26 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 2 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_30.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_30.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>

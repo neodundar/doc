@@ -90,14 +90,14 @@
 <div class="old-help-para">This chapter provides just enough information to edit a file with Vim.  Not
 well or fast, but you can edit.  Take some time to practice with these
 commands, they form the base for what follows.</div>
-<div class="old-help-para"><a href="usr_02.html#02.1">02.1</a>	Running Vim for the First Time
-<a href="usr_02.html#02.2">02.2</a>	Inserting text
-<a href="usr_02.html#02.3">02.3</a>	Moving around
-<a href="usr_02.html#02.4">02.4</a>	Deleting characters
-<a href="usr_02.html#02.5">02.5</a>	Undo and Redo
-<a href="usr_02.html#02.6">02.6</a>	Other editing commands
-<a href="usr_02.html#02.7">02.7</a>	Getting out
-<a href="usr_02.html#02.8">02.8</a>	Finding help</div>
+<div class="old-help-para"><a href="usr_02.html#02.1">02.1</a>  	Running Vim for the First Time
+<a href="usr_02.html#02.2">02.2</a>  	Inserting text
+<a href="usr_02.html#02.3">02.3</a>  	Moving around
+<a href="usr_02.html#02.4">02.4</a>  	Deleting characters
+<a href="usr_02.html#02.5">02.5</a>  	Undo and Redo
+<a href="usr_02.html#02.6">02.6</a>  	Other editing commands
+<a href="usr_02.html#02.7">02.7</a>  	Getting out
+<a href="usr_02.html#02.8">02.8</a>  	Finding help</div>
 <div class="old-help-para">     Next chapter: <a href="usr_03.html#usr_03.txt">usr_03.txt</a>  Moving around
  Previous chapter: <a href="usr_01.html#usr_01.txt">usr_01.txt</a>  About the manuals
 Table of contents: <a href="usr_toc.html#usr_toc.txt">usr_toc.txt</a></div>
@@ -131,7 +131,7 @@ running inside an xterm, the editor uses your xterm window.  If you are using
 the command prompt under Microsoft Windows, the editing occurs inside this
 window.  The text in the window will look the same for both versions, but with
 gvim you have extra features, like a menu bar.  More about that later.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="02.2"></a><span class="help-tag">02.2</span>	Inserting text</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="02.2"></a><span class="help-tag">02.2</span>  	Inserting text</h2></div>
 <div class="old-help-para">The Vim editor is a modal editor.  That means that the editor behaves
 differently, depending on which mode you are in.  The two basic modes are
 called Normal mode and Insert mode.  In Normal mode the characters you type
@@ -176,7 +176,7 @@ forgetting which mode you are in or by accidentally typing a command that
 switches modes.  To get back to Normal mode, no matter what mode you are in,
 press the <code>&lt;Esc&gt;</code> key.  Sometimes you have to press it twice.  If Vim beeps back
 at you, you already are in Normal mode.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="02.3"></a><span class="help-tag">02.3</span>	Moving around</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="02.3"></a><span class="help-tag">02.3</span>  	Moving around</h2></div>
 <div class="old-help-para">After you return to Normal mode, you can move around by using these keys:</div>
 <div class="old-help-para">	h   left						<a name="hjkl"></a><code class="help-tag-right">hjkl</code>
 	j   down
@@ -214,7 +214,7 @@ mode.  <a href="pi_tutor.html#%3ATutor">:Tutor</a> is also a nice way to learn b
 	(Yellow river)	    |
 			    v
 			  Java (the island, not the programming language)</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="02.4"></a><span class="help-tag">02.4</span>	Deleting characters</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="02.4"></a><span class="help-tag">02.4</span>  	Deleting characters</h2></div>
 <div class="old-help-para">To delete a character, move the cursor over it and type "x".  (This is a
 throwback to the old days of the typewriter, when you deleted things by typing
 xxxx over them.)  Move the cursor to the beginning of the first line, for
@@ -255,7 +255,7 @@ between them is deleted.  The "J" command does this.
 <div class="old-help-para"><div class="help-column_heading">	A young intelligent</div><div class="help-column_heading">	turtle</div></div>
 <div class="old-help-para">Move the cursor to the first line and press "J":</div>
 <div class="old-help-para"><div class="help-column_heading">	A young intelligent turtle</div></div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="02.5"></a><span class="help-tag">02.5</span>	Undo and Redo</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="02.5"></a><span class="help-tag">02.5</span>  	Undo and Redo</h2></div>
 <div class="old-help-para">Suppose you delete too much.  Well, you can type it in again, but an easier
 way exists.  The "u" command undoes the last edit.  Take a look at this in
 action: After using "dd" to delete the first line, "u" brings it back.
@@ -286,7 +286,7 @@ edited.  Typing this command twice cancels the preceding "U".</div>
 <div class="old-help-para">The "U" command is a change by itself, which the "u" command undoes and <code>CTRL-R</code>
 redoes.  This might be a bit confusing.  Don't worry, with "u" and <code>CTRL-R</code> you
 can go to any of the situations you had.  More about that in section <a href="usr_32.html#32.2">32.2</a>.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="02.6"></a><span class="help-tag">02.6</span>	Other editing commands</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="02.6"></a><span class="help-tag">02.6</span>  	Other editing commands</h2></div>
 <div class="old-help-para">Vim has a large number of commands to change the text.  See <a href="quickref.html#Q_in">Q_in</a> and below.
 Here are a few often used ones.</div>
 <div class="old-help-para"><a name="_appending"></a><h3 class="help-heading">APPENDING</h3></div>
@@ -321,7 +321,7 @@ the end of a line by typing "a!!!&lt;Esc&gt;".  Another way to do this is to use
 command "3a!&lt;Esc&gt;".  The count of 3 tells the command that follows to triple
 its effect.  Similarly, to delete three characters, use the command "3x".  The
 count always comes before the command it applies to.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="02.7"></a><span class="help-tag">02.7</span>	Getting out</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="02.7"></a><span class="help-tag">02.7</span>  	Getting out</h2></div>
 <div class="old-help-para">To exit, use the "ZZ" command.  This command writes the file and exits.</div>
 <div class="old-help-para">	Note:
 	Unlike many other editors, Vim does not automatically make a backup
@@ -345,7 +345,7 @@ message and refuse to exit:</div>
 I'm doing looks stupid, but I really want to do this."</div>
 <div class="old-help-para">If you want to continue editing with Vim: The ":e!" command reloads the
 original version of the file.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="02.8"></a><span class="help-tag">02.8</span>	Finding help</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="02.8"></a><span class="help-tag">02.8</span>  	Finding help</h2></div>
 <div class="old-help-para">Everything you always wanted to know can be found in the Vim help files.
 Don't be afraid to ask!</div>
 <div class="old-help-para">If you know what you are looking for, it is usually easier to search for it
@@ -562,7 +562,7 @@ Summary: 					<a name="help-summary"></a><code class="help-tag-right">help-summa
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 05:56 from <code><a href="https://github.com/neovim/neovim/commit/fad558b6affd54075654dd55922348f76a95e338">fad558b</a></code>
+        Generated at 2022-10-20 11:26 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 11 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_02.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_02.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>

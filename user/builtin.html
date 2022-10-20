@@ -3133,7 +3133,7 @@ endif</pre></div>
 			ttyin		input is a terminal (tty).
 			ttyout		output is a terminal (tty).
 			unix		Unix system.
-			<a name="vim_starting"></a><code class="help-tag-right">vim_starting</code>	True during <a href="starting.html#startup">startup</a>.
+			<a name="vim_starting"></a><code class="help-tag-right">vim_starting</code>  	True during <a href="starting.html#startup">startup</a>.
 			win32		Windows system (32 or 64 bit).
 			win64		Windows system (64 bit).
 			wsl		WSL (Windows Subsystem for Linux) system.</div>
@@ -5227,13 +5227,13 @@ searchcount([{options}])					<a name="searchcount()"></a><code class="help-tag-r
 		<a href="options.html#'shortmess'">'shortmess'</a> does contain the "S" flag.</div>
 <div class="old-help-para">		This returns a Dictionary. The dictionary is empty if the
 		previous pattern was not set and "pattern" was not specified.</div>
-<div class="old-help-para"><div class="help-column_heading">		  key		type		meaning</div>		  current	<a href="eval.html#Number">Number</a>	current position of match;
+<div class="old-help-para"><div class="help-column_heading">		  key		type		meaning</div>		  current	<a href="eval.html#Number">Number</a>  	current position of match;
 						0 if the cursor position is
 						before the first match
-		  exact_match	<a href="eval.html#Boolean">Boolean</a>	1 if "current" is matched on
+		  exact_match	<a href="eval.html#Boolean">Boolean</a>  	1 if "current" is matched on
 						"pos", otherwise 0
-		  total		<a href="eval.html#Number">Number</a>	total count of matches found
-		  incomplete	<a href="eval.html#Number">Number</a>	0: search was fully completed
+		  total		<a href="eval.html#Number">Number</a>  	total count of matches found
+		  incomplete	<a href="eval.html#Number">Number</a>  	0: search was fully completed
 						1: recomputing was timed out
 						2: max count exceeded</div>
 <div class="old-help-para">		For <code>{options}</code> see further down.</div>
@@ -5296,7 +5296,7 @@ let result = searchcount(#{pattern: '\&lt;foo\&gt;'})
 " search again
 call searchcount()</pre></div>
 <div class="old-help-para">		<code>{options}</code> must be a Dictionary. It can contain:
-<div class="help-column_heading">		  key		type		meaning</div>		  recompute	<a href="eval.html#Boolean">Boolean</a>	if <a href="eval.html#TRUE">TRUE</a>, recompute the count
+<div class="help-column_heading">		  key		type		meaning</div>		  recompute	<a href="eval.html#Boolean">Boolean</a>  	if <a href="eval.html#TRUE">TRUE</a>, recompute the count
 						like <a href="pattern.html#n">n</a> or <a href="pattern.html#N">N</a> was executed.
 						otherwise returns the last
 						computed result (when <a href="pattern.html#n">n</a> or
@@ -5304,24 +5304,24 @@ call searchcount()</pre></div>
 						in <a href="options.html#'shortmess'">'shortmess'</a>, or this
 						function was called).
 						(default: <a href="eval.html#TRUE">TRUE</a>)
-		  pattern	<a href="eval.html#String">String</a>	recompute if this was given
+		  pattern	<a href="eval.html#String">String</a>  	recompute if this was given
 						and different with <a href="change.html#%40%2F">@/</a>.
 						this works as same as the
 						below command is executed
 						before calling this function<pre>let @/ = pattern</pre></div>
 <div class="old-help-para">						(default: <a href="change.html#%40%2F">@/</a>)
-		  timeout	<a href="eval.html#Number">Number</a>	0 or negative number is no
+		  timeout	<a href="eval.html#Number">Number</a>  	0 or negative number is no
 						timeout. timeout milliseconds
 						for recomputing the result
 						(default: 0)
-		  maxcount	<a href="eval.html#Number">Number</a>	0 or negative number is no
+		  maxcount	<a href="eval.html#Number">Number</a>  	0 or negative number is no
 						limit. max count of matched
 						text while recomputing the
 						result.  if search exceeded
 						total count, "total" value
 						becomes <code>maxcount + 1</code>
 						(default: 0)
-		  pos		<a href="eval.html#List">List</a>		<code>[lnum, col, off]</code> value
+		  pos		<a href="eval.html#List">List</a>  		<code>[lnum, col, off]</code> value
 						when recomputing the result.
 						this changes "current" result
 						value. see <a href="builtin.html#cursor()">cursor()</a>, |<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+builtin.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/builtin.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%20%20pos%09%09%7CList%7C%09%09%60%5Blnum%2C%20col%2C%20off%5D%60%20value%0A%09%09%09%09%09%09when%20recomputing%20the%20result.%0A%09%09%09%09%09%09this%20changes%20%22current%22%20result%0A%09%09%09%09%09%09value.%20see%20%7Ccursor()%7C%2C%20%7Cgetpos()%0A%09%09%09%09%09%09(default%3A%20cursor's%20position)%0A%0A%09%09Can%20also%20be%20used%20as%20a%20%7Cmethod%7C%3A%20%3E%0D%60%60%60">getpos()</a>
@@ -7355,7 +7355,7 @@ Don't forget that "^" will only match at the first character of the String and
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 05:55 from <code><a href="https://github.com/neovim/neovim/commit/fad558b6affd54075654dd55922348f76a95e338">fad558b</a></code>
+        Generated at 2022-10-20 11:25 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 17 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+builtin.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/builtin.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim

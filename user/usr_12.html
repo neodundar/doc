@@ -90,14 +90,14 @@
 <div class="old-help-para">By combining several commands you can make Vim do nearly everything.  In this
 chapter a number of useful combinations will be presented.  This uses the
 commands introduced in the previous chapters and a few more.</div>
-<div class="old-help-para"><a href="usr_12.html#12.1">12.1</a>	Replace a word
-<a href="usr_12.html#12.2">12.2</a>	Change "Last, First" to "First Last"
-<a href="usr_12.html#12.3">12.3</a>	Sort a list
-<a href="usr_12.html#12.4">12.4</a>	Reverse line order
-<a href="usr_12.html#12.5">12.5</a>	Count words
-<a href="usr_12.html#12.6">12.6</a>	Find a man page
-<a href="usr_12.html#12.7">12.7</a>	Trim blanks
-<a href="usr_12.html#12.8">12.8</a>	Find where a word is used</div>
+<div class="old-help-para"><a href="usr_12.html#12.1">12.1</a>  	Replace a word
+<a href="usr_12.html#12.2">12.2</a>  	Change "Last, First" to "First Last"
+<a href="usr_12.html#12.3">12.3</a>  	Sort a list
+<a href="usr_12.html#12.4">12.4</a>  	Reverse line order
+<a href="usr_12.html#12.5">12.5</a>  	Count words
+<a href="usr_12.html#12.6">12.6</a>  	Find a man page
+<a href="usr_12.html#12.7">12.7</a>  	Trim blanks
+<a href="usr_12.html#12.8">12.8</a>  	Find where a word is used</div>
 <div class="old-help-para">     Next chapter: <a href="usr_20.html#usr_20.txt">usr_20.txt</a>  Typing command-line commands quickly
  Previous chapter: <a href="usr_11.html#usr_11.txt">usr_11.txt</a>  Recovering from a crash
 Table of contents: <a href="usr_toc.html#usr_toc.txt">usr_toc.txt</a></div>
@@ -147,7 +147,7 @@ to the next file.  This stops the execution, and everything is done.</div>
 the "e" flag to the substitute command:<pre>
 :%s/\&lt;GetResp\&gt;/GetAnswer/ge</pre>
 The "e" flag tells ":substitute" that not finding a match is not an error.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="12.2"></a><span class="help-tag">12.2</span>	Change "Last, First" to "First Last"</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="12.2"></a><span class="help-tag">12.2</span>  	Change "Last, First" to "First Last"</h2></div>
 <div class="old-help-para">You have a list of names in this form:</div>
 <div class="old-help-para"><div class="help-column_heading">	Doe, John</div><div class="help-column_heading">	Smith, Peter</div></div>
 <div class="old-help-para">You want to change that to:</div>
@@ -175,7 +175,7 @@ refers to the text matched by the second "\( \)", which is the "First" name.
    You can use up to nine backreferences in the "to" part of a substitute
 command.  "\0" stands for the whole matched pattern.  There are a few more
 special items in a substitute command, see <a href="change.html#sub-replace-special">sub-replace-special</a>.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="12.3"></a><span class="help-tag">12.3</span>	Sort a list</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="12.3"></a><span class="help-tag">12.3</span>  	Sort a list</h2></div>
 <div class="old-help-para">In a Makefile you often have a list of files.  For example:</div>
 <div class="old-help-para"><div class="help-column_heading">	OBJS = \</div><div class="help-column_heading">		version.o \</div><div class="help-column_heading">		pch.o \</div><div class="help-column_heading">		getopt.o \</div><div class="help-column_heading">		util.o \</div><div class="help-column_heading">		getopt1.o \</div><div class="help-column_heading">		inp.o \</div><div class="help-column_heading">		patch.o \</div><div class="help-column_heading">		backup.o</div></div>
 <div class="old-help-para">To sort this list, filter the text through the external sort command:<pre>
@@ -195,7 +195,7 @@ must have a backslash.
    The simplest solution is to add the backslash with "A \&lt;Esc&gt;".  You can
 keep the backslash in the last line, if you make sure an empty line comes
 after it.  That way you don't have this problem again.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="12.4"></a><span class="help-tag">12.4</span>	Reverse line order</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="12.4"></a><span class="help-tag">12.4</span>  	Reverse line order</h2></div>
 <div class="old-help-para">The <a href="repeat.html#%3Aglobal">:global</a> command can be combined with the <a href="change.html#%3Amove">:move</a> command to move all the
 lines before the first line, resulting in a reversed file.  The command is:<pre>
 :global/^/move 0</pre>
@@ -211,7 +211,7 @@ the first.</div>
 mark it with "mt".  Then move the cursor to the last line in the range and
 type:<pre>
 :'t+1,.g/^/m 't</pre>
-<h2 class="help-heading"><span class="help-heading-tags"><a name="12.5"></a><span class="help-tag">12.5</span>	Count words</h2></div>
+<h2 class="help-heading"><span class="help-heading-tags"><a name="12.5"></a><span class="help-tag">12.5</span>  	Count words</h2></div>
 <div class="old-help-para">Sometimes you have to write a text with a maximum number of words.  Vim can
 count the words for you.
    When the whole file is what you want to count the words in, use this
@@ -230,7 +230,7 @@ exercise, but there is an easier way.  With Visual mode, select the text you
 want to count words in.  Then type g <code>CTRL-G</code>.  The result:</div>
 <div class="old-help-para"><div class="help-column_heading">	Selected 5 of 293 Lines; 70 of 1884 Words; 359 of 10928 Bytes</div></div>
 <div class="old-help-para">For other ways to count words, lines and other items, see <a href="tips.html#count-items">count-items</a>.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="12.6"></a><span class="help-tag">12.6</span>	Find a man page<span class="help-heading-tags">					<a name="find-manpage"></a><span class="help-tag">find-manpage</span></h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="12.6"></a><span class="help-tag">12.6</span>  	Find a man page<span class="help-heading-tags">					<a name="find-manpage"></a><span class="help-tag">find-manpage</span></h2></div>
 <div class="old-help-para">While editing a shell script or C program, you are using a command or function
 that you want to find the man page for (this is on Unix).  Let's first use a
 simple way: Move the cursor to the word you want to find help on and press<pre>
@@ -254,7 +254,7 @@ this line:</div>
 <div class="old-help-para"><div class="help-column_heading">	if ( strstr (input, "aap") == )</div></div>
 <div class="old-help-para">Move the cursor to somewhere on "strstr" and type "K".  A window will open
 to display the man page for strstr().</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="12.7"></a><span class="help-tag">12.7</span>	Trim blanks</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="12.7"></a><span class="help-tag">12.7</span>  	Trim blanks</h2></div>
 <div class="old-help-para">Some people find spaces and tabs at the end of a line useless, wasteful, and
 ugly.  To remove whitespace at the end of every line, execute the following
 command:<pre>
@@ -274,7 +274,7 @@ it's "/&lt;Space&gt;&lt;Tab&gt;".   Now use "x" to delete the space and check th
 amount of white space doesn't change.  You might have to insert a tab if it
 does change.  Type "n" to find the next match.  Repeat this until no more
 matches can be found.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="12.8"></a><span class="help-tag">12.8</span>	Find where a word is used</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="12.8"></a><span class="help-tag">12.8</span>  	Find where a word is used</h2></div>
 <div class="old-help-para">If you are a Unix user, you can use a combination of Vim and the grep command
 to edit all the files that contain a given word.  This is extremely useful if
 you are working on a program and want to view or edit all the files that
@@ -343,7 +343,7 @@ matches and where they are.
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 05:56 from <code><a href="https://github.com/neovim/neovim/commit/fad558b6affd54075654dd55922348f76a95e338">fad558b</a></code>
+        Generated at 2022-10-20 11:26 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_12.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_12.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>

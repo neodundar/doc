@@ -556,13 +556,13 @@ MY_VAR_6		shada file</div>
 <a href="eval.html#curly-braces-names">curly-braces-names</a>.</div>
 <div class="old-help-para"><h2 class="help-heading">2. Expression syntax<span class="help-heading-tags">					<a name="expression-syntax"></a><span class="help-tag">expression-syntax</span></h2></div>
 <div class="old-help-para">Expression syntax summary, from least to most significant:</div>
-<div class="old-help-para"><a href="eval.html#expr1">expr1</a>	expr2
+<div class="old-help-para"><a href="eval.html#expr1">expr1</a>  	expr2
 	expr2 ? expr1 : expr1	if-then-else</div>
-<div class="old-help-para"><a href="eval.html#expr2">expr2</a>	expr3
+<div class="old-help-para"><a href="eval.html#expr2">expr2</a>  	expr3
 	expr3 || expr3 ...	logical OR</div>
-<div class="old-help-para"><a href="eval.html#expr3">expr3</a>	expr4
+<div class="old-help-para"><a href="eval.html#expr3">expr3</a>  	expr4
 	expr4 &amp;&amp; expr4 ...	logical AND</div>
-<div class="old-help-para"><a href="eval.html#expr4">expr4</a>	expr5
+<div class="old-help-para"><a href="eval.html#expr4">expr4</a>  	expr5
 	expr5 == expr5		equal
 	expr5 != expr5		not equal
 	expr5 &gt;	 expr5		greater than
@@ -578,27 +578,27 @@ MY_VAR_6		shada file</div>
 <div class="old-help-para">	expr5 is expr5		same <a href="eval.html#List">List</a>, <a href="eval.html#Dictionary">Dictionary</a> or <a href="eval.html#Blob">Blob</a> instance
 	expr5 isnot expr5	different <a href="eval.html#List">List</a>, <a href="eval.html#Dictionary">Dictionary</a> or <a href="eval.html#Blob">Blob</a>
 				instance</div>
-<div class="old-help-para"><a href="eval.html#expr5">expr5</a>	expr6
+<div class="old-help-para"><a href="eval.html#expr5">expr5</a>  	expr6
 	expr6 +	 expr6 ...	number addition, list or blob concatenation
 	expr6 -		 expr6 ...	number subtraction
 	expr6 .	 expr6 ...	string concatenation
 	expr6 .. expr6 ...	string concatenation</div>
-<div class="old-help-para"><a href="eval.html#expr6">expr6</a>	expr7
+<div class="old-help-para"><a href="eval.html#expr6">expr6</a>  	expr7
 	expr7 *	 expr7 ...	number multiplication
 	expr7 /	 expr7 ...	number division
 	expr7 %	 expr7 ...	number modulo</div>
-<div class="old-help-para"><a href="eval.html#expr7">expr7</a>	expr8
+<div class="old-help-para"><a href="eval.html#expr7">expr7</a>  	expr8
 	! expr7			logical NOT
 <div class="help-li" style=""> expr7			unary minus
 </div><div class="help-li" style=""> expr7			unary plus
 </div></div>
-<div class="old-help-para"><a href="eval.html#expr8">expr8</a>	expr9
+<div class="old-help-para"><a href="eval.html#expr8">expr8</a>  	expr9
 	expr8[expr1]		byte of a String or item of a <a href="eval.html#List">List</a>
 	expr8[expr1 : expr1]	substring of a String or sublist of a <a href="eval.html#List">List</a>
 	expr8.name		entry in a <a href="eval.html#Dictionary">Dictionary</a>
 	expr8(expr1, ...)	function call with <a href="eval.html#Funcref">Funcref</a> variable
 	expr8-&gt;name(expr1, ...)	<a href="eval.html#method">method</a> call</div>
-<div class="old-help-para"><a href="eval.html#expr9">expr9</a>	number			number constant
+<div class="old-help-para"><a href="eval.html#expr9">expr9</a>  	number			number constant
 	"string"		string constant, backslash is special
 string		string constant, ' is doubled
 	[expr1, ...]		<a href="eval.html#List">List</a>
@@ -639,10 +639,10 @@ use in a variable such as "a:1".</div>
 expr4 &amp;&amp; expr4 ..	logical AND		<a name="expr-%26%26"></a><code class="help-tag-right">expr-&amp;&amp;</code></div>
 <div class="old-help-para">The "||" and "&amp;&amp;" operators take one argument on each side.  The arguments
 are (converted to) Numbers.  The result is:</div>
-<div class="old-help-para"><div class="help-column_heading">    input			 output</div><div class="help-column_heading">n1	n2		n1 || n2	n1 &amp;&amp; n2</div><a href="eval.html#FALSE">FALSE</a>	<a href="eval.html#FALSE">FALSE</a>		<a href="eval.html#FALSE">FALSE</a>		<a href="eval.html#FALSE">FALSE</a>
-<a href="eval.html#FALSE">FALSE</a>	<a href="eval.html#TRUE">TRUE</a>		<a href="eval.html#TRUE">TRUE</a>		<a href="eval.html#FALSE">FALSE</a>
-<a href="eval.html#TRUE">TRUE</a>	<a href="eval.html#FALSE">FALSE</a>		<a href="eval.html#TRUE">TRUE</a>		<a href="eval.html#FALSE">FALSE</a>
-<a href="eval.html#TRUE">TRUE</a>	<a href="eval.html#TRUE">TRUE</a>		<a href="eval.html#TRUE">TRUE</a>		<a href="eval.html#TRUE">TRUE</a></div>
+<div class="old-help-para"><div class="help-column_heading">    input			 output</div><div class="help-column_heading">n1	n2		n1 || n2	n1 &amp;&amp; n2</div><a href="eval.html#FALSE">FALSE</a>  	<a href="eval.html#FALSE">FALSE</a>  		<a href="eval.html#FALSE">FALSE</a>  		<a href="eval.html#FALSE">FALSE</a>
+<a href="eval.html#FALSE">FALSE</a>  	<a href="eval.html#TRUE">TRUE</a>  		<a href="eval.html#TRUE">TRUE</a>  		<a href="eval.html#FALSE">FALSE</a>
+<a href="eval.html#TRUE">TRUE</a>  	<a href="eval.html#FALSE">FALSE</a>  		<a href="eval.html#TRUE">TRUE</a>  		<a href="eval.html#FALSE">FALSE</a>
+<a href="eval.html#TRUE">TRUE</a>  	<a href="eval.html#TRUE">TRUE</a>  		<a href="eval.html#TRUE">TRUE</a>  		<a href="eval.html#TRUE">TRUE</a></div>
 <div class="old-help-para">The operators can be concatenated, for example:<pre>
 &amp;nu || &amp;list &amp;&amp; &amp;shell == "csh"</pre>
 Note that "&amp;&amp;" takes precedence over "||", so this has the meaning of:<pre>
@@ -661,7 +661,7 @@ only be evaluated if "b" has been defined.</div>
 <div class="old-help-para">expr5 <code>{cmp}</code> expr5</div>
 <div class="old-help-para">Compare two expr5 expressions, resulting in a 0 if it evaluates to false, or 1
 if it evaluates to true.</div>
-<div class="old-help-para">			<a name="expr-%3D%3D"></a><code class="help-tag-right">expr-==</code>  <a name="expr-%21%3D"></a><code class="help-tag">expr-!=</code>  <a name="expr-%3E"></a><code class="help-tag">expr-&gt;</code>	 <a name="expr-%3E%3D"></a><code class="help-tag-right">expr-&gt;=</code>
+<div class="old-help-para">			<a name="expr-%3D%3D"></a><code class="help-tag-right">expr-==</code>  <a name="expr-%21%3D"></a><code class="help-tag">expr-!=</code>  <a name="expr-%3E"></a><code class="help-tag">expr-&gt;</code>  	 <a name="expr-%3E%3D"></a><code class="help-tag-right">expr-&gt;=</code>
 			<a name="expr-%3C"></a><code class="help-tag-right">expr-&lt;</code>   <a name="expr-%3C%3D"></a><code class="help-tag">expr-&lt;=</code>  <a name="expr-%3D~"></a><code class="help-tag">expr-=~</code>  <a name="expr-%21~"></a><code class="help-tag">expr-!~</code>
 			<a name="expr-%3D%3D%23"></a><code class="help-tag-right">expr-==#</code> <a name="expr-%21%3D%23"></a><code class="help-tag">expr-!=#</code> <a name="expr-%3E%23"></a><code class="help-tag">expr-&gt;#</code>  <a name="expr-%3E%3D%23"></a><code class="help-tag">expr-&gt;=#</code>
 			<a name="expr-%3C%23"></a><code class="help-tag-right">expr-&lt;#</code>  <a name="expr-%3C%3D%23"></a><code class="help-tag">expr-&lt;=#</code> <a name="expr-%3D~%23"></a><code class="help-tag">expr-=~#</code> <a name="expr-%21~%23"></a><code class="help-tag">expr-!~#</code>
@@ -776,8 +776,8 @@ attempts to concatenate a Float and a String.</div>
 <div class="old-help-para">expr7							<a name="expr7"></a><code class="help-tag-right">expr7</code>
 -----
 ! expr7			logical NOT		<a name="expr-%21"></a><code class="help-tag-right">expr-!</code>
-<div class="help-li" style=""> expr7			unary minus		<a name="expr-unary--"></a><code class="help-tag-right">expr-unary--</code>
-</div><div class="help-li" style=""> expr7			unary plus		<a name="expr-unary-%2B"></a><code class="help-tag-right">expr-unary-+</code>
+<div class="help-li" style=""> expr7			unary minus		<a name="expr-unary--"></a><code class="help-tag-right">expr-unary--</code>  
+</div><div class="help-li" style=""> expr7			unary plus		<a name="expr-unary-%2B"></a><code class="help-tag-right">expr-unary-+</code>  
 </div></div>
 <div class="old-help-para">For '!' <a href="eval.html#TRUE">TRUE</a> becomes <a href="eval.html#FALSE">FALSE</a>, <a href="eval.html#FALSE">FALSE</a> becomes <a href="eval.html#TRUE">TRUE</a> (one).
 For '-' the sign of the number is changed.
@@ -796,7 +796,7 @@ in any order.  E.g., these are all possible:
 	expr8(expr1, ...)[expr1].name
 	expr8-&gt;(expr1, ...)[expr1]
 Evaluation is always from left to right.</div>
-<div class="old-help-para">expr8[expr1]		item of String or <a href="eval.html#List">List</a>	<a name="expr-%5B%5D"></a><code class="help-tag">expr-[]</code> <a name="E111"></a><code class="help-tag">E111</code>
+<div class="old-help-para">expr8[expr1]		item of String or <a href="eval.html#List">List</a>  	<a name="expr-%5B%5D"></a><code class="help-tag">expr-[]</code> <a name="E111"></a><code class="help-tag">E111</code>
 							<a name="subscript"></a><code class="help-tag-right">subscript</code>
 In legacy Vim script:
 If expr8 is a Number or String this results in a String that contains the
@@ -817,7 +817,7 @@ error.  Example:<pre>:let item = mylist[-1]                " get last item</pre>
 Generally, if a <a href="eval.html#List">List</a> index is equal to or higher than the length of the
 <a href="eval.html#List">List</a>, or more negative than the length of the <a href="eval.html#List">List</a>, this results in an
 error.</div>
-<div class="old-help-para">expr8[expr1a : expr1b]	substring or <a href="eval.html#sublist">sublist</a>		<a name="expr-%5B%3A%5D"></a><code class="help-tag-right">expr-[:]</code> <a name="substring"></a><code class="help-tag">substring</code></div>
+<div class="old-help-para">expr8[expr1a : expr1b]	substring or <a href="eval.html#sublist">sublist</a>  		<a name="expr-%5B%3A%5D"></a><code class="help-tag-right">expr-[:]</code> <a name="substring"></a><code class="help-tag">substring</code></div>
 <div class="old-help-para">If expr8 is a String this results in the substring with the bytes or
 characters from expr1a to and including expr1b.  expr8 is used as a String,
 expr1a and expr1b are used as a Number.</div>
@@ -850,7 +850,7 @@ error.</div>
 <div class="old-help-para">Watch out for confusion between a namespace and a variable followed by a colon
 for a sublist:<pre>mylist[n:]     " uses variable n
 mylist[s:]     " uses namespace s:, error!</pre>
-expr8.name		entry in a <a href="eval.html#Dictionary">Dictionary</a>		<a name="expr-entry"></a><code class="help-tag-right">expr-entry</code></div>
+expr8.name		entry in a <a href="eval.html#Dictionary">Dictionary</a>  		<a name="expr-entry"></a><code class="help-tag-right">expr-entry</code></div>
 <div class="old-help-para">If expr8 is a <a href="eval.html#Dictionary">Dictionary</a> and it is followed by a dot, then the following
 name will be used as a key in the <a href="eval.html#Dictionary">Dictionary</a>.  This is just like:
 expr8[name].</div>
@@ -3427,7 +3427,7 @@ Command-line expressions highlighting		</a>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 05:55 from <code><a href="https://github.com/neovim/neovim/commit/fad558b6affd54075654dd55922348f76a95e338">fad558b</a></code>
+        Generated at 2022-10-20 11:25 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 3 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+eval.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/eval.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim

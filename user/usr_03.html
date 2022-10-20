@@ -91,16 +91,16 @@
 place.  Vim has a large number of commands to position the cursor.  This
 chapter shows you how to use the most important ones.  You can find a list of
 these commands below <a href="quickref.html#Q_lr">Q_lr</a>.</div>
-<div class="old-help-para"><a href="usr_03.html#03.1">03.1</a>	Word movement
-<a href="usr_03.html#03.2">03.2</a>	Moving to the start or end of a line
-<a href="usr_03.html#03.3">03.3</a>	Moving to a character
-<a href="usr_03.html#03.4">03.4</a>	Matching a parenthesis
-<a href="usr_03.html#03.5">03.5</a>	Moving to a specific line
-<a href="usr_03.html#03.6">03.6</a>	Telling where you are
-<a href="usr_03.html#03.7">03.7</a>	Scrolling around
-<a href="usr_03.html#03.8">03.8</a>	Simple searches
-<a href="usr_03.html#03.9">03.9</a>	Simple search patterns
-<a href="usr_03.html#03.10">03.10</a>	Using marks</div>
+<div class="old-help-para"><a href="usr_03.html#03.1">03.1</a>  	Word movement
+<a href="usr_03.html#03.2">03.2</a>  	Moving to the start or end of a line
+<a href="usr_03.html#03.3">03.3</a>  	Moving to a character
+<a href="usr_03.html#03.4">03.4</a>  	Matching a parenthesis
+<a href="usr_03.html#03.5">03.5</a>  	Moving to a specific line
+<a href="usr_03.html#03.6">03.6</a>  	Telling where you are
+<a href="usr_03.html#03.7">03.7</a>  	Scrolling around
+<a href="usr_03.html#03.8">03.8</a>  	Simple searches
+<a href="usr_03.html#03.9">03.9</a>  	Simple search patterns
+<a href="usr_03.html#03.10">03.10</a>  	Using marks</div>
 <div class="old-help-para">     Next chapter: <a href="usr_04.html#usr_04.txt">usr_04.txt</a>  Making small changes
  Previous chapter: <a href="usr_02.html#usr_02.txt">usr_02.txt</a>  The first steps in Vim
 Table of contents: <a href="usr_toc.html#usr_toc.txt">usr_toc.txt</a></div>
@@ -137,7 +137,7 @@ moving by WORDs are also uppercase, as this figure shows:</div>
 	     gE      B			 W			 E</div>
 <div class="old-help-para">With this mix of lowercase and uppercase commands, you can quickly move
 forward and backward through a paragraph.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="03.2"></a><span class="help-tag">03.2</span>	Moving to the start or end of a line</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="03.2"></a><span class="help-tag">03.2</span>  	Moving to the start or end of a line</h2></div>
 <div class="old-help-para">The "$" command moves the cursor to the end of a line.  If your keyboard has
 an <code>&lt;End&gt;</code> key it will do the same thing.</div>
 <div class="old-help-para">The "^" command moves to the first non-blank character of the line.  The "0"
@@ -156,7 +156,7 @@ line, and so on.
    The "0" command doesn't take a count argument, because the "0" would be
 part of the count.  Unexpectedly, using a count with "^" doesn't have any
 effect.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="03.3"></a><span class="help-tag">03.3</span>	Moving to a character</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="03.3"></a><span class="help-tag">03.3</span>  	Moving to a character</h2></div>
 <div class="old-help-para">One of the most useful movement commands is the single-character search
 command.  The command "fx" searches forward in the line for the single
 character x.  Hint: "f" stands for "Find".
@@ -186,7 +186,7 @@ wrong command.  You type "f" to search backward, for example, only to realize
 that you really meant "F".  To abort a search, press <code>&lt;Esc&gt;</code>.  So "f&lt;Esc&gt;" is an
 aborted forward search and doesn't do anything.  Note: <code>&lt;Esc&gt;</code> cancels most
 operations, not just searches.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="03.4"></a><span class="help-tag">03.4</span>	Matching a parenthesis</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="03.4"></a><span class="help-tag">03.4</span>  	Matching a parenthesis</h2></div>
 <div class="old-help-para">When writing a program you often end up with nested () constructs.  Then the
 "%" command is very handy: It moves to the matching paren.  If the cursor is
 on a "(" it will move to the matching ")".  If it's on a ")" it will move to
@@ -202,7 +202,7 @@ one.  Thus if the cursor is at the start of the line of the previous example,
 "%" will search forward and find the first "(".  Then it moves to its match:</div>
 <div class="old-help-para">if (a == (b * c) / d)		---+----------------&gt;
 			   %</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="03.5"></a><span class="help-tag">03.5</span>	Moving to a specific line</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="03.5"></a><span class="help-tag">03.5</span>  	Moving to a specific line</h2></div>
 <div class="old-help-para">If you are a C or C++ programmer, you are familiar with error messages such as
 the following:</div>
 <div class="old-help-para"><div class="help-column_heading">	prog.c:33: j   undeclared (first use in this function)</div></div>
@@ -245,7 +245,7 @@ you can see?  This figure shows the three commands you can use:</div>
 			+---------------------------+</div>
 <div class="old-help-para">Hints: "H" stands for Home, "M" for Middle and "L" for Last.  Alternatively,
 "H" for high, "M" for Middle and "L" for low.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="03.6"></a><span class="help-tag">03.6</span>	Telling where you are</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="03.6"></a><span class="help-tag">03.6</span>  	Telling where you are</h2></div>
 <div class="old-help-para">To see where you are in a file, there are three ways:</div>
 <div class="old-help-para">1.  Use the <code>CTRL-G</code> command.  You get a message like this (assuming the <a href="options.html#'ruler'">'ruler'</a>
     option is off):</div>
@@ -273,7 +273,7 @@ you can see?  This figure shows the three commands you can use:</div>
 :set ruler</pre>
 Using the <a href="options.html#'ruler'">'ruler'</a> option has the advantage that it doesn't take much room,
 thus there is more space for your text.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="03.7"></a><span class="help-tag">03.7</span>	Scrolling around</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="03.7"></a><span class="help-tag">03.7</span>  	Scrolling around</h2></div>
 <div class="old-help-para">The <code>CTRL-U</code> command scrolls down half a screen of text.  Think of looking
 through a viewing window at the text and moving this window up by half the
 height of the window.  Thus the window moves up over the text, which is
@@ -319,7 +319,7 @@ the cursor.  That's done with the "zz" command.</div>
 <div class="old-help-para">The "zt" command puts the cursor line at the top, "zb" at the bottom.  There
 are a few more scrolling commands, see <a href="quickref.html#Q_sc">Q_sc</a>.  To always keep a few lines of
 context around the cursor, use the <a href="options.html#'scrolloff'">'scrolloff'</a> option.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="03.8"></a><span class="help-tag">03.8</span>	Simple searches</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="03.8"></a><span class="help-tag">03.8</span>  	Simple searches</h2></div>
 <div class="old-help-para">To search for a string, use the "/string" command.  To find the word include,
 for example, use the command:<pre>
 /include</pre>
@@ -426,7 +426,7 @@ Go:set hlsearch&lt;Esc&gt;</pre>
 file:<pre>
 ZZ</pre>
 If you now start Vim again, the <a href="options.html#'hlsearch'">'hlsearch'</a> option will already be set.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="03.9"></a><span class="help-tag">03.9</span>	Simple search patterns</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="03.9"></a><span class="help-tag">03.9</span>  	Simple search patterns</h2></div>
 <div class="old-help-para">The Vim editor uses regular expressions to specify what to search for.
 Regular expressions are an extremely powerful and compact way to specify a
 search pattern.  Unfortunately, this power comes at a price, because regular
@@ -461,7 +461,7 @@ putting a backslash before it.
    If you search for "ter.", you will find these matches:</div>
 <div class="old-help-para"><div class="help-column_heading">	We use a computer that became the cummin winter.</div>		      xxxx			    xxxx</div>
 <div class="old-help-para">Searching for "ter\." only finds the second match.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="03.10"></a><span class="help-tag">03.10</span>	Using marks</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="03.10"></a><span class="help-tag">03.10</span>  	Using marks</h2></div>
 <div class="old-help-para">When you make a jump to a position with the "G" command, Vim remembers the
 position from before this jump.  This position is called a mark.  To go back
 where you came from, use this command:<pre>
@@ -575,7 +575,7 @@ You will notice a few special marks.  These include:</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 05:56 from <code><a href="https://github.com/neovim/neovim/commit/fad558b6affd54075654dd55922348f76a95e338">fad558b</a></code>
+        Generated at 2022-10-20 11:26 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 1 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_03.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_03.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>

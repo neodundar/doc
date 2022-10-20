@@ -91,10 +91,10 @@
 stores enough information to be able to restore most of your work.  This
 chapter shows you how to get your work back and explains how the swap file is
 used.</div>
-<div class="old-help-para"><a href="usr_11.html#11.1">11.1</a>	Basic recovery
-<a href="usr_11.html#11.2">11.2</a>	Where is the swap file?
-<a href="usr_11.html#11.3">11.3</a>	Crashed or not?
-<a href="usr_11.html#11.4">11.4</a>	Further reading</div>
+<div class="old-help-para"><a href="usr_11.html#11.1">11.1</a>  	Basic recovery
+<a href="usr_11.html#11.2">11.2</a>  	Where is the swap file?
+<a href="usr_11.html#11.3">11.3</a>  	Crashed or not?
+<a href="usr_11.html#11.4">11.4</a>  	Further reading</div>
 <div class="old-help-para">     Next chapter: <a href="usr_12.html#usr_12.txt">usr_12.txt</a>  Clever tricks
  Previous chapter: <a href="usr_10.html#usr_10.txt">usr_10.txt</a>  Making big changes
 Table of contents: <a href="usr_toc.html#usr_toc.txt">usr_toc.txt</a></div>
@@ -132,7 +132,7 @@ the system went down, the changes after the last flush will be lost.</div>
 <div class="old-help-para">If you were editing without a file name, give an empty string as argument:<pre>
 vim -r ""</pre>
 You must be in the right directory, otherwise Vim can't find the swap file.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="11.2"></a><span class="help-tag">11.2</span>	Where is the swap file?</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="11.2"></a><span class="help-tag">11.2</span>  	Where is the swap file?</h2></div>
 <div class="old-help-para">Vim can store the swap file in several places.  Normally it is in the same
 directory as the original file.  To find it, change to the directory of the
 file, and use:<pre>
@@ -166,7 +166,7 @@ put the swap file.</div>
 	invalid), Vim does a desperate try to find the file "filename.swp".
 	If that fails too, you will have to give the name of the swapfile
 	itself to be able to recover the file.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="11.3"></a><span class="help-tag">11.3</span>	Crashed or not?<span class="help-heading-tags">					<a name="ATTENTION"></a><span class="help-tag">ATTENTION</span> <a name="E325"></a><span class="help-tag">E325</span></span></h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="11.3"></a><span class="help-tag">11.3</span>  	Crashed or not?<span class="help-heading-tags">					<a name="ATTENTION"></a><span class="help-tag">ATTENTION</span> <a name="E325"></a><span class="help-tag">E325</span></span></h2></div>
 <div class="old-help-para">Vim tries to protect you from doing stupid things.  Suppose you innocently
 start editing a file, expecting the contents of the file to show up.  Instead,
 Vim produces a very long message:</div>
@@ -264,11 +264,11 @@ machines.  Therefore, don't rely on Vim always warning you.</div>
 <div class="old-help-para">If you really don't want to see this message, you can add the 'A' flag to the
 <a href="options.html#'shortmess'">'shortmess'</a> option.  But it's very unusual that you need this.</div>
 <div class="old-help-para">For programmatic access to the swap file, see <a href="builtin.html#swapinfo()">swapinfo()</a>.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="11.4"></a><span class="help-tag">11.4</span>	Further reading</h2></div>
-<div class="old-help-para"><a href="recover.html#swap-file">swap-file</a>	An explanation about where the swap file will be created and
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="11.4"></a><span class="help-tag">11.4</span>  	Further reading</h2></div>
+<div class="old-help-para"><a href="recover.html#swap-file">swap-file</a>  	An explanation about where the swap file will be created and
 		what its name is.
-<a href="recover.html#%3Apreserve">:preserve</a>	Manually flushing the swap file to disk.
-<a href="recover.html#%3Aswapname">:swapname</a>	See the name of the swap file for the current file.
+<a href="recover.html#%3Apreserve">:preserve</a>  	Manually flushing the swap file to disk.
+<a href="recover.html#%3Aswapname">:swapname</a>  	See the name of the swap file for the current file.
 <a href="options.html#'updatecount'">'updatecount'</a>	Number of key strokes after which the swap file is flushed to
 		disk.
 <a href="options.html#'updatetime'">'updatetime'</a>	Timeout after which the swap file is flushed to disk.
@@ -297,7 +297,7 @@ machines.  Therefore, don't rely on Vim always warning you.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 05:56 from <code><a href="https://github.com/neovim/neovim/commit/fad558b6affd54075654dd55922348f76a95e338">fad558b</a></code>
+        Generated at 2022-10-20 11:26 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_11.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_11.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>

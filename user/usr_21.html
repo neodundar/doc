@@ -91,12 +91,12 @@
 executing program from inside Vim or by leaving Vim and coming back later.
 Furthermore, this is about the ways to remember the state of Vim and restore
 it later.</div>
-<div class="old-help-para"><a href="usr_21.html#21.1">21.1</a>	Suspend and resume
-<a href="usr_21.html#21.2">21.2</a>	Executing shell commands
-<a href="usr_21.html#21.3">21.3</a>	Remembering information; ShaDa
-<a href="usr_21.html#21.4">21.4</a>	Sessions
-<a href="usr_21.html#21.5">21.5</a>	Views
-<a href="usr_21.html#21.6">21.6</a>	Modelines</div>
+<div class="old-help-para"><a href="usr_21.html#21.1">21.1</a>  	Suspend and resume
+<a href="usr_21.html#21.2">21.2</a>  	Executing shell commands
+<a href="usr_21.html#21.3">21.3</a>  	Remembering information; ShaDa
+<a href="usr_21.html#21.4">21.4</a>  	Sessions
+<a href="usr_21.html#21.5">21.5</a>  	Views
+<a href="usr_21.html#21.6">21.6</a>  	Modelines</div>
 <div class="old-help-para">     Next chapter: <a href="usr_22.html#usr_22.txt">usr_22.txt</a>  Finding the file to edit
  Previous chapter: <a href="usr_20.html#usr_20.txt">usr_20.txt</a>  Typing command-line commands quickly
 Table of contents: <a href="usr_toc.html#usr_toc.txt">usr_toc.txt</a></div>
@@ -117,7 +117,7 @@ you.  This also has the functionality of being able to execute shell commands.
 But it's a new shell, not the one that you started Vim from.
    When you are running the GUI you can't go back to the shell where Vim was
 started.  <code>CTRL-Z</code> will minimize the Vim window instead.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="21.2"></a><span class="help-tag">21.2</span>	Executing shell commands</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="21.2"></a><span class="help-tag">21.2</span>  	Executing shell commands</h2></div>
 <div class="old-help-para">To execute a single shell command from Vim use ":!{command}".  For example, to
 see a directory listing:<pre>
 :!ls
@@ -139,7 +139,7 @@ of text lines is filtered through the program.</div>
 better at it.  You can start a new shell with <a href="various.html#%3Aterminal">:terminal</a>.</div>
 <div class="old-help-para">This is similar to using <code>CTRL-Z</code> to suspend Vim.  The difference is that a new
 shell is started.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="21.3"></a><span class="help-tag">21.3</span>	Remembering information; ShaDa</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="21.3"></a><span class="help-tag">21.3</span>  	Remembering information; ShaDa</h2></div>
 <div class="old-help-para">After editing for a while you will have text in registers, marks in various
 files, a command line history filled with carefully crafted commands.  When
 you exit Vim all of this is lost.  But you can get it back!</div>
@@ -241,7 +241,7 @@ the ! only information that wasn't set is used.
    These commands can also be used to store info and use it again later.  You
 could make a directory full of ShaDa files, each containing info for a
 different purpose.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="21.4"></a><span class="help-tag">21.4</span>	Sessions</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="21.4"></a><span class="help-tag">21.4</span>  	Sessions</h2></div>
 <div class="old-help-para">Suppose you are editing along, and it is the end of the day.  You want to quit
 work and pick up where you left off the next day.  You can do this by saving
 your editing session and restoring it the next day.
@@ -340,7 +340,7 @@ this yourself then.  Example:<pre>
 And to restore this again:<pre>
 :source ~/.config/nvim/secret.vim
 :rshada! ~/.local/state/nvim/shada/secret.shada</pre>
-<h2 class="help-heading"><span class="help-heading-tags"><a name="21.5"></a><span class="help-tag">21.5</span>	Views</h2></div>
+<h2 class="help-heading"><span class="help-heading-tags"><a name="21.5"></a><span class="help-tag">21.5</span>  	Views</h2></div>
 <div class="old-help-para">A session stores the looks of the whole of Vim.  When you want to store the
 properties for one window only, use a view.
    The use of a view is for when you want to edit a file in a specific way.
@@ -376,7 +376,7 @@ saved them.
 :mkview ~/.config/nvim/main.vim</pre>
 You can restore it with:<pre>
 :source ~/.config/nvim/main.vim</pre>
-<h2 class="help-heading"><span class="help-heading-tags"><a name="21.6"></a><span class="help-tag">21.6</span>	Modelines</h2></div>
+<h2 class="help-heading"><span class="help-heading-tags"><a name="21.6"></a><span class="help-tag">21.6</span>  	Modelines</h2></div>
 <div class="old-help-para">When editing a specific file, you might set options specifically for that
 file.  Typing these commands each time is boring.  Using a session or view for
 editing a file doesn't work when sharing the file between several people.
@@ -449,7 +449,7 @@ can be placed there.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 05:56 from <code><a href="https://github.com/neovim/neovim/commit/fad558b6affd54075654dd55922348f76a95e338">fad558b</a></code>
+        Generated at 2022-10-20 11:26 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 8 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_21.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_21.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>

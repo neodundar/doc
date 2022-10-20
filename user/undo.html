@@ -305,10 +305,10 @@ be silent, unless <a href="options.html#'verbose'">'verbose'</a> is set.  With :
 error messages, e.g., when the file cannot be read or written.</div>
 <div class="old-help-para">NOTE: undo files are never deleted by Vim.  You need to delete them yourself.</div>
 <div class="old-help-para">Reading an existing undo file may fail for several reasons:
-<a name="E822"></a><code class="help-tag">E822</code>	It cannot be opened, because the file permissions don't allow it.
-<a name="E823"></a><code class="help-tag">E823</code>	The magic number at the start of the file doesn't match.  This usually
+<a name="E822"></a><code class="help-tag">E822</code>  	It cannot be opened, because the file permissions don't allow it.
+<a name="E823"></a><code class="help-tag">E823</code>  	The magic number at the start of the file doesn't match.  This usually
 	means it is not an undo file.
-<a name="E824"></a><code class="help-tag">E824</code>	The version number of the undo file indicates that it's written by a
+<a name="E824"></a><code class="help-tag">E824</code>  	The version number of the undo file indicates that it's written by a
 	newer version of Vim.  You need that newer version to open it.  Don't
 	write the buffer if you want to keep the undo info in the file.
 "File contents changed, cannot use undo info"
@@ -320,7 +320,7 @@ error messages, e.g., when the file cannot be read or written.</div>
 	The undo file is owned by someone else than the owner of the text
 	file.  For safety the undo file is not used.</div>
 <div class="old-help-para">Writing an undo file may fail for these reasons:
-<a name="E828"></a><code class="help-tag">E828</code>	The file to be written cannot be created.  Perhaps you do not have
+<a name="E828"></a><code class="help-tag">E828</code>  	The file to be written cannot be created.  Perhaps you do not have
 	write permissions in the directory.
 "Cannot write undo file in any directory in <a href="options.html#'undodir'">'undodir'</a>"
 	None of the directories in <a href="options.html#'undodir'">'undodir'</a> can be used.
@@ -334,7 +334,7 @@ error messages, e.g., when the file cannot be read or written.</div>
 "Skipping undo file write, nothing to undo"
 	There is no undo information to be written, nothing has been changed
 	or <a href="options.html#'undolevels'">'undolevels'</a> is negative.
-<a name="E829"></a><code class="help-tag">E829</code>	An error occurred while writing the undo file.  You may want to try
+<a name="E829"></a><code class="help-tag">E829</code>  	An error occurred while writing the undo file.  You may want to try
 	again.</div>
 <div class="old-help-para"><h2 class="help-heading">6. Remarks about undo<span class="help-heading-tags">					<a name="undo-remarks"></a><span class="help-tag">undo-remarks</span></h2></div>
 <div class="old-help-para">The number of changes that are remembered is set with the <a href="options.html#'undolevels'">'undolevels'</a> option.
@@ -402,7 +402,7 @@ first put, and repeat the put command for the second register.  Repeat the
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 05:56 from <code><a href="https://github.com/neovim/neovim/commit/fad558b6affd54075654dd55922348f76a95e338">fad558b</a></code>
+        Generated at 2022-10-20 11:26 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 1 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+undo.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/undo.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="      Nvim

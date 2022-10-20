@@ -90,15 +90,15 @@
 <div class="old-help-para">In chapter 3 a few simple search patterns were mentioned <a href="usr_03.html#03.9">03.9</a>.  Vim can do
 much more complex searches.  This chapter explains the most often used ones.
 A detailed specification can be found here: <a href="pattern.html#pattern">pattern</a></div>
-<div class="old-help-para"><a href="usr_27.html#27.1">27.1</a>	Ignoring case
-<a href="usr_27.html#27.2">27.2</a>	Wrapping around the file end
-<a href="usr_27.html#27.3">27.3</a>	Offsets
-<a href="usr_27.html#27.4">27.4</a>	Matching multiple times
-<a href="usr_27.html#27.5">27.5</a>	Alternatives
-<a href="usr_27.html#27.6">27.6</a>	Character ranges
-<a href="usr_27.html#27.7">27.7</a>	Character classes
-<a href="usr_27.html#27.8">27.8</a>	Matching a line break
-<a href="usr_27.html#27.9">27.9</a>	Examples</div>
+<div class="old-help-para"><a href="usr_27.html#27.1">27.1</a>  	Ignoring case
+<a href="usr_27.html#27.2">27.2</a>  	Wrapping around the file end
+<a href="usr_27.html#27.3">27.3</a>  	Offsets
+<a href="usr_27.html#27.4">27.4</a>  	Matching multiple times
+<a href="usr_27.html#27.5">27.5</a>  	Alternatives
+<a href="usr_27.html#27.6">27.6</a>  	Character ranges
+<a href="usr_27.html#27.7">27.7</a>  	Character classes
+<a href="usr_27.html#27.8">27.8</a>  	Matching a line break
+<a href="usr_27.html#27.9">27.9</a>  	Examples</div>
 <div class="old-help-para">     Next chapter: <a href="usr_28.html#usr_28.txt">usr_28.txt</a>  Folding
  Previous chapter: <a href="usr_26.html#usr_26.txt">usr_26.txt</a>  Repeating
 Table of contents: <a href="usr_toc.html#usr_toc.txt">usr_toc.txt</a></div>
@@ -145,7 +145,7 @@ matter if <a href="options.html#'ignorecase'">'ignorecase'</a> or <a href="optio
 <div class="old-help-para">	Note:
 	If your search takes much longer than you expected, you can interrupt
 	it with <code>CTRL-C</code> on Unix and <code>CTRL-Break</code> on MS-Windows.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="27.2"></a><span class="help-tag">27.2</span>	Wrapping around the file end</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="27.2"></a><span class="help-tag">27.2</span>  	Wrapping around the file end</h2></div>
 <div class="old-help-para">By default, a forward search starts searching for the given string at the
 current cursor location.  It then proceeds to the end of the file.  If it has
 not found the string by that time, it starts from the beginning and searches
@@ -174,7 +174,7 @@ Now when the search hits the end of the file, an error message displays:</div>
 keep searching until you see this message.
    If you search in the other direction, using "?", you get:</div>
 <div class="old-help-para"><div class="help-column_heading">	E384: search hit TOP without match for: forever</div></div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="27.3"></a><span class="help-tag">27.3</span>	Offsets</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="27.3"></a><span class="help-tag">27.3</span>  	Offsets</h2></div>
 <div class="old-help-para">By default, the search command leaves the cursor positioned on the beginning
 of the pattern.  You can tell Vim to leave it some other place by specifying
 an offset.  For the forward search command "/", the offset is specified by
@@ -238,7 +238,7 @@ lines up.  Thus you would actually move the cursor back!</div>
 <div class="old-help-para">When you specify a character offset, Vim will compensate for this.  Thus the
 search starts a few characters forward or backward, so that the same match
 isn't found again.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="27.4"></a><span class="help-tag">27.4</span>	Matching multiple times</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="27.4"></a><span class="help-tag">27.4</span>  	Matching multiple times</h2></div>
 <div class="old-help-para">The "*" item specifies that the item before it can match any number of times.
 Thus:<pre>
 /a*</pre>
@@ -290,7 +290,7 @@ This matches "axb" in "axbxb".  If this pattern would be used:<pre>
 /a.*b</pre>
 It would try to match as many characters as possible with ".*", thus it
 matches "axbxb" as a whole.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="27.5"></a><span class="help-tag">27.5</span>	Alternatives</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="27.5"></a><span class="help-tag">27.5</span>  	Alternatives</h2></div>
 <div class="old-help-para">The "or" operator in a pattern is "\|".  Example:<pre>
 /foo\|bar</pre>
 This matches "foo" or "bar".  More alternatives can be concatenated:<pre>
@@ -306,7 +306,7 @@ This matches "endif", "endwhile" and "endfor".</div>
 same place.  The resulting match uses the last alternative.  Example:<pre>
 /forever\&amp;...</pre>
 This matches "for" in "forever".  It will not match "fortuin", for example.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="27.6"></a><span class="help-tag">27.6</span>	Character ranges</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="27.6"></a><span class="help-tag">27.6</span>  	Character ranges</h2></div>
 <div class="old-help-para">To match "a", "b" or "c" you could use "/a\|b\|c".  When you want to match all
 letters from "a" to "z" this gets very long.  There is a shorter method:<pre>
 /[a-z]</pre>
@@ -357,7 +357,7 @@ few more of these:</div>
 	These items can not be used inside [].  Thus "[\d\l]" does NOT work to
 	match a digit or lowercase alpha.  Use "\(\d\|\l\)" instead.</div>
 <div class="old-help-para">See <a href="pattern.html#%2F%5Cs">/\s</a> for the whole list of these ranges.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="27.7"></a><span class="help-tag">27.7</span>	Character classes</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="27.7"></a><span class="help-tag">27.7</span>  	Character classes</h2></div>
 <div class="old-help-para">The character range matches a fixed set of characters.  A character class is
 similar, but with an essential difference: The set of characters can be
 redefined without changing the search pattern.
@@ -388,7 +388,7 @@ the system you are using it on.</div>
 	\P	like \p, excluding digits
 	\f	file name characters		<a href="options.html#'isfname'">'isfname'</a>
 	\F	like \f, excluding digits</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="27.8"></a><span class="help-tag">27.8</span>	Matching a line break</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="27.8"></a><span class="help-tag">27.8</span>  	Matching a line break</h2></div>
 <div class="old-help-para">Vim can find a pattern that includes a line break.  You need to specify where
 the line break happens, because all items mentioned so far don't match a line
 break.
@@ -414,7 +414,7 @@ example: "\_." matches any character or a line break.</div>
 <div class="old-help-para">Another example is "\_[]", a character range that includes a line break:<pre>
 /"\_[^"]*"</pre>
 This finds a text in double quotes that may be split up in several lines.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="27.9"></a><span class="help-tag">27.9</span>	Examples</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="27.9"></a><span class="help-tag">27.9</span>  	Examples</h2></div>
 <div class="old-help-para">Here are a few search patterns you might find useful.  This shows how the
 items mentioned above can be combined.</div>
 <div class="old-help-para">FINDING A CALIFORNIA LICENSE PLATE</div>
@@ -488,7 +488,7 @@ and "\w" for "[0-9A-Za-z_]".</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 05:56 from <code><a href="https://github.com/neovim/neovim/commit/fad558b6affd54075654dd55922348f76a95e338">fad558b</a></code>
+        Generated at 2022-10-20 11:26 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_27.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_27.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>

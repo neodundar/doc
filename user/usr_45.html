@@ -90,11 +90,11 @@
 <div class="old-help-para">The messages in Vim can be given in several languages.  This chapter explains
 how to change which one is used.  Also, the different ways to work with files
 in various languages is explained.</div>
-<div class="old-help-para"><a href="usr_45.html#45.1">45.1</a>	Language for Messages
-<a href="usr_45.html#45.2">45.2</a>	Language for Menus
-<a href="usr_45.html#45.3">45.3</a>	Using another encoding
-<a href="usr_45.html#45.4">45.4</a>	Editing files with a different encoding
-<a href="usr_45.html#45.5">45.5</a>	Entering language text</div>
+<div class="old-help-para"><a href="usr_45.html#45.1">45.1</a>  	Language for Messages
+<a href="usr_45.html#45.2">45.2</a>  	Language for Menus
+<a href="usr_45.html#45.3">45.3</a>  	Using another encoding
+<a href="usr_45.html#45.4">45.4</a>  	Editing files with a different encoding
+<a href="usr_45.html#45.5">45.5</a>  	Entering language text</div>
 <div class="old-help-para">Previous chapter: <a href="usr_44.html#usr_44.txt">usr_44.txt</a>  Your own syntax highlighted
 Table of contents: <a href="usr_toc.html#usr_toc.txt">usr_toc.txt</a></div>
 <div class="old-help-para"><h2 class="help-heading">	Language for Messages</h2></div>
@@ -139,7 +139,7 @@ to, of course.
    When you are satisfied with the translation, consider making it available
 to others.  Upload it to <a href="https://github.com/vim/vim">https://github.com/vim/vim</a> or e-mail it to the Vim
 maintainer &lt;maintainer@vim.org&gt;.  Or both.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="45.2"></a><span class="help-tag">45.2</span>	Language for Menus</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="45.2"></a><span class="help-tag">45.2</span>  	Language for Menus</h2></div>
 <div class="old-help-para">The default menus are in English.  To be able to use your local language, they
 must be translated.  Normally this is automatically done for you if the
 environment is set for your language, just like with messages.  You don't need
@@ -175,7 +175,7 @@ own runtime directory, as found early in <a href="options.html#'runtimepath'">'r
 you would do:<pre>
 :!cp $VIMRUNTIME/lang/menu_ko_kr.euckr.vim ~/.config/nvim/lang/menu_nl_be.iso_8859-1.vim</pre>
 You will find hints for the translation in "$VIMRUNTIME/lang/README.txt".</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="45.3"></a><span class="help-tag">45.3</span>	Using another encoding</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="45.3"></a><span class="help-tag">45.3</span>  	Using another encoding</h2></div>
 <div class="old-help-para">Vim guesses that the files you are going to edit are encoded for your
 language.  For many European languages this is "latin1".  Then each byte is
 one character.  That means there are 256 different characters possible.  For
@@ -244,7 +244,7 @@ actually view a file that way, if you have lots of time at hand.</div>
 	all non-ASCII text invalid.  You will notice this when using registers
 	and the <a href="starting.html#shada-file">shada-file</a> (e.g., a remembered search pattern).  It's
 	recommended to set <a href="options.html#'encoding'">'encoding'</a> in your vimrc file, and leave it alone.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="45.4"></a><span class="help-tag">45.4</span>	Editing files with a different encoding</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="45.4"></a><span class="help-tag">45.4</span>  	Editing files with a different encoding</h2></div>
 <div class="old-help-para">Suppose you have setup Vim to use Unicode, and you want to edit a file that is
 in 16-bit Unicode.  Sounds simple, right?  Well, Vim actually uses utf-8
 encoding internally, thus the 16-bit encoding must be converted, since there
@@ -293,7 +293,7 @@ actually use Vim to convert a file.  Example:<pre>
 	to Unicode and back is mostly free of this problem, unless there are
 	illegal characters.  Conversion from Unicode to other encodings often
 	loses information when there was more than one language in the file.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="45.5"></a><span class="help-tag">45.5</span>	Entering language text</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="45.5"></a><span class="help-tag">45.5</span>  	Entering language text</h2></div>
 <div class="old-help-para">Computer keyboards don't have much more than a hundred keys.  Some languages
 have thousands of characters, Unicode has over hundred thousand.  So how do
 you type these characters?
@@ -383,7 +383,7 @@ keymaps that are distributed with Vim.  For the details, see <a href="mbyte.html
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 05:56 from <code><a href="https://github.com/neovim/neovim/commit/fad558b6affd54075654dd55922348f76a95e338">fad558b</a></code>
+        Generated at 2022-10-20 11:26 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_45.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_45.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>

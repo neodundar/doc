@@ -91,16 +91,16 @@
 and avoid typing mistakes.  Use Insert mode completion to repeat previously
 typed words.  Abbreviate long words to short ones.  Type characters that
 aren't on your keyboard.</div>
-<div class="old-help-para"><a href="usr_24.html#24.1">24.1</a>	Making corrections
-<a href="usr_24.html#24.2">24.2</a>	Showing matches
-<a href="usr_24.html#24.3">24.3</a>	Completion
-<a href="usr_24.html#24.4">24.4</a>	Repeating an insert
-<a href="usr_24.html#24.5">24.5</a>	Copying from another line
-<a href="usr_24.html#24.6">24.6</a>	Inserting a register
-<a href="usr_24.html#24.7">24.7</a>	Abbreviations
-<a href="usr_24.html#24.8">24.8</a>	Entering special characters
-<a href="usr_24.html#24.9">24.9</a>	Digraphs
-<a href="usr_24.html#24.10">24.10</a>	Normal mode commands</div>
+<div class="old-help-para"><a href="usr_24.html#24.1">24.1</a>  	Making corrections
+<a href="usr_24.html#24.2">24.2</a>  	Showing matches
+<a href="usr_24.html#24.3">24.3</a>  	Completion
+<a href="usr_24.html#24.4">24.4</a>  	Repeating an insert
+<a href="usr_24.html#24.5">24.5</a>  	Copying from another line
+<a href="usr_24.html#24.6">24.6</a>  	Inserting a register
+<a href="usr_24.html#24.7">24.7</a>  	Abbreviations
+<a href="usr_24.html#24.8">24.8</a>  	Entering special characters
+<a href="usr_24.html#24.9">24.9</a>  	Digraphs
+<a href="usr_24.html#24.10">24.10</a>  	Normal mode commands</div>
 <div class="old-help-para">     Next chapter: <a href="usr_25.html#usr_25.txt">usr_25.txt</a>  Editing formatted text
  Previous chapter: <a href="usr_23.html#usr_23.txt">usr_23.txt</a>  Editing other files
 Table of contents: <a href="usr_toc.html#usr_toc.txt">usr_toc.txt</a></div>
@@ -153,7 +153,7 @@ leave Insert mode.  The extra typing doesn't matter then.
 	<code>&lt;PageDown&gt;</code>	a whole screenful down
 	<code>&lt;C-End&gt;</code>		to end of the file</div>
 <div class="old-help-para">There are a few more, see <a href="insert.html#ins-special-special">ins-special-special</a>.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="24.2"></a><span class="help-tag">24.2</span>	Showing matches</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="24.2"></a><span class="help-tag">24.2</span>  	Showing matches</h2></div>
 <div class="old-help-para">When you type a ) it would be nice to see with which ( it matches.  To make
 Vim do that use this command:<pre>
 :set showmatch</pre>
@@ -169,7 +169,7 @@ back and inserting continues as before.
 example, to make Vim wait one and a half second:<pre>
 :set matchtime=15</pre>
 The time is specified in tenths of a second.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="24.3"></a><span class="help-tag">24.3</span>	Completion</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="24.3"></a><span class="help-tag">24.3</span>  	Completion</h2></div>
 <div class="old-help-para">Vim can automatically complete words on insertion.  You type the first part of
 a word, press <code>CTRL-P</code>, and Vim guesses the rest.
    Suppose, for example, that you are creating a C program and want to type in
@@ -269,7 +269,7 @@ explained <a href="insert.html#ft-c-omni">ft-c-omni</a>.  For other filetypes yo
 similar, look below <a href="insert.html#compl-omni-filetypes">compl-omni-filetypes</a>.  It only works for specific
 filetypes.  Check the value of the <a href="options.html#'omnifunc'">'omnifunc'</a> option to find out if it would
 work.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="24.4"></a><span class="help-tag">24.4</span>	Repeating an insert</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="24.4"></a><span class="help-tag">24.4</span>  	Repeating an insert</h2></div>
 <div class="old-help-para">If you press <code>CTRL-A</code>, the editor inserts the text you typed the last time you
 were in Insert mode.
    Assume, for example, that you have a file that begins with the following:</div>
@@ -287,7 +287,7 @@ insert.  Now you type  "main.h"&lt;Enter&gt;  to finish the line:</div>
 <div class="old-help-para"><div class="help-column_heading">	#include "file.h"</div><div class="help-column_heading">	#include "main.h"</div>/* Main program begins/</div>
 <div class="old-help-para">The <code>CTRL-@</code> command does a <code>CTRL-A</code> and then exits Insert mode.  That's a quick
 way of doing exactly the same insertion again.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="24.5"></a><span class="help-tag">24.5</span>	Copying from another line</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="24.5"></a><span class="help-tag">24.5</span>  	Copying from another line</h2></div>
 <div class="old-help-para">The <code>CTRL-Y</code> command inserts the character above the cursor.  This is useful
 when you are duplicating a previous line.  For example, you have this line of
 C code:</div>
@@ -303,7 +303,7 @@ Start the new line, and press <code>CTRL-Y</code> 14 times, until you are at the
 <div class="old-help-para">Now type "prev;" to finish it off.</div>
 <div class="old-help-para">The <code>CTRL-E</code> command acts like <code>CTRL-Y</code> except it inserts the character below the
 cursor.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="24.6"></a><span class="help-tag">24.6</span>	Inserting a register</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="24.6"></a><span class="help-tag">24.6</span>  	Inserting a register</h2></div>
 <div class="old-help-para">The command <code>CTRL-R</code> <code>{register}</code> inserts the contents of the register.  This is
 useful to avoid having to type a long word.  For example, you need to type
 this:</div>
@@ -324,7 +324,7 @@ when there are many words that start with the same characters.</div>
 they are interpreted as if they had been typed from the keyboard.  If you do
 not want this to happen (you really want the <code>&lt;BS&gt;</code> to be inserted in the text),
 use the command <code>CTRL-R</code> <code>CTRL-R</code> <code>{register}</code>.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="24.7"></a><span class="help-tag">24.7</span>	Abbreviations</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="24.7"></a><span class="help-tag">24.7</span>  	Abbreviations</h2></div>
 <div class="old-help-para">An abbreviation is a short word that takes the place of a long one.  For
 example, "ad" stands for "advertisement".  Vim enables you to type an
 abbreviation and then will automatically expand it for you.
@@ -402,7 +402,7 @@ To avoid this, use the ":noreabbrev" command.  It does the same as
 ":abbreviate", but avoids that the resulting string is used for mappings:<pre>
 :noreabbrev @a adder</pre>
 Fortunately, it's unlikely that the result of an abbreviation is mapped.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="24.8"></a><span class="help-tag">24.8</span>	Entering special characters</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="24.8"></a><span class="help-tag">24.8</span>  	Entering special characters</h2></div>
 <div class="old-help-para">The <code>CTRL-V</code> command is used to insert the next character literally.  In other
 words, any special meaning the character has, it will be ignored.  For
 example:<pre>
@@ -432,7 +432,7 @@ a 16 bit and a 32 bit number (e.g., for a Unicode character):<pre>
 CTRL-V o123
 CTRL-V u1234
 CTRL-V U12345678</pre>
-<h2 class="help-heading"><span class="help-heading-tags"><a name="24.9"></a><span class="help-tag">24.9</span>	Digraphs</h2></div>
+<h2 class="help-heading"><span class="help-heading-tags"><a name="24.9"></a><span class="help-tag">24.9</span>  	Digraphs</h2></div>
 <div class="old-help-para">Some characters are not on the keyboard.  For example, the copyright character
 (©).  To type these characters in Vim, you use digraphs, where two characters
 represent one.  To enter a ©, for example, you press three keys:<pre>
@@ -461,7 +461,7 @@ character with a decimal number.  This defines the same digraph:<pre>
 More information about digraphs here: <a href="digraph.html#digraphs">digraphs</a>
    Another way to insert special characters is with a keymap.  More about that
 here: <a href="usr_45.html#45.5">45.5</a></div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="24.10"></a><span class="help-tag">24.10</span>	Normal mode commands</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="24.10"></a><span class="help-tag">24.10</span>  	Normal mode commands</h2></div>
 <div class="old-help-para">Insert mode offers a limited number of commands.  In Normal mode you have many
 more.  When you want to use one, you usually leave Insert mode with <code>&lt;Esc&gt;</code>,
 execute the Normal mode command, and re-enter Insert mode with "i" or "a".
@@ -518,7 +518,7 @@ This deletes up to the third word into register g.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 05:56 from <code><a href="https://github.com/neovim/neovim/commit/fad558b6affd54075654dd55922348f76a95e338">fad558b</a></code>
+        Generated at 2022-10-20 11:26 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 1 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_24.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_24.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>

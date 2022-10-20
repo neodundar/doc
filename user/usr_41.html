@@ -90,22 +90,22 @@
 <div class="old-help-para">The Vim script language is used for the startup vimrc file, syntax files, and
 many other things.  This chapter explains the items that can be used in a Vim
 script.  There are a lot of them, thus this is a long chapter.</div>
-<div class="old-help-para"><a href="usr_41.html#41.1">41.1</a>	Introduction
-<a href="usr_41.html#41.2">41.2</a>	Variables
-<a href="usr_41.html#41.3">41.3</a>	Expressions
-<a href="usr_41.html#41.4">41.4</a>	Conditionals
-<a href="usr_41.html#41.5">41.5</a>	Executing an expression
-<a href="usr_41.html#41.6">41.6</a>	Using functions
-<a href="usr_41.html#41.7">41.7</a>	Defining a function
-<a href="usr_41.html#41.8">41.8</a>	Lists and Dictionaries
-<a href="usr_41.html#41.9">41.9</a>	Exceptions
-<a href="usr_41.html#41.10">41.10</a>	Various remarks
-<a href="usr_41.html#41.11">41.11</a>	Writing a plugin
-<a href="usr_41.html#41.12">41.12</a>	Writing a filetype plugin
-<a href="usr_41.html#41.13">41.13</a>	Writing a compiler plugin
-<a href="usr_41.html#41.14">41.14</a>	Writing a plugin that loads quickly
-<a href="usr_41.html#41.15">41.15</a>	Writing library scripts
-<a href="usr_41.html#41.16">41.16</a>	Distributing Vim scripts</div>
+<div class="old-help-para"><a href="usr_41.html#41.1">41.1</a>  	Introduction
+<a href="usr_41.html#41.2">41.2</a>  	Variables
+<a href="usr_41.html#41.3">41.3</a>  	Expressions
+<a href="usr_41.html#41.4">41.4</a>  	Conditionals
+<a href="usr_41.html#41.5">41.5</a>  	Executing an expression
+<a href="usr_41.html#41.6">41.6</a>  	Using functions
+<a href="usr_41.html#41.7">41.7</a>  	Defining a function
+<a href="usr_41.html#41.8">41.8</a>  	Lists and Dictionaries
+<a href="usr_41.html#41.9">41.9</a>  	Exceptions
+<a href="usr_41.html#41.10">41.10</a>  	Various remarks
+<a href="usr_41.html#41.11">41.11</a>  	Writing a plugin
+<a href="usr_41.html#41.12">41.12</a>  	Writing a filetype plugin
+<a href="usr_41.html#41.13">41.13</a>  	Writing a compiler plugin
+<a href="usr_41.html#41.14">41.14</a>  	Writing a plugin that loads quickly
+<a href="usr_41.html#41.15">41.15</a>  	Writing library scripts
+<a href="usr_41.html#41.16">41.16</a>  	Distributing Vim scripts</div>
 <div class="old-help-para">     Next chapter: <a href="usr_42.html#usr_42.txt">usr_42.txt</a>  Add new menus
  Previous chapter: <a href="usr_40.html#usr_40.txt">usr_40.txt</a>  Make new commands
 Table of contents: <a href="usr_toc.html#usr_toc.txt">usr_toc.txt</a></div>
@@ -188,7 +188,7 @@ for separating items, to make the expression easier to read.  For example, to
 avoid the confusion with a negative number above, put a space between the
 minus sign and the following number:<pre>
 :echo 0x7f - 0o36</pre>
-<h2 class="help-heading"><span class="help-heading-tags"><a name="41.2"></a><span class="help-tag">41.2</span>	Variables</h2></div>
+<h2 class="help-heading"><span class="help-heading-tags"><a name="41.2"></a><span class="help-tag">41.2</span>  	Variables</h2></div>
 <div class="old-help-para">A variable name consists of ASCII letters, digits and the underscore.  It
 cannot start with a digit.  Valid variable names are:</div>
 <div class="old-help-para">	counter
@@ -288,7 +288,7 @@ a few useful ones:</div>
 <div class="old-help-para">The last two are just examples.  The  "\&lt;name&gt;" form can be used to include
 the special key "name".
    See <a href="eval.html#expr-quote">expr-quote</a> for the full list of special items in a string.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="41.3"></a><span class="help-tag">41.3</span>	Expressions</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="41.3"></a><span class="help-tag">41.3</span>  	Expressions</h2></div>
 <div class="old-help-para">Vim has a rich, yet simple way to handle expressions.  You can read the
 definition here: <a href="eval.html#expression-syntax">expression-syntax</a>.  Here we will show the most common
 items.
@@ -340,7 +340,7 @@ inserted.</div>
 <div class="old-help-para">The three parts of the constructs are always evaluated first, thus you could
 see it work as:</div>
 <div class="old-help-para">	(a) ? (b) : (c)</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="41.4"></a><span class="help-tag">41.4</span>	Conditionals</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="41.4"></a><span class="help-tag">41.4</span>  	Conditionals</h2></div>
 <div class="old-help-para">The ":if" commands executes the following statements, until the matching
 ":endif", only when a condition is met.  The generic form is:</div>
 <div class="old-help-para">	:if <code>{condition}</code>
@@ -443,7 +443,7 @@ in between the ":while" and the ":endwhile":</div>
 The ":sleep" command makes Vim take a nap.  The "50m" specifies fifty
 milliseconds.  Another example is ":sleep 4", which sleeps for four seconds.</div>
 <div class="old-help-para">Even more looping can be done with the ":for" command, see below in <a href="usr_41.html#41.8">41.8</a>.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="41.5"></a><span class="help-tag">41.5</span>	Executing an expression</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="41.5"></a><span class="help-tag">41.5</span>  	Executing an expression</h2></div>
 <div class="old-help-para">So far the commands in the script were executed by Vim directly.  The
 ":execute" command allows executing the result of an expression.  This is a
 very powerful way to build commands and execute them.
@@ -476,7 +476,7 @@ value, you can use the eval() function:<pre>
 A "&amp;" character is prepended to "path", thus the argument to eval() is
 "&amp;path".  The result will then be the value of the <a href="options.html#'path'">'path'</a> option.
    The same thing can be done with:<pre>:exe 'let optval = &amp;' .. optname</pre>
-<h2 class="help-heading"><span class="help-heading-tags"><a name="41.6"></a><span class="help-tag">41.6</span>	Using functions</h2></div>
+<h2 class="help-heading"><span class="help-heading-tags"><a name="41.6"></a><span class="help-tag">41.6</span>  	Using functions</h2></div>
 <div class="old-help-para">Vim defines many functions and provides a large amount of functionality that
 way.  A few examples will be given in this section.  You can find the whole
 list below: <a href="usr_41.html#function-list">function-list</a>.</div>
@@ -960,7 +960,7 @@ Buffers, windows and the argument list:
 	pyxeval()		evaluate <a href="if_pyth.html#python_x">python_x</a> expression
 	rubyeval()		evaluate <a href="if_ruby.html#Ruby">Ruby</a> expression</div>
 <div class="old-help-para">	debugbreak()		interrupt a program being debugged</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="41.7"></a><span class="help-tag">41.7</span>	Defining a function</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="41.7"></a><span class="help-tag">41.7</span>  	Defining a function</h2></div>
 <div class="old-help-para">Vim enables you to define your own functions.  The basic function declaration
 begins as follows:<pre>
 :function {name}({var1}, {var2}, ...)
@@ -1118,7 +1118,7 @@ function.  Its first argument is the function reference, the second argument
 is a List with arguments.</div>
 <div class="old-help-para">Function references are most useful in combination with a Dictionary, as is
 explained in the next section.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="41.8"></a><span class="help-tag">41.8</span>	Lists and Dictionaries</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="41.8"></a><span class="help-tag">41.8</span>  	Lists and Dictionaries</h2></div>
 <div class="old-help-para">So far we have used the basic types String and Number.  Vim also supports two
 composite types: List and Dictionary.</div>
 <div class="old-help-para">A List is an ordered sequence of things.  The things can be any kind of value,
@@ -1310,7 +1310,7 @@ use "uk2uk" when no recognized language is found:<pre>
 :echo trans.translate('one two three')</pre></div>
 <div class="old-help-para"><div class="help-column_heading">	one two three</div></div>
 <div class="old-help-para">For further reading see <a href="eval.html#Lists">Lists</a> and <a href="eval.html#Dictionaries">Dictionaries</a>.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="41.9"></a><span class="help-tag">41.9</span>	Exceptions</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="41.9"></a><span class="help-tag">41.9</span>  	Exceptions</h2></div>
 <div class="old-help-para">Let's start with an example:<pre>
 :try
 :   read ~/templates/pascal.tmpl
@@ -1353,7 +1353,7 @@ user cancels the filtering by pressing <code>CTRL-C</code>, the "call delete(tmp
 always executed.  This makes sure you don't leave the temporary file behind.</div>
 <div class="old-help-para">More information about exception handling can be found in the reference
 manual: <a href="eval.html#exception-handling">exception-handling</a>.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="41.10"></a><span class="help-tag">41.10</span>	Various remarks</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="41.10"></a><span class="help-tag">41.10</span>  	Various remarks</h2></div>
 <div class="old-help-para">Here is a summary of items that apply to Vim scripts.  They are also mentioned
 elsewhere, but form a nice checklist.</div>
 <div class="old-help-para">The end-of-line character depends on the system.  For Vim scripts it is
@@ -1475,7 +1475,7 @@ endfun
 
 let XXX_loaded = 1</pre>
 ==============================================================================
-<a name="41.11"></a><code class="help-tag">41.11</code>	Writing a plugin				<a name="write-plugin"></a><code class="help-tag-right">write-plugin</code>
+<a name="41.11"></a><code class="help-tag">41.11</code>  	Writing a plugin				<a name="write-plugin"></a><code class="help-tag-right">write-plugin</code>
 </div></div>
 <div class="old-help-para">You can write a Vim script in such a way that many people can use it.  This is
 called a plugin.  Vim users can drop your script in their plugin directory and
@@ -1784,7 +1784,7 @@ contents of the file to recognize the language.  Also see <a href="filetype.html
 <div class="old-help-para">:noremap <code>&lt;script&gt;</code>	Use only mappings local to the script, not global
 			mappings.</div>
 <div class="old-help-para">exists(":Cmd")		Check if a user command already exists.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="41.12"></a><span class="help-tag">41.12</span>	Writing a filetype plugin<span class="help-heading-tags">	<a name="write-filetype-plugin"></a><span class="help-tag">write-filetype-plugin</span> <a name="ftplugin"></a><span class="help-tag">ftplugin</span></span></h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="41.12"></a><span class="help-tag">41.12</span>  	Writing a filetype plugin<span class="help-heading-tags">	<a name="write-filetype-plugin"></a><span class="help-tag">write-filetype-plugin</span> <a name="ftplugin"></a><span class="help-tag">ftplugin</span></span></h2></div>
 <div class="old-help-para">A filetype plugin is like a global plugin, except that it sets options and
 defines mappings for the current buffer only.  See <a href="usr_05.html#add-filetype-plugin">add-filetype-plugin</a> for
 how this type of plugin is used.</div>
@@ -1859,8 +1859,8 @@ if !exists("no_plugin_maps") &amp;&amp; !exists("no_mail_maps")
   nnoremap &lt;buffer&gt; &lt;Plug&gt;MailQuote; :.,$s/^/&gt; /&lt;CR&gt;
 endif</pre>
 Two global variables are used:
-<a href="filetype.html#no_plugin_maps">no_plugin_maps</a>	disables mappings for all filetype plugins
-<a href="filetype.html#no_mail_maps">no_mail_maps</a>		disables mappings for the "mail" filetype</div>
+<a href="filetype.html#no_plugin_maps">no_plugin_maps</a>  	disables mappings for all filetype plugins
+<a href="filetype.html#no_mail_maps">no_mail_maps</a>  		disables mappings for the "mail" filetype</div>
 <div class="old-help-para"><a name="_user-commands"></a><h3 class="help-heading">USER COMMANDS</h3></div>
 <div class="old-help-para">To add a user command for a specific file type, so that it can only be used in
 one buffer, use the "-buffer" argument to <a href="map.html#%3Acommand">:command</a>.  Example:<pre>
@@ -1908,7 +1908,7 @@ these three forms:</div>
 <div class="old-help-para">:command -buffer	Define a user command local to the buffer.</div>
 <div class="old-help-para">exists("*s:Func")	Check if a function was already defined.</div>
 <div class="old-help-para">Also see <a href="usr_41.html#plugin-special">plugin-special</a>, the special things used for all plugins.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="41.13"></a><span class="help-tag">41.13</span>	Writing a compiler plugin<span class="help-heading-tags">		<a name="write-compiler-plugin"></a><span class="help-tag">write-compiler-plugin</span></h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="41.13"></a><span class="help-tag">41.13</span>  	Writing a compiler plugin<span class="help-heading-tags">		<a name="write-compiler-plugin"></a><span class="help-tag">write-compiler-plugin</span></h2></div>
 <div class="old-help-para">A compiler plugin sets options for use with a specific compiler.  The user can
 load it with the <a href="quickfix.html#%3Acompiler">:compiler</a> command.  The main use is to set the
 <a href="options.html#'errorformat'">'errorformat'</a> and <a href="options.html#'makeprg'">'makeprg'</a> options.</div>
@@ -1942,7 +1942,7 @@ runtime directory, use the mechanism mentioned above.  When
 don't check "current_compiler".  This plugin is supposed to be loaded
 last, thus it should be in a directory at the end of <a href="options.html#'runtimepath'">'runtimepath'</a>.  For Unix
 that could be ~/.config/nvim/after/compiler.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="41.14"></a><span class="help-tag">41.14</span>	Writing a plugin that loads quickly<span class="help-heading-tags">	<a name="write-plugin-quickload"></a><span class="help-tag">write-plugin-quickload</span></h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="41.14"></a><span class="help-tag">41.14</span>  	Writing a plugin that loads quickly<span class="help-heading-tags">	<a name="write-plugin-quickload"></a><span class="help-tag">write-plugin-quickload</span></h2></div>
 <div class="old-help-para">A plugin may grow and become quite long.  The startup delay may become
 noticeable, while you hardly ever use the plugin.  Then it's time for a
 quickload plugin.</div>
@@ -2002,7 +2002,7 @@ startup.  This is the sequence of events that happens:</div>
 <div class="old-help-para">Notice that the functions that are loaded afterwards match the pattern in the
 <a href="autocmd.html#FuncUndefined">FuncUndefined</a> autocommand.  You must make sure that no other plugin defines
 functions that match this pattern.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="41.15"></a><span class="help-tag">41.15</span>	Writing library scripts<span class="help-heading-tags">			<a name="write-library-script"></a><span class="help-tag">write-library-script</span></h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="41.15"></a><span class="help-tag">41.15</span>  	Writing library scripts<span class="help-heading-tags">			<a name="write-library-script"></a><span class="help-tag">write-library-script</span></h2></div>
 <div class="old-help-para">Some functionality will be required in several places.  When this becomes more
 than a few lines you will want to put it in one script and use it from many
 scripts.  We will call that one script a library script.</div>
@@ -2044,7 +2044,7 @@ like:<pre>
 let dutch#weekdays = ['zondag', 'maandag', 'dinsdag', 'woensdag',
         \ 'donderdag', 'vrijdag', 'zaterdag']</pre>
 Further reading: <a href="userfunc.html#autoload">autoload</a>.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="41.16"></a><span class="help-tag">41.16</span>	Distributing Vim scripts<span class="help-heading-tags">			<a name="distribute-script"></a><span class="help-tag">distribute-script</span></h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="41.16"></a><span class="help-tag">41.16</span>  	Distributing Vim scripts<span class="help-heading-tags">			<a name="distribute-script"></a><span class="help-tag">distribute-script</span></h2></div>
 <div class="old-help-para">Vim users will look for scripts on the Vim website: <a href="https://www.vim.org">https://www.vim.org</a>.
 If you made something that is useful for others, share it!</div>
 <div class="old-help-para">Vim scripts can be used on any system.  There might not be a tar or gzip
@@ -2096,7 +2096,7 @@ utility is recommended.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 05:56 from <code><a href="https://github.com/neovim/neovim/commit/fad558b6affd54075654dd55922348f76a95e338">fad558b</a></code>
+        Generated at 2022-10-20 11:26 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_41.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_41.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim

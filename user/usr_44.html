@@ -91,18 +91,18 @@
 the file you are editing isn't included, read this chapter to find out how to
 get this type of file highlighted.  Also see <a href="syntax.html#%3Asyn-define">:syn-define</a> in the reference
 manual.</div>
-<div class="old-help-para"><a href="usr_44.html#44.1">44.1</a>	Basic syntax commands
-<a href="usr_44.html#44.2">44.2</a>	Keywords
-<a href="usr_44.html#44.3">44.3</a>	Matches
-<a href="usr_44.html#44.4">44.4</a>	Regions
-<a href="usr_44.html#44.5">44.5</a>	Nested items
-<a href="usr_44.html#44.6">44.6</a>	Following groups
-<a href="usr_44.html#44.7">44.7</a>	Other arguments
-<a href="usr_44.html#44.8">44.8</a>	Clusters
-<a href="usr_44.html#44.9">44.9</a>	Including another syntax file
-<a href="usr_44.html#44.10">44.10</a>	Synchronizing
-<a href="usr_44.html#44.11">44.11</a>	Installing a syntax file
-<a href="usr_44.html#44.12">44.12</a>	Portable syntax file layout</div>
+<div class="old-help-para"><a href="usr_44.html#44.1">44.1</a>  	Basic syntax commands
+<a href="usr_44.html#44.2">44.2</a>  	Keywords
+<a href="usr_44.html#44.3">44.3</a>  	Matches
+<a href="usr_44.html#44.4">44.4</a>  	Regions
+<a href="usr_44.html#44.5">44.5</a>  	Nested items
+<a href="usr_44.html#44.6">44.6</a>  	Following groups
+<a href="usr_44.html#44.7">44.7</a>  	Other arguments
+<a href="usr_44.html#44.8">44.8</a>  	Clusters
+<a href="usr_44.html#44.9">44.9</a>  	Including another syntax file
+<a href="usr_44.html#44.10">44.10</a>  	Synchronizing
+<a href="usr_44.html#44.11">44.11</a>  	Installing a syntax file
+<a href="usr_44.html#44.12">44.12</a>  	Portable syntax file layout</div>
 <div class="old-help-para">     Next chapter: <a href="usr_45.html#usr_45.txt">usr_45.txt</a>  Select your language
  Previous chapter: <a href="usr_43.html#usr_43.txt">usr_43.txt</a>  Using filetypes
 Table of contents: <a href="usr_toc.html#usr_toc.txt">usr_toc.txt</a></div>
@@ -142,7 +142,7 @@ the syntax definitions that follow.  In most cases, you have only one ":syntax
 case" command in your syntax file; if you work with an unusual language that
 contains both case-sensitive and non-case-sensitive elements, however, you can
 scatter the ":syntax case" command throughout the file.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="44.2"></a><span class="help-tag">44.2</span>	Keywords</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="44.2"></a><span class="help-tag">44.2</span>  	Keywords</h2></div>
 <div class="old-help-para">The most basic syntax elements are keywords.  To define a keyword, use the
 following form:<pre>
 :syntax keyword {group} {keyword} ...</pre>
@@ -179,7 +179,7 @@ next section).</div>
 abbreviated to "n", "ne" or "nex".  You can define them by using this command:
 <pre>:syntax keyword xStatement n[ext]</pre>
 This doesn't match "nextone", keywords always match whole words only.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="44.3"></a><span class="help-tag">44.3</span>	Matches</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="44.3"></a><span class="help-tag">44.3</span>  	Matches</h2></div>
 <div class="old-help-para">Consider defining something a bit more complex.  You want to match ordinary
 identifiers.  To do this, you define a match syntax item.  This one matches
 any word consisting of only lowercase letters:<pre>
@@ -197,7 +197,7 @@ the end of a line:<pre>
 :syntax match xComment /#.*/</pre>
 Since you can use any search pattern, you can highlight very complex things
 with a match item.  See <a href="pattern.html#pattern">pattern</a> for help on search patterns.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="44.4"></a><span class="help-tag">44.4</span>	Regions</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="44.4"></a><span class="help-tag">44.4</span>  	Regions</h2></div>
 <div class="old-help-para">In the example x language, strings are enclosed in double quotation marks (").
 To highlight strings you define a region.  You need a region start (double
 quote) and a region end (double quote).  The definition is as follows:<pre>
@@ -217,7 +217,7 @@ soon as the "start" pattern matches.  Whether the "end" pattern is found or
 not doesn't matter.  Thus when the item depends on the "end" pattern to match,
 you cannot use a region.  Otherwise, regions are often simpler to define.  And
 it is easier to use nested items, as is explained in the next section.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="44.5"></a><span class="help-tag">44.5</span>	Nested items</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="44.5"></a><span class="help-tag">44.5</span>  	Nested items</h2></div>
 <div class="old-help-para">Take a look at this comment:</div>
 <div class="old-help-para"><div class="help-column_heading">	%Get input  TODO: Skip white space</div></div>
 <div class="old-help-para">You want to highlight TODO in big yellow letters, even though it is in a
@@ -278,7 +278,7 @@ groups but the ones that are listed:
 With the "TOP" item you can include all items that don't have a "contained"
 argument.  "CONTAINED" is used to only include items with a "contained"
 argument.  See <a href="syntax.html#%3Asyn-contains">:syn-contains</a> for the details.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="44.6"></a><span class="help-tag">44.6</span>	Following groups</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="44.6"></a><span class="help-tag">44.6</span>  	Following groups</h2></div>
 <div class="old-help-para">The x language has statements in this form:</div>
 <div class="old-help-para"><div class="help-column_heading">	if (condition) then</div></div>
 <div class="old-help-para">You want to highlight the three items differently.  But "(condition)" and
@@ -298,7 +298,7 @@ appear in between the items.  Similar arguments are "skipnl", which allows a
 line break in between the items, and "skipempty", which allows empty lines.
 Notice that "skipnl" doesn't skip an empty line, something must match after
 the line break.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="44.7"></a><span class="help-tag">44.7</span>	Other arguments</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="44.7"></a><span class="help-tag">44.7</span>  	Other arguments</h2></div>
 <div class="old-help-para"><a name="_matchgroup"></a><h3 class="help-heading">MATCHGROUP</h3></div>
 <div class="old-help-para">When you define a region, the entire region is highlighted according to the
 group name specified.  To highlight the text enclosed in parentheses () with
@@ -386,7 +386,7 @@ like xLineContinue does, use "excludenl" like this:<pre>
 "excludenl" must be placed before the pattern.  Since "xLineContinue" doesn't
 have "excludenl", a match with it will extend xPreProc to the next line as
 before.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="44.8"></a><span class="help-tag">44.8</span>	Clusters</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="44.8"></a><span class="help-tag">44.8</span>  	Clusters</h2></div>
 <div class="old-help-para">One of the things you will notice as you start to write a syntax file is that
 you wind up generating a lot of syntax groups.  Vim enables you to define a
 collection of syntax groups called a cluster.
@@ -412,7 +412,7 @@ You can add new group names to this cluster with the "add" argument:<pre>
 :syntax cluster xState add=xString</pre>
 You can remove syntax groups from this list as well:<pre>
 :syntax cluster xState remove=xNumber</pre>
-<h2 class="help-heading"><span class="help-heading-tags"><a name="44.9"></a><span class="help-tag">44.9</span>	Including another syntax file</h2></div>
+<h2 class="help-heading"><span class="help-heading-tags"><a name="44.9"></a><span class="help-tag">44.9</span>  	Including another syntax file</h2></div>
 <div class="old-help-para">The C++ language syntax is a superset of the C language.  Because you do not
 want to write two syntax files, you can have the C++ syntax file read in the
 one for C by using the following command:<pre>
@@ -446,7 +446,7 @@ it.
 expands it to a full path (:p) and then takes the head (:h).  This results in
 the directory name of the file.  This causes the pod.vim file in the same
 directory to be included.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="44.10"></a><span class="help-tag">44.10</span>	Synchronizing</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="44.10"></a><span class="help-tag">44.10</span>  	Synchronizing</h2></div>
 <div class="old-help-para">Compilers have it easy.  They start at the beginning of a file and parse it
 straight through.  Vim does not have it so easy.  It must start in the middle,
 where the editing is being done.  So how does it tell where it is?
@@ -501,7 +501,7 @@ synchronization.  For example, the following skips over anything inside {},
 even if it would normally match another synchronization method:<pre>
 :syntax sync match xSpecial /{.*}/</pre>
 More about synchronizing in the reference manual: <a href="syntax.html#%3Asyn-sync">:syn-sync</a>.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="44.11"></a><span class="help-tag">44.11</span>	Installing a syntax file</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="44.11"></a><span class="help-tag">44.11</span>  	Installing a syntax file</h2></div>
 <div class="old-help-para">When your new syntax file is ready to be used, drop it in a "syntax" directory
 in <a href="options.html#'runtimepath'">'runtimepath'</a>.  For Unix that would be "~/.config/nvim/syntax".
   The name of the syntax file must be equal to the file type, with ".vim"
@@ -525,7 +525,7 @@ Write the file with the same name as the original syntax file.  In this case
 "c.vim".  Place it in a directory near the end of <a href="options.html#'runtimepath'">'runtimepath'</a>.  This makes
 it loaded after the original syntax file.  For Unix this would be:</div>
 <div class="old-help-para"><div class="help-column_heading">	~/.config/nvim/after/syntax/c.vim</div></div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="44.12"></a><span class="help-tag">44.12</span>	Portable syntax file layout</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="44.12"></a><span class="help-tag">44.12</span>  	Portable syntax file layout</h2></div>
 <div class="old-help-para">Wouldn't it be nice if all Vim users exchange syntax files?  To make this
 possible, the syntax file must follow a few guidelines.</div>
 <div class="old-help-para">Start with a header that explains what the syntax file is for, who maintains
@@ -620,7 +620,7 @@ up scrolling backwards and <code>CTRL-L</code>.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 05:56 from <code><a href="https://github.com/neovim/neovim/commit/fad558b6affd54075654dd55922348f76a95e338">fad558b</a></code>
+        Generated at 2022-10-20 11:26 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_44.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_44.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>

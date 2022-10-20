@@ -91,15 +91,15 @@
 goes into making changes that are repeated or can affect a large amount of
 text.  The Visual mode allows doing various things with blocks of text.  Use
 an external program to do really complicated things.</div>
-<div class="old-help-para"><a href="usr_10.html#10.1">10.1</a>	Record and playback commands
-<a href="usr_10.html#10.2">10.2</a>	Substitution
-<a href="usr_10.html#10.3">10.3</a>	Command ranges
-<a href="usr_10.html#10.4">10.4</a>	The global command
-<a href="usr_10.html#10.5">10.5</a>	Visual block mode
-<a href="usr_10.html#10.6">10.6</a>	Reading and writing part of a file
-<a href="usr_10.html#10.7">10.7</a>	Formatting text
-<a href="usr_10.html#10.8">10.8</a>	Changing case
-<a href="usr_10.html#10.9">10.9</a>	Using an external program</div>
+<div class="old-help-para"><a href="usr_10.html#10.1">10.1</a>  	Record and playback commands
+<a href="usr_10.html#10.2">10.2</a>  	Substitution
+<a href="usr_10.html#10.3">10.3</a>  	Command ranges
+<a href="usr_10.html#10.4">10.4</a>  	The global command
+<a href="usr_10.html#10.5">10.5</a>  	Visual block mode
+<a href="usr_10.html#10.6">10.6</a>  	Reading and writing part of a file
+<a href="usr_10.html#10.7">10.7</a>  	Formatting text
+<a href="usr_10.html#10.8">10.8</a>  	Changing case
+<a href="usr_10.html#10.9">10.9</a>  	Using an external program</div>
 <div class="old-help-para">     Next chapter: <a href="usr_11.html#usr_11.txt">usr_11.txt</a>  Recovering from a crash
  Previous chapter: <a href="usr_09.html#usr_09.txt">usr_09.txt</a>  Using the GUI
 Table of contents: <a href="usr_toc.html#usr_toc.txt">usr_toc.txt</a></div>
@@ -183,7 +183,7 @@ Now move to the second line, and type:<pre>
 "Ayy</pre>
 Repeat this command for all lines.  The a register now contains all those
 lines, in the order you yanked them.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="10.2"></a><span class="help-tag">10.2</span>	Substitution<span class="help-heading-tags">						<a name="find-replace"></a><span class="help-tag">find-replace</span></h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="10.2"></a><span class="help-tag">10.2</span>  	Substitution<span class="help-heading-tags">						<a name="find-replace"></a><span class="help-tag">find-replace</span></h2></div>
 <div class="old-help-para">The ":substitute" command enables you to perform string replacements on a
 whole range of lines.  The general form of this command is as follows:<pre>
 :[range]substitute/from/to/[flags]</pre>
@@ -233,7 +233,7 @@ If you are substituting with a "from" or "to" part that includes a slash, you
 need to put a backslash before it.  A simpler way is to use another character
 instead of the slash.  A plus, for example:<pre>
 :s+one/two+one or two+</pre>
-<h2 class="help-heading"><span class="help-heading-tags"><a name="10.3"></a><span class="help-tag">10.3</span>	Command ranges</h2></div>
+<h2 class="help-heading"><span class="help-heading-tags"><a name="10.3"></a><span class="help-tag">10.3</span>  	Command ranges</h2></div>
 <div class="old-help-para">The ":substitute" command, and many other : commands, can be applied to a
 selection of lines.  This is called a range.
    The simple form of a range is <code>{number}</code>,{number}.  For example:<pre>
@@ -310,7 +310,7 @@ then ":".  For example, when you type "5:", you will get:<pre>
 :.,.+4</pre>
 Now you can type the command you want to use.  It will use the range "."
 (current line) until ".+4" (four lines down).  Thus it spans five lines.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="10.4"></a><span class="help-tag">10.4</span>	The global command</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="10.4"></a><span class="help-tag">10.4</span>  	The global command</h2></div>
 <div class="old-help-para">The ":global" command is one of the more powerful features of Vim.  It allows
 you to find a match for a pattern and execute a command there.  The general
 form is:<pre>
@@ -337,7 +337,7 @@ halfway through a line, and the substitution will also take place before the
 "//".</div>
 <div class="old-help-para">Just like with ":substitute", any pattern can be used.  When you learn more
 complicated patterns later, you can use them here.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="10.5"></a><span class="help-tag">10.5</span>	Visual block mode</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="10.5"></a><span class="help-tag">10.5</span>  	Visual block mode</h2></div>
 <div class="old-help-para">With <code>CTRL-V</code> you can start selection of a rectangular area of text.  There are
 a few commands that do something special with the text block.</div>
 <div class="old-help-para">There is something special about using the "$" command in Visual block mode.
@@ -435,7 +435,7 @@ using the "J" command:</div>
 <div class="old-help-para">The "J" command doesn't require a blockwise selection.  It works with "v" and
 "V" selection in exactly the same way.</div>
 <div class="old-help-para">If you don't want the white space to be changed, use the "gJ" command.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="10.6"></a><span class="help-tag">10.6</span>	Reading and writing part of a file</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="10.6"></a><span class="help-tag">10.6</span>  	Reading and writing part of a file</h2></div>
 <div class="old-help-para">When you are writing an e-mail message, you may want to include another file.
 This can be done with the ":read <code>{filename}</code>" command.  The text of the file is
 put below the cursor line.
@@ -476,7 +476,7 @@ Now move the cursor to the second line you want to collect, and type this:<pre>
 The "&gt;&gt;" tells Vim the "collection" file is not to be written as a new file,
 but the line must be appended at the end.   You can repeat this as many times
 as you like.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="10.7"></a><span class="help-tag">10.7</span>	Formatting text</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="10.7"></a><span class="help-tag">10.7</span>  	Formatting text</h2></div>
 <div class="old-help-para">When you are typing plain text, it's nice if the length of each line is
 automatically trimmed to fit in the window.  To make this happen while
 inserting text, set the <a href="options.html#'textwidth'">'textwidth'</a> option:<pre>
@@ -508,7 +508,7 @@ it.  If the first line was short, words from the next line will be appended.
 If it was too long, words will be moved to the next line.  The cursor moves to
 the second line.  Now you can use "." to repeat the command.  Keep doing this
 until you are at the end of the text you want to format.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="10.8"></a><span class="help-tag">10.8</span>	Changing case</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="10.8"></a><span class="help-tag">10.8</span>  	Changing case</h2></div>
 <div class="old-help-para">You have text with section headers in lowercase.  You want to make the word
 "section" all uppercase.  Do this with the "gU" operator.  Start with the
 cursor in the first column:<pre>
@@ -525,7 +525,7 @@ lowercase.  This can be shortened to "guu".  "gUgU" is shortened to "gUU" and
 "g~g~" to "g~~".  Example:<pre>
 g~~</pre></div>
 <div class="old-help-para"><div class="help-column_heading">	Some GIRLS have Fun    ----&gt;   sOME girls HAVE fUN</div></div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="10.9"></a><span class="help-tag">10.9</span>	Using an external program</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="10.9"></a><span class="help-tag">10.9</span>  	Using an external program</h2></div>
 <div class="old-help-para">Vim has a very powerful set of commands, it can do anything.  But there may
 still be something that an external command can do better or faster.
    The command "!{motion}{program}" takes a block of text and filters it
@@ -657,7 +657,7 @@ CTRL-L</pre>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 05:56 from <code><a href="https://github.com/neovim/neovim/commit/fad558b6affd54075654dd55922348f76a95e338">fad558b</a></code>
+        Generated at 2022-10-20 11:26 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 1 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_10.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_10.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>

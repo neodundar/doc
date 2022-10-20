@@ -90,14 +90,14 @@
 <div class="old-help-para">Vim can be tuned to work like you want it to.  This chapter shows you how to
 make Vim start with options set to different values.  Add plugins to extend
 Vim's capabilities.  Or define your own macros.</div>
-<div class="old-help-para"><a href="usr_05.html#05.1">05.1</a>	The vimrc file
-<a href="usr_05.html#05.2">05.2</a>	The example vimrc file explained
-<a href="usr_05.html#05.3">05.3</a>	Simple mappings
-<a href="usr_05.html#05.4">05.4</a>	Adding a package
-<a href="usr_05.html#05.5">05.5</a>	Adding a plugin
-<a href="usr_05.html#05.6">05.6</a>	Adding a help file
-<a href="usr_05.html#05.7">05.7</a>	The option window
-<a href="usr_05.html#05.8">05.8</a>	Often used options</div>
+<div class="old-help-para"><a href="usr_05.html#05.1">05.1</a>  	The vimrc file
+<a href="usr_05.html#05.2">05.2</a>  	The example vimrc file explained
+<a href="usr_05.html#05.3">05.3</a>  	Simple mappings
+<a href="usr_05.html#05.4">05.4</a>  	Adding a package
+<a href="usr_05.html#05.5">05.5</a>  	Adding a plugin
+<a href="usr_05.html#05.6">05.6</a>  	Adding a help file
+<a href="usr_05.html#05.7">05.7</a>  	The option window
+<a href="usr_05.html#05.8">05.8</a>  	Often used options</div>
 <div class="old-help-para">     Next chapter: <a href="usr_06.html#usr_06.txt">usr_06.txt</a>  Using syntax highlighting
  Previous chapter: <a href="usr_04.html#usr_04.txt">usr_04.txt</a>  Making small changes
 Table of contents: <a href="usr_toc.html#usr_toc.txt">usr_toc.txt</a></div>
@@ -121,7 +121,7 @@ For this new line to take effect you need to exit Vim and start it again.
 Later you will learn how to do this without exiting Vim.</div>
 <div class="old-help-para">This chapter only explains the most basic items.  For more information on how
 to write a Vim script file: <a href="usr_41.html#usr_41.txt">usr_41.txt</a>.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="05.2"></a><span class="help-tag">05.2</span>	The example vimrc file explained<span class="help-heading-tags">		<a name="vimrc_example.vim"></a><span class="help-tag">vimrc_example.vim</span></h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="05.2"></a><span class="help-tag">05.2</span>  	The example vimrc file explained<span class="help-heading-tags">		<a name="vimrc_example.vim"></a><span class="help-tag">vimrc_example.vim</span></h2></div>
 <div class="old-help-para">In the first chapter was explained how to create a vimrc file.<pre>
 :exe 'edit' stdpath('config').'/init.vim'</pre>
 In this section we will explain the various commands used in this file.  This
@@ -215,7 +215,7 @@ differences with the file it was loaded from.  See <a href="diff.html#diff">diff
 Prevent that the langmap option applies to characters that result from a
 mapping.  If set (default), this may break plugins (but it's backward
 compatible).  See <a href="options.html#'langremap'">'langremap'</a>.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="05.3"></a><span class="help-tag">05.3</span>	Simple mappings</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="05.3"></a><span class="help-tag">05.3</span>  	Simple mappings</h2></div>
 <div class="old-help-para">A mapping enables you to bind a set of Vim commands to a single key.  Suppose,
 for example, that you need to surround certain words with curly braces.  In
 other words, you need to change a word such as "amount" into "{amount}".  With
@@ -248,7 +248,7 @@ You need to type the \ and the p quickly after another, so that Vim knows they
 belong together.</div>
 <div class="old-help-para">The ":map" command (with no arguments) lists your current mappings.  At
 least the ones for Normal mode.  More about mappings in section <a href="usr_40.html#40.1">40.1</a>.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="05.4"></a><span class="help-tag">05.4</span>	Adding a package<span class="help-heading-tags">			<a name="add-package"></a><span class="help-tag">add-package</span> <a name="vimball-install"></a><span class="help-tag">vimball-install</span></span></h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="05.4"></a><span class="help-tag">05.4</span>  	Adding a package<span class="help-heading-tags">			<a name="add-package"></a><span class="help-tag">add-package</span> <a name="vimball-install"></a><span class="help-tag">vimball-install</span></span></h2></div>
 <div class="old-help-para">A package is a set of files that you can add to Vim.  There are two kinds of
 packages: optional and automatically loaded on startup.</div>
 <div class="old-help-para">The Vim distribution comes with a few packages that you can optionally use.
@@ -274,7 +274,7 @@ unzip /tmp/fancy.zip</pre></div>
 <div class="help-column_heading">		~/.local/share/nvim/site/pack/fancy/start/fancytext/plugin/fancy.vim</div>	   Here "fancytext" is the name of the package, it can be anything
 	   else.</div>
 <div class="old-help-para">More information about packages can be found here: <a href="repeat.html#packages">packages</a>.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="05.5"></a><span class="help-tag">05.5</span>	Adding a plugin<span class="help-heading-tags">					<a name="add-plugin"></a><span class="help-tag">add-plugin</span> <a name="plugin"></a><span class="help-tag">plugin</span></span></h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="05.5"></a><span class="help-tag">05.5</span>  	Adding a plugin<span class="help-heading-tags">					<a name="add-plugin"></a><span class="help-tag">add-plugin</span> <a name="plugin"></a><span class="help-tag">plugin</span></span></h2></div>
 <div class="old-help-para">Vim's functionality can be extended by adding plugins.  A plugin is nothing
 more than a Vim script file that is loaded automatically when Vim starts.  You
 can add a plugin very easily by dropping it in your plugin directory.</div>
@@ -358,15 +358,15 @@ Only files of this filetype will use the settings from the plugin.  The <code>&l
 part of the plugin file doesn't matter, you can use it to have several plugins
 for the same filetype.  Note that it must end in ".vim" or ".lua".</div>
 <div class="old-help-para">Further reading:
-<a href="filetype.html#filetype-plugins">filetype-plugins</a>	Documentation for the filetype plugins and information
+<a href="filetype.html#filetype-plugins">filetype-plugins</a>  	Documentation for the filetype plugins and information
 			about how to avoid that mappings cause problems.
-<a href="starting.html#load-plugins">load-plugins</a>		When the global plugins are loaded during startup.
-<a href="filetype.html#ftplugin-overrule">ftplugin-overrule</a>	Overruling the settings from a global plugin.
-<a href="usr_41.html#write-plugin">write-plugin</a>		How to write a plugin script.
-<a href="filetype.html#plugin-details">plugin-details</a>	For more information about using plugins or when your
+<a href="starting.html#load-plugins">load-plugins</a>  		When the global plugins are loaded during startup.
+<a href="filetype.html#ftplugin-overrule">ftplugin-overrule</a>  	Overruling the settings from a global plugin.
+<a href="usr_41.html#write-plugin">write-plugin</a>  		How to write a plugin script.
+<a href="filetype.html#plugin-details">plugin-details</a>  	For more information about using plugins or when your
 			plugin doesn't work.
-<a href="filetype.html#new-filetype">new-filetype</a>		How to detect a new file type.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="05.6"></a><span class="help-tag">05.6</span>	Adding a help file<span class="help-heading-tags">		                   <a name="add-local-help"></a><span class="help-tag">add-local-help</span></h2></div>
+<a href="filetype.html#new-filetype">new-filetype</a>  		How to detect a new file type.</div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="05.6"></a><span class="help-tag">05.6</span>  	Adding a help file<span class="help-heading-tags">		                   <a name="add-local-help"></a><span class="help-tag">add-local-help</span></h2></div>
 <div class="old-help-para">If you are lucky, the plugin you installed also comes with a help file.  We
 will explain how to install the help file, so that you can easily find help
 for your new plugin.</div>
@@ -385,7 +385,7 @@ The title lines from the local help files are automagically added to this
 section.  There you can see which local help files have been added and jump to
 them through the tag.</div>
 <div class="old-help-para">For writing a local help file, see <a href="usr_41.html#write-local-help">write-local-help</a>.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="05.7"></a><span class="help-tag">05.7</span>	The option window</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="05.7"></a><span class="help-tag">05.7</span>  	The option window</h2></div>
 <div class="old-help-para">If you are looking for an option that does what you want, you can search in
 the help files here: <a href="options.html#options">options</a>.  Another way is by using this command:<pre>
 :options</pre>
@@ -410,7 +410,7 @@ Then press <code>&lt;Enter&gt;</code> to apply the new value.  When you now move
 around you will notice that the text starts scrolling before you reach the
 border.  This is what the <a href="options.html#'scrolloff'">'scrolloff'</a> option does, it specifies an offset
 from the window border where scrolling starts.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="05.8"></a><span class="help-tag">05.8</span>	Often used options</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="05.8"></a><span class="help-tag">05.8</span>  	Often used options</h2></div>
 <div class="old-help-para">There are an awful lot of options.  Most of them you will hardly ever use.
 Some of the more useful ones will be mentioned here.  Don't forget you can
 find more help on these options with the ":help" command, with single quotes
@@ -520,7 +520,7 @@ This does mean there is less room to edit text, thus it's a compromise.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 05:56 from <code><a href="https://github.com/neovim/neovim/commit/fad558b6affd54075654dd55922348f76a95e338">fad558b</a></code>
+        Generated at 2022-10-20 11:26 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 2 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_05.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_05.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>

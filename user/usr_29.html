@@ -91,11 +91,11 @@
 contains many features to aid in writing programs.  Jump around to find where
 identifiers are defined and used.  Preview declarations in a separate window.
 There is more in the next chapter.</div>
-<div class="old-help-para"><a href="usr_29.html#29.1">29.1</a>	Using tags
-<a href="usr_29.html#29.2">29.2</a>	The preview window
-<a href="usr_29.html#29.3">29.3</a>	Moving through a program
-<a href="usr_29.html#29.4">29.4</a>	Finding global identifiers
-<a href="usr_29.html#29.5">29.5</a>	Finding local identifiers</div>
+<div class="old-help-para"><a href="usr_29.html#29.1">29.1</a>  	Using tags
+<a href="usr_29.html#29.2">29.2</a>  	The preview window
+<a href="usr_29.html#29.3">29.3</a>  	Moving through a program
+<a href="usr_29.html#29.4">29.4</a>  	Finding global identifiers
+<a href="usr_29.html#29.5">29.5</a>  	Finding local identifiers</div>
 <div class="old-help-para">     Next chapter: <a href="usr_30.html#usr_30.txt">usr_30.txt</a>  Editing programs
  Previous chapter: <a href="usr_28.html#usr_28.txt">usr_28.txt</a>  Folding
 Table of contents: <a href="usr_toc.html#usr_toc.txt">usr_toc.txt</a></div>
@@ -265,7 +265,7 @@ is to assume a sorted tags file, which makes a tags search a lot faster, but
 doesn't work if the tags file isn't sorted.</div>
 <div class="old-help-para">The <a href="options.html#'taglength'">'taglength'</a> option can be used to tell Vim the number of significant
 characters in a tag.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="29.2"></a><span class="help-tag">29.2</span>	The preview window</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="29.2"></a><span class="help-tag">29.2</span>  	The preview window</h2></div>
 <div class="old-help-para">When you edit code that contains a function call, you need to use the correct
 arguments.  To know what values to pass you can look at how the function is
 defined.  The tags mechanism works very well for this.  Preferably the
@@ -296,7 +296,7 @@ prototype for popen():</div>
 <div class="old-help-para">FILEpopen __P((const char, const char));</div>
 <div class="old-help-para">You can specify the height of the preview window, when it is opened, with the
 <a href="options.html#'previewheight'">'previewheight'</a> option.</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="29.3"></a><span class="help-tag">29.3</span>	Moving through a program</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="29.3"></a><span class="help-tag">29.3</span>  	Moving through a program</h2></div>
 <div class="old-help-para">Since a program is structured, Vim can recognize items in it.  Specific
 commands can be used to move around.
    C programs often contain constructs like this:</div>
@@ -381,7 +381,7 @@ comment with "]/".  This only works for /* -/ comments.</div>
 	  +--	       foo = bar * 3;	      --+
 						| ]/
 		       /* a short comment/  &lt;-+</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="29.4"></a><span class="help-tag">29.4</span>	Finding global identifiers</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="29.4"></a><span class="help-tag">29.4</span>  	Finding global identifiers</h2></div>
 <div class="old-help-para">You are editing a C program and wonder if a variable is declared as "int" or
 "unsigned".  A quick way to find this is with the "[I" command.
    Suppose the cursor is on the word "column".  Type:<pre>
@@ -458,7 +458,7 @@ it work with other languages than C or C++.
 <div class="old-help-para">	[d		only lists the first match
 	]D		only lists items below the cursor
 	]d		only lists the first item below the cursor</div>
-<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="29.5"></a><span class="help-tag">29.5</span>	Finding local identifiers</h2></div>
+<div class="old-help-para"><h2 class="help-heading"><span class="help-heading-tags"><a name="29.5"></a><span class="help-tag">29.5</span>  	Finding local identifiers</h2></div>
 <div class="old-help-para">The "[I" command searches included files.  To search in the current file only,
 and jump to the first place where the word under the cursor is used:<pre>
 gD</pre>
@@ -525,7 +525,7 @@ for the identifier.  Example (cursor on "idx"):</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 05:56 from <code><a href="https://github.com/neovim/neovim/commit/fad558b6affd54075654dd55922348f76a95e338">fad558b</a></code>
+        Generated at 2022-10-20 11:26 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 3 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_29.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_29.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>
