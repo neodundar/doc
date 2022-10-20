@@ -289,7 +289,7 @@ function(err, result, ctx, config)</pre></div>
                             <a href="lsp.html#vim.lsp.diagnostic.on_publish_diagnostics()">vim.lsp.diagnostic.on_publish_diagnostics()</a></div>
 <div class="old-help-para">                        To configure a particular <a href="lsp.html#lsp-handler">lsp-handler</a>, see:
                             <a href="lsp.html#lsp-handler-configuration">lsp-handler-configuration</a></div>
-<div class="old-help-para"><div class="help-column_heading">    Returns:</div>        The <a href="lsp.html#lsp-handler">lsp-handler</a>'<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+lsp.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/lsp.html%0D%0DContext%3A%0D%0D%60%60%60%0D%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7Clsp-handler-configuration%7C%0A%0A%20%20%20%20Returns%3A%20~%0A%20%20%20%20%20%20%20%20The%20%7Clsp-handler%7C's%20return%20value%20will%20be%20ignored.%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2Alsp-handler-configuration%2A%0A%0D%60%60%60">s</a> return value will be ignored.</div>
+<div class="old-help-para"><div class="help-column_heading">    Returns:</div>        The <a href="lsp.html#lsp-handler">lsp-handler</a>'s return value will be ignored.</div>
 <div class="old-help-para">                                                   <a name="lsp-handler-configuration"></a><code class="help-tag-right">lsp-handler-configuration</code></div>
 <div class="old-help-para">To configure the behavior of a builtin <a href="lsp.html#lsp-handler">lsp-handler</a>, the convenient method
 <a href="lsp.html#vim.lsp.with()">vim.lsp.with()</a> is provided for users.</div>
@@ -570,7 +570,7 @@ buf_request_sync(<code>{bufnr}</code>, <code>{method}</code>, <code>{params}</co
 </div><div class="help-li" style="margin-left: 3rem;"> <code>{rpc}</code> (table): RPC client object, for low level interaction with the
         client. See <a href="lsp.html#vim.lsp.rpc.start()">vim.lsp.rpc.start()</a>.
 </div><div class="help-li" style="margin-left: 3rem;"> <code>{offset_encoding}</code> (string): The encoding used for communicating with
-        the server. You can modify this in the <code>config</code>'<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+lsp.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/lsp.html%0D%0DContext%3A%0D%0D%60%60%60%0D%20%20%20%20%20%20%E2%80%A2%20%7Brpc%7D%20(table)%3A%20RPC%20client%20object%2C%20for%20low%20level%20interaction%20with%20the%0A%20%20%20%20%20%20%20%20client.%20See%20%7Cvim.lsp.rpc.start()%7C.%0A%20%20%20%20%20%20%E2%80%A2%20%7Boffset_encoding%7D%20(string)%3A%20The%20encoding%20used%20for%20communicating%20with%0A%20%20%20%20%20%20%20%20the%20server.%20You%20can%20modify%20this%20in%20the%20%60config%60's%20%60on_init%60%20method%0A%20%20%20%20%20%20%20%20before%20text%20is%20sent%20to%20the%20server.%0A%20%20%20%20%20%20%E2%80%A2%20%7Bhandlers%7D%20(table)%3A%20The%20handlers%20used%20by%20the%20client%20as%20described%20in%0A%20%20%20%20%20%20%20%20%7Clsp-handler%7C.%0D%60%60%60">s</a> <code>on_init</code> method
+        the server. You can modify this in the <code>config</code>'s <code>on_init</code> method
         before text is sent to the server.
 </div><div class="help-li" style="margin-left: 3rem;"> <code>{handlers}</code> (table): The handlers used by the client as described in
         <a href="lsp.html#lsp-handler">lsp-handler</a>.
@@ -1584,10 +1584,10 @@ Lua module: vim.lsp.protocol                                    </a>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 11:25 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
+        Generated at 2022-10-20 13:42 from <code><a href="https://github.com/neovim/neovim/commit/e6917306f6d3ba99747d14bea3f0b078631c5c0e">e691730</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 2 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+lsp.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/lsp.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   LSP
+      parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+lsp.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/lsp.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   LSP
                             NVIM REFERENCE MANUAL
                                       Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
  vim:tw=78:ts=8:sw=4:sts=4:et:ft=help:norl:">noise_lines: 4</span>

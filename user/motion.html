@@ -744,10 +744,10 @@ g'{mark}  g`{mark}
 <div class="old-help-para">A mark is not visible in any way.  It is just a position in the file that is
 remembered.  Do not confuse marks with named registers, they are totally
 unrelated.</div>
-<div class="old-help-para">'<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+motion.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/motion.html%0D%0DContext%3A%0D%0D%60%60%60%0Dremembered.%20%20Do%20not%20confuse%20marks%20with%20named%20registers%2C%20they%20are%20totally%0Aunrelated.%0A%0A'a%20-%20'z%09%09lowercase%20marks%2C%20valid%20within%20one%20file%0A'A%20-%20'Z%09%09uppercase%20marks%2C%20also%20called%20file%20marks%2C%20valid%20between%20files%0A'0%20-%20'9%09%09numbered%20marks%2C%20set%20from%20.shada%20file%0A%0D%60%60%60">a</a> - '<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+motion.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/motion.html%0D%0DContext%3A%0D%0D%60%60%60%0Dremembered.%20%20Do%20not%20confuse%20marks%20with%20named%20registers%2C%20they%20are%20totally%0Aunrelated.%0A%0A'a%20-%20'z%09%09lowercase%20marks%2C%20valid%20within%20one%20file%0A'A%20-%20'Z%09%09uppercase%20marks%2C%20also%20called%20file%20marks%2C%20valid%20between%20files%0A'0%20-%20'9%09%09numbered%20marks%2C%20set%20from%20.shada%20file%0A%0D%60%60%60">z</a>		lowercase marks, valid within one file
+<div class="old-help-para">'a - 'z		lowercase marks, valid within one file
 'A - 'Z		uppercase marks, also called file marks, valid between files
 '0 - '9		numbered marks, set from .shada file</div>
-<div class="old-help-para">Lowercase marks '<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+motion.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/motion.html%0D%0DContext%3A%0D%0D%60%60%60%0D'A%20-%20'Z%09%09uppercase%20marks%2C%20also%20called%20file%20marks%2C%20valid%20between%20files%0A'0%20-%20'9%09%09numbered%20marks%2C%20set%20from%20.shada%20file%0A%0ALowercase%20marks%20'a%20to%20'z%20are%20remembered%20as%20long%20as%20the%20file%20remains%20in%20the%0Abuffer%20list.%20%20If%20you%20remove%20the%20file%20from%20the%20buffer%20list%2C%20all%20its%20marks%20are%0Alost.%20%20If%20you%20delete%20a%20line%20that%20contains%20a%20mark%2C%20that%20mark%20is%20erased.%0A%0D%60%60%60">a</a> to '<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+motion.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/motion.html%0D%0DContext%3A%0D%0D%60%60%60%0D'A%20-%20'Z%09%09uppercase%20marks%2C%20also%20called%20file%20marks%2C%20valid%20between%20files%0A'0%20-%20'9%09%09numbered%20marks%2C%20set%20from%20.shada%20file%0A%0ALowercase%20marks%20'a%20to%20'z%20are%20remembered%20as%20long%20as%20the%20file%20remains%20in%20the%0Abuffer%20list.%20%20If%20you%20remove%20the%20file%20from%20the%20buffer%20list%2C%20all%20its%20marks%20are%0Alost.%20%20If%20you%20delete%20a%20line%20that%20contains%20a%20mark%2C%20that%20mark%20is%20erased.%0A%0D%60%60%60">z</a> are remembered as long as the file remains in the
+<div class="old-help-para">Lowercase marks 'a to 'z are remembered as long as the file remains in the
 buffer list.  If you remove the file from the buffer list, all its marks are
 lost.  If you delete a line that contains a mark, that mark is erased.</div>
 <div class="old-help-para">Lowercase marks can be used in combination with operators.  For example: "d't"
@@ -854,8 +854,8 @@ was made yet in the current file.</div>
 			another text line.
 			These items will not be adjusted for deleted/inserted
 			lines:
-<div class="help-li" style=""> lower case letter marks '<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+motion.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/motion.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%09another%20text%20line.%0A%09%09%09These%20items%20will%20not%20be%20adjusted%20for%20deleted%2Finserted%0A%09%09%09lines%3A%0A%09%09%09-%20lower%20case%20letter%20marks%20'a%20-%20'z%0A%09%09%09-%20upper%20case%20letter%20marks%20'A%20-%20'Z%0A%09%09%09-%20numbered%20marks%20'0%20-%20'9%0A%09%09%09-%20last%20insert%20position%20'%5E%0D%60%60%60">a</a> - '
-<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+motion.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/motion.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%09another%20text%20line.%0A%09%09%09These%20items%20will%20not%20be%20adjusted%20for%20deleted%2Finserted%0A%09%09%09lines%3A%0A%09%09%09-%20lower%20case%20letter%20marks%20'a%20-%20'z%0A%09%09%09-%20upper%20case%20letter%20marks%20'A%20-%20'Z%0A%09%09%09-%20numbered%20marks%20'0%20-%20'9%0A%09%09%09-%20last%20insert%20position%20'%5E%0D%60%60%60">z</a></div><div class="help-li" style=""> upper case letter marks 'A - 'Z
+<div class="help-li" style=""> lower case letter marks 'a - 'z
+</div><div class="help-li" style=""> upper case letter marks 'A - 'Z
 </div><div class="help-li" style=""> numbered marks '0 - '9
 </div><div class="help-li" style=""> last insert position '^
 </div><div class="help-li" style=""> last change position '.
@@ -1224,10 +1224,10 @@ L			To line [count] from bottom of window (default: Last
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 11:25 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
+        Generated at 2022-10-20 13:42 from <code><a href="https://github.com/neovim/neovim/commit/e6917306f6d3ba99747d14bea3f0b078631c5c0e">e691730</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 9 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+motion.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/motion.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim
+      parse_errors: 3 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+motion.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/motion.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim
 		  VIM REFERENCE MANUAL    by Bram Moolenaar
                                       Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
  vim:tw=78:ts=8:noet:ft=help:norl:">noise_lines: 4</span>

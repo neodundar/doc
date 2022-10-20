@@ -801,9 +801,9 @@ $	At end of pattern or in front of "\|", "\)" or "\n" (<a href="options.html#'ma
 \%'m	Matches with the position of mark m.
 \%&lt;'m	Matches before the position of mark m.
 \%&gt;'m	Matches after the position of mark m.
-	Example, to highlight the text from mark '<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pattern.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pattern.html%0D%0DContext%3A%0D%0D%60%60%60%0D%5C%25'm%09Matches%20with%20the%20position%20of%20mark%20m.%0A%5C%25%3C'm%09Matches%20before%20the%20position%20of%20mark%20m.%0A%5C%25%3E'm%09Matches%20after%20the%20position%20of%20mark%20m.%0A%09Example%2C%20to%20highlight%20the%20text%20from%20mark%20's%20to%20'e%3A%20%3E%0A%09%09%2F.%5C%25%3E's.%2A%5C%25%3C'e..%0A%3C%09Note%20that%20two%20dots%20are%20required%20to%20include%20mark%20'e%20in%20the%20match.%20%20That%0A%09is%20because%20%22%5C%25%3C'e%22%20matches%20at%20the%20character%20before%20the%20'e%20mark%2C%20and%0D%60%60%60">s</a> to 'e:<pre>/.\%&gt;'s.*\%&lt;'e..</pre></div>
-<div class="old-help-para">	Note that two dots are required to include mark '<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pattern.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pattern.html%0D%0DContext%3A%0D%0D%60%60%60%0D%5C%25%3E'm%09Matches%20after%20the%20position%20of%20mark%20m.%0A%09Example%2C%20to%20highlight%20the%20text%20from%20mark%20's%20to%20'e%3A%20%3E%0A%09%09%2F.%5C%25%3E's.%2A%5C%25%3C'e..%0A%3C%09Note%20that%20two%20dots%20are%20required%20to%20include%20mark%20'e%20in%20the%20match.%20%20That%0A%09is%20because%20%22%5C%25%3C'e%22%20matches%20at%20the%20character%20before%20the%20'e%20mark%2C%20and%0A%09since%20it's%20a%20%7C%2Fzero-width%7C%20match%20it%20doesn't%20include%20that%20character.%0A%09WARNING%3A%20When%20the%20mark%20is%20moved%20after%20the%20pattern%20was%20used%2C%20the%20result%0D%60%60%60">e</a> in the match.  That
-	is because "\%&lt;'e" matches at the character before the '<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+pattern.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/pattern.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09Example%2C%20to%20highlight%20the%20text%20from%20mark%20's%20to%20'e%3A%20%3E%0A%09%09%2F.%5C%25%3E's.%2A%5C%25%3C'e..%0A%3C%09Note%20that%20two%20dots%20are%20required%20to%20include%20mark%20'e%20in%20the%20match.%20%20That%0A%09is%20because%20%22%5C%25%3C'e%22%20matches%20at%20the%20character%20before%20the%20'e%20mark%2C%20and%0A%09since%20it's%20a%20%7C%2Fzero-width%7C%20match%20it%20doesn't%20include%20that%20character.%0A%09WARNING%3A%20When%20the%20mark%20is%20moved%20after%20the%20pattern%20was%20used%2C%20the%20result%0A%09becomes%20invalid.%20%20Vim%20doesn't%20automatically%20update%20the%20matches.%0D%60%60%60">e</a> mark, and
+	Example, to highlight the text from mark 's to 'e:<pre>/.\%&gt;'s.*\%&lt;'e..</pre></div>
+<div class="old-help-para">	Note that two dots are required to include mark 'e in the match.  That
+	is because "\%&lt;'e" matches at the character before the 'e mark, and
 	since it's a <a href="pattern.html#%2Fzero-width">/zero-width</a> match it doesn't include that character.
 	WARNING: When the mark is moved after the pattern was used, the result
 	becomes invalid.  Vim doesn't automatically update the matches.
@@ -1319,10 +1319,10 @@ force case insensitivity	\c		(?i)</a></div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 11:26 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
+        Generated at 2022-10-20 13:42 from <code><a href="https://github.com/neovim/neovim/commit/e6917306f6d3ba99747d14bea3f0b078631c5c0e">e691730</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 3 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+pattern.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/pattern.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim
+      parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+pattern.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/pattern.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim
 		  VIM REFERENCE MANUAL    by Bram Moolenaar
                                       Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
  vim:tw=78:ts=8:noet:ft=help:norl:">noise_lines: 4</span>

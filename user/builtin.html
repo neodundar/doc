@@ -76,7 +76,7 @@
 
   <div class="container golden-grid help-body">
   <div class="col-wide">
-  <a name="builtin.txt"></a><a name="builtin-functions"></a><h1> Builtin</h1>
+  <a name="builtin.txt"></a><a name="vimscript-functions"></a><h1> Builtin</h1>
   <p>
     <i>
     Nvim <code>:help</code> pages, <a href="https://github.com/neovim/neovim/blob/master/scripts/gen_help_html.lua">generated</a>
@@ -85,7 +85,7 @@
     </i>
   </p>
   <hr/>
-  <div class="old-help-para">Builtin functions</div>
+  <div class="old-help-para">Builtin functions <a name="builtin-functions"></a><code class="help-tag">builtin-functions</code></div>
 <div class="old-help-para">For functions grouped by what they are used for see <a href="usr_41.html#function-list">function-list</a>.</div>
 <div class="old-help-para"><h2 class="help-heading">1. Overview<span class="help-heading-tags">					<a name="builtin-function-list"></a><span class="help-tag">builtin-function-list</span></h2></div>
 <div class="old-help-para">Use <code>CTRL-]</code> on the function name to jump to the full explanation.</div>
@@ -1089,7 +1089,7 @@ col(<code>{expr}</code>)	The result is a Number, which is the byte index of the 
 		    .	    the cursor position
 		    $	    the end of the cursor line (the result is the
 			    number of bytes in the cursor line plus one)
-		    '<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+builtin.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/builtin.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%20%20%20%20.%09%20%20%20%20the%20cursor%20position%0A%09%09%20%20%20%20%24%09%20%20%20%20the%20end%20of%20the%20cursor%20line%20(the%20result%20is%20the%0A%09%09%09%20%20%20%20number%20of%20bytes%20in%20the%20cursor%20line%20plus%20one)%0A%09%09%20%20%20%20'x%09%20%20%20%20position%20of%20mark%20x%20(if%20the%20mark%20is%20not%20set%2C%200%20is%0A%09%09%09%20%20%20%20returned)%0A%09%09%20%20%20%20v%20%20%20%20%20%20%20In%20Visual%20mode%3A%20the%20start%20of%20the%20Visual%20area%20(the%0A%09%09%09%20%20%20%20cursor%20is%20the%20end).%20%20When%20not%20in%20Visual%20mode%0D%60%60%60">x</a>	    position of mark x (if the mark is not set, 0 is
+		    'x	    position of mark x (if the mark is not set, 0 is
 			    returned)
 		    v       In Visual mode: the start of the Visual area (the
 			    cursor is the end).  When not in Visual mode
@@ -1350,7 +1350,7 @@ debugbreak(<code>{pid}</code>)					<a name="debugbreak()"></a><code class="help-
 		Specifically used to interrupt a program being debugged.  It
 		will cause process <code>{pid}</code> to get a SIGTRAP.  Behavior for other
 		processes is undefined. See <a href="nvim_terminal_emulator.html#terminal-debug">terminal-debug</a>.
-		<code>{Sends a SIGINT to a process }</code> <code>{pid}</code> other than MS-Windows}</div>
+		<code>{Sends a SIGINT to a process <a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+builtin.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/builtin.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09Specifically%20used%20to%20interrupt%20a%20program%20being%20debugged.%20%20It%0A%09%09will%20cause%20process%20%7Bpid%7D%20to%20get%20a%20SIGTRAP.%20%20Behavior%20for%20other%0A%09%09processes%20is%20undefined.%20See%20%7Cterminal-debug%7C.%0A%09%09%7BSends%20a%20SIGINT%20to%20a%20process%20%7Bpid%7D%20other%20than%20MS-Windows%7D%0A%0A%09%09Returns%20%7CTRUE%7C%20if%20successfully%20interrupted%20the%20program.%0A%09%09Otherwise%20returns%20%7CFALSE%7C.%0D%60%60%60">{pid</a>}</code> other than MS-Windows}</div>
 <div class="old-help-para">		Returns <a href="eval.html#TRUE">TRUE</a> if successfully interrupted the program.
 		Otherwise returns <a href="eval.html#FALSE">FALSE</a>.</div>
 <div class="old-help-para">		Can also be used as a <a href="eval.html#method">method</a>:<pre>GetPid()-&gt;debugbreak()</pre>
@@ -1905,7 +1905,7 @@ finddir(<code>{name}</code> [, <code>{path}</code> [, <code>{count}</code>]])			
 		directory is below the current directory a relative path is
 		returned.  Otherwise a full path is returned.
 		If <code>{path}</code> is omitted or empty then <a href="options.html#'path'">'path'</a> is used.</div>
-<div class="old-help-para">		If the optional <code>{count}</code> is given, find <code>{count}</code>'<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+builtin.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/builtin.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09returned.%20%20Otherwise%20a%20full%20path%20is%20returned.%0A%09%09If%20%7Bpath%7D%20is%20omitted%20or%20empty%20then%20'path'%20is%20used.%0A%0A%09%09If%20the%20optional%20%7Bcount%7D%20is%20given%2C%20find%20%7Bcount%7D's%20occurrence%20of%0A%09%09%7Bname%7D%20in%20%7Bpath%7D%20instead%20of%20the%20first%20one.%0A%09%09When%20%7Bcount%7D%20is%20negative%20return%20all%20the%20matches%20in%20a%20%7CList%7C.%0A%0D%60%60%60">s</a> occurrence of
+<div class="old-help-para">		If the optional <code>{count}</code> is given, find <code>{count}</code>'s occurrence of
 		<code>{name}</code> in <code>{path}</code> instead of the first one.
 		When <code>{count}</code> is negative return all the matches in a <a href="eval.html#List">List</a>.</div>
 <div class="old-help-para">		Returns an empty string if the directory is not found.</div>
@@ -3736,7 +3736,7 @@ libcallnr(<code>{libname}</code>, <code>{funcname}</code>, <code>{argument}</cod
 		The accepted positions are:
 		    .	    the cursor position
 		    $	    the last line in the current buffer
-		    '<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+builtin.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/builtin.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09The%20accepted%20positions%20are%3A%0A%09%09%20%20%20%20.%09%20%20%20%20the%20cursor%20position%0A%09%09%20%20%20%20%24%09%20%20%20%20the%20last%20line%20in%20the%20current%20buffer%0A%09%09%20%20%20%20'x%09%20%20%20%20position%20of%20mark%20x%20(if%20the%20mark%20is%20not%20set%2C%200%20is%0A%09%09%09%20%20%20%20returned)%0A%09%09%20%20%20%20w0%09%20%20%20%20first%20line%20visible%20in%20current%20window%20(one%20if%20the%0A%09%09%09%20%20%20%20display%20isn't%20updated%2C%20e.g.%20in%20silent%20Ex%20mode)%0D%60%60%60">x</a>	    position of mark x (if the mark is not set, 0 is
+		    'x	    position of mark x (if the mark is not set, 0 is
 			    returned)
 		    w0	    first line visible in current window (one if the
 			    display isn't updated, e.g. in silent Ex mode)
@@ -5239,7 +5239,7 @@ searchcount([{options}])					<a name="searchcount()"></a><code class="help-tag-r
 <div class="old-help-para">		For <code>{options}</code> see further down.</div>
 <div class="old-help-para">		To get the last search count when <a href="pattern.html#n">n</a> or <a href="pattern.html#N">N</a> was pressed, call
 		this function with <code>recompute: 0</code> . This sometimes returns
-		wrong information because <a href="pattern.html#n">n</a> and <a href="pattern.html#N">N</a>'<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+builtin.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/builtin.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A%09%09To%20get%20the%20last%20search%20count%20when%20%7Cn%7C%20or%20%7CN%7C%20was%20pressed%2C%20call%0A%09%09this%20function%20with%20%60recompute%3A%200%60%20.%20This%20sometimes%20returns%0A%09%09wrong%20information%20because%20%7Cn%7C%20and%20%7CN%7C's%20maximum%20count%20is%2099.%0A%09%09If%20it%20exceeded%2099%20the%20result%20must%20be%20max%20count%20%2B%201%20(100).%20If%0A%09%09you%20want%20to%20get%20correct%20information%2C%20specify%20%60recompute%3A%201%60%3A%20%3E%0A%0D%60%60%60">s</a> maximum count is 99.
+		wrong information because <a href="pattern.html#n">n</a> and <a href="pattern.html#N">N</a>'s maximum count is 99.
 		If it exceeded 99 the result must be max count + 1 (100). If
 		you want to get correct information, specify <code>recompute: 1</code>:<pre>
 " result == maxcount + 1 (100) when many matches
@@ -5639,7 +5639,7 @@ setmatches(<code>{list}</code> [, <code>{win}</code>])				<a name="setmatches()"
 setpos(<code>{expr}</code>, <code>{list}</code>)
 		Set the position for String <code>{expr}</code>.  Possible values:
 			.	the cursor
-			'<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+builtin.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/builtin.html%0D%0DContext%3A%0D%0D%60%60%60%0Dsetpos(%7Bexpr%7D%2C%20%7Blist%7D)%0A%09%09Set%20the%20position%20for%20String%20%7Bexpr%7D.%20%20Possible%20values%3A%0A%09%09%09.%09the%20cursor%0A%09%09%09'x%09mark%20x%0A%0A%09%09%7Blist%7D%20must%20be%20a%20%7CList%7C%20with%20four%20or%20five%20numbers%3A%0A%09%09%20%20%20%20%5Bbufnum%2C%20lnum%2C%20col%2C%20off%5D%0D%60%60%60">x</a>	mark x</div>
+			'x	mark x</div>
 <div class="old-help-para">		<code>{list}</code> must be a <a href="eval.html#List">List</a> with four or five numbers:
 		    [bufnum, lnum, col, off]
 		    [bufnum, lnum, col, off, curswant]</div>
@@ -6956,7 +6956,7 @@ virtcol(<code>{expr}</code>)						<a name="virtcol()"></a><code class="help-tag-
 		    $	    the end of the cursor line (the result is the
 			    number of displayed characters in the cursor line
 			    plus one)
-		    '<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+builtin.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/builtin.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%20%20%20%20%24%09%20%20%20%20the%20end%20of%20the%20cursor%20line%20(the%20result%20is%20the%0A%09%09%09%20%20%20%20number%20of%20displayed%20characters%20in%20the%20cursor%20line%0A%09%09%09%20%20%20%20plus%20one)%0A%09%09%20%20%20%20'x%09%20%20%20%20position%20of%20mark%20x%20(if%20the%20mark%20is%20not%20set%2C%200%20is%0A%09%09%09%20%20%20%20returned)%0A%09%09%20%20%20%20v%20%20%20%20%20%20%20In%20Visual%20mode%3A%20the%20start%20of%20the%20Visual%20area%20(the%0A%09%09%09%20%20%20%20cursor%20is%20the%20end).%20%20When%20not%20in%20Visual%20mode%0D%60%60%60">x</a>	    position of mark x (if the mark is not set, 0 is
+		    'x	    position of mark x (if the mark is not set, 0 is
 			    returned)
 		    v       In Visual mode: the start of the Visual area (the
 			    cursor is the end).  When not in Visual mode
@@ -7071,7 +7071,7 @@ win_id2win(<code>{expr}</code>)					<a name="win_id2win()"></a><code class="help
 		Return 0 if the window cannot be found in the current tabpage.</div>
 <div class="old-help-para">		Can also be used as a <a href="eval.html#method">method</a>:<pre>GetWinid()-&gt;win_id2win()</pre>
 win_move_separator(<code>{nr}</code>, <code>{offset}</code>)			<a name="win_move_separator()"></a><code class="help-tag-right">win_move_separator()</code>
-		Move window <code>{nr}</code>'<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+builtin.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/builtin.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%09GetWinid()-%3Ewin_id2win()%0A%0Awin_move_separator(%7Bnr%7D%2C%20%7Boffset%7D)%09%09%09%2Awin_move_separator()%2A%0A%09%09Move%20window%20%7Bnr%7D's%20vertical%20separator%20(i.e.%2C%20the%20right%20border)%0A%09%09by%20%7Boffset%7D%20columns%2C%20as%20if%20being%20dragged%20by%20the%20mouse.%20%7Bnr%7D%0A%09%09can%20be%20a%20window%20number%20or%20%7Cwindow-ID%7C.%20A%20positive%20%7Boffset%7D%0A%09%09moves%20right%20and%20a%20negative%20%7Boffset%7D%20moves%20left.%20Moving%20a%0D%60%60%60">s</a> vertical separator (i.e., the right border)
+		Move window <code>{nr}</code>'s vertical separator (i.e., the right border)
 		by <code>{offset}</code> columns, as if being dragged by the mouse. <code>{nr}</code>
 		can be a window number or <a href="windows.html#window-ID">window-ID</a>. A positive <code>{offset}</code>
 		moves right and a negative <code>{offset}</code> moves left. Moving a
@@ -7085,7 +7085,7 @@ win_move_separator(<code>{nr}</code>, <code>{offset}</code>)			<a name="win_move
 		window, since it has no separator on the right.</div>
 <div class="old-help-para">		Can also be used as a <a href="eval.html#method">method</a>:<pre>GetWinnr()-&gt;win_move_separator(offset)</pre>
 win_move_statusline(<code>{nr}</code>, <code>{offset}</code>)			<a name="win_move_statusline()"></a><code class="help-tag-right">win_move_statusline()</code>
-		Move window <code>{nr}</code>'<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+builtin.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/builtin.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%09GetWinnr()-%3Ewin_move_separator(offset)%0A%0Awin_move_statusline(%7Bnr%7D%2C%20%7Boffset%7D)%09%09%09%2Awin_move_statusline()%2A%0A%09%09Move%20window%20%7Bnr%7D's%20status%20line%20(i.e.%2C%20the%20bottom%20border)%20by%0A%09%09%7Boffset%7D%20rows%2C%20as%20if%20being%20dragged%20by%20the%20mouse.%20%7Bnr%7D%20can%20be%20a%0A%09%09window%20number%20or%20%7Cwindow-ID%7C.%20A%20positive%20%7Boffset%7D%20moves%20down%0A%09%09and%20a%20negative%20%7Boffset%7D%20moves%20up.%20Moving%20a%20window's%20status%0D%60%60%60">s</a> status line (i.e., the bottom border) by
+		Move window <code>{nr}</code>'s status line (i.e., the bottom border) by
 		<code>{offset}</code> rows, as if being dragged by the mouse. <code>{nr}</code> can be a
 		window number or <a href="windows.html#window-ID">window-ID</a>. A positive <code>{offset}</code> moves down
 		and a negative <code>{offset}</code> moves up. Moving a window's status
@@ -7355,10 +7355,10 @@ Don't forget that "^" will only match at the first character of the String and
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 11:25 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
+        Generated at 2022-10-20 13:41 from <code><a href="https://github.com/neovim/neovim/commit/e6917306f6d3ba99747d14bea3f0b078631c5c0e">e691730</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 17 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+builtin.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/builtin.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim
+      parse_errors: 10 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+builtin.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/builtin.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim
 		  VIM REFERENCE MANUAL	  by Bram Moolenaar
 				      Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
  vim:tw=78:ts=8:noet:ft=help:norl:">noise_lines: 4</span>

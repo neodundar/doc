@@ -1396,7 +1396,7 @@ startup sequence:<pre>:let inform_highlight_old=1</pre>
 <h3 class="help-heading">IDL<span class="help-heading-tags">							<a name="idl.vim"></a><span class="help-tag">idl.vim</span> <a name="idl-syntax"></a><span class="help-tag">idl-syntax</span></span></h3></div>
 <div class="old-help-para">IDL (Interface Definition Language) files are used to define RPC calls.  In
 Microsoft land, this is also used for defining COM interfaces and calls.</div>
-<div class="old-help-para">IDL'<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+syntax.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/syntax.html%0D%0DContext%3A%0D%0D%60%60%60%0DIDL%20(Interface%20Definition%20Language)%20files%20are%20used%20to%20define%20RPC%20calls.%20%20In%0AMicrosoft%20land%2C%20this%20is%20also%20used%20for%20defining%20COM%20interfaces%20and%20calls.%0A%0AIDL's%20structure%20is%20simple%20enough%20to%20permit%20a%20full%20grammar%20based%20approach%20to%0Arather%20than%20using%20a%20few%20heuristics.%20%20The%20result%20is%20large%20and%20somewhat%0Arepetitive%20but%20seems%20to%20work.%0A%0D%60%60%60">s</a> structure is simple enough to permit a full grammar based approach to
+<div class="old-help-para">IDL's structure is simple enough to permit a full grammar based approach to
 rather than using a few heuristics.  The result is large and somewhat
 repetitive but seems to work.</div>
 <div class="old-help-para">There are some Microsoft extensions to idl files that are here.  Some of them
@@ -1742,7 +1742,7 @@ from the rest of the name (like 'PkgName::' in '$PkgName::VarName'):<pre>
 :let perl_no_scope_in_variables = 1</pre>
 (In Vim 6.x it was the other way around: "perl_want_scope_in_variables"
 enabled it.)</div>
-<div class="old-help-para">If you do not want complex things like '@{<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+syntax.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/syntax.html%0D%0DContext%3A%0D%0D%60%60%60%0D(In%20Vim%206.x%20it%20was%20the%20other%20way%20around%3A%20%22perl_want_scope_in_variables%22%0Aenabled%20it.)%0A%0AIf%20you%20do%20not%20want%20complex%20things%20like%20'%40%7B%24%7B%22foo%22%7D%7D'%20to%20be%20parsed%3A%20%3E%0A%0A%09%3Alet%20perl_no_extended_vars%20%3D%201%0A%0D%60%60%60">$</a><code>{"foo"}</code>}' to be parsed:<pre>
+<div class="old-help-para">If you do not want complex things like '@<code>{$<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+syntax.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/syntax.html%0D%0DContext%3A%0D%0D%60%60%60%0D(In%20Vim%206.x%20it%20was%20the%20other%20way%20around%3A%20%22perl_want_scope_in_variables%22%0Aenabled%20it.)%0A%0AIf%20you%20do%20not%20want%20complex%20things%20like%20'%40%7B%24%7B%22foo%22%7D%7D'%20to%20be%20parsed%3A%20%3E%0A%0A%09%3Alet%20perl_no_extended_vars%20%3D%201%0A%0D%60%60%60">{"foo"</a>}</code>}' to be parsed:<pre>
 :let perl_no_extended_vars = 1</pre>
 (In Vim 6.x it was the other way around: "perl_extended_vars" enabled it.)</div>
 <div class="old-help-para">The coloring strings can be changed.  By default strings and qq friends will
@@ -3863,7 +3863,7 @@ loaded after this command.</div>
 <div class="old-help-para">To clean up specific syntax groups for the current buffer:<pre>:syntax clear {group-name} ..</pre>
 This removes all patterns and keywords for <code>{group-name}</code>.</div>
 <div class="old-help-para">To clean up specific syntax group lists for the current buffer:<pre>:syntax clear @{grouplist-name} ..</pre>
-This sets <code>{grouplist-name}</code>'<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+syntax.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/syntax.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0ATo%20clean%20up%20specific%20syntax%20group%20lists%20for%20the%20current%20buffer%3A%20%3E%0A%20%20%3Asyntax%20clear%20%40%7Bgrouplist-name%7D%20..%0AThis%20sets%20%7Bgrouplist-name%7D's%20contents%20to%20an%20empty%20list.%0A%0A%09%09%09%09%09%09%2A%3Asyntax-off%2A%20%2A%3Asyn-off%2A%0AIf%20you%20want%20to%20disable%20syntax%20highlighting%20for%20all%20buffers%2C%20you%20need%20to%20remove%0D%60%60%60">s</a> contents to an empty list.</div>
+This sets <code>{grouplist-name}</code>'s contents to an empty list.</div>
 <div class="old-help-para">						<a name="%3Asyntax-off"></a><code class="help-tag-right">:syntax-off</code> <a name="%3Asyn-off"></a><code class="help-tag">:syn-off</code>
 If you want to disable syntax highlighting for all buffers, you need to remove
 the autocommands that load the syntax files:<pre>:syntax off</pre>
@@ -4024,10 +4024,10 @@ literal text specify the size of that text (in bytes):</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 11:26 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
+        Generated at 2022-10-20 13:42 from <code><a href="https://github.com/neovim/neovim/commit/e6917306f6d3ba99747d14bea3f0b078631c5c0e">e691730</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 4 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+syntax.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/syntax.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim
+      parse_errors: 2 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+syntax.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/syntax.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim
 		  VIM REFERENCE MANUAL	  by Bram Moolenaar
                                       Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
  vim:tw=78:sw=4:ts=8:noet:ft=help:norl:">noise_lines: 4</span>

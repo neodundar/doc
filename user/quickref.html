@@ -157,9 +157,9 @@
 <a href="motion.html#ge">ge</a>  	N  ge		backward to the end of the Nth word
 <a href="motion.html#gE">gE</a>  	N  gE		backward to the end of the Nth blank-separated <a href="motion.html#WORD">WORD</a></div>
 <div class="old-help-para"><a href="motion.html#)">)</a>  	N  )		N sentences forward
-|(|	N  (		N sentences backward
-|}|	N  }		N paragraphs forward
-|{|	N  {		N paragraphs backward
+<a href="motion.html#(">(</a>  	N  (		N sentences backward
+<a href="motion.html#%7D">}</a>  	N  }		N paragraphs forward
+<a href="motion.html#%7B">{</a>  	N  {		N paragraphs backward
 <a href="motion.html#%5D%5D">]]</a>  	N  ]]		N sections forward, at start of section
 <a href="motion.html#%5B%5B">[[</a>  	N  [[		N sections backward, at start of section
 <a href="motion.html#%5D%5B">][</a>  	N  ][		N sections forward, at end of section
@@ -1038,7 +1038,7 @@ previewpopuppvp     use popup window for preview
 <a href="cmdline.html#%3Arange">:range</a>  	$		the last line in the file
 <a href="cmdline.html#%3Arange">:range</a>  	%		equal to 1,$ (the entire file)
 <a href="cmdline.html#%3Arange">:range</a>  	*		equal to '&lt;,'&gt; (visual area)
-<a href="cmdline.html#%3Arange">:range</a>  	'<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+quickref.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/quickref.html%0D%0DContext%3A%0D%0D%60%60%60%0D%7C%3Arange%7C%09%24%09%09the%20last%20line%20in%20the%20file%0A%7C%3Arange%7C%09%25%09%09equal%20to%201%2C%24%20(the%20entire%20file)%0A%7C%3Arange%7C%09%2A%09%09equal%20to%20'%3C%2C'%3E%20(visual%20area)%0A%7C%3Arange%7C%09't%09%09position%20of%20mark%20t%0A%7C%3Arange%7C%09%2F%7Bpattern%7D%5B%2F%5D%09the%20next%20line%20where%20%7Bpattern%7D%20matches%0A%7C%3Arange%7C%09%3F%7Bpattern%7D%5B%3F%5D%09the%20previous%20line%20where%20%7Bpattern%7D%20matches%0A%0D%60%60%60">t</a>		position of mark t
+<a href="cmdline.html#%3Arange">:range</a>  	't		position of mark t
 <a href="cmdline.html#%3Arange">:range</a>  	/{pattern}[/]	the next line where <code>{pattern}</code> matches
 <a href="cmdline.html#%3Arange">:range</a>  	?{pattern}[?]	the previous line where <code>{pattern}</code> matches</div>
 <div class="old-help-para"><a href="cmdline.html#%3Arange">:range</a>  	+[num]		add [num] to the preceding line number
@@ -1392,10 +1392,10 @@ Quick reference guide</a>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 11:26 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
+        Generated at 2022-10-20 13:42 from <code><a href="https://github.com/neovim/neovim/commit/e6917306f6d3ba99747d14bea3f0b078631c5c0e">e691730</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 1 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+quickref.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/quickref.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="  Nvim
+      parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+quickref.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/quickref.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="  Nvim
 		  VIM REFERENCE MANUAL    by Bram Moolenaar
  vim:tw=78:ts=8:noet:ft=help:norl:">noise_lines: 3</span>
       </div>

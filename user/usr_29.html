@@ -126,28 +126,28 @@ it does.  So you position the cursor over the call to "write_char" and press
 <code>CTRL-]</code>.  Now you are at the definition of "write_char".</div>
 <div class="old-help-para">	+-------------------------------------+
 	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_29.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_29.html%0D%0DContext%3A%0D%0D%60%60%60%0DCTRL-%5D.%20%20Now%20you%20are%20at%20the%20definition%20of%20%22write_char%22.%0A%0A%09%2B-------------------------------------%2B%0A%09%7Cvoid%20write_block(char%20%2A%2As%3B%20int%20cnt)%20%20%7C%0A%09%7C%7B%09%09%09%09%20%20%20%20%20%20%7C%0A%09%7C%20%20%20int%20i%3B%09%09%09%20%20%20%20%20%20%7C%0A%09%7C%20%20%20for%20(i%20%3D%200%3B%20i%20%3C%20cnt%3B%20%2B%2Bi)%09%20%20%20%20%20%20%7C%0D%60%60%60">void</a> write_block(char **s; int cnt)  |
-	|{				      |
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_29.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_29.html%0D%0DContext%3A%0D%0D%60%60%60%0D%0A%09%2B-------------------------------------%2B%0A%09%7Cvoid%20write_block(char%20%2A%2As%3B%20int%20cnt)%20%20%7C%0A%09%7C%7B%09%09%09%09%20%20%20%20%20%20%7C%0A%09%7C%20%20%20int%20i%3B%09%09%09%20%20%20%20%20%20%7C%0A%09%7C%20%20%20for%20(i%20%3D%200%3B%20i%20%3C%20cnt%3B%20%2B%2Bi)%09%20%20%20%20%20%20%7C%0A%09%7C%20%20%20%20%20%20write_line(s%5Bi%5D)%3B%09%20%20%20%20%20%20%7C%0D%60%60%60">{</a>				      |
 	|   int i;			      |
 	|   for (i = 0; i &lt; cnt; ++i)	      |
 	|      write_line(s[i]);	      |
-	|}	    |			      |
+	|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_29.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_29.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%7C%20%20%20int%20i%3B%09%09%09%20%20%20%20%20%20%7C%0A%09%7C%20%20%20for%20(i%20%3D%200%3B%20i%20%3C%20cnt%3B%20%2B%2Bi)%09%20%20%20%20%20%20%7C%0A%09%7C%20%20%20%20%20%20write_line(s%5Bi%5D)%3B%09%20%20%20%20%20%20%7C%0A%09%7C%7D%09%20%20%20%20%7C%09%09%09%20%20%20%20%20%20%7C%0A%09%2B-----------%7C-------------------------%2B%0A%09%09%20%20%20%20%7C%0A%09%20%20%20%20%20CTRL-%5D%20%7C%0D%60%60%60">}</a>	    |			      |
 	+-----------|-------------------------+
 		    |
 	     <code>CTRL-]</code> |
 		    |	 +----------------------------+
 		    +--&gt; |<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_29.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_29.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%20%20%20%20%7C%0A%09%20%20%20%20%20CTRL-%5D%20%7C%0A%09%09%20%20%20%20%7C%09%20%2B----------------------------%2B%0A%09%09%20%20%20%20%2B--%3E%20%7Cvoid%20write_line(char%20%2As)%20%20%20%20%7C%0A%09%09%09%20%7C%7B%09%09%09%20%20%20%20%20%20%7C%0A%09%09%09%20%7C%20%20%20while%20(%2As%20%21%3D%200)%09%20%20%20%20%20%20%7C%0A%09%09%09%20%7C%09write_char(%2As%2B%2B)%3B%20%20%20%20%20%7C%0D%60%60%60">void</a> write_line(chars)    |
-			 |{			      |
+			 |<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_29.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_29.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%20%20%20%20%20CTRL-%5D%20%7C%0A%09%09%20%20%20%20%7C%09%20%2B----------------------------%2B%0A%09%09%20%20%20%20%2B--%3E%20%7Cvoid%20write_line(char%20%2As)%20%20%20%20%7C%0A%09%09%09%20%7C%7B%09%09%09%20%20%20%20%20%20%7C%0A%09%09%09%20%7C%20%20%20while%20(%2As%20%21%3D%200)%09%20%20%20%20%20%20%7C%0A%09%09%09%20%7C%09write_char(%2As%2B%2B)%3B%20%20%20%20%20%7C%0A%09%09%09%20%7C%7D%09%20%20%7C%09%09%20%20%20%20%20%20%7C%0D%60%60%60">{</a>			      |
 			 |   while (s != 0)	      |
 			 |	write_char(s++);     |
-			 |}	  |		      |
+			 |<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_29.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_29.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%09%20%7C%7B%09%09%09%20%20%20%20%20%20%7C%0A%09%09%09%20%7C%20%20%20while%20(%2As%20%21%3D%200)%09%20%20%20%20%20%20%7C%0A%09%09%09%20%7C%09write_char(%2As%2B%2B)%3B%20%20%20%20%20%7C%0A%09%09%09%20%7C%7D%09%20%20%7C%09%09%20%20%20%20%20%20%7C%0A%09%09%09%20%2B--------%7C-------------------%2B%0A%09%09%09%09%20%20%7C%0A%09%09%09%20%20%20CTRL-%5D%20%7C%0D%60%60%60">}</a>	  |		      |
 			 +--------|-------------------+
 				  |
 			   <code>CTRL-]</code> |
 				  |    +------------------------------------+
 				  +--&gt; |<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_29.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_29.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%09%09%20%20%7C%0A%09%09%09%20%20%20CTRL-%5D%20%7C%0A%09%09%09%09%20%20%7C%20%20%20%20%2B------------------------------------%2B%0A%09%09%09%09%20%20%2B--%3E%20%7Cvoid%20write_char(char%20c)%09%09%20%20%20%20%7C%0A%09%09%09%09%20%20%20%20%20%20%20%7C%7B%09%09%09%09%20%20%20%20%7C%0A%09%09%09%09%20%20%20%20%20%20%20%7C%20%20%20%20putchar((int)(unsigned%20char)c)%3B%20%7C%0A%09%09%09%09%20%20%20%20%20%20%20%7C%7D%09%09%09%09%20%20%20%20%7C%0D%60%60%60">void</a> write_char(char c)		    |
-				       |{				    |
+				       |<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_29.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_29.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%09%20%20%20CTRL-%5D%20%7C%0A%09%09%09%09%20%20%7C%20%20%20%20%2B------------------------------------%2B%0A%09%09%09%09%20%20%2B--%3E%20%7Cvoid%20write_char(char%20c)%09%09%20%20%20%20%7C%0A%09%09%09%09%20%20%20%20%20%20%20%7C%7B%09%09%09%09%20%20%20%20%7C%0A%09%09%09%09%20%20%20%20%20%20%20%7C%20%20%20%20putchar((int)(unsigned%20char)c)%3B%20%7C%0A%09%09%09%09%20%20%20%20%20%20%20%7C%7D%09%09%09%09%20%20%20%20%7C%0A%09%09%09%09%20%20%20%20%20%20%20%2B------------------------------------%2B%0D%60%60%60">{</a>				    |
 				       |    putchar((int)(unsigned char)c); |
-				       |}				    |
+				       |<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+usr_29.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/usr_29.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%09%09%20%20%2B--%3E%20%7Cvoid%20write_char(char%20c)%09%09%20%20%20%20%7C%0A%09%09%09%09%20%20%20%20%20%20%20%7C%7B%09%09%09%09%20%20%20%20%7C%0A%09%09%09%09%20%20%20%20%20%20%20%7C%20%20%20%20putchar((int)(unsigned%20char)c)%3B%20%7C%0A%09%09%09%09%20%20%20%20%20%20%20%7C%7D%09%09%09%09%20%20%20%20%7C%0A%09%09%09%09%20%20%20%20%20%20%20%2B------------------------------------%2B%0A%0AThe%20%22%3Atags%22%20command%20shows%20the%20list%20of%20tags%20that%20you%20traversed%20through%3A%0D%60%60%60">}</a>				    |
 				       +------------------------------------+</div>
 <div class="old-help-para">The ":tags" command shows the list of tags that you traversed through:</div>
 <div class="old-help-para">	:tags
@@ -525,10 +525,10 @@ for the identifier.  Example (cursor on "idx"):</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 11:26 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
+        Generated at 2022-10-20 13:42 from <code><a href="https://github.com/neovim/neovim/commit/e6917306f6d3ba99747d14bea3f0b078631c5c0e">e691730</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 3 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_29.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_29.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>
+      parse_errors: 9 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_29.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_29.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>
       </div>
     <div>
   </footer>

@@ -417,9 +417,9 @@ se[t]			the string "set " or "se " (note the space); When
 			is the argument for a ":set" command
 :			a colon
 [text]			any text or empty</div>
-<div class="old-help-para">Examples:
-/* vim: set ai tw=75://* Vim: set ai tw=75:/</div>
-<div class="old-help-para">The white space before <code>{vi:|vim:|Vim:|ex:}</code> is required.  This minimizes the
+<div class="old-help-para">Examples:<pre>/* vim: set ai tw=75: */
+/* Vim: set ai tw=75: */</pre>
+The white space before <code>{vi:|vim:|Vim:|ex:}</code> is required.  This minimizes the
 chance that a normal word like "lex:" is caught.  There is one exception:
 "vi:" and "vim:" can also be at the start of the line (for compatibility with
 version 3.0).  Using "ex:" at the start of the line will be ignored (this
@@ -449,20 +449,19 @@ number can be specified where "vim:" or "Vim:" is used:
 	vim={vers}:	version <code>{vers}</code>
 	vim&gt;{vers}:	version after <code>{vers}</code>
 <code>{vers}</code> is 700 for Vim 7.0 (hundred times the major version plus minor).
-For example, to use a modeline only for Vim 7.0:
-/* vim700: set foldmethod=marker/To use a modeline for Vim after version 7.2:
-/* vim&gt;702: set cole=2:/There can be no blanks between "vim" and the ":".
+For example, to use a modeline only for Vim 7.0:<pre>/* vim700: set foldmethod=marker */</pre>
+To use a modeline for Vim after version 7.2:<pre>/* vim&gt;702: set cole=2: */</pre>
+There can be no blanks between "vim" and the ":".
 The modeline is ignored if <code>{vers}</code> does not fit in an integer.</div>
 <div class="old-help-para">The number of lines that are checked can be set with the <a href="options.html#'modelines'">'modelines'</a> option.
 If <a href="options.html#'modeline'">'modeline'</a> is off or <a href="options.html#'modelines'">'modelines'</a> is 0 no lines are checked.</div>
 <div class="old-help-para">Note that for the first form all of the rest of the line is used, thus a line
-like:
-/* vi:ts=4:/will give an error message for the trailing "*/".  This line is OK:
-/* vi:set ts=4:/</div>
-<div class="old-help-para">If an error is detected the rest of the line is skipped.</div>
+like:<pre>/* vi:ts=4: */</pre>
+will give an error message for the trailing "*/".  This line is OK:<pre>/* vi:set ts=4: */</pre>
+If an error is detected the rest of the line is skipped.</div>
 <div class="old-help-para">If you want to include a ':' in a set command precede it with a '\'.  The
-backslash in front of the ':' will be removed.  Example:
-/* vi:set fillchars=stl\:^,vert\:\|:/This sets the <a href="options.html#'fillchars'">'fillchars'</a> option to "stl:^,vert:\|".  Only a single backslash
+backslash in front of the ':' will be removed.  Example:<pre>/* vi:set fillchars=stl\:^,vert\:\|: */</pre>
+This sets the <a href="options.html#'fillchars'">'fillchars'</a> option to "stl:^,vert:\|".  Only a single backslash
 before the ':' is removed.  Thus to include "\:" you have to specify "\\:".
 							<a name="E992"></a><code class="help-tag-right">E992</code>
 No other commands than "set" are supported, for security reasons (somebody
@@ -1690,9 +1689,8 @@ au WinEnter * set cursorline cursorcolumn</pre></div>
 	useful, to include const type declarations:<pre>^\(#\s*define\|[a-z]*\s*const\s*[a-z]*\)</pre></div>
 <div class="old-help-para">	You can also use "\ze" just before the name and continue the pattern
 	to check what is following.  E.g. for Javascript, if a function is
-	defined with "func_name = function(args)":<pre>^\s*\ze\i\+\s*=\s*function(</pre></div>
-<div class="old-help-para">	If the function is defined with "func_name : function() {<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+options.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/options.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09to%20check%20what%20is%20following.%20%20E.g.%20for%20Javascript%2C%20if%20a%20function%20is%0A%09defined%20with%20%22func_name%20%3D%20function(args)%22%3A%20%3E%0A%09%09%5E%5Cs%2A%5Cze%5Ci%5C%2B%5Cs%2A%3D%5Cs%2Afunction(%0A%3C%09If%20the%20function%20is%20defined%20with%20%22func_name%20%3A%20function()%20%7B...%22%3A%20%3E%0A%09%20%20%20%20%20%20%20%20%5E%5Cs%2A%5Cze%5Ci%5C%2B%5Cs%2A%5B%3A%5D%5Cs%2A(%2Afunction%5Cs%2A(%0A%3C%09When%20using%20the%20%22%3Aset%22%20command%2C%20you%20need%20to%20double%20the%20backslashes%21%0A%09To%20avoid%20that%20use%20%60%3Alet%60%20with%20a%20single%20quote%20string%3A%20%3E%0D%60%60%60">...": &gt;</a>
-	        ^\s*\ze\i\+\s*[:]\s*(*function\s*(</div>
+	defined with <code>func_name = function(args)</code>:<pre>^\s*\ze\i\+\s*=\s*function(</pre></div>
+<div class="old-help-para">	If the function is defined with <code>func_name : function() {...</code>:<pre>^\s*\ze\i\+\s*[:]\s*(*function\s*(</pre></div>
 <div class="old-help-para">	When using the ":set" command, you need to double the backslashes!
 	To avoid that use <code>:let</code> with a single quote string:<pre>let &amp;l:define = '^\s*\ze\k\+\s*=\s*function('</pre></div>
 <div class="old-help-para">			<a name="'delcombine'"></a><code class="help-tag-right">'delcombine'</code> <a name="'deco'"></a><code class="help-tag">'deco'</code> <a name="'nodelcombine'"></a><code class="help-tag">'nodelcombine'</code> <a name="'nodeco'"></a><code class="help-tag">'nodeco'</code>
@@ -2161,11 +2159,11 @@ au WinEnter * set cursorline cursorcolumn</pre></div>
 	this use the ":filetype on" command. <a href="filetype.html#%3Afiletype">:filetype</a>
 	Setting this option to a different value is most useful in a modeline,
 	for a file for which the file type is not automatically recognized.
-	Example, for in an IDL file:
-/* vim: set filetype=idl :/	<a href="autocmd.html#FileType">FileType</a> <a href="filetype.html#filetypes">filetypes</a>
+	Example, for in an IDL file:<pre>/* vim: set filetype=idl : */</pre></div>
+<div class="old-help-para">	<a href="autocmd.html#FileType">FileType</a> <a href="filetype.html#filetypes">filetypes</a>
 	When a dot appears in the value then this separates two filetype
-	names.  Example:
-/* vim: set filetype=c.doxygen :/	This will use the "c" filetype first, then the "doxygen" filetype.
+	names.  Example:<pre>/* vim: set filetype=c.doxygen : */</pre></div>
+<div class="old-help-para">	This will use the "c" filetype first, then the "doxygen" filetype.
 	This works both for filetype plugins and for syntax files.  More than
 	one dot may appear.
 	This option is not copied to another buffer, independent of the 's' or
@@ -5057,7 +5055,7 @@ setlocal sidescrolloff=-1</pre></div>
 	                number (maximum 9), e.g. "yes:3"
 	   "number"	display signs in the <a href="options.html#'number'">'number'</a> column. If the number
 			column is not present, then behaves like "auto".</div>
-<div class="old-help-para">	Note regarding '<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+options.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/options.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%20%20%20%22number%22%09display%20signs%20in%20the%20'number'%20column.%20If%20the%20number%0A%09%09%09column%20is%20not%20present%2C%20then%20behaves%20like%20%22auto%22.%0A%0A%09Note%20regarding%20'orphaned%20signs'%3A%20with%20signcolumn%20numbers%20higher%20than%0A%091%2C%20deleting%20lines%20will%20also%20remove%20the%20associated%20signs%20automatically%2C%0A%09in%20contrast%20to%20the%20default%20Vim%20behavior%20of%20keeping%20and%20grouping%20them.%0A%09This%20is%20done%20in%20order%20for%20the%20signcolumn%20appearance%20not%20appear%20weird%0D%60%60%60">orphaned</a> signs': with signcolumn numbers higher than
+<div class="old-help-para">	Note regarding "orphaned signs": with signcolumn numbers higher than
 	1, deleting lines will also remove the associated signs automatically,
 	in contrast to the default Vim behavior of keeping and grouping them.
 	This is done in order for the signcolumn appearance not appear weird
@@ -5386,7 +5384,7 @@ setlocal sidescrolloff=-1</pre></div>
 	      Note that there is no '%' before the closing '}'.  The
 	      expression cannot contain a '}' character, call a function to
 	      work around that.  See <a href="options.html#stl-%25%7B">stl-%{</a> below.
-	<code>{% -  This is almost same as }</code> { except the result of the expression is
+	{<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+options.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/options.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%20%20%20%20%20%20Note%20that%20there%20is%20no%20'%25'%20before%20the%20closing%20'%7D'.%20%20The%0A%09%20%20%20%20%20%20expression%20cannot%20contain%20a%20'%7D'%20character%2C%20call%20a%20function%20to%0A%09%20%20%20%20%20%20work%20around%20that.%20%20See%20%7Cstl-%25%7B%7C%20below.%0A%09%7B%25%20-%20%20This%20is%20almost%20same%20as%20%7B%20except%20the%20result%20of%20the%20expression%20is%0A%09%20%20%20%20%20%20re-evaluated%20as%20a%20statusline%20format%20string.%20%20Thus%20if%20the%0A%09%20%20%20%20%20%20return%20value%20of%20expr%20contains%20%25%20items%20they%20will%20get%20expanded.%0A%09%20%20%20%20%20%20The%20expression%20can%20contain%20the%20%7D%20character%2C%20the%20end%20of%0D%60%60%60">% -  This is almost same as {</a> except the result of the expression is
 	      re-evaluated as a statusline format string.  Thus if the
 	      return value of expr contains % items they will get expanded.
 	      The expression can contain the } character, the end of
@@ -5569,10 +5567,10 @@ endfunc</pre></div>
 	Otherwise this option does not always reflect the current syntax (the
 	b:current_syntax variable does).
 	This option is most useful in a modeline, for a file which syntax is
-	not automatically recognized.  Example, in an IDL file:
-/* vim: set syntax=idl :/	When a dot appears in the value then this separates two filetype
-	names.  Example:
-/* vim: set syntax=c.doxygen :/	This will use the "c" syntax first, then the "doxygen" syntax.
+	not automatically recognized.  Example, in an IDL file:<pre>/* vim: set syntax=idl : */</pre></div>
+<div class="old-help-para">	When a dot appears in the value then this separates two filetype
+	names.  Example:<pre>/* vim: set syntax=c.doxygen : */</pre></div>
+<div class="old-help-para">	This will use the "c" syntax first, then the "doxygen" syntax.
 	Note that the second one must be prepared to be loaded as an addition,
 	otherwise it will be skipped.  More than one dot may appear.
 	To switch off syntax highlighting for the current file, use:<pre>:set syntax=OFF</pre></div>
@@ -6445,10 +6443,10 @@ endfunc</pre></div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-20 11:26 from <code><a href="https://github.com/neovim/neovim/commit/e33995e936c57064bf5629f6b527bfc1b77f77f8">e33995e</a></code>
+        Generated at 2022-10-20 13:42 from <code><a href="https://github.com/neovim/neovim/commit/e6917306f6d3ba99747d14bea3f0b078631c5c0e">e691730</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 9 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+options.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/options.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim
+      parse_errors: 8 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+options.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/options.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim
 		  VIM REFERENCE MANUAL	  by Bram Moolenaar
 				      Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
  vim:tw=78:ts=8:noet:ft=help:norl:">noise_lines: 4</span>
