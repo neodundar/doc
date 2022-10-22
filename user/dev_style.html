@@ -616,45 +616,6 @@ encoding understood by most tools able to handle more than just ASCII.</div>
 <div class="old-help-para">Hex encoding is also OK, and encouraged where it enhances readability — for
 example, <code>"\uFEFF"</code>, is the Unicode zero-width no-break space character, which
 would be invisible if included in the source as straight UTF-8.</div>
-<div class="old-help-para"><div class="help-column_heading">Function Declarations and Definitions</div></div>
-<div class="old-help-para">Return type on the same line as function name, parameters on the same line if
-they fit.</div>
-<div class="old-help-para">Functions look like this:<pre>
-ReturnType function_name(Type par_name1, Type par_name2)
-{
-  do_something();
-  ...
-}</pre>
-If you have too much text to fit on one line:<pre>
-ReturnType really_long_function_name(Type par_name1, Type par_name2,
-                                     Type par_name3)
-{
-  do_something();
-  ...
-}</pre>
-or if you cannot fit even the first parameter (but only then):<pre>
-ReturnType really_really_really_long_function_name(
-    Type par_name1,  // 4 space indent
-    Type par_name2,
-    Type par_name3)
-{
-  do_something();  // 2 space indent
-  ...
-}</pre>
-Some points to note:</div>
-<div class="old-help-para"><div class="help-li" style=""> The open parenthesis is always on the same line as the function name.
-</div><div class="help-li" style=""> There is never a space between the function name and the open parenthesis.
-</div><div class="help-li" style=""> There is never a space between the parentheses and the parameters.
-</div><div class="help-li" style=""> The open curly brace is always on the next line.
-</div><div class="help-li" style=""> The close curly brace is always on the last line by itself.
-</div><div class="help-li" style=""> There should be a space between the close parenthesis and the open curly
-  brace.
-</div><div class="help-li" style=""> All parameters should be named, with identical names in the declaration and
-  implementation.
-</div><div class="help-li" style=""> All parameters should be aligned if possible.
-</div><div class="help-li" style=""> Default indentation is 2 spaces.
-</div><div class="help-li" style=""> Wrapped parameters have a 4 space indent.
-</div></div>
 <div class="old-help-para"><div class="help-column_heading">Function Calls</div></div>
 <div class="old-help-para">On one line if it fits; otherwise, wrap arguments at the parenthesis.</div>
 <div class="old-help-para">Function calls have the following format:<pre>
@@ -696,15 +657,6 @@ struct my_struct m = {  // Here, you could also break before {.
     { short, interior, list },
     { interiorwrappinglist,
       interiorwrappinglist2 } };</pre>
-<div class="help-column_heading">Conditionals</div></div>
-<div class="old-help-para">Don't use spaces inside parentheses.<pre>
-if (condition) {  // no spaces inside parentheses
-  ...  // 2 space indent.
-} else if (...) {  // The else goes on the same line as the closing brace.
-  ...
-} else {
-  ...
-}</pre>
 <div class="help-column_heading">Loops and Switch Statements</div></div>
 <div class="old-help-para">Annotate non-trivial fall-through between cases.</div>
 <div class="old-help-para">If not conditional on an enumerated value, switch statements should always
@@ -721,30 +673,7 @@ switch (var) {
   default:
     assert(false);
 }</pre>
-<div class="help-column_heading">Pointer Expressions</div></div>
-<div class="old-help-para">No spaces around period or arrow. Pointer operators do not have trailing
-spaces.</div>
-<div class="old-help-para">The following are examples of correctly-formatted pointer and reference
-expressions:<pre>
-x = *p;
-p = &amp;x;
-x = r.y;
-x = r-&gt;y;</pre>
-Note that:</div>
-<div class="old-help-para"><div class="help-li" style=""> There are no spaces around the period or arrow when accessing a member.
-</div><div class="help-li" style=""> Pointer operators have no space after the * or &amp;.
-</div></div>
-<div class="old-help-para"><div class="help-column_heading">Boolean Expressions</div></div>
-<div class="old-help-para">When you have a boolean expression that is longer than the standard line
-length, keep operators at the start of the line.<pre>
-if (this_one_thing &gt; this_other_thing
-    &amp;&amp; a_third_thing == a_fourth_thing
-    &amp;&amp; yet_another &amp;&amp; last_one) {
-  ...
-}</pre>
-Also note that you should always use the punctuation operators, such as <code>&amp;&amp;</code>
-and <code>~</code>, rather than the word operators, such as <code>and</code> and <code>compl</code>.</div>
-<div class="old-help-para"><div class="help-column_heading">Return Values</div></div>
+<div class="help-column_heading">Return Values</div></div>
 <div class="old-help-para">Do not needlessly surround the <code>return</code> expression with parentheses.</div>
 <div class="old-help-para">Use parentheses in <code>return expr</code>; only where you would use them inx =
 expr;`.<pre>
@@ -772,9 +701,7 @@ struct my_struct {  // Exception: struct arrays.
                   // them.
 x = -5;           // No spaces separating unary operators and their
 x++;              // arguments.
-if (x &amp;&amp; !y)
-  ...
-i = (int)d;       // No spaces after a cast operator.</pre></div>
+if (x &amp;&amp; !y)</pre></div>
 <div class="old-help-para"><div class="help-column_heading">Vertical Whitespace</div></div>
 <div class="old-help-para">Minimize use of vertical whitespace.</div>
 <div class="old-help-para">The basic principle is: The more code that fits on one screen, the easier it
@@ -815,7 +742,7 @@ Parting Words</a>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-21 06:04 from <code><a href="https://github.com/neovim/neovim/commit/a288b4f21423efb056061e4da3871a4247a7de79">a288b4f</a></code>
+        Generated at 2022-10-22 05:57 from <code><a href="https://github.com/neovim/neovim/commit/2f9b94a26836ecb081c717e23913f5b6576cce99">2f9b94a</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+dev_style.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/dev_style.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="          Nvim
