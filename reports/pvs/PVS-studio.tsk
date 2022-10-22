@@ -7,6 +7,7 @@ pvs-studio.com/en/docs/warnings/	1	err	Help: The documentation for all analyzer 
 ./src/mpack/rpc.c	248	warn	V1086 A call of the 'memcpy' function will lead to underflow of the buffer 'dst'.
 ./src/mpack/rpc.c	248	warn	V1086 A call of the 'memcpy' function will lead to underflow of the buffer 'src'.
 ./src/nvim/drawline.c	2211	warn	V560 A part of conditional expression is always true: eol_hl_off == 0.
+./src/nvim/eval/typval.c	1237	warn	V547 Expression 'info.item_compare_func_err' is always false.
 ./src/nvim/ex_getln.c	2894	err	V595 The 'colored_ccline->cmdbuff' pointer was utilized before it was verified against nullptr. Check lines: 2894, 2900.
 ./src/nvim/fileio.c	5200	warn	V557 Array overrun is possible. The value of 'strlen(tmp) - strlen(user)' index could reach 18446744073709551615.
 ./src/nvim/highlight.c	329	warn	V547 Expression '!wp->w_ns_hl_attr' is always false.

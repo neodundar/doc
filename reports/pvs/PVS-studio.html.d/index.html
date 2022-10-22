@@ -34,10 +34,10 @@
     <br class="clear">
   </div>
   <table cellpadding="0" cellspacing="0" border="0" class="infotopic">
-     <tr><th id="col_info">Date:</th><td>Fri Oct 21 06:03:59 2022</td></tr>
+     <tr><th id="col_info">Date:</th><td>Sat Oct 22 05:56:40 2022</td></tr>
      <tr><th id="col_info">PVS-Studio Version:</th><td>7.21.64848.262</td></tr>
      <tr><th id="col_info">Command Line:</th><td>plog-converter PVS-studio.log --srcRoot . --excludedCodes V002,V011,V1028,V1042,V1051,V1074 --renderTypes fullhtml --output PVS-studio.html.d </td></tr>
-     <tr><th id="col_info">Total Warnings (GA):</th><td>19</td></tr>
+     <tr><th id="col_info">Total Warnings (GA):</th><td>20</td></tr>
   </table>
   <table cellpadding="0" cellspacing="0" border="0" class="sortable" id="sorter">
     <tr>
@@ -105,77 +105,84 @@
     </tr>
     <tr>
       <td id="col_group">General Analysis</td>
-      <td id="col_file"><a target="_blank" href="sources/ex_getln.c_5.html#ln2894">ex_getln.c:2894</a></td>
+      <td id="col_file"><a target="_blank" href="sources/typval.c_5.html#ln1237">typval.c:1237</a></td>
+      <td id="col_level" style="color:#FFA500"><b>Medium</b></td>
+      <td id="col_code"><a target="_blank" href="https://pvs-studio.com/en/docs/warnings/v547/">V547</td>
+      <td id="col_message">Expression 'info.item_compare_func_err' is always false.</td>
+    </tr>
+    <tr>
+      <td id="col_group">General Analysis</td>
+      <td id="col_file"><a target="_blank" href="sources/ex_getln.c_6.html#ln2894">ex_getln.c:2894</a></td>
       <td id="col_level" style="color:#FF0000"><b>High</b></td>
       <td id="col_code"><a target="_blank" href="https://pvs-studio.com/en/docs/warnings/v595/">V595</td>
       <td id="col_message">The 'colored_ccline-&gt;cmdbuff' pointer was utilized before it was verified against nullptr. Check lines: 2894, 2900.</td>
     </tr>
     <tr>
       <td id="col_group">General Analysis</td>
-      <td id="col_file"><a target="_blank" href="sources/fileio.c_6.html#ln5200">fileio.c:5200</a></td>
+      <td id="col_file"><a target="_blank" href="sources/fileio.c_7.html#ln5200">fileio.c:5200</a></td>
       <td id="col_level" style="color:#FFA500"><b>Medium</b></td>
       <td id="col_code"><a target="_blank" href="https://pvs-studio.com/en/docs/warnings/v557/">V557</td>
       <td id="col_message">Array overrun is possible. The value of 'strlen(tmp) - strlen(user)' index could reach 18446744073709551615.</td>
     </tr>
     <tr>
       <td id="col_group">General Analysis</td>
-      <td id="col_file"><a target="_blank" href="sources/highlight.c_7.html#ln329">highlight.c:329</a></td>
+      <td id="col_file"><a target="_blank" href="sources/highlight.c_8.html#ln329">highlight.c:329</a></td>
       <td id="col_level" style="color:#FFA500"><b>Medium</b></td>
       <td id="col_code"><a target="_blank" href="https://pvs-studio.com/en/docs/warnings/v547/">V547</td>
       <td id="col_message">Expression '!wp-&gt;w_ns_hl_attr' is always false.</td>
     </tr>
     <tr>
       <td id="col_group">General Analysis</td>
-      <td id="col_file"><a target="_blank" href="sources/marktree.c_8.html#ln160">marktree.c:160</a></td>
+      <td id="col_file"><a target="_blank" href="sources/marktree.c_9.html#ln160">marktree.c:160</a></td>
       <td id="col_level" style="color:#FFA500"><b>Medium</b></td>
       <td id="col_code"><a target="_blank" href="https://pvs-studio.com/en/docs/warnings/v1086/">V1086</td>
       <td id="col_message">A call of the 'memcpy' function will lead to underflow of the buffer 'z-&gt;key'.</td>
     </tr>
     <tr>
       <td id="col_group">General Analysis</td>
-      <td id="col_file"><a target="_blank" href="sources/unpacker.c_9.html#ln402">unpacker.c:402</a></td>
+      <td id="col_file"><a target="_blank" href="sources/unpacker.c_10.html#ln402">unpacker.c:402</a></td>
       <td id="col_level" style="color:#FF0000"><b>High</b></td>
       <td id="col_code"><a target="_blank" href="https://pvs-studio.com/en/docs/warnings/v501/">V501</td>
       <td id="col_message">There are identical sub-expressions to the left and to the right of the '==' operator: MPACK_TOKEN_STR == MPACK_TOKEN_STR</td>
     </tr>
     <tr>
       <td id="col_group">General Analysis</td>
-      <td id="col_file"><a target="_blank" href="sources/unpacker.c_9.html#ln463">unpacker.c:463</a></td>
+      <td id="col_file"><a target="_blank" href="sources/unpacker.c_10.html#ln463">unpacker.c:463</a></td>
       <td id="col_level" style="color:#FF0000"><b>High</b></td>
       <td id="col_code"><a target="_blank" href="https://pvs-studio.com/en/docs/warnings/v501/">V501</td>
       <td id="col_message">There are identical sub-expressions to the left and to the right of the '==' operator: MPACK_TOKEN_STR == MPACK_TOKEN_STR</td>
     </tr>
     <tr>
       <td id="col_group">General Analysis</td>
-      <td id="col_file"><a target="_blank" href="sources/unpacker.c_9.html#ln474">unpacker.c:474</a></td>
+      <td id="col_file"><a target="_blank" href="sources/unpacker.c_10.html#ln474">unpacker.c:474</a></td>
       <td id="col_level" style="color:#FF0000"><b>High</b></td>
       <td id="col_code"><a target="_blank" href="https://pvs-studio.com/en/docs/warnings/v501/">V501</td>
       <td id="col_message">There are identical sub-expressions to the left and to the right of the '==' operator: MPACK_TOKEN_SINT == MPACK_TOKEN_SINT</td>
     </tr>
     <tr>
       <td id="col_group">General Analysis</td>
-      <td id="col_file"><a target="_blank" href="sources/ops.c_10.html#ln4108">ops.c:4108</a></td>
+      <td id="col_file"><a target="_blank" href="sources/ops.c_11.html#ln4108">ops.c:4108</a></td>
       <td id="col_level" style="color:#FFA500"><b>Medium</b></td>
       <td id="col_code"><a target="_blank" href="https://pvs-studio.com/en/docs/warnings/v601/">V601</td>
       <td id="col_message">The value of 'char' type is implicitly cast to a char pointer.</td>
     </tr>
     <tr>
       <td id="col_group">General Analysis</td>
-      <td id="col_file"><a target="_blank" href="sources/option.c_11.html#ln880">option.c:880</a></td>
+      <td id="col_file"><a target="_blank" href="sources/option.c_12.html#ln880">option.c:880</a></td>
       <td id="col_level" style="color:#FFA500"><b>Medium</b></td>
       <td id="col_code"><a target="_blank" href="https://pvs-studio.com/en/docs/warnings/v557/">V557</td>
       <td id="col_message">Array overrun is possible. The value of 'strlen(whichwrap) - 1' index could reach 18446744073709551615.</td>
     </tr>
     <tr>
       <td id="col_group">General Analysis</td>
-      <td id="col_file"><a target="_blank" href="sources/spell.c_12.html#ln2929">spell.c:2929</a></td>
+      <td id="col_file"><a target="_blank" href="sources/spell.c_13.html#ln2929">spell.c:2929</a></td>
       <td id="col_level" style="color:#FF0000"><b>High</b></td>
       <td id="col_code"><a target="_blank" href="https://pvs-studio.com/en/docs/warnings/v781/">V781</td>
       <td id="col_message">The value of the 'i' index is checked after it was used. Perhaps there is a mistake in program logic.</td>
     </tr>
     <tr>
       <td id="col_group">General Analysis</td>
-      <td id="col_file"><a target="_blank" href="sources/spellsuggest.c_13.html#ln1155">spellsuggest.c:1155</a></td>
+      <td id="col_file"><a target="_blank" href="sources/spellsuggest.c_14.html#ln1155">spellsuggest.c:1155</a></td>
       <td id="col_level" style="color:#FFA500"><b>Medium</b></td>
       <td id="col_code"><a target="_blank" href="https://pvs-studio.com/en/docs/warnings/v1086/">V1086</td>
       <td id="col_message">A call of the 'memset' function will lead to underflow of the buffer 'sp'.</td>

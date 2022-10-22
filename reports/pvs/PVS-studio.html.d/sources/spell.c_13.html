@@ -969,7 +969,7 @@
 <a name="ln960">// compound rule.  This is used to stop trying a compound if the flags</a>
 <a name="ln961">// collected so far can't possibly match any compound rule.</a>
 <a name="ln962">// Caller must check that slang-&gt;sl_comprules is not NULL.</a>
-<a name="ln963">bool match_compoundrule(slang_T *slang, char_u *compflags)</a>
+<a name="ln963">bool match_compoundrule(slang_T *slang, const char_u *compflags)</a>
 <a name="ln964">{</a>
 <a name="ln965">  // loop over all the COMPOUNDRULE entries</a>
 <a name="ln966">  for (char_u *p = slang-&gt;sl_comprules; *p != NUL; p++) {</a>
@@ -2193,7 +2193,7 @@
 <a name="ln2184">// Find the region &quot;region[2]&quot; in &quot;rp&quot; (points to &quot;sl_regions&quot;).</a>
 <a name="ln2185">// Each region is simply stored as the two characters of its name.</a>
 <a name="ln2186">// Returns the index if found (first is 0), REGION_ALL if not found.</a>
-<a name="ln2187">static int find_region(char_u *rp, char_u *region)</a>
+<a name="ln2187">static int find_region(const char_u *rp, const char_u *region)</a>
 <a name="ln2188">{</a>
 <a name="ln2189">  int i;</a>
 <a name="ln2190"> </a>
@@ -2218,7 +2218,7 @@
 <a name="ln2209">/// @param[in]  end  End of word or NULL for NUL delimited string</a>
 <a name="ln2210">///</a>
 <a name="ln2211">/// @returns  Case type of word</a>
-<a name="ln2212">int captype(char_u *word, char_u *end)</a>
+<a name="ln2212">int captype(char_u *word, const char_u *end)</a>
 <a name="ln2213">  FUNC_ATTR_NONNULL_ARG(1)</a>
 <a name="ln2214">{</a>
 <a name="ln2215">  char_u *p;</a>
@@ -2823,7 +2823,7 @@
 <a name="ln2814"> </a>
 <a name="ln2815">// Turn &quot;inword&quot; into its sound-a-like equivalent in &quot;res[MAXWLEN]&quot;.</a>
 <a name="ln2816">// Multi-byte version of spell_soundfold().</a>
-<a name="ln2817">static void spell_soundfold_wsal(slang_T *slang, char_u *inword, char_u *res)</a>
+<a name="ln2817">static void spell_soundfold_wsal(slang_T *slang, const char_u *inword, char_u *res)</a>
 <a name="ln2818">{</a>
 <a name="ln2819">  salitem_T *smp = (salitem_T *)slang-&gt;sl_sal.ga_data;</a>
 <a name="ln2820">  int word[MAXWLEN] = { 0 };</a>

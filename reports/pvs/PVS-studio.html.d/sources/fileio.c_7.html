@@ -1942,7 +1942,7 @@
 <a name="ln1933">/// @param linecnt  line count before reading more bytes</a>
 <a name="ln1934">/// @param p        start of more bytes read</a>
 <a name="ln1935">/// @param endp     end of more bytes read</a>
-<a name="ln1936">static linenr_T readfile_linenr(linenr_T linecnt, char_u *p, char_u *endp)</a>
+<a name="ln1936">static linenr_T readfile_linenr(linenr_T linecnt, char_u *p, const char_u *endp)</a>
 <a name="ln1937">{</a>
 <a name="ln1938">  char_u *s;</a>
 <a name="ln1939">  linenr_T lnum;</a>
@@ -4106,7 +4106,7 @@
 <a name="ln4097">///</a>
 <a name="ln4098">/// @return  the name of the encoding and set &quot;*lenp&quot; to the length or,</a>
 <a name="ln4099">///          NULL when no BOM found.</a>
-<a name="ln4100">static char_u *check_for_bom(char_u *p, long size, int *lenp, int flags)</a>
+<a name="ln4100">static char_u *check_for_bom(const char_u *p, long size, int *lenp, int flags)</a>
 <a name="ln4101">{</a>
 <a name="ln4102">  char *name = NULL;</a>
 <a name="ln4103">  int len = 2;</a>

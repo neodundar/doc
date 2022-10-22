@@ -2221,7 +2221,7 @@
 <a name="ln2212">      // flag to indicate whether prevcol equals startcol of search_hl or</a>
 <a name="ln2213">      // one of the matches</a>
 <a name="ln2214">      bool prevcol_hl_flag = get_prevcol_hl_flag(wp, &amp;screen_search_hl,</a>
-<a name="ln2215">                                                 (long)(ptr - line) - 1);</a>
+<a name="ln2215">                                                 (long)(ptr - line) - 1);  // NOLINT(google-readability-casting)</a>
 <a name="ln2216"> </a>
 <a name="ln2217">      // Invert at least one char, used for Visual and empty line or</a>
 <a name="ln2218">      // highlight match at end of line. If it's beyond the last</a>
@@ -2257,444 +2257,447 @@
 <a name="ln2248">        if (area_attr == 0 &amp;&amp; !has_fold) {</a>
 <a name="ln2249">          // Use attributes from match with highest priority among</a>
 <a name="ln2250">          // 'search_hl' and the match list.</a>
-<a name="ln2251">          get_search_match_hl(wp, &amp;screen_search_hl, (long)(ptr - line), &amp;char_attr);</a>
-<a name="ln2252">        }</a>
-<a name="ln2253"> </a>
-<a name="ln2254">        int eol_attr = char_attr;</a>
-<a name="ln2255">        if (cul_attr) {</a>
-<a name="ln2256">          eol_attr = hl_combine_attr(cul_attr, eol_attr);</a>
-<a name="ln2257">        }</a>
-<a name="ln2258">        linebuf_attr[off] = eol_attr;</a>
-<a name="ln2259">        if (wp-&gt;w_p_rl) {</a>
-<a name="ln2260">          col--;</a>
-<a name="ln2261">          off--;</a>
-<a name="ln2262">        } else {</a>
-<a name="ln2263">          col++;</a>
-<a name="ln2264">          off++;</a>
-<a name="ln2265">        }</a>
-<a name="ln2266">        vcol++;</a>
-<a name="ln2267">        eol_hl_off = 1;</a>
-<a name="ln2268">      }</a>
-<a name="ln2269">      // Highlight 'cursorcolumn' &amp; 'colorcolumn' past end of the line.</a>
-<a name="ln2270">      if (wp-&gt;w_p_wrap) {</a>
-<a name="ln2271">        v = wp-&gt;w_skipcol;</a>
-<a name="ln2272">      } else {</a>
-<a name="ln2273">        v = wp-&gt;w_leftcol;</a>
-<a name="ln2274">      }</a>
-<a name="ln2275"> </a>
-<a name="ln2276">      // check if line ends before left margin</a>
-<a name="ln2277">      if (vcol &lt; v + col - win_col_off(wp)) {</a>
-<a name="ln2278">        vcol = v + col - win_col_off(wp);</a>
-<a name="ln2279">      }</a>
-<a name="ln2280">      // Get rid of the boguscols now, we want to draw until the right</a>
-<a name="ln2281">      // edge for 'cursorcolumn'.</a>
-<a name="ln2282">      col -= boguscols;</a>
-<a name="ln2283">      // boguscols = 0;  // Disabled because value never read after this</a>
-<a name="ln2284"> </a>
-<a name="ln2285">      if (draw_color_col) {</a>
-<a name="ln2286">        draw_color_col = advance_color_col((int)VCOL_HLC, &amp;color_cols);</a>
-<a name="ln2287">      }</a>
-<a name="ln2288"> </a>
-<a name="ln2289">      bool has_virttext = false;</a>
-<a name="ln2290">      // Make sure alignment is the same regardless</a>
-<a name="ln2291">      // if listchars=eol:X is used or not.</a>
-<a name="ln2292">      int eol_skip = (wp-&gt;w_p_lcs_chars.eol == lcs_eol_one &amp;&amp; eol_hl_off == 0</a>
-<a name="ln2293">                      ? 1 : 0);</a>
-<a name="ln2294"> </a>
-<a name="ln2295">      if (has_decor) {</a>
-<a name="ln2296">        has_virttext = decor_redraw_eol(wp-&gt;w_buffer, &amp;decor_state, &amp;line_attr,</a>
-<a name="ln2297">                                        col + eol_skip);</a>
-<a name="ln2298">      }</a>
-<a name="ln2299"> </a>
-<a name="ln2300">      if (((wp-&gt;w_p_cuc</a>
-<a name="ln2301">            &amp;&amp; (int)wp-&gt;w_virtcol &gt;= VCOL_HLC - eol_hl_off</a>
-<a name="ln2302">            &amp;&amp; (int)wp-&gt;w_virtcol &lt;</a>
-<a name="ln2303">            (long)grid-&gt;cols * (row - startrow + 1) + v</a>
-<a name="ln2304">            &amp;&amp; lnum != wp-&gt;w_cursor.lnum)</a>
-<a name="ln2305">           || draw_color_col || line_attr_lowprio || line_attr</a>
-<a name="ln2306">           || diff_hlf != (hlf_T)0 || has_virttext)) {</a>
-<a name="ln2307">        int rightmost_vcol = 0;</a>
-<a name="ln2308">        int i;</a>
-<a name="ln2309"> </a>
-<a name="ln2310">        if (wp-&gt;w_p_cuc) {</a>
-<a name="ln2311">          rightmost_vcol = wp-&gt;w_virtcol;</a>
-<a name="ln2312">        }</a>
-<a name="ln2313"> </a>
-<a name="ln2314">        if (draw_color_col) {</a>
-<a name="ln2315">          // determine rightmost colorcolumn to possibly draw</a>
-<a name="ln2316">          for (i = 0; color_cols[i] &gt;= 0; i++) {</a>
-<a name="ln2317">            if (rightmost_vcol &lt; color_cols[i]) {</a>
-<a name="ln2318">              rightmost_vcol = color_cols[i];</a>
-<a name="ln2319">            }</a>
-<a name="ln2320">          }</a>
-<a name="ln2321">        }</a>
-<a name="ln2322"> </a>
-<a name="ln2323">        int cuc_attr = win_hl_attr(wp, HLF_CUC);</a>
-<a name="ln2324">        int mc_attr = win_hl_attr(wp, HLF_MC);</a>
+<a name="ln2251">          get_search_match_hl(wp,</a>
+<a name="ln2252">                              &amp;screen_search_hl,</a>
+<a name="ln2253">                              (long)(ptr - line),  // NOLINT(google-readability-casting)</a>
+<a name="ln2254">                              &amp;char_attr);</a>
+<a name="ln2255">        }</a>
+<a name="ln2256"> </a>
+<a name="ln2257">        int eol_attr = char_attr;</a>
+<a name="ln2258">        if (cul_attr) {</a>
+<a name="ln2259">          eol_attr = hl_combine_attr(cul_attr, eol_attr);</a>
+<a name="ln2260">        }</a>
+<a name="ln2261">        linebuf_attr[off] = eol_attr;</a>
+<a name="ln2262">        if (wp-&gt;w_p_rl) {</a>
+<a name="ln2263">          col--;</a>
+<a name="ln2264">          off--;</a>
+<a name="ln2265">        } else {</a>
+<a name="ln2266">          col++;</a>
+<a name="ln2267">          off++;</a>
+<a name="ln2268">        }</a>
+<a name="ln2269">        vcol++;</a>
+<a name="ln2270">        eol_hl_off = 1;</a>
+<a name="ln2271">      }</a>
+<a name="ln2272">      // Highlight 'cursorcolumn' &amp; 'colorcolumn' past end of the line.</a>
+<a name="ln2273">      if (wp-&gt;w_p_wrap) {</a>
+<a name="ln2274">        v = wp-&gt;w_skipcol;</a>
+<a name="ln2275">      } else {</a>
+<a name="ln2276">        v = wp-&gt;w_leftcol;</a>
+<a name="ln2277">      }</a>
+<a name="ln2278"> </a>
+<a name="ln2279">      // check if line ends before left margin</a>
+<a name="ln2280">      if (vcol &lt; v + col - win_col_off(wp)) {</a>
+<a name="ln2281">        vcol = v + col - win_col_off(wp);</a>
+<a name="ln2282">      }</a>
+<a name="ln2283">      // Get rid of the boguscols now, we want to draw until the right</a>
+<a name="ln2284">      // edge for 'cursorcolumn'.</a>
+<a name="ln2285">      col -= boguscols;</a>
+<a name="ln2286">      // boguscols = 0;  // Disabled because value never read after this</a>
+<a name="ln2287"> </a>
+<a name="ln2288">      if (draw_color_col) {</a>
+<a name="ln2289">        draw_color_col = advance_color_col((int)VCOL_HLC, &amp;color_cols);</a>
+<a name="ln2290">      }</a>
+<a name="ln2291"> </a>
+<a name="ln2292">      bool has_virttext = false;</a>
+<a name="ln2293">      // Make sure alignment is the same regardless</a>
+<a name="ln2294">      // if listchars=eol:X is used or not.</a>
+<a name="ln2295">      int eol_skip = (wp-&gt;w_p_lcs_chars.eol == lcs_eol_one &amp;&amp; eol_hl_off == 0</a>
+<a name="ln2296">                      ? 1 : 0);</a>
+<a name="ln2297"> </a>
+<a name="ln2298">      if (has_decor) {</a>
+<a name="ln2299">        has_virttext = decor_redraw_eol(wp-&gt;w_buffer, &amp;decor_state, &amp;line_attr,</a>
+<a name="ln2300">                                        col + eol_skip);</a>
+<a name="ln2301">      }</a>
+<a name="ln2302"> </a>
+<a name="ln2303">      if (((wp-&gt;w_p_cuc</a>
+<a name="ln2304">            &amp;&amp; (int)wp-&gt;w_virtcol &gt;= VCOL_HLC - eol_hl_off</a>
+<a name="ln2305">            &amp;&amp; (int)wp-&gt;w_virtcol &lt;</a>
+<a name="ln2306">            (long)grid-&gt;cols * (row - startrow + 1) + v</a>
+<a name="ln2307">            &amp;&amp; lnum != wp-&gt;w_cursor.lnum)</a>
+<a name="ln2308">           || draw_color_col || line_attr_lowprio || line_attr</a>
+<a name="ln2309">           || diff_hlf != (hlf_T)0 || has_virttext)) {</a>
+<a name="ln2310">        int rightmost_vcol = 0;</a>
+<a name="ln2311">        int i;</a>
+<a name="ln2312"> </a>
+<a name="ln2313">        if (wp-&gt;w_p_cuc) {</a>
+<a name="ln2314">          rightmost_vcol = wp-&gt;w_virtcol;</a>
+<a name="ln2315">        }</a>
+<a name="ln2316"> </a>
+<a name="ln2317">        if (draw_color_col) {</a>
+<a name="ln2318">          // determine rightmost colorcolumn to possibly draw</a>
+<a name="ln2319">          for (i = 0; color_cols[i] &gt;= 0; i++) {</a>
+<a name="ln2320">            if (rightmost_vcol &lt; color_cols[i]) {</a>
+<a name="ln2321">              rightmost_vcol = color_cols[i];</a>
+<a name="ln2322">            }</a>
+<a name="ln2323">          }</a>
+<a name="ln2324">        }</a>
 <a name="ln2325"> </a>
-<a name="ln2326">        int diff_attr = 0;</a>
-<a name="ln2327">        if (diff_hlf == HLF_TXD) {</a>
-<a name="ln2328">          diff_hlf = HLF_CHD;</a>
-<a name="ln2329">        }</a>
-<a name="ln2330">        if (diff_hlf != 0) {</a>
-<a name="ln2331">          diff_attr = win_hl_attr(wp, (int)diff_hlf);</a>
+<a name="ln2326">        int cuc_attr = win_hl_attr(wp, HLF_CUC);</a>
+<a name="ln2327">        int mc_attr = win_hl_attr(wp, HLF_MC);</a>
+<a name="ln2328"> </a>
+<a name="ln2329">        int diff_attr = 0;</a>
+<a name="ln2330">        if (diff_hlf == HLF_TXD) {</a>
+<a name="ln2331">          diff_hlf = HLF_CHD;</a>
 <a name="ln2332">        }</a>
-<a name="ln2333"> </a>
-<a name="ln2334">        int base_attr = hl_combine_attr(line_attr_lowprio, diff_attr);</a>
-<a name="ln2335">        if (base_attr || line_attr || has_virttext) {</a>
-<a name="ln2336">          rightmost_vcol = INT_MAX;</a>
-<a name="ln2337">        }</a>
-<a name="ln2338"> </a>
-<a name="ln2339">        int col_stride = wp-&gt;w_p_rl ? -1 : 1;</a>
-<a name="ln2340"> </a>
-<a name="ln2341">        while (wp-&gt;w_p_rl ? col &gt;= 0 : col &lt; grid-&gt;cols) {</a>
-<a name="ln2342">          schar_from_ascii(linebuf_char[off], ' ');</a>
-<a name="ln2343">          col += col_stride;</a>
-<a name="ln2344">          if (draw_color_col) {</a>
-<a name="ln2345">            draw_color_col = advance_color_col((int)VCOL_HLC, &amp;color_cols);</a>
-<a name="ln2346">          }</a>
-<a name="ln2347"> </a>
-<a name="ln2348">          int col_attr = base_attr;</a>
-<a name="ln2349"> </a>
-<a name="ln2350">          if (wp-&gt;w_p_cuc &amp;&amp; VCOL_HLC == (long)wp-&gt;w_virtcol) {</a>
-<a name="ln2351">            col_attr = cuc_attr;</a>
-<a name="ln2352">          } else if (draw_color_col &amp;&amp; VCOL_HLC == *color_cols) {</a>
-<a name="ln2353">            col_attr = mc_attr;</a>
-<a name="ln2354">          }</a>
-<a name="ln2355"> </a>
-<a name="ln2356">          col_attr = hl_combine_attr(col_attr, line_attr);</a>
-<a name="ln2357"> </a>
-<a name="ln2358">          linebuf_attr[off] = col_attr;</a>
-<a name="ln2359">          off += col_stride;</a>
+<a name="ln2333">        if (diff_hlf != 0) {</a>
+<a name="ln2334">          diff_attr = win_hl_attr(wp, (int)diff_hlf);</a>
+<a name="ln2335">        }</a>
+<a name="ln2336"> </a>
+<a name="ln2337">        int base_attr = hl_combine_attr(line_attr_lowprio, diff_attr);</a>
+<a name="ln2338">        if (base_attr || line_attr || has_virttext) {</a>
+<a name="ln2339">          rightmost_vcol = INT_MAX;</a>
+<a name="ln2340">        }</a>
+<a name="ln2341"> </a>
+<a name="ln2342">        int col_stride = wp-&gt;w_p_rl ? -1 : 1;</a>
+<a name="ln2343"> </a>
+<a name="ln2344">        while (wp-&gt;w_p_rl ? col &gt;= 0 : col &lt; grid-&gt;cols) {</a>
+<a name="ln2345">          schar_from_ascii(linebuf_char[off], ' ');</a>
+<a name="ln2346">          col += col_stride;</a>
+<a name="ln2347">          if (draw_color_col) {</a>
+<a name="ln2348">            draw_color_col = advance_color_col((int)VCOL_HLC, &amp;color_cols);</a>
+<a name="ln2349">          }</a>
+<a name="ln2350"> </a>
+<a name="ln2351">          int col_attr = base_attr;</a>
+<a name="ln2352"> </a>
+<a name="ln2353">          if (wp-&gt;w_p_cuc &amp;&amp; VCOL_HLC == (long)wp-&gt;w_virtcol) {</a>
+<a name="ln2354">            col_attr = cuc_attr;</a>
+<a name="ln2355">          } else if (draw_color_col &amp;&amp; VCOL_HLC == *color_cols) {</a>
+<a name="ln2356">            col_attr = mc_attr;</a>
+<a name="ln2357">          }</a>
+<a name="ln2358"> </a>
+<a name="ln2359">          col_attr = hl_combine_attr(col_attr, line_attr);</a>
 <a name="ln2360"> </a>
-<a name="ln2361">          if (VCOL_HLC &gt;= rightmost_vcol) {</a>
-<a name="ln2362">            break;</a>
-<a name="ln2363">          }</a>
-<a name="ln2364"> </a>
-<a name="ln2365">          vcol += 1;</a>
-<a name="ln2366">        }</a>
-<a name="ln2367">      }</a>
-<a name="ln2368"> </a>
-<a name="ln2369">      // TODO(bfredl): integrate with the common beyond-the-end-loop</a>
-<a name="ln2370">      if (wp-&gt;w_buffer-&gt;terminal) {</a>
-<a name="ln2371">        // terminal buffers may need to highlight beyond the end of the</a>
-<a name="ln2372">        // logical line</a>
-<a name="ln2373">        int n = wp-&gt;w_p_rl ? -1 : 1;</a>
-<a name="ln2374">        while (col &gt;= 0 &amp;&amp; col &lt; grid-&gt;cols) {</a>
-<a name="ln2375">          schar_from_ascii(linebuf_char[off], ' ');</a>
-<a name="ln2376">          linebuf_attr[off] = vcol &gt;= TERM_ATTRS_MAX ? 0 : term_attrs[vcol];</a>
-<a name="ln2377">          off += n;</a>
-<a name="ln2378">          vcol += n;</a>
-<a name="ln2379">          col += n;</a>
-<a name="ln2380">        }</a>
-<a name="ln2381">      }</a>
-<a name="ln2382"> </a>
-<a name="ln2383">      draw_virt_text(wp, buf, win_col_offset, &amp;col, grid-&gt;cols, row);</a>
-<a name="ln2384">      grid_put_linebuf(grid, row, 0, col, grid-&gt;cols, wp-&gt;w_p_rl, wp, bg_attr, false);</a>
-<a name="ln2385">      row++;</a>
-<a name="ln2386"> </a>
-<a name="ln2387">      // Update w_cline_height and w_cline_folded if the cursor line was</a>
-<a name="ln2388">      // updated (saves a call to plines_win() later).</a>
-<a name="ln2389">      if (wp == curwin &amp;&amp; lnum == curwin-&gt;w_cursor.lnum) {</a>
-<a name="ln2390">        curwin-&gt;w_cline_row = startrow;</a>
-<a name="ln2391">        curwin-&gt;w_cline_height = row - startrow;</a>
-<a name="ln2392">        curwin-&gt;w_cline_folded = foldinfo.fi_lines &gt; 0;</a>
-<a name="ln2393">        curwin-&gt;w_valid |= (VALID_CHEIGHT|VALID_CROW);</a>
-<a name="ln2394">        conceal_cursor_used = conceal_cursor_line(curwin);</a>
-<a name="ln2395">      }</a>
-<a name="ln2396">      break;</a>
-<a name="ln2397">    }</a>
-<a name="ln2398"> </a>
-<a name="ln2399">    // Show &quot;extends&quot; character from 'listchars' if beyond the line end and</a>
-<a name="ln2400">    // 'list' is set.</a>
-<a name="ln2401">    if (wp-&gt;w_p_lcs_chars.ext != NUL</a>
-<a name="ln2402">        &amp;&amp; draw_state == WL_LINE</a>
-<a name="ln2403">        &amp;&amp; wp-&gt;w_p_list</a>
-<a name="ln2404">        &amp;&amp; !wp-&gt;w_p_wrap</a>
-<a name="ln2405">        &amp;&amp; filler_todo &lt;= 0</a>
-<a name="ln2406">        &amp;&amp; (wp-&gt;w_p_rl ? col == 0 : col == grid-&gt;cols - 1)</a>
-<a name="ln2407">        &amp;&amp; !has_fold</a>
-<a name="ln2408">        &amp;&amp; (*ptr != NUL</a>
-<a name="ln2409">            || lcs_eol_one &gt; 0</a>
-<a name="ln2410">            || (n_extra &amp;&amp; (c_extra != NUL || *p_extra != NUL)))) {</a>
-<a name="ln2411">      c = wp-&gt;w_p_lcs_chars.ext;</a>
-<a name="ln2412">      char_attr = win_hl_attr(wp, HLF_AT);</a>
-<a name="ln2413">      mb_c = c;</a>
-<a name="ln2414">      mb_utf8 = check_mb_utf8(&amp;c, u8cc);</a>
-<a name="ln2415">    }</a>
-<a name="ln2416"> </a>
-<a name="ln2417">    // advance to the next 'colorcolumn'</a>
-<a name="ln2418">    if (draw_color_col) {</a>
-<a name="ln2419">      draw_color_col = advance_color_col((int)VCOL_HLC, &amp;color_cols);</a>
-<a name="ln2420">    }</a>
-<a name="ln2421"> </a>
-<a name="ln2422">    // Highlight the cursor column if 'cursorcolumn' is set.  But don't</a>
-<a name="ln2423">    // highlight the cursor position itself.</a>
-<a name="ln2424">    // Also highlight the 'colorcolumn' if it is different than</a>
-<a name="ln2425">    // 'cursorcolumn'</a>
-<a name="ln2426">    // Also highlight the 'colorcolumn' if 'breakindent' and/or 'showbreak'</a>
-<a name="ln2427">    // options are set</a>
-<a name="ln2428">    vcol_save_attr = -1;</a>
-<a name="ln2429">    if ((draw_state == WL_LINE</a>
-<a name="ln2430">         || draw_state == WL_BRI</a>
-<a name="ln2431">         || draw_state == WL_SBR)</a>
-<a name="ln2432">        &amp;&amp; !lnum_in_visual_area</a>
-<a name="ln2433">        &amp;&amp; search_attr == 0</a>
-<a name="ln2434">        &amp;&amp; area_attr == 0</a>
-<a name="ln2435">        &amp;&amp; filler_todo &lt;= 0) {</a>
-<a name="ln2436">      if (wp-&gt;w_p_cuc &amp;&amp; VCOL_HLC == (long)wp-&gt;w_virtcol</a>
-<a name="ln2437">          &amp;&amp; lnum != wp-&gt;w_cursor.lnum) {</a>
-<a name="ln2438">        vcol_save_attr = char_attr;</a>
-<a name="ln2439">        char_attr = hl_combine_attr(win_hl_attr(wp, HLF_CUC), char_attr);</a>
-<a name="ln2440">      } else if (draw_color_col &amp;&amp; VCOL_HLC == *color_cols) {</a>
+<a name="ln2361">          linebuf_attr[off] = col_attr;</a>
+<a name="ln2362">          off += col_stride;</a>
+<a name="ln2363"> </a>
+<a name="ln2364">          if (VCOL_HLC &gt;= rightmost_vcol) {</a>
+<a name="ln2365">            break;</a>
+<a name="ln2366">          }</a>
+<a name="ln2367"> </a>
+<a name="ln2368">          vcol += 1;</a>
+<a name="ln2369">        }</a>
+<a name="ln2370">      }</a>
+<a name="ln2371"> </a>
+<a name="ln2372">      // TODO(bfredl): integrate with the common beyond-the-end-loop</a>
+<a name="ln2373">      if (wp-&gt;w_buffer-&gt;terminal) {</a>
+<a name="ln2374">        // terminal buffers may need to highlight beyond the end of the</a>
+<a name="ln2375">        // logical line</a>
+<a name="ln2376">        int n = wp-&gt;w_p_rl ? -1 : 1;</a>
+<a name="ln2377">        while (col &gt;= 0 &amp;&amp; col &lt; grid-&gt;cols) {</a>
+<a name="ln2378">          schar_from_ascii(linebuf_char[off], ' ');</a>
+<a name="ln2379">          linebuf_attr[off] = vcol &gt;= TERM_ATTRS_MAX ? 0 : term_attrs[vcol];</a>
+<a name="ln2380">          off += n;</a>
+<a name="ln2381">          vcol += n;</a>
+<a name="ln2382">          col += n;</a>
+<a name="ln2383">        }</a>
+<a name="ln2384">      }</a>
+<a name="ln2385"> </a>
+<a name="ln2386">      draw_virt_text(wp, buf, win_col_offset, &amp;col, grid-&gt;cols, row);</a>
+<a name="ln2387">      grid_put_linebuf(grid, row, 0, col, grid-&gt;cols, wp-&gt;w_p_rl, wp, bg_attr, false);</a>
+<a name="ln2388">      row++;</a>
+<a name="ln2389"> </a>
+<a name="ln2390">      // Update w_cline_height and w_cline_folded if the cursor line was</a>
+<a name="ln2391">      // updated (saves a call to plines_win() later).</a>
+<a name="ln2392">      if (wp == curwin &amp;&amp; lnum == curwin-&gt;w_cursor.lnum) {</a>
+<a name="ln2393">        curwin-&gt;w_cline_row = startrow;</a>
+<a name="ln2394">        curwin-&gt;w_cline_height = row - startrow;</a>
+<a name="ln2395">        curwin-&gt;w_cline_folded = foldinfo.fi_lines &gt; 0;</a>
+<a name="ln2396">        curwin-&gt;w_valid |= (VALID_CHEIGHT|VALID_CROW);</a>
+<a name="ln2397">        conceal_cursor_used = conceal_cursor_line(curwin);</a>
+<a name="ln2398">      }</a>
+<a name="ln2399">      break;</a>
+<a name="ln2400">    }</a>
+<a name="ln2401"> </a>
+<a name="ln2402">    // Show &quot;extends&quot; character from 'listchars' if beyond the line end and</a>
+<a name="ln2403">    // 'list' is set.</a>
+<a name="ln2404">    if (wp-&gt;w_p_lcs_chars.ext != NUL</a>
+<a name="ln2405">        &amp;&amp; draw_state == WL_LINE</a>
+<a name="ln2406">        &amp;&amp; wp-&gt;w_p_list</a>
+<a name="ln2407">        &amp;&amp; !wp-&gt;w_p_wrap</a>
+<a name="ln2408">        &amp;&amp; filler_todo &lt;= 0</a>
+<a name="ln2409">        &amp;&amp; (wp-&gt;w_p_rl ? col == 0 : col == grid-&gt;cols - 1)</a>
+<a name="ln2410">        &amp;&amp; !has_fold</a>
+<a name="ln2411">        &amp;&amp; (*ptr != NUL</a>
+<a name="ln2412">            || lcs_eol_one &gt; 0</a>
+<a name="ln2413">            || (n_extra &amp;&amp; (c_extra != NUL || *p_extra != NUL)))) {</a>
+<a name="ln2414">      c = wp-&gt;w_p_lcs_chars.ext;</a>
+<a name="ln2415">      char_attr = win_hl_attr(wp, HLF_AT);</a>
+<a name="ln2416">      mb_c = c;</a>
+<a name="ln2417">      mb_utf8 = check_mb_utf8(&amp;c, u8cc);</a>
+<a name="ln2418">    }</a>
+<a name="ln2419"> </a>
+<a name="ln2420">    // advance to the next 'colorcolumn'</a>
+<a name="ln2421">    if (draw_color_col) {</a>
+<a name="ln2422">      draw_color_col = advance_color_col((int)VCOL_HLC, &amp;color_cols);</a>
+<a name="ln2423">    }</a>
+<a name="ln2424"> </a>
+<a name="ln2425">    // Highlight the cursor column if 'cursorcolumn' is set.  But don't</a>
+<a name="ln2426">    // highlight the cursor position itself.</a>
+<a name="ln2427">    // Also highlight the 'colorcolumn' if it is different than</a>
+<a name="ln2428">    // 'cursorcolumn'</a>
+<a name="ln2429">    // Also highlight the 'colorcolumn' if 'breakindent' and/or 'showbreak'</a>
+<a name="ln2430">    // options are set</a>
+<a name="ln2431">    vcol_save_attr = -1;</a>
+<a name="ln2432">    if ((draw_state == WL_LINE</a>
+<a name="ln2433">         || draw_state == WL_BRI</a>
+<a name="ln2434">         || draw_state == WL_SBR)</a>
+<a name="ln2435">        &amp;&amp; !lnum_in_visual_area</a>
+<a name="ln2436">        &amp;&amp; search_attr == 0</a>
+<a name="ln2437">        &amp;&amp; area_attr == 0</a>
+<a name="ln2438">        &amp;&amp; filler_todo &lt;= 0) {</a>
+<a name="ln2439">      if (wp-&gt;w_p_cuc &amp;&amp; VCOL_HLC == (long)wp-&gt;w_virtcol</a>
+<a name="ln2440">          &amp;&amp; lnum != wp-&gt;w_cursor.lnum) {</a>
 <a name="ln2441">        vcol_save_attr = char_attr;</a>
-<a name="ln2442">        char_attr = hl_combine_attr(win_hl_attr(wp, HLF_MC), char_attr);</a>
-<a name="ln2443">      }</a>
-<a name="ln2444">    }</a>
-<a name="ln2445"> </a>
-<a name="ln2446">    // Apply lowest-priority line attr now, so everything can override it.</a>
-<a name="ln2447">    if (draw_state == WL_LINE) {</a>
-<a name="ln2448">      char_attr = hl_combine_attr(line_attr_lowprio, char_attr);</a>
-<a name="ln2449">    }</a>
-<a name="ln2450"> </a>
-<a name="ln2451">    // Store character to be displayed.</a>
-<a name="ln2452">    // Skip characters that are left of the screen for 'nowrap'.</a>
-<a name="ln2453">    vcol_prev = vcol;</a>
-<a name="ln2454">    if (draw_state &lt; WL_LINE || n_skip &lt;= 0) {</a>
-<a name="ln2455">      //</a>
-<a name="ln2456">      // Store the character.</a>
-<a name="ln2457">      //</a>
-<a name="ln2458">      if (wp-&gt;w_p_rl &amp;&amp; utf_char2cells(mb_c) &gt; 1) {</a>
-<a name="ln2459">        // A double-wide character is: put first half in left cell.</a>
-<a name="ln2460">        off--;</a>
-<a name="ln2461">        col--;</a>
-<a name="ln2462">      }</a>
-<a name="ln2463">      if (mb_utf8) {</a>
-<a name="ln2464">        schar_from_cc(linebuf_char[off], mb_c, u8cc);</a>
-<a name="ln2465">      } else {</a>
-<a name="ln2466">        schar_from_ascii(linebuf_char[off], (char)c);</a>
-<a name="ln2467">      }</a>
-<a name="ln2468">      if (multi_attr) {</a>
-<a name="ln2469">        linebuf_attr[off] = multi_attr;</a>
-<a name="ln2470">        multi_attr = 0;</a>
-<a name="ln2471">      } else {</a>
-<a name="ln2472">        linebuf_attr[off] = char_attr;</a>
-<a name="ln2473">      }</a>
-<a name="ln2474"> </a>
-<a name="ln2475">      if (utf_char2cells(mb_c) &gt; 1) {</a>
-<a name="ln2476">        // Need to fill two screen columns.</a>
-<a name="ln2477">        off++;</a>
-<a name="ln2478">        col++;</a>
-<a name="ln2479">        // UTF-8: Put a 0 in the second screen char.</a>
-<a name="ln2480">        linebuf_char[off][0] = 0;</a>
-<a name="ln2481">        if (draw_state &gt; WL_NR &amp;&amp; filler_todo &lt;= 0) {</a>
-<a name="ln2482">          vcol++;</a>
-<a name="ln2483">        }</a>
-<a name="ln2484">        // When &quot;tocol&quot; is halfway through a character, set it to the end of</a>
-<a name="ln2485">        // the character, otherwise highlighting won't stop.</a>
-<a name="ln2486">        if (tocol == vcol) {</a>
-<a name="ln2487">          tocol++;</a>
-<a name="ln2488">        }</a>
-<a name="ln2489">        if (wp-&gt;w_p_rl) {</a>
-<a name="ln2490">          // now it's time to backup one cell</a>
-<a name="ln2491">          off--;</a>
-<a name="ln2492">          col--;</a>
-<a name="ln2493">        }</a>
-<a name="ln2494">      }</a>
-<a name="ln2495">      if (wp-&gt;w_p_rl) {</a>
-<a name="ln2496">        off--;</a>
-<a name="ln2497">        col--;</a>
-<a name="ln2498">      } else {</a>
-<a name="ln2499">        off++;</a>
-<a name="ln2500">        col++;</a>
-<a name="ln2501">      }</a>
-<a name="ln2502">    } else if (wp-&gt;w_p_cole &gt; 0 &amp;&amp; is_concealing) {</a>
-<a name="ln2503">      n_skip--;</a>
-<a name="ln2504">      vcol_off++;</a>
-<a name="ln2505">      if (n_extra &gt; 0) {</a>
-<a name="ln2506">        vcol_off += n_extra;</a>
-<a name="ln2507">      }</a>
-<a name="ln2508">      if (wp-&gt;w_p_wrap) {</a>
-<a name="ln2509">        // Special voodoo required if 'wrap' is on.</a>
-<a name="ln2510">        //</a>
-<a name="ln2511">        // Advance the column indicator to force the line</a>
-<a name="ln2512">        // drawing to wrap early. This will make the line</a>
-<a name="ln2513">        // take up the same screen space when parts are concealed,</a>
-<a name="ln2514">        // so that cursor line computations aren't messed up.</a>
-<a name="ln2515">        //</a>
-<a name="ln2516">        // To avoid the fictitious advance of 'col' causing</a>
-<a name="ln2517">        // trailing junk to be written out of the screen line</a>
-<a name="ln2518">        // we are building, 'boguscols' keeps track of the number</a>
-<a name="ln2519">        // of bad columns we have advanced.</a>
-<a name="ln2520">        if (n_extra &gt; 0) {</a>
-<a name="ln2521">          vcol += n_extra;</a>
-<a name="ln2522">          if (wp-&gt;w_p_rl) {</a>
-<a name="ln2523">            col -= n_extra;</a>
-<a name="ln2524">            boguscols -= n_extra;</a>
-<a name="ln2525">          } else {</a>
-<a name="ln2526">            col += n_extra;</a>
-<a name="ln2527">            boguscols += n_extra;</a>
-<a name="ln2528">          }</a>
-<a name="ln2529">          n_extra = 0;</a>
-<a name="ln2530">          n_attr = 0;</a>
-<a name="ln2531">        }</a>
-<a name="ln2532"> </a>
-<a name="ln2533">        if (utf_char2cells(mb_c) &gt; 1) {</a>
-<a name="ln2534">          // Need to fill two screen columns.</a>
-<a name="ln2535">          if (wp-&gt;w_p_rl) {</a>
-<a name="ln2536">            boguscols--;</a>
-<a name="ln2537">            col--;</a>
-<a name="ln2538">          } else {</a>
-<a name="ln2539">            boguscols++;</a>
-<a name="ln2540">            col++;</a>
-<a name="ln2541">          }</a>
-<a name="ln2542">        }</a>
-<a name="ln2543"> </a>
-<a name="ln2544">        if (wp-&gt;w_p_rl) {</a>
-<a name="ln2545">          boguscols--;</a>
-<a name="ln2546">          col--;</a>
-<a name="ln2547">        } else {</a>
-<a name="ln2548">          boguscols++;</a>
-<a name="ln2549">          col++;</a>
-<a name="ln2550">        }</a>
-<a name="ln2551">      } else {</a>
-<a name="ln2552">        if (n_extra &gt; 0) {</a>
-<a name="ln2553">          vcol += n_extra;</a>
-<a name="ln2554">          n_extra = 0;</a>
-<a name="ln2555">          n_attr = 0;</a>
-<a name="ln2556">        }</a>
-<a name="ln2557">      }</a>
-<a name="ln2558">    } else {</a>
-<a name="ln2559">      n_skip--;</a>
-<a name="ln2560">    }</a>
-<a name="ln2561"> </a>
-<a name="ln2562">    // Only advance the &quot;vcol&quot; when after the 'number' or 'relativenumber'</a>
-<a name="ln2563">    // column.</a>
-<a name="ln2564">    if (draw_state &gt; WL_NR</a>
-<a name="ln2565">        &amp;&amp; filler_todo &lt;= 0) {</a>
-<a name="ln2566">      vcol++;</a>
-<a name="ln2567">    }</a>
-<a name="ln2568"> </a>
-<a name="ln2569">    if (vcol_save_attr &gt;= 0) {</a>
-<a name="ln2570">      char_attr = vcol_save_attr;</a>
-<a name="ln2571">    }</a>
-<a name="ln2572"> </a>
-<a name="ln2573">    // restore attributes after &quot;predeces&quot; in 'listchars'</a>
-<a name="ln2574">    if (draw_state &gt; WL_NR &amp;&amp; n_attr3 &gt; 0 &amp;&amp; --n_attr3 == 0) {</a>
-<a name="ln2575">      char_attr = saved_attr3;</a>
-<a name="ln2576">    }</a>
-<a name="ln2577"> </a>
-<a name="ln2578">    // restore attributes after last 'listchars' or 'number' char</a>
-<a name="ln2579">    if (n_attr &gt; 0 &amp;&amp; draw_state == WL_LINE &amp;&amp; --n_attr == 0) {</a>
-<a name="ln2580">      char_attr = saved_attr2;</a>
-<a name="ln2581">    }</a>
-<a name="ln2582"> </a>
-<a name="ln2583">    // At end of screen line and there is more to come: Display the line</a>
-<a name="ln2584">    // so far.  If there is no more to display it is caught above.</a>
-<a name="ln2585">    if ((wp-&gt;w_p_rl ? (col &lt; 0) : (col &gt;= grid-&gt;cols))</a>
-<a name="ln2586">        &amp;&amp; foldinfo.fi_lines == 0</a>
-<a name="ln2587">        &amp;&amp; (draw_state != WL_LINE</a>
-<a name="ln2588">            || *ptr != NUL</a>
-<a name="ln2589">            || filler_todo &gt; 0</a>
-<a name="ln2590">            || (wp-&gt;w_p_list &amp;&amp; wp-&gt;w_p_lcs_chars.eol != NUL</a>
-<a name="ln2591">                &amp;&amp; p_extra != at_end_str)</a>
-<a name="ln2592">            || (n_extra != 0</a>
-<a name="ln2593">                &amp;&amp; (c_extra != NUL || *p_extra != NUL)))) {</a>
-<a name="ln2594">      bool wrap = wp-&gt;w_p_wrap       // Wrapping enabled.</a>
-<a name="ln2595">                  &amp;&amp; filler_todo &lt;= 0          // Not drawing diff filler lines.</a>
-<a name="ln2596">                  &amp;&amp; lcs_eol_one != -1         // Haven't printed the lcs_eol character.</a>
-<a name="ln2597">                  &amp;&amp; row != endrow - 1         // Not the last line being displayed.</a>
-<a name="ln2598">                  &amp;&amp; (grid-&gt;cols == Columns  // Window spans the width of the screen,</a>
-<a name="ln2599">                      || ui_has(kUIMultigrid))  // or has dedicated grid.</a>
-<a name="ln2600">                  &amp;&amp; !wp-&gt;w_p_rl;              // Not right-to-left.</a>
-<a name="ln2601"> </a>
-<a name="ln2602">      int draw_col = col - boguscols;</a>
-<a name="ln2603">      if (filler_todo &gt; 0) {</a>
-<a name="ln2604">        int index = filler_todo - (filler_lines - n_virt_lines);</a>
-<a name="ln2605">        if (index &gt; 0) {</a>
-<a name="ln2606">          int i = (int)kv_size(virt_lines) - index;</a>
-<a name="ln2607">          assert(i &gt;= 0);</a>
-<a name="ln2608">          int offset = kv_A(virt_lines, i).left_col ? 0 : win_col_offset;</a>
-<a name="ln2609">          draw_virt_text_item(buf, offset, kv_A(virt_lines, i).line,</a>
-<a name="ln2610">                              kHlModeReplace, grid-&gt;cols, 0);</a>
-<a name="ln2611">        }</a>
-<a name="ln2612">      } else {</a>
-<a name="ln2613">        draw_virt_text(wp, buf, win_col_offset, &amp;draw_col, grid-&gt;cols, row);</a>
-<a name="ln2614">      }</a>
-<a name="ln2615"> </a>
-<a name="ln2616">      grid_put_linebuf(grid, row, 0, draw_col, grid-&gt;cols, wp-&gt;w_p_rl, wp, bg_attr, wrap);</a>
-<a name="ln2617">      if (wrap) {</a>
-<a name="ln2618">        ScreenGrid *current_grid = grid;</a>
-<a name="ln2619">        int current_row = row, dummy_col = 0;  // dummy_col unused</a>
-<a name="ln2620">        grid_adjust(&amp;current_grid, &amp;current_row, &amp;dummy_col);</a>
-<a name="ln2621"> </a>
-<a name="ln2622">        // Force a redraw of the first column of the next line.</a>
-<a name="ln2623">        current_grid-&gt;attrs[current_grid-&gt;line_offset[current_row + 1]] = -1;</a>
+<a name="ln2442">        char_attr = hl_combine_attr(win_hl_attr(wp, HLF_CUC), char_attr);</a>
+<a name="ln2443">      } else if (draw_color_col &amp;&amp; VCOL_HLC == *color_cols) {</a>
+<a name="ln2444">        vcol_save_attr = char_attr;</a>
+<a name="ln2445">        char_attr = hl_combine_attr(win_hl_attr(wp, HLF_MC), char_attr);</a>
+<a name="ln2446">      }</a>
+<a name="ln2447">    }</a>
+<a name="ln2448"> </a>
+<a name="ln2449">    // Apply lowest-priority line attr now, so everything can override it.</a>
+<a name="ln2450">    if (draw_state == WL_LINE) {</a>
+<a name="ln2451">      char_attr = hl_combine_attr(line_attr_lowprio, char_attr);</a>
+<a name="ln2452">    }</a>
+<a name="ln2453"> </a>
+<a name="ln2454">    // Store character to be displayed.</a>
+<a name="ln2455">    // Skip characters that are left of the screen for 'nowrap'.</a>
+<a name="ln2456">    vcol_prev = vcol;</a>
+<a name="ln2457">    if (draw_state &lt; WL_LINE || n_skip &lt;= 0) {</a>
+<a name="ln2458">      //</a>
+<a name="ln2459">      // Store the character.</a>
+<a name="ln2460">      //</a>
+<a name="ln2461">      if (wp-&gt;w_p_rl &amp;&amp; utf_char2cells(mb_c) &gt; 1) {</a>
+<a name="ln2462">        // A double-wide character is: put first half in left cell.</a>
+<a name="ln2463">        off--;</a>
+<a name="ln2464">        col--;</a>
+<a name="ln2465">      }</a>
+<a name="ln2466">      if (mb_utf8) {</a>
+<a name="ln2467">        schar_from_cc(linebuf_char[off], mb_c, u8cc);</a>
+<a name="ln2468">      } else {</a>
+<a name="ln2469">        schar_from_ascii(linebuf_char[off], (char)c);</a>
+<a name="ln2470">      }</a>
+<a name="ln2471">      if (multi_attr) {</a>
+<a name="ln2472">        linebuf_attr[off] = multi_attr;</a>
+<a name="ln2473">        multi_attr = 0;</a>
+<a name="ln2474">      } else {</a>
+<a name="ln2475">        linebuf_attr[off] = char_attr;</a>
+<a name="ln2476">      }</a>
+<a name="ln2477"> </a>
+<a name="ln2478">      if (utf_char2cells(mb_c) &gt; 1) {</a>
+<a name="ln2479">        // Need to fill two screen columns.</a>
+<a name="ln2480">        off++;</a>
+<a name="ln2481">        col++;</a>
+<a name="ln2482">        // UTF-8: Put a 0 in the second screen char.</a>
+<a name="ln2483">        linebuf_char[off][0] = 0;</a>
+<a name="ln2484">        if (draw_state &gt; WL_NR &amp;&amp; filler_todo &lt;= 0) {</a>
+<a name="ln2485">          vcol++;</a>
+<a name="ln2486">        }</a>
+<a name="ln2487">        // When &quot;tocol&quot; is halfway through a character, set it to the end of</a>
+<a name="ln2488">        // the character, otherwise highlighting won't stop.</a>
+<a name="ln2489">        if (tocol == vcol) {</a>
+<a name="ln2490">          tocol++;</a>
+<a name="ln2491">        }</a>
+<a name="ln2492">        if (wp-&gt;w_p_rl) {</a>
+<a name="ln2493">          // now it's time to backup one cell</a>
+<a name="ln2494">          off--;</a>
+<a name="ln2495">          col--;</a>
+<a name="ln2496">        }</a>
+<a name="ln2497">      }</a>
+<a name="ln2498">      if (wp-&gt;w_p_rl) {</a>
+<a name="ln2499">        off--;</a>
+<a name="ln2500">        col--;</a>
+<a name="ln2501">      } else {</a>
+<a name="ln2502">        off++;</a>
+<a name="ln2503">        col++;</a>
+<a name="ln2504">      }</a>
+<a name="ln2505">    } else if (wp-&gt;w_p_cole &gt; 0 &amp;&amp; is_concealing) {</a>
+<a name="ln2506">      n_skip--;</a>
+<a name="ln2507">      vcol_off++;</a>
+<a name="ln2508">      if (n_extra &gt; 0) {</a>
+<a name="ln2509">        vcol_off += n_extra;</a>
+<a name="ln2510">      }</a>
+<a name="ln2511">      if (wp-&gt;w_p_wrap) {</a>
+<a name="ln2512">        // Special voodoo required if 'wrap' is on.</a>
+<a name="ln2513">        //</a>
+<a name="ln2514">        // Advance the column indicator to force the line</a>
+<a name="ln2515">        // drawing to wrap early. This will make the line</a>
+<a name="ln2516">        // take up the same screen space when parts are concealed,</a>
+<a name="ln2517">        // so that cursor line computations aren't messed up.</a>
+<a name="ln2518">        //</a>
+<a name="ln2519">        // To avoid the fictitious advance of 'col' causing</a>
+<a name="ln2520">        // trailing junk to be written out of the screen line</a>
+<a name="ln2521">        // we are building, 'boguscols' keeps track of the number</a>
+<a name="ln2522">        // of bad columns we have advanced.</a>
+<a name="ln2523">        if (n_extra &gt; 0) {</a>
+<a name="ln2524">          vcol += n_extra;</a>
+<a name="ln2525">          if (wp-&gt;w_p_rl) {</a>
+<a name="ln2526">            col -= n_extra;</a>
+<a name="ln2527">            boguscols -= n_extra;</a>
+<a name="ln2528">          } else {</a>
+<a name="ln2529">            col += n_extra;</a>
+<a name="ln2530">            boguscols += n_extra;</a>
+<a name="ln2531">          }</a>
+<a name="ln2532">          n_extra = 0;</a>
+<a name="ln2533">          n_attr = 0;</a>
+<a name="ln2534">        }</a>
+<a name="ln2535"> </a>
+<a name="ln2536">        if (utf_char2cells(mb_c) &gt; 1) {</a>
+<a name="ln2537">          // Need to fill two screen columns.</a>
+<a name="ln2538">          if (wp-&gt;w_p_rl) {</a>
+<a name="ln2539">            boguscols--;</a>
+<a name="ln2540">            col--;</a>
+<a name="ln2541">          } else {</a>
+<a name="ln2542">            boguscols++;</a>
+<a name="ln2543">            col++;</a>
+<a name="ln2544">          }</a>
+<a name="ln2545">        }</a>
+<a name="ln2546"> </a>
+<a name="ln2547">        if (wp-&gt;w_p_rl) {</a>
+<a name="ln2548">          boguscols--;</a>
+<a name="ln2549">          col--;</a>
+<a name="ln2550">        } else {</a>
+<a name="ln2551">          boguscols++;</a>
+<a name="ln2552">          col++;</a>
+<a name="ln2553">        }</a>
+<a name="ln2554">      } else {</a>
+<a name="ln2555">        if (n_extra &gt; 0) {</a>
+<a name="ln2556">          vcol += n_extra;</a>
+<a name="ln2557">          n_extra = 0;</a>
+<a name="ln2558">          n_attr = 0;</a>
+<a name="ln2559">        }</a>
+<a name="ln2560">      }</a>
+<a name="ln2561">    } else {</a>
+<a name="ln2562">      n_skip--;</a>
+<a name="ln2563">    }</a>
+<a name="ln2564"> </a>
+<a name="ln2565">    // Only advance the &quot;vcol&quot; when after the 'number' or 'relativenumber'</a>
+<a name="ln2566">    // column.</a>
+<a name="ln2567">    if (draw_state &gt; WL_NR</a>
+<a name="ln2568">        &amp;&amp; filler_todo &lt;= 0) {</a>
+<a name="ln2569">      vcol++;</a>
+<a name="ln2570">    }</a>
+<a name="ln2571"> </a>
+<a name="ln2572">    if (vcol_save_attr &gt;= 0) {</a>
+<a name="ln2573">      char_attr = vcol_save_attr;</a>
+<a name="ln2574">    }</a>
+<a name="ln2575"> </a>
+<a name="ln2576">    // restore attributes after &quot;predeces&quot; in 'listchars'</a>
+<a name="ln2577">    if (draw_state &gt; WL_NR &amp;&amp; n_attr3 &gt; 0 &amp;&amp; --n_attr3 == 0) {</a>
+<a name="ln2578">      char_attr = saved_attr3;</a>
+<a name="ln2579">    }</a>
+<a name="ln2580"> </a>
+<a name="ln2581">    // restore attributes after last 'listchars' or 'number' char</a>
+<a name="ln2582">    if (n_attr &gt; 0 &amp;&amp; draw_state == WL_LINE &amp;&amp; --n_attr == 0) {</a>
+<a name="ln2583">      char_attr = saved_attr2;</a>
+<a name="ln2584">    }</a>
+<a name="ln2585"> </a>
+<a name="ln2586">    // At end of screen line and there is more to come: Display the line</a>
+<a name="ln2587">    // so far.  If there is no more to display it is caught above.</a>
+<a name="ln2588">    if ((wp-&gt;w_p_rl ? (col &lt; 0) : (col &gt;= grid-&gt;cols))</a>
+<a name="ln2589">        &amp;&amp; foldinfo.fi_lines == 0</a>
+<a name="ln2590">        &amp;&amp; (draw_state != WL_LINE</a>
+<a name="ln2591">            || *ptr != NUL</a>
+<a name="ln2592">            || filler_todo &gt; 0</a>
+<a name="ln2593">            || (wp-&gt;w_p_list &amp;&amp; wp-&gt;w_p_lcs_chars.eol != NUL</a>
+<a name="ln2594">                &amp;&amp; p_extra != at_end_str)</a>
+<a name="ln2595">            || (n_extra != 0</a>
+<a name="ln2596">                &amp;&amp; (c_extra != NUL || *p_extra != NUL)))) {</a>
+<a name="ln2597">      bool wrap = wp-&gt;w_p_wrap       // Wrapping enabled.</a>
+<a name="ln2598">                  &amp;&amp; filler_todo &lt;= 0          // Not drawing diff filler lines.</a>
+<a name="ln2599">                  &amp;&amp; lcs_eol_one != -1         // Haven't printed the lcs_eol character.</a>
+<a name="ln2600">                  &amp;&amp; row != endrow - 1         // Not the last line being displayed.</a>
+<a name="ln2601">                  &amp;&amp; (grid-&gt;cols == Columns  // Window spans the width of the screen,</a>
+<a name="ln2602">                      || ui_has(kUIMultigrid))  // or has dedicated grid.</a>
+<a name="ln2603">                  &amp;&amp; !wp-&gt;w_p_rl;              // Not right-to-left.</a>
+<a name="ln2604"> </a>
+<a name="ln2605">      int draw_col = col - boguscols;</a>
+<a name="ln2606">      if (filler_todo &gt; 0) {</a>
+<a name="ln2607">        int index = filler_todo - (filler_lines - n_virt_lines);</a>
+<a name="ln2608">        if (index &gt; 0) {</a>
+<a name="ln2609">          int i = (int)kv_size(virt_lines) - index;</a>
+<a name="ln2610">          assert(i &gt;= 0);</a>
+<a name="ln2611">          int offset = kv_A(virt_lines, i).left_col ? 0 : win_col_offset;</a>
+<a name="ln2612">          draw_virt_text_item(buf, offset, kv_A(virt_lines, i).line,</a>
+<a name="ln2613">                              kHlModeReplace, grid-&gt;cols, 0);</a>
+<a name="ln2614">        }</a>
+<a name="ln2615">      } else {</a>
+<a name="ln2616">        draw_virt_text(wp, buf, win_col_offset, &amp;draw_col, grid-&gt;cols, row);</a>
+<a name="ln2617">      }</a>
+<a name="ln2618"> </a>
+<a name="ln2619">      grid_put_linebuf(grid, row, 0, draw_col, grid-&gt;cols, wp-&gt;w_p_rl, wp, bg_attr, wrap);</a>
+<a name="ln2620">      if (wrap) {</a>
+<a name="ln2621">        ScreenGrid *current_grid = grid;</a>
+<a name="ln2622">        int current_row = row, dummy_col = 0;  // dummy_col unused</a>
+<a name="ln2623">        grid_adjust(&amp;current_grid, &amp;current_row, &amp;dummy_col);</a>
 <a name="ln2624"> </a>
-<a name="ln2625">        // Remember that the line wraps, used for modeless copy.</a>
-<a name="ln2626">        current_grid-&gt;line_wraps[current_row] = true;</a>
-<a name="ln2627">      }</a>
-<a name="ln2628"> </a>
-<a name="ln2629">      boguscols = 0;</a>
-<a name="ln2630">      row++;</a>
+<a name="ln2625">        // Force a redraw of the first column of the next line.</a>
+<a name="ln2626">        current_grid-&gt;attrs[current_grid-&gt;line_offset[current_row + 1]] = -1;</a>
+<a name="ln2627"> </a>
+<a name="ln2628">        // Remember that the line wraps, used for modeless copy.</a>
+<a name="ln2629">        current_grid-&gt;line_wraps[current_row] = true;</a>
+<a name="ln2630">      }</a>
 <a name="ln2631"> </a>
-<a name="ln2632">      // When not wrapping and finished diff lines, or when displayed</a>
-<a name="ln2633">      // '$' and highlighting until last column, break here.</a>
-<a name="ln2634">      if ((!wp-&gt;w_p_wrap &amp;&amp; filler_todo &lt;= 0) || lcs_eol_one == -1) {</a>
-<a name="ln2635">        break;</a>
-<a name="ln2636">      }</a>
-<a name="ln2637"> </a>
-<a name="ln2638">      // When the window is too narrow draw all &quot;@&quot; lines.</a>
-<a name="ln2639">      if (draw_state != WL_LINE &amp;&amp; filler_todo &lt;= 0) {</a>
-<a name="ln2640">        win_draw_end(wp, '@', ' ', true, row, wp-&gt;w_grid.rows, HLF_AT);</a>
-<a name="ln2641">        set_empty_rows(wp, row);</a>
-<a name="ln2642">        row = endrow;</a>
-<a name="ln2643">      }</a>
-<a name="ln2644"> </a>
-<a name="ln2645">      // When line got too long for screen break here.</a>
-<a name="ln2646">      if (row == endrow) {</a>
-<a name="ln2647">        row++;</a>
-<a name="ln2648">        break;</a>
-<a name="ln2649">      }</a>
-<a name="ln2650"> </a>
-<a name="ln2651">      col = 0;</a>
-<a name="ln2652">      off = 0;</a>
-<a name="ln2653">      if (wp-&gt;w_p_rl) {</a>
-<a name="ln2654">        col = grid-&gt;cols - 1;  // col is not used if breaking!</a>
-<a name="ln2655">        off += col;</a>
-<a name="ln2656">      }</a>
-<a name="ln2657"> </a>
-<a name="ln2658">      // reset the drawing state for the start of a wrapped line</a>
-<a name="ln2659">      draw_state = WL_START;</a>
-<a name="ln2660">      saved_n_extra = n_extra;</a>
-<a name="ln2661">      saved_p_extra = p_extra;</a>
-<a name="ln2662">      saved_c_extra = c_extra;</a>
-<a name="ln2663">      saved_c_final = c_final;</a>
-<a name="ln2664">      saved_char_attr = char_attr;</a>
-<a name="ln2665">      n_extra = 0;</a>
-<a name="ln2666">      lcs_prec_todo = wp-&gt;w_p_lcs_chars.prec;</a>
-<a name="ln2667">      if (filler_todo &lt;= 0) {</a>
-<a name="ln2668">        need_showbreak = true;</a>
-<a name="ln2669">      }</a>
-<a name="ln2670">      filler_todo--;</a>
-<a name="ln2671">      // When the filler lines are actually below the last line of the</a>
-<a name="ln2672">      // file, don't draw the line itself, break here.</a>
-<a name="ln2673">      if (filler_todo == 0 &amp;&amp; (wp-&gt;w_botfill || end_fill)) {</a>
-<a name="ln2674">        break;</a>
-<a name="ln2675">      }</a>
-<a name="ln2676">    }</a>
-<a name="ln2677">  }     // for every character in the line</a>
-<a name="ln2678"> </a>
-<a name="ln2679">  // After an empty line check first word for capital.</a>
-<a name="ln2680">  if (*skipwhite((char *)line) == NUL) {</a>
-<a name="ln2681">    capcol_lnum = lnum + 1;</a>
-<a name="ln2682">    cap_col = 0;</a>
-<a name="ln2683">  }</a>
-<a name="ln2684"> </a>
-<a name="ln2685">  kv_destroy(virt_lines);</a>
-<a name="ln2686">  xfree(p_extra_free);</a>
-<a name="ln2687">  return row;</a>
-<a name="ln2688">}</a>
+<a name="ln2632">      boguscols = 0;</a>
+<a name="ln2633">      row++;</a>
+<a name="ln2634"> </a>
+<a name="ln2635">      // When not wrapping and finished diff lines, or when displayed</a>
+<a name="ln2636">      // '$' and highlighting until last column, break here.</a>
+<a name="ln2637">      if ((!wp-&gt;w_p_wrap &amp;&amp; filler_todo &lt;= 0) || lcs_eol_one == -1) {</a>
+<a name="ln2638">        break;</a>
+<a name="ln2639">      }</a>
+<a name="ln2640"> </a>
+<a name="ln2641">      // When the window is too narrow draw all &quot;@&quot; lines.</a>
+<a name="ln2642">      if (draw_state != WL_LINE &amp;&amp; filler_todo &lt;= 0) {</a>
+<a name="ln2643">        win_draw_end(wp, '@', ' ', true, row, wp-&gt;w_grid.rows, HLF_AT);</a>
+<a name="ln2644">        set_empty_rows(wp, row);</a>
+<a name="ln2645">        row = endrow;</a>
+<a name="ln2646">      }</a>
+<a name="ln2647"> </a>
+<a name="ln2648">      // When line got too long for screen break here.</a>
+<a name="ln2649">      if (row == endrow) {</a>
+<a name="ln2650">        row++;</a>
+<a name="ln2651">        break;</a>
+<a name="ln2652">      }</a>
+<a name="ln2653"> </a>
+<a name="ln2654">      col = 0;</a>
+<a name="ln2655">      off = 0;</a>
+<a name="ln2656">      if (wp-&gt;w_p_rl) {</a>
+<a name="ln2657">        col = grid-&gt;cols - 1;  // col is not used if breaking!</a>
+<a name="ln2658">        off += col;</a>
+<a name="ln2659">      }</a>
+<a name="ln2660"> </a>
+<a name="ln2661">      // reset the drawing state for the start of a wrapped line</a>
+<a name="ln2662">      draw_state = WL_START;</a>
+<a name="ln2663">      saved_n_extra = n_extra;</a>
+<a name="ln2664">      saved_p_extra = p_extra;</a>
+<a name="ln2665">      saved_c_extra = c_extra;</a>
+<a name="ln2666">      saved_c_final = c_final;</a>
+<a name="ln2667">      saved_char_attr = char_attr;</a>
+<a name="ln2668">      n_extra = 0;</a>
+<a name="ln2669">      lcs_prec_todo = wp-&gt;w_p_lcs_chars.prec;</a>
+<a name="ln2670">      if (filler_todo &lt;= 0) {</a>
+<a name="ln2671">        need_showbreak = true;</a>
+<a name="ln2672">      }</a>
+<a name="ln2673">      filler_todo--;</a>
+<a name="ln2674">      // When the filler lines are actually below the last line of the</a>
+<a name="ln2675">      // file, don't draw the line itself, break here.</a>
+<a name="ln2676">      if (filler_todo == 0 &amp;&amp; (wp-&gt;w_botfill || end_fill)) {</a>
+<a name="ln2677">        break;</a>
+<a name="ln2678">      }</a>
+<a name="ln2679">    }</a>
+<a name="ln2680">  }     // for every character in the line</a>
+<a name="ln2681"> </a>
+<a name="ln2682">  // After an empty line check first word for capital.</a>
+<a name="ln2683">  if (*skipwhite((char *)line) == NUL) {</a>
+<a name="ln2684">    capcol_lnum = lnum + 1;</a>
+<a name="ln2685">    cap_col = 0;</a>
+<a name="ln2686">  }</a>
+<a name="ln2687"> </a>
+<a name="ln2688">  kv_destroy(virt_lines);</a>
+<a name="ln2689">  xfree(p_extra_free);</a>
+<a name="ln2690">  return row;</a>
+<a name="ln2691">}</a>
 </code></pre>
 <div class="balloon" rel="2211"><p><span style="font-size:18px">&uarr;</span> <a href="https://pvs-studio.com/en/docs/warnings/v560/" target="_blank">V560</a> A part of conditional expression is always true: eol_hl_off == 0.</p></div>
 <link rel="stylesheet" href="highlight.css">

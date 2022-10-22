@@ -76,6 +76,15 @@
     <CWECode>CWE-571</CWECode>
   </PVS-Studio_Analysis_Log>
   <PVS-Studio_Analysis_Log>
+    <Level>2</Level>
+    <ErrorType>warning</ErrorType>
+    <ErrorCode>V547</ErrorCode>
+    <Message>Expression 'info.item_compare_func_err' is always false.</Message>
+    <Line>1237</Line>
+    <File>./src/nvim/eval/typval.c</File>
+    <CWECode>CWE-570</CWECode>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
     <Level>1</Level>
     <ErrorType>error</ErrorType>
     <ErrorCode>V595</ErrorCode>

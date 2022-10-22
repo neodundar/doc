@@ -3265,7 +3265,7 @@
 <a name="ln3256">}</a>
 <a name="ln3257"> </a>
 <a name="ln3258">/// Return true if option &quot;p&quot; has its default value.</a>
-<a name="ln3259">static int optval_default(vimoption_T *p, char_u *varp)</a>
+<a name="ln3259">static int optval_default(vimoption_T *p, const char_u *varp)</a>
 <a name="ln3260">{</a>
 <a name="ln3261">  if (varp == NULL) {</a>
 <a name="ln3262">    return true;            // hidden option is always at default</a>
@@ -4898,7 +4898,7 @@
 <a name="ln4889">/// Return true if &quot;varp&quot; points to 'wildchar' or 'wildcharm' and it can be</a>
 <a name="ln4890">/// printed as a keyname.</a>
 <a name="ln4891">/// &quot;*wcp&quot; is set to the value of the option if it's 'wildchar' or 'wildcharm'.</a>
-<a name="ln4892">static int wc_use_keyname(char_u *varp, long *wcp)</a>
+<a name="ln4892">static int wc_use_keyname(const char_u *varp, long *wcp)</a>
 <a name="ln4893">{</a>
 <a name="ln4894">  if (((long *)varp == &amp;p_wc) || ((long *)varp == &amp;p_wcm)) {</a>
 <a name="ln4895">    *wcp = *(long *)varp;</a>

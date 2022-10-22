@@ -3539,7 +3539,7 @@
 <a name="ln3530">/// The implementation of the algorithm comes from Aspell editdist.cpp,</a>
 <a name="ln3531">/// edit_distance().  It has been converted from C++ to C and modified to</a>
 <a name="ln3532">/// support multi-byte characters.</a>
-<a name="ln3533">static int spell_edit_score(slang_T *slang, char_u *badword, char_u *goodword)</a>
+<a name="ln3533">static int spell_edit_score(slang_T *slang, const char_u *badword, const char_u *goodword)</a>
 <a name="ln3534">{</a>
 <a name="ln3535">  int *cnt;</a>
 <a name="ln3536">  int j, i;</a>
@@ -3644,168 +3644,169 @@
 <a name="ln3635"> </a>
 <a name="ln3636">/// Multi-byte version of spell_edit_score_limit().</a>
 <a name="ln3637">/// Keep it in sync with the above!</a>
-<a name="ln3638">static int spell_edit_score_limit_w(slang_T *slang, char_u *badword, char_u *goodword, int limit)</a>
-<a name="ln3639">{</a>
-<a name="ln3640">  limitscore_T stack[10];               // allow for over 3 * 2 edits</a>
-<a name="ln3641">  int stackidx;</a>
-<a name="ln3642">  int bi, gi;</a>
-<a name="ln3643">  int bi2, gi2;</a>
-<a name="ln3644">  int bc, gc;</a>
-<a name="ln3645">  int score;</a>
-<a name="ln3646">  int score_off;</a>
-<a name="ln3647">  int minscore;</a>
-<a name="ln3648">  int round;</a>
-<a name="ln3649">  int wbadword[MAXWLEN];</a>
-<a name="ln3650">  int wgoodword[MAXWLEN];</a>
-<a name="ln3651"> </a>
-<a name="ln3652">  // Get the characters from the multi-byte strings and put them in an</a>
-<a name="ln3653">  // int array for easy access.</a>
-<a name="ln3654">  bi = 0;</a>
-<a name="ln3655">  for (const char_u *p = badword; *p != NUL;) {</a>
-<a name="ln3656">    wbadword[bi++] = mb_cptr2char_adv(&amp;p);</a>
-<a name="ln3657">  }</a>
-<a name="ln3658">  wbadword[bi++] = 0;</a>
-<a name="ln3659">  gi = 0;</a>
-<a name="ln3660">  for (const char_u *p = goodword; *p != NUL;) {</a>
-<a name="ln3661">    wgoodword[gi++] = mb_cptr2char_adv(&amp;p);</a>
-<a name="ln3662">  }</a>
-<a name="ln3663">  wgoodword[gi++] = 0;</a>
-<a name="ln3664"> </a>
-<a name="ln3665">  // The idea is to go from start to end over the words.  So long as</a>
-<a name="ln3666">  // characters are equal just continue, this always gives the lowest score.</a>
-<a name="ln3667">  // When there is a difference try several alternatives.  Each alternative</a>
-<a name="ln3668">  // increases &quot;score&quot; for the edit distance.  Some of the alternatives are</a>
-<a name="ln3669">  // pushed unto a stack and tried later, some are tried right away.  At the</a>
-<a name="ln3670">  // end of the word the score for one alternative is known.  The lowest</a>
-<a name="ln3671">  // possible score is stored in &quot;minscore&quot;.</a>
-<a name="ln3672">  stackidx = 0;</a>
-<a name="ln3673">  bi = 0;</a>
-<a name="ln3674">  gi = 0;</a>
-<a name="ln3675">  score = 0;</a>
-<a name="ln3676">  minscore = limit + 1;</a>
-<a name="ln3677"> </a>
-<a name="ln3678">  for (;;) {</a>
-<a name="ln3679">    // Skip over an equal part, score remains the same.</a>
-<a name="ln3680">    for (;;) {</a>
-<a name="ln3681">      bc = wbadword[bi];</a>
-<a name="ln3682">      gc = wgoodword[gi];</a>
-<a name="ln3683"> </a>
-<a name="ln3684">      if (bc != gc) {           // stop at a char that's different</a>
-<a name="ln3685">        break;</a>
-<a name="ln3686">      }</a>
-<a name="ln3687">      if (bc == NUL) {          // both words end</a>
-<a name="ln3688">        if (score &lt; minscore) {</a>
-<a name="ln3689">          minscore = score;</a>
-<a name="ln3690">        }</a>
-<a name="ln3691">        goto pop;               // do next alternative</a>
-<a name="ln3692">      }</a>
-<a name="ln3693">      bi++;</a>
-<a name="ln3694">      gi++;</a>
-<a name="ln3695">    }</a>
-<a name="ln3696"> </a>
-<a name="ln3697">    if (gc == NUL) {      // goodword ends, delete badword chars</a>
-<a name="ln3698">      do {</a>
-<a name="ln3699">        if ((score += SCORE_DEL) &gt;= minscore) {</a>
-<a name="ln3700">          goto pop;                 // do next alternative</a>
-<a name="ln3701">        }</a>
-<a name="ln3702">      } while (wbadword[++bi] != NUL);</a>
-<a name="ln3703">      minscore = score;</a>
-<a name="ln3704">    } else if (bc == NUL) {   // badword ends, insert badword chars</a>
-<a name="ln3705">      do {</a>
-<a name="ln3706">        if ((score += SCORE_INS) &gt;= minscore) {</a>
-<a name="ln3707">          goto pop;                 // do next alternative</a>
-<a name="ln3708">        }</a>
-<a name="ln3709">      } while (wgoodword[++gi] != NUL);</a>
-<a name="ln3710">      minscore = score;</a>
-<a name="ln3711">    } else {                  // both words continue</a>
-<a name="ln3712">      // If not close to the limit, perform a change.  Only try changes</a>
-<a name="ln3713">      // that may lead to a lower score than &quot;minscore&quot;.</a>
-<a name="ln3714">      // round 0: try deleting a char from badword</a>
-<a name="ln3715">      // round 1: try inserting a char in badword</a>
-<a name="ln3716">      for (round = 0; round &lt;= 1; round++) {</a>
-<a name="ln3717">        score_off = score + (round == 0 ? SCORE_DEL : SCORE_INS);</a>
-<a name="ln3718">        if (score_off &lt; minscore) {</a>
-<a name="ln3719">          if (score_off + SCORE_EDIT_MIN &gt;= minscore) {</a>
-<a name="ln3720">            // Near the limit, rest of the words must match.  We</a>
-<a name="ln3721">            // can check that right now, no need to push an item</a>
-<a name="ln3722">            // onto the stack.</a>
-<a name="ln3723">            bi2 = bi + 1 - round;</a>
-<a name="ln3724">            gi2 = gi + round;</a>
-<a name="ln3725">            while (wgoodword[gi2] == wbadword[bi2]) {</a>
-<a name="ln3726">              if (wgoodword[gi2] == NUL) {</a>
-<a name="ln3727">                minscore = score_off;</a>
-<a name="ln3728">                break;</a>
-<a name="ln3729">              }</a>
-<a name="ln3730">              bi2++;</a>
-<a name="ln3731">              gi2++;</a>
-<a name="ln3732">            }</a>
-<a name="ln3733">          } else {</a>
-<a name="ln3734">            // try deleting a character from badword later</a>
-<a name="ln3735">            stack[stackidx].badi = bi + 1 - round;</a>
-<a name="ln3736">            stack[stackidx].goodi = gi + round;</a>
-<a name="ln3737">            stack[stackidx].score = score_off;</a>
-<a name="ln3738">            stackidx++;</a>
-<a name="ln3739">          }</a>
-<a name="ln3740">        }</a>
-<a name="ln3741">      }</a>
-<a name="ln3742"> </a>
-<a name="ln3743">      if (score + SCORE_SWAP &lt; minscore) {</a>
-<a name="ln3744">        // If swapping two characters makes a match then the</a>
-<a name="ln3745">        // substitution is more expensive, thus there is no need to</a>
-<a name="ln3746">        // try both.</a>
-<a name="ln3747">        if (gc == wbadword[bi + 1] &amp;&amp; bc == wgoodword[gi + 1]) {</a>
-<a name="ln3748">          // Swap two characters, that is: skip them.</a>
-<a name="ln3749">          gi += 2;</a>
-<a name="ln3750">          bi += 2;</a>
-<a name="ln3751">          score += SCORE_SWAP;</a>
-<a name="ln3752">          continue;</a>
-<a name="ln3753">        }</a>
-<a name="ln3754">      }</a>
-<a name="ln3755"> </a>
-<a name="ln3756">      // Substitute one character for another which is the same</a>
-<a name="ln3757">      // thing as deleting a character from both goodword and badword.</a>
-<a name="ln3758">      // Use a better score when there is only a case difference.</a>
-<a name="ln3759">      if (SPELL_TOFOLD(bc) == SPELL_TOFOLD(gc)) {</a>
-<a name="ln3760">        score += SCORE_ICASE;</a>
-<a name="ln3761">      } else {</a>
-<a name="ln3762">        // For a similar character use SCORE_SIMILAR.</a>
-<a name="ln3763">        if (slang != NULL</a>
-<a name="ln3764">            &amp;&amp; slang-&gt;sl_has_map</a>
-<a name="ln3765">            &amp;&amp; similar_chars(slang, gc, bc)) {</a>
-<a name="ln3766">          score += SCORE_SIMILAR;</a>
-<a name="ln3767">        } else {</a>
-<a name="ln3768">          score += SCORE_SUBST;</a>
-<a name="ln3769">        }</a>
-<a name="ln3770">      }</a>
-<a name="ln3771"> </a>
-<a name="ln3772">      if (score &lt; minscore) {</a>
-<a name="ln3773">        // Do the substitution.</a>
-<a name="ln3774">        gi++;</a>
-<a name="ln3775">        bi++;</a>
-<a name="ln3776">        continue;</a>
-<a name="ln3777">      }</a>
-<a name="ln3778">    }</a>
-<a name="ln3779">pop:</a>
-<a name="ln3780">    // Get here to try the next alternative, pop it from the stack.</a>
-<a name="ln3781">    if (stackidx == 0) {                // stack is empty, finished</a>
-<a name="ln3782">      break;</a>
-<a name="ln3783">    }</a>
-<a name="ln3784"> </a>
-<a name="ln3785">    // pop an item from the stack</a>
-<a name="ln3786">    stackidx--;</a>
-<a name="ln3787">    gi = stack[stackidx].goodi;</a>
-<a name="ln3788">    bi = stack[stackidx].badi;</a>
-<a name="ln3789">    score = stack[stackidx].score;</a>
-<a name="ln3790">  }</a>
-<a name="ln3791"> </a>
-<a name="ln3792">  // When the score goes over &quot;limit&quot; it may actually be much higher.</a>
-<a name="ln3793">  // Return a very large number to avoid going below the limit when giving a</a>
-<a name="ln3794">  // bonus.</a>
-<a name="ln3795">  if (minscore &gt; limit) {</a>
-<a name="ln3796">    return SCORE_MAXMAX;</a>
-<a name="ln3797">  }</a>
-<a name="ln3798">  return minscore;</a>
-<a name="ln3799">}</a>
+<a name="ln3638">static int spell_edit_score_limit_w(slang_T *slang, const char_u *badword, const char_u *goodword,</a>
+<a name="ln3639">                                    int limit)</a>
+<a name="ln3640">{</a>
+<a name="ln3641">  limitscore_T stack[10];               // allow for over 3 * 2 edits</a>
+<a name="ln3642">  int stackidx;</a>
+<a name="ln3643">  int bi, gi;</a>
+<a name="ln3644">  int bi2, gi2;</a>
+<a name="ln3645">  int bc, gc;</a>
+<a name="ln3646">  int score;</a>
+<a name="ln3647">  int score_off;</a>
+<a name="ln3648">  int minscore;</a>
+<a name="ln3649">  int round;</a>
+<a name="ln3650">  int wbadword[MAXWLEN];</a>
+<a name="ln3651">  int wgoodword[MAXWLEN];</a>
+<a name="ln3652"> </a>
+<a name="ln3653">  // Get the characters from the multi-byte strings and put them in an</a>
+<a name="ln3654">  // int array for easy access.</a>
+<a name="ln3655">  bi = 0;</a>
+<a name="ln3656">  for (const char_u *p = badword; *p != NUL;) {</a>
+<a name="ln3657">    wbadword[bi++] = mb_cptr2char_adv(&amp;p);</a>
+<a name="ln3658">  }</a>
+<a name="ln3659">  wbadword[bi++] = 0;</a>
+<a name="ln3660">  gi = 0;</a>
+<a name="ln3661">  for (const char_u *p = goodword; *p != NUL;) {</a>
+<a name="ln3662">    wgoodword[gi++] = mb_cptr2char_adv(&amp;p);</a>
+<a name="ln3663">  }</a>
+<a name="ln3664">  wgoodword[gi++] = 0;</a>
+<a name="ln3665"> </a>
+<a name="ln3666">  // The idea is to go from start to end over the words.  So long as</a>
+<a name="ln3667">  // characters are equal just continue, this always gives the lowest score.</a>
+<a name="ln3668">  // When there is a difference try several alternatives.  Each alternative</a>
+<a name="ln3669">  // increases &quot;score&quot; for the edit distance.  Some of the alternatives are</a>
+<a name="ln3670">  // pushed unto a stack and tried later, some are tried right away.  At the</a>
+<a name="ln3671">  // end of the word the score for one alternative is known.  The lowest</a>
+<a name="ln3672">  // possible score is stored in &quot;minscore&quot;.</a>
+<a name="ln3673">  stackidx = 0;</a>
+<a name="ln3674">  bi = 0;</a>
+<a name="ln3675">  gi = 0;</a>
+<a name="ln3676">  score = 0;</a>
+<a name="ln3677">  minscore = limit + 1;</a>
+<a name="ln3678"> </a>
+<a name="ln3679">  for (;;) {</a>
+<a name="ln3680">    // Skip over an equal part, score remains the same.</a>
+<a name="ln3681">    for (;;) {</a>
+<a name="ln3682">      bc = wbadword[bi];</a>
+<a name="ln3683">      gc = wgoodword[gi];</a>
+<a name="ln3684"> </a>
+<a name="ln3685">      if (bc != gc) {           // stop at a char that's different</a>
+<a name="ln3686">        break;</a>
+<a name="ln3687">      }</a>
+<a name="ln3688">      if (bc == NUL) {          // both words end</a>
+<a name="ln3689">        if (score &lt; minscore) {</a>
+<a name="ln3690">          minscore = score;</a>
+<a name="ln3691">        }</a>
+<a name="ln3692">        goto pop;               // do next alternative</a>
+<a name="ln3693">      }</a>
+<a name="ln3694">      bi++;</a>
+<a name="ln3695">      gi++;</a>
+<a name="ln3696">    }</a>
+<a name="ln3697"> </a>
+<a name="ln3698">    if (gc == NUL) {      // goodword ends, delete badword chars</a>
+<a name="ln3699">      do {</a>
+<a name="ln3700">        if ((score += SCORE_DEL) &gt;= minscore) {</a>
+<a name="ln3701">          goto pop;                 // do next alternative</a>
+<a name="ln3702">        }</a>
+<a name="ln3703">      } while (wbadword[++bi] != NUL);</a>
+<a name="ln3704">      minscore = score;</a>
+<a name="ln3705">    } else if (bc == NUL) {   // badword ends, insert badword chars</a>
+<a name="ln3706">      do {</a>
+<a name="ln3707">        if ((score += SCORE_INS) &gt;= minscore) {</a>
+<a name="ln3708">          goto pop;                 // do next alternative</a>
+<a name="ln3709">        }</a>
+<a name="ln3710">      } while (wgoodword[++gi] != NUL);</a>
+<a name="ln3711">      minscore = score;</a>
+<a name="ln3712">    } else {                  // both words continue</a>
+<a name="ln3713">      // If not close to the limit, perform a change.  Only try changes</a>
+<a name="ln3714">      // that may lead to a lower score than &quot;minscore&quot;.</a>
+<a name="ln3715">      // round 0: try deleting a char from badword</a>
+<a name="ln3716">      // round 1: try inserting a char in badword</a>
+<a name="ln3717">      for (round = 0; round &lt;= 1; round++) {</a>
+<a name="ln3718">        score_off = score + (round == 0 ? SCORE_DEL : SCORE_INS);</a>
+<a name="ln3719">        if (score_off &lt; minscore) {</a>
+<a name="ln3720">          if (score_off + SCORE_EDIT_MIN &gt;= minscore) {</a>
+<a name="ln3721">            // Near the limit, rest of the words must match.  We</a>
+<a name="ln3722">            // can check that right now, no need to push an item</a>
+<a name="ln3723">            // onto the stack.</a>
+<a name="ln3724">            bi2 = bi + 1 - round;</a>
+<a name="ln3725">            gi2 = gi + round;</a>
+<a name="ln3726">            while (wgoodword[gi2] == wbadword[bi2]) {</a>
+<a name="ln3727">              if (wgoodword[gi2] == NUL) {</a>
+<a name="ln3728">                minscore = score_off;</a>
+<a name="ln3729">                break;</a>
+<a name="ln3730">              }</a>
+<a name="ln3731">              bi2++;</a>
+<a name="ln3732">              gi2++;</a>
+<a name="ln3733">            }</a>
+<a name="ln3734">          } else {</a>
+<a name="ln3735">            // try deleting a character from badword later</a>
+<a name="ln3736">            stack[stackidx].badi = bi + 1 - round;</a>
+<a name="ln3737">            stack[stackidx].goodi = gi + round;</a>
+<a name="ln3738">            stack[stackidx].score = score_off;</a>
+<a name="ln3739">            stackidx++;</a>
+<a name="ln3740">          }</a>
+<a name="ln3741">        }</a>
+<a name="ln3742">      }</a>
+<a name="ln3743"> </a>
+<a name="ln3744">      if (score + SCORE_SWAP &lt; minscore) {</a>
+<a name="ln3745">        // If swapping two characters makes a match then the</a>
+<a name="ln3746">        // substitution is more expensive, thus there is no need to</a>
+<a name="ln3747">        // try both.</a>
+<a name="ln3748">        if (gc == wbadword[bi + 1] &amp;&amp; bc == wgoodword[gi + 1]) {</a>
+<a name="ln3749">          // Swap two characters, that is: skip them.</a>
+<a name="ln3750">          gi += 2;</a>
+<a name="ln3751">          bi += 2;</a>
+<a name="ln3752">          score += SCORE_SWAP;</a>
+<a name="ln3753">          continue;</a>
+<a name="ln3754">        }</a>
+<a name="ln3755">      }</a>
+<a name="ln3756"> </a>
+<a name="ln3757">      // Substitute one character for another which is the same</a>
+<a name="ln3758">      // thing as deleting a character from both goodword and badword.</a>
+<a name="ln3759">      // Use a better score when there is only a case difference.</a>
+<a name="ln3760">      if (SPELL_TOFOLD(bc) == SPELL_TOFOLD(gc)) {</a>
+<a name="ln3761">        score += SCORE_ICASE;</a>
+<a name="ln3762">      } else {</a>
+<a name="ln3763">        // For a similar character use SCORE_SIMILAR.</a>
+<a name="ln3764">        if (slang != NULL</a>
+<a name="ln3765">            &amp;&amp; slang-&gt;sl_has_map</a>
+<a name="ln3766">            &amp;&amp; similar_chars(slang, gc, bc)) {</a>
+<a name="ln3767">          score += SCORE_SIMILAR;</a>
+<a name="ln3768">        } else {</a>
+<a name="ln3769">          score += SCORE_SUBST;</a>
+<a name="ln3770">        }</a>
+<a name="ln3771">      }</a>
+<a name="ln3772"> </a>
+<a name="ln3773">      if (score &lt; minscore) {</a>
+<a name="ln3774">        // Do the substitution.</a>
+<a name="ln3775">        gi++;</a>
+<a name="ln3776">        bi++;</a>
+<a name="ln3777">        continue;</a>
+<a name="ln3778">      }</a>
+<a name="ln3779">    }</a>
+<a name="ln3780">pop:</a>
+<a name="ln3781">    // Get here to try the next alternative, pop it from the stack.</a>
+<a name="ln3782">    if (stackidx == 0) {                // stack is empty, finished</a>
+<a name="ln3783">      break;</a>
+<a name="ln3784">    }</a>
+<a name="ln3785"> </a>
+<a name="ln3786">    // pop an item from the stack</a>
+<a name="ln3787">    stackidx--;</a>
+<a name="ln3788">    gi = stack[stackidx].goodi;</a>
+<a name="ln3789">    bi = stack[stackidx].badi;</a>
+<a name="ln3790">    score = stack[stackidx].score;</a>
+<a name="ln3791">  }</a>
+<a name="ln3792"> </a>
+<a name="ln3793">  // When the score goes over &quot;limit&quot; it may actually be much higher.</a>
+<a name="ln3794">  // Return a very large number to avoid going below the limit when giving a</a>
+<a name="ln3795">  // bonus.</a>
+<a name="ln3796">  if (minscore &gt; limit) {</a>
+<a name="ln3797">    return SCORE_MAXMAX;</a>
+<a name="ln3798">  }</a>
+<a name="ln3799">  return minscore;</a>
+<a name="ln3800">}</a>
 </code></pre>
 <div class="balloon" rel="1155"><p><span style="font-size:18px">&uarr;</span> <a href="https://pvs-studio.com/en/docs/warnings/v1086/" target="_blank">V1086</a> A call of the 'memset' function will lead to underflow of the buffer 'sp'.</p></div>
 <link rel="stylesheet" href="highlight.css">
