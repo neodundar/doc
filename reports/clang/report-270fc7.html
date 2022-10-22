@@ -176,7 +176,7 @@ input.spoilerhider:checked + label + .spoiler{
    to see keyboard shortcuts</p>
 <input type="checkbox" class="spoilerhider" id="showinvocation" />
 <label for="showinvocation" >Show analyzer invocation</label>
-<div class="spoiler">clang -cc1 -triple x86_64-pc-linux-gnu -analyze -disable-free -disable-llvm-verifier -discard-value-names -main-file-name drawline.c -analyzer-store=region -analyzer-opt-analyze-nested-blocks -analyzer-checker=core -analyzer-checker=apiModeling -analyzer-checker=unix -analyzer-checker=deadcode -analyzer-checker=security.insecureAPI.UncheckedReturn -analyzer-checker=security.insecureAPI.getpw -analyzer-checker=security.insecureAPI.gets -analyzer-checker=security.insecureAPI.mktemp -analyzer-checker=security.insecureAPI.mkstemp -analyzer-checker=security.insecureAPI.vfork -analyzer-checker=nullability.NullPassedToNonnull -analyzer-checker=nullability.NullReturnedFromNonnull -analyzer-output plist -w -setup-static-analyzer -mrelocation-model static -mthread-model posix -mframe-pointer=all -fmath-errno -fno-rounding-math -masm-verbose -mconstructor-aliases -munwind-tables -target-cpu x86-64 -dwarf-column-info -fno-split-dwarf-inlining -debugger-tuning=gdb -resource-dir /usr/lib/llvm-10/lib/clang/10.0.0 -isystem /home/runner/work/doc/doc/neovim/.deps/usr/include -D INCLUDE_GENERATED_DECLARATIONS -D MIN_LOG_LEVEL=1 -D NVIM_MSGPACK_HAS_FLOAT32 -D NVIM_UNIBI_HAS_VAR_FROM -D _GNU_SOURCE -D nvim_EXPORTS -I /home/runner/work/doc/doc/neovim/build/cmake.config -I /home/runner/work/doc/doc/neovim/src -I /home/runner/work/doc/doc/neovim/build/src/nvim/auto -I /home/runner/work/doc/doc/neovim/build/include -I /home/runner/work/doc/doc/neovim/.deps/usr/include/luajit-2.1 -D NVIM_TS_HAS_SET_MATCH_LIMIT -D NVIM_TS_HAS_SET_ALLOCATOR -internal-isystem /usr/local/include -internal-isystem /usr/lib/llvm-10/lib/clang/10.0.0/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wno-unused-parameter -std=gnu99 -fdebug-compilation-dir /home/runner/work/doc/doc/neovim/build -ferror-limit 19 -fmessage-length 0 -stack-protector 2 -fgnuc-version=4.2.1 -fobjc-runtime=gcc -fno-common -fdiagnostics-show-option -fcolor-diagnostics -analyzer-output=html -faddrsig -o /home/runner/work/doc/doc/neovim/build/clang-report/2022-10-21-055303-15384-1 -x c /home/runner/work/doc/doc/neovim/src/nvim/drawline.c
+<div class="spoiler">clang -cc1 -triple x86_64-pc-linux-gnu -analyze -disable-free -disable-llvm-verifier -discard-value-names -main-file-name drawline.c -analyzer-store=region -analyzer-opt-analyze-nested-blocks -analyzer-checker=core -analyzer-checker=apiModeling -analyzer-checker=unix -analyzer-checker=deadcode -analyzer-checker=security.insecureAPI.UncheckedReturn -analyzer-checker=security.insecureAPI.getpw -analyzer-checker=security.insecureAPI.gets -analyzer-checker=security.insecureAPI.mktemp -analyzer-checker=security.insecureAPI.mkstemp -analyzer-checker=security.insecureAPI.vfork -analyzer-checker=nullability.NullPassedToNonnull -analyzer-checker=nullability.NullReturnedFromNonnull -analyzer-output plist -w -setup-static-analyzer -mrelocation-model static -mthread-model posix -mframe-pointer=all -fmath-errno -fno-rounding-math -masm-verbose -mconstructor-aliases -munwind-tables -target-cpu x86-64 -dwarf-column-info -fno-split-dwarf-inlining -debugger-tuning=gdb -resource-dir /usr/lib/llvm-10/lib/clang/10.0.0 -isystem /home/runner/work/doc/doc/neovim/.deps/usr/include -D INCLUDE_GENERATED_DECLARATIONS -D MIN_LOG_LEVEL=1 -D NVIM_MSGPACK_HAS_FLOAT32 -D NVIM_UNIBI_HAS_VAR_FROM -D _GNU_SOURCE -D nvim_EXPORTS -I /home/runner/work/doc/doc/neovim/build/cmake.config -I /home/runner/work/doc/doc/neovim/src -I /home/runner/work/doc/doc/neovim/build/src/nvim/auto -I /home/runner/work/doc/doc/neovim/build/include -I /home/runner/work/doc/doc/neovim/.deps/usr/include/luajit-2.1 -D NVIM_TS_HAS_SET_MATCH_LIMIT -D NVIM_TS_HAS_SET_ALLOCATOR -internal-isystem /usr/local/include -internal-isystem /usr/lib/llvm-10/lib/clang/10.0.0/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wno-unused-parameter -std=gnu99 -fdebug-compilation-dir /home/runner/work/doc/doc/neovim/build -ferror-limit 19 -fmessage-length 0 -stack-protector 2 -fgnuc-version=4.2.1 -fobjc-runtime=gcc -fno-common -fdiagnostics-show-option -fcolor-diagnostics -analyzer-output=html -faddrsig -o /home/runner/work/doc/doc/neovim/build/clang-report/2022-10-22-054536-15382-1 -x c /home/runner/work/doc/doc/neovim/src/nvim/drawline.c
 </div>
 <div id='tooltiphint' hidden="true">
   <p>Keyboard shortcuts: </p>
@@ -2637,7 +2637,7 @@ window.addEventListener("keydown", function (event) {
 <tr class="codeline" data-linenumber="2212"><td class="num" id="LN2212">2212</td><td class="line">      <span class='comment'>// flag to indicate whether prevcol equals startcol of search_hl or</span></td></tr>
 <tr class="codeline" data-linenumber="2213"><td class="num" id="LN2213">2213</td><td class="line">      <span class='comment'>// one of the matches</span></td></tr>
 <tr class="codeline" data-linenumber="2214"><td class="num" id="LN2214">2214</td><td class="line">      <span class='macro'>bool<span class='macro_popup'>_Bool</span></span> prevcol_hl_flag = get_prevcol_hl_flag(wp, &amp;screen_search_hl,</td></tr>
-<tr class="codeline" data-linenumber="2215"><td class="num" id="LN2215">2215</td><td class="line">                                                 (<span class='keyword'>long</span>)(ptr - line) - 1);</td></tr>
+<tr class="codeline" data-linenumber="2215"><td class="num" id="LN2215">2215</td><td class="line">                                                 (<span class='keyword'>long</span>)(ptr - line) - 1);  <span class='comment'>// NOLINT(google-readability-casting)</span></td></tr>
 <tr class="codeline" data-linenumber="2216"><td class="num" id="LN2216">2216</td><td class="line"> </td></tr>
 <tr class="codeline" data-linenumber="2217"><td class="num" id="LN2217">2217</td><td class="line">      <span class='comment'>// Invert at least one char, used for Visual and empty line or</span></td></tr>
 <tr class="codeline" data-linenumber="2218"><td class="num" id="LN2218">2218</td><td class="line">      <span class='comment'>// highlight match at end of line. If it's beyond the last</span></td></tr>
@@ -2673,444 +2673,447 @@ window.addEventListener("keydown", function (event) {
 <tr class="codeline" data-linenumber="2248"><td class="num" id="LN2248">2248</td><td class="line">        <span class='keyword'>if</span> (area_attr == 0 &amp;&amp; !has_fold) {</td></tr>
 <tr class="codeline" data-linenumber="2249"><td class="num" id="LN2249">2249</td><td class="line">          <span class='comment'>// Use attributes from match with highest priority among</span></td></tr>
 <tr class="codeline" data-linenumber="2250"><td class="num" id="LN2250">2250</td><td class="line">          <span class='comment'>// 'search_hl' and the match list.</span></td></tr>
-<tr class="codeline" data-linenumber="2251"><td class="num" id="LN2251">2251</td><td class="line">          get_search_match_hl(wp, &amp;screen_search_hl, (<span class='keyword'>long</span>)(ptr - line), &amp;char_attr);</td></tr>
-<tr class="codeline" data-linenumber="2252"><td class="num" id="LN2252">2252</td><td class="line">        }</td></tr>
-<tr class="codeline" data-linenumber="2253"><td class="num" id="LN2253">2253</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2254"><td class="num" id="LN2254">2254</td><td class="line">        <span class='keyword'>int</span> eol_attr = char_attr;</td></tr>
-<tr class="codeline" data-linenumber="2255"><td class="num" id="LN2255">2255</td><td class="line">        <span class='keyword'>if</span> (cul_attr) {</td></tr>
-<tr class="codeline" data-linenumber="2256"><td class="num" id="LN2256">2256</td><td class="line">          eol_attr = hl_combine_attr(cul_attr, eol_attr);</td></tr>
-<tr class="codeline" data-linenumber="2257"><td class="num" id="LN2257">2257</td><td class="line">        }</td></tr>
-<tr class="codeline" data-linenumber="2258"><td class="num" id="LN2258">2258</td><td class="line">        linebuf_attr[off] = eol_attr;</td></tr>
-<tr class="codeline" data-linenumber="2259"><td class="num" id="LN2259">2259</td><td class="line">        <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span>) {</td></tr>
-<tr class="codeline" data-linenumber="2260"><td class="num" id="LN2260">2260</td><td class="line">          col--;</td></tr>
-<tr class="codeline" data-linenumber="2261"><td class="num" id="LN2261">2261</td><td class="line">          off--;</td></tr>
-<tr class="codeline" data-linenumber="2262"><td class="num" id="LN2262">2262</td><td class="line">        } <span class='keyword'>else</span> {</td></tr>
-<tr class="codeline" data-linenumber="2263"><td class="num" id="LN2263">2263</td><td class="line">          col++;</td></tr>
-<tr class="codeline" data-linenumber="2264"><td class="num" id="LN2264">2264</td><td class="line">          off++;</td></tr>
-<tr class="codeline" data-linenumber="2265"><td class="num" id="LN2265">2265</td><td class="line">        }</td></tr>
-<tr class="codeline" data-linenumber="2266"><td class="num" id="LN2266">2266</td><td class="line">        vcol++;</td></tr>
-<tr class="codeline" data-linenumber="2267"><td class="num" id="LN2267">2267</td><td class="line">        eol_hl_off = 1;</td></tr>
-<tr class="codeline" data-linenumber="2268"><td class="num" id="LN2268">2268</td><td class="line">      }</td></tr>
-<tr class="codeline" data-linenumber="2269"><td class="num" id="LN2269">2269</td><td class="line">      <span class='comment'>// Highlight 'cursorcolumn' &amp; 'colorcolumn' past end of the line.</span></td></tr>
-<tr class="codeline" data-linenumber="2270"><td class="num" id="LN2270">2270</td><td class="line">      <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_wrap<span class='macro_popup'>w_onebuf_opt.wo_wrap</span></span>) {</td></tr>
-<tr class="codeline" data-linenumber="2271"><td class="num" id="LN2271">2271</td><td class="line">        v = wp-&gt;w_skipcol;</td></tr>
-<tr class="codeline" data-linenumber="2272"><td class="num" id="LN2272">2272</td><td class="line">      } <span class='keyword'>else</span> {</td></tr>
-<tr class="codeline" data-linenumber="2273"><td class="num" id="LN2273">2273</td><td class="line">        v = wp-&gt;w_leftcol;</td></tr>
-<tr class="codeline" data-linenumber="2274"><td class="num" id="LN2274">2274</td><td class="line">      }</td></tr>
-<tr class="codeline" data-linenumber="2275"><td class="num" id="LN2275">2275</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2276"><td class="num" id="LN2276">2276</td><td class="line">      <span class='comment'>// check if line ends before left margin</span></td></tr>
-<tr class="codeline" data-linenumber="2277"><td class="num" id="LN2277">2277</td><td class="line">      <span class='keyword'>if</span> (vcol &lt; v + col - win_col_off(wp)) {</td></tr>
-<tr class="codeline" data-linenumber="2278"><td class="num" id="LN2278">2278</td><td class="line">        vcol = v + col - win_col_off(wp);</td></tr>
-<tr class="codeline" data-linenumber="2279"><td class="num" id="LN2279">2279</td><td class="line">      }</td></tr>
-<tr class="codeline" data-linenumber="2280"><td class="num" id="LN2280">2280</td><td class="line">      <span class='comment'>// Get rid of the boguscols now, we want to draw until the right</span></td></tr>
-<tr class="codeline" data-linenumber="2281"><td class="num" id="LN2281">2281</td><td class="line">      <span class='comment'>// edge for 'cursorcolumn'.</span></td></tr>
-<tr class="codeline" data-linenumber="2282"><td class="num" id="LN2282">2282</td><td class="line">      col -= boguscols;</td></tr>
-<tr class="codeline" data-linenumber="2283"><td class="num" id="LN2283">2283</td><td class="line">      <span class='comment'>// boguscols = 0;  // Disabled because value never read after this</span></td></tr>
-<tr class="codeline" data-linenumber="2284"><td class="num" id="LN2284">2284</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2285"><td class="num" id="LN2285">2285</td><td class="line">      <span class='keyword'>if</span> (draw_color_col) {</td></tr>
-<tr class="codeline" data-linenumber="2286"><td class="num" id="LN2286">2286</td><td class="line">        draw_color_col = advance_color_col((<span class='keyword'>int</span>)<span class='macro'>VCOL_HLC<span class='macro_popup'>(vcol - vcol_off)</span></span>, &amp;color_cols);</td></tr>
-<tr class="codeline" data-linenumber="2287"><td class="num" id="LN2287">2287</td><td class="line">      }</td></tr>
-<tr class="codeline" data-linenumber="2288"><td class="num" id="LN2288">2288</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2289"><td class="num" id="LN2289">2289</td><td class="line">      <span class='macro'>bool<span class='macro_popup'>_Bool</span></span> has_virttext = <span class='macro'>false<span class='macro_popup'>0</span></span>;</td></tr>
-<tr class="codeline" data-linenumber="2290"><td class="num" id="LN2290">2290</td><td class="line">      <span class='comment'>// Make sure alignment is the same regardless</span></td></tr>
-<tr class="codeline" data-linenumber="2291"><td class="num" id="LN2291">2291</td><td class="line">      <span class='comment'>// if listchars=eol:X is used or not.</span></td></tr>
-<tr class="codeline" data-linenumber="2292"><td class="num" id="LN2292">2292</td><td class="line">      <span class='keyword'>int</span> eol_skip = (wp-&gt;w_p_lcs_chars.eol == lcs_eol_one &amp;&amp; eol_hl_off == 0</td></tr>
-<tr class="codeline" data-linenumber="2293"><td class="num" id="LN2293">2293</td><td class="line">                      ? 1 : 0);</td></tr>
-<tr class="codeline" data-linenumber="2294"><td class="num" id="LN2294">2294</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2295"><td class="num" id="LN2295">2295</td><td class="line">      <span class='keyword'>if</span> (has_decor) {</td></tr>
-<tr class="codeline" data-linenumber="2296"><td class="num" id="LN2296">2296</td><td class="line">        has_virttext = decor_redraw_eol(wp-&gt;w_buffer, &amp;decor_state, &amp;line_attr,</td></tr>
-<tr class="codeline" data-linenumber="2297"><td class="num" id="LN2297">2297</td><td class="line">                                        col + eol_skip);</td></tr>
-<tr class="codeline" data-linenumber="2298"><td class="num" id="LN2298">2298</td><td class="line">      }</td></tr>
-<tr class="codeline" data-linenumber="2299"><td class="num" id="LN2299">2299</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2300"><td class="num" id="LN2300">2300</td><td class="line">      <span class='keyword'>if</span> (((wp-&gt;<span class='macro'>w_p_cuc<span class='macro_popup'>w_onebuf_opt.wo_cuc</span></span></td></tr>
-<tr class="codeline" data-linenumber="2301"><td class="num" id="LN2301">2301</td><td class="line">            &amp;&amp; (<span class='keyword'>int</span>)wp-&gt;w_virtcol &gt;= <span class='macro'>VCOL_HLC<span class='macro_popup'>(vcol - vcol_off)</span></span> - eol_hl_off</td></tr>
-<tr class="codeline" data-linenumber="2302"><td class="num" id="LN2302">2302</td><td class="line">            &amp;&amp; (<span class='keyword'>int</span>)wp-&gt;w_virtcol &lt;</td></tr>
-<tr class="codeline" data-linenumber="2303"><td class="num" id="LN2303">2303</td><td class="line">            (<span class='keyword'>long</span>)grid-&gt;cols * (row - startrow + 1) + v</td></tr>
-<tr class="codeline" data-linenumber="2304"><td class="num" id="LN2304">2304</td><td class="line">            &amp;&amp; lnum != wp-&gt;w_cursor.lnum)</td></tr>
-<tr class="codeline" data-linenumber="2305"><td class="num" id="LN2305">2305</td><td class="line">           || draw_color_col || line_attr_lowprio || line_attr</td></tr>
-<tr class="codeline" data-linenumber="2306"><td class="num" id="LN2306">2306</td><td class="line">           || diff_hlf != (hlf_T)0 || has_virttext)) {</td></tr>
-<tr class="codeline" data-linenumber="2307"><td class="num" id="LN2307">2307</td><td class="line">        <span class='keyword'>int</span> rightmost_vcol = 0;</td></tr>
-<tr class="codeline" data-linenumber="2308"><td class="num" id="LN2308">2308</td><td class="line">        <span class='keyword'>int</span> i;</td></tr>
-<tr class="codeline" data-linenumber="2309"><td class="num" id="LN2309">2309</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2310"><td class="num" id="LN2310">2310</td><td class="line">        <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_cuc<span class='macro_popup'>w_onebuf_opt.wo_cuc</span></span>) {</td></tr>
-<tr class="codeline" data-linenumber="2311"><td class="num" id="LN2311">2311</td><td class="line">          rightmost_vcol = wp-&gt;w_virtcol;</td></tr>
-<tr class="codeline" data-linenumber="2312"><td class="num" id="LN2312">2312</td><td class="line">        }</td></tr>
-<tr class="codeline" data-linenumber="2313"><td class="num" id="LN2313">2313</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2314"><td class="num" id="LN2314">2314</td><td class="line">        <span class='keyword'>if</span> (draw_color_col) {</td></tr>
-<tr class="codeline" data-linenumber="2315"><td class="num" id="LN2315">2315</td><td class="line">          <span class='comment'>// determine rightmost colorcolumn to possibly draw</span></td></tr>
-<tr class="codeline" data-linenumber="2316"><td class="num" id="LN2316">2316</td><td class="line">          <span class='keyword'>for</span> (i = 0; color_cols[i] &gt;= 0; i++) {</td></tr>
-<tr class="codeline" data-linenumber="2317"><td class="num" id="LN2317">2317</td><td class="line">            <span class='keyword'>if</span> (rightmost_vcol &lt; color_cols[i]) {</td></tr>
-<tr class="codeline" data-linenumber="2318"><td class="num" id="LN2318">2318</td><td class="line">              rightmost_vcol = color_cols[i];</td></tr>
-<tr class="codeline" data-linenumber="2319"><td class="num" id="LN2319">2319</td><td class="line">            }</td></tr>
-<tr class="codeline" data-linenumber="2320"><td class="num" id="LN2320">2320</td><td class="line">          }</td></tr>
-<tr class="codeline" data-linenumber="2321"><td class="num" id="LN2321">2321</td><td class="line">        }</td></tr>
-<tr class="codeline" data-linenumber="2322"><td class="num" id="LN2322">2322</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2323"><td class="num" id="LN2323">2323</td><td class="line">        <span class='keyword'>int</span> cuc_attr = win_hl_attr(wp, HLF_CUC);</td></tr>
-<tr class="codeline" data-linenumber="2324"><td class="num" id="LN2324">2324</td><td class="line">        <span class='keyword'>int</span> mc_attr = win_hl_attr(wp, HLF_MC);</td></tr>
+<tr class="codeline" data-linenumber="2251"><td class="num" id="LN2251">2251</td><td class="line">          get_search_match_hl(wp,</td></tr>
+<tr class="codeline" data-linenumber="2252"><td class="num" id="LN2252">2252</td><td class="line">                              &amp;screen_search_hl,</td></tr>
+<tr class="codeline" data-linenumber="2253"><td class="num" id="LN2253">2253</td><td class="line">                              (<span class='keyword'>long</span>)(ptr - line),  <span class='comment'>// NOLINT(google-readability-casting)</span></td></tr>
+<tr class="codeline" data-linenumber="2254"><td class="num" id="LN2254">2254</td><td class="line">                              &amp;char_attr);</td></tr>
+<tr class="codeline" data-linenumber="2255"><td class="num" id="LN2255">2255</td><td class="line">        }</td></tr>
+<tr class="codeline" data-linenumber="2256"><td class="num" id="LN2256">2256</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2257"><td class="num" id="LN2257">2257</td><td class="line">        <span class='keyword'>int</span> eol_attr = char_attr;</td></tr>
+<tr class="codeline" data-linenumber="2258"><td class="num" id="LN2258">2258</td><td class="line">        <span class='keyword'>if</span> (cul_attr) {</td></tr>
+<tr class="codeline" data-linenumber="2259"><td class="num" id="LN2259">2259</td><td class="line">          eol_attr = hl_combine_attr(cul_attr, eol_attr);</td></tr>
+<tr class="codeline" data-linenumber="2260"><td class="num" id="LN2260">2260</td><td class="line">        }</td></tr>
+<tr class="codeline" data-linenumber="2261"><td class="num" id="LN2261">2261</td><td class="line">        linebuf_attr[off] = eol_attr;</td></tr>
+<tr class="codeline" data-linenumber="2262"><td class="num" id="LN2262">2262</td><td class="line">        <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span>) {</td></tr>
+<tr class="codeline" data-linenumber="2263"><td class="num" id="LN2263">2263</td><td class="line">          col--;</td></tr>
+<tr class="codeline" data-linenumber="2264"><td class="num" id="LN2264">2264</td><td class="line">          off--;</td></tr>
+<tr class="codeline" data-linenumber="2265"><td class="num" id="LN2265">2265</td><td class="line">        } <span class='keyword'>else</span> {</td></tr>
+<tr class="codeline" data-linenumber="2266"><td class="num" id="LN2266">2266</td><td class="line">          col++;</td></tr>
+<tr class="codeline" data-linenumber="2267"><td class="num" id="LN2267">2267</td><td class="line">          off++;</td></tr>
+<tr class="codeline" data-linenumber="2268"><td class="num" id="LN2268">2268</td><td class="line">        }</td></tr>
+<tr class="codeline" data-linenumber="2269"><td class="num" id="LN2269">2269</td><td class="line">        vcol++;</td></tr>
+<tr class="codeline" data-linenumber="2270"><td class="num" id="LN2270">2270</td><td class="line">        eol_hl_off = 1;</td></tr>
+<tr class="codeline" data-linenumber="2271"><td class="num" id="LN2271">2271</td><td class="line">      }</td></tr>
+<tr class="codeline" data-linenumber="2272"><td class="num" id="LN2272">2272</td><td class="line">      <span class='comment'>// Highlight 'cursorcolumn' &amp; 'colorcolumn' past end of the line.</span></td></tr>
+<tr class="codeline" data-linenumber="2273"><td class="num" id="LN2273">2273</td><td class="line">      <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_wrap<span class='macro_popup'>w_onebuf_opt.wo_wrap</span></span>) {</td></tr>
+<tr class="codeline" data-linenumber="2274"><td class="num" id="LN2274">2274</td><td class="line">        v = wp-&gt;w_skipcol;</td></tr>
+<tr class="codeline" data-linenumber="2275"><td class="num" id="LN2275">2275</td><td class="line">      } <span class='keyword'>else</span> {</td></tr>
+<tr class="codeline" data-linenumber="2276"><td class="num" id="LN2276">2276</td><td class="line">        v = wp-&gt;w_leftcol;</td></tr>
+<tr class="codeline" data-linenumber="2277"><td class="num" id="LN2277">2277</td><td class="line">      }</td></tr>
+<tr class="codeline" data-linenumber="2278"><td class="num" id="LN2278">2278</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2279"><td class="num" id="LN2279">2279</td><td class="line">      <span class='comment'>// check if line ends before left margin</span></td></tr>
+<tr class="codeline" data-linenumber="2280"><td class="num" id="LN2280">2280</td><td class="line">      <span class='keyword'>if</span> (vcol &lt; v + col - win_col_off(wp)) {</td></tr>
+<tr class="codeline" data-linenumber="2281"><td class="num" id="LN2281">2281</td><td class="line">        vcol = v + col - win_col_off(wp);</td></tr>
+<tr class="codeline" data-linenumber="2282"><td class="num" id="LN2282">2282</td><td class="line">      }</td></tr>
+<tr class="codeline" data-linenumber="2283"><td class="num" id="LN2283">2283</td><td class="line">      <span class='comment'>// Get rid of the boguscols now, we want to draw until the right</span></td></tr>
+<tr class="codeline" data-linenumber="2284"><td class="num" id="LN2284">2284</td><td class="line">      <span class='comment'>// edge for 'cursorcolumn'.</span></td></tr>
+<tr class="codeline" data-linenumber="2285"><td class="num" id="LN2285">2285</td><td class="line">      col -= boguscols;</td></tr>
+<tr class="codeline" data-linenumber="2286"><td class="num" id="LN2286">2286</td><td class="line">      <span class='comment'>// boguscols = 0;  // Disabled because value never read after this</span></td></tr>
+<tr class="codeline" data-linenumber="2287"><td class="num" id="LN2287">2287</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2288"><td class="num" id="LN2288">2288</td><td class="line">      <span class='keyword'>if</span> (draw_color_col) {</td></tr>
+<tr class="codeline" data-linenumber="2289"><td class="num" id="LN2289">2289</td><td class="line">        draw_color_col = advance_color_col((<span class='keyword'>int</span>)<span class='macro'>VCOL_HLC<span class='macro_popup'>(vcol - vcol_off)</span></span>, &amp;color_cols);</td></tr>
+<tr class="codeline" data-linenumber="2290"><td class="num" id="LN2290">2290</td><td class="line">      }</td></tr>
+<tr class="codeline" data-linenumber="2291"><td class="num" id="LN2291">2291</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2292"><td class="num" id="LN2292">2292</td><td class="line">      <span class='macro'>bool<span class='macro_popup'>_Bool</span></span> has_virttext = <span class='macro'>false<span class='macro_popup'>0</span></span>;</td></tr>
+<tr class="codeline" data-linenumber="2293"><td class="num" id="LN2293">2293</td><td class="line">      <span class='comment'>// Make sure alignment is the same regardless</span></td></tr>
+<tr class="codeline" data-linenumber="2294"><td class="num" id="LN2294">2294</td><td class="line">      <span class='comment'>// if listchars=eol:X is used or not.</span></td></tr>
+<tr class="codeline" data-linenumber="2295"><td class="num" id="LN2295">2295</td><td class="line">      <span class='keyword'>int</span> eol_skip = (wp-&gt;w_p_lcs_chars.eol == lcs_eol_one &amp;&amp; eol_hl_off == 0</td></tr>
+<tr class="codeline" data-linenumber="2296"><td class="num" id="LN2296">2296</td><td class="line">                      ? 1 : 0);</td></tr>
+<tr class="codeline" data-linenumber="2297"><td class="num" id="LN2297">2297</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2298"><td class="num" id="LN2298">2298</td><td class="line">      <span class='keyword'>if</span> (has_decor) {</td></tr>
+<tr class="codeline" data-linenumber="2299"><td class="num" id="LN2299">2299</td><td class="line">        has_virttext = decor_redraw_eol(wp-&gt;w_buffer, &amp;decor_state, &amp;line_attr,</td></tr>
+<tr class="codeline" data-linenumber="2300"><td class="num" id="LN2300">2300</td><td class="line">                                        col + eol_skip);</td></tr>
+<tr class="codeline" data-linenumber="2301"><td class="num" id="LN2301">2301</td><td class="line">      }</td></tr>
+<tr class="codeline" data-linenumber="2302"><td class="num" id="LN2302">2302</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2303"><td class="num" id="LN2303">2303</td><td class="line">      <span class='keyword'>if</span> (((wp-&gt;<span class='macro'>w_p_cuc<span class='macro_popup'>w_onebuf_opt.wo_cuc</span></span></td></tr>
+<tr class="codeline" data-linenumber="2304"><td class="num" id="LN2304">2304</td><td class="line">            &amp;&amp; (<span class='keyword'>int</span>)wp-&gt;w_virtcol &gt;= <span class='macro'>VCOL_HLC<span class='macro_popup'>(vcol - vcol_off)</span></span> - eol_hl_off</td></tr>
+<tr class="codeline" data-linenumber="2305"><td class="num" id="LN2305">2305</td><td class="line">            &amp;&amp; (<span class='keyword'>int</span>)wp-&gt;w_virtcol &lt;</td></tr>
+<tr class="codeline" data-linenumber="2306"><td class="num" id="LN2306">2306</td><td class="line">            (<span class='keyword'>long</span>)grid-&gt;cols * (row - startrow + 1) + v</td></tr>
+<tr class="codeline" data-linenumber="2307"><td class="num" id="LN2307">2307</td><td class="line">            &amp;&amp; lnum != wp-&gt;w_cursor.lnum)</td></tr>
+<tr class="codeline" data-linenumber="2308"><td class="num" id="LN2308">2308</td><td class="line">           || draw_color_col || line_attr_lowprio || line_attr</td></tr>
+<tr class="codeline" data-linenumber="2309"><td class="num" id="LN2309">2309</td><td class="line">           || diff_hlf != (hlf_T)0 || has_virttext)) {</td></tr>
+<tr class="codeline" data-linenumber="2310"><td class="num" id="LN2310">2310</td><td class="line">        <span class='keyword'>int</span> rightmost_vcol = 0;</td></tr>
+<tr class="codeline" data-linenumber="2311"><td class="num" id="LN2311">2311</td><td class="line">        <span class='keyword'>int</span> i;</td></tr>
+<tr class="codeline" data-linenumber="2312"><td class="num" id="LN2312">2312</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2313"><td class="num" id="LN2313">2313</td><td class="line">        <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_cuc<span class='macro_popup'>w_onebuf_opt.wo_cuc</span></span>) {</td></tr>
+<tr class="codeline" data-linenumber="2314"><td class="num" id="LN2314">2314</td><td class="line">          rightmost_vcol = wp-&gt;w_virtcol;</td></tr>
+<tr class="codeline" data-linenumber="2315"><td class="num" id="LN2315">2315</td><td class="line">        }</td></tr>
+<tr class="codeline" data-linenumber="2316"><td class="num" id="LN2316">2316</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2317"><td class="num" id="LN2317">2317</td><td class="line">        <span class='keyword'>if</span> (draw_color_col) {</td></tr>
+<tr class="codeline" data-linenumber="2318"><td class="num" id="LN2318">2318</td><td class="line">          <span class='comment'>// determine rightmost colorcolumn to possibly draw</span></td></tr>
+<tr class="codeline" data-linenumber="2319"><td class="num" id="LN2319">2319</td><td class="line">          <span class='keyword'>for</span> (i = 0; color_cols[i] &gt;= 0; i++) {</td></tr>
+<tr class="codeline" data-linenumber="2320"><td class="num" id="LN2320">2320</td><td class="line">            <span class='keyword'>if</span> (rightmost_vcol &lt; color_cols[i]) {</td></tr>
+<tr class="codeline" data-linenumber="2321"><td class="num" id="LN2321">2321</td><td class="line">              rightmost_vcol = color_cols[i];</td></tr>
+<tr class="codeline" data-linenumber="2322"><td class="num" id="LN2322">2322</td><td class="line">            }</td></tr>
+<tr class="codeline" data-linenumber="2323"><td class="num" id="LN2323">2323</td><td class="line">          }</td></tr>
+<tr class="codeline" data-linenumber="2324"><td class="num" id="LN2324">2324</td><td class="line">        }</td></tr>
 <tr class="codeline" data-linenumber="2325"><td class="num" id="LN2325">2325</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2326"><td class="num" id="LN2326">2326</td><td class="line">        <span class='keyword'>int</span> diff_attr = 0;</td></tr>
-<tr class="codeline" data-linenumber="2327"><td class="num" id="LN2327">2327</td><td class="line">        <span class='keyword'>if</span> (diff_hlf == HLF_TXD) {</td></tr>
-<tr class="codeline" data-linenumber="2328"><td class="num" id="LN2328">2328</td><td class="line">          diff_hlf = HLF_CHD;</td></tr>
-<tr class="codeline" data-linenumber="2329"><td class="num" id="LN2329">2329</td><td class="line">        }</td></tr>
-<tr class="codeline" data-linenumber="2330"><td class="num" id="LN2330">2330</td><td class="line">        <span class='keyword'>if</span> (diff_hlf != 0) {</td></tr>
-<tr class="codeline" data-linenumber="2331"><td class="num" id="LN2331">2331</td><td class="line">          diff_attr = win_hl_attr(wp, (<span class='keyword'>int</span>)diff_hlf);</td></tr>
+<tr class="codeline" data-linenumber="2326"><td class="num" id="LN2326">2326</td><td class="line">        <span class='keyword'>int</span> cuc_attr = win_hl_attr(wp, HLF_CUC);</td></tr>
+<tr class="codeline" data-linenumber="2327"><td class="num" id="LN2327">2327</td><td class="line">        <span class='keyword'>int</span> mc_attr = win_hl_attr(wp, HLF_MC);</td></tr>
+<tr class="codeline" data-linenumber="2328"><td class="num" id="LN2328">2328</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2329"><td class="num" id="LN2329">2329</td><td class="line">        <span class='keyword'>int</span> diff_attr = 0;</td></tr>
+<tr class="codeline" data-linenumber="2330"><td class="num" id="LN2330">2330</td><td class="line">        <span class='keyword'>if</span> (diff_hlf == HLF_TXD) {</td></tr>
+<tr class="codeline" data-linenumber="2331"><td class="num" id="LN2331">2331</td><td class="line">          diff_hlf = HLF_CHD;</td></tr>
 <tr class="codeline" data-linenumber="2332"><td class="num" id="LN2332">2332</td><td class="line">        }</td></tr>
-<tr class="codeline" data-linenumber="2333"><td class="num" id="LN2333">2333</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2334"><td class="num" id="LN2334">2334</td><td class="line">        <span class='keyword'>int</span> base_attr = hl_combine_attr(line_attr_lowprio, diff_attr);</td></tr>
-<tr class="codeline" data-linenumber="2335"><td class="num" id="LN2335">2335</td><td class="line">        <span class='keyword'>if</span> (base_attr || line_attr || has_virttext) {</td></tr>
-<tr class="codeline" data-linenumber="2336"><td class="num" id="LN2336">2336</td><td class="line">          rightmost_vcol = <span class='macro'>INT_MAX<span class='macro_popup'>2147483647</span></span>;</td></tr>
-<tr class="codeline" data-linenumber="2337"><td class="num" id="LN2337">2337</td><td class="line">        }</td></tr>
-<tr class="codeline" data-linenumber="2338"><td class="num" id="LN2338">2338</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2339"><td class="num" id="LN2339">2339</td><td class="line">        <span class='keyword'>int</span> col_stride = wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span> ? -1 : 1;</td></tr>
-<tr class="codeline" data-linenumber="2340"><td class="num" id="LN2340">2340</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2341"><td class="num" id="LN2341">2341</td><td class="line">        <span class='keyword'>while</span> (wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span> ? col &gt;= 0 : col &lt; grid-&gt;cols) {</td></tr>
-<tr class="codeline" data-linenumber="2342"><td class="num" id="LN2342">2342</td><td class="line">          schar_from_ascii(linebuf_char[off], ' ');</td></tr>
-<tr class="codeline" data-linenumber="2343"><td class="num" id="LN2343">2343</td><td class="line">          col += col_stride;</td></tr>
-<tr class="codeline" data-linenumber="2344"><td class="num" id="LN2344">2344</td><td class="line">          <span class='keyword'>if</span> (draw_color_col) {</td></tr>
-<tr class="codeline" data-linenumber="2345"><td class="num" id="LN2345">2345</td><td class="line">            draw_color_col = advance_color_col((<span class='keyword'>int</span>)<span class='macro'>VCOL_HLC<span class='macro_popup'>(vcol - vcol_off)</span></span>, &amp;color_cols);</td></tr>
-<tr class="codeline" data-linenumber="2346"><td class="num" id="LN2346">2346</td><td class="line">          }</td></tr>
-<tr class="codeline" data-linenumber="2347"><td class="num" id="LN2347">2347</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2348"><td class="num" id="LN2348">2348</td><td class="line">          <span class='keyword'>int</span> col_attr = base_attr;</td></tr>
-<tr class="codeline" data-linenumber="2349"><td class="num" id="LN2349">2349</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2350"><td class="num" id="LN2350">2350</td><td class="line">          <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_cuc<span class='macro_popup'>w_onebuf_opt.wo_cuc</span></span> &amp;&amp; <span class='macro'>VCOL_HLC<span class='macro_popup'>(vcol - vcol_off)</span></span> == (<span class='keyword'>long</span>)wp-&gt;w_virtcol) {</td></tr>
-<tr class="codeline" data-linenumber="2351"><td class="num" id="LN2351">2351</td><td class="line">            col_attr = cuc_attr;</td></tr>
-<tr class="codeline" data-linenumber="2352"><td class="num" id="LN2352">2352</td><td class="line">          } <span class='keyword'>else</span> <span class='keyword'>if</span> (draw_color_col &amp;&amp; <span class='macro'>VCOL_HLC<span class='macro_popup'>(vcol - vcol_off)</span></span> == *color_cols) {</td></tr>
-<tr class="codeline" data-linenumber="2353"><td class="num" id="LN2353">2353</td><td class="line">            col_attr = mc_attr;</td></tr>
-<tr class="codeline" data-linenumber="2354"><td class="num" id="LN2354">2354</td><td class="line">          }</td></tr>
-<tr class="codeline" data-linenumber="2355"><td class="num" id="LN2355">2355</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2356"><td class="num" id="LN2356">2356</td><td class="line">          col_attr = hl_combine_attr(col_attr, line_attr);</td></tr>
-<tr class="codeline" data-linenumber="2357"><td class="num" id="LN2357">2357</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2358"><td class="num" id="LN2358">2358</td><td class="line">          linebuf_attr[off] = col_attr;</td></tr>
-<tr class="codeline" data-linenumber="2359"><td class="num" id="LN2359">2359</td><td class="line">          off += col_stride;</td></tr>
+<tr class="codeline" data-linenumber="2333"><td class="num" id="LN2333">2333</td><td class="line">        <span class='keyword'>if</span> (diff_hlf != 0) {</td></tr>
+<tr class="codeline" data-linenumber="2334"><td class="num" id="LN2334">2334</td><td class="line">          diff_attr = win_hl_attr(wp, (<span class='keyword'>int</span>)diff_hlf);</td></tr>
+<tr class="codeline" data-linenumber="2335"><td class="num" id="LN2335">2335</td><td class="line">        }</td></tr>
+<tr class="codeline" data-linenumber="2336"><td class="num" id="LN2336">2336</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2337"><td class="num" id="LN2337">2337</td><td class="line">        <span class='keyword'>int</span> base_attr = hl_combine_attr(line_attr_lowprio, diff_attr);</td></tr>
+<tr class="codeline" data-linenumber="2338"><td class="num" id="LN2338">2338</td><td class="line">        <span class='keyword'>if</span> (base_attr || line_attr || has_virttext) {</td></tr>
+<tr class="codeline" data-linenumber="2339"><td class="num" id="LN2339">2339</td><td class="line">          rightmost_vcol = <span class='macro'>INT_MAX<span class='macro_popup'>2147483647</span></span>;</td></tr>
+<tr class="codeline" data-linenumber="2340"><td class="num" id="LN2340">2340</td><td class="line">        }</td></tr>
+<tr class="codeline" data-linenumber="2341"><td class="num" id="LN2341">2341</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2342"><td class="num" id="LN2342">2342</td><td class="line">        <span class='keyword'>int</span> col_stride = wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span> ? -1 : 1;</td></tr>
+<tr class="codeline" data-linenumber="2343"><td class="num" id="LN2343">2343</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2344"><td class="num" id="LN2344">2344</td><td class="line">        <span class='keyword'>while</span> (wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span> ? col &gt;= 0 : col &lt; grid-&gt;cols) {</td></tr>
+<tr class="codeline" data-linenumber="2345"><td class="num" id="LN2345">2345</td><td class="line">          schar_from_ascii(linebuf_char[off], ' ');</td></tr>
+<tr class="codeline" data-linenumber="2346"><td class="num" id="LN2346">2346</td><td class="line">          col += col_stride;</td></tr>
+<tr class="codeline" data-linenumber="2347"><td class="num" id="LN2347">2347</td><td class="line">          <span class='keyword'>if</span> (draw_color_col) {</td></tr>
+<tr class="codeline" data-linenumber="2348"><td class="num" id="LN2348">2348</td><td class="line">            draw_color_col = advance_color_col((<span class='keyword'>int</span>)<span class='macro'>VCOL_HLC<span class='macro_popup'>(vcol - vcol_off)</span></span>, &amp;color_cols);</td></tr>
+<tr class="codeline" data-linenumber="2349"><td class="num" id="LN2349">2349</td><td class="line">          }</td></tr>
+<tr class="codeline" data-linenumber="2350"><td class="num" id="LN2350">2350</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2351"><td class="num" id="LN2351">2351</td><td class="line">          <span class='keyword'>int</span> col_attr = base_attr;</td></tr>
+<tr class="codeline" data-linenumber="2352"><td class="num" id="LN2352">2352</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2353"><td class="num" id="LN2353">2353</td><td class="line">          <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_cuc<span class='macro_popup'>w_onebuf_opt.wo_cuc</span></span> &amp;&amp; <span class='macro'>VCOL_HLC<span class='macro_popup'>(vcol - vcol_off)</span></span> == (<span class='keyword'>long</span>)wp-&gt;w_virtcol) {</td></tr>
+<tr class="codeline" data-linenumber="2354"><td class="num" id="LN2354">2354</td><td class="line">            col_attr = cuc_attr;</td></tr>
+<tr class="codeline" data-linenumber="2355"><td class="num" id="LN2355">2355</td><td class="line">          } <span class='keyword'>else</span> <span class='keyword'>if</span> (draw_color_col &amp;&amp; <span class='macro'>VCOL_HLC<span class='macro_popup'>(vcol - vcol_off)</span></span> == *color_cols) {</td></tr>
+<tr class="codeline" data-linenumber="2356"><td class="num" id="LN2356">2356</td><td class="line">            col_attr = mc_attr;</td></tr>
+<tr class="codeline" data-linenumber="2357"><td class="num" id="LN2357">2357</td><td class="line">          }</td></tr>
+<tr class="codeline" data-linenumber="2358"><td class="num" id="LN2358">2358</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2359"><td class="num" id="LN2359">2359</td><td class="line">          col_attr = hl_combine_attr(col_attr, line_attr);</td></tr>
 <tr class="codeline" data-linenumber="2360"><td class="num" id="LN2360">2360</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2361"><td class="num" id="LN2361">2361</td><td class="line">          <span class='keyword'>if</span> (<span class='macro'>VCOL_HLC<span class='macro_popup'>(vcol - vcol_off)</span></span> &gt;= rightmost_vcol) {</td></tr>
-<tr class="codeline" data-linenumber="2362"><td class="num" id="LN2362">2362</td><td class="line">            <span class='keyword'>break</span>;</td></tr>
-<tr class="codeline" data-linenumber="2363"><td class="num" id="LN2363">2363</td><td class="line">          }</td></tr>
-<tr class="codeline" data-linenumber="2364"><td class="num" id="LN2364">2364</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2365"><td class="num" id="LN2365">2365</td><td class="line">          vcol += 1;</td></tr>
-<tr class="codeline" data-linenumber="2366"><td class="num" id="LN2366">2366</td><td class="line">        }</td></tr>
-<tr class="codeline" data-linenumber="2367"><td class="num" id="LN2367">2367</td><td class="line">      }</td></tr>
-<tr class="codeline" data-linenumber="2368"><td class="num" id="LN2368">2368</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2369"><td class="num" id="LN2369">2369</td><td class="line">      <span class='comment'>// TODO(bfredl): integrate with the common beyond-the-end-loop</span></td></tr>
-<tr class="codeline" data-linenumber="2370"><td class="num" id="LN2370">2370</td><td class="line">      <span class='keyword'>if</span> (wp-&gt;w_buffer-&gt;terminal) {</td></tr>
-<tr class="codeline" data-linenumber="2371"><td class="num" id="LN2371">2371</td><td class="line">        <span class='comment'>// terminal buffers may need to highlight beyond the end of the</span></td></tr>
-<tr class="codeline" data-linenumber="2372"><td class="num" id="LN2372">2372</td><td class="line">        <span class='comment'>// logical line</span></td></tr>
-<tr class="codeline" data-linenumber="2373"><td class="num" id="LN2373">2373</td><td class="line">        <span class='keyword'>int</span> n = wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span> ? -1 : 1;</td></tr>
-<tr class="codeline" data-linenumber="2374"><td class="num" id="LN2374">2374</td><td class="line">        <span class='keyword'>while</span> (col &gt;= 0 &amp;&amp; col &lt; grid-&gt;cols) {</td></tr>
-<tr class="codeline" data-linenumber="2375"><td class="num" id="LN2375">2375</td><td class="line">          schar_from_ascii(linebuf_char[off], ' ');</td></tr>
-<tr class="codeline" data-linenumber="2376"><td class="num" id="LN2376">2376</td><td class="line">          linebuf_attr[off] = vcol &gt;= <span class='macro'>TERM_ATTRS_MAX<span class='macro_popup'>1024</span></span> ? 0 : term_attrs[vcol];</td></tr>
-<tr class="codeline" data-linenumber="2377"><td class="num" id="LN2377">2377</td><td class="line">          off += n;</td></tr>
-<tr class="codeline" data-linenumber="2378"><td class="num" id="LN2378">2378</td><td class="line">          vcol += n;</td></tr>
-<tr class="codeline" data-linenumber="2379"><td class="num" id="LN2379">2379</td><td class="line">          col += n;</td></tr>
-<tr class="codeline" data-linenumber="2380"><td class="num" id="LN2380">2380</td><td class="line">        }</td></tr>
-<tr class="codeline" data-linenumber="2381"><td class="num" id="LN2381">2381</td><td class="line">      }</td></tr>
-<tr class="codeline" data-linenumber="2382"><td class="num" id="LN2382">2382</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2383"><td class="num" id="LN2383">2383</td><td class="line">      draw_virt_text(wp, buf, win_col_offset, &amp;col, grid-&gt;cols, row);</td></tr>
-<tr class="codeline" data-linenumber="2384"><td class="num" id="LN2384">2384</td><td class="line">      grid_put_linebuf(grid, row, 0, col, grid-&gt;cols, wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span>, wp, bg_attr, <span class='macro'>false<span class='macro_popup'>0</span></span>);</td></tr>
-<tr class="codeline" data-linenumber="2385"><td class="num" id="LN2385">2385</td><td class="line">      row++;</td></tr>
-<tr class="codeline" data-linenumber="2386"><td class="num" id="LN2386">2386</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2387"><td class="num" id="LN2387">2387</td><td class="line">      <span class='comment'>// Update w_cline_height and w_cline_folded if the cursor line was</span></td></tr>
-<tr class="codeline" data-linenumber="2388"><td class="num" id="LN2388">2388</td><td class="line">      <span class='comment'>// updated (saves a call to plines_win() later).</span></td></tr>
-<tr class="codeline" data-linenumber="2389"><td class="num" id="LN2389">2389</td><td class="line">      <span class='keyword'>if</span> (wp == curwin &amp;&amp; lnum == curwin-&gt;w_cursor.lnum) {</td></tr>
-<tr class="codeline" data-linenumber="2390"><td class="num" id="LN2390">2390</td><td class="line">        curwin-&gt;w_cline_row = startrow;</td></tr>
-<tr class="codeline" data-linenumber="2391"><td class="num" id="LN2391">2391</td><td class="line">        curwin-&gt;w_cline_height = row - startrow;</td></tr>
-<tr class="codeline" data-linenumber="2392"><td class="num" id="LN2392">2392</td><td class="line">        curwin-&gt;w_cline_folded = foldinfo.fi_lines &gt; 0;</td></tr>
-<tr class="codeline" data-linenumber="2393"><td class="num" id="LN2393">2393</td><td class="line">        curwin-&gt;w_valid |= (<span class='macro'>VALID_CHEIGHT<span class='macro_popup'>0x08</span></span>|<span class='macro'>VALID_CROW<span class='macro_popup'>0x10</span></span>);</td></tr>
-<tr class="codeline" data-linenumber="2394"><td class="num" id="LN2394">2394</td><td class="line">        conceal_cursor_used = conceal_cursor_line(curwin);</td></tr>
-<tr class="codeline" data-linenumber="2395"><td class="num" id="LN2395">2395</td><td class="line">      }</td></tr>
-<tr class="codeline" data-linenumber="2396"><td class="num" id="LN2396">2396</td><td class="line">      <span class='keyword'>break</span>;</td></tr>
-<tr class="codeline" data-linenumber="2397"><td class="num" id="LN2397">2397</td><td class="line">    }</td></tr>
-<tr class="codeline" data-linenumber="2398"><td class="num" id="LN2398">2398</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2399"><td class="num" id="LN2399">2399</td><td class="line">    <span class='comment'>// Show "extends" character from 'listchars' if beyond the line end and</span></td></tr>
-<tr class="codeline" data-linenumber="2400"><td class="num" id="LN2400">2400</td><td class="line">    <span class='comment'>// 'list' is set.</span></td></tr>
-<tr class="codeline" data-linenumber="2401"><td class="num" id="LN2401">2401</td><td class="line">    <span class='keyword'>if</span> (wp-&gt;w_p_lcs_chars.ext != <span class='macro'>NUL<span class='macro_popup'>'\000'</span></span></td></tr>
-<tr class="codeline" data-linenumber="2402"><td class="num" id="LN2402">2402</td><td class="line">        &amp;&amp; draw_state == <span class='macro'>WL_LINE<span class='macro_popup'>(((((((0 + 1) + 1) + 1) + 1) + 1) + 1) + 1)</span></span></td></tr>
-<tr class="codeline" data-linenumber="2403"><td class="num" id="LN2403">2403</td><td class="line">        &amp;&amp; wp-&gt;<span class='macro'>w_p_list<span class='macro_popup'>w_onebuf_opt.wo_list</span></span></td></tr>
-<tr class="codeline" data-linenumber="2404"><td class="num" id="LN2404">2404</td><td class="line">        &amp;&amp; !wp-&gt;<span class='macro'>w_p_wrap<span class='macro_popup'>w_onebuf_opt.wo_wrap</span></span></td></tr>
-<tr class="codeline" data-linenumber="2405"><td class="num" id="LN2405">2405</td><td class="line">        &amp;&amp; filler_todo &lt;= 0</td></tr>
-<tr class="codeline" data-linenumber="2406"><td class="num" id="LN2406">2406</td><td class="line">        &amp;&amp; (wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span> ? col == 0 : col == grid-&gt;cols - 1)</td></tr>
-<tr class="codeline" data-linenumber="2407"><td class="num" id="LN2407">2407</td><td class="line">        &amp;&amp; !has_fold</td></tr>
-<tr class="codeline" data-linenumber="2408"><td class="num" id="LN2408">2408</td><td class="line">        &amp;&amp; (*ptr != <span class='macro'>NUL<span class='macro_popup'>'\000'</span></span></td></tr>
-<tr class="codeline" data-linenumber="2409"><td class="num" id="LN2409">2409</td><td class="line">            || lcs_eol_one &gt; 0</td></tr>
-<tr class="codeline" data-linenumber="2410"><td class="num" id="LN2410">2410</td><td class="line">            || (n_extra &amp;&amp; (c_extra != <span class='macro'>NUL<span class='macro_popup'>'\000'</span></span> || *p_extra != <span class='macro'>NUL<span class='macro_popup'>'\000'</span></span>)))) {</td></tr>
-<tr class="codeline" data-linenumber="2411"><td class="num" id="LN2411">2411</td><td class="line">      c = wp-&gt;w_p_lcs_chars.ext;</td></tr>
-<tr class="codeline" data-linenumber="2412"><td class="num" id="LN2412">2412</td><td class="line">      char_attr = win_hl_attr(wp, HLF_AT);</td></tr>
-<tr class="codeline" data-linenumber="2413"><td class="num" id="LN2413">2413</td><td class="line">      mb_c = c;</td></tr>
-<tr class="codeline" data-linenumber="2414"><td class="num" id="LN2414">2414</td><td class="line">      mb_utf8 = check_mb_utf8(&amp;c, u8cc);</td></tr>
-<tr class="codeline" data-linenumber="2415"><td class="num" id="LN2415">2415</td><td class="line">    }</td></tr>
-<tr class="codeline" data-linenumber="2416"><td class="num" id="LN2416">2416</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2417"><td class="num" id="LN2417">2417</td><td class="line">    <span class='comment'>// advance to the next 'colorcolumn'</span></td></tr>
-<tr class="codeline" data-linenumber="2418"><td class="num" id="LN2418">2418</td><td class="line">    <span class='keyword'>if</span> (draw_color_col) {</td></tr>
-<tr class="codeline" data-linenumber="2419"><td class="num" id="LN2419">2419</td><td class="line">      draw_color_col = advance_color_col((<span class='keyword'>int</span>)<span class='macro'>VCOL_HLC<span class='macro_popup'>(vcol - vcol_off)</span></span>, &amp;color_cols);</td></tr>
-<tr class="codeline" data-linenumber="2420"><td class="num" id="LN2420">2420</td><td class="line">    }</td></tr>
-<tr class="codeline" data-linenumber="2421"><td class="num" id="LN2421">2421</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2422"><td class="num" id="LN2422">2422</td><td class="line">    <span class='comment'>// Highlight the cursor column if 'cursorcolumn' is set.  But don't</span></td></tr>
-<tr class="codeline" data-linenumber="2423"><td class="num" id="LN2423">2423</td><td class="line">    <span class='comment'>// highlight the cursor position itself.</span></td></tr>
-<tr class="codeline" data-linenumber="2424"><td class="num" id="LN2424">2424</td><td class="line">    <span class='comment'>// Also highlight the 'colorcolumn' if it is different than</span></td></tr>
-<tr class="codeline" data-linenumber="2425"><td class="num" id="LN2425">2425</td><td class="line">    <span class='comment'>// 'cursorcolumn'</span></td></tr>
-<tr class="codeline" data-linenumber="2426"><td class="num" id="LN2426">2426</td><td class="line">    <span class='comment'>// Also highlight the 'colorcolumn' if 'breakindent' and/or 'showbreak'</span></td></tr>
-<tr class="codeline" data-linenumber="2427"><td class="num" id="LN2427">2427</td><td class="line">    <span class='comment'>// options are set</span></td></tr>
-<tr class="codeline" data-linenumber="2428"><td class="num" id="LN2428">2428</td><td class="line">    vcol_save_attr = -1;</td></tr>
-<tr class="codeline" data-linenumber="2429"><td class="num" id="LN2429">2429</td><td class="line">    <span class='keyword'>if</span> ((draw_state == <span class='macro'>WL_LINE<span class='macro_popup'>(((((((0 + 1) + 1) + 1) + 1) + 1) + 1) + 1)</span></span></td></tr>
-<tr class="codeline" data-linenumber="2430"><td class="num" id="LN2430">2430</td><td class="line">         || draw_state == <span class='macro'>WL_BRI<span class='macro_popup'>(((((0 + 1) + 1) + 1) + 1) + 1)</span></span></td></tr>
-<tr class="codeline" data-linenumber="2431"><td class="num" id="LN2431">2431</td><td class="line">         || draw_state == <span class='macro'>WL_SBR<span class='macro_popup'>((((((0 + 1) + 1) + 1) + 1) + 1) + 1)</span></span>)</td></tr>
-<tr class="codeline" data-linenumber="2432"><td class="num" id="LN2432">2432</td><td class="line">        &amp;&amp; !lnum_in_visual_area</td></tr>
-<tr class="codeline" data-linenumber="2433"><td class="num" id="LN2433">2433</td><td class="line">        &amp;&amp; search_attr == 0</td></tr>
-<tr class="codeline" data-linenumber="2434"><td class="num" id="LN2434">2434</td><td class="line">        &amp;&amp; area_attr == 0</td></tr>
-<tr class="codeline" data-linenumber="2435"><td class="num" id="LN2435">2435</td><td class="line">        &amp;&amp; filler_todo &lt;= 0) {</td></tr>
-<tr class="codeline" data-linenumber="2436"><td class="num" id="LN2436">2436</td><td class="line">      <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_cuc<span class='macro_popup'>w_onebuf_opt.wo_cuc</span></span> &amp;&amp; <span class='macro'>VCOL_HLC<span class='macro_popup'>(vcol - vcol_off)</span></span> == (<span class='keyword'>long</span>)wp-&gt;w_virtcol</td></tr>
-<tr class="codeline" data-linenumber="2437"><td class="num" id="LN2437">2437</td><td class="line">          &amp;&amp; lnum != wp-&gt;w_cursor.lnum) {</td></tr>
-<tr class="codeline" data-linenumber="2438"><td class="num" id="LN2438">2438</td><td class="line">        vcol_save_attr = char_attr;</td></tr>
-<tr class="codeline" data-linenumber="2439"><td class="num" id="LN2439">2439</td><td class="line">        char_attr = hl_combine_attr(win_hl_attr(wp, HLF_CUC), char_attr);</td></tr>
-<tr class="codeline" data-linenumber="2440"><td class="num" id="LN2440">2440</td><td class="line">      } <span class='keyword'>else</span> <span class='keyword'>if</span> (draw_color_col &amp;&amp; <span class='macro'>VCOL_HLC<span class='macro_popup'>(vcol - vcol_off)</span></span> == *color_cols) {</td></tr>
+<tr class="codeline" data-linenumber="2361"><td class="num" id="LN2361">2361</td><td class="line">          linebuf_attr[off] = col_attr;</td></tr>
+<tr class="codeline" data-linenumber="2362"><td class="num" id="LN2362">2362</td><td class="line">          off += col_stride;</td></tr>
+<tr class="codeline" data-linenumber="2363"><td class="num" id="LN2363">2363</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2364"><td class="num" id="LN2364">2364</td><td class="line">          <span class='keyword'>if</span> (<span class='macro'>VCOL_HLC<span class='macro_popup'>(vcol - vcol_off)</span></span> &gt;= rightmost_vcol) {</td></tr>
+<tr class="codeline" data-linenumber="2365"><td class="num" id="LN2365">2365</td><td class="line">            <span class='keyword'>break</span>;</td></tr>
+<tr class="codeline" data-linenumber="2366"><td class="num" id="LN2366">2366</td><td class="line">          }</td></tr>
+<tr class="codeline" data-linenumber="2367"><td class="num" id="LN2367">2367</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2368"><td class="num" id="LN2368">2368</td><td class="line">          vcol += 1;</td></tr>
+<tr class="codeline" data-linenumber="2369"><td class="num" id="LN2369">2369</td><td class="line">        }</td></tr>
+<tr class="codeline" data-linenumber="2370"><td class="num" id="LN2370">2370</td><td class="line">      }</td></tr>
+<tr class="codeline" data-linenumber="2371"><td class="num" id="LN2371">2371</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2372"><td class="num" id="LN2372">2372</td><td class="line">      <span class='comment'>// TODO(bfredl): integrate with the common beyond-the-end-loop</span></td></tr>
+<tr class="codeline" data-linenumber="2373"><td class="num" id="LN2373">2373</td><td class="line">      <span class='keyword'>if</span> (wp-&gt;w_buffer-&gt;terminal) {</td></tr>
+<tr class="codeline" data-linenumber="2374"><td class="num" id="LN2374">2374</td><td class="line">        <span class='comment'>// terminal buffers may need to highlight beyond the end of the</span></td></tr>
+<tr class="codeline" data-linenumber="2375"><td class="num" id="LN2375">2375</td><td class="line">        <span class='comment'>// logical line</span></td></tr>
+<tr class="codeline" data-linenumber="2376"><td class="num" id="LN2376">2376</td><td class="line">        <span class='keyword'>int</span> n = wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span> ? -1 : 1;</td></tr>
+<tr class="codeline" data-linenumber="2377"><td class="num" id="LN2377">2377</td><td class="line">        <span class='keyword'>while</span> (col &gt;= 0 &amp;&amp; col &lt; grid-&gt;cols) {</td></tr>
+<tr class="codeline" data-linenumber="2378"><td class="num" id="LN2378">2378</td><td class="line">          schar_from_ascii(linebuf_char[off], ' ');</td></tr>
+<tr class="codeline" data-linenumber="2379"><td class="num" id="LN2379">2379</td><td class="line">          linebuf_attr[off] = vcol &gt;= <span class='macro'>TERM_ATTRS_MAX<span class='macro_popup'>1024</span></span> ? 0 : term_attrs[vcol];</td></tr>
+<tr class="codeline" data-linenumber="2380"><td class="num" id="LN2380">2380</td><td class="line">          off += n;</td></tr>
+<tr class="codeline" data-linenumber="2381"><td class="num" id="LN2381">2381</td><td class="line">          vcol += n;</td></tr>
+<tr class="codeline" data-linenumber="2382"><td class="num" id="LN2382">2382</td><td class="line">          col += n;</td></tr>
+<tr class="codeline" data-linenumber="2383"><td class="num" id="LN2383">2383</td><td class="line">        }</td></tr>
+<tr class="codeline" data-linenumber="2384"><td class="num" id="LN2384">2384</td><td class="line">      }</td></tr>
+<tr class="codeline" data-linenumber="2385"><td class="num" id="LN2385">2385</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2386"><td class="num" id="LN2386">2386</td><td class="line">      draw_virt_text(wp, buf, win_col_offset, &amp;col, grid-&gt;cols, row);</td></tr>
+<tr class="codeline" data-linenumber="2387"><td class="num" id="LN2387">2387</td><td class="line">      grid_put_linebuf(grid, row, 0, col, grid-&gt;cols, wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span>, wp, bg_attr, <span class='macro'>false<span class='macro_popup'>0</span></span>);</td></tr>
+<tr class="codeline" data-linenumber="2388"><td class="num" id="LN2388">2388</td><td class="line">      row++;</td></tr>
+<tr class="codeline" data-linenumber="2389"><td class="num" id="LN2389">2389</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2390"><td class="num" id="LN2390">2390</td><td class="line">      <span class='comment'>// Update w_cline_height and w_cline_folded if the cursor line was</span></td></tr>
+<tr class="codeline" data-linenumber="2391"><td class="num" id="LN2391">2391</td><td class="line">      <span class='comment'>// updated (saves a call to plines_win() later).</span></td></tr>
+<tr class="codeline" data-linenumber="2392"><td class="num" id="LN2392">2392</td><td class="line">      <span class='keyword'>if</span> (wp == curwin &amp;&amp; lnum == curwin-&gt;w_cursor.lnum) {</td></tr>
+<tr class="codeline" data-linenumber="2393"><td class="num" id="LN2393">2393</td><td class="line">        curwin-&gt;w_cline_row = startrow;</td></tr>
+<tr class="codeline" data-linenumber="2394"><td class="num" id="LN2394">2394</td><td class="line">        curwin-&gt;w_cline_height = row - startrow;</td></tr>
+<tr class="codeline" data-linenumber="2395"><td class="num" id="LN2395">2395</td><td class="line">        curwin-&gt;w_cline_folded = foldinfo.fi_lines &gt; 0;</td></tr>
+<tr class="codeline" data-linenumber="2396"><td class="num" id="LN2396">2396</td><td class="line">        curwin-&gt;w_valid |= (<span class='macro'>VALID_CHEIGHT<span class='macro_popup'>0x08</span></span>|<span class='macro'>VALID_CROW<span class='macro_popup'>0x10</span></span>);</td></tr>
+<tr class="codeline" data-linenumber="2397"><td class="num" id="LN2397">2397</td><td class="line">        conceal_cursor_used = conceal_cursor_line(curwin);</td></tr>
+<tr class="codeline" data-linenumber="2398"><td class="num" id="LN2398">2398</td><td class="line">      }</td></tr>
+<tr class="codeline" data-linenumber="2399"><td class="num" id="LN2399">2399</td><td class="line">      <span class='keyword'>break</span>;</td></tr>
+<tr class="codeline" data-linenumber="2400"><td class="num" id="LN2400">2400</td><td class="line">    }</td></tr>
+<tr class="codeline" data-linenumber="2401"><td class="num" id="LN2401">2401</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2402"><td class="num" id="LN2402">2402</td><td class="line">    <span class='comment'>// Show "extends" character from 'listchars' if beyond the line end and</span></td></tr>
+<tr class="codeline" data-linenumber="2403"><td class="num" id="LN2403">2403</td><td class="line">    <span class='comment'>// 'list' is set.</span></td></tr>
+<tr class="codeline" data-linenumber="2404"><td class="num" id="LN2404">2404</td><td class="line">    <span class='keyword'>if</span> (wp-&gt;w_p_lcs_chars.ext != <span class='macro'>NUL<span class='macro_popup'>'\000'</span></span></td></tr>
+<tr class="codeline" data-linenumber="2405"><td class="num" id="LN2405">2405</td><td class="line">        &amp;&amp; draw_state == <span class='macro'>WL_LINE<span class='macro_popup'>(((((((0 + 1) + 1) + 1) + 1) + 1) + 1) + 1)</span></span></td></tr>
+<tr class="codeline" data-linenumber="2406"><td class="num" id="LN2406">2406</td><td class="line">        &amp;&amp; wp-&gt;<span class='macro'>w_p_list<span class='macro_popup'>w_onebuf_opt.wo_list</span></span></td></tr>
+<tr class="codeline" data-linenumber="2407"><td class="num" id="LN2407">2407</td><td class="line">        &amp;&amp; !wp-&gt;<span class='macro'>w_p_wrap<span class='macro_popup'>w_onebuf_opt.wo_wrap</span></span></td></tr>
+<tr class="codeline" data-linenumber="2408"><td class="num" id="LN2408">2408</td><td class="line">        &amp;&amp; filler_todo &lt;= 0</td></tr>
+<tr class="codeline" data-linenumber="2409"><td class="num" id="LN2409">2409</td><td class="line">        &amp;&amp; (wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span> ? col == 0 : col == grid-&gt;cols - 1)</td></tr>
+<tr class="codeline" data-linenumber="2410"><td class="num" id="LN2410">2410</td><td class="line">        &amp;&amp; !has_fold</td></tr>
+<tr class="codeline" data-linenumber="2411"><td class="num" id="LN2411">2411</td><td class="line">        &amp;&amp; (*ptr != <span class='macro'>NUL<span class='macro_popup'>'\000'</span></span></td></tr>
+<tr class="codeline" data-linenumber="2412"><td class="num" id="LN2412">2412</td><td class="line">            || lcs_eol_one &gt; 0</td></tr>
+<tr class="codeline" data-linenumber="2413"><td class="num" id="LN2413">2413</td><td class="line">            || (n_extra &amp;&amp; (c_extra != <span class='macro'>NUL<span class='macro_popup'>'\000'</span></span> || *p_extra != <span class='macro'>NUL<span class='macro_popup'>'\000'</span></span>)))) {</td></tr>
+<tr class="codeline" data-linenumber="2414"><td class="num" id="LN2414">2414</td><td class="line">      c = wp-&gt;w_p_lcs_chars.ext;</td></tr>
+<tr class="codeline" data-linenumber="2415"><td class="num" id="LN2415">2415</td><td class="line">      char_attr = win_hl_attr(wp, HLF_AT);</td></tr>
+<tr class="codeline" data-linenumber="2416"><td class="num" id="LN2416">2416</td><td class="line">      mb_c = c;</td></tr>
+<tr class="codeline" data-linenumber="2417"><td class="num" id="LN2417">2417</td><td class="line">      mb_utf8 = check_mb_utf8(&amp;c, u8cc);</td></tr>
+<tr class="codeline" data-linenumber="2418"><td class="num" id="LN2418">2418</td><td class="line">    }</td></tr>
+<tr class="codeline" data-linenumber="2419"><td class="num" id="LN2419">2419</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2420"><td class="num" id="LN2420">2420</td><td class="line">    <span class='comment'>// advance to the next 'colorcolumn'</span></td></tr>
+<tr class="codeline" data-linenumber="2421"><td class="num" id="LN2421">2421</td><td class="line">    <span class='keyword'>if</span> (draw_color_col) {</td></tr>
+<tr class="codeline" data-linenumber="2422"><td class="num" id="LN2422">2422</td><td class="line">      draw_color_col = advance_color_col((<span class='keyword'>int</span>)<span class='macro'>VCOL_HLC<span class='macro_popup'>(vcol - vcol_off)</span></span>, &amp;color_cols);</td></tr>
+<tr class="codeline" data-linenumber="2423"><td class="num" id="LN2423">2423</td><td class="line">    }</td></tr>
+<tr class="codeline" data-linenumber="2424"><td class="num" id="LN2424">2424</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2425"><td class="num" id="LN2425">2425</td><td class="line">    <span class='comment'>// Highlight the cursor column if 'cursorcolumn' is set.  But don't</span></td></tr>
+<tr class="codeline" data-linenumber="2426"><td class="num" id="LN2426">2426</td><td class="line">    <span class='comment'>// highlight the cursor position itself.</span></td></tr>
+<tr class="codeline" data-linenumber="2427"><td class="num" id="LN2427">2427</td><td class="line">    <span class='comment'>// Also highlight the 'colorcolumn' if it is different than</span></td></tr>
+<tr class="codeline" data-linenumber="2428"><td class="num" id="LN2428">2428</td><td class="line">    <span class='comment'>// 'cursorcolumn'</span></td></tr>
+<tr class="codeline" data-linenumber="2429"><td class="num" id="LN2429">2429</td><td class="line">    <span class='comment'>// Also highlight the 'colorcolumn' if 'breakindent' and/or 'showbreak'</span></td></tr>
+<tr class="codeline" data-linenumber="2430"><td class="num" id="LN2430">2430</td><td class="line">    <span class='comment'>// options are set</span></td></tr>
+<tr class="codeline" data-linenumber="2431"><td class="num" id="LN2431">2431</td><td class="line">    vcol_save_attr = -1;</td></tr>
+<tr class="codeline" data-linenumber="2432"><td class="num" id="LN2432">2432</td><td class="line">    <span class='keyword'>if</span> ((draw_state == <span class='macro'>WL_LINE<span class='macro_popup'>(((((((0 + 1) + 1) + 1) + 1) + 1) + 1) + 1)</span></span></td></tr>
+<tr class="codeline" data-linenumber="2433"><td class="num" id="LN2433">2433</td><td class="line">         || draw_state == <span class='macro'>WL_BRI<span class='macro_popup'>(((((0 + 1) + 1) + 1) + 1) + 1)</span></span></td></tr>
+<tr class="codeline" data-linenumber="2434"><td class="num" id="LN2434">2434</td><td class="line">         || draw_state == <span class='macro'>WL_SBR<span class='macro_popup'>((((((0 + 1) + 1) + 1) + 1) + 1) + 1)</span></span>)</td></tr>
+<tr class="codeline" data-linenumber="2435"><td class="num" id="LN2435">2435</td><td class="line">        &amp;&amp; !lnum_in_visual_area</td></tr>
+<tr class="codeline" data-linenumber="2436"><td class="num" id="LN2436">2436</td><td class="line">        &amp;&amp; search_attr == 0</td></tr>
+<tr class="codeline" data-linenumber="2437"><td class="num" id="LN2437">2437</td><td class="line">        &amp;&amp; area_attr == 0</td></tr>
+<tr class="codeline" data-linenumber="2438"><td class="num" id="LN2438">2438</td><td class="line">        &amp;&amp; filler_todo &lt;= 0) {</td></tr>
+<tr class="codeline" data-linenumber="2439"><td class="num" id="LN2439">2439</td><td class="line">      <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_cuc<span class='macro_popup'>w_onebuf_opt.wo_cuc</span></span> &amp;&amp; <span class='macro'>VCOL_HLC<span class='macro_popup'>(vcol - vcol_off)</span></span> == (<span class='keyword'>long</span>)wp-&gt;w_virtcol</td></tr>
+<tr class="codeline" data-linenumber="2440"><td class="num" id="LN2440">2440</td><td class="line">          &amp;&amp; lnum != wp-&gt;w_cursor.lnum) {</td></tr>
 <tr class="codeline" data-linenumber="2441"><td class="num" id="LN2441">2441</td><td class="line">        vcol_save_attr = char_attr;</td></tr>
-<tr class="codeline" data-linenumber="2442"><td class="num" id="LN2442">2442</td><td class="line">        char_attr = hl_combine_attr(win_hl_attr(wp, HLF_MC), char_attr);</td></tr>
-<tr class="codeline" data-linenumber="2443"><td class="num" id="LN2443">2443</td><td class="line">      }</td></tr>
-<tr class="codeline" data-linenumber="2444"><td class="num" id="LN2444">2444</td><td class="line">    }</td></tr>
-<tr class="codeline" data-linenumber="2445"><td class="num" id="LN2445">2445</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2446"><td class="num" id="LN2446">2446</td><td class="line">    <span class='comment'>// Apply lowest-priority line attr now, so everything can override it.</span></td></tr>
-<tr class="codeline" data-linenumber="2447"><td class="num" id="LN2447">2447</td><td class="line">    <span class='keyword'>if</span> (draw_state == <span class='macro'>WL_LINE<span class='macro_popup'>(((((((0 + 1) + 1) + 1) + 1) + 1) + 1) + 1)</span></span>) {</td></tr>
-<tr class="codeline" data-linenumber="2448"><td class="num" id="LN2448">2448</td><td class="line">      char_attr = hl_combine_attr(line_attr_lowprio, char_attr);</td></tr>
-<tr class="codeline" data-linenumber="2449"><td class="num" id="LN2449">2449</td><td class="line">    }</td></tr>
-<tr class="codeline" data-linenumber="2450"><td class="num" id="LN2450">2450</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2451"><td class="num" id="LN2451">2451</td><td class="line">    <span class='comment'>// Store character to be displayed.</span></td></tr>
-<tr class="codeline" data-linenumber="2452"><td class="num" id="LN2452">2452</td><td class="line">    <span class='comment'>// Skip characters that are left of the screen for 'nowrap'.</span></td></tr>
-<tr class="codeline" data-linenumber="2453"><td class="num" id="LN2453">2453</td><td class="line">    vcol_prev = vcol;</td></tr>
-<tr class="codeline" data-linenumber="2454"><td class="num" id="LN2454">2454</td><td class="line">    <span class='keyword'>if</span> (draw_state &lt; <span class='macro'>WL_LINE<span class='macro_popup'>(((((((0 + 1) + 1) + 1) + 1) + 1) + 1) + 1)</span></span> || n_skip &lt;= 0) {</td></tr>
-<tr class="codeline" data-linenumber="2455"><td class="num" id="LN2455">2455</td><td class="line">      <span class='comment'>//</span></td></tr>
-<tr class="codeline" data-linenumber="2456"><td class="num" id="LN2456">2456</td><td class="line">      <span class='comment'>// Store the character.</span></td></tr>
-<tr class="codeline" data-linenumber="2457"><td class="num" id="LN2457">2457</td><td class="line">      <span class='comment'>//</span></td></tr>
-<tr class="codeline" data-linenumber="2458"><td class="num" id="LN2458">2458</td><td class="line">      <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span> &amp;&amp; utf_char2cells(mb_c) &gt; 1) {</td></tr>
-<tr class="codeline" data-linenumber="2459"><td class="num" id="LN2459">2459</td><td class="line">        <span class='comment'>// A double-wide character is: put first half in left cell.</span></td></tr>
-<tr class="codeline" data-linenumber="2460"><td class="num" id="LN2460">2460</td><td class="line">        off--;</td></tr>
-<tr class="codeline" data-linenumber="2461"><td class="num" id="LN2461">2461</td><td class="line">        col--;</td></tr>
-<tr class="codeline" data-linenumber="2462"><td class="num" id="LN2462">2462</td><td class="line">      }</td></tr>
-<tr class="codeline" data-linenumber="2463"><td class="num" id="LN2463">2463</td><td class="line">      <span class='keyword'>if</span> (mb_utf8) {</td></tr>
-<tr class="codeline" data-linenumber="2464"><td class="num" id="LN2464">2464</td><td class="line">        schar_from_cc(linebuf_char[off], mb_c, u8cc);</td></tr>
-<tr class="codeline" data-linenumber="2465"><td class="num" id="LN2465">2465</td><td class="line">      } <span class='keyword'>else</span> {</td></tr>
-<tr class="codeline" data-linenumber="2466"><td class="num" id="LN2466">2466</td><td class="line">        schar_from_ascii(linebuf_char[off], (<span class='keyword'>char</span>)c);</td></tr>
-<tr class="codeline" data-linenumber="2467"><td class="num" id="LN2467">2467</td><td class="line">      }</td></tr>
-<tr class="codeline" data-linenumber="2468"><td class="num" id="LN2468">2468</td><td class="line">      <span class='keyword'>if</span> (multi_attr) {</td></tr>
-<tr class="codeline" data-linenumber="2469"><td class="num" id="LN2469">2469</td><td class="line">        linebuf_attr[off] = multi_attr;</td></tr>
-<tr class="codeline" data-linenumber="2470"><td class="num" id="LN2470">2470</td><td class="line">        multi_attr = 0;</td></tr>
-<tr class="codeline" data-linenumber="2471"><td class="num" id="LN2471">2471</td><td class="line">      } <span class='keyword'>else</span> {</td></tr>
-<tr class="codeline" data-linenumber="2472"><td class="num" id="LN2472">2472</td><td class="line">        linebuf_attr[off] = char_attr;</td></tr>
-<tr class="codeline" data-linenumber="2473"><td class="num" id="LN2473">2473</td><td class="line">      }</td></tr>
-<tr class="codeline" data-linenumber="2474"><td class="num" id="LN2474">2474</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2475"><td class="num" id="LN2475">2475</td><td class="line">      <span class='keyword'>if</span> (utf_char2cells(mb_c) &gt; 1) {</td></tr>
-<tr class="codeline" data-linenumber="2476"><td class="num" id="LN2476">2476</td><td class="line">        <span class='comment'>// Need to fill two screen columns.</span></td></tr>
-<tr class="codeline" data-linenumber="2477"><td class="num" id="LN2477">2477</td><td class="line">        off++;</td></tr>
-<tr class="codeline" data-linenumber="2478"><td class="num" id="LN2478">2478</td><td class="line">        col++;</td></tr>
-<tr class="codeline" data-linenumber="2479"><td class="num" id="LN2479">2479</td><td class="line">        <span class='comment'>// UTF-8: Put a 0 in the second screen char.</span></td></tr>
-<tr class="codeline" data-linenumber="2480"><td class="num" id="LN2480">2480</td><td class="line">        linebuf_char[off][0] = 0;</td></tr>
-<tr class="codeline" data-linenumber="2481"><td class="num" id="LN2481">2481</td><td class="line">        <span class='keyword'>if</span> (draw_state &gt; <span class='macro'>WL_NR<span class='macro_popup'>((((0 + 1) + 1) + 1) + 1)</span></span> &amp;&amp; filler_todo &lt;= 0) {</td></tr>
-<tr class="codeline" data-linenumber="2482"><td class="num" id="LN2482">2482</td><td class="line">          vcol++;</td></tr>
-<tr class="codeline" data-linenumber="2483"><td class="num" id="LN2483">2483</td><td class="line">        }</td></tr>
-<tr class="codeline" data-linenumber="2484"><td class="num" id="LN2484">2484</td><td class="line">        <span class='comment'>// When "tocol" is halfway through a character, set it to the end of</span></td></tr>
-<tr class="codeline" data-linenumber="2485"><td class="num" id="LN2485">2485</td><td class="line">        <span class='comment'>// the character, otherwise highlighting won't stop.</span></td></tr>
-<tr class="codeline" data-linenumber="2486"><td class="num" id="LN2486">2486</td><td class="line">        <span class='keyword'>if</span> (tocol == vcol) {</td></tr>
-<tr class="codeline" data-linenumber="2487"><td class="num" id="LN2487">2487</td><td class="line">          tocol++;</td></tr>
-<tr class="codeline" data-linenumber="2488"><td class="num" id="LN2488">2488</td><td class="line">        }</td></tr>
-<tr class="codeline" data-linenumber="2489"><td class="num" id="LN2489">2489</td><td class="line">        <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span>) {</td></tr>
-<tr class="codeline" data-linenumber="2490"><td class="num" id="LN2490">2490</td><td class="line">          <span class='comment'>// now it's time to backup one cell</span></td></tr>
-<tr class="codeline" data-linenumber="2491"><td class="num" id="LN2491">2491</td><td class="line">          off--;</td></tr>
-<tr class="codeline" data-linenumber="2492"><td class="num" id="LN2492">2492</td><td class="line">          col--;</td></tr>
-<tr class="codeline" data-linenumber="2493"><td class="num" id="LN2493">2493</td><td class="line">        }</td></tr>
-<tr class="codeline" data-linenumber="2494"><td class="num" id="LN2494">2494</td><td class="line">      }</td></tr>
-<tr class="codeline" data-linenumber="2495"><td class="num" id="LN2495">2495</td><td class="line">      <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span>) {</td></tr>
-<tr class="codeline" data-linenumber="2496"><td class="num" id="LN2496">2496</td><td class="line">        off--;</td></tr>
-<tr class="codeline" data-linenumber="2497"><td class="num" id="LN2497">2497</td><td class="line">        col--;</td></tr>
-<tr class="codeline" data-linenumber="2498"><td class="num" id="LN2498">2498</td><td class="line">      } <span class='keyword'>else</span> {</td></tr>
-<tr class="codeline" data-linenumber="2499"><td class="num" id="LN2499">2499</td><td class="line">        off++;</td></tr>
-<tr class="codeline" data-linenumber="2500"><td class="num" id="LN2500">2500</td><td class="line">        col++;</td></tr>
-<tr class="codeline" data-linenumber="2501"><td class="num" id="LN2501">2501</td><td class="line">      }</td></tr>
-<tr class="codeline" data-linenumber="2502"><td class="num" id="LN2502">2502</td><td class="line">    } <span class='keyword'>else</span> <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_cole<span class='macro_popup'>w_onebuf_opt.wo_cole</span></span> &gt; 0 &amp;&amp; is_concealing) {</td></tr>
-<tr class="codeline" data-linenumber="2503"><td class="num" id="LN2503">2503</td><td class="line">      n_skip--;</td></tr>
-<tr class="codeline" data-linenumber="2504"><td class="num" id="LN2504">2504</td><td class="line">      vcol_off++;</td></tr>
-<tr class="codeline" data-linenumber="2505"><td class="num" id="LN2505">2505</td><td class="line">      <span class='keyword'>if</span> (n_extra &gt; 0) {</td></tr>
-<tr class="codeline" data-linenumber="2506"><td class="num" id="LN2506">2506</td><td class="line">        vcol_off += n_extra;</td></tr>
-<tr class="codeline" data-linenumber="2507"><td class="num" id="LN2507">2507</td><td class="line">      }</td></tr>
-<tr class="codeline" data-linenumber="2508"><td class="num" id="LN2508">2508</td><td class="line">      <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_wrap<span class='macro_popup'>w_onebuf_opt.wo_wrap</span></span>) {</td></tr>
-<tr class="codeline" data-linenumber="2509"><td class="num" id="LN2509">2509</td><td class="line">        <span class='comment'>// Special voodoo required if 'wrap' is on.</span></td></tr>
-<tr class="codeline" data-linenumber="2510"><td class="num" id="LN2510">2510</td><td class="line">        <span class='comment'>//</span></td></tr>
-<tr class="codeline" data-linenumber="2511"><td class="num" id="LN2511">2511</td><td class="line">        <span class='comment'>// Advance the column indicator to force the line</span></td></tr>
-<tr class="codeline" data-linenumber="2512"><td class="num" id="LN2512">2512</td><td class="line">        <span class='comment'>// drawing to wrap early. This will make the line</span></td></tr>
-<tr class="codeline" data-linenumber="2513"><td class="num" id="LN2513">2513</td><td class="line">        <span class='comment'>// take up the same screen space when parts are concealed,</span></td></tr>
-<tr class="codeline" data-linenumber="2514"><td class="num" id="LN2514">2514</td><td class="line">        <span class='comment'>// so that cursor line computations aren't messed up.</span></td></tr>
-<tr class="codeline" data-linenumber="2515"><td class="num" id="LN2515">2515</td><td class="line">        <span class='comment'>//</span></td></tr>
-<tr class="codeline" data-linenumber="2516"><td class="num" id="LN2516">2516</td><td class="line">        <span class='comment'>// To avoid the fictitious advance of 'col' causing</span></td></tr>
-<tr class="codeline" data-linenumber="2517"><td class="num" id="LN2517">2517</td><td class="line">        <span class='comment'>// trailing junk to be written out of the screen line</span></td></tr>
-<tr class="codeline" data-linenumber="2518"><td class="num" id="LN2518">2518</td><td class="line">        <span class='comment'>// we are building, 'boguscols' keeps track of the number</span></td></tr>
-<tr class="codeline" data-linenumber="2519"><td class="num" id="LN2519">2519</td><td class="line">        <span class='comment'>// of bad columns we have advanced.</span></td></tr>
-<tr class="codeline" data-linenumber="2520"><td class="num" id="LN2520">2520</td><td class="line">        <span class='keyword'>if</span> (n_extra &gt; 0) {</td></tr>
-<tr class="codeline" data-linenumber="2521"><td class="num" id="LN2521">2521</td><td class="line">          vcol += n_extra;</td></tr>
-<tr class="codeline" data-linenumber="2522"><td class="num" id="LN2522">2522</td><td class="line">          <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span>) {</td></tr>
-<tr class="codeline" data-linenumber="2523"><td class="num" id="LN2523">2523</td><td class="line">            col -= n_extra;</td></tr>
-<tr class="codeline" data-linenumber="2524"><td class="num" id="LN2524">2524</td><td class="line">            boguscols -= n_extra;</td></tr>
-<tr class="codeline" data-linenumber="2525"><td class="num" id="LN2525">2525</td><td class="line">          } <span class='keyword'>else</span> {</td></tr>
-<tr class="codeline" data-linenumber="2526"><td class="num" id="LN2526">2526</td><td class="line">            col += n_extra;</td></tr>
-<tr class="codeline" data-linenumber="2527"><td class="num" id="LN2527">2527</td><td class="line">            boguscols += n_extra;</td></tr>
-<tr class="codeline" data-linenumber="2528"><td class="num" id="LN2528">2528</td><td class="line">          }</td></tr>
-<tr class="codeline" data-linenumber="2529"><td class="num" id="LN2529">2529</td><td class="line">          n_extra = 0;</td></tr>
-<tr class="codeline" data-linenumber="2530"><td class="num" id="LN2530">2530</td><td class="line">          n_attr = 0;</td></tr>
-<tr class="codeline" data-linenumber="2531"><td class="num" id="LN2531">2531</td><td class="line">        }</td></tr>
-<tr class="codeline" data-linenumber="2532"><td class="num" id="LN2532">2532</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2533"><td class="num" id="LN2533">2533</td><td class="line">        <span class='keyword'>if</span> (utf_char2cells(mb_c) &gt; 1) {</td></tr>
-<tr class="codeline" data-linenumber="2534"><td class="num" id="LN2534">2534</td><td class="line">          <span class='comment'>// Need to fill two screen columns.</span></td></tr>
-<tr class="codeline" data-linenumber="2535"><td class="num" id="LN2535">2535</td><td class="line">          <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span>) {</td></tr>
-<tr class="codeline" data-linenumber="2536"><td class="num" id="LN2536">2536</td><td class="line">            boguscols--;</td></tr>
-<tr class="codeline" data-linenumber="2537"><td class="num" id="LN2537">2537</td><td class="line">            col--;</td></tr>
-<tr class="codeline" data-linenumber="2538"><td class="num" id="LN2538">2538</td><td class="line">          } <span class='keyword'>else</span> {</td></tr>
-<tr class="codeline" data-linenumber="2539"><td class="num" id="LN2539">2539</td><td class="line">            boguscols++;</td></tr>
-<tr class="codeline" data-linenumber="2540"><td class="num" id="LN2540">2540</td><td class="line">            col++;</td></tr>
-<tr class="codeline" data-linenumber="2541"><td class="num" id="LN2541">2541</td><td class="line">          }</td></tr>
-<tr class="codeline" data-linenumber="2542"><td class="num" id="LN2542">2542</td><td class="line">        }</td></tr>
-<tr class="codeline" data-linenumber="2543"><td class="num" id="LN2543">2543</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2544"><td class="num" id="LN2544">2544</td><td class="line">        <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span>) {</td></tr>
-<tr class="codeline" data-linenumber="2545"><td class="num" id="LN2545">2545</td><td class="line">          boguscols--;</td></tr>
-<tr class="codeline" data-linenumber="2546"><td class="num" id="LN2546">2546</td><td class="line">          col--;</td></tr>
-<tr class="codeline" data-linenumber="2547"><td class="num" id="LN2547">2547</td><td class="line">        } <span class='keyword'>else</span> {</td></tr>
-<tr class="codeline" data-linenumber="2548"><td class="num" id="LN2548">2548</td><td class="line">          boguscols++;</td></tr>
-<tr class="codeline" data-linenumber="2549"><td class="num" id="LN2549">2549</td><td class="line">          col++;</td></tr>
-<tr class="codeline" data-linenumber="2550"><td class="num" id="LN2550">2550</td><td class="line">        }</td></tr>
-<tr class="codeline" data-linenumber="2551"><td class="num" id="LN2551">2551</td><td class="line">      } <span class='keyword'>else</span> {</td></tr>
-<tr class="codeline" data-linenumber="2552"><td class="num" id="LN2552">2552</td><td class="line">        <span class='keyword'>if</span> (n_extra &gt; 0) {</td></tr>
-<tr class="codeline" data-linenumber="2553"><td class="num" id="LN2553">2553</td><td class="line">          vcol += n_extra;</td></tr>
-<tr class="codeline" data-linenumber="2554"><td class="num" id="LN2554">2554</td><td class="line">          n_extra = 0;</td></tr>
-<tr class="codeline" data-linenumber="2555"><td class="num" id="LN2555">2555</td><td class="line">          n_attr = 0;</td></tr>
-<tr class="codeline" data-linenumber="2556"><td class="num" id="LN2556">2556</td><td class="line">        }</td></tr>
-<tr class="codeline" data-linenumber="2557"><td class="num" id="LN2557">2557</td><td class="line">      }</td></tr>
-<tr class="codeline" data-linenumber="2558"><td class="num" id="LN2558">2558</td><td class="line">    } <span class='keyword'>else</span> {</td></tr>
-<tr class="codeline" data-linenumber="2559"><td class="num" id="LN2559">2559</td><td class="line">      n_skip--;</td></tr>
-<tr class="codeline" data-linenumber="2560"><td class="num" id="LN2560">2560</td><td class="line">    }</td></tr>
-<tr class="codeline" data-linenumber="2561"><td class="num" id="LN2561">2561</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2562"><td class="num" id="LN2562">2562</td><td class="line">    <span class='comment'>// Only advance the "vcol" when after the 'number' or 'relativenumber'</span></td></tr>
-<tr class="codeline" data-linenumber="2563"><td class="num" id="LN2563">2563</td><td class="line">    <span class='comment'>// column.</span></td></tr>
-<tr class="codeline" data-linenumber="2564"><td class="num" id="LN2564">2564</td><td class="line">    <span class='keyword'>if</span> (draw_state &gt; <span class='macro'>WL_NR<span class='macro_popup'>((((0 + 1) + 1) + 1) + 1)</span></span></td></tr>
-<tr class="codeline" data-linenumber="2565"><td class="num" id="LN2565">2565</td><td class="line">        &amp;&amp; filler_todo &lt;= 0) {</td></tr>
-<tr class="codeline" data-linenumber="2566"><td class="num" id="LN2566">2566</td><td class="line">      vcol++;</td></tr>
-<tr class="codeline" data-linenumber="2567"><td class="num" id="LN2567">2567</td><td class="line">    }</td></tr>
-<tr class="codeline" data-linenumber="2568"><td class="num" id="LN2568">2568</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2569"><td class="num" id="LN2569">2569</td><td class="line">    <span class='keyword'>if</span> (vcol_save_attr &gt;= 0) {</td></tr>
-<tr class="codeline" data-linenumber="2570"><td class="num" id="LN2570">2570</td><td class="line">      char_attr = vcol_save_attr;</td></tr>
-<tr class="codeline" data-linenumber="2571"><td class="num" id="LN2571">2571</td><td class="line">    }</td></tr>
-<tr class="codeline" data-linenumber="2572"><td class="num" id="LN2572">2572</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2573"><td class="num" id="LN2573">2573</td><td class="line">    <span class='comment'>// restore attributes after "predeces" in 'listchars'</span></td></tr>
-<tr class="codeline" data-linenumber="2574"><td class="num" id="LN2574">2574</td><td class="line">    <span class='keyword'>if</span> (draw_state &gt; <span class='macro'>WL_NR<span class='macro_popup'>((((0 + 1) + 1) + 1) + 1)</span></span> &amp;&amp; n_attr3 &gt; 0 &amp;&amp; --n_attr3 == 0) {</td></tr>
-<tr class="codeline" data-linenumber="2575"><td class="num" id="LN2575">2575</td><td class="line">      char_attr = saved_attr3;</td></tr>
-<tr class="codeline" data-linenumber="2576"><td class="num" id="LN2576">2576</td><td class="line">    }</td></tr>
-<tr class="codeline" data-linenumber="2577"><td class="num" id="LN2577">2577</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2578"><td class="num" id="LN2578">2578</td><td class="line">    <span class='comment'>// restore attributes after last 'listchars' or 'number' char</span></td></tr>
-<tr class="codeline" data-linenumber="2579"><td class="num" id="LN2579">2579</td><td class="line">    <span class='keyword'>if</span> (n_attr &gt; 0 &amp;&amp; draw_state == <span class='macro'>WL_LINE<span class='macro_popup'>(((((((0 + 1) + 1) + 1) + 1) + 1) + 1) + 1)</span></span> &amp;&amp; --n_attr == 0) {</td></tr>
-<tr class="codeline" data-linenumber="2580"><td class="num" id="LN2580">2580</td><td class="line">      char_attr = saved_attr2;</td></tr>
-<tr class="codeline" data-linenumber="2581"><td class="num" id="LN2581">2581</td><td class="line">    }</td></tr>
-<tr class="codeline" data-linenumber="2582"><td class="num" id="LN2582">2582</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2583"><td class="num" id="LN2583">2583</td><td class="line">    <span class='comment'>// At end of screen line and there is more to come: Display the line</span></td></tr>
-<tr class="codeline" data-linenumber="2584"><td class="num" id="LN2584">2584</td><td class="line">    <span class='comment'>// so far.  If there is no more to display it is caught above.</span></td></tr>
-<tr class="codeline" data-linenumber="2585"><td class="num" id="LN2585">2585</td><td class="line">    <span class='keyword'>if</span> ((wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span> ? (col &lt; 0) : (col &gt;= grid-&gt;cols))</td></tr>
-<tr class="codeline" data-linenumber="2586"><td class="num" id="LN2586">2586</td><td class="line">        &amp;&amp; foldinfo.fi_lines == 0</td></tr>
-<tr class="codeline" data-linenumber="2587"><td class="num" id="LN2587">2587</td><td class="line">        &amp;&amp; (draw_state != <span class='macro'>WL_LINE<span class='macro_popup'>(((((((0 + 1) + 1) + 1) + 1) + 1) + 1) + 1)</span></span></td></tr>
-<tr class="codeline" data-linenumber="2588"><td class="num" id="LN2588">2588</td><td class="line">            || *ptr != <span class='macro'>NUL<span class='macro_popup'>'\000'</span></span></td></tr>
-<tr class="codeline" data-linenumber="2589"><td class="num" id="LN2589">2589</td><td class="line">            || filler_todo &gt; 0</td></tr>
-<tr class="codeline" data-linenumber="2590"><td class="num" id="LN2590">2590</td><td class="line">            || (wp-&gt;<span class='macro'>w_p_list<span class='macro_popup'>w_onebuf_opt.wo_list</span></span> &amp;&amp; wp-&gt;w_p_lcs_chars.eol != <span class='macro'>NUL<span class='macro_popup'>'\000'</span></span></td></tr>
-<tr class="codeline" data-linenumber="2591"><td class="num" id="LN2591">2591</td><td class="line">                &amp;&amp; p_extra != at_end_str)</td></tr>
-<tr class="codeline" data-linenumber="2592"><td class="num" id="LN2592">2592</td><td class="line">            || (n_extra != 0</td></tr>
-<tr class="codeline" data-linenumber="2593"><td class="num" id="LN2593">2593</td><td class="line">                &amp;&amp; (c_extra != <span class='macro'>NUL<span class='macro_popup'>'\000'</span></span> || *p_extra != <span class='macro'>NUL<span class='macro_popup'>'\000'</span></span>)))) {</td></tr>
-<tr class="codeline" data-linenumber="2594"><td class="num" id="LN2594">2594</td><td class="line">      <span class='macro'>bool<span class='macro_popup'>_Bool</span></span> wrap = wp-&gt;<span class='macro'>w_p_wrap<span class='macro_popup'>w_onebuf_opt.wo_wrap</span></span>       <span class='comment'>// Wrapping enabled.</span></td></tr>
-<tr class="codeline" data-linenumber="2595"><td class="num" id="LN2595">2595</td><td class="line">                  &amp;&amp; filler_todo &lt;= 0          <span class='comment'>// Not drawing diff filler lines.</span></td></tr>
-<tr class="codeline" data-linenumber="2596"><td class="num" id="LN2596">2596</td><td class="line">                  &amp;&amp; lcs_eol_one != -1         <span class='comment'>// Haven't printed the lcs_eol character.</span></td></tr>
-<tr class="codeline" data-linenumber="2597"><td class="num" id="LN2597">2597</td><td class="line">                  &amp;&amp; row != endrow - 1         <span class='comment'>// Not the last line being displayed.</span></td></tr>
-<tr class="codeline" data-linenumber="2598"><td class="num" id="LN2598">2598</td><td class="line">                  &amp;&amp; (grid-&gt;cols == Columns  <span class='comment'>// Window spans the width of the screen,</span></td></tr>
-<tr class="codeline" data-linenumber="2599"><td class="num" id="LN2599">2599</td><td class="line">                      || ui_has(kUIMultigrid))  <span class='comment'>// or has dedicated grid.</span></td></tr>
-<tr class="codeline" data-linenumber="2600"><td class="num" id="LN2600">2600</td><td class="line">                  &amp;&amp; !wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span>;              <span class='comment'>// Not right-to-left.</span></td></tr>
-<tr class="codeline" data-linenumber="2601"><td class="num" id="LN2601">2601</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2602"><td class="num" id="LN2602">2602</td><td class="line">      <span class='keyword'>int</span> draw_col = col - boguscols;</td></tr>
-<tr class="codeline" data-linenumber="2603"><td class="num" id="LN2603">2603</td><td class="line">      <span class='keyword'>if</span> (filler_todo &gt; 0) {</td></tr>
-<tr class="codeline" data-linenumber="2604"><td class="num" id="LN2604">2604</td><td class="line">        <span class='keyword'>int</span> index = filler_todo - (filler_lines - n_virt_lines);</td></tr>
-<tr class="codeline" data-linenumber="2605"><td class="num" id="LN2605">2605</td><td class="line">        <span class='keyword'>if</span> (index &gt; 0) {</td></tr>
-<tr class="codeline" data-linenumber="2606"><td class="num" id="LN2606">2606</td><td class="line">          <span class='keyword'>int</span> i = (<span class='keyword'>int</span>)<span class='macro'>kv_size(virt_lines)<span class='macro_popup'>((virt_lines).size)</span></span> - index;</td></tr>
-<tr class="codeline" data-linenumber="2607"><td class="num" id="LN2607">2607</td><td class="line">          <span class='macro'>assert(i &gt;= 0)<span class='macro_popup'>((void) sizeof ((i &gt;= 0) ? 1 : 0), __extension__ ({ if (i &gt;=<br> 0) ; else __assert_fail ("i &gt;= 0", "/home/runner/work/doc/doc/neovim/src/nvim/drawline.c"<br>, 2607, __extension__ __PRETTY_FUNCTION__); }))</span></span>;</td></tr>
-<tr class="codeline" data-linenumber="2608"><td class="num" id="LN2608">2608</td><td class="line">          <span class='keyword'>int</span> offset = <span class='macro'>kv_A(virt_lines, i)<span class='macro_popup'>((virt_lines).items[(i)])</span></span>.left_col ? 0 : win_col_offset;</td></tr>
-<tr class="codeline" data-linenumber="2609"><td class="num" id="LN2609">2609</td><td class="line">          draw_virt_text_item(buf, offset, <span class='macro'>kv_A(virt_lines, i)<span class='macro_popup'>((virt_lines).items[(i)])</span></span>.line,</td></tr>
-<tr class="codeline" data-linenumber="2610"><td class="num" id="LN2610">2610</td><td class="line">                              kHlModeReplace, grid-&gt;cols, 0);</td></tr>
-<tr class="codeline" data-linenumber="2611"><td class="num" id="LN2611">2611</td><td class="line">        }</td></tr>
-<tr class="codeline" data-linenumber="2612"><td class="num" id="LN2612">2612</td><td class="line">      } <span class='keyword'>else</span> {</td></tr>
-<tr class="codeline" data-linenumber="2613"><td class="num" id="LN2613">2613</td><td class="line">        draw_virt_text(wp, buf, win_col_offset, &amp;draw_col, grid-&gt;cols, row);</td></tr>
-<tr class="codeline" data-linenumber="2614"><td class="num" id="LN2614">2614</td><td class="line">      }</td></tr>
-<tr class="codeline" data-linenumber="2615"><td class="num" id="LN2615">2615</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2616"><td class="num" id="LN2616">2616</td><td class="line">      grid_put_linebuf(grid, row, 0, draw_col, grid-&gt;cols, wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span>, wp, bg_attr, wrap);</td></tr>
-<tr class="codeline" data-linenumber="2617"><td class="num" id="LN2617">2617</td><td class="line">      <span class='keyword'>if</span> (wrap) {</td></tr>
-<tr class="codeline" data-linenumber="2618"><td class="num" id="LN2618">2618</td><td class="line">        ScreenGrid *current_grid = grid;</td></tr>
-<tr class="codeline" data-linenumber="2619"><td class="num" id="LN2619">2619</td><td class="line">        <span class='keyword'>int</span> current_row = row, dummy_col = 0;  <span class='comment'>// dummy_col unused</span></td></tr>
-<tr class="codeline" data-linenumber="2620"><td class="num" id="LN2620">2620</td><td class="line">        grid_adjust(&amp;current_grid, &amp;current_row, &amp;dummy_col);</td></tr>
-<tr class="codeline" data-linenumber="2621"><td class="num" id="LN2621">2621</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2622"><td class="num" id="LN2622">2622</td><td class="line">        <span class='comment'>// Force a redraw of the first column of the next line.</span></td></tr>
-<tr class="codeline" data-linenumber="2623"><td class="num" id="LN2623">2623</td><td class="line">        current_grid-&gt;attrs[current_grid-&gt;line_offset[current_row + 1]] = -1;</td></tr>
+<tr class="codeline" data-linenumber="2442"><td class="num" id="LN2442">2442</td><td class="line">        char_attr = hl_combine_attr(win_hl_attr(wp, HLF_CUC), char_attr);</td></tr>
+<tr class="codeline" data-linenumber="2443"><td class="num" id="LN2443">2443</td><td class="line">      } <span class='keyword'>else</span> <span class='keyword'>if</span> (draw_color_col &amp;&amp; <span class='macro'>VCOL_HLC<span class='macro_popup'>(vcol - vcol_off)</span></span> == *color_cols) {</td></tr>
+<tr class="codeline" data-linenumber="2444"><td class="num" id="LN2444">2444</td><td class="line">        vcol_save_attr = char_attr;</td></tr>
+<tr class="codeline" data-linenumber="2445"><td class="num" id="LN2445">2445</td><td class="line">        char_attr = hl_combine_attr(win_hl_attr(wp, HLF_MC), char_attr);</td></tr>
+<tr class="codeline" data-linenumber="2446"><td class="num" id="LN2446">2446</td><td class="line">      }</td></tr>
+<tr class="codeline" data-linenumber="2447"><td class="num" id="LN2447">2447</td><td class="line">    }</td></tr>
+<tr class="codeline" data-linenumber="2448"><td class="num" id="LN2448">2448</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2449"><td class="num" id="LN2449">2449</td><td class="line">    <span class='comment'>// Apply lowest-priority line attr now, so everything can override it.</span></td></tr>
+<tr class="codeline" data-linenumber="2450"><td class="num" id="LN2450">2450</td><td class="line">    <span class='keyword'>if</span> (draw_state == <span class='macro'>WL_LINE<span class='macro_popup'>(((((((0 + 1) + 1) + 1) + 1) + 1) + 1) + 1)</span></span>) {</td></tr>
+<tr class="codeline" data-linenumber="2451"><td class="num" id="LN2451">2451</td><td class="line">      char_attr = hl_combine_attr(line_attr_lowprio, char_attr);</td></tr>
+<tr class="codeline" data-linenumber="2452"><td class="num" id="LN2452">2452</td><td class="line">    }</td></tr>
+<tr class="codeline" data-linenumber="2453"><td class="num" id="LN2453">2453</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2454"><td class="num" id="LN2454">2454</td><td class="line">    <span class='comment'>// Store character to be displayed.</span></td></tr>
+<tr class="codeline" data-linenumber="2455"><td class="num" id="LN2455">2455</td><td class="line">    <span class='comment'>// Skip characters that are left of the screen for 'nowrap'.</span></td></tr>
+<tr class="codeline" data-linenumber="2456"><td class="num" id="LN2456">2456</td><td class="line">    vcol_prev = vcol;</td></tr>
+<tr class="codeline" data-linenumber="2457"><td class="num" id="LN2457">2457</td><td class="line">    <span class='keyword'>if</span> (draw_state &lt; <span class='macro'>WL_LINE<span class='macro_popup'>(((((((0 + 1) + 1) + 1) + 1) + 1) + 1) + 1)</span></span> || n_skip &lt;= 0) {</td></tr>
+<tr class="codeline" data-linenumber="2458"><td class="num" id="LN2458">2458</td><td class="line">      <span class='comment'>//</span></td></tr>
+<tr class="codeline" data-linenumber="2459"><td class="num" id="LN2459">2459</td><td class="line">      <span class='comment'>// Store the character.</span></td></tr>
+<tr class="codeline" data-linenumber="2460"><td class="num" id="LN2460">2460</td><td class="line">      <span class='comment'>//</span></td></tr>
+<tr class="codeline" data-linenumber="2461"><td class="num" id="LN2461">2461</td><td class="line">      <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span> &amp;&amp; utf_char2cells(mb_c) &gt; 1) {</td></tr>
+<tr class="codeline" data-linenumber="2462"><td class="num" id="LN2462">2462</td><td class="line">        <span class='comment'>// A double-wide character is: put first half in left cell.</span></td></tr>
+<tr class="codeline" data-linenumber="2463"><td class="num" id="LN2463">2463</td><td class="line">        off--;</td></tr>
+<tr class="codeline" data-linenumber="2464"><td class="num" id="LN2464">2464</td><td class="line">        col--;</td></tr>
+<tr class="codeline" data-linenumber="2465"><td class="num" id="LN2465">2465</td><td class="line">      }</td></tr>
+<tr class="codeline" data-linenumber="2466"><td class="num" id="LN2466">2466</td><td class="line">      <span class='keyword'>if</span> (mb_utf8) {</td></tr>
+<tr class="codeline" data-linenumber="2467"><td class="num" id="LN2467">2467</td><td class="line">        schar_from_cc(linebuf_char[off], mb_c, u8cc);</td></tr>
+<tr class="codeline" data-linenumber="2468"><td class="num" id="LN2468">2468</td><td class="line">      } <span class='keyword'>else</span> {</td></tr>
+<tr class="codeline" data-linenumber="2469"><td class="num" id="LN2469">2469</td><td class="line">        schar_from_ascii(linebuf_char[off], (<span class='keyword'>char</span>)c);</td></tr>
+<tr class="codeline" data-linenumber="2470"><td class="num" id="LN2470">2470</td><td class="line">      }</td></tr>
+<tr class="codeline" data-linenumber="2471"><td class="num" id="LN2471">2471</td><td class="line">      <span class='keyword'>if</span> (multi_attr) {</td></tr>
+<tr class="codeline" data-linenumber="2472"><td class="num" id="LN2472">2472</td><td class="line">        linebuf_attr[off] = multi_attr;</td></tr>
+<tr class="codeline" data-linenumber="2473"><td class="num" id="LN2473">2473</td><td class="line">        multi_attr = 0;</td></tr>
+<tr class="codeline" data-linenumber="2474"><td class="num" id="LN2474">2474</td><td class="line">      } <span class='keyword'>else</span> {</td></tr>
+<tr class="codeline" data-linenumber="2475"><td class="num" id="LN2475">2475</td><td class="line">        linebuf_attr[off] = char_attr;</td></tr>
+<tr class="codeline" data-linenumber="2476"><td class="num" id="LN2476">2476</td><td class="line">      }</td></tr>
+<tr class="codeline" data-linenumber="2477"><td class="num" id="LN2477">2477</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2478"><td class="num" id="LN2478">2478</td><td class="line">      <span class='keyword'>if</span> (utf_char2cells(mb_c) &gt; 1) {</td></tr>
+<tr class="codeline" data-linenumber="2479"><td class="num" id="LN2479">2479</td><td class="line">        <span class='comment'>// Need to fill two screen columns.</span></td></tr>
+<tr class="codeline" data-linenumber="2480"><td class="num" id="LN2480">2480</td><td class="line">        off++;</td></tr>
+<tr class="codeline" data-linenumber="2481"><td class="num" id="LN2481">2481</td><td class="line">        col++;</td></tr>
+<tr class="codeline" data-linenumber="2482"><td class="num" id="LN2482">2482</td><td class="line">        <span class='comment'>// UTF-8: Put a 0 in the second screen char.</span></td></tr>
+<tr class="codeline" data-linenumber="2483"><td class="num" id="LN2483">2483</td><td class="line">        linebuf_char[off][0] = 0;</td></tr>
+<tr class="codeline" data-linenumber="2484"><td class="num" id="LN2484">2484</td><td class="line">        <span class='keyword'>if</span> (draw_state &gt; <span class='macro'>WL_NR<span class='macro_popup'>((((0 + 1) + 1) + 1) + 1)</span></span> &amp;&amp; filler_todo &lt;= 0) {</td></tr>
+<tr class="codeline" data-linenumber="2485"><td class="num" id="LN2485">2485</td><td class="line">          vcol++;</td></tr>
+<tr class="codeline" data-linenumber="2486"><td class="num" id="LN2486">2486</td><td class="line">        }</td></tr>
+<tr class="codeline" data-linenumber="2487"><td class="num" id="LN2487">2487</td><td class="line">        <span class='comment'>// When "tocol" is halfway through a character, set it to the end of</span></td></tr>
+<tr class="codeline" data-linenumber="2488"><td class="num" id="LN2488">2488</td><td class="line">        <span class='comment'>// the character, otherwise highlighting won't stop.</span></td></tr>
+<tr class="codeline" data-linenumber="2489"><td class="num" id="LN2489">2489</td><td class="line">        <span class='keyword'>if</span> (tocol == vcol) {</td></tr>
+<tr class="codeline" data-linenumber="2490"><td class="num" id="LN2490">2490</td><td class="line">          tocol++;</td></tr>
+<tr class="codeline" data-linenumber="2491"><td class="num" id="LN2491">2491</td><td class="line">        }</td></tr>
+<tr class="codeline" data-linenumber="2492"><td class="num" id="LN2492">2492</td><td class="line">        <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span>) {</td></tr>
+<tr class="codeline" data-linenumber="2493"><td class="num" id="LN2493">2493</td><td class="line">          <span class='comment'>// now it's time to backup one cell</span></td></tr>
+<tr class="codeline" data-linenumber="2494"><td class="num" id="LN2494">2494</td><td class="line">          off--;</td></tr>
+<tr class="codeline" data-linenumber="2495"><td class="num" id="LN2495">2495</td><td class="line">          col--;</td></tr>
+<tr class="codeline" data-linenumber="2496"><td class="num" id="LN2496">2496</td><td class="line">        }</td></tr>
+<tr class="codeline" data-linenumber="2497"><td class="num" id="LN2497">2497</td><td class="line">      }</td></tr>
+<tr class="codeline" data-linenumber="2498"><td class="num" id="LN2498">2498</td><td class="line">      <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span>) {</td></tr>
+<tr class="codeline" data-linenumber="2499"><td class="num" id="LN2499">2499</td><td class="line">        off--;</td></tr>
+<tr class="codeline" data-linenumber="2500"><td class="num" id="LN2500">2500</td><td class="line">        col--;</td></tr>
+<tr class="codeline" data-linenumber="2501"><td class="num" id="LN2501">2501</td><td class="line">      } <span class='keyword'>else</span> {</td></tr>
+<tr class="codeline" data-linenumber="2502"><td class="num" id="LN2502">2502</td><td class="line">        off++;</td></tr>
+<tr class="codeline" data-linenumber="2503"><td class="num" id="LN2503">2503</td><td class="line">        col++;</td></tr>
+<tr class="codeline" data-linenumber="2504"><td class="num" id="LN2504">2504</td><td class="line">      }</td></tr>
+<tr class="codeline" data-linenumber="2505"><td class="num" id="LN2505">2505</td><td class="line">    } <span class='keyword'>else</span> <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_cole<span class='macro_popup'>w_onebuf_opt.wo_cole</span></span> &gt; 0 &amp;&amp; is_concealing) {</td></tr>
+<tr class="codeline" data-linenumber="2506"><td class="num" id="LN2506">2506</td><td class="line">      n_skip--;</td></tr>
+<tr class="codeline" data-linenumber="2507"><td class="num" id="LN2507">2507</td><td class="line">      vcol_off++;</td></tr>
+<tr class="codeline" data-linenumber="2508"><td class="num" id="LN2508">2508</td><td class="line">      <span class='keyword'>if</span> (n_extra &gt; 0) {</td></tr>
+<tr class="codeline" data-linenumber="2509"><td class="num" id="LN2509">2509</td><td class="line">        vcol_off += n_extra;</td></tr>
+<tr class="codeline" data-linenumber="2510"><td class="num" id="LN2510">2510</td><td class="line">      }</td></tr>
+<tr class="codeline" data-linenumber="2511"><td class="num" id="LN2511">2511</td><td class="line">      <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_wrap<span class='macro_popup'>w_onebuf_opt.wo_wrap</span></span>) {</td></tr>
+<tr class="codeline" data-linenumber="2512"><td class="num" id="LN2512">2512</td><td class="line">        <span class='comment'>// Special voodoo required if 'wrap' is on.</span></td></tr>
+<tr class="codeline" data-linenumber="2513"><td class="num" id="LN2513">2513</td><td class="line">        <span class='comment'>//</span></td></tr>
+<tr class="codeline" data-linenumber="2514"><td class="num" id="LN2514">2514</td><td class="line">        <span class='comment'>// Advance the column indicator to force the line</span></td></tr>
+<tr class="codeline" data-linenumber="2515"><td class="num" id="LN2515">2515</td><td class="line">        <span class='comment'>// drawing to wrap early. This will make the line</span></td></tr>
+<tr class="codeline" data-linenumber="2516"><td class="num" id="LN2516">2516</td><td class="line">        <span class='comment'>// take up the same screen space when parts are concealed,</span></td></tr>
+<tr class="codeline" data-linenumber="2517"><td class="num" id="LN2517">2517</td><td class="line">        <span class='comment'>// so that cursor line computations aren't messed up.</span></td></tr>
+<tr class="codeline" data-linenumber="2518"><td class="num" id="LN2518">2518</td><td class="line">        <span class='comment'>//</span></td></tr>
+<tr class="codeline" data-linenumber="2519"><td class="num" id="LN2519">2519</td><td class="line">        <span class='comment'>// To avoid the fictitious advance of 'col' causing</span></td></tr>
+<tr class="codeline" data-linenumber="2520"><td class="num" id="LN2520">2520</td><td class="line">        <span class='comment'>// trailing junk to be written out of the screen line</span></td></tr>
+<tr class="codeline" data-linenumber="2521"><td class="num" id="LN2521">2521</td><td class="line">        <span class='comment'>// we are building, 'boguscols' keeps track of the number</span></td></tr>
+<tr class="codeline" data-linenumber="2522"><td class="num" id="LN2522">2522</td><td class="line">        <span class='comment'>// of bad columns we have advanced.</span></td></tr>
+<tr class="codeline" data-linenumber="2523"><td class="num" id="LN2523">2523</td><td class="line">        <span class='keyword'>if</span> (n_extra &gt; 0) {</td></tr>
+<tr class="codeline" data-linenumber="2524"><td class="num" id="LN2524">2524</td><td class="line">          vcol += n_extra;</td></tr>
+<tr class="codeline" data-linenumber="2525"><td class="num" id="LN2525">2525</td><td class="line">          <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span>) {</td></tr>
+<tr class="codeline" data-linenumber="2526"><td class="num" id="LN2526">2526</td><td class="line">            col -= n_extra;</td></tr>
+<tr class="codeline" data-linenumber="2527"><td class="num" id="LN2527">2527</td><td class="line">            boguscols -= n_extra;</td></tr>
+<tr class="codeline" data-linenumber="2528"><td class="num" id="LN2528">2528</td><td class="line">          } <span class='keyword'>else</span> {</td></tr>
+<tr class="codeline" data-linenumber="2529"><td class="num" id="LN2529">2529</td><td class="line">            col += n_extra;</td></tr>
+<tr class="codeline" data-linenumber="2530"><td class="num" id="LN2530">2530</td><td class="line">            boguscols += n_extra;</td></tr>
+<tr class="codeline" data-linenumber="2531"><td class="num" id="LN2531">2531</td><td class="line">          }</td></tr>
+<tr class="codeline" data-linenumber="2532"><td class="num" id="LN2532">2532</td><td class="line">          n_extra = 0;</td></tr>
+<tr class="codeline" data-linenumber="2533"><td class="num" id="LN2533">2533</td><td class="line">          n_attr = 0;</td></tr>
+<tr class="codeline" data-linenumber="2534"><td class="num" id="LN2534">2534</td><td class="line">        }</td></tr>
+<tr class="codeline" data-linenumber="2535"><td class="num" id="LN2535">2535</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2536"><td class="num" id="LN2536">2536</td><td class="line">        <span class='keyword'>if</span> (utf_char2cells(mb_c) &gt; 1) {</td></tr>
+<tr class="codeline" data-linenumber="2537"><td class="num" id="LN2537">2537</td><td class="line">          <span class='comment'>// Need to fill two screen columns.</span></td></tr>
+<tr class="codeline" data-linenumber="2538"><td class="num" id="LN2538">2538</td><td class="line">          <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span>) {</td></tr>
+<tr class="codeline" data-linenumber="2539"><td class="num" id="LN2539">2539</td><td class="line">            boguscols--;</td></tr>
+<tr class="codeline" data-linenumber="2540"><td class="num" id="LN2540">2540</td><td class="line">            col--;</td></tr>
+<tr class="codeline" data-linenumber="2541"><td class="num" id="LN2541">2541</td><td class="line">          } <span class='keyword'>else</span> {</td></tr>
+<tr class="codeline" data-linenumber="2542"><td class="num" id="LN2542">2542</td><td class="line">            boguscols++;</td></tr>
+<tr class="codeline" data-linenumber="2543"><td class="num" id="LN2543">2543</td><td class="line">            col++;</td></tr>
+<tr class="codeline" data-linenumber="2544"><td class="num" id="LN2544">2544</td><td class="line">          }</td></tr>
+<tr class="codeline" data-linenumber="2545"><td class="num" id="LN2545">2545</td><td class="line">        }</td></tr>
+<tr class="codeline" data-linenumber="2546"><td class="num" id="LN2546">2546</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2547"><td class="num" id="LN2547">2547</td><td class="line">        <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span>) {</td></tr>
+<tr class="codeline" data-linenumber="2548"><td class="num" id="LN2548">2548</td><td class="line">          boguscols--;</td></tr>
+<tr class="codeline" data-linenumber="2549"><td class="num" id="LN2549">2549</td><td class="line">          col--;</td></tr>
+<tr class="codeline" data-linenumber="2550"><td class="num" id="LN2550">2550</td><td class="line">        } <span class='keyword'>else</span> {</td></tr>
+<tr class="codeline" data-linenumber="2551"><td class="num" id="LN2551">2551</td><td class="line">          boguscols++;</td></tr>
+<tr class="codeline" data-linenumber="2552"><td class="num" id="LN2552">2552</td><td class="line">          col++;</td></tr>
+<tr class="codeline" data-linenumber="2553"><td class="num" id="LN2553">2553</td><td class="line">        }</td></tr>
+<tr class="codeline" data-linenumber="2554"><td class="num" id="LN2554">2554</td><td class="line">      } <span class='keyword'>else</span> {</td></tr>
+<tr class="codeline" data-linenumber="2555"><td class="num" id="LN2555">2555</td><td class="line">        <span class='keyword'>if</span> (n_extra &gt; 0) {</td></tr>
+<tr class="codeline" data-linenumber="2556"><td class="num" id="LN2556">2556</td><td class="line">          vcol += n_extra;</td></tr>
+<tr class="codeline" data-linenumber="2557"><td class="num" id="LN2557">2557</td><td class="line">          n_extra = 0;</td></tr>
+<tr class="codeline" data-linenumber="2558"><td class="num" id="LN2558">2558</td><td class="line">          n_attr = 0;</td></tr>
+<tr class="codeline" data-linenumber="2559"><td class="num" id="LN2559">2559</td><td class="line">        }</td></tr>
+<tr class="codeline" data-linenumber="2560"><td class="num" id="LN2560">2560</td><td class="line">      }</td></tr>
+<tr class="codeline" data-linenumber="2561"><td class="num" id="LN2561">2561</td><td class="line">    } <span class='keyword'>else</span> {</td></tr>
+<tr class="codeline" data-linenumber="2562"><td class="num" id="LN2562">2562</td><td class="line">      n_skip--;</td></tr>
+<tr class="codeline" data-linenumber="2563"><td class="num" id="LN2563">2563</td><td class="line">    }</td></tr>
+<tr class="codeline" data-linenumber="2564"><td class="num" id="LN2564">2564</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2565"><td class="num" id="LN2565">2565</td><td class="line">    <span class='comment'>// Only advance the "vcol" when after the 'number' or 'relativenumber'</span></td></tr>
+<tr class="codeline" data-linenumber="2566"><td class="num" id="LN2566">2566</td><td class="line">    <span class='comment'>// column.</span></td></tr>
+<tr class="codeline" data-linenumber="2567"><td class="num" id="LN2567">2567</td><td class="line">    <span class='keyword'>if</span> (draw_state &gt; <span class='macro'>WL_NR<span class='macro_popup'>((((0 + 1) + 1) + 1) + 1)</span></span></td></tr>
+<tr class="codeline" data-linenumber="2568"><td class="num" id="LN2568">2568</td><td class="line">        &amp;&amp; filler_todo &lt;= 0) {</td></tr>
+<tr class="codeline" data-linenumber="2569"><td class="num" id="LN2569">2569</td><td class="line">      vcol++;</td></tr>
+<tr class="codeline" data-linenumber="2570"><td class="num" id="LN2570">2570</td><td class="line">    }</td></tr>
+<tr class="codeline" data-linenumber="2571"><td class="num" id="LN2571">2571</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2572"><td class="num" id="LN2572">2572</td><td class="line">    <span class='keyword'>if</span> (vcol_save_attr &gt;= 0) {</td></tr>
+<tr class="codeline" data-linenumber="2573"><td class="num" id="LN2573">2573</td><td class="line">      char_attr = vcol_save_attr;</td></tr>
+<tr class="codeline" data-linenumber="2574"><td class="num" id="LN2574">2574</td><td class="line">    }</td></tr>
+<tr class="codeline" data-linenumber="2575"><td class="num" id="LN2575">2575</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2576"><td class="num" id="LN2576">2576</td><td class="line">    <span class='comment'>// restore attributes after "predeces" in 'listchars'</span></td></tr>
+<tr class="codeline" data-linenumber="2577"><td class="num" id="LN2577">2577</td><td class="line">    <span class='keyword'>if</span> (draw_state &gt; <span class='macro'>WL_NR<span class='macro_popup'>((((0 + 1) + 1) + 1) + 1)</span></span> &amp;&amp; n_attr3 &gt; 0 &amp;&amp; --n_attr3 == 0) {</td></tr>
+<tr class="codeline" data-linenumber="2578"><td class="num" id="LN2578">2578</td><td class="line">      char_attr = saved_attr3;</td></tr>
+<tr class="codeline" data-linenumber="2579"><td class="num" id="LN2579">2579</td><td class="line">    }</td></tr>
+<tr class="codeline" data-linenumber="2580"><td class="num" id="LN2580">2580</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2581"><td class="num" id="LN2581">2581</td><td class="line">    <span class='comment'>// restore attributes after last 'listchars' or 'number' char</span></td></tr>
+<tr class="codeline" data-linenumber="2582"><td class="num" id="LN2582">2582</td><td class="line">    <span class='keyword'>if</span> (n_attr &gt; 0 &amp;&amp; draw_state == <span class='macro'>WL_LINE<span class='macro_popup'>(((((((0 + 1) + 1) + 1) + 1) + 1) + 1) + 1)</span></span> &amp;&amp; --n_attr == 0) {</td></tr>
+<tr class="codeline" data-linenumber="2583"><td class="num" id="LN2583">2583</td><td class="line">      char_attr = saved_attr2;</td></tr>
+<tr class="codeline" data-linenumber="2584"><td class="num" id="LN2584">2584</td><td class="line">    }</td></tr>
+<tr class="codeline" data-linenumber="2585"><td class="num" id="LN2585">2585</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2586"><td class="num" id="LN2586">2586</td><td class="line">    <span class='comment'>// At end of screen line and there is more to come: Display the line</span></td></tr>
+<tr class="codeline" data-linenumber="2587"><td class="num" id="LN2587">2587</td><td class="line">    <span class='comment'>// so far.  If there is no more to display it is caught above.</span></td></tr>
+<tr class="codeline" data-linenumber="2588"><td class="num" id="LN2588">2588</td><td class="line">    <span class='keyword'>if</span> ((wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span> ? (col &lt; 0) : (col &gt;= grid-&gt;cols))</td></tr>
+<tr class="codeline" data-linenumber="2589"><td class="num" id="LN2589">2589</td><td class="line">        &amp;&amp; foldinfo.fi_lines == 0</td></tr>
+<tr class="codeline" data-linenumber="2590"><td class="num" id="LN2590">2590</td><td class="line">        &amp;&amp; (draw_state != <span class='macro'>WL_LINE<span class='macro_popup'>(((((((0 + 1) + 1) + 1) + 1) + 1) + 1) + 1)</span></span></td></tr>
+<tr class="codeline" data-linenumber="2591"><td class="num" id="LN2591">2591</td><td class="line">            || *ptr != <span class='macro'>NUL<span class='macro_popup'>'\000'</span></span></td></tr>
+<tr class="codeline" data-linenumber="2592"><td class="num" id="LN2592">2592</td><td class="line">            || filler_todo &gt; 0</td></tr>
+<tr class="codeline" data-linenumber="2593"><td class="num" id="LN2593">2593</td><td class="line">            || (wp-&gt;<span class='macro'>w_p_list<span class='macro_popup'>w_onebuf_opt.wo_list</span></span> &amp;&amp; wp-&gt;w_p_lcs_chars.eol != <span class='macro'>NUL<span class='macro_popup'>'\000'</span></span></td></tr>
+<tr class="codeline" data-linenumber="2594"><td class="num" id="LN2594">2594</td><td class="line">                &amp;&amp; p_extra != at_end_str)</td></tr>
+<tr class="codeline" data-linenumber="2595"><td class="num" id="LN2595">2595</td><td class="line">            || (n_extra != 0</td></tr>
+<tr class="codeline" data-linenumber="2596"><td class="num" id="LN2596">2596</td><td class="line">                &amp;&amp; (c_extra != <span class='macro'>NUL<span class='macro_popup'>'\000'</span></span> || *p_extra != <span class='macro'>NUL<span class='macro_popup'>'\000'</span></span>)))) {</td></tr>
+<tr class="codeline" data-linenumber="2597"><td class="num" id="LN2597">2597</td><td class="line">      <span class='macro'>bool<span class='macro_popup'>_Bool</span></span> wrap = wp-&gt;<span class='macro'>w_p_wrap<span class='macro_popup'>w_onebuf_opt.wo_wrap</span></span>       <span class='comment'>// Wrapping enabled.</span></td></tr>
+<tr class="codeline" data-linenumber="2598"><td class="num" id="LN2598">2598</td><td class="line">                  &amp;&amp; filler_todo &lt;= 0          <span class='comment'>// Not drawing diff filler lines.</span></td></tr>
+<tr class="codeline" data-linenumber="2599"><td class="num" id="LN2599">2599</td><td class="line">                  &amp;&amp; lcs_eol_one != -1         <span class='comment'>// Haven't printed the lcs_eol character.</span></td></tr>
+<tr class="codeline" data-linenumber="2600"><td class="num" id="LN2600">2600</td><td class="line">                  &amp;&amp; row != endrow - 1         <span class='comment'>// Not the last line being displayed.</span></td></tr>
+<tr class="codeline" data-linenumber="2601"><td class="num" id="LN2601">2601</td><td class="line">                  &amp;&amp; (grid-&gt;cols == Columns  <span class='comment'>// Window spans the width of the screen,</span></td></tr>
+<tr class="codeline" data-linenumber="2602"><td class="num" id="LN2602">2602</td><td class="line">                      || ui_has(kUIMultigrid))  <span class='comment'>// or has dedicated grid.</span></td></tr>
+<tr class="codeline" data-linenumber="2603"><td class="num" id="LN2603">2603</td><td class="line">                  &amp;&amp; !wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span>;              <span class='comment'>// Not right-to-left.</span></td></tr>
+<tr class="codeline" data-linenumber="2604"><td class="num" id="LN2604">2604</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2605"><td class="num" id="LN2605">2605</td><td class="line">      <span class='keyword'>int</span> draw_col = col - boguscols;</td></tr>
+<tr class="codeline" data-linenumber="2606"><td class="num" id="LN2606">2606</td><td class="line">      <span class='keyword'>if</span> (filler_todo &gt; 0) {</td></tr>
+<tr class="codeline" data-linenumber="2607"><td class="num" id="LN2607">2607</td><td class="line">        <span class='keyword'>int</span> index = filler_todo - (filler_lines - n_virt_lines);</td></tr>
+<tr class="codeline" data-linenumber="2608"><td class="num" id="LN2608">2608</td><td class="line">        <span class='keyword'>if</span> (index &gt; 0) {</td></tr>
+<tr class="codeline" data-linenumber="2609"><td class="num" id="LN2609">2609</td><td class="line">          <span class='keyword'>int</span> i = (<span class='keyword'>int</span>)<span class='macro'>kv_size(virt_lines)<span class='macro_popup'>((virt_lines).size)</span></span> - index;</td></tr>
+<tr class="codeline" data-linenumber="2610"><td class="num" id="LN2610">2610</td><td class="line">          <span class='macro'>assert(i &gt;= 0)<span class='macro_popup'>((void) sizeof ((i &gt;= 0) ? 1 : 0), __extension__ ({ if (i &gt;=<br> 0) ; else __assert_fail ("i &gt;= 0", "/home/runner/work/doc/doc/neovim/src/nvim/drawline.c"<br>, 2610, __extension__ __PRETTY_FUNCTION__); }))</span></span>;</td></tr>
+<tr class="codeline" data-linenumber="2611"><td class="num" id="LN2611">2611</td><td class="line">          <span class='keyword'>int</span> offset = <span class='macro'>kv_A(virt_lines, i)<span class='macro_popup'>((virt_lines).items[(i)])</span></span>.left_col ? 0 : win_col_offset;</td></tr>
+<tr class="codeline" data-linenumber="2612"><td class="num" id="LN2612">2612</td><td class="line">          draw_virt_text_item(buf, offset, <span class='macro'>kv_A(virt_lines, i)<span class='macro_popup'>((virt_lines).items[(i)])</span></span>.line,</td></tr>
+<tr class="codeline" data-linenumber="2613"><td class="num" id="LN2613">2613</td><td class="line">                              kHlModeReplace, grid-&gt;cols, 0);</td></tr>
+<tr class="codeline" data-linenumber="2614"><td class="num" id="LN2614">2614</td><td class="line">        }</td></tr>
+<tr class="codeline" data-linenumber="2615"><td class="num" id="LN2615">2615</td><td class="line">      } <span class='keyword'>else</span> {</td></tr>
+<tr class="codeline" data-linenumber="2616"><td class="num" id="LN2616">2616</td><td class="line">        draw_virt_text(wp, buf, win_col_offset, &amp;draw_col, grid-&gt;cols, row);</td></tr>
+<tr class="codeline" data-linenumber="2617"><td class="num" id="LN2617">2617</td><td class="line">      }</td></tr>
+<tr class="codeline" data-linenumber="2618"><td class="num" id="LN2618">2618</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2619"><td class="num" id="LN2619">2619</td><td class="line">      grid_put_linebuf(grid, row, 0, draw_col, grid-&gt;cols, wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span>, wp, bg_attr, wrap);</td></tr>
+<tr class="codeline" data-linenumber="2620"><td class="num" id="LN2620">2620</td><td class="line">      <span class='keyword'>if</span> (wrap) {</td></tr>
+<tr class="codeline" data-linenumber="2621"><td class="num" id="LN2621">2621</td><td class="line">        ScreenGrid *current_grid = grid;</td></tr>
+<tr class="codeline" data-linenumber="2622"><td class="num" id="LN2622">2622</td><td class="line">        <span class='keyword'>int</span> current_row = row, dummy_col = 0;  <span class='comment'>// dummy_col unused</span></td></tr>
+<tr class="codeline" data-linenumber="2623"><td class="num" id="LN2623">2623</td><td class="line">        grid_adjust(&amp;current_grid, &amp;current_row, &amp;dummy_col);</td></tr>
 <tr class="codeline" data-linenumber="2624"><td class="num" id="LN2624">2624</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2625"><td class="num" id="LN2625">2625</td><td class="line">        <span class='comment'>// Remember that the line wraps, used for modeless copy.</span></td></tr>
-<tr class="codeline" data-linenumber="2626"><td class="num" id="LN2626">2626</td><td class="line">        current_grid-&gt;line_wraps[current_row] = <span class='macro'>true<span class='macro_popup'>1</span></span>;</td></tr>
-<tr class="codeline" data-linenumber="2627"><td class="num" id="LN2627">2627</td><td class="line">      }</td></tr>
-<tr class="codeline" data-linenumber="2628"><td class="num" id="LN2628">2628</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2629"><td class="num" id="LN2629">2629</td><td class="line">      boguscols = 0;</td></tr>
-<tr class="codeline" data-linenumber="2630"><td class="num" id="LN2630">2630</td><td class="line">      row++;</td></tr>
+<tr class="codeline" data-linenumber="2625"><td class="num" id="LN2625">2625</td><td class="line">        <span class='comment'>// Force a redraw of the first column of the next line.</span></td></tr>
+<tr class="codeline" data-linenumber="2626"><td class="num" id="LN2626">2626</td><td class="line">        current_grid-&gt;attrs[current_grid-&gt;line_offset[current_row + 1]] = -1;</td></tr>
+<tr class="codeline" data-linenumber="2627"><td class="num" id="LN2627">2627</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2628"><td class="num" id="LN2628">2628</td><td class="line">        <span class='comment'>// Remember that the line wraps, used for modeless copy.</span></td></tr>
+<tr class="codeline" data-linenumber="2629"><td class="num" id="LN2629">2629</td><td class="line">        current_grid-&gt;line_wraps[current_row] = <span class='macro'>true<span class='macro_popup'>1</span></span>;</td></tr>
+<tr class="codeline" data-linenumber="2630"><td class="num" id="LN2630">2630</td><td class="line">      }</td></tr>
 <tr class="codeline" data-linenumber="2631"><td class="num" id="LN2631">2631</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2632"><td class="num" id="LN2632">2632</td><td class="line">      <span class='comment'>// When not wrapping and finished diff lines, or when displayed</span></td></tr>
-<tr class="codeline" data-linenumber="2633"><td class="num" id="LN2633">2633</td><td class="line">      <span class='comment'>// '$' and highlighting until last column, break here.</span></td></tr>
-<tr class="codeline" data-linenumber="2634"><td class="num" id="LN2634">2634</td><td class="line">      <span class='keyword'>if</span> ((!wp-&gt;<span class='macro'>w_p_wrap<span class='macro_popup'>w_onebuf_opt.wo_wrap</span></span> &amp;&amp; filler_todo &lt;= 0) || lcs_eol_one == -1) {</td></tr>
-<tr class="codeline" data-linenumber="2635"><td class="num" id="LN2635">2635</td><td class="line">        <span class='keyword'>break</span>;</td></tr>
-<tr class="codeline" data-linenumber="2636"><td class="num" id="LN2636">2636</td><td class="line">      }</td></tr>
-<tr class="codeline" data-linenumber="2637"><td class="num" id="LN2637">2637</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2638"><td class="num" id="LN2638">2638</td><td class="line">      <span class='comment'>// When the window is too narrow draw all "@" lines.</span></td></tr>
-<tr class="codeline" data-linenumber="2639"><td class="num" id="LN2639">2639</td><td class="line">      <span class='keyword'>if</span> (draw_state != <span class='macro'>WL_LINE<span class='macro_popup'>(((((((0 + 1) + 1) + 1) + 1) + 1) + 1) + 1)</span></span> &amp;&amp; filler_todo &lt;= 0) {</td></tr>
-<tr class="codeline" data-linenumber="2640"><td class="num" id="LN2640">2640</td><td class="line">        win_draw_end(wp, '@', ' ', <span class='macro'>true<span class='macro_popup'>1</span></span>, row, wp-&gt;w_grid.rows, HLF_AT);</td></tr>
-<tr class="codeline" data-linenumber="2641"><td class="num" id="LN2641">2641</td><td class="line">        set_empty_rows(wp, row);</td></tr>
-<tr class="codeline" data-linenumber="2642"><td class="num" id="LN2642">2642</td><td class="line">        row = endrow;</td></tr>
-<tr class="codeline" data-linenumber="2643"><td class="num" id="LN2643">2643</td><td class="line">      }</td></tr>
-<tr class="codeline" data-linenumber="2644"><td class="num" id="LN2644">2644</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2645"><td class="num" id="LN2645">2645</td><td class="line">      <span class='comment'>// When line got too long for screen break here.</span></td></tr>
-<tr class="codeline" data-linenumber="2646"><td class="num" id="LN2646">2646</td><td class="line">      <span class='keyword'>if</span> (row == endrow) {</td></tr>
-<tr class="codeline" data-linenumber="2647"><td class="num" id="LN2647">2647</td><td class="line">        row++;</td></tr>
-<tr class="codeline" data-linenumber="2648"><td class="num" id="LN2648">2648</td><td class="line">        <span class='keyword'>break</span>;</td></tr>
-<tr class="codeline" data-linenumber="2649"><td class="num" id="LN2649">2649</td><td class="line">      }</td></tr>
-<tr class="codeline" data-linenumber="2650"><td class="num" id="LN2650">2650</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2651"><td class="num" id="LN2651">2651</td><td class="line">      col = 0;</td></tr>
-<tr class="codeline" data-linenumber="2652"><td class="num" id="LN2652">2652</td><td class="line">      off = 0;</td></tr>
-<tr class="codeline" data-linenumber="2653"><td class="num" id="LN2653">2653</td><td class="line">      <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span>) {</td></tr>
-<tr class="codeline" data-linenumber="2654"><td class="num" id="LN2654">2654</td><td class="line">        col = grid-&gt;cols - 1;  <span class='comment'>// col is not used if breaking!</span></td></tr>
-<tr class="codeline" data-linenumber="2655"><td class="num" id="LN2655">2655</td><td class="line">        off += col;</td></tr>
-<tr class="codeline" data-linenumber="2656"><td class="num" id="LN2656">2656</td><td class="line">      }</td></tr>
-<tr class="codeline" data-linenumber="2657"><td class="num" id="LN2657">2657</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2658"><td class="num" id="LN2658">2658</td><td class="line">      <span class='comment'>// reset the drawing state for the start of a wrapped line</span></td></tr>
-<tr class="codeline" data-linenumber="2659"><td class="num" id="LN2659">2659</td><td class="line">      draw_state = <span class='macro'>WL_START<span class='macro_popup'>0</span></span>;</td></tr>
-<tr class="codeline" data-linenumber="2660"><td class="num" id="LN2660">2660</td><td class="line">      saved_n_extra = n_extra;</td></tr>
-<tr class="codeline" data-linenumber="2661"><td class="num" id="LN2661">2661</td><td class="line">      saved_p_extra = p_extra;</td></tr>
-<tr class="codeline" data-linenumber="2662"><td class="num" id="LN2662">2662</td><td class="line">      saved_c_extra = c_extra;</td></tr>
-<tr class="codeline" data-linenumber="2663"><td class="num" id="LN2663">2663</td><td class="line">      saved_c_final = c_final;</td></tr>
-<tr class="codeline" data-linenumber="2664"><td class="num" id="LN2664">2664</td><td class="line">      saved_char_attr = char_attr;</td></tr>
-<tr class="codeline" data-linenumber="2665"><td class="num" id="LN2665">2665</td><td class="line">      n_extra = 0;</td></tr>
-<tr class="codeline" data-linenumber="2666"><td class="num" id="LN2666">2666</td><td class="line">      lcs_prec_todo = wp-&gt;w_p_lcs_chars.prec;</td></tr>
-<tr class="codeline" data-linenumber="2667"><td class="num" id="LN2667">2667</td><td class="line">      <span class='keyword'>if</span> (filler_todo &lt;= 0) {</td></tr>
-<tr class="codeline" data-linenumber="2668"><td class="num" id="LN2668">2668</td><td class="line">        need_showbreak = <span class='macro'>true<span class='macro_popup'>1</span></span>;</td></tr>
-<tr class="codeline" data-linenumber="2669"><td class="num" id="LN2669">2669</td><td class="line">      }</td></tr>
-<tr class="codeline" data-linenumber="2670"><td class="num" id="LN2670">2670</td><td class="line">      filler_todo--;</td></tr>
-<tr class="codeline" data-linenumber="2671"><td class="num" id="LN2671">2671</td><td class="line">      <span class='comment'>// When the filler lines are actually below the last line of the</span></td></tr>
-<tr class="codeline" data-linenumber="2672"><td class="num" id="LN2672">2672</td><td class="line">      <span class='comment'>// file, don't draw the line itself, break here.</span></td></tr>
-<tr class="codeline" data-linenumber="2673"><td class="num" id="LN2673">2673</td><td class="line">      <span class='keyword'>if</span> (filler_todo == 0 &amp;&amp; (wp-&gt;w_botfill || end_fill)) {</td></tr>
-<tr class="codeline" data-linenumber="2674"><td class="num" id="LN2674">2674</td><td class="line">        <span class='keyword'>break</span>;</td></tr>
-<tr class="codeline" data-linenumber="2675"><td class="num" id="LN2675">2675</td><td class="line">      }</td></tr>
-<tr class="codeline" data-linenumber="2676"><td class="num" id="LN2676">2676</td><td class="line">    }</td></tr>
-<tr class="codeline" data-linenumber="2677"><td class="num" id="LN2677">2677</td><td class="line">  }     <span class='comment'>// for every character in the line</span></td></tr>
-<tr class="codeline" data-linenumber="2678"><td class="num" id="LN2678">2678</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2679"><td class="num" id="LN2679">2679</td><td class="line">  <span class='comment'>// After an empty line check first word for capital.</span></td></tr>
-<tr class="codeline" data-linenumber="2680"><td class="num" id="LN2680">2680</td><td class="line">  <span class='keyword'>if</span> (*skipwhite((<span class='keyword'>char</span> *)line) == <span class='macro'>NUL<span class='macro_popup'>'\000'</span></span>) {</td></tr>
-<tr class="codeline" data-linenumber="2681"><td class="num" id="LN2681">2681</td><td class="line">    capcol_lnum = lnum + 1;</td></tr>
-<tr class="codeline" data-linenumber="2682"><td class="num" id="LN2682">2682</td><td class="line">    cap_col = 0;</td></tr>
-<tr class="codeline" data-linenumber="2683"><td class="num" id="LN2683">2683</td><td class="line">  }</td></tr>
-<tr class="codeline" data-linenumber="2684"><td class="num" id="LN2684">2684</td><td class="line"> </td></tr>
-<tr class="codeline" data-linenumber="2685"><td class="num" id="LN2685">2685</td><td class="line">  <span class='macro'>kv_destroy(virt_lines)<span class='macro_popup'>do { xfree((virt_lines).items); ((virt_lines).size = (virt_lines<br>).capacity = 0, (virt_lines).items = 0); } while (0)</span></span>;</td></tr>
-<tr class="codeline" data-linenumber="2686"><td class="num" id="LN2686">2686</td><td class="line">  xfree(p_extra_free);</td></tr>
-<tr class="codeline" data-linenumber="2687"><td class="num" id="LN2687">2687</td><td class="line">  <span class='keyword'>return</span> row;</td></tr>
-<tr class="codeline" data-linenumber="2688"><td class="num" id="LN2688">2688</td><td class="line">}</td></tr>
+<tr class="codeline" data-linenumber="2632"><td class="num" id="LN2632">2632</td><td class="line">      boguscols = 0;</td></tr>
+<tr class="codeline" data-linenumber="2633"><td class="num" id="LN2633">2633</td><td class="line">      row++;</td></tr>
+<tr class="codeline" data-linenumber="2634"><td class="num" id="LN2634">2634</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2635"><td class="num" id="LN2635">2635</td><td class="line">      <span class='comment'>// When not wrapping and finished diff lines, or when displayed</span></td></tr>
+<tr class="codeline" data-linenumber="2636"><td class="num" id="LN2636">2636</td><td class="line">      <span class='comment'>// '$' and highlighting until last column, break here.</span></td></tr>
+<tr class="codeline" data-linenumber="2637"><td class="num" id="LN2637">2637</td><td class="line">      <span class='keyword'>if</span> ((!wp-&gt;<span class='macro'>w_p_wrap<span class='macro_popup'>w_onebuf_opt.wo_wrap</span></span> &amp;&amp; filler_todo &lt;= 0) || lcs_eol_one == -1) {</td></tr>
+<tr class="codeline" data-linenumber="2638"><td class="num" id="LN2638">2638</td><td class="line">        <span class='keyword'>break</span>;</td></tr>
+<tr class="codeline" data-linenumber="2639"><td class="num" id="LN2639">2639</td><td class="line">      }</td></tr>
+<tr class="codeline" data-linenumber="2640"><td class="num" id="LN2640">2640</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2641"><td class="num" id="LN2641">2641</td><td class="line">      <span class='comment'>// When the window is too narrow draw all "@" lines.</span></td></tr>
+<tr class="codeline" data-linenumber="2642"><td class="num" id="LN2642">2642</td><td class="line">      <span class='keyword'>if</span> (draw_state != <span class='macro'>WL_LINE<span class='macro_popup'>(((((((0 + 1) + 1) + 1) + 1) + 1) + 1) + 1)</span></span> &amp;&amp; filler_todo &lt;= 0) {</td></tr>
+<tr class="codeline" data-linenumber="2643"><td class="num" id="LN2643">2643</td><td class="line">        win_draw_end(wp, '@', ' ', <span class='macro'>true<span class='macro_popup'>1</span></span>, row, wp-&gt;w_grid.rows, HLF_AT);</td></tr>
+<tr class="codeline" data-linenumber="2644"><td class="num" id="LN2644">2644</td><td class="line">        set_empty_rows(wp, row);</td></tr>
+<tr class="codeline" data-linenumber="2645"><td class="num" id="LN2645">2645</td><td class="line">        row = endrow;</td></tr>
+<tr class="codeline" data-linenumber="2646"><td class="num" id="LN2646">2646</td><td class="line">      }</td></tr>
+<tr class="codeline" data-linenumber="2647"><td class="num" id="LN2647">2647</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2648"><td class="num" id="LN2648">2648</td><td class="line">      <span class='comment'>// When line got too long for screen break here.</span></td></tr>
+<tr class="codeline" data-linenumber="2649"><td class="num" id="LN2649">2649</td><td class="line">      <span class='keyword'>if</span> (row == endrow) {</td></tr>
+<tr class="codeline" data-linenumber="2650"><td class="num" id="LN2650">2650</td><td class="line">        row++;</td></tr>
+<tr class="codeline" data-linenumber="2651"><td class="num" id="LN2651">2651</td><td class="line">        <span class='keyword'>break</span>;</td></tr>
+<tr class="codeline" data-linenumber="2652"><td class="num" id="LN2652">2652</td><td class="line">      }</td></tr>
+<tr class="codeline" data-linenumber="2653"><td class="num" id="LN2653">2653</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2654"><td class="num" id="LN2654">2654</td><td class="line">      col = 0;</td></tr>
+<tr class="codeline" data-linenumber="2655"><td class="num" id="LN2655">2655</td><td class="line">      off = 0;</td></tr>
+<tr class="codeline" data-linenumber="2656"><td class="num" id="LN2656">2656</td><td class="line">      <span class='keyword'>if</span> (wp-&gt;<span class='macro'>w_p_rl<span class='macro_popup'>w_onebuf_opt.wo_rl</span></span>) {</td></tr>
+<tr class="codeline" data-linenumber="2657"><td class="num" id="LN2657">2657</td><td class="line">        col = grid-&gt;cols - 1;  <span class='comment'>// col is not used if breaking!</span></td></tr>
+<tr class="codeline" data-linenumber="2658"><td class="num" id="LN2658">2658</td><td class="line">        off += col;</td></tr>
+<tr class="codeline" data-linenumber="2659"><td class="num" id="LN2659">2659</td><td class="line">      }</td></tr>
+<tr class="codeline" data-linenumber="2660"><td class="num" id="LN2660">2660</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2661"><td class="num" id="LN2661">2661</td><td class="line">      <span class='comment'>// reset the drawing state for the start of a wrapped line</span></td></tr>
+<tr class="codeline" data-linenumber="2662"><td class="num" id="LN2662">2662</td><td class="line">      draw_state = <span class='macro'>WL_START<span class='macro_popup'>0</span></span>;</td></tr>
+<tr class="codeline" data-linenumber="2663"><td class="num" id="LN2663">2663</td><td class="line">      saved_n_extra = n_extra;</td></tr>
+<tr class="codeline" data-linenumber="2664"><td class="num" id="LN2664">2664</td><td class="line">      saved_p_extra = p_extra;</td></tr>
+<tr class="codeline" data-linenumber="2665"><td class="num" id="LN2665">2665</td><td class="line">      saved_c_extra = c_extra;</td></tr>
+<tr class="codeline" data-linenumber="2666"><td class="num" id="LN2666">2666</td><td class="line">      saved_c_final = c_final;</td></tr>
+<tr class="codeline" data-linenumber="2667"><td class="num" id="LN2667">2667</td><td class="line">      saved_char_attr = char_attr;</td></tr>
+<tr class="codeline" data-linenumber="2668"><td class="num" id="LN2668">2668</td><td class="line">      n_extra = 0;</td></tr>
+<tr class="codeline" data-linenumber="2669"><td class="num" id="LN2669">2669</td><td class="line">      lcs_prec_todo = wp-&gt;w_p_lcs_chars.prec;</td></tr>
+<tr class="codeline" data-linenumber="2670"><td class="num" id="LN2670">2670</td><td class="line">      <span class='keyword'>if</span> (filler_todo &lt;= 0) {</td></tr>
+<tr class="codeline" data-linenumber="2671"><td class="num" id="LN2671">2671</td><td class="line">        need_showbreak = <span class='macro'>true<span class='macro_popup'>1</span></span>;</td></tr>
+<tr class="codeline" data-linenumber="2672"><td class="num" id="LN2672">2672</td><td class="line">      }</td></tr>
+<tr class="codeline" data-linenumber="2673"><td class="num" id="LN2673">2673</td><td class="line">      filler_todo--;</td></tr>
+<tr class="codeline" data-linenumber="2674"><td class="num" id="LN2674">2674</td><td class="line">      <span class='comment'>// When the filler lines are actually below the last line of the</span></td></tr>
+<tr class="codeline" data-linenumber="2675"><td class="num" id="LN2675">2675</td><td class="line">      <span class='comment'>// file, don't draw the line itself, break here.</span></td></tr>
+<tr class="codeline" data-linenumber="2676"><td class="num" id="LN2676">2676</td><td class="line">      <span class='keyword'>if</span> (filler_todo == 0 &amp;&amp; (wp-&gt;w_botfill || end_fill)) {</td></tr>
+<tr class="codeline" data-linenumber="2677"><td class="num" id="LN2677">2677</td><td class="line">        <span class='keyword'>break</span>;</td></tr>
+<tr class="codeline" data-linenumber="2678"><td class="num" id="LN2678">2678</td><td class="line">      }</td></tr>
+<tr class="codeline" data-linenumber="2679"><td class="num" id="LN2679">2679</td><td class="line">    }</td></tr>
+<tr class="codeline" data-linenumber="2680"><td class="num" id="LN2680">2680</td><td class="line">  }     <span class='comment'>// for every character in the line</span></td></tr>
+<tr class="codeline" data-linenumber="2681"><td class="num" id="LN2681">2681</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2682"><td class="num" id="LN2682">2682</td><td class="line">  <span class='comment'>// After an empty line check first word for capital.</span></td></tr>
+<tr class="codeline" data-linenumber="2683"><td class="num" id="LN2683">2683</td><td class="line">  <span class='keyword'>if</span> (*skipwhite((<span class='keyword'>char</span> *)line) == <span class='macro'>NUL<span class='macro_popup'>'\000'</span></span>) {</td></tr>
+<tr class="codeline" data-linenumber="2684"><td class="num" id="LN2684">2684</td><td class="line">    capcol_lnum = lnum + 1;</td></tr>
+<tr class="codeline" data-linenumber="2685"><td class="num" id="LN2685">2685</td><td class="line">    cap_col = 0;</td></tr>
+<tr class="codeline" data-linenumber="2686"><td class="num" id="LN2686">2686</td><td class="line">  }</td></tr>
+<tr class="codeline" data-linenumber="2687"><td class="num" id="LN2687">2687</td><td class="line"> </td></tr>
+<tr class="codeline" data-linenumber="2688"><td class="num" id="LN2688">2688</td><td class="line">  <span class='macro'>kv_destroy(virt_lines)<span class='macro_popup'>do { xfree((virt_lines).items); ((virt_lines).size = (virt_lines<br>).capacity = 0, (virt_lines).items = 0); } while (0)</span></span>;</td></tr>
+<tr class="codeline" data-linenumber="2689"><td class="num" id="LN2689">2689</td><td class="line">  xfree(p_extra_free);</td></tr>
+<tr class="codeline" data-linenumber="2690"><td class="num" id="LN2690">2690</td><td class="line">  <span class='keyword'>return</span> row;</td></tr>
+<tr class="codeline" data-linenumber="2691"><td class="num" id="LN2691">2691</td><td class="line">}</td></tr>
 </table><hr class=divider>
 <div id=File10292>
 <div class=FileNav><a href="#File1">&#x2190;</a></div><h4 class=FileName>/home/runner/work/doc/doc/neovim/src/nvim/highlight.h</h4>
