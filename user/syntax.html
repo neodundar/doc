@@ -1053,9 +1053,10 @@ for developing applications for the DOS platform, which Euphoria version 4
 (<a href="https://www.openeuphoria.org/">https://www.openeuphoria.org/</a>) does not support.</div>
 <div class="old-help-para">The following file extensions are auto-detected as Euphoria file type:</div>
 	*.e, *.eu, *.ew, *.ex, *.exu, *.exw
-	*.E, *.EU, *.EW, *.EX, *.EXU,<div class="old-help-para">.EXW</div>
-<div class="old-help-para">To select syntax highlighting file for Euphoria, as well as for
-auto-detecting the *.e and *.E file extensions as Euphoria file type,
+	*.E, *.EU, *.EW, *.EX, *.EXU, *.EXW
+
+To select syntax highlighting file for Euphoria, as well as for
+auto-detecting the *.e and<div class="old-help-para">.E file extensions as Euphoria file type,
 add the following line to your startup file:<pre>
 :let g:filetype_euphoria = "euphoria3"</pre></div>
 <div class="old-help-para">	or<pre>
@@ -1077,8 +1078,9 @@ To enable highlighting some special atoms, put this in your vimrc:<pre>
 <div class="old-help-para">Elixir is a dynamic, functional language for building scalable and
 maintainable applications.</div>
 <div class="old-help-para">The following file extensions are auto-detected as Elixir file types:</div>
-	*.ex, *.exs, *.eex, *.leex,<div class="old-help-para">.lock</div>
-<div class="old-help-para">Elixir and Euphoria share the.ex file extension. If the filetype is
+	*.ex, *.exs, *.eex, *.leex, *.lock
+
+Elixir and Euphoria share the<div class="old-help-para">.ex file extension. If the filetype is
 specifically set as Euphoria with the g:filetype_euphoria variable, or the
 file is determined to be Euphoria based on keywords in the file, then the
 filetype will be set as Euphoria. Otherwise, the filetype will default to
@@ -1533,8 +1535,9 @@ For LPC4 series of LPC:<pre>
 :let lpc_use_lpc4_syntax = 1</pre>
 For uLPC series of LPC:
 uLPC has been developed to Pike, so you should use Pike syntax
-instead, and the name of your source file should be.pike</div>
-<div class="old-help-para"><h3 class="help-heading">LUA<span class="help-heading-tags">						<a name="lua.vim"></a><span class="help-tag">lua.vim</span> <a name="ft-lua-syntax"></a><span class="help-tag">ft-lua-syntax</span></span></h3></div>
+instead, and the name of your source file should be *.pike
+
+LUA						<a name="lua.vim"></a><code class="help-tag-right">lua.vim</code> <a name="ft-lua-syntax"></a><code class="help-tag">ft-lua-syntax</code></div>
 <div class="old-help-para">The Lua syntax file can be used for versions 4.0, 5.0, 5.1 and 5.2 (5.2 is
 the default). You can select one of these versions using the global variables
 lua_version and lua_subversion. For example, to activate Lua
@@ -2141,7 +2144,6 @@ let g:sh_fold_enabled= 0     (default, no syntax folding)
 let g:sh_fold_enabled= 1     (enable function folding)
 let g:sh_fold_enabled= 2     (enable heredoc folding)
 let g:sh_fold_enabled= 4     (enable if/do/for folding)</pre>
-<pre></pre>
 then various syntax items (ie. HereDocuments and function bodies) become
 syntax-foldable (see <a href="syntax.html#%3Asyn-fold">:syn-fold</a>).  You also may add these together
 to get multiple types of folding:<pre>
@@ -3116,8 +3118,7 @@ region item end     -		 yes  -    yes	-    yes  yes</div>
   start in another line, this does work: "a\nb"hs=e.
 </div></div>
 <div class="old-help-para">Example (match a comment but don't highlight the /* and/):<pre>:syntax region Comment start="/\*"hs=e+1 end="\*/"he=s-1</pre></div>
-<div class="old-help-para">	/* this is a comment/
-	  ^^^^^^^^^^^^^^^^^^^	  highlighted</div>
+<div class="old-help-para">	/* this is a comment */	  ^^^^^^^^^^^^^^^^^^^	  highlighted</div>
 <div class="old-help-para">A more complicated Example:<pre>:syn region Exa matchgroup=Foo start="foo"hs=s+2,rs=e+2 matchgroup=Bar end="bar"me=e-1,he=e-1,re=s-1</pre></div>
 <div class="old-help-para">	 abcfoostringbarabc
 	    mmmmmmmmmmm	    match
@@ -3897,9 +3898,7 @@ must use Universal Ctags (<a href="https://ctags.io">https://ctags.io</a>) or Ex
 <div class="old-help-para">Put these lines in your Makefile:</div>
 <div class="old-help-para"># Make a highlight file for types.  Requires Universal/Exuberant ctags and awk
 types: types.vim
-types.vim:.[ch]
-	ctags --c-kinds=gstu -o- *.[ch] |\
-		awk 'BEGIN{printf("syntax keyword Type\t")}\
+types.vim: *.[ch]	ctags --c-kinds=gstu -o- *.[ch] |\		awk 'BEGIN{printf("syntax keyword Type\t")}\
 			<code>{printf("%s ", $$1)}</code>END{print ""}' &gt; $@</div>
 <div class="old-help-para">And put these lines in your vimrc:<pre>
 " load the types.vim highlighting file, if it exists
@@ -4024,7 +4023,7 @@ literal text specify the size of that text (in bytes):</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-24 06:39 from <code><a href="https://github.com/neovim/neovim/commit/7718241286315a8099427d42cb83c6532d87a390">7718241</a></code>
+        Generated at 2022-10-25 06:30 from <code><a href="https://github.com/neovim/neovim/commit/40791f8e8239dcb4dda1c4d61e2aa9088e75bb17">40791f8</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 2 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+syntax.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/syntax.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim

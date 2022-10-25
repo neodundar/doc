@@ -2100,7 +2100,7 @@ gsplit(<code>{s}</code>, <code>{sep}</code>, <code>{plain}</code>)              
 <div class="help-column_heading">    Parameters:</div>
 <div class="help-li" style=""> <code>{s}</code>      (string) String to split
 </div><div class="help-li" style=""> <code>{sep}</code>    (string) Separator or pattern
-</div><div class="help-li" style=""> <code>{plain}</code>  (boolean) If <code>true</code> use <code>sep</code> literally (passed to
+</div><div class="help-li" style=""> <code>{plain}</code>  (boolean|nil) If <code>true</code> use <code>sep</code> literally (passed to
                  string.find)
 </div>
 </div>
@@ -2210,19 +2210,11 @@ split("|x|y|z|", "|", {trimempty=true}) =&gt; {'x', 'y', 'z'}</pre>
 
 </div>
 <div class="help-para">
-    @alias split_kwargs <code>{plain: boolean, trimempty: boolean}</code> | boolean | nil
-
-</div>
-<div class="help-para">
-<div class="help-column_heading">    See also:</div>
-        <a href="lua.html#vim.gsplit()">vim.gsplit()</a>
-
-</div>
-<div class="help-para">
 <div class="help-column_heading">    Parameters:</div>
 <div class="help-li" style=""> <code>{s}</code>       (string) String to split
 </div><div class="help-li" style=""> <code>{sep}</code>     (string) Separator or pattern
-</div><div class="help-li" style=""> <code>{kwargs}</code>  (table|nil) Keyword arguments:
+</div><div class="help-li" style=""> <code>{kwargs}</code>  (<code>{plain: boolean, trimempty: boolean}</code>|<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+lua.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/lua.html%0D%0DContext%3A%0D%0D%60%60%60%0D%20%20%20%20Parameters%3A%20~%0A%20%20%20%20%20%20%E2%80%A2%20%7Bs%7D%20%20%20%20%20%20%20(string)%20String%20to%20split%0A%20%20%20%20%20%20%E2%80%A2%20%7Bsep%7D%20%20%20%20%20(string)%20Separator%20or%20pattern%0A%20%20%20%20%20%20%E2%80%A2%20%7Bkwargs%7D%20%20(%7Bplain%3A%20boolean%2C%20trimempty%3A%20boolean%7D%7Cnil)%20Keyword%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20arguments%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%80%A2%20plain%3A%20(boolean)%20If%20%60true%60%20use%20%60sep%60%20literally%20(passed%20to%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20string.find)%0D%60%60%60">nil)</a> Keyword
+                  arguments:
 </div><div class="help-li" style="margin-left: 3rem;"> plain: (boolean) If <code>true</code> use <code>sep</code> literally (passed to
                     string.find)
 </div><div class="help-li" style="margin-left: 3rem;"> trimempty: (boolean) If <code>true</code> remove empty items from the
@@ -2232,6 +2224,11 @@ split("|x|y|z|", "|", {trimempty=true}) =&gt; {'x', 'y', 'z'}</pre>
 <div class="help-para">
 <div class="help-column_heading">    Return:</div>
         string[] List of split components
+
+</div>
+<div class="help-para">
+<div class="help-column_heading">    See also:</div>
+        <a href="lua.html#vim.gsplit()">vim.gsplit()</a>
 
 </div>
 <div class="help-para">
@@ -3198,10 +3195,10 @@ Lua module: fs                                                        </a>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-24 06:38 from <code><a href="https://github.com/neovim/neovim/commit/7718241286315a8099427d42cb83c6532d87a390">7718241</a></code>
+        Generated at 2022-10-25 06:30 from <code><a href="https://github.com/neovim/neovim/commit/40791f8e8239dcb4dda1c4d61e2aa9088e75bb17">40791f8</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 1 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+lua.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/lua.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim
+      parse_errors: 2 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+lua.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/lua.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim
                             NVIM REFERENCE MANUAL
                                        Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
  vim:tw=78:ts=8:sw=4:sts=4:et:ft=help:norl:">noise_lines: 4</span>

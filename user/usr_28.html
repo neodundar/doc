@@ -281,27 +281,20 @@ disadvantage is that the text needs to be modified.</div>
 <div class="old-help-para">Try it:<pre>
 :set foldmethod=marker</pre>
 Example text, as it could appear in a C program:</div>
-<div class="old-help-para">	/* foobar () {{{/
-	int foobar()
+<div class="old-help-para">	/* foobar () {{{ */	int foobar()
 	{
-		/* return a value {{{/
-		return 42;
-		/* }}}/
-	}
-	/* }}}/</div>
-<div class="old-help-para">Notice that the folded line will display the text before the marker.  This is
+		/* return a value {{{ */		return 42;
+		/* }}} */	}
+	/* }}} */
+Notice that the folded line will display the text before the marker.  This is
 very useful to tell what the fold contains.</div>
 <div class="old-help-para">It's quite annoying when the markers don't pair up correctly after moving some
 lines around.  This can be avoided by using numbered markers.  Example:</div>
-<div class="old-help-para">	/* global variables {{{1/
-	int varA, varB;</div>
-<div class="old-help-para">	/* functions {{{1/
-	/* funcA() {{{2/
-	void funcA() {}</div>
-<div class="old-help-para">	/* funcB() {{{2/
-	void funcB() {}
-	/* }}}1/</div>
-<div class="old-help-para">At every numbered marker a fold at the specified level begins.  This will make
+<div class="old-help-para">	/* global variables {{{1 */	int varA, varB;</div>
+<div class="old-help-para">	/* functions {{{1 */	/* funcA() {{{2 */	void funcA() {}</div>
+<div class="old-help-para">	/* funcB() {{{2 */	void funcB() {}
+	/* }}}1 */
+At every numbered marker a fold at the specified level begins.  This will make
 any fold at a higher level stop here.  You can just use numbered start markers
 to define all folds.  Only when you want to explicitly stop a fold before
 another starts you need to add an end marker.</div>
@@ -417,7 +410,7 @@ the defined folds.  Then you can delete or add folds manually.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-24 06:39 from <code><a href="https://github.com/neovim/neovim/commit/7718241286315a8099427d42cb83c6532d87a390">7718241</a></code>
+        Generated at 2022-10-25 06:30 from <code><a href="https://github.com/neovim/neovim/commit/40791f8e8239dcb4dda1c4d61e2aa9088e75bb17">40791f8</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_28.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_28.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>

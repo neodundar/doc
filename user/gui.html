@@ -111,27 +111,8 @@ happens after other <a href="starting.html#initialization">initialization</a>s, 
 <div class="old-help-para">There are vertical scrollbars and a horizontal scrollbar.  You may
 configure which ones appear with the <a href="options.html#'guioptions'">'guioptions'</a> option.</div>
 <div class="old-help-para">The interface looks like this (with ":set guioptions=mlrb"):</div>
-<div class="old-help-para">		       +------------------------------+ `
-		       | File  Edit		 Help | &lt;- Menu bar (m) `
-		       +-+--------------------------+-+ `
-		       <a href="motion.html#%5E">^</a>  			    <a href="motion.html#%5E">^</a> `
-		       <a href="pattern.html#%23">#</a> Text area.		    <a href="pattern.html#%23">#</a> `
-		       | |			    | | `
-		       <a href="visual.html#v">v</a>__________________________|v| `
- Normal status line -&gt; |<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+gui.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/gui.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%20%20%20%20%20%20%20%7C%23%7C%20Text%20area.%09%09%20%20%20%20%7C%23%7C%20%60%0A%09%09%20%20%20%20%20%20%20%7C%20%7C%09%09%09%20%20%20%20%7C%20%7C%20%60%0A%09%09%20%20%20%20%20%20%20%7Cv%7C__________________________%7Cv%7C%20%60%0A%20Normal%20status%20line%20-%3E%20%7C-%2B%20File.c%09%20%20%20%20%20%20%205%2C2%20%20%2B-%7C%20%60%0A%20between%20Vim%20windows%20%20%20%7C%5E%7C%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%7C%5E%7C%20%60%0A%09%09%20%20%20%20%20%20%20%7C%20%7C%09%09%09%20%20%20%20%7C%20%7C%20%60%0A%09%09%20%20%20%20%20%20%20%7C%20%7C%20Another%20file%20buffer.%20%20%20%20%20%7C%20%7C%20%60%0D%60%60%60">-+</a> File.c	       5,2  +-| `
- between Vim windows   <a href="motion.html#%5E">^</a>""""""""""""""""""""""""""|^| `
-		       | |			    | | `
-		       | | Another file buffer.     | | `
-		       | |			    | | `
-		       <a href="pattern.html#%23">#</a>  			    <a href="pattern.html#%23">#</a> `
- Left scrollbar (l) -&gt; <a href="pattern.html#%23">#</a>  			    <a href="pattern.html#%23">#</a> &lt;- Right `
-		       <a href="pattern.html#%23">#</a>  			    <a href="pattern.html#%23">#</a>    scrollbar (r) `
-		       | |			    | | `
-		       <a href="visual.html#v">v</a>  			    <a href="visual.html#v">v</a> `
-		       +-+--------------------------+-+ `
-		       | |<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+gui.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/gui.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%20%20%20%20%20%20%20%7C%20%7C%09%09%09%20%20%20%20%7C%20%7C%20%60%0A%09%09%20%20%20%20%20%20%20%7Cv%7C%09%09%09%20%20%20%20%7Cv%7C%20%60%0A%09%09%20%20%20%20%20%20%20%2B-%2B--------------------------%2B-%2B%20%60%0A%09%09%20%20%20%20%20%20%20%7C%20%7C%3C%20%23%23%23%23%09%09%20%20%20%3E%7C%20%7C%20%3C-%20Bottom%20%60%0A%09%09%20%20%20%20%20%20%20%2B-%2B--------------------------%2B-%2B%20%20%20%20scrollbar%20(b)%20%60%0A%0AAny%20of%20the%20scrollbar%20or%20menu%20components%20may%20be%20turned%20off%20by%20not%20putting%20the%0D%60%60%60">&lt;</a> ####		   &gt;| | &lt;- Bottom `
-		       +-+--------------------------+-+    scrollbar (b) `</div>
-<div class="old-help-para">Any of the scrollbar or menu components may be turned off by not putting the
+<div class="old-help-para">		       +------------------------------+ `		       | File  Edit		 Help | &lt;- Menu bar (m) `		       +-+--------------------------+-+ `		       <a href="motion.html#%5E">^</a>  			    <a href="motion.html#%5E">^</a> `		       <a href="pattern.html#%23">#</a> Text area.		    <a href="pattern.html#%23">#</a> `		       | |			    | | `		       <a href="visual.html#v">v</a>__________________________|v| ` Normal status line -&gt; |<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+gui.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/gui.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%20%20%20%20%20%20%20%7C%23%7C%20Text%20area.%09%09%20%20%20%20%7C%23%7C%20%60%0A%09%09%20%20%20%20%20%20%20%7C%20%7C%09%09%09%20%20%20%20%7C%20%7C%20%60%0A%09%09%20%20%20%20%20%20%20%7Cv%7C__________________________%7Cv%7C%20%60%0A%20Normal%20status%20line%20-%3E%20%7C-%2B%20File.c%09%20%20%20%20%20%20%205%2C2%20%20%2B-%7C%20%60%0A%20between%20Vim%20windows%20%20%20%7C%5E%7C%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%22%7C%5E%7C%20%60%0A%09%09%20%20%20%20%20%20%20%7C%20%7C%09%09%09%20%20%20%20%7C%20%7C%20%60%0A%09%09%20%20%20%20%20%20%20%7C%20%7C%20Another%20file%20buffer.%20%20%20%20%20%7C%20%7C%20%60%0D%60%60%60">-+</a> File.c	       5,2  +-| ` between Vim windows   <a href="motion.html#%5E">^</a>""""""""""""""""""""""""""|^| `		       | |			    | | `		       | | Another file buffer.     | | `		       | |			    | | `		       <a href="pattern.html#%23">#</a>  			    <a href="pattern.html#%23">#</a> ` Left scrollbar (l) -&gt; <a href="pattern.html#%23">#</a>  			    <a href="pattern.html#%23">#</a> &lt;- Right `		       <a href="pattern.html#%23">#</a>  			    <a href="pattern.html#%23">#</a>    scrollbar (r) `		       | |			    | | `		       <a href="visual.html#v">v</a>  			    <a href="visual.html#v">v</a> `		       +-+--------------------------+-+ `		       | |<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+gui.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/gui.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%20%20%20%20%20%20%20%7C%20%7C%09%09%09%20%20%20%20%7C%20%7C%20%60%0A%09%09%20%20%20%20%20%20%20%7Cv%7C%09%09%09%20%20%20%20%7Cv%7C%20%60%0A%09%09%20%20%20%20%20%20%20%2B-%2B--------------------------%2B-%2B%20%60%0A%09%09%20%20%20%20%20%20%20%7C%20%7C%3C%20%23%23%23%23%09%09%20%20%20%3E%7C%20%7C%20%3C-%20Bottom%20%60%0A%09%09%20%20%20%20%20%20%20%2B-%2B--------------------------%2B-%2B%20%20%20%20scrollbar%20(b)%20%60%0A%0AAny%20of%20the%20scrollbar%20or%20menu%20components%20may%20be%20turned%20off%20by%20not%20putting%20the%0D%60%60%60">&lt;</a> ####		   &gt;| | &lt;- Bottom `		       +-+--------------------------+-+    scrollbar (b) `
+Any of the scrollbar or menu components may be turned off by not putting the
 appropriate letter in the <a href="options.html#'guioptions'">'guioptions'</a> string.  The bottom scrollbar is
 only useful when <a href="options.html#'nowrap'">'nowrap'</a> is set.</div>
 <div class="old-help-para"><h3 class="help-heading">VERTICAL SCROLLBARS<span class="help-heading-tags">					<a name="gui-vert-scroll"></a><span class="help-tag">gui-vert-scroll</span></h3></div>
@@ -439,12 +420,11 @@ specified is a submenu, then all menus under that hierarchy will be shown.
 If no argument is given after :menu at all, then ALL menu items are shown
 for the appropriate mode (e.g., Command-line mode for :cmenu).</div>
 <div class="old-help-para">Special characters in the list, just before the rhs:
-*	The menu was defined with "nore" to disallow remapping.</div>
-<div class="old-help-para">&amp;	The menu was defined with "&lt;script&gt;" to allow remapping script-local
+*	The menu was defined with "nore" to disallow remapping.
+&amp;	The menu was defined with "&lt;script&gt;" to allow remapping script-local
 	mappings only.
 s	The menu was defined with "&lt;silent&gt;" to avoid showing what it is
-	mapped to when triggered.
--		The menu was disabled.</div>
+	mapped to when triggered.-		The menu was disabled.</div>
 <div class="old-help-para">Note that hitting <code>&lt;Tab&gt;</code> while entering a menu name after a menu command may
 be used to complete the name of the menu item.</div>
 <div class="old-help-para">Executing Menus						<a name="execute-menus"></a><code class="help-tag-right">execute-menus</code></div>
@@ -576,7 +556,7 @@ Menus							</a>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-24 06:38 from <code><a href="https://github.com/neovim/neovim/commit/7718241286315a8099427d42cb83c6532d87a390">7718241</a></code>
+        Generated at 2022-10-25 06:29 from <code><a href="https://github.com/neovim/neovim/commit/40791f8e8239dcb4dda1c4d61e2aa9088e75bb17">40791f8</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 3 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+gui.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/gui.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="       Nvim

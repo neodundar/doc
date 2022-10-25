@@ -1415,8 +1415,7 @@ endfunction
 call dictwatcheradd(g:, '*', 'OnDictChanged')</pre></div>
 <div class="old-help-para">		For now <code>{pattern}</code> only accepts very simple patterns that can
 		contain a '' at the end of the string, in which case it will
-		match every key that begins with the substring before the ''.
-		That means if '' is not the last character of <code>{pattern}</code>, only
+		match every key that begins with the substring before the ''.<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+builtin.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/builtin.html%0D%0DContext%3A%0D%0D%60%60%60%0D%3C%0A%09%09For%20now%20%7Bpattern%7D%20only%20accepts%20very%20simple%20patterns%20that%20can%0A%09%09contain%20a%20'%2A'%20at%20the%20end%20of%20the%20string%2C%20in%20which%20case%20it%20will%0A%09%09match%20every%20key%20that%20begins%20with%20the%20substring%20before%20the%20'%2A'.%0A%09%09That%20means%20if%20'%2A'%20is%20not%20the%20last%20character%20of%20%7Bpattern%7D%2C%20only%0A%09%09keys%20that%20are%20exactly%20equal%20as%20%7Bpattern%7D%20will%20be%20matched.%0A%0A%09%09The%20%7Bcallback%7D%20receives%20three%20arguments%3A%0D%60%60%60">That means if '</a>' is not the last character of <code>{pattern}</code>, only
 		keys that are exactly equal as <code>{pattern}</code> will be matched.</div>
 <div class="old-help-para">		The <code>{callback}</code> receives three arguments:</div>
 <div class="old-help-para"><div class="help-li" style=""> The dictionary being watched.
@@ -7355,10 +7354,10 @@ Don't forget that "^" will only match at the first character of the String and
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-24 06:38 from <code><a href="https://github.com/neovim/neovim/commit/7718241286315a8099427d42cb83c6532d87a390">7718241</a></code>
+        Generated at 2022-10-25 06:29 from <code><a href="https://github.com/neovim/neovim/commit/40791f8e8239dcb4dda1c4d61e2aa9088e75bb17">40791f8</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 10 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+builtin.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/builtin.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim
+      parse_errors: 11 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+builtin.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/builtin.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim
 		  VIM REFERENCE MANUAL	  by Bram Moolenaar
 				      Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
  vim:tw=78:ts=8:noet:ft=help:norl:">noise_lines: 4</span>

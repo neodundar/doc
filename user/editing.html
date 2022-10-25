@@ -367,9 +367,9 @@ Wildcards in <code>{file}</code> are expanded, but as with file completion, <a h
 and <a href="options.html#'suffixes'">'suffixes'</a> apply.  Which wildcards are supported depends on the system.
 These are the common ones:
 	?	matches one character
-	*	matches anything, including nothing</div>
+	*	matches anything, including nothing
 	**	matches anything, including nothing, recurses into directories
-	[abc]	match<div class="old-help-para"> 'a', 'b' or 'c'</div>
+	[abc]	match 'a', 'b' or 'c'</div>
 <div class="old-help-para">To avoid the special meaning of the wildcards prepend a backslash.  However,
 on MS-Windows the backslash is a path separator and "path\[abc]" is still seen
 as a wildcard when "[" is in the <a href="options.html#'isfname'">'isfname'</a> option.  A simple way to avoid this
@@ -461,8 +461,8 @@ will use the old value of the option.  Same for the <a href="options.html#'binar
 <div class="old-help-para">							<a name="%2Bcmd"></a><code class="help-tag-right">+cmd</code> <a name="%5B%2Bcmd%5D"></a><code class="help-tag">[+cmd]</code>
 The [+cmd] argument can be used to position the cursor in the newly opened
 file, or execute any other command:
-<a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+editing.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/editing.html%0D%0DContext%3A%0D%0D%60%60%60%0D%09%09%09%09%09%09%09%2A%2Bcmd%2A%20%2A%5B%2Bcmd%5D%2A%0AThe%20%5B%2Bcmd%5D%20argument%20can%20be%20used%20to%20position%20the%20cursor%20in%20the%20newly%20opened%0Afile%2C%20or%20execute%20any%20other%20command%3A%0A%09%2B%09%09Start%20at%20the%20last%20line.%0A%09%2B%7Bnum%7D%09%09Start%20at%20line%20%7Bnum%7D.%0A%09%2B%2F%7Bpat%7D%09%09Start%20at%20first%20line%20containing%20%7Bpat%7D.%0A%09%2B%7Bcommand%7D%09Execute%20%7Bcommand%7D%20after%20opening%20the%20new%20file.%0D%60%60%60">+		Start at the last line.</a></div>
-<div class="old-help-para">	+{num}		Start at line <code>{num}</code>.
+	+		Start at the last line.
+	+{num}		Start at line <code>{num}</code>.
 	+/{pat}		Start at first line containing <code>{pat}</code>.
 	+{command}	Execute <code>{command}</code> after opening the new file.
 			<code>{command}</code> is any Ex command.
@@ -783,9 +783,8 @@ flag is used for the ":substitute" command to avoid an error for files where
 			Write the specified lines to <code>{file}</code>.  Overwrite an
 			existing file.</div>
 <div class="old-help-para">						<a name="%3Aw_a"></a><code class="help-tag-right">:w_a</code> <a name="%3Awrite_a"></a><code class="help-tag">:write_a</code> <a name="E494"></a><code class="help-tag">E494</code>
-:[range]w[rite][!] [++opt] &gt;&gt;
-			Append the specified lines to the current file.</div>
-<div class="old-help-para">:[range]w[rite][!] [++opt] &gt;&gt; <code>{file}</code>
+:[range]w[rite][!] [++opt] &gt;<pre>Append the specified lines to the current file.</pre>
+:[range]w[rite][!] [++opt] &gt;&gt; <code>{file}</code>
 			Append the specified lines to <code>{file}</code>.  '!' forces the
 			write even if file does not exist.</div>
 <div class="old-help-para">							<a name="%3Aw_c"></a><code class="help-tag-right">:w_c</code> <a name="%3Awrite_c"></a><code class="help-tag">:write_c</code>
@@ -1301,8 +1300,7 @@ which is slightly different.</div>
 </div><div class="help-li" style=""> It matches up to 30 directories deep by default, so you can use it to
 	search an entire directory tree
 </div><div class="help-li" style=""> The maximum number of levels matched can be given by appending a number
-	to '**'.
-	Thus '/usr/**2' can match:<pre>/usr
+	to '**'.	Thus '/usr/**2' can match:<pre>/usr
 /usr/include
 /usr/include/sys
 /usr/include/g++
@@ -1395,10 +1393,10 @@ which is slightly different.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-24 06:38 from <code><a href="https://github.com/neovim/neovim/commit/7718241286315a8099427d42cb83c6532d87a390">7718241</a></code>
+        Generated at 2022-10-25 06:29 from <code><a href="https://github.com/neovim/neovim/commit/40791f8e8239dcb4dda1c4d61e2aa9088e75bb17">40791f8</a></code>
       </div>
       <div class="generator-stats">
-      parse_errors: 4 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+editing.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/editing.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim
+      parse_errors: 3 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+editing.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/editing.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="   Nvim
 		  VIM REFERENCE MANUAL    by Bram Moolenaar
                                       Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
  vim:tw=78:ts=8:noet:ft=help:norl:">noise_lines: 4</span>

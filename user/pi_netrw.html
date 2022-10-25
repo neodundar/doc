@@ -835,7 +835,6 @@ messages) you may write a NetReadFixup() function:
   else               " complain
   endif
 endfunction</pre>
-&gt;
 The NetReadFixup() function will be called if it exists and thus allows you to
 customize your reading process.  As a further example, &lt;netrw.vim&gt; contains
 just such a function to handle Windows 95 ftp.  For whatever reason, Windows
@@ -850,7 +849,6 @@ itself:
    endif
  endfunction
 endif</pre>
-<pre></pre>
 (Related topics: <a href="pi_netrw.html#ftp">ftp</a> <a href="pi_netrw.html#netrw-userpass">netrw-userpass</a> <a href="pi_netrw.html#netrw-start">netrw-start</a>)</div>
 <div class="old-help-para"><h2 class="help-heading">9. Browsing<span class="help-heading-tags">		<a name="netrw-browsing"></a><span class="help-tag">netrw-browsing</span> <a name="netrw-browse"></a><span class="help-tag">netrw-browse</span> <a name="netrw-help"></a><span class="help-tag">netrw-help</span> {{{1</h2>			<a name="netrw-browser"></a><code class="help-tag-right">netrw-browser</code>  <a name="netrw-dir"></a><code class="help-tag">netrw-dir</code>    <a name="netrw-list"></a><code class="help-tag">netrw-list</code></div>
 <div class="old-help-para"><h3 class="help-heading">INTRODUCTION TO BROWSING<span class="help-heading-tags">			<a name="netrw-intro-browse"></a><span class="help-tag">netrw-intro-browse</span> {{{2</h3>	(Quick References: <a href="pi_netrw.html#netrw-quickmaps">netrw-quickmaps</a> <a href="pi_netrw.html#netrw-quickcoms">netrw-quickcoms</a>)</div>
@@ -898,8 +896,7 @@ ftp, see <a href="pi_netrw.html#netrw-netrc">netrw-netrc</a> (if your ftp suppor
 The <a href="builtin.html#getftype()">getftype()</a> function is used to append a bit of filigree to indicate
 filetype to locally listed files:</div>
 <div class="old-help-para">	directory  : /
-	executable : *
-	fifo       : |
+	executable : *	fifo       : |
 	links      : @
 	sockets    : =</div>
 <div class="old-help-para">The filigree also affects the <a href="pi_netrw.html#g%3Anetrw_sort_sequence">g:netrw_sort_sequence</a>.</div>
@@ -1445,12 +1442,11 @@ following four patterns Explore generates a list of files which satisfy the
 request for the local file system.  These exploration patterns will not work
 with remote file browsing.</div>
 <div class="old-help-para">/filepat	files in current directory which satisfy filepat
-    **/filepat	files in current directory or below which satisfy the</div>
-<div class="old-help-para">		file pattern
-//pattern	files in the current directory which contain the
+    **/filepat	files in current directory or below which satisfy the
+		file pattern//pattern	files in the current directory which contain the
 		pattern (vimgrep is used)
-    **//pattern	files in the current directory or below which contain</div>
-<div class="old-help-para">		the pattern (vimgrep is used)</div>
+    **//pattern	files in the current directory or below which contain
+		the pattern (vimgrep is used)</div>
 <div class="old-help-para">The cursor will be placed on the first file in the list.  One may then
 continue to go to subsequent files on that list via <a href="pi_netrw.html#%3ANexplore">:Nexplore</a> or to
 preceding files on that list with <a href="pi_netrw.html#%3APexplore">:Pexplore</a>.  Explore will update the
@@ -1554,8 +1550,7 @@ matching files, or to show only the matching files.</div>
 <div class="old-help-para">	Example: \.[ch]$
 		This hiding list command will hide/show all *.c and *.h files.</div>
 <div class="old-help-para">	Example: \.c$,\.h$
-		This hiding list command will also hide/show all *.c and *.h
-		files.</div>
+		This hiding list command will also hide/show all *.c and *.h		files.</div>
 <div class="old-help-para">Don't forget to use the "a" map to select the mode (normal/hiding/show) you
 want!</div>
 <div class="old-help-para">If files have been marked using <a href="pi_netrw.html#netrw-mf">netrw-mf</a>, then this command will:</div>
@@ -1583,8 +1578,8 @@ system gitignore file: `git config --system core.excludesfile`</pre></div>
 <div class="old-help-para">Files that do not exist, are ignored.
 Git-ignore patterns are taken from existing files, and converted to patterns for
 hiding files. For example, if you had '.log' in your '.gitignore' file, it
-would be converted to '.\.log'.</div>
-<div class="old-help-para">To use this function, simply assign its output to <a href="pi_netrw.html#g%3Anetrw_list_hide">g:netrw_list_hide</a> option.<pre>
+would be converted to '.*\.log'.
+To use this function, simply assign its output to <a href="pi_netrw.html#g%3Anetrw_list_hide">g:netrw_list_hide</a> option.<pre>
 Example: let g:netrw_list_hide= netrw_gitignore#Hide()
         Git-ignored files are hidden in Netrw.
 
@@ -2230,9 +2225,7 @@ Var                                Explanation
 				hiding all gitignored files.
 				For more details see <a href="pi_netrw.html#netrw-gitignore">netrw-gitignore</a>.</div>
 <div class="old-help-para">				Examples:
-				 let g:netrw_list_hide= '.\.swp$'
-				 let g:netrw_list_hide= netrw_gitignore#Hide() .. '.\.swp$'
-				default: ""</div>
+				 let g:netrw_list_hide= '.*\.swp$'				 let g:netrw_list_hide= netrw_gitignore#Hide() .. '.*\.swp$'				default: ""</div>
 <div class="old-help-para">  <a name="g%3Anetrw_localcopycmd"></a><code class="help-tag">g:netrw_localcopycmd</code>  	="cp"           Linux/Unix/MacOS/Cygwin
 				=expand("$COMSPEC")             Windows
 				Copies marked files (<a href="pi_netrw.html#netrw-mf">netrw-mf</a>) to target
@@ -2351,26 +2344,19 @@ Var                                Explanation
 				           \.info$,\.swp$,\.obj$'</div>
 <div class="old-help-para">  <a name="g%3Anetrw_special_syntax"></a><code class="help-tag">g:netrw_special_syntax</code>  	If true, then certain files will be shown
 				using special syntax in the browser:</div>
-<div class="old-help-para">					netrwBak     :.bak
-					netrwCompress: *.gz *.bz2 *.Z *.zip
-					netrwCoreDump: core.\d\+
-					netrwData    :.dat
-					netrwDoc     : <a name=".doc%2C"></a><code class="help-tag">.doc,</code>.txt,*.pdf,
+<div class="old-help-para">					netrwBak     : *.bak					netrwCompress: *.gz *.bz2 *.Z *.zip					netrwCoreDump: core.\d\+
+					netrwData    : *.dat					netrwDoc     : <a name=".doc%2C"></a><code class="help-tag">.doc,</code>.txt,*.pdf,
 					               <a name=".pdf%2C"></a><code class="help-tag-right">.pdf,</code>.docx
-					netrwHdr     :.h
-					netrwLex     : *.l *.lex
-					netrwLib     : *.a *.so *.lib *.dll
-					netrwMakefile: [mM]akefile.mak
-					netrwObj     : *.o *.obj
-					netrwPix     : <a name=".bmp%2C"></a><code class="help-tag">.bmp,</code>.fit,*.fits,*.gif,
+					netrwHdr     : *.h
+					netrwLex     : *.l *.lex					netrwLib     : *.a *.so *.lib *.dll					netrwMakefile: [mM]akefile *.mak
+					netrwObj     : *.o *.obj					netrwPix     : <a name=".bmp%2C"></a><code class="help-tag">.bmp,</code>.fit,*.fits,*.gif,
 					               <a name=".jpg%2C"></a><code class="help-tag-right">.jpg,</code>.jpeg,*.pcx,*.ppc
 					               <a name=".pgm%2C"></a><code class="help-tag-right">.pgm,</code>.png,*.psd,*.rgb
 					               <a name=".tif%2C"></a><code class="help-tag-right">.tif,</code>.xbm,*.xcf
 					netrwTags    : tags ANmenu ANtags
-					netrwTilde   : *
-					netrwTmp     : tmp*tmp
-					netrwYacc    :.y</div>
-<div class="old-help-para">				In addition, those groups mentioned in
+					netrwTilde   : *					netrwTmp     : tmp* *tmp
+					netrwYacc    : *.y
+				In addition, those groups mentioned in
 				<a href="options.html#'suffixes'">'suffixes'</a> are also added to the special
 				file highlighting group.
 				 These syntax highlighting groups are linked
@@ -2579,8 +2565,7 @@ Associated setting variable: <a href="pi_netrw.html#g%3Anetrw_sort_direction">g:
     As an example :<pre>
     mr  [query: reply with *.c]
 R   [query: reply with s/^\(.*\)\.c$/\1.cpp/]</pre></div>
-<div class="old-help-para">    This example will mark all.c files and then rename them to.cpp
-    files.  Netrw will protect you from overwriting local files without
+<div class="old-help-para">    This example will mark all.c files and then rename them to *.cpp    files.  Netrw will protect you from overwriting local files without
     confirmation, but not remote ones.</div>
 <div class="old-help-para">    The ctrl-X character has special meaning for renaming files:<pre>
     &lt;c-x&gt;      : a single ctrl-x tells netrw to ignore the portion of the response
@@ -3583,7 +3568,7 @@ Modelines: {{{1</a>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-24 06:38 from <code><a href="https://github.com/neovim/neovim/commit/7718241286315a8099427d42cb83c6532d87a390">7718241</a></code>
+        Generated at 2022-10-25 06:30 from <code><a href="https://github.com/neovim/neovim/commit/40791f8e8239dcb4dda1c4d61e2aa9088e75bb17">40791f8</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+pi_netrw.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/pi_netrw.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="  For Vim version 8.2.  Last change: 2020 Aug 15

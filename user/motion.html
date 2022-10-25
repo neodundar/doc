@@ -118,7 +118,7 @@ or change text.  The following operators are available:</div>
 	<a href="change.html#gq">gq</a>  	gq	text formatting
 	<a href="change.html#gw">gw</a>  	gw	text formatting with no cursor movement
 	<a href="change.html#g%3F">g?</a>  	g?	ROT13 encoding
-	<a href="change.html#%3E">&gt;</a>  	&gt;	shift right
+	|&gt;|	&gt;	shift right
 	<a href="change.html#%3C">&lt;</a>  	&lt;	shift left
 	<a href="fold.html#zf">zf</a>  	zf	define a fold
 	<a href="map.html#g%40">g@</a>  	g@	call function set with the <a href="options.html#'operatorfunc'">'operatorfunc'</a> option
@@ -998,8 +998,8 @@ locations being removed:</div>
    3  1260    8 src/nvim/mark.c
    2   685    0 src/nvim/option_defs.h
    1   462   36 src/nvim/option_defs.h  &lt;-- location X
-<pre></pre>
-Then, when yet another location Z is jumped to, the new location Y appears
+&gt;</div>
+<div class="old-help-para">Then, when yet another location Z is jumped to, the new location Y appears
 directly after location X in the jumplist and location X remains in the same
 position relative to the locations (X-1, X-2, etc., ...) that had been before it
 prior to the original jump from X to Y:</div>
@@ -1008,8 +1008,8 @@ prior to the original jump from X to Y:</div>
    3   685    0 src/nvim/option_defs.h  &lt;-- location X-1
    2   462   36 src/nvim/option_defs.h  &lt;-- location X
    1   100    0 src/nvim/option_defs.h  &lt;-- location Y
-<pre></pre>
-<h3 class="help-heading">CHANGE LIST JUMPS<span class="help-heading-tags">			<a name="changelist"></a><span class="help-tag">changelist</span> <a name="change-list-jumps"></a><span class="help-tag">change-list-jumps</span> <a name="E664"></a><span class="help-tag">E664</span></span></h3></div>
+&gt;</div>
+<div class="old-help-para"><h3 class="help-heading">CHANGE LIST JUMPS<span class="help-heading-tags">			<a name="changelist"></a><span class="help-tag">changelist</span> <a name="change-list-jumps"></a><span class="help-tag">change-list-jumps</span> <a name="E664"></a><span class="help-tag">E664</span></span></h3></div>
 <div class="old-help-para">When making a change the cursor position is remembered.  One position is
 remembered for every change that can be undone, unless it is close to a
 previous change.  Two commands can be used to jump to positions of changes,
@@ -1224,7 +1224,7 @@ L			To line [count] from bottom of window (default: Last
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-24 06:38 from <code><a href="https://github.com/neovim/neovim/commit/7718241286315a8099427d42cb83c6532d87a390">7718241</a></code>
+        Generated at 2022-10-25 06:30 from <code><a href="https://github.com/neovim/neovim/commit/40791f8e8239dcb4dda1c4d61e2aa9088e75bb17">40791f8</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 3 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+motion.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/motion.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim
