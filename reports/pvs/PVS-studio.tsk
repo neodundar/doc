@@ -1,9 +1,9 @@
 pvs-studio.com/en/docs/warnings/	1	err	Help: The documentation for all analyzer warnings is available here: https://pvs-studio.com/en/docs/warnings/.
 ./src/mpack/conv.c	330	warn	V1048 The 'rv.lo' variable was assigned the same value.
-./src/mpack/mpack_core.c	238	err	V610 Undefined behavior. Check the shift operator '<<'. The right operand is negative ('(t - 0xdb)' = [-27..4]).
-./src/mpack/mpack_core.c	31	warn	V1071 Consider inspecting the 'mpack_w1' function. The return value is not always used. Total calls: 48, discarded results: 5.
 ./src/mpack/object.c	137	warn	V1086 A call of the 'memcpy' function will lead to underflow of the buffer 'dst'.
 ./src/mpack/object.c	137	warn	V1086 A call of the 'memcpy' function will lead to underflow of the buffer 'src'.
+./src/mpack/mpack_core.c	238	err	V610 Undefined behavior. Check the shift operator '<<'. The right operand is negative ('(t - 0xdb)' = [-27..4]).
+./src/mpack/mpack_core.c	31	warn	V1071 Consider inspecting the 'mpack_w1' function. The return value is not always used. Total calls: 48, discarded results: 5.
 ./src/mpack/rpc.c	248	warn	V1086 A call of the 'memcpy' function will lead to underflow of the buffer 'dst'.
 ./src/mpack/rpc.c	248	warn	V1086 A call of the 'memcpy' function will lead to underflow of the buffer 'src'.
 ./src/nvim/drawline.c	2211	warn	V560 A part of conditional expression is always true: eol_hl_off == 0.
@@ -15,7 +15,7 @@ pvs-studio.com/en/docs/warnings/	1	err	Help: The documentation for all analyzer 
 ./src/nvim/msgpack_rpc/unpacker.c	402	err	V501 There are identical sub-expressions to the left and to the right of the '==' operator: MPACK_TOKEN_STR == MPACK_TOKEN_STR
 ./src/nvim/msgpack_rpc/unpacker.c	463	err	V501 There are identical sub-expressions to the left and to the right of the '==' operator: MPACK_TOKEN_STR == MPACK_TOKEN_STR
 ./src/nvim/msgpack_rpc/unpacker.c	474	err	V501 There are identical sub-expressions to the left and to the right of the '==' operator: MPACK_TOKEN_SINT == MPACK_TOKEN_SINT
-./src/nvim/ops.c	4108	warn	V601 The value of 'char' type is implicitly cast to a char pointer.
 ./src/nvim/option.c	880	warn	V557 Array overrun is possible. The value of 'strlen(whichwrap) - 1' index could reach 18446744073709551615.
+./src/nvim/ops.c	4108	warn	V601 The value of 'char' type is implicitly cast to a char pointer.
 ./src/nvim/spell.c	2929	err	V781 The value of the 'i' index is checked after it was used. Perhaps there is a mistake in program logic.
 ./src/nvim/spellsuggest.c	1155	warn	V1086 A call of the 'memset' function will lead to underflow of the buffer 'sp'.
