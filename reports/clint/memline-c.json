@@ -1,5 +1,3 @@
-["src/nvim/memline.c", ["  int b0_magic_int;             // check for byte order of int", "  short b0_magic_short;         // check for byte order of short", "  char_u b0_magic_char;         // check for last char"], "runtime/int"]
-["src/nvim/memline.c", ["  b0p->b0_magic_int = (int)B0_MAGIC_INT;", "  b0p->b0_magic_short = (short)B0_MAGIC_SHORT;", "  b0p->b0_magic_char = B0_MAGIC_CHAR;"], "runtime/int"]
 ["src/nvim/memline.c", ["      fname_res = fname_buf;", "    } else", "#endif"], "readability/braces"]
 ["src/nvim/memline.c", ["        if (lineadd) {", "          --(buf->b_ml.ml_stack_top);", "          // fix line count for rest of blocks in the stack"], "readability/increment"]
 ["src/nvim/memline.c", ["            lineadd;", "          ++(buf->b_ml.ml_stack_top);", "        }"], "readability/increment"]
@@ -8,4 +6,3 @@
 ["src/nvim/memline.c", ["        ++(buf->b_ml.ml_locked_lineadd);", "        ++(buf->b_ml.ml_locked_high);", "      } else if (action == ML_DELETE) {"], "readability/increment"]
 ["src/nvim/memline.c", ["      } else if (action == ML_DELETE) {", "        --(buf->b_ml.ml_locked_lineadd);", "        --(buf->b_ml.ml_locked_high);"], "readability/increment"]
 ["src/nvim/memline.c", ["        --(buf->b_ml.ml_locked_lineadd);", "        --(buf->b_ml.ml_locked_high);", "      }"], "readability/increment"]
-["src/nvim/memline.c", ["         || b0p->b0_magic_int != (int)B0_MAGIC_INT", "         || b0p->b0_magic_short != (short)B0_MAGIC_SHORT", "         || b0p->b0_magic_char != B0_MAGIC_CHAR;"], "runtime/int"]

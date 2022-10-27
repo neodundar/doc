@@ -1,4 +1,3 @@
-["src/nvim/spellfile.c", ["  uint16_t wn_flags;            // WF_ flags", "  short wn_region;              // region mask", ""], "runtime/int"]
 ["src/nvim/spellfile.c", ["  char buf[VIMSPELLMAGICL];", "  SPELL_READ_BYTES(buf, VIMSPELLMAGICL, fd,; );", "  if (memcmp(buf, VIMSPELLMAGIC, VIMSPELLMAGICL) != 0) {"], "whitespace/parens"]
 ["src/nvim/spellfile.c", ["  }", "  SPELL_READ_NONNUL_BYTES((char *)lp->sl_regions, (size_t)len, fd,; );", "  lp->sl_regions[len] = NUL;"], "whitespace/parens"]
 ["src/nvim/spellfile.c", ["      buf[0] = '^';  // always match at one position only", "      SPELL_READ_NONNUL_BYTES(buf + 1, (size_t)n, fd,; );", "      buf[n + 1] = NUL;"], "whitespace/parens"]
