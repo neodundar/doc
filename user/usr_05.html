@@ -168,8 +168,8 @@ Display matches for a search pattern while you type.</div>
 <div class="old-help-para"><pre>map Q gq</pre>
 This defines a key mapping.  More about that in the next section.  This
 defines the "Q" command to do formatting with the "gq" operator.  This is how
-it worked before Vim 5.0.  Otherwise the "Q" command starts Ex mode, but you
-will not need it.</div>
+it worked before Vim 5.0.  Otherwise the "Q" command repeats the last recorded
+register.</div>
 <div class="old-help-para"><pre>vnoremap _g y:exe "grep /" .. escape(@", '\\/') .. "/ *.c *.h"&lt;CR&gt;</pre>
 This mapping yanks the visually selected text and searches for it in C files.
 This is a complicated mapping.  You can see that mappings can be used to do
@@ -520,7 +520,7 @@ This does mean there is less room to edit text, thus it's a compromise.</div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-26 05:47 from <code><a href="https://github.com/neovim/neovim/commit/ec33edc7b7027b809ac0b496344367a451e3974a">ec33edc</a></code>
+        Generated at 2022-10-27 05:48 from <code><a href="https://github.com/neovim/neovim/commit/1fe31651bce5021ea6d6dfe6fa426fde7795a77f">1fe3165</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 2 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+usr_05.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/usr_05.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim">noise_lines: 1</span>
