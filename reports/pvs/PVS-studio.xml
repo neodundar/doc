@@ -80,7 +80,16 @@
     <ErrorType>warning</ErrorType>
     <ErrorCode>V547</ErrorCode>
     <Message>Expression 'info.item_compare_func_err' is always false.</Message>
-    <Line>1237</Line>
+    <Line>1239</Line>
+    <File>./src/nvim/eval/typval.c</File>
+    <CWECode>CWE-570</CWECode>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <Level>2</Level>
+    <ErrorType>warning</ErrorType>
+    <ErrorCode>V547</ErrorCode>
+    <Message>Expression 'info.item_compare_func_err' is always false.</Message>
+    <Line>1262</Line>
     <File>./src/nvim/eval/typval.c</File>
     <CWECode>CWE-570</CWECode>
   </PVS-Studio_Analysis_Log>
@@ -155,22 +164,22 @@
   <PVS-Studio_Analysis_Log>
     <Level>2</Level>
     <ErrorType>warning</ErrorType>
-    <ErrorCode>V557</ErrorCode>
-    <Message>Array overrun is possible. The value of 'strlen(whichwrap) - 1' index could reach 18446744073709551615.</Message>
-    <Line>880</Line>
-    <File>./src/nvim/option.c</File>
-    <CWECode>CWE-787</CWECode>
-    <SAST>CERT-ARR30-C</SAST>
-  </PVS-Studio_Analysis_Log>
-  <PVS-Studio_Analysis_Log>
-    <Level>2</Level>
-    <ErrorType>warning</ErrorType>
     <ErrorCode>V601</ErrorCode>
     <Message>The value of 'char' type is implicitly cast to a char pointer.</Message>
     <Line>4108</Line>
     <File>./src/nvim/ops.c</File>
     <CWECode>CWE-704</CWECode>
     <SAST>CERT-INT36-C</SAST>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <Level>2</Level>
+    <ErrorType>warning</ErrorType>
+    <ErrorCode>V557</ErrorCode>
+    <Message>Array overrun is possible. The value of 'strlen(whichwrap) - 1' index could reach 18446744073709551615.</Message>
+    <Line>880</Line>
+    <File>./src/nvim/option.c</File>
+    <CWECode>CWE-787</CWECode>
+    <SAST>CERT-ARR30-C</SAST>
   </PVS-Studio_Analysis_Log>
   <PVS-Studio_Analysis_Log>
     <Level>1</Level>

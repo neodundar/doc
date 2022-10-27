@@ -87,7 +87,8 @@
 ./src/mpack/rpc.c:248:1: warning: V1086 A call of the 'memcpy' function will lead to underflow of the buffer 'dst'.
 ./src/mpack/rpc.c:248:1: warning: V1086 A call of the 'memcpy' function will lead to underflow of the buffer 'src'.
 ./src/nvim/drawline.c:2211:1: warning: V560 A part of conditional expression is always true: eol_hl_off == 0.
-./src/nvim/eval/typval.c:1237:1: warning: V547 Expression 'info.item_compare_func_err' is always false.
+./src/nvim/eval/typval.c:1239:1: warning: V547 Expression 'info.item_compare_func_err' is always false.
+./src/nvim/eval/typval.c:1262:1: warning: V547 Expression 'info.item_compare_func_err' is always false.
 ./src/nvim/ex_getln.c:2894:1: error: V595 The 'colored_ccline->cmdbuff' pointer was utilized before it was verified against nullptr. Check lines: 2894, 2900.
 ./src/nvim/fileio.c:5200:1: warning: V557 Array overrun is possible. The value of 'strlen(tmp) - strlen(user)' index could reach 18446744073709551615.
 ./src/nvim/highlight.c:329:1: warning: V547 Expression '!wp->w_ns_hl_attr' is always false.
@@ -95,15 +96,15 @@
 ./src/nvim/msgpack_rpc/unpacker.c:402:1: error: V501 There are identical sub-expressions to the left and to the right of the '==' operator: MPACK_TOKEN_STR == MPACK_TOKEN_STR
 ./src/nvim/msgpack_rpc/unpacker.c:463:1: error: V501 There are identical sub-expressions to the left and to the right of the '==' operator: MPACK_TOKEN_STR == MPACK_TOKEN_STR
 ./src/nvim/msgpack_rpc/unpacker.c:474:1: error: V501 There are identical sub-expressions to the left and to the right of the '==' operator: MPACK_TOKEN_SINT == MPACK_TOKEN_SINT
-./src/nvim/option.c:880:1: warning: V557 Array overrun is possible. The value of 'strlen(whichwrap) - 1' index could reach 18446744073709551615.
 ./src/nvim/ops.c:4108:1: warning: V601 The value of 'char' type is implicitly cast to a char pointer.
+./src/nvim/option.c:880:1: warning: V557 Array overrun is possible. The value of 'strlen(whichwrap) - 1' index could reach 18446744073709551615.
 ./src/nvim/spell.c:2929:1: error: V781 The value of the 'i' index is checked after it was used. Perhaps there is a mistake in program logic.
 ./src/nvim/spellsuggest.c:1155:1: warning: V1086 A call of the 'memset' function will lead to underflow of the buffer 'sp'.</pre>
     </div>
 
     <footer>
       <div class="container">
-        Generated Wed Oct 26 05:45:42 UTC 2022 from <a href="https://github.com/neovim/neovim/commit/ec33edc7b7027b809ac0b496344367a451e3974a"><code>ec33edc</code></a>.
+        Generated Thu Oct 27 05:46:29 UTC 2022 from <a href="https://github.com/neovim/neovim/commit/1fe31651bce5021ea6d6dfe6fa426fde7795a77f"><code>1fe3165</code></a>.
       </div>
     </footer>
   </body>

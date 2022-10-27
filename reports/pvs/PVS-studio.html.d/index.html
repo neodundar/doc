@@ -34,10 +34,10 @@
     <br class="clear">
   </div>
   <table cellpadding="0" cellspacing="0" border="0" class="infotopic">
-     <tr><th id="col_info">Date:</th><td>Wed Oct 26 05:45:42 2022</td></tr>
+     <tr><th id="col_info">Date:</th><td>Thu Oct 27 05:46:29 2022</td></tr>
      <tr><th id="col_info">PVS-Studio Version:</th><td>7.21.64848.262</td></tr>
      <tr><th id="col_info">Command Line:</th><td>plog-converter PVS-studio.log --srcRoot . --excludedCodes V002,V011,V1028,V1042,V1051,V1074 --renderTypes fullhtml --output PVS-studio.html.d </td></tr>
-     <tr><th id="col_info">Total Warnings (GA):</th><td>20</td></tr>
+     <tr><th id="col_info">Total Warnings (GA):</th><td>21</td></tr>
   </table>
   <table cellpadding="0" cellspacing="0" border="0" class="sortable" id="sorter">
     <tr>
@@ -105,7 +105,14 @@
     </tr>
     <tr>
       <td id="col_group">General Analysis</td>
-      <td id="col_file"><a target="_blank" href="sources/typval.c_5.html#ln1237">typval.c:1237</a></td>
+      <td id="col_file"><a target="_blank" href="sources/typval.c_5.html#ln1239">typval.c:1239</a></td>
+      <td id="col_level" style="color:#FFA500"><b>Medium</b></td>
+      <td id="col_code"><a target="_blank" href="https://pvs-studio.com/en/docs/warnings/v547/">V547</td>
+      <td id="col_message">Expression 'info.item_compare_func_err' is always false.</td>
+    </tr>
+    <tr>
+      <td id="col_group">General Analysis</td>
+      <td id="col_file"><a target="_blank" href="sources/typval.c_5.html#ln1262">typval.c:1262</a></td>
       <td id="col_level" style="color:#FFA500"><b>Medium</b></td>
       <td id="col_code"><a target="_blank" href="https://pvs-studio.com/en/docs/warnings/v547/">V547</td>
       <td id="col_message">Expression 'info.item_compare_func_err' is always false.</td>
@@ -161,17 +168,17 @@
     </tr>
     <tr>
       <td id="col_group">General Analysis</td>
-      <td id="col_file"><a target="_blank" href="sources/option.c_11.html#ln880">option.c:880</a></td>
-      <td id="col_level" style="color:#FFA500"><b>Medium</b></td>
-      <td id="col_code"><a target="_blank" href="https://pvs-studio.com/en/docs/warnings/v557/">V557</td>
-      <td id="col_message">Array overrun is possible. The value of 'strlen(whichwrap) - 1' index could reach 18446744073709551615.</td>
-    </tr>
-    <tr>
-      <td id="col_group">General Analysis</td>
-      <td id="col_file"><a target="_blank" href="sources/ops.c_12.html#ln4108">ops.c:4108</a></td>
+      <td id="col_file"><a target="_blank" href="sources/ops.c_11.html#ln4108">ops.c:4108</a></td>
       <td id="col_level" style="color:#FFA500"><b>Medium</b></td>
       <td id="col_code"><a target="_blank" href="https://pvs-studio.com/en/docs/warnings/v601/">V601</td>
       <td id="col_message">The value of 'char' type is implicitly cast to a char pointer.</td>
+    </tr>
+    <tr>
+      <td id="col_group">General Analysis</td>
+      <td id="col_file"><a target="_blank" href="sources/option.c_12.html#ln880">option.c:880</a></td>
+      <td id="col_level" style="color:#FFA500"><b>Medium</b></td>
+      <td id="col_code"><a target="_blank" href="https://pvs-studio.com/en/docs/warnings/v557/">V557</td>
+      <td id="col_message">Array overrun is possible. The value of 'strlen(whichwrap) - 1' index could reach 18446744073709551615.</td>
     </tr>
     <tr>
       <td id="col_group">General Analysis</td>

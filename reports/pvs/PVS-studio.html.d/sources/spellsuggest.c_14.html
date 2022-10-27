@@ -2259,7 +2259,7 @@
 <a name="ln2250">        ftp = (fromto_T *)gap-&gt;ga_data + sp-&gt;ts_curi++;</a>
 <a name="ln2251">        if (*ftp-&gt;ft_from != *p) {</a>
 <a name="ln2252">          // past possible matching entries</a>
-<a name="ln2253">          sp-&gt;ts_curi = (char_u)gap-&gt;ga_len;</a>
+<a name="ln2253">          sp-&gt;ts_curi = (int16_t)gap-&gt;ga_len;</a>
 <a name="ln2254">          break;</a>
 <a name="ln2255">        }</a>
 <a name="ln2256">        if (STRNCMP(ftp-&gt;ft_from, p, STRLEN(ftp-&gt;ft_from)) == 0</a>
