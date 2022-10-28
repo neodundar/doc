@@ -4668,6 +4668,12 @@ pattern = { "*.py", "*.pyi" }</pre>
 
 </div>
 <div class="help-para">
+    Note: The <code>pattern</code> is passed to callbacks and commands as a literal string; environment
+    variables like <code>$HOME</code> and <code>~</code> are not automatically expanded as they are by <a href="autocmd.html#%3Aautocmd">:autocmd</a>. Instead,
+    <a href="builtin.html#expand()">expand()</a> such variables explicitly:<pre>pattern = vim.fn.expand("~") .. "/some/path/*.py"</pre>
+
+</div>
+<div class="help-para">
     Example values for event:<pre>"BufWritePre"
 {"CursorHold", "BufWritePre", "BufWritePost"}</pre>
 
@@ -4680,7 +4686,7 @@ pattern = { "*.py", "*.pyi" }</pre>
 </div><div class="help-li" style="margin-left: 3rem;"> group (string|integer) optional: the autocommand group name
                    or id to match against.
 </div><div class="help-li" style="margin-left: 3rem;"> pattern (string|array) optional: pattern or patterns to
-                   match against <a href="autocmd.html#autocmd-pattern">autocmd-pattern</a>.
+                   match literally against <a href="autocmd.html#autocmd-pattern">autocmd-pattern</a>.
 </div><div class="help-li" style="margin-left: 3rem;"> buffer (integer) optional: buffer number for buffer local
                    autocommands <a href="autocmd.html#autocmd-buflocal">autocmd-buflocal</a>. Cannot be used with
                    <code>{pattern}</code>.
@@ -5065,7 +5071,7 @@ UI Functions                                                          </a>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-27 05:46 from <code><a href="https://github.com/neovim/neovim/commit/1fe31651bce5021ea6d6dfe6fa426fde7795a77f">1fe3165</a></code>
+        Generated at 2022-10-28 05:47 from <code><a href="https://github.com/neovim/neovim/commit/685ff3ee7247c5118fd8ef1c229af60066a4fcb4">685ff3e</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 1 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+api.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/api.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="               Nvim

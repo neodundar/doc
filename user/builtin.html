@@ -293,6 +293,7 @@ gettabvar(<code>{nr}</code>, <code>{varname}</code> [, <code>{def}</code>])
 gettabwinvar(<code>{tabnr}</code>, <code>{winnr}</code>, <code>{name}</code> [, <code>{def}</code>])
 				any	<code>{name}</code> in <code>{winnr}</code> in tab page <code>{tabnr}</code>
 gettagstack([{nr}])		Dict	get the tag stack of window <code>{nr}</code>
+gettext(<code>{text}</code>)			String	lookup translation of <code>{text}</code>
 getwininfo([{winid}])		List	list of info about each window
 getwinpos([{timeout}])		List	X and Y coord in pixels of the Vim window
 getwinposx()			Number	X coord in pixels of Vim window
@@ -2966,7 +2967,17 @@ gettagstack([{winnr}])					<a name="gettagstack()"></a><code class="help-tag-rig
 			tagname		name of the tag</div>
 <div class="old-help-para">		See <a href="tagsrch.html#tagstack">tagstack</a> for more information about the tag stack.</div>
 <div class="old-help-para">		Can also be used as a <a href="eval.html#method">method</a>:<pre>GetWinnr()-&gt;gettagstack()</pre>
-getwininfo([{winid}])					<a name="getwininfo()"></a><code class="help-tag-right">getwininfo()</code>
+gettext(<code>{text}</code>)						<a name="gettext()"></a><code class="help-tag-right">gettext()</code>
+		Translate String <code>{text}</code> if possible.
+		This is mainly for use in the distributed Vim scripts.  When
+		generating message translations the <code>{text}</code> is extracted by
+		xgettext, the translator can add the translated message in the
+		.po file and Vim will lookup the translation when gettext() is
+		called.
+		For <code>{text}</code> double quoted strings are preferred, because
+		xgettext does not understand escaping in single quoted
+		strings.</div>
+<div class="old-help-para">getwininfo([{winid}])					<a name="getwininfo()"></a><code class="help-tag-right">getwininfo()</code>
 		Returns information about windows as a <a href="eval.html#List">List</a> with Dictionaries.</div>
 <div class="old-help-para">		If <code>{winid}</code> is given Information about the window with that ID
 		is returned, as a <a href="eval.html#List">List</a> with one item.  If the window does not
@@ -7354,7 +7365,7 @@ Don't forget that "^" will only match at the first character of the String and
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-27 05:47 from <code><a href="https://github.com/neovim/neovim/commit/1fe31651bce5021ea6d6dfe6fa426fde7795a77f">1fe3165</a></code>
+        Generated at 2022-10-28 05:47 from <code><a href="https://github.com/neovim/neovim/commit/685ff3ee7247c5118fd8ef1c229af60066a4fcb4">685ff3e</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 11 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+builtin.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/builtin.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim
