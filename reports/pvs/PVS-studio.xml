@@ -111,7 +111,7 @@
     <ErrorType>warning</ErrorType>
     <ErrorCode>V557</ErrorCode>
     <Message>Array overrun is possible. The value of 'strlen(tmp) - strlen(user)' index could reach 18446744073709551615.</Message>
-    <Line>5200</Line>
+    <Line>5211</Line>
     <File>./src/nvim/fileio.c</File>
     <CWECode>CWE-787</CWECode>
     <SAST>CERT-ARR30-C</SAST>

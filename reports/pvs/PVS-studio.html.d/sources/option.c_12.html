@@ -3987,1591 +3987,1593 @@
 <a name="ln3978">    return (char_u *)&amp;(curbuf-&gt;b_p_cfu);</a>
 <a name="ln3979">  case PV_OFU:</a>
 <a name="ln3980">    return (char_u *)&amp;(curbuf-&gt;b_p_ofu);</a>
-<a name="ln3981">  case PV_EOL:</a>
-<a name="ln3982">    return (char_u *)&amp;(curbuf-&gt;b_p_eol);</a>
-<a name="ln3983">  case PV_FIXEOL:</a>
-<a name="ln3984">    return (char_u *)&amp;(curbuf-&gt;b_p_fixeol);</a>
-<a name="ln3985">  case PV_ET:</a>
-<a name="ln3986">    return (char_u *)&amp;(curbuf-&gt;b_p_et);</a>
-<a name="ln3987">  case PV_FENC:</a>
-<a name="ln3988">    return (char_u *)&amp;(curbuf-&gt;b_p_fenc);</a>
-<a name="ln3989">  case PV_FF:</a>
-<a name="ln3990">    return (char_u *)&amp;(curbuf-&gt;b_p_ff);</a>
-<a name="ln3991">  case PV_FT:</a>
-<a name="ln3992">    return (char_u *)&amp;(curbuf-&gt;b_p_ft);</a>
-<a name="ln3993">  case PV_FO:</a>
-<a name="ln3994">    return (char_u *)&amp;(curbuf-&gt;b_p_fo);</a>
-<a name="ln3995">  case PV_FLP:</a>
-<a name="ln3996">    return (char_u *)&amp;(curbuf-&gt;b_p_flp);</a>
-<a name="ln3997">  case PV_IMI:</a>
-<a name="ln3998">    return (char_u *)&amp;(curbuf-&gt;b_p_iminsert);</a>
-<a name="ln3999">  case PV_IMS:</a>
-<a name="ln4000">    return (char_u *)&amp;(curbuf-&gt;b_p_imsearch);</a>
-<a name="ln4001">  case PV_INF:</a>
-<a name="ln4002">    return (char_u *)&amp;(curbuf-&gt;b_p_inf);</a>
-<a name="ln4003">  case PV_ISK:</a>
-<a name="ln4004">    return (char_u *)&amp;(curbuf-&gt;b_p_isk);</a>
-<a name="ln4005">  case PV_INEX:</a>
-<a name="ln4006">    return (char_u *)&amp;(curbuf-&gt;b_p_inex);</a>
-<a name="ln4007">  case PV_INDE:</a>
-<a name="ln4008">    return (char_u *)&amp;(curbuf-&gt;b_p_inde);</a>
-<a name="ln4009">  case PV_INDK:</a>
-<a name="ln4010">    return (char_u *)&amp;(curbuf-&gt;b_p_indk);</a>
-<a name="ln4011">  case PV_FEX:</a>
-<a name="ln4012">    return (char_u *)&amp;(curbuf-&gt;b_p_fex);</a>
-<a name="ln4013">  case PV_LISP:</a>
-<a name="ln4014">    return (char_u *)&amp;(curbuf-&gt;b_p_lisp);</a>
-<a name="ln4015">  case PV_LOP:</a>
-<a name="ln4016">    return (char_u *)&amp;(curbuf-&gt;b_p_lop);</a>
-<a name="ln4017">  case PV_ML:</a>
-<a name="ln4018">    return (char_u *)&amp;(curbuf-&gt;b_p_ml);</a>
-<a name="ln4019">  case PV_MPS:</a>
-<a name="ln4020">    return (char_u *)&amp;(curbuf-&gt;b_p_mps);</a>
-<a name="ln4021">  case PV_MA:</a>
-<a name="ln4022">    return (char_u *)&amp;(curbuf-&gt;b_p_ma);</a>
-<a name="ln4023">  case PV_MOD:</a>
-<a name="ln4024">    return (char_u *)&amp;(curbuf-&gt;b_changed);</a>
-<a name="ln4025">  case PV_NF:</a>
-<a name="ln4026">    return (char_u *)&amp;(curbuf-&gt;b_p_nf);</a>
-<a name="ln4027">  case PV_PI:</a>
-<a name="ln4028">    return (char_u *)&amp;(curbuf-&gt;b_p_pi);</a>
-<a name="ln4029">  case PV_QE:</a>
-<a name="ln4030">    return (char_u *)&amp;(curbuf-&gt;b_p_qe);</a>
-<a name="ln4031">  case PV_RO:</a>
-<a name="ln4032">    return (char_u *)&amp;(curbuf-&gt;b_p_ro);</a>
-<a name="ln4033">  case PV_SCBK:</a>
-<a name="ln4034">    return (char_u *)&amp;(curbuf-&gt;b_p_scbk);</a>
-<a name="ln4035">  case PV_SI:</a>
-<a name="ln4036">    return (char_u *)&amp;(curbuf-&gt;b_p_si);</a>
-<a name="ln4037">  case PV_STS:</a>
-<a name="ln4038">    return (char_u *)&amp;(curbuf-&gt;b_p_sts);</a>
-<a name="ln4039">  case PV_SUA:</a>
-<a name="ln4040">    return (char_u *)&amp;(curbuf-&gt;b_p_sua);</a>
-<a name="ln4041">  case PV_SWF:</a>
-<a name="ln4042">    return (char_u *)&amp;(curbuf-&gt;b_p_swf);</a>
-<a name="ln4043">  case PV_SMC:</a>
-<a name="ln4044">    return (char_u *)&amp;(curbuf-&gt;b_p_smc);</a>
-<a name="ln4045">  case PV_SYN:</a>
-<a name="ln4046">    return (char_u *)&amp;(curbuf-&gt;b_p_syn);</a>
-<a name="ln4047">  case PV_SPC:</a>
-<a name="ln4048">    return (char_u *)&amp;(curwin-&gt;w_s-&gt;b_p_spc);</a>
-<a name="ln4049">  case PV_SPF:</a>
-<a name="ln4050">    return (char_u *)&amp;(curwin-&gt;w_s-&gt;b_p_spf);</a>
-<a name="ln4051">  case PV_SPL:</a>
-<a name="ln4052">    return (char_u *)&amp;(curwin-&gt;w_s-&gt;b_p_spl);</a>
-<a name="ln4053">  case PV_SPO:</a>
-<a name="ln4054">    return (char_u *)&amp;(curwin-&gt;w_s-&gt;b_p_spo);</a>
-<a name="ln4055">  case PV_SW:</a>
-<a name="ln4056">    return (char_u *)&amp;(curbuf-&gt;b_p_sw);</a>
-<a name="ln4057">  case PV_TFU:</a>
-<a name="ln4058">    return (char_u *)&amp;(curbuf-&gt;b_p_tfu);</a>
-<a name="ln4059">  case PV_TS:</a>
-<a name="ln4060">    return (char_u *)&amp;(curbuf-&gt;b_p_ts);</a>
-<a name="ln4061">  case PV_TW:</a>
-<a name="ln4062">    return (char_u *)&amp;(curbuf-&gt;b_p_tw);</a>
-<a name="ln4063">  case PV_UDF:</a>
-<a name="ln4064">    return (char_u *)&amp;(curbuf-&gt;b_p_udf);</a>
-<a name="ln4065">  case PV_WM:</a>
-<a name="ln4066">    return (char_u *)&amp;(curbuf-&gt;b_p_wm);</a>
-<a name="ln4067">  case PV_VSTS:</a>
-<a name="ln4068">    return (char_u *)&amp;(curbuf-&gt;b_p_vsts);</a>
-<a name="ln4069">  case PV_VTS:</a>
-<a name="ln4070">    return (char_u *)&amp;(curbuf-&gt;b_p_vts);</a>
-<a name="ln4071">  case PV_KMAP:</a>
-<a name="ln4072">    return (char_u *)&amp;(curbuf-&gt;b_p_keymap);</a>
-<a name="ln4073">  case PV_SCL:</a>
-<a name="ln4074">    return (char_u *)&amp;(curwin-&gt;w_p_scl);</a>
-<a name="ln4075">  case PV_WINHL:</a>
-<a name="ln4076">    return (char_u *)&amp;(curwin-&gt;w_p_winhl);</a>
-<a name="ln4077">  case PV_WINBL:</a>
-<a name="ln4078">    return (char_u *)&amp;(curwin-&gt;w_p_winbl);</a>
-<a name="ln4079">  default:</a>
-<a name="ln4080">    iemsg(_(&quot;E356: get_varp ERROR&quot;));</a>
-<a name="ln4081">  }</a>
-<a name="ln4082">  // always return a valid pointer to avoid a crash!</a>
-<a name="ln4083">  return (char_u *)&amp;(curbuf-&gt;b_p_wm);</a>
-<a name="ln4084">}</a>
-<a name="ln4085"> </a>
-<a name="ln4086">/// Get the value of 'equalprg', either the buffer-local one or the global one.</a>
-<a name="ln4087">char_u *get_equalprg(void)</a>
-<a name="ln4088">{</a>
-<a name="ln4089">  if (*curbuf-&gt;b_p_ep == NUL) {</a>
-<a name="ln4090">    return p_ep;</a>
-<a name="ln4091">  }</a>
-<a name="ln4092">  return (char_u *)curbuf-&gt;b_p_ep;</a>
-<a name="ln4093">}</a>
-<a name="ln4094"> </a>
-<a name="ln4095">/// Copy options from one window to another.</a>
-<a name="ln4096">/// Used when splitting a window.</a>
-<a name="ln4097">void win_copy_options(win_T *wp_from, win_T *wp_to)</a>
-<a name="ln4098">{</a>
-<a name="ln4099">  copy_winopt(&amp;wp_from-&gt;w_onebuf_opt, &amp;wp_to-&gt;w_onebuf_opt);</a>
-<a name="ln4100">  copy_winopt(&amp;wp_from-&gt;w_allbuf_opt, &amp;wp_to-&gt;w_allbuf_opt);</a>
-<a name="ln4101">  didset_window_options(wp_to, true);</a>
-<a name="ln4102">}</a>
-<a name="ln4103"> </a>
-<a name="ln4104">static char *copy_option_val(const char *val)</a>
-<a name="ln4105">{</a>
-<a name="ln4106">  if (val == empty_option) {</a>
-<a name="ln4107">    return empty_option;  // no need to allocate memory</a>
-<a name="ln4108">  }</a>
-<a name="ln4109">  return xstrdup(val);</a>
-<a name="ln4110">}</a>
-<a name="ln4111"> </a>
-<a name="ln4112">/// Copy the options from one winopt_T to another.</a>
-<a name="ln4113">/// Doesn't free the old option values in &quot;to&quot;, use clear_winopt() for that.</a>
-<a name="ln4114">/// The 'scroll' option is not copied, because it depends on the window height.</a>
-<a name="ln4115">/// The 'previewwindow' option is reset, there can be only one preview window.</a>
-<a name="ln4116">void copy_winopt(winopt_T *from, winopt_T *to)</a>
-<a name="ln4117">{</a>
-<a name="ln4118">  to-&gt;wo_arab = from-&gt;wo_arab;</a>
-<a name="ln4119">  to-&gt;wo_list = from-&gt;wo_list;</a>
-<a name="ln4120">  to-&gt;wo_lcs = copy_option_val(from-&gt;wo_lcs);</a>
-<a name="ln4121">  to-&gt;wo_fcs = copy_option_val(from-&gt;wo_fcs);</a>
-<a name="ln4122">  to-&gt;wo_nu = from-&gt;wo_nu;</a>
-<a name="ln4123">  to-&gt;wo_rnu = from-&gt;wo_rnu;</a>
-<a name="ln4124">  to-&gt;wo_ve = copy_option_val(from-&gt;wo_ve);</a>
-<a name="ln4125">  to-&gt;wo_ve_flags = from-&gt;wo_ve_flags;</a>
-<a name="ln4126">  to-&gt;wo_nuw = from-&gt;wo_nuw;</a>
-<a name="ln4127">  to-&gt;wo_rl  = from-&gt;wo_rl;</a>
-<a name="ln4128">  to-&gt;wo_rlc = copy_option_val(from-&gt;wo_rlc);</a>
-<a name="ln4129">  to-&gt;wo_sbr = copy_option_val(from-&gt;wo_sbr);</a>
-<a name="ln4130">  to-&gt;wo_stl = copy_option_val(from-&gt;wo_stl);</a>
-<a name="ln4131">  to-&gt;wo_wbr = copy_option_val(from-&gt;wo_wbr);</a>
-<a name="ln4132">  to-&gt;wo_wrap = from-&gt;wo_wrap;</a>
-<a name="ln4133">  to-&gt;wo_wrap_save = from-&gt;wo_wrap_save;</a>
-<a name="ln4134">  to-&gt;wo_lbr = from-&gt;wo_lbr;</a>
-<a name="ln4135">  to-&gt;wo_bri = from-&gt;wo_bri;</a>
-<a name="ln4136">  to-&gt;wo_briopt = copy_option_val(from-&gt;wo_briopt);</a>
-<a name="ln4137">  to-&gt;wo_scb = from-&gt;wo_scb;</a>
-<a name="ln4138">  to-&gt;wo_scb_save = from-&gt;wo_scb_save;</a>
-<a name="ln4139">  to-&gt;wo_crb = from-&gt;wo_crb;</a>
-<a name="ln4140">  to-&gt;wo_crb_save = from-&gt;wo_crb_save;</a>
-<a name="ln4141">  to-&gt;wo_spell = from-&gt;wo_spell;</a>
-<a name="ln4142">  to-&gt;wo_cuc = from-&gt;wo_cuc;</a>
-<a name="ln4143">  to-&gt;wo_cul = from-&gt;wo_cul;</a>
-<a name="ln4144">  to-&gt;wo_culopt = copy_option_val(from-&gt;wo_culopt);</a>
-<a name="ln4145">  to-&gt;wo_cc = copy_option_val(from-&gt;wo_cc);</a>
-<a name="ln4146">  to-&gt;wo_diff = from-&gt;wo_diff;</a>
-<a name="ln4147">  to-&gt;wo_diff_saved = from-&gt;wo_diff_saved;</a>
-<a name="ln4148">  to-&gt;wo_cocu = copy_option_val(from-&gt;wo_cocu);</a>
-<a name="ln4149">  to-&gt;wo_cole = from-&gt;wo_cole;</a>
-<a name="ln4150">  to-&gt;wo_fdc = copy_option_val(from-&gt;wo_fdc);</a>
-<a name="ln4151">  to-&gt;wo_fdc_save = from-&gt;wo_diff_saved ? xstrdup(from-&gt;wo_fdc_save) : empty_option;</a>
-<a name="ln4152">  to-&gt;wo_fen = from-&gt;wo_fen;</a>
-<a name="ln4153">  to-&gt;wo_fen_save = from-&gt;wo_fen_save;</a>
-<a name="ln4154">  to-&gt;wo_fdi = copy_option_val(from-&gt;wo_fdi);</a>
-<a name="ln4155">  to-&gt;wo_fml = from-&gt;wo_fml;</a>
-<a name="ln4156">  to-&gt;wo_fdl = from-&gt;wo_fdl;</a>
-<a name="ln4157">  to-&gt;wo_fdl_save = from-&gt;wo_fdl_save;</a>
-<a name="ln4158">  to-&gt;wo_fdm = copy_option_val(from-&gt;wo_fdm);</a>
-<a name="ln4159">  to-&gt;wo_fdm_save = from-&gt;wo_diff_saved ? xstrdup(from-&gt;wo_fdm_save) : empty_option;</a>
-<a name="ln4160">  to-&gt;wo_fdn = from-&gt;wo_fdn;</a>
-<a name="ln4161">  to-&gt;wo_fde = copy_option_val(from-&gt;wo_fde);</a>
-<a name="ln4162">  to-&gt;wo_fdt = copy_option_val(from-&gt;wo_fdt);</a>
-<a name="ln4163">  to-&gt;wo_fmr = copy_option_val(from-&gt;wo_fmr);</a>
-<a name="ln4164">  to-&gt;wo_scl = copy_option_val(from-&gt;wo_scl);</a>
-<a name="ln4165">  to-&gt;wo_winhl = copy_option_val(from-&gt;wo_winhl);</a>
-<a name="ln4166">  to-&gt;wo_winbl = from-&gt;wo_winbl;</a>
-<a name="ln4167"> </a>
-<a name="ln4168">  // Copy the script context so that we know were the value was last set.</a>
-<a name="ln4169">  memmove(to-&gt;wo_script_ctx, from-&gt;wo_script_ctx, sizeof(to-&gt;wo_script_ctx));</a>
-<a name="ln4170">  check_winopt(to);             // don't want NULL pointers</a>
-<a name="ln4171">}</a>
-<a name="ln4172"> </a>
-<a name="ln4173">/// Check string options in a window for a NULL value.</a>
-<a name="ln4174">void check_win_options(win_T *win)</a>
-<a name="ln4175">{</a>
-<a name="ln4176">  check_winopt(&amp;win-&gt;w_onebuf_opt);</a>
-<a name="ln4177">  check_winopt(&amp;win-&gt;w_allbuf_opt);</a>
-<a name="ln4178">}</a>
-<a name="ln4179"> </a>
-<a name="ln4180">/// Check for NULL pointers in a winopt_T and replace them with empty_option.</a>
-<a name="ln4181">static void check_winopt(winopt_T *wop)</a>
-<a name="ln4182">{</a>
-<a name="ln4183">  check_string_option(&amp;wop-&gt;wo_fdc);</a>
-<a name="ln4184">  check_string_option(&amp;wop-&gt;wo_fdc_save);</a>
-<a name="ln4185">  check_string_option(&amp;wop-&gt;wo_fdi);</a>
-<a name="ln4186">  check_string_option(&amp;wop-&gt;wo_fdm);</a>
-<a name="ln4187">  check_string_option(&amp;wop-&gt;wo_fdm_save);</a>
-<a name="ln4188">  check_string_option(&amp;wop-&gt;wo_fde);</a>
-<a name="ln4189">  check_string_option(&amp;wop-&gt;wo_fdt);</a>
-<a name="ln4190">  check_string_option(&amp;wop-&gt;wo_fmr);</a>
-<a name="ln4191">  check_string_option(&amp;wop-&gt;wo_scl);</a>
-<a name="ln4192">  check_string_option(&amp;wop-&gt;wo_rlc);</a>
-<a name="ln4193">  check_string_option(&amp;wop-&gt;wo_sbr);</a>
-<a name="ln4194">  check_string_option(&amp;wop-&gt;wo_stl);</a>
-<a name="ln4195">  check_string_option(&amp;wop-&gt;wo_culopt);</a>
-<a name="ln4196">  check_string_option(&amp;wop-&gt;wo_cc);</a>
-<a name="ln4197">  check_string_option(&amp;wop-&gt;wo_cocu);</a>
-<a name="ln4198">  check_string_option(&amp;wop-&gt;wo_briopt);</a>
-<a name="ln4199">  check_string_option(&amp;wop-&gt;wo_winhl);</a>
-<a name="ln4200">  check_string_option(&amp;wop-&gt;wo_lcs);</a>
-<a name="ln4201">  check_string_option(&amp;wop-&gt;wo_fcs);</a>
-<a name="ln4202">  check_string_option(&amp;wop-&gt;wo_ve);</a>
-<a name="ln4203">  check_string_option(&amp;wop-&gt;wo_wbr);</a>
-<a name="ln4204">}</a>
-<a name="ln4205"> </a>
-<a name="ln4206">/// Free the allocated memory inside a winopt_T.</a>
-<a name="ln4207">void clear_winopt(winopt_T *wop)</a>
-<a name="ln4208">{</a>
-<a name="ln4209">  clear_string_option(&amp;wop-&gt;wo_fdc);</a>
-<a name="ln4210">  clear_string_option(&amp;wop-&gt;wo_fdc_save);</a>
-<a name="ln4211">  clear_string_option(&amp;wop-&gt;wo_fdi);</a>
-<a name="ln4212">  clear_string_option(&amp;wop-&gt;wo_fdm);</a>
-<a name="ln4213">  clear_string_option(&amp;wop-&gt;wo_fdm_save);</a>
-<a name="ln4214">  clear_string_option(&amp;wop-&gt;wo_fde);</a>
-<a name="ln4215">  clear_string_option(&amp;wop-&gt;wo_fdt);</a>
-<a name="ln4216">  clear_string_option(&amp;wop-&gt;wo_fmr);</a>
-<a name="ln4217">  clear_string_option(&amp;wop-&gt;wo_scl);</a>
-<a name="ln4218">  clear_string_option(&amp;wop-&gt;wo_rlc);</a>
-<a name="ln4219">  clear_string_option(&amp;wop-&gt;wo_sbr);</a>
-<a name="ln4220">  clear_string_option(&amp;wop-&gt;wo_stl);</a>
-<a name="ln4221">  clear_string_option(&amp;wop-&gt;wo_culopt);</a>
-<a name="ln4222">  clear_string_option(&amp;wop-&gt;wo_cc);</a>
-<a name="ln4223">  clear_string_option(&amp;wop-&gt;wo_cocu);</a>
-<a name="ln4224">  clear_string_option(&amp;wop-&gt;wo_briopt);</a>
-<a name="ln4225">  clear_string_option(&amp;wop-&gt;wo_winhl);</a>
-<a name="ln4226">  clear_string_option(&amp;wop-&gt;wo_lcs);</a>
-<a name="ln4227">  clear_string_option(&amp;wop-&gt;wo_fcs);</a>
-<a name="ln4228">  clear_string_option(&amp;wop-&gt;wo_ve);</a>
-<a name="ln4229">  clear_string_option(&amp;wop-&gt;wo_wbr);</a>
-<a name="ln4230">}</a>
-<a name="ln4231"> </a>
-<a name="ln4232">void didset_window_options(win_T *wp, bool valid_cursor)</a>
-<a name="ln4233">{</a>
-<a name="ln4234">  check_colorcolumn(wp);</a>
-<a name="ln4235">  briopt_check(wp);</a>
-<a name="ln4236">  fill_culopt_flags(NULL, wp);</a>
-<a name="ln4237">  set_chars_option(wp, &amp;wp-&gt;w_p_fcs, true);</a>
-<a name="ln4238">  set_chars_option(wp, &amp;wp-&gt;w_p_lcs, true);</a>
-<a name="ln4239">  parse_winhl_opt(wp);  // sets w_hl_needs_update also for w_p_winbl</a>
-<a name="ln4240">  check_blending(wp);</a>
-<a name="ln4241">  set_winbar_win(wp, false, valid_cursor);</a>
-<a name="ln4242">  wp-&gt;w_grid_alloc.blending = wp-&gt;w_p_winbl &gt; 0;</a>
-<a name="ln4243">}</a>
-<a name="ln4244"> </a>
-<a name="ln4245">/// Index into the options table for a buffer-local option enum.</a>
-<a name="ln4246">static int buf_opt_idx[BV_COUNT];</a>
-<a name="ln4247">#define COPY_OPT_SCTX(buf, bv) buf-&gt;b_p_script_ctx[bv] = options[buf_opt_idx[bv]].last_set</a>
-<a name="ln4248"> </a>
-<a name="ln4249">/// Initialize buf_opt_idx[] if not done already.</a>
-<a name="ln4250">static void init_buf_opt_idx(void)</a>
-<a name="ln4251">{</a>
-<a name="ln4252">  static int did_init_buf_opt_idx = false;</a>
-<a name="ln4253"> </a>
-<a name="ln4254">  if (did_init_buf_opt_idx) {</a>
-<a name="ln4255">    return;</a>
-<a name="ln4256">  }</a>
-<a name="ln4257">  did_init_buf_opt_idx = true;</a>
-<a name="ln4258">  for (int i = 0; options[i].fullname != NULL; i++) {</a>
-<a name="ln4259">    if (options[i].indir &amp; PV_BUF) {</a>
-<a name="ln4260">      buf_opt_idx[options[i].indir &amp; PV_MASK] = i;</a>
-<a name="ln4261">    }</a>
-<a name="ln4262">  }</a>
-<a name="ln4263">}</a>
-<a name="ln4264"> </a>
-<a name="ln4265">/// Copy global option values to local options for one buffer.</a>
-<a name="ln4266">/// Used when creating a new buffer and sometimes when entering a buffer.</a>
-<a name="ln4267">/// flags:</a>
-<a name="ln4268">/// BCO_ENTER    We will enter the buffer &quot;buf&quot;.</a>
-<a name="ln4269">/// BCO_ALWAYS   Always copy the options, but only set b_p_initialized when</a>
-<a name="ln4270">///      appropriate.</a>
-<a name="ln4271">/// BCO_NOHELP   Don't copy the values to a help buffer.</a>
-<a name="ln4272">void buf_copy_options(buf_T *buf, int flags)</a>
-<a name="ln4273">{</a>
-<a name="ln4274">  int should_copy = true;</a>
-<a name="ln4275">  char_u *save_p_isk = NULL;           // init for GCC</a>
-<a name="ln4276">  int dont_do_help;</a>
-<a name="ln4277">  int did_isk = false;</a>
-<a name="ln4278"> </a>
-<a name="ln4279">  // Skip this when the option defaults have not been set yet.  Happens when</a>
-<a name="ln4280">  // main() allocates the first buffer.</a>
-<a name="ln4281">  if (p_cpo != NULL) {</a>
-<a name="ln4282">    //</a>
-<a name="ln4283">    // Always copy when entering and 'cpo' contains 'S'.</a>
-<a name="ln4284">    // Don't copy when already initialized.</a>
-<a name="ln4285">    // Don't copy when 'cpo' contains 's' and not entering.</a>
-<a name="ln4286">    //    'S'      BCO_ENTER  initialized  's'  should_copy</a>
-<a name="ln4287">    //    yes        yes          X         X      true</a>
-<a name="ln4288">    //    yes        no          yes        X      false</a>
-<a name="ln4289">    //    no          X          yes        X      false</a>
-<a name="ln4290">    //     X         no          no        yes     false</a>
-<a name="ln4291">    //     X         no          no        no      true</a>
-<a name="ln4292">    //    no         yes         no         X      true</a>
-<a name="ln4293">    ///</a>
-<a name="ln4294">    if ((vim_strchr(p_cpo, CPO_BUFOPTGLOB) == NULL || !(flags &amp; BCO_ENTER))</a>
-<a name="ln4295">        &amp;&amp; (buf-&gt;b_p_initialized</a>
-<a name="ln4296">            || (!(flags &amp; BCO_ENTER)</a>
-<a name="ln4297">                &amp;&amp; vim_strchr(p_cpo, CPO_BUFOPT) != NULL))) {</a>
-<a name="ln4298">      should_copy = false;</a>
-<a name="ln4299">    }</a>
-<a name="ln4300"> </a>
-<a name="ln4301">    if (should_copy || (flags &amp; BCO_ALWAYS)) {</a>
-<a name="ln4302">      CLEAR_FIELD(buf-&gt;b_p_script_ctx);</a>
-<a name="ln4303">      init_buf_opt_idx();</a>
-<a name="ln4304">      // Don't copy the options specific to a help buffer when</a>
-<a name="ln4305">      // BCO_NOHELP is given or the options were initialized already</a>
-<a name="ln4306">      // (jumping back to a help file with CTRL-T or CTRL-O)</a>
-<a name="ln4307">      dont_do_help = ((flags &amp; BCO_NOHELP) &amp;&amp; buf-&gt;b_help) || buf-&gt;b_p_initialized;</a>
-<a name="ln4308">      if (dont_do_help) {               // don't free b_p_isk</a>
-<a name="ln4309">        save_p_isk = (char_u *)buf-&gt;b_p_isk;</a>
-<a name="ln4310">        buf-&gt;b_p_isk = NULL;</a>
-<a name="ln4311">      }</a>
-<a name="ln4312">      // Always free the allocated strings.  If not already initialized,</a>
-<a name="ln4313">      // reset 'readonly' and copy 'fileformat'.</a>
-<a name="ln4314">      if (!buf-&gt;b_p_initialized) {</a>
-<a name="ln4315">        free_buf_options(buf, true);</a>
-<a name="ln4316">        buf-&gt;b_p_ro = false;                    // don't copy readonly</a>
-<a name="ln4317">        buf-&gt;b_p_fenc = xstrdup(p_fenc);</a>
-<a name="ln4318">        switch (*p_ffs) {</a>
-<a name="ln4319">        case 'm':</a>
-<a name="ln4320">          buf-&gt;b_p_ff = xstrdup(FF_MAC);</a>
-<a name="ln4321">          break;</a>
-<a name="ln4322">        case 'd':</a>
-<a name="ln4323">          buf-&gt;b_p_ff = xstrdup(FF_DOS);</a>
-<a name="ln4324">          break;</a>
-<a name="ln4325">        case 'u':</a>
-<a name="ln4326">          buf-&gt;b_p_ff = xstrdup(FF_UNIX);</a>
-<a name="ln4327">          break;</a>
-<a name="ln4328">        default:</a>
-<a name="ln4329">          buf-&gt;b_p_ff = xstrdup(p_ff);</a>
-<a name="ln4330">          break;</a>
-<a name="ln4331">        }</a>
-<a name="ln4332">        buf-&gt;b_p_bh = empty_option;</a>
-<a name="ln4333">        buf-&gt;b_p_bt = empty_option;</a>
-<a name="ln4334">      } else {</a>
-<a name="ln4335">        free_buf_options(buf, false);</a>
-<a name="ln4336">      }</a>
-<a name="ln4337"> </a>
-<a name="ln4338">      buf-&gt;b_p_ai = p_ai;</a>
-<a name="ln4339">      COPY_OPT_SCTX(buf, BV_AI);</a>
-<a name="ln4340">      buf-&gt;b_p_ai_nopaste = p_ai_nopaste;</a>
-<a name="ln4341">      buf-&gt;b_p_sw = p_sw;</a>
-<a name="ln4342">      COPY_OPT_SCTX(buf, BV_SW);</a>
-<a name="ln4343">      buf-&gt;b_p_scbk = p_scbk;</a>
-<a name="ln4344">      COPY_OPT_SCTX(buf, BV_SCBK);</a>
-<a name="ln4345">      buf-&gt;b_p_tw = p_tw;</a>
-<a name="ln4346">      COPY_OPT_SCTX(buf, BV_TW);</a>
-<a name="ln4347">      buf-&gt;b_p_tw_nopaste = p_tw_nopaste;</a>
-<a name="ln4348">      buf-&gt;b_p_tw_nobin = p_tw_nobin;</a>
-<a name="ln4349">      buf-&gt;b_p_wm = p_wm;</a>
-<a name="ln4350">      COPY_OPT_SCTX(buf, BV_WM);</a>
-<a name="ln4351">      buf-&gt;b_p_wm_nopaste = p_wm_nopaste;</a>
-<a name="ln4352">      buf-&gt;b_p_wm_nobin = p_wm_nobin;</a>
-<a name="ln4353">      buf-&gt;b_p_bin = p_bin;</a>
-<a name="ln4354">      COPY_OPT_SCTX(buf, BV_BIN);</a>
-<a name="ln4355">      buf-&gt;b_p_bomb = p_bomb;</a>
-<a name="ln4356">      COPY_OPT_SCTX(buf, BV_BOMB);</a>
-<a name="ln4357">      buf-&gt;b_p_et = p_et;</a>
-<a name="ln4358">      COPY_OPT_SCTX(buf, BV_ET);</a>
-<a name="ln4359">      buf-&gt;b_p_fixeol = p_fixeol;</a>
-<a name="ln4360">      COPY_OPT_SCTX(buf, BV_FIXEOL);</a>
-<a name="ln4361">      buf-&gt;b_p_et_nobin = p_et_nobin;</a>
-<a name="ln4362">      buf-&gt;b_p_et_nopaste = p_et_nopaste;</a>
-<a name="ln4363">      buf-&gt;b_p_ml = p_ml;</a>
-<a name="ln4364">      COPY_OPT_SCTX(buf, BV_ML);</a>
-<a name="ln4365">      buf-&gt;b_p_ml_nobin = p_ml_nobin;</a>
-<a name="ln4366">      buf-&gt;b_p_inf = p_inf;</a>
-<a name="ln4367">      COPY_OPT_SCTX(buf, BV_INF);</a>
-<a name="ln4368">      if (cmdmod.cmod_flags &amp; CMOD_NOSWAPFILE) {</a>
-<a name="ln4369">        buf-&gt;b_p_swf = false;</a>
-<a name="ln4370">      } else {</a>
-<a name="ln4371">        buf-&gt;b_p_swf = p_swf;</a>
-<a name="ln4372">        COPY_OPT_SCTX(buf, BV_SWF);</a>
-<a name="ln4373">      }</a>
-<a name="ln4374">      buf-&gt;b_p_cpt = xstrdup(p_cpt);</a>
-<a name="ln4375">      COPY_OPT_SCTX(buf, BV_CPT);</a>
-<a name="ln4376">#ifdef BACKSLASH_IN_FILENAME</a>
-<a name="ln4377">      buf-&gt;b_p_csl = xstrdup(p_csl);</a>
-<a name="ln4378">      COPY_OPT_SCTX(buf, BV_CSL);</a>
-<a name="ln4379">#endif</a>
-<a name="ln4380">      buf-&gt;b_p_cfu = xstrdup(p_cfu);</a>
-<a name="ln4381">      COPY_OPT_SCTX(buf, BV_CFU);</a>
-<a name="ln4382">      buf-&gt;b_p_ofu = xstrdup(p_ofu);</a>
-<a name="ln4383">      COPY_OPT_SCTX(buf, BV_OFU);</a>
-<a name="ln4384">      buf-&gt;b_p_tfu = xstrdup(p_tfu);</a>
-<a name="ln4385">      COPY_OPT_SCTX(buf, BV_TFU);</a>
-<a name="ln4386">      buf-&gt;b_p_sts = p_sts;</a>
-<a name="ln4387">      COPY_OPT_SCTX(buf, BV_STS);</a>
-<a name="ln4388">      buf-&gt;b_p_sts_nopaste = p_sts_nopaste;</a>
-<a name="ln4389">      buf-&gt;b_p_vsts = xstrdup(p_vsts);</a>
-<a name="ln4390">      COPY_OPT_SCTX(buf, BV_VSTS);</a>
-<a name="ln4391">      if (p_vsts &amp;&amp; p_vsts != empty_option) {</a>
-<a name="ln4392">        (void)tabstop_set(p_vsts, &amp;buf-&gt;b_p_vsts_array);</a>
-<a name="ln4393">      } else {</a>
-<a name="ln4394">        buf-&gt;b_p_vsts_array = NULL;</a>
-<a name="ln4395">      }</a>
-<a name="ln4396">      buf-&gt;b_p_vsts_nopaste = p_vsts_nopaste ? xstrdup(p_vsts_nopaste) : NULL;</a>
-<a name="ln4397">      buf-&gt;b_p_com = xstrdup(p_com);</a>
-<a name="ln4398">      COPY_OPT_SCTX(buf, BV_COM);</a>
-<a name="ln4399">      buf-&gt;b_p_cms = xstrdup(p_cms);</a>
-<a name="ln4400">      COPY_OPT_SCTX(buf, BV_CMS);</a>
-<a name="ln4401">      buf-&gt;b_p_fo = xstrdup(p_fo);</a>
-<a name="ln4402">      COPY_OPT_SCTX(buf, BV_FO);</a>
-<a name="ln4403">      buf-&gt;b_p_flp = xstrdup(p_flp);</a>
-<a name="ln4404">      COPY_OPT_SCTX(buf, BV_FLP);</a>
-<a name="ln4405">      buf-&gt;b_p_nf = xstrdup(p_nf);</a>
-<a name="ln4406">      COPY_OPT_SCTX(buf, BV_NF);</a>
-<a name="ln4407">      buf-&gt;b_p_mps = xstrdup(p_mps);</a>
-<a name="ln4408">      COPY_OPT_SCTX(buf, BV_MPS);</a>
-<a name="ln4409">      buf-&gt;b_p_si = p_si;</a>
-<a name="ln4410">      COPY_OPT_SCTX(buf, BV_SI);</a>
-<a name="ln4411">      buf-&gt;b_p_channel = 0;</a>
-<a name="ln4412">      buf-&gt;b_p_ci = p_ci;</a>
-<a name="ln4413"> </a>
-<a name="ln4414">      COPY_OPT_SCTX(buf, BV_CI);</a>
-<a name="ln4415">      buf-&gt;b_p_cin = p_cin;</a>
-<a name="ln4416">      COPY_OPT_SCTX(buf, BV_CIN);</a>
-<a name="ln4417">      buf-&gt;b_p_cink = xstrdup(p_cink);</a>
-<a name="ln4418">      COPY_OPT_SCTX(buf, BV_CINK);</a>
-<a name="ln4419">      buf-&gt;b_p_cino = xstrdup(p_cino);</a>
-<a name="ln4420">      COPY_OPT_SCTX(buf, BV_CINO);</a>
-<a name="ln4421">      buf-&gt;b_p_cinsd = xstrdup(p_cinsd);</a>
-<a name="ln4422">      COPY_OPT_SCTX(buf, BV_CINSD);</a>
-<a name="ln4423">      buf-&gt;b_p_lop = xstrdup(p_lop);</a>
-<a name="ln4424">      COPY_OPT_SCTX(buf, BV_LOP);</a>
-<a name="ln4425"> </a>
-<a name="ln4426">      // Don't copy 'filetype', it must be detected</a>
-<a name="ln4427">      buf-&gt;b_p_ft = empty_option;</a>
-<a name="ln4428">      buf-&gt;b_p_pi = p_pi;</a>
-<a name="ln4429">      COPY_OPT_SCTX(buf, BV_PI);</a>
-<a name="ln4430">      buf-&gt;b_p_cinw = xstrdup(p_cinw);</a>
-<a name="ln4431">      COPY_OPT_SCTX(buf, BV_CINW);</a>
-<a name="ln4432">      buf-&gt;b_p_lisp = p_lisp;</a>
-<a name="ln4433">      COPY_OPT_SCTX(buf, BV_LISP);</a>
-<a name="ln4434">      // Don't copy 'syntax', it must be set</a>
-<a name="ln4435">      buf-&gt;b_p_syn = empty_option;</a>
-<a name="ln4436">      buf-&gt;b_p_smc = p_smc;</a>
-<a name="ln4437">      COPY_OPT_SCTX(buf, BV_SMC);</a>
-<a name="ln4438">      buf-&gt;b_s.b_syn_isk = empty_option;</a>
-<a name="ln4439">      buf-&gt;b_s.b_p_spc = xstrdup(p_spc);</a>
-<a name="ln4440">      COPY_OPT_SCTX(buf, BV_SPC);</a>
-<a name="ln4441">      (void)compile_cap_prog(&amp;buf-&gt;b_s);</a>
-<a name="ln4442">      buf-&gt;b_s.b_p_spf = xstrdup(p_spf);</a>
-<a name="ln4443">      COPY_OPT_SCTX(buf, BV_SPF);</a>
-<a name="ln4444">      buf-&gt;b_s.b_p_spl = xstrdup(p_spl);</a>
-<a name="ln4445">      COPY_OPT_SCTX(buf, BV_SPL);</a>
-<a name="ln4446">      buf-&gt;b_s.b_p_spo = xstrdup(p_spo);</a>
-<a name="ln4447">      COPY_OPT_SCTX(buf, BV_SPO);</a>
-<a name="ln4448">      buf-&gt;b_p_inde = xstrdup(p_inde);</a>
-<a name="ln4449">      COPY_OPT_SCTX(buf, BV_INDE);</a>
-<a name="ln4450">      buf-&gt;b_p_indk = xstrdup(p_indk);</a>
-<a name="ln4451">      COPY_OPT_SCTX(buf, BV_INDK);</a>
-<a name="ln4452">      buf-&gt;b_p_fp = empty_option;</a>
-<a name="ln4453">      buf-&gt;b_p_fex = xstrdup(p_fex);</a>
-<a name="ln4454">      COPY_OPT_SCTX(buf, BV_FEX);</a>
-<a name="ln4455">      buf-&gt;b_p_sua = xstrdup(p_sua);</a>
-<a name="ln4456">      COPY_OPT_SCTX(buf, BV_SUA);</a>
-<a name="ln4457">      buf-&gt;b_p_keymap = xstrdup(p_keymap);</a>
-<a name="ln4458">      COPY_OPT_SCTX(buf, BV_KMAP);</a>
-<a name="ln4459">      buf-&gt;b_kmap_state |= KEYMAP_INIT;</a>
-<a name="ln4460">      // This isn't really an option, but copying the langmap and IME</a>
-<a name="ln4461">      // state from the current buffer is better than resetting it.</a>
-<a name="ln4462">      buf-&gt;b_p_iminsert = p_iminsert;</a>
-<a name="ln4463">      COPY_OPT_SCTX(buf, BV_IMI);</a>
-<a name="ln4464">      buf-&gt;b_p_imsearch = p_imsearch;</a>
-<a name="ln4465">      COPY_OPT_SCTX(buf, BV_IMS);</a>
-<a name="ln4466"> </a>
-<a name="ln4467">      // options that are normally global but also have a local value</a>
-<a name="ln4468">      // are not copied, start using the global value</a>
-<a name="ln4469">      buf-&gt;b_p_ar = -1;</a>
-<a name="ln4470">      buf-&gt;b_p_ul = NO_LOCAL_UNDOLEVEL;</a>
-<a name="ln4471">      buf-&gt;b_p_bkc = empty_option;</a>
-<a name="ln4472">      buf-&gt;b_bkc_flags = 0;</a>
-<a name="ln4473">      buf-&gt;b_p_gp = empty_option;</a>
-<a name="ln4474">      buf-&gt;b_p_mp = empty_option;</a>
-<a name="ln4475">      buf-&gt;b_p_efm = empty_option;</a>
-<a name="ln4476">      buf-&gt;b_p_ep = empty_option;</a>
-<a name="ln4477">      buf-&gt;b_p_kp = empty_option;</a>
-<a name="ln4478">      buf-&gt;b_p_path = empty_option;</a>
-<a name="ln4479">      buf-&gt;b_p_tags = empty_option;</a>
-<a name="ln4480">      buf-&gt;b_p_tc = empty_option;</a>
-<a name="ln4481">      buf-&gt;b_tc_flags = 0;</a>
-<a name="ln4482">      buf-&gt;b_p_def = empty_option;</a>
-<a name="ln4483">      buf-&gt;b_p_inc = empty_option;</a>
-<a name="ln4484">      buf-&gt;b_p_inex = xstrdup(p_inex);</a>
-<a name="ln4485">      COPY_OPT_SCTX(buf, BV_INEX);</a>
-<a name="ln4486">      buf-&gt;b_p_dict = empty_option;</a>
-<a name="ln4487">      buf-&gt;b_p_tsr = empty_option;</a>
-<a name="ln4488">      buf-&gt;b_p_tsrfu = empty_option;</a>
-<a name="ln4489">      buf-&gt;b_p_qe = xstrdup(p_qe);</a>
-<a name="ln4490">      COPY_OPT_SCTX(buf, BV_QE);</a>
-<a name="ln4491">      buf-&gt;b_p_udf = p_udf;</a>
-<a name="ln4492">      COPY_OPT_SCTX(buf, BV_UDF);</a>
-<a name="ln4493">      buf-&gt;b_p_lw = empty_option;</a>
-<a name="ln4494">      buf-&gt;b_p_menc = empty_option;</a>
-<a name="ln4495"> </a>
-<a name="ln4496">      // Don't copy the options set by ex_help(), use the saved values,</a>
-<a name="ln4497">      // when going from a help buffer to a non-help buffer.</a>
-<a name="ln4498">      // Don't touch these at all when BCO_NOHELP is used and going from</a>
-<a name="ln4499">      // or to a help buffer.</a>
-<a name="ln4500">      if (dont_do_help) {</a>
-<a name="ln4501">        buf-&gt;b_p_isk = (char *)save_p_isk;</a>
-<a name="ln4502">        if (p_vts &amp;&amp; p_vts != empty_option &amp;&amp; !buf-&gt;b_p_vts_array) {</a>
-<a name="ln4503">          (void)tabstop_set(p_vts, &amp;buf-&gt;b_p_vts_array);</a>
-<a name="ln4504">        } else {</a>
-<a name="ln4505">          buf-&gt;b_p_vts_array = NULL;</a>
-<a name="ln4506">        }</a>
-<a name="ln4507">      } else {</a>
-<a name="ln4508">        buf-&gt;b_p_isk = xstrdup(p_isk);</a>
-<a name="ln4509">        COPY_OPT_SCTX(buf, BV_ISK);</a>
-<a name="ln4510">        did_isk = true;</a>
-<a name="ln4511">        buf-&gt;b_p_ts = p_ts;</a>
-<a name="ln4512">        COPY_OPT_SCTX(buf, BV_TS);</a>
-<a name="ln4513">        buf-&gt;b_p_vts = xstrdup(p_vts);</a>
-<a name="ln4514">        COPY_OPT_SCTX(buf, BV_VTS);</a>
-<a name="ln4515">        if (p_vts &amp;&amp; p_vts != empty_option &amp;&amp; !buf-&gt;b_p_vts_array) {</a>
-<a name="ln4516">          (void)tabstop_set(p_vts, &amp;buf-&gt;b_p_vts_array);</a>
-<a name="ln4517">        } else {</a>
-<a name="ln4518">          buf-&gt;b_p_vts_array = NULL;</a>
-<a name="ln4519">        }</a>
-<a name="ln4520">        buf-&gt;b_help = false;</a>
-<a name="ln4521">        if (buf-&gt;b_p_bt[0] == 'h') {</a>
-<a name="ln4522">          clear_string_option(&amp;buf-&gt;b_p_bt);</a>
-<a name="ln4523">        }</a>
-<a name="ln4524">        buf-&gt;b_p_ma = p_ma;</a>
-<a name="ln4525">        COPY_OPT_SCTX(buf, BV_MA);</a>
-<a name="ln4526">      }</a>
-<a name="ln4527">    }</a>
-<a name="ln4528"> </a>
-<a name="ln4529">    // When the options should be copied (ignoring BCO_ALWAYS), set the</a>
-<a name="ln4530">    // flag that indicates that the options have been initialized.</a>
-<a name="ln4531">    if (should_copy) {</a>
-<a name="ln4532">      buf-&gt;b_p_initialized = true;</a>
-<a name="ln4533">    }</a>
-<a name="ln4534">  }</a>
-<a name="ln4535"> </a>
-<a name="ln4536">  check_buf_options(buf);           // make sure we don't have NULLs</a>
-<a name="ln4537">  if (did_isk) {</a>
-<a name="ln4538">    (void)buf_init_chartab(buf, false);</a>
-<a name="ln4539">  }</a>
-<a name="ln4540">}</a>
-<a name="ln4541"> </a>
-<a name="ln4542">/// Reset the 'modifiable' option and its default value.</a>
-<a name="ln4543">void reset_modifiable(void)</a>
-<a name="ln4544">{</a>
-<a name="ln4545">  int opt_idx;</a>
-<a name="ln4546"> </a>
-<a name="ln4547">  curbuf-&gt;b_p_ma = false;</a>
-<a name="ln4548">  p_ma = false;</a>
-<a name="ln4549">  opt_idx = findoption(&quot;ma&quot;);</a>
-<a name="ln4550">  if (opt_idx &gt;= 0) {</a>
-<a name="ln4551">    options[opt_idx].def_val = false;</a>
-<a name="ln4552">  }</a>
-<a name="ln4553">}</a>
-<a name="ln4554"> </a>
-<a name="ln4555">/// Set the global value for 'iminsert' to the local value.</a>
-<a name="ln4556">void set_iminsert_global(void)</a>
-<a name="ln4557">{</a>
-<a name="ln4558">  p_iminsert = curbuf-&gt;b_p_iminsert;</a>
-<a name="ln4559">}</a>
-<a name="ln4560"> </a>
-<a name="ln4561">/// Set the global value for 'imsearch' to the local value.</a>
-<a name="ln4562">void set_imsearch_global(void)</a>
-<a name="ln4563">{</a>
-<a name="ln4564">  p_imsearch = curbuf-&gt;b_p_imsearch;</a>
-<a name="ln4565">}</a>
-<a name="ln4566"> </a>
-<a name="ln4567">static int expand_option_idx = -1;</a>
-<a name="ln4568">static char_u expand_option_name[5] = { 't', '_', NUL, NUL, NUL };</a>
-<a name="ln4569">static int expand_option_flags = 0;</a>
-<a name="ln4570"> </a>
-<a name="ln4571">/// @param opt_flags  OPT_GLOBAL and/or OPT_LOCAL</a>
-<a name="ln4572">void set_context_in_set_cmd(expand_T *xp, char_u *arg, int opt_flags)</a>
-<a name="ln4573">{</a>
-<a name="ln4574">  char_u nextchar;</a>
-<a name="ln4575">  uint32_t flags = 0;           // init for GCC</a>
-<a name="ln4576">  int opt_idx = 0;              // init for GCC</a>
-<a name="ln4577">  char_u *p;</a>
-<a name="ln4578">  char_u *s;</a>
-<a name="ln4579">  int is_term_option = false;</a>
-<a name="ln4580">  int key;</a>
-<a name="ln4581"> </a>
-<a name="ln4582">  expand_option_flags = opt_flags;</a>
+<a name="ln3981">  case PV_EOF:</a>
+<a name="ln3982">    return (char_u *)&amp;(curbuf-&gt;b_p_eof);</a>
+<a name="ln3983">  case PV_EOL:</a>
+<a name="ln3984">    return (char_u *)&amp;(curbuf-&gt;b_p_eol);</a>
+<a name="ln3985">  case PV_FIXEOL:</a>
+<a name="ln3986">    return (char_u *)&amp;(curbuf-&gt;b_p_fixeol);</a>
+<a name="ln3987">  case PV_ET:</a>
+<a name="ln3988">    return (char_u *)&amp;(curbuf-&gt;b_p_et);</a>
+<a name="ln3989">  case PV_FENC:</a>
+<a name="ln3990">    return (char_u *)&amp;(curbuf-&gt;b_p_fenc);</a>
+<a name="ln3991">  case PV_FF:</a>
+<a name="ln3992">    return (char_u *)&amp;(curbuf-&gt;b_p_ff);</a>
+<a name="ln3993">  case PV_FT:</a>
+<a name="ln3994">    return (char_u *)&amp;(curbuf-&gt;b_p_ft);</a>
+<a name="ln3995">  case PV_FO:</a>
+<a name="ln3996">    return (char_u *)&amp;(curbuf-&gt;b_p_fo);</a>
+<a name="ln3997">  case PV_FLP:</a>
+<a name="ln3998">    return (char_u *)&amp;(curbuf-&gt;b_p_flp);</a>
+<a name="ln3999">  case PV_IMI:</a>
+<a name="ln4000">    return (char_u *)&amp;(curbuf-&gt;b_p_iminsert);</a>
+<a name="ln4001">  case PV_IMS:</a>
+<a name="ln4002">    return (char_u *)&amp;(curbuf-&gt;b_p_imsearch);</a>
+<a name="ln4003">  case PV_INF:</a>
+<a name="ln4004">    return (char_u *)&amp;(curbuf-&gt;b_p_inf);</a>
+<a name="ln4005">  case PV_ISK:</a>
+<a name="ln4006">    return (char_u *)&amp;(curbuf-&gt;b_p_isk);</a>
+<a name="ln4007">  case PV_INEX:</a>
+<a name="ln4008">    return (char_u *)&amp;(curbuf-&gt;b_p_inex);</a>
+<a name="ln4009">  case PV_INDE:</a>
+<a name="ln4010">    return (char_u *)&amp;(curbuf-&gt;b_p_inde);</a>
+<a name="ln4011">  case PV_INDK:</a>
+<a name="ln4012">    return (char_u *)&amp;(curbuf-&gt;b_p_indk);</a>
+<a name="ln4013">  case PV_FEX:</a>
+<a name="ln4014">    return (char_u *)&amp;(curbuf-&gt;b_p_fex);</a>
+<a name="ln4015">  case PV_LISP:</a>
+<a name="ln4016">    return (char_u *)&amp;(curbuf-&gt;b_p_lisp);</a>
+<a name="ln4017">  case PV_LOP:</a>
+<a name="ln4018">    return (char_u *)&amp;(curbuf-&gt;b_p_lop);</a>
+<a name="ln4019">  case PV_ML:</a>
+<a name="ln4020">    return (char_u *)&amp;(curbuf-&gt;b_p_ml);</a>
+<a name="ln4021">  case PV_MPS:</a>
+<a name="ln4022">    return (char_u *)&amp;(curbuf-&gt;b_p_mps);</a>
+<a name="ln4023">  case PV_MA:</a>
+<a name="ln4024">    return (char_u *)&amp;(curbuf-&gt;b_p_ma);</a>
+<a name="ln4025">  case PV_MOD:</a>
+<a name="ln4026">    return (char_u *)&amp;(curbuf-&gt;b_changed);</a>
+<a name="ln4027">  case PV_NF:</a>
+<a name="ln4028">    return (char_u *)&amp;(curbuf-&gt;b_p_nf);</a>
+<a name="ln4029">  case PV_PI:</a>
+<a name="ln4030">    return (char_u *)&amp;(curbuf-&gt;b_p_pi);</a>
+<a name="ln4031">  case PV_QE:</a>
+<a name="ln4032">    return (char_u *)&amp;(curbuf-&gt;b_p_qe);</a>
+<a name="ln4033">  case PV_RO:</a>
+<a name="ln4034">    return (char_u *)&amp;(curbuf-&gt;b_p_ro);</a>
+<a name="ln4035">  case PV_SCBK:</a>
+<a name="ln4036">    return (char_u *)&amp;(curbuf-&gt;b_p_scbk);</a>
+<a name="ln4037">  case PV_SI:</a>
+<a name="ln4038">    return (char_u *)&amp;(curbuf-&gt;b_p_si);</a>
+<a name="ln4039">  case PV_STS:</a>
+<a name="ln4040">    return (char_u *)&amp;(curbuf-&gt;b_p_sts);</a>
+<a name="ln4041">  case PV_SUA:</a>
+<a name="ln4042">    return (char_u *)&amp;(curbuf-&gt;b_p_sua);</a>
+<a name="ln4043">  case PV_SWF:</a>
+<a name="ln4044">    return (char_u *)&amp;(curbuf-&gt;b_p_swf);</a>
+<a name="ln4045">  case PV_SMC:</a>
+<a name="ln4046">    return (char_u *)&amp;(curbuf-&gt;b_p_smc);</a>
+<a name="ln4047">  case PV_SYN:</a>
+<a name="ln4048">    return (char_u *)&amp;(curbuf-&gt;b_p_syn);</a>
+<a name="ln4049">  case PV_SPC:</a>
+<a name="ln4050">    return (char_u *)&amp;(curwin-&gt;w_s-&gt;b_p_spc);</a>
+<a name="ln4051">  case PV_SPF:</a>
+<a name="ln4052">    return (char_u *)&amp;(curwin-&gt;w_s-&gt;b_p_spf);</a>
+<a name="ln4053">  case PV_SPL:</a>
+<a name="ln4054">    return (char_u *)&amp;(curwin-&gt;w_s-&gt;b_p_spl);</a>
+<a name="ln4055">  case PV_SPO:</a>
+<a name="ln4056">    return (char_u *)&amp;(curwin-&gt;w_s-&gt;b_p_spo);</a>
+<a name="ln4057">  case PV_SW:</a>
+<a name="ln4058">    return (char_u *)&amp;(curbuf-&gt;b_p_sw);</a>
+<a name="ln4059">  case PV_TFU:</a>
+<a name="ln4060">    return (char_u *)&amp;(curbuf-&gt;b_p_tfu);</a>
+<a name="ln4061">  case PV_TS:</a>
+<a name="ln4062">    return (char_u *)&amp;(curbuf-&gt;b_p_ts);</a>
+<a name="ln4063">  case PV_TW:</a>
+<a name="ln4064">    return (char_u *)&amp;(curbuf-&gt;b_p_tw);</a>
+<a name="ln4065">  case PV_UDF:</a>
+<a name="ln4066">    return (char_u *)&amp;(curbuf-&gt;b_p_udf);</a>
+<a name="ln4067">  case PV_WM:</a>
+<a name="ln4068">    return (char_u *)&amp;(curbuf-&gt;b_p_wm);</a>
+<a name="ln4069">  case PV_VSTS:</a>
+<a name="ln4070">    return (char_u *)&amp;(curbuf-&gt;b_p_vsts);</a>
+<a name="ln4071">  case PV_VTS:</a>
+<a name="ln4072">    return (char_u *)&amp;(curbuf-&gt;b_p_vts);</a>
+<a name="ln4073">  case PV_KMAP:</a>
+<a name="ln4074">    return (char_u *)&amp;(curbuf-&gt;b_p_keymap);</a>
+<a name="ln4075">  case PV_SCL:</a>
+<a name="ln4076">    return (char_u *)&amp;(curwin-&gt;w_p_scl);</a>
+<a name="ln4077">  case PV_WINHL:</a>
+<a name="ln4078">    return (char_u *)&amp;(curwin-&gt;w_p_winhl);</a>
+<a name="ln4079">  case PV_WINBL:</a>
+<a name="ln4080">    return (char_u *)&amp;(curwin-&gt;w_p_winbl);</a>
+<a name="ln4081">  default:</a>
+<a name="ln4082">    iemsg(_(&quot;E356: get_varp ERROR&quot;));</a>
+<a name="ln4083">  }</a>
+<a name="ln4084">  // always return a valid pointer to avoid a crash!</a>
+<a name="ln4085">  return (char_u *)&amp;(curbuf-&gt;b_p_wm);</a>
+<a name="ln4086">}</a>
+<a name="ln4087"> </a>
+<a name="ln4088">/// Get the value of 'equalprg', either the buffer-local one or the global one.</a>
+<a name="ln4089">char_u *get_equalprg(void)</a>
+<a name="ln4090">{</a>
+<a name="ln4091">  if (*curbuf-&gt;b_p_ep == NUL) {</a>
+<a name="ln4092">    return p_ep;</a>
+<a name="ln4093">  }</a>
+<a name="ln4094">  return (char_u *)curbuf-&gt;b_p_ep;</a>
+<a name="ln4095">}</a>
+<a name="ln4096"> </a>
+<a name="ln4097">/// Copy options from one window to another.</a>
+<a name="ln4098">/// Used when splitting a window.</a>
+<a name="ln4099">void win_copy_options(win_T *wp_from, win_T *wp_to)</a>
+<a name="ln4100">{</a>
+<a name="ln4101">  copy_winopt(&amp;wp_from-&gt;w_onebuf_opt, &amp;wp_to-&gt;w_onebuf_opt);</a>
+<a name="ln4102">  copy_winopt(&amp;wp_from-&gt;w_allbuf_opt, &amp;wp_to-&gt;w_allbuf_opt);</a>
+<a name="ln4103">  didset_window_options(wp_to, true);</a>
+<a name="ln4104">}</a>
+<a name="ln4105"> </a>
+<a name="ln4106">static char *copy_option_val(const char *val)</a>
+<a name="ln4107">{</a>
+<a name="ln4108">  if (val == empty_option) {</a>
+<a name="ln4109">    return empty_option;  // no need to allocate memory</a>
+<a name="ln4110">  }</a>
+<a name="ln4111">  return xstrdup(val);</a>
+<a name="ln4112">}</a>
+<a name="ln4113"> </a>
+<a name="ln4114">/// Copy the options from one winopt_T to another.</a>
+<a name="ln4115">/// Doesn't free the old option values in &quot;to&quot;, use clear_winopt() for that.</a>
+<a name="ln4116">/// The 'scroll' option is not copied, because it depends on the window height.</a>
+<a name="ln4117">/// The 'previewwindow' option is reset, there can be only one preview window.</a>
+<a name="ln4118">void copy_winopt(winopt_T *from, winopt_T *to)</a>
+<a name="ln4119">{</a>
+<a name="ln4120">  to-&gt;wo_arab = from-&gt;wo_arab;</a>
+<a name="ln4121">  to-&gt;wo_list = from-&gt;wo_list;</a>
+<a name="ln4122">  to-&gt;wo_lcs = copy_option_val(from-&gt;wo_lcs);</a>
+<a name="ln4123">  to-&gt;wo_fcs = copy_option_val(from-&gt;wo_fcs);</a>
+<a name="ln4124">  to-&gt;wo_nu = from-&gt;wo_nu;</a>
+<a name="ln4125">  to-&gt;wo_rnu = from-&gt;wo_rnu;</a>
+<a name="ln4126">  to-&gt;wo_ve = copy_option_val(from-&gt;wo_ve);</a>
+<a name="ln4127">  to-&gt;wo_ve_flags = from-&gt;wo_ve_flags;</a>
+<a name="ln4128">  to-&gt;wo_nuw = from-&gt;wo_nuw;</a>
+<a name="ln4129">  to-&gt;wo_rl  = from-&gt;wo_rl;</a>
+<a name="ln4130">  to-&gt;wo_rlc = copy_option_val(from-&gt;wo_rlc);</a>
+<a name="ln4131">  to-&gt;wo_sbr = copy_option_val(from-&gt;wo_sbr);</a>
+<a name="ln4132">  to-&gt;wo_stl = copy_option_val(from-&gt;wo_stl);</a>
+<a name="ln4133">  to-&gt;wo_wbr = copy_option_val(from-&gt;wo_wbr);</a>
+<a name="ln4134">  to-&gt;wo_wrap = from-&gt;wo_wrap;</a>
+<a name="ln4135">  to-&gt;wo_wrap_save = from-&gt;wo_wrap_save;</a>
+<a name="ln4136">  to-&gt;wo_lbr = from-&gt;wo_lbr;</a>
+<a name="ln4137">  to-&gt;wo_bri = from-&gt;wo_bri;</a>
+<a name="ln4138">  to-&gt;wo_briopt = copy_option_val(from-&gt;wo_briopt);</a>
+<a name="ln4139">  to-&gt;wo_scb = from-&gt;wo_scb;</a>
+<a name="ln4140">  to-&gt;wo_scb_save = from-&gt;wo_scb_save;</a>
+<a name="ln4141">  to-&gt;wo_crb = from-&gt;wo_crb;</a>
+<a name="ln4142">  to-&gt;wo_crb_save = from-&gt;wo_crb_save;</a>
+<a name="ln4143">  to-&gt;wo_spell = from-&gt;wo_spell;</a>
+<a name="ln4144">  to-&gt;wo_cuc = from-&gt;wo_cuc;</a>
+<a name="ln4145">  to-&gt;wo_cul = from-&gt;wo_cul;</a>
+<a name="ln4146">  to-&gt;wo_culopt = copy_option_val(from-&gt;wo_culopt);</a>
+<a name="ln4147">  to-&gt;wo_cc = copy_option_val(from-&gt;wo_cc);</a>
+<a name="ln4148">  to-&gt;wo_diff = from-&gt;wo_diff;</a>
+<a name="ln4149">  to-&gt;wo_diff_saved = from-&gt;wo_diff_saved;</a>
+<a name="ln4150">  to-&gt;wo_cocu = copy_option_val(from-&gt;wo_cocu);</a>
+<a name="ln4151">  to-&gt;wo_cole = from-&gt;wo_cole;</a>
+<a name="ln4152">  to-&gt;wo_fdc = copy_option_val(from-&gt;wo_fdc);</a>
+<a name="ln4153">  to-&gt;wo_fdc_save = from-&gt;wo_diff_saved ? xstrdup(from-&gt;wo_fdc_save) : empty_option;</a>
+<a name="ln4154">  to-&gt;wo_fen = from-&gt;wo_fen;</a>
+<a name="ln4155">  to-&gt;wo_fen_save = from-&gt;wo_fen_save;</a>
+<a name="ln4156">  to-&gt;wo_fdi = copy_option_val(from-&gt;wo_fdi);</a>
+<a name="ln4157">  to-&gt;wo_fml = from-&gt;wo_fml;</a>
+<a name="ln4158">  to-&gt;wo_fdl = from-&gt;wo_fdl;</a>
+<a name="ln4159">  to-&gt;wo_fdl_save = from-&gt;wo_fdl_save;</a>
+<a name="ln4160">  to-&gt;wo_fdm = copy_option_val(from-&gt;wo_fdm);</a>
+<a name="ln4161">  to-&gt;wo_fdm_save = from-&gt;wo_diff_saved ? xstrdup(from-&gt;wo_fdm_save) : empty_option;</a>
+<a name="ln4162">  to-&gt;wo_fdn = from-&gt;wo_fdn;</a>
+<a name="ln4163">  to-&gt;wo_fde = copy_option_val(from-&gt;wo_fde);</a>
+<a name="ln4164">  to-&gt;wo_fdt = copy_option_val(from-&gt;wo_fdt);</a>
+<a name="ln4165">  to-&gt;wo_fmr = copy_option_val(from-&gt;wo_fmr);</a>
+<a name="ln4166">  to-&gt;wo_scl = copy_option_val(from-&gt;wo_scl);</a>
+<a name="ln4167">  to-&gt;wo_winhl = copy_option_val(from-&gt;wo_winhl);</a>
+<a name="ln4168">  to-&gt;wo_winbl = from-&gt;wo_winbl;</a>
+<a name="ln4169"> </a>
+<a name="ln4170">  // Copy the script context so that we know were the value was last set.</a>
+<a name="ln4171">  memmove(to-&gt;wo_script_ctx, from-&gt;wo_script_ctx, sizeof(to-&gt;wo_script_ctx));</a>
+<a name="ln4172">  check_winopt(to);             // don't want NULL pointers</a>
+<a name="ln4173">}</a>
+<a name="ln4174"> </a>
+<a name="ln4175">/// Check string options in a window for a NULL value.</a>
+<a name="ln4176">void check_win_options(win_T *win)</a>
+<a name="ln4177">{</a>
+<a name="ln4178">  check_winopt(&amp;win-&gt;w_onebuf_opt);</a>
+<a name="ln4179">  check_winopt(&amp;win-&gt;w_allbuf_opt);</a>
+<a name="ln4180">}</a>
+<a name="ln4181"> </a>
+<a name="ln4182">/// Check for NULL pointers in a winopt_T and replace them with empty_option.</a>
+<a name="ln4183">static void check_winopt(winopt_T *wop)</a>
+<a name="ln4184">{</a>
+<a name="ln4185">  check_string_option(&amp;wop-&gt;wo_fdc);</a>
+<a name="ln4186">  check_string_option(&amp;wop-&gt;wo_fdc_save);</a>
+<a name="ln4187">  check_string_option(&amp;wop-&gt;wo_fdi);</a>
+<a name="ln4188">  check_string_option(&amp;wop-&gt;wo_fdm);</a>
+<a name="ln4189">  check_string_option(&amp;wop-&gt;wo_fdm_save);</a>
+<a name="ln4190">  check_string_option(&amp;wop-&gt;wo_fde);</a>
+<a name="ln4191">  check_string_option(&amp;wop-&gt;wo_fdt);</a>
+<a name="ln4192">  check_string_option(&amp;wop-&gt;wo_fmr);</a>
+<a name="ln4193">  check_string_option(&amp;wop-&gt;wo_scl);</a>
+<a name="ln4194">  check_string_option(&amp;wop-&gt;wo_rlc);</a>
+<a name="ln4195">  check_string_option(&amp;wop-&gt;wo_sbr);</a>
+<a name="ln4196">  check_string_option(&amp;wop-&gt;wo_stl);</a>
+<a name="ln4197">  check_string_option(&amp;wop-&gt;wo_culopt);</a>
+<a name="ln4198">  check_string_option(&amp;wop-&gt;wo_cc);</a>
+<a name="ln4199">  check_string_option(&amp;wop-&gt;wo_cocu);</a>
+<a name="ln4200">  check_string_option(&amp;wop-&gt;wo_briopt);</a>
+<a name="ln4201">  check_string_option(&amp;wop-&gt;wo_winhl);</a>
+<a name="ln4202">  check_string_option(&amp;wop-&gt;wo_lcs);</a>
+<a name="ln4203">  check_string_option(&amp;wop-&gt;wo_fcs);</a>
+<a name="ln4204">  check_string_option(&amp;wop-&gt;wo_ve);</a>
+<a name="ln4205">  check_string_option(&amp;wop-&gt;wo_wbr);</a>
+<a name="ln4206">}</a>
+<a name="ln4207"> </a>
+<a name="ln4208">/// Free the allocated memory inside a winopt_T.</a>
+<a name="ln4209">void clear_winopt(winopt_T *wop)</a>
+<a name="ln4210">{</a>
+<a name="ln4211">  clear_string_option(&amp;wop-&gt;wo_fdc);</a>
+<a name="ln4212">  clear_string_option(&amp;wop-&gt;wo_fdc_save);</a>
+<a name="ln4213">  clear_string_option(&amp;wop-&gt;wo_fdi);</a>
+<a name="ln4214">  clear_string_option(&amp;wop-&gt;wo_fdm);</a>
+<a name="ln4215">  clear_string_option(&amp;wop-&gt;wo_fdm_save);</a>
+<a name="ln4216">  clear_string_option(&amp;wop-&gt;wo_fde);</a>
+<a name="ln4217">  clear_string_option(&amp;wop-&gt;wo_fdt);</a>
+<a name="ln4218">  clear_string_option(&amp;wop-&gt;wo_fmr);</a>
+<a name="ln4219">  clear_string_option(&amp;wop-&gt;wo_scl);</a>
+<a name="ln4220">  clear_string_option(&amp;wop-&gt;wo_rlc);</a>
+<a name="ln4221">  clear_string_option(&amp;wop-&gt;wo_sbr);</a>
+<a name="ln4222">  clear_string_option(&amp;wop-&gt;wo_stl);</a>
+<a name="ln4223">  clear_string_option(&amp;wop-&gt;wo_culopt);</a>
+<a name="ln4224">  clear_string_option(&amp;wop-&gt;wo_cc);</a>
+<a name="ln4225">  clear_string_option(&amp;wop-&gt;wo_cocu);</a>
+<a name="ln4226">  clear_string_option(&amp;wop-&gt;wo_briopt);</a>
+<a name="ln4227">  clear_string_option(&amp;wop-&gt;wo_winhl);</a>
+<a name="ln4228">  clear_string_option(&amp;wop-&gt;wo_lcs);</a>
+<a name="ln4229">  clear_string_option(&amp;wop-&gt;wo_fcs);</a>
+<a name="ln4230">  clear_string_option(&amp;wop-&gt;wo_ve);</a>
+<a name="ln4231">  clear_string_option(&amp;wop-&gt;wo_wbr);</a>
+<a name="ln4232">}</a>
+<a name="ln4233"> </a>
+<a name="ln4234">void didset_window_options(win_T *wp, bool valid_cursor)</a>
+<a name="ln4235">{</a>
+<a name="ln4236">  check_colorcolumn(wp);</a>
+<a name="ln4237">  briopt_check(wp);</a>
+<a name="ln4238">  fill_culopt_flags(NULL, wp);</a>
+<a name="ln4239">  set_chars_option(wp, &amp;wp-&gt;w_p_fcs, true);</a>
+<a name="ln4240">  set_chars_option(wp, &amp;wp-&gt;w_p_lcs, true);</a>
+<a name="ln4241">  parse_winhl_opt(wp);  // sets w_hl_needs_update also for w_p_winbl</a>
+<a name="ln4242">  check_blending(wp);</a>
+<a name="ln4243">  set_winbar_win(wp, false, valid_cursor);</a>
+<a name="ln4244">  wp-&gt;w_grid_alloc.blending = wp-&gt;w_p_winbl &gt; 0;</a>
+<a name="ln4245">}</a>
+<a name="ln4246"> </a>
+<a name="ln4247">/// Index into the options table for a buffer-local option enum.</a>
+<a name="ln4248">static int buf_opt_idx[BV_COUNT];</a>
+<a name="ln4249">#define COPY_OPT_SCTX(buf, bv) buf-&gt;b_p_script_ctx[bv] = options[buf_opt_idx[bv]].last_set</a>
+<a name="ln4250"> </a>
+<a name="ln4251">/// Initialize buf_opt_idx[] if not done already.</a>
+<a name="ln4252">static void init_buf_opt_idx(void)</a>
+<a name="ln4253">{</a>
+<a name="ln4254">  static int did_init_buf_opt_idx = false;</a>
+<a name="ln4255"> </a>
+<a name="ln4256">  if (did_init_buf_opt_idx) {</a>
+<a name="ln4257">    return;</a>
+<a name="ln4258">  }</a>
+<a name="ln4259">  did_init_buf_opt_idx = true;</a>
+<a name="ln4260">  for (int i = 0; options[i].fullname != NULL; i++) {</a>
+<a name="ln4261">    if (options[i].indir &amp; PV_BUF) {</a>
+<a name="ln4262">      buf_opt_idx[options[i].indir &amp; PV_MASK] = i;</a>
+<a name="ln4263">    }</a>
+<a name="ln4264">  }</a>
+<a name="ln4265">}</a>
+<a name="ln4266"> </a>
+<a name="ln4267">/// Copy global option values to local options for one buffer.</a>
+<a name="ln4268">/// Used when creating a new buffer and sometimes when entering a buffer.</a>
+<a name="ln4269">/// flags:</a>
+<a name="ln4270">/// BCO_ENTER    We will enter the buffer &quot;buf&quot;.</a>
+<a name="ln4271">/// BCO_ALWAYS   Always copy the options, but only set b_p_initialized when</a>
+<a name="ln4272">///      appropriate.</a>
+<a name="ln4273">/// BCO_NOHELP   Don't copy the values to a help buffer.</a>
+<a name="ln4274">void buf_copy_options(buf_T *buf, int flags)</a>
+<a name="ln4275">{</a>
+<a name="ln4276">  int should_copy = true;</a>
+<a name="ln4277">  char_u *save_p_isk = NULL;           // init for GCC</a>
+<a name="ln4278">  int dont_do_help;</a>
+<a name="ln4279">  int did_isk = false;</a>
+<a name="ln4280"> </a>
+<a name="ln4281">  // Skip this when the option defaults have not been set yet.  Happens when</a>
+<a name="ln4282">  // main() allocates the first buffer.</a>
+<a name="ln4283">  if (p_cpo != NULL) {</a>
+<a name="ln4284">    //</a>
+<a name="ln4285">    // Always copy when entering and 'cpo' contains 'S'.</a>
+<a name="ln4286">    // Don't copy when already initialized.</a>
+<a name="ln4287">    // Don't copy when 'cpo' contains 's' and not entering.</a>
+<a name="ln4288">    //    'S'      BCO_ENTER  initialized  's'  should_copy</a>
+<a name="ln4289">    //    yes        yes          X         X      true</a>
+<a name="ln4290">    //    yes        no          yes        X      false</a>
+<a name="ln4291">    //    no          X          yes        X      false</a>
+<a name="ln4292">    //     X         no          no        yes     false</a>
+<a name="ln4293">    //     X         no          no        no      true</a>
+<a name="ln4294">    //    no         yes         no         X      true</a>
+<a name="ln4295">    ///</a>
+<a name="ln4296">    if ((vim_strchr(p_cpo, CPO_BUFOPTGLOB) == NULL || !(flags &amp; BCO_ENTER))</a>
+<a name="ln4297">        &amp;&amp; (buf-&gt;b_p_initialized</a>
+<a name="ln4298">            || (!(flags &amp; BCO_ENTER)</a>
+<a name="ln4299">                &amp;&amp; vim_strchr(p_cpo, CPO_BUFOPT) != NULL))) {</a>
+<a name="ln4300">      should_copy = false;</a>
+<a name="ln4301">    }</a>
+<a name="ln4302"> </a>
+<a name="ln4303">    if (should_copy || (flags &amp; BCO_ALWAYS)) {</a>
+<a name="ln4304">      CLEAR_FIELD(buf-&gt;b_p_script_ctx);</a>
+<a name="ln4305">      init_buf_opt_idx();</a>
+<a name="ln4306">      // Don't copy the options specific to a help buffer when</a>
+<a name="ln4307">      // BCO_NOHELP is given or the options were initialized already</a>
+<a name="ln4308">      // (jumping back to a help file with CTRL-T or CTRL-O)</a>
+<a name="ln4309">      dont_do_help = ((flags &amp; BCO_NOHELP) &amp;&amp; buf-&gt;b_help) || buf-&gt;b_p_initialized;</a>
+<a name="ln4310">      if (dont_do_help) {               // don't free b_p_isk</a>
+<a name="ln4311">        save_p_isk = (char_u *)buf-&gt;b_p_isk;</a>
+<a name="ln4312">        buf-&gt;b_p_isk = NULL;</a>
+<a name="ln4313">      }</a>
+<a name="ln4314">      // Always free the allocated strings.  If not already initialized,</a>
+<a name="ln4315">      // reset 'readonly' and copy 'fileformat'.</a>
+<a name="ln4316">      if (!buf-&gt;b_p_initialized) {</a>
+<a name="ln4317">        free_buf_options(buf, true);</a>
+<a name="ln4318">        buf-&gt;b_p_ro = false;                    // don't copy readonly</a>
+<a name="ln4319">        buf-&gt;b_p_fenc = xstrdup(p_fenc);</a>
+<a name="ln4320">        switch (*p_ffs) {</a>
+<a name="ln4321">        case 'm':</a>
+<a name="ln4322">          buf-&gt;b_p_ff = xstrdup(FF_MAC);</a>
+<a name="ln4323">          break;</a>
+<a name="ln4324">        case 'd':</a>
+<a name="ln4325">          buf-&gt;b_p_ff = xstrdup(FF_DOS);</a>
+<a name="ln4326">          break;</a>
+<a name="ln4327">        case 'u':</a>
+<a name="ln4328">          buf-&gt;b_p_ff = xstrdup(FF_UNIX);</a>
+<a name="ln4329">          break;</a>
+<a name="ln4330">        default:</a>
+<a name="ln4331">          buf-&gt;b_p_ff = xstrdup(p_ff);</a>
+<a name="ln4332">          break;</a>
+<a name="ln4333">        }</a>
+<a name="ln4334">        buf-&gt;b_p_bh = empty_option;</a>
+<a name="ln4335">        buf-&gt;b_p_bt = empty_option;</a>
+<a name="ln4336">      } else {</a>
+<a name="ln4337">        free_buf_options(buf, false);</a>
+<a name="ln4338">      }</a>
+<a name="ln4339"> </a>
+<a name="ln4340">      buf-&gt;b_p_ai = p_ai;</a>
+<a name="ln4341">      COPY_OPT_SCTX(buf, BV_AI);</a>
+<a name="ln4342">      buf-&gt;b_p_ai_nopaste = p_ai_nopaste;</a>
+<a name="ln4343">      buf-&gt;b_p_sw = p_sw;</a>
+<a name="ln4344">      COPY_OPT_SCTX(buf, BV_SW);</a>
+<a name="ln4345">      buf-&gt;b_p_scbk = p_scbk;</a>
+<a name="ln4346">      COPY_OPT_SCTX(buf, BV_SCBK);</a>
+<a name="ln4347">      buf-&gt;b_p_tw = p_tw;</a>
+<a name="ln4348">      COPY_OPT_SCTX(buf, BV_TW);</a>
+<a name="ln4349">      buf-&gt;b_p_tw_nopaste = p_tw_nopaste;</a>
+<a name="ln4350">      buf-&gt;b_p_tw_nobin = p_tw_nobin;</a>
+<a name="ln4351">      buf-&gt;b_p_wm = p_wm;</a>
+<a name="ln4352">      COPY_OPT_SCTX(buf, BV_WM);</a>
+<a name="ln4353">      buf-&gt;b_p_wm_nopaste = p_wm_nopaste;</a>
+<a name="ln4354">      buf-&gt;b_p_wm_nobin = p_wm_nobin;</a>
+<a name="ln4355">      buf-&gt;b_p_bin = p_bin;</a>
+<a name="ln4356">      COPY_OPT_SCTX(buf, BV_BIN);</a>
+<a name="ln4357">      buf-&gt;b_p_bomb = p_bomb;</a>
+<a name="ln4358">      COPY_OPT_SCTX(buf, BV_BOMB);</a>
+<a name="ln4359">      buf-&gt;b_p_et = p_et;</a>
+<a name="ln4360">      COPY_OPT_SCTX(buf, BV_ET);</a>
+<a name="ln4361">      buf-&gt;b_p_fixeol = p_fixeol;</a>
+<a name="ln4362">      COPY_OPT_SCTX(buf, BV_FIXEOL);</a>
+<a name="ln4363">      buf-&gt;b_p_et_nobin = p_et_nobin;</a>
+<a name="ln4364">      buf-&gt;b_p_et_nopaste = p_et_nopaste;</a>
+<a name="ln4365">      buf-&gt;b_p_ml = p_ml;</a>
+<a name="ln4366">      COPY_OPT_SCTX(buf, BV_ML);</a>
+<a name="ln4367">      buf-&gt;b_p_ml_nobin = p_ml_nobin;</a>
+<a name="ln4368">      buf-&gt;b_p_inf = p_inf;</a>
+<a name="ln4369">      COPY_OPT_SCTX(buf, BV_INF);</a>
+<a name="ln4370">      if (cmdmod.cmod_flags &amp; CMOD_NOSWAPFILE) {</a>
+<a name="ln4371">        buf-&gt;b_p_swf = false;</a>
+<a name="ln4372">      } else {</a>
+<a name="ln4373">        buf-&gt;b_p_swf = p_swf;</a>
+<a name="ln4374">        COPY_OPT_SCTX(buf, BV_SWF);</a>
+<a name="ln4375">      }</a>
+<a name="ln4376">      buf-&gt;b_p_cpt = xstrdup(p_cpt);</a>
+<a name="ln4377">      COPY_OPT_SCTX(buf, BV_CPT);</a>
+<a name="ln4378">#ifdef BACKSLASH_IN_FILENAME</a>
+<a name="ln4379">      buf-&gt;b_p_csl = xstrdup(p_csl);</a>
+<a name="ln4380">      COPY_OPT_SCTX(buf, BV_CSL);</a>
+<a name="ln4381">#endif</a>
+<a name="ln4382">      buf-&gt;b_p_cfu = xstrdup(p_cfu);</a>
+<a name="ln4383">      COPY_OPT_SCTX(buf, BV_CFU);</a>
+<a name="ln4384">      buf-&gt;b_p_ofu = xstrdup(p_ofu);</a>
+<a name="ln4385">      COPY_OPT_SCTX(buf, BV_OFU);</a>
+<a name="ln4386">      buf-&gt;b_p_tfu = xstrdup(p_tfu);</a>
+<a name="ln4387">      COPY_OPT_SCTX(buf, BV_TFU);</a>
+<a name="ln4388">      buf-&gt;b_p_sts = p_sts;</a>
+<a name="ln4389">      COPY_OPT_SCTX(buf, BV_STS);</a>
+<a name="ln4390">      buf-&gt;b_p_sts_nopaste = p_sts_nopaste;</a>
+<a name="ln4391">      buf-&gt;b_p_vsts = xstrdup(p_vsts);</a>
+<a name="ln4392">      COPY_OPT_SCTX(buf, BV_VSTS);</a>
+<a name="ln4393">      if (p_vsts &amp;&amp; p_vsts != empty_option) {</a>
+<a name="ln4394">        (void)tabstop_set(p_vsts, &amp;buf-&gt;b_p_vsts_array);</a>
+<a name="ln4395">      } else {</a>
+<a name="ln4396">        buf-&gt;b_p_vsts_array = NULL;</a>
+<a name="ln4397">      }</a>
+<a name="ln4398">      buf-&gt;b_p_vsts_nopaste = p_vsts_nopaste ? xstrdup(p_vsts_nopaste) : NULL;</a>
+<a name="ln4399">      buf-&gt;b_p_com = xstrdup(p_com);</a>
+<a name="ln4400">      COPY_OPT_SCTX(buf, BV_COM);</a>
+<a name="ln4401">      buf-&gt;b_p_cms = xstrdup(p_cms);</a>
+<a name="ln4402">      COPY_OPT_SCTX(buf, BV_CMS);</a>
+<a name="ln4403">      buf-&gt;b_p_fo = xstrdup(p_fo);</a>
+<a name="ln4404">      COPY_OPT_SCTX(buf, BV_FO);</a>
+<a name="ln4405">      buf-&gt;b_p_flp = xstrdup(p_flp);</a>
+<a name="ln4406">      COPY_OPT_SCTX(buf, BV_FLP);</a>
+<a name="ln4407">      buf-&gt;b_p_nf = xstrdup(p_nf);</a>
+<a name="ln4408">      COPY_OPT_SCTX(buf, BV_NF);</a>
+<a name="ln4409">      buf-&gt;b_p_mps = xstrdup(p_mps);</a>
+<a name="ln4410">      COPY_OPT_SCTX(buf, BV_MPS);</a>
+<a name="ln4411">      buf-&gt;b_p_si = p_si;</a>
+<a name="ln4412">      COPY_OPT_SCTX(buf, BV_SI);</a>
+<a name="ln4413">      buf-&gt;b_p_channel = 0;</a>
+<a name="ln4414">      buf-&gt;b_p_ci = p_ci;</a>
+<a name="ln4415"> </a>
+<a name="ln4416">      COPY_OPT_SCTX(buf, BV_CI);</a>
+<a name="ln4417">      buf-&gt;b_p_cin = p_cin;</a>
+<a name="ln4418">      COPY_OPT_SCTX(buf, BV_CIN);</a>
+<a name="ln4419">      buf-&gt;b_p_cink = xstrdup(p_cink);</a>
+<a name="ln4420">      COPY_OPT_SCTX(buf, BV_CINK);</a>
+<a name="ln4421">      buf-&gt;b_p_cino = xstrdup(p_cino);</a>
+<a name="ln4422">      COPY_OPT_SCTX(buf, BV_CINO);</a>
+<a name="ln4423">      buf-&gt;b_p_cinsd = xstrdup(p_cinsd);</a>
+<a name="ln4424">      COPY_OPT_SCTX(buf, BV_CINSD);</a>
+<a name="ln4425">      buf-&gt;b_p_lop = xstrdup(p_lop);</a>
+<a name="ln4426">      COPY_OPT_SCTX(buf, BV_LOP);</a>
+<a name="ln4427"> </a>
+<a name="ln4428">      // Don't copy 'filetype', it must be detected</a>
+<a name="ln4429">      buf-&gt;b_p_ft = empty_option;</a>
+<a name="ln4430">      buf-&gt;b_p_pi = p_pi;</a>
+<a name="ln4431">      COPY_OPT_SCTX(buf, BV_PI);</a>
+<a name="ln4432">      buf-&gt;b_p_cinw = xstrdup(p_cinw);</a>
+<a name="ln4433">      COPY_OPT_SCTX(buf, BV_CINW);</a>
+<a name="ln4434">      buf-&gt;b_p_lisp = p_lisp;</a>
+<a name="ln4435">      COPY_OPT_SCTX(buf, BV_LISP);</a>
+<a name="ln4436">      // Don't copy 'syntax', it must be set</a>
+<a name="ln4437">      buf-&gt;b_p_syn = empty_option;</a>
+<a name="ln4438">      buf-&gt;b_p_smc = p_smc;</a>
+<a name="ln4439">      COPY_OPT_SCTX(buf, BV_SMC);</a>
+<a name="ln4440">      buf-&gt;b_s.b_syn_isk = empty_option;</a>
+<a name="ln4441">      buf-&gt;b_s.b_p_spc = xstrdup(p_spc);</a>
+<a name="ln4442">      COPY_OPT_SCTX(buf, BV_SPC);</a>
+<a name="ln4443">      (void)compile_cap_prog(&amp;buf-&gt;b_s);</a>
+<a name="ln4444">      buf-&gt;b_s.b_p_spf = xstrdup(p_spf);</a>
+<a name="ln4445">      COPY_OPT_SCTX(buf, BV_SPF);</a>
+<a name="ln4446">      buf-&gt;b_s.b_p_spl = xstrdup(p_spl);</a>
+<a name="ln4447">      COPY_OPT_SCTX(buf, BV_SPL);</a>
+<a name="ln4448">      buf-&gt;b_s.b_p_spo = xstrdup(p_spo);</a>
+<a name="ln4449">      COPY_OPT_SCTX(buf, BV_SPO);</a>
+<a name="ln4450">      buf-&gt;b_p_inde = xstrdup(p_inde);</a>
+<a name="ln4451">      COPY_OPT_SCTX(buf, BV_INDE);</a>
+<a name="ln4452">      buf-&gt;b_p_indk = xstrdup(p_indk);</a>
+<a name="ln4453">      COPY_OPT_SCTX(buf, BV_INDK);</a>
+<a name="ln4454">      buf-&gt;b_p_fp = empty_option;</a>
+<a name="ln4455">      buf-&gt;b_p_fex = xstrdup(p_fex);</a>
+<a name="ln4456">      COPY_OPT_SCTX(buf, BV_FEX);</a>
+<a name="ln4457">      buf-&gt;b_p_sua = xstrdup(p_sua);</a>
+<a name="ln4458">      COPY_OPT_SCTX(buf, BV_SUA);</a>
+<a name="ln4459">      buf-&gt;b_p_keymap = xstrdup(p_keymap);</a>
+<a name="ln4460">      COPY_OPT_SCTX(buf, BV_KMAP);</a>
+<a name="ln4461">      buf-&gt;b_kmap_state |= KEYMAP_INIT;</a>
+<a name="ln4462">      // This isn't really an option, but copying the langmap and IME</a>
+<a name="ln4463">      // state from the current buffer is better than resetting it.</a>
+<a name="ln4464">      buf-&gt;b_p_iminsert = p_iminsert;</a>
+<a name="ln4465">      COPY_OPT_SCTX(buf, BV_IMI);</a>
+<a name="ln4466">      buf-&gt;b_p_imsearch = p_imsearch;</a>
+<a name="ln4467">      COPY_OPT_SCTX(buf, BV_IMS);</a>
+<a name="ln4468"> </a>
+<a name="ln4469">      // options that are normally global but also have a local value</a>
+<a name="ln4470">      // are not copied, start using the global value</a>
+<a name="ln4471">      buf-&gt;b_p_ar = -1;</a>
+<a name="ln4472">      buf-&gt;b_p_ul = NO_LOCAL_UNDOLEVEL;</a>
+<a name="ln4473">      buf-&gt;b_p_bkc = empty_option;</a>
+<a name="ln4474">      buf-&gt;b_bkc_flags = 0;</a>
+<a name="ln4475">      buf-&gt;b_p_gp = empty_option;</a>
+<a name="ln4476">      buf-&gt;b_p_mp = empty_option;</a>
+<a name="ln4477">      buf-&gt;b_p_efm = empty_option;</a>
+<a name="ln4478">      buf-&gt;b_p_ep = empty_option;</a>
+<a name="ln4479">      buf-&gt;b_p_kp = empty_option;</a>
+<a name="ln4480">      buf-&gt;b_p_path = empty_option;</a>
+<a name="ln4481">      buf-&gt;b_p_tags = empty_option;</a>
+<a name="ln4482">      buf-&gt;b_p_tc = empty_option;</a>
+<a name="ln4483">      buf-&gt;b_tc_flags = 0;</a>
+<a name="ln4484">      buf-&gt;b_p_def = empty_option;</a>
+<a name="ln4485">      buf-&gt;b_p_inc = empty_option;</a>
+<a name="ln4486">      buf-&gt;b_p_inex = xstrdup(p_inex);</a>
+<a name="ln4487">      COPY_OPT_SCTX(buf, BV_INEX);</a>
+<a name="ln4488">      buf-&gt;b_p_dict = empty_option;</a>
+<a name="ln4489">      buf-&gt;b_p_tsr = empty_option;</a>
+<a name="ln4490">      buf-&gt;b_p_tsrfu = empty_option;</a>
+<a name="ln4491">      buf-&gt;b_p_qe = xstrdup(p_qe);</a>
+<a name="ln4492">      COPY_OPT_SCTX(buf, BV_QE);</a>
+<a name="ln4493">      buf-&gt;b_p_udf = p_udf;</a>
+<a name="ln4494">      COPY_OPT_SCTX(buf, BV_UDF);</a>
+<a name="ln4495">      buf-&gt;b_p_lw = empty_option;</a>
+<a name="ln4496">      buf-&gt;b_p_menc = empty_option;</a>
+<a name="ln4497"> </a>
+<a name="ln4498">      // Don't copy the options set by ex_help(), use the saved values,</a>
+<a name="ln4499">      // when going from a help buffer to a non-help buffer.</a>
+<a name="ln4500">      // Don't touch these at all when BCO_NOHELP is used and going from</a>
+<a name="ln4501">      // or to a help buffer.</a>
+<a name="ln4502">      if (dont_do_help) {</a>
+<a name="ln4503">        buf-&gt;b_p_isk = (char *)save_p_isk;</a>
+<a name="ln4504">        if (p_vts &amp;&amp; p_vts != empty_option &amp;&amp; !buf-&gt;b_p_vts_array) {</a>
+<a name="ln4505">          (void)tabstop_set(p_vts, &amp;buf-&gt;b_p_vts_array);</a>
+<a name="ln4506">        } else {</a>
+<a name="ln4507">          buf-&gt;b_p_vts_array = NULL;</a>
+<a name="ln4508">        }</a>
+<a name="ln4509">      } else {</a>
+<a name="ln4510">        buf-&gt;b_p_isk = xstrdup(p_isk);</a>
+<a name="ln4511">        COPY_OPT_SCTX(buf, BV_ISK);</a>
+<a name="ln4512">        did_isk = true;</a>
+<a name="ln4513">        buf-&gt;b_p_ts = p_ts;</a>
+<a name="ln4514">        COPY_OPT_SCTX(buf, BV_TS);</a>
+<a name="ln4515">        buf-&gt;b_p_vts = xstrdup(p_vts);</a>
+<a name="ln4516">        COPY_OPT_SCTX(buf, BV_VTS);</a>
+<a name="ln4517">        if (p_vts &amp;&amp; p_vts != empty_option &amp;&amp; !buf-&gt;b_p_vts_array) {</a>
+<a name="ln4518">          (void)tabstop_set(p_vts, &amp;buf-&gt;b_p_vts_array);</a>
+<a name="ln4519">        } else {</a>
+<a name="ln4520">          buf-&gt;b_p_vts_array = NULL;</a>
+<a name="ln4521">        }</a>
+<a name="ln4522">        buf-&gt;b_help = false;</a>
+<a name="ln4523">        if (buf-&gt;b_p_bt[0] == 'h') {</a>
+<a name="ln4524">          clear_string_option(&amp;buf-&gt;b_p_bt);</a>
+<a name="ln4525">        }</a>
+<a name="ln4526">        buf-&gt;b_p_ma = p_ma;</a>
+<a name="ln4527">        COPY_OPT_SCTX(buf, BV_MA);</a>
+<a name="ln4528">      }</a>
+<a name="ln4529">    }</a>
+<a name="ln4530"> </a>
+<a name="ln4531">    // When the options should be copied (ignoring BCO_ALWAYS), set the</a>
+<a name="ln4532">    // flag that indicates that the options have been initialized.</a>
+<a name="ln4533">    if (should_copy) {</a>
+<a name="ln4534">      buf-&gt;b_p_initialized = true;</a>
+<a name="ln4535">    }</a>
+<a name="ln4536">  }</a>
+<a name="ln4537"> </a>
+<a name="ln4538">  check_buf_options(buf);           // make sure we don't have NULLs</a>
+<a name="ln4539">  if (did_isk) {</a>
+<a name="ln4540">    (void)buf_init_chartab(buf, false);</a>
+<a name="ln4541">  }</a>
+<a name="ln4542">}</a>
+<a name="ln4543"> </a>
+<a name="ln4544">/// Reset the 'modifiable' option and its default value.</a>
+<a name="ln4545">void reset_modifiable(void)</a>
+<a name="ln4546">{</a>
+<a name="ln4547">  int opt_idx;</a>
+<a name="ln4548"> </a>
+<a name="ln4549">  curbuf-&gt;b_p_ma = false;</a>
+<a name="ln4550">  p_ma = false;</a>
+<a name="ln4551">  opt_idx = findoption(&quot;ma&quot;);</a>
+<a name="ln4552">  if (opt_idx &gt;= 0) {</a>
+<a name="ln4553">    options[opt_idx].def_val = false;</a>
+<a name="ln4554">  }</a>
+<a name="ln4555">}</a>
+<a name="ln4556"> </a>
+<a name="ln4557">/// Set the global value for 'iminsert' to the local value.</a>
+<a name="ln4558">void set_iminsert_global(void)</a>
+<a name="ln4559">{</a>
+<a name="ln4560">  p_iminsert = curbuf-&gt;b_p_iminsert;</a>
+<a name="ln4561">}</a>
+<a name="ln4562"> </a>
+<a name="ln4563">/// Set the global value for 'imsearch' to the local value.</a>
+<a name="ln4564">void set_imsearch_global(void)</a>
+<a name="ln4565">{</a>
+<a name="ln4566">  p_imsearch = curbuf-&gt;b_p_imsearch;</a>
+<a name="ln4567">}</a>
+<a name="ln4568"> </a>
+<a name="ln4569">static int expand_option_idx = -1;</a>
+<a name="ln4570">static char_u expand_option_name[5] = { 't', '_', NUL, NUL, NUL };</a>
+<a name="ln4571">static int expand_option_flags = 0;</a>
+<a name="ln4572"> </a>
+<a name="ln4573">/// @param opt_flags  OPT_GLOBAL and/or OPT_LOCAL</a>
+<a name="ln4574">void set_context_in_set_cmd(expand_T *xp, char_u *arg, int opt_flags)</a>
+<a name="ln4575">{</a>
+<a name="ln4576">  char_u nextchar;</a>
+<a name="ln4577">  uint32_t flags = 0;           // init for GCC</a>
+<a name="ln4578">  int opt_idx = 0;              // init for GCC</a>
+<a name="ln4579">  char_u *p;</a>
+<a name="ln4580">  char_u *s;</a>
+<a name="ln4581">  int is_term_option = false;</a>
+<a name="ln4582">  int key;</a>
 <a name="ln4583"> </a>
-<a name="ln4584">  xp-&gt;xp_context = EXPAND_SETTINGS;</a>
-<a name="ln4585">  if (*arg == NUL) {</a>
-<a name="ln4586">    xp-&gt;xp_pattern = (char *)arg;</a>
-<a name="ln4587">    return;</a>
-<a name="ln4588">  }</a>
-<a name="ln4589">  p = arg + STRLEN(arg) - 1;</a>
-<a name="ln4590">  if (*p == ' ' &amp;&amp; *(p - 1) != '\\') {</a>
-<a name="ln4591">    xp-&gt;xp_pattern = (char *)p + 1;</a>
-<a name="ln4592">    return;</a>
-<a name="ln4593">  }</a>
-<a name="ln4594">  while (p &gt; arg) {</a>
-<a name="ln4595">    s = p;</a>
-<a name="ln4596">    // count number of backslashes before ' ' or ','</a>
-<a name="ln4597">    if (*p == ' ' || *p == ',') {</a>
-<a name="ln4598">      while (s &gt; arg &amp;&amp; *(s - 1) == '\\') {</a>
-<a name="ln4599">        s--;</a>
-<a name="ln4600">      }</a>
-<a name="ln4601">    }</a>
-<a name="ln4602">    // break at a space with an even number of backslashes</a>
-<a name="ln4603">    if (*p == ' ' &amp;&amp; ((p - s) &amp; 1) == 0) {</a>
-<a name="ln4604">      p++;</a>
-<a name="ln4605">      break;</a>
-<a name="ln4606">    }</a>
-<a name="ln4607">    p--;</a>
-<a name="ln4608">  }</a>
-<a name="ln4609">  if (STRNCMP(p, &quot;no&quot;, 2) == 0) {</a>
-<a name="ln4610">    xp-&gt;xp_context = EXPAND_BOOL_SETTINGS;</a>
-<a name="ln4611">    p += 2;</a>
-<a name="ln4612">  }</a>
-<a name="ln4613">  if (STRNCMP(p, &quot;inv&quot;, 3) == 0) {</a>
-<a name="ln4614">    xp-&gt;xp_context = EXPAND_BOOL_SETTINGS;</a>
-<a name="ln4615">    p += 3;</a>
-<a name="ln4616">  }</a>
-<a name="ln4617">  xp-&gt;xp_pattern = (char *)p;</a>
-<a name="ln4618">  arg = p;</a>
-<a name="ln4619">  if (*arg == '&lt;') {</a>
-<a name="ln4620">    while (*p != '&gt;') {</a>
-<a name="ln4621">      if (*p++ == NUL) {            // expand terminal option name</a>
-<a name="ln4622">        return;</a>
-<a name="ln4623">      }</a>
-<a name="ln4624">    }</a>
-<a name="ln4625">    key = get_special_key_code(arg + 1);</a>
-<a name="ln4626">    if (key == 0) {                 // unknown name</a>
-<a name="ln4627">      xp-&gt;xp_context = EXPAND_NOTHING;</a>
-<a name="ln4628">      return;</a>
-<a name="ln4629">    }</a>
-<a name="ln4630">    nextchar = *++p;</a>
-<a name="ln4631">    is_term_option = true;</a>
-<a name="ln4632">    expand_option_name[2] = (char_u)KEY2TERMCAP0(key);</a>
-<a name="ln4633">    expand_option_name[3] = KEY2TERMCAP1(key);</a>
-<a name="ln4634">  } else {</a>
-<a name="ln4635">    if (p[0] == 't' &amp;&amp; p[1] == '_') {</a>
-<a name="ln4636">      p += 2;</a>
-<a name="ln4637">      if (*p != NUL) {</a>
-<a name="ln4638">        p++;</a>
-<a name="ln4639">      }</a>
-<a name="ln4640">      if (*p == NUL) {</a>
-<a name="ln4641">        return;                 // expand option name</a>
-<a name="ln4642">      }</a>
-<a name="ln4643">      nextchar = *++p;</a>
-<a name="ln4644">      is_term_option = true;</a>
-<a name="ln4645">      expand_option_name[2] = p[-2];</a>
-<a name="ln4646">      expand_option_name[3] = p[-1];</a>
-<a name="ln4647">    } else {</a>
-<a name="ln4648">      // Allow * wildcard.</a>
-<a name="ln4649">      while (ASCII_ISALNUM(*p) || *p == '_' || *p == '*') {</a>
-<a name="ln4650">        p++;</a>
-<a name="ln4651">      }</a>
-<a name="ln4652">      if (*p == NUL) {</a>
-<a name="ln4653">        return;</a>
-<a name="ln4654">      }</a>
-<a name="ln4655">      nextchar = *p;</a>
-<a name="ln4656">      opt_idx = findoption_len((const char *)arg, (size_t)(p - arg));</a>
-<a name="ln4657">      if (opt_idx == -1 || options[opt_idx].var == NULL) {</a>
-<a name="ln4658">        xp-&gt;xp_context = EXPAND_NOTHING;</a>
-<a name="ln4659">        return;</a>
-<a name="ln4660">      }</a>
-<a name="ln4661">      flags = options[opt_idx].flags;</a>
-<a name="ln4662">      if (flags &amp; P_BOOL) {</a>
-<a name="ln4663">        xp-&gt;xp_context = EXPAND_NOTHING;</a>
-<a name="ln4664">        return;</a>
-<a name="ln4665">      }</a>
-<a name="ln4666">    }</a>
-<a name="ln4667">  }</a>
-<a name="ln4668">  // handle &quot;-=&quot; and &quot;+=&quot;</a>
-<a name="ln4669">  if ((nextchar == '-' || nextchar == '+' || nextchar == '^') &amp;&amp; p[1] == '=') {</a>
-<a name="ln4670">    p++;</a>
-<a name="ln4671">    nextchar = '=';</a>
-<a name="ln4672">  }</a>
-<a name="ln4673">  if ((nextchar != '=' &amp;&amp; nextchar != ':')</a>
-<a name="ln4674">      || xp-&gt;xp_context == EXPAND_BOOL_SETTINGS) {</a>
-<a name="ln4675">    xp-&gt;xp_context = EXPAND_UNSUCCESSFUL;</a>
-<a name="ln4676">    return;</a>
-<a name="ln4677">  }</a>
-<a name="ln4678">  if (p[1] == NUL) {</a>
-<a name="ln4679">    xp-&gt;xp_context = EXPAND_OLD_SETTING;</a>
-<a name="ln4680">    if (is_term_option) {</a>
-<a name="ln4681">      expand_option_idx = -1;</a>
-<a name="ln4682">    } else {</a>
-<a name="ln4683">      expand_option_idx = opt_idx;</a>
-<a name="ln4684">    }</a>
-<a name="ln4685">    xp-&gt;xp_pattern = (char *)p + 1;</a>
-<a name="ln4686">    return;</a>
-<a name="ln4687">  }</a>
-<a name="ln4688">  xp-&gt;xp_context = EXPAND_NOTHING;</a>
-<a name="ln4689">  if (is_term_option || (flags &amp; P_NUM)) {</a>
-<a name="ln4690">    return;</a>
-<a name="ln4691">  }</a>
-<a name="ln4692"> </a>
-<a name="ln4693">  xp-&gt;xp_pattern = (char *)p + 1;</a>
+<a name="ln4584">  expand_option_flags = opt_flags;</a>
+<a name="ln4585"> </a>
+<a name="ln4586">  xp-&gt;xp_context = EXPAND_SETTINGS;</a>
+<a name="ln4587">  if (*arg == NUL) {</a>
+<a name="ln4588">    xp-&gt;xp_pattern = (char *)arg;</a>
+<a name="ln4589">    return;</a>
+<a name="ln4590">  }</a>
+<a name="ln4591">  p = arg + STRLEN(arg) - 1;</a>
+<a name="ln4592">  if (*p == ' ' &amp;&amp; *(p - 1) != '\\') {</a>
+<a name="ln4593">    xp-&gt;xp_pattern = (char *)p + 1;</a>
+<a name="ln4594">    return;</a>
+<a name="ln4595">  }</a>
+<a name="ln4596">  while (p &gt; arg) {</a>
+<a name="ln4597">    s = p;</a>
+<a name="ln4598">    // count number of backslashes before ' ' or ','</a>
+<a name="ln4599">    if (*p == ' ' || *p == ',') {</a>
+<a name="ln4600">      while (s &gt; arg &amp;&amp; *(s - 1) == '\\') {</a>
+<a name="ln4601">        s--;</a>
+<a name="ln4602">      }</a>
+<a name="ln4603">    }</a>
+<a name="ln4604">    // break at a space with an even number of backslashes</a>
+<a name="ln4605">    if (*p == ' ' &amp;&amp; ((p - s) &amp; 1) == 0) {</a>
+<a name="ln4606">      p++;</a>
+<a name="ln4607">      break;</a>
+<a name="ln4608">    }</a>
+<a name="ln4609">    p--;</a>
+<a name="ln4610">  }</a>
+<a name="ln4611">  if (STRNCMP(p, &quot;no&quot;, 2) == 0) {</a>
+<a name="ln4612">    xp-&gt;xp_context = EXPAND_BOOL_SETTINGS;</a>
+<a name="ln4613">    p += 2;</a>
+<a name="ln4614">  }</a>
+<a name="ln4615">  if (STRNCMP(p, &quot;inv&quot;, 3) == 0) {</a>
+<a name="ln4616">    xp-&gt;xp_context = EXPAND_BOOL_SETTINGS;</a>
+<a name="ln4617">    p += 3;</a>
+<a name="ln4618">  }</a>
+<a name="ln4619">  xp-&gt;xp_pattern = (char *)p;</a>
+<a name="ln4620">  arg = p;</a>
+<a name="ln4621">  if (*arg == '&lt;') {</a>
+<a name="ln4622">    while (*p != '&gt;') {</a>
+<a name="ln4623">      if (*p++ == NUL) {            // expand terminal option name</a>
+<a name="ln4624">        return;</a>
+<a name="ln4625">      }</a>
+<a name="ln4626">    }</a>
+<a name="ln4627">    key = get_special_key_code(arg + 1);</a>
+<a name="ln4628">    if (key == 0) {                 // unknown name</a>
+<a name="ln4629">      xp-&gt;xp_context = EXPAND_NOTHING;</a>
+<a name="ln4630">      return;</a>
+<a name="ln4631">    }</a>
+<a name="ln4632">    nextchar = *++p;</a>
+<a name="ln4633">    is_term_option = true;</a>
+<a name="ln4634">    expand_option_name[2] = (char_u)KEY2TERMCAP0(key);</a>
+<a name="ln4635">    expand_option_name[3] = KEY2TERMCAP1(key);</a>
+<a name="ln4636">  } else {</a>
+<a name="ln4637">    if (p[0] == 't' &amp;&amp; p[1] == '_') {</a>
+<a name="ln4638">      p += 2;</a>
+<a name="ln4639">      if (*p != NUL) {</a>
+<a name="ln4640">        p++;</a>
+<a name="ln4641">      }</a>
+<a name="ln4642">      if (*p == NUL) {</a>
+<a name="ln4643">        return;                 // expand option name</a>
+<a name="ln4644">      }</a>
+<a name="ln4645">      nextchar = *++p;</a>
+<a name="ln4646">      is_term_option = true;</a>
+<a name="ln4647">      expand_option_name[2] = p[-2];</a>
+<a name="ln4648">      expand_option_name[3] = p[-1];</a>
+<a name="ln4649">    } else {</a>
+<a name="ln4650">      // Allow * wildcard.</a>
+<a name="ln4651">      while (ASCII_ISALNUM(*p) || *p == '_' || *p == '*') {</a>
+<a name="ln4652">        p++;</a>
+<a name="ln4653">      }</a>
+<a name="ln4654">      if (*p == NUL) {</a>
+<a name="ln4655">        return;</a>
+<a name="ln4656">      }</a>
+<a name="ln4657">      nextchar = *p;</a>
+<a name="ln4658">      opt_idx = findoption_len((const char *)arg, (size_t)(p - arg));</a>
+<a name="ln4659">      if (opt_idx == -1 || options[opt_idx].var == NULL) {</a>
+<a name="ln4660">        xp-&gt;xp_context = EXPAND_NOTHING;</a>
+<a name="ln4661">        return;</a>
+<a name="ln4662">      }</a>
+<a name="ln4663">      flags = options[opt_idx].flags;</a>
+<a name="ln4664">      if (flags &amp; P_BOOL) {</a>
+<a name="ln4665">        xp-&gt;xp_context = EXPAND_NOTHING;</a>
+<a name="ln4666">        return;</a>
+<a name="ln4667">      }</a>
+<a name="ln4668">    }</a>
+<a name="ln4669">  }</a>
+<a name="ln4670">  // handle &quot;-=&quot; and &quot;+=&quot;</a>
+<a name="ln4671">  if ((nextchar == '-' || nextchar == '+' || nextchar == '^') &amp;&amp; p[1] == '=') {</a>
+<a name="ln4672">    p++;</a>
+<a name="ln4673">    nextchar = '=';</a>
+<a name="ln4674">  }</a>
+<a name="ln4675">  if ((nextchar != '=' &amp;&amp; nextchar != ':')</a>
+<a name="ln4676">      || xp-&gt;xp_context == EXPAND_BOOL_SETTINGS) {</a>
+<a name="ln4677">    xp-&gt;xp_context = EXPAND_UNSUCCESSFUL;</a>
+<a name="ln4678">    return;</a>
+<a name="ln4679">  }</a>
+<a name="ln4680">  if (p[1] == NUL) {</a>
+<a name="ln4681">    xp-&gt;xp_context = EXPAND_OLD_SETTING;</a>
+<a name="ln4682">    if (is_term_option) {</a>
+<a name="ln4683">      expand_option_idx = -1;</a>
+<a name="ln4684">    } else {</a>
+<a name="ln4685">      expand_option_idx = opt_idx;</a>
+<a name="ln4686">    }</a>
+<a name="ln4687">    xp-&gt;xp_pattern = (char *)p + 1;</a>
+<a name="ln4688">    return;</a>
+<a name="ln4689">  }</a>
+<a name="ln4690">  xp-&gt;xp_context = EXPAND_NOTHING;</a>
+<a name="ln4691">  if (is_term_option || (flags &amp; P_NUM)) {</a>
+<a name="ln4692">    return;</a>
+<a name="ln4693">  }</a>
 <a name="ln4694"> </a>
-<a name="ln4695">  if (flags &amp; P_EXPAND) {</a>
-<a name="ln4696">    p = options[opt_idx].var;</a>
-<a name="ln4697">    if (p == (char_u *)&amp;p_bdir</a>
-<a name="ln4698">        || p == (char_u *)&amp;p_dir</a>
-<a name="ln4699">        || p == (char_u *)&amp;p_path</a>
-<a name="ln4700">        || p == (char_u *)&amp;p_pp</a>
-<a name="ln4701">        || p == (char_u *)&amp;p_rtp</a>
-<a name="ln4702">        || p == (char_u *)&amp;p_cdpath</a>
-<a name="ln4703">        || p == (char_u *)&amp;p_vdir) {</a>
-<a name="ln4704">      xp-&gt;xp_context = EXPAND_DIRECTORIES;</a>
-<a name="ln4705">      if (p == (char_u *)&amp;p_path</a>
-<a name="ln4706">          || p == (char_u *)&amp;p_cdpath) {</a>
-<a name="ln4707">        xp-&gt;xp_backslash = XP_BS_THREE;</a>
-<a name="ln4708">      } else {</a>
-<a name="ln4709">        xp-&gt;xp_backslash = XP_BS_ONE;</a>
-<a name="ln4710">      }</a>
-<a name="ln4711">    } else if (p == (char_u *)&amp;p_ft) {</a>
-<a name="ln4712">      xp-&gt;xp_context = EXPAND_FILETYPE;</a>
-<a name="ln4713">    } else {</a>
-<a name="ln4714">      xp-&gt;xp_context = EXPAND_FILES;</a>
-<a name="ln4715">      // for 'tags' need three backslashes for a space</a>
-<a name="ln4716">      if (p == (char_u *)&amp;p_tags) {</a>
-<a name="ln4717">        xp-&gt;xp_backslash = XP_BS_THREE;</a>
-<a name="ln4718">      } else {</a>
-<a name="ln4719">        xp-&gt;xp_backslash = XP_BS_ONE;</a>
-<a name="ln4720">      }</a>
-<a name="ln4721">    }</a>
-<a name="ln4722">  }</a>
-<a name="ln4723"> </a>
-<a name="ln4724">  // For an option that is a list of file names, find the start of the</a>
-<a name="ln4725">  // last file name.</a>
-<a name="ln4726">  for (p = arg + STRLEN(arg) - 1; p &gt; (char_u *)xp-&gt;xp_pattern; p--) {</a>
-<a name="ln4727">    // count number of backslashes before ' ' or ','</a>
-<a name="ln4728">    if (*p == ' ' || *p == ',') {</a>
-<a name="ln4729">      s = p;</a>
-<a name="ln4730">      while (s &gt; (char_u *)xp-&gt;xp_pattern &amp;&amp; *(s - 1) == '\\') {</a>
-<a name="ln4731">        s--;</a>
-<a name="ln4732">      }</a>
-<a name="ln4733">      if ((*p == ' ' &amp;&amp; (xp-&gt;xp_backslash == XP_BS_THREE &amp;&amp; (p - s) &lt; 3))</a>
-<a name="ln4734">          || (*p == ',' &amp;&amp; (flags &amp; P_COMMA) &amp;&amp; ((p - s) &amp; 1) == 0)) {</a>
-<a name="ln4735">        xp-&gt;xp_pattern = (char *)p + 1;</a>
-<a name="ln4736">        break;</a>
-<a name="ln4737">      }</a>
-<a name="ln4738">    }</a>
-<a name="ln4739"> </a>
-<a name="ln4740">    // for 'spellsuggest' start at &quot;file:&quot;</a>
-<a name="ln4741">    if (options[opt_idx].var == (char_u *)&amp;p_sps</a>
-<a name="ln4742">        &amp;&amp; STRNCMP(p, &quot;file:&quot;, 5) == 0) {</a>
-<a name="ln4743">      xp-&gt;xp_pattern = (char *)p + 5;</a>
-<a name="ln4744">      break;</a>
-<a name="ln4745">    }</a>
-<a name="ln4746">  }</a>
-<a name="ln4747">}</a>
-<a name="ln4748"> </a>
-<a name="ln4749">int ExpandSettings(expand_T *xp, regmatch_T *regmatch, int *num_file, char ***file)</a>
-<a name="ln4750">{</a>
-<a name="ln4751">  int num_normal = 0;  // Nr of matching non-term-code settings</a>
-<a name="ln4752">  int match;</a>
-<a name="ln4753">  int count = 0;</a>
-<a name="ln4754">  char *str;</a>
-<a name="ln4755">  int loop;</a>
-<a name="ln4756">  static char *(names[]) = { &quot;all&quot; };</a>
-<a name="ln4757">  int ic = regmatch-&gt;rm_ic;  // remember the ignore-case flag</a>
-<a name="ln4758"> </a>
-<a name="ln4759">  // do this loop twice:</a>
-<a name="ln4760">  // loop == 0: count the number of matching options</a>
-<a name="ln4761">  // loop == 1: copy the matching options into allocated memory</a>
-<a name="ln4762">  for (loop = 0; loop &lt;= 1; loop++) {</a>
-<a name="ln4763">    regmatch-&gt;rm_ic = ic;</a>
-<a name="ln4764">    if (xp-&gt;xp_context != EXPAND_BOOL_SETTINGS) {</a>
-<a name="ln4765">      for (match = 0; match &lt; (int)ARRAY_SIZE(names);</a>
-<a name="ln4766">           match++) {</a>
-<a name="ln4767">        if (vim_regexec(regmatch, names[match], (colnr_T)0)) {</a>
-<a name="ln4768">          if (loop == 0) {</a>
-<a name="ln4769">            num_normal++;</a>
-<a name="ln4770">          } else {</a>
-<a name="ln4771">            (*file)[count++] = xstrdup(names[match]);</a>
-<a name="ln4772">          }</a>
-<a name="ln4773">        }</a>
-<a name="ln4774">      }</a>
-<a name="ln4775">    }</a>
-<a name="ln4776">    for (size_t opt_idx = 0; (str = options[opt_idx].fullname) != NULL;</a>
-<a name="ln4777">         opt_idx++) {</a>
-<a name="ln4778">      if (options[opt_idx].var == NULL) {</a>
-<a name="ln4779">        continue;</a>
-<a name="ln4780">      }</a>
-<a name="ln4781">      if (xp-&gt;xp_context == EXPAND_BOOL_SETTINGS</a>
-<a name="ln4782">          &amp;&amp; !(options[opt_idx].flags &amp; P_BOOL)) {</a>
-<a name="ln4783">        continue;</a>
-<a name="ln4784">      }</a>
-<a name="ln4785">      match = false;</a>
-<a name="ln4786">      if (vim_regexec(regmatch, str, (colnr_T)0)</a>
-<a name="ln4787">          || (options[opt_idx].shortname != NULL</a>
-<a name="ln4788">              &amp;&amp; vim_regexec(regmatch,</a>
-<a name="ln4789">                             options[opt_idx].shortname,</a>
-<a name="ln4790">                             (colnr_T)0))) {</a>
-<a name="ln4791">        match = true;</a>
-<a name="ln4792">      }</a>
-<a name="ln4793"> </a>
-<a name="ln4794">      if (match) {</a>
-<a name="ln4795">        if (loop == 0) {</a>
-<a name="ln4796">          num_normal++;</a>
-<a name="ln4797">        } else {</a>
-<a name="ln4798">          (*file)[count++] = xstrdup(str);</a>
-<a name="ln4799">        }</a>
-<a name="ln4800">      }</a>
-<a name="ln4801">    }</a>
-<a name="ln4802"> </a>
-<a name="ln4803">    if (loop == 0) {</a>
-<a name="ln4804">      if (num_normal &gt; 0) {</a>
-<a name="ln4805">        *num_file = num_normal;</a>
-<a name="ln4806">      } else {</a>
-<a name="ln4807">        return OK;</a>
-<a name="ln4808">      }</a>
-<a name="ln4809">      *file = xmalloc((size_t)(*num_file) * sizeof(char *));</a>
-<a name="ln4810">    }</a>
-<a name="ln4811">  }</a>
-<a name="ln4812">  return OK;</a>
-<a name="ln4813">}</a>
-<a name="ln4814"> </a>
-<a name="ln4815">void ExpandOldSetting(int *num_file, char ***file)</a>
-<a name="ln4816">{</a>
-<a name="ln4817">  char_u *var = NULL;</a>
-<a name="ln4818"> </a>
-<a name="ln4819">  *num_file = 0;</a>
-<a name="ln4820">  *file = xmalloc(sizeof(char_u *));</a>
-<a name="ln4821"> </a>
-<a name="ln4822">  // For a terminal key code expand_option_idx is &lt; 0.</a>
-<a name="ln4823">  if (expand_option_idx &lt; 0) {</a>
-<a name="ln4824">    expand_option_idx = findoption((const char *)expand_option_name);</a>
-<a name="ln4825">  }</a>
-<a name="ln4826"> </a>
-<a name="ln4827">  if (expand_option_idx &gt;= 0) {</a>
-<a name="ln4828">    // Put string of option value in NameBuff.</a>
-<a name="ln4829">    option_value2string(&amp;options[expand_option_idx], expand_option_flags);</a>
-<a name="ln4830">    var = (char_u *)NameBuff;</a>
-<a name="ln4831">  } else {</a>
-<a name="ln4832">    var = (char_u *)&quot;&quot;;</a>
-<a name="ln4833">  }</a>
-<a name="ln4834"> </a>
-<a name="ln4835">  // A backslash is required before some characters.  This is the reverse of</a>
-<a name="ln4836">  // what happens in do_set().</a>
-<a name="ln4837">  char_u *buf = vim_strsave_escaped(var, escape_chars);</a>
-<a name="ln4838"> </a>
-<a name="ln4839">#ifdef BACKSLASH_IN_FILENAME</a>
-<a name="ln4840">  // For MS-Windows et al. we don't double backslashes at the start and</a>
-<a name="ln4841">  // before a file name character.</a>
-<a name="ln4842">  for (var = buf; *var != NUL; MB_PTR_ADV(var)) {</a>
-<a name="ln4843">    if (var[0] == '\\' &amp;&amp; var[1] == '\\'</a>
-<a name="ln4844">        &amp;&amp; expand_option_idx &gt;= 0</a>
-<a name="ln4845">        &amp;&amp; (options[expand_option_idx].flags &amp; P_EXPAND)</a>
-<a name="ln4846">        &amp;&amp; vim_isfilec(var[2])</a>
-<a name="ln4847">        &amp;&amp; (var[2] != '\\' || (var == buf &amp;&amp; var[4] != '\\'))) {</a>
-<a name="ln4848">      STRMOVE(var, var + 1);</a>
-<a name="ln4849">    }</a>
-<a name="ln4850">  }</a>
-<a name="ln4851">#endif</a>
-<a name="ln4852"> </a>
-<a name="ln4853">  *file[0] = (char *)buf;</a>
-<a name="ln4854">  *num_file = 1;</a>
-<a name="ln4855">}</a>
-<a name="ln4856"> </a>
-<a name="ln4857">/// Get the value for the numeric or string option///opp in a nice format into</a>
-<a name="ln4858">/// NameBuff[].  Must not be called with a hidden option!</a>
-<a name="ln4859">///</a>
-<a name="ln4860">/// @param opt_flags  OPT_GLOBAL and/or OPT_LOCAL</a>
-<a name="ln4861">static void option_value2string(vimoption_T *opp, int opt_flags)</a>
-<a name="ln4862">{</a>
-<a name="ln4863">  char_u *varp = (char_u *)get_varp_scope(opp, opt_flags);</a>
-<a name="ln4864"> </a>
-<a name="ln4865">  if (opp-&gt;flags &amp; P_NUM) {</a>
-<a name="ln4866">    long wc = 0;</a>
-<a name="ln4867"> </a>
-<a name="ln4868">    if (wc_use_keyname(varp, &amp;wc)) {</a>
-<a name="ln4869">      STRLCPY(NameBuff, get_special_key_name((int)wc, 0), sizeof(NameBuff));</a>
-<a name="ln4870">    } else if (wc != 0) {</a>
-<a name="ln4871">      STRLCPY(NameBuff, transchar((int)wc), sizeof(NameBuff));</a>
-<a name="ln4872">    } else {</a>
-<a name="ln4873">      snprintf((char *)NameBuff,</a>
-<a name="ln4874">               sizeof(NameBuff),</a>
-<a name="ln4875">               &quot;%&quot; PRId64,</a>
-<a name="ln4876">               (int64_t)(*(long *)varp));</a>
-<a name="ln4877">    }</a>
-<a name="ln4878">  } else {  // P_STRING</a>
-<a name="ln4879">    varp = *(char_u **)(varp);</a>
-<a name="ln4880">    if (varp == NULL) {  // Just in case.</a>
-<a name="ln4881">      NameBuff[0] = NUL;</a>
-<a name="ln4882">    } else if (opp-&gt;flags &amp; P_EXPAND) {</a>
-<a name="ln4883">      home_replace(NULL, (char *)varp, (char *)NameBuff, MAXPATHL, false);</a>
-<a name="ln4884">      // Translate 'pastetoggle' into special key names.</a>
-<a name="ln4885">    } else if ((char **)opp-&gt;var == &amp;p_pt) {</a>
-<a name="ln4886">      str2specialbuf((const char *)p_pt, (char *)NameBuff, MAXPATHL);</a>
-<a name="ln4887">    } else {</a>
-<a name="ln4888">      STRLCPY(NameBuff, varp, MAXPATHL);</a>
-<a name="ln4889">    }</a>
-<a name="ln4890">  }</a>
-<a name="ln4891">}</a>
-<a name="ln4892"> </a>
-<a name="ln4893">/// Return true if &quot;varp&quot; points to 'wildchar' or 'wildcharm' and it can be</a>
-<a name="ln4894">/// printed as a keyname.</a>
-<a name="ln4895">/// &quot;*wcp&quot; is set to the value of the option if it's 'wildchar' or 'wildcharm'.</a>
-<a name="ln4896">static int wc_use_keyname(const char_u *varp, long *wcp)</a>
-<a name="ln4897">{</a>
-<a name="ln4898">  if (((long *)varp == &amp;p_wc) || ((long *)varp == &amp;p_wcm)) {</a>
-<a name="ln4899">    *wcp = *(long *)varp;</a>
-<a name="ln4900">    if (IS_SPECIAL(*wcp) || find_special_key_in_table((int)(*wcp)) &gt;= 0) {</a>
-<a name="ln4901">      return true;</a>
-<a name="ln4902">    }</a>
-<a name="ln4903">  }</a>
-<a name="ln4904">  return false;</a>
-<a name="ln4905">}</a>
-<a name="ln4906"> </a>
-<a name="ln4907">/// @returns true if &quot;x&quot; is present in 'shortmess' option, or</a>
-<a name="ln4908">/// 'shortmess' contains 'a' and &quot;x&quot; is present in SHM_ALL_ABBREVIATIONS.</a>
-<a name="ln4909">bool shortmess(int x)</a>
-<a name="ln4910">{</a>
-<a name="ln4911">  return (p_shm != NULL</a>
-<a name="ln4912">          &amp;&amp; (vim_strchr(p_shm, x) != NULL</a>
-<a name="ln4913">              || (vim_strchr(p_shm, 'a') != NULL</a>
-<a name="ln4914">                  &amp;&amp; vim_strchr(SHM_ALL_ABBREVIATIONS, x) != NULL)));</a>
-<a name="ln4915">}</a>
-<a name="ln4916"> </a>
-<a name="ln4917">/// paste_option_changed() - Called after p_paste was set or reset.</a>
-<a name="ln4918">static void paste_option_changed(void)</a>
-<a name="ln4919">{</a>
-<a name="ln4920">  static int old_p_paste = false;</a>
-<a name="ln4921">  static int save_sm = 0;</a>
-<a name="ln4922">  static int save_sta = 0;</a>
-<a name="ln4923">  static int save_ru = 0;</a>
-<a name="ln4924">  static int save_ri = 0;</a>
-<a name="ln4925">  static int save_hkmap = 0;</a>
-<a name="ln4926"> </a>
-<a name="ln4927">  if (p_paste) {</a>
-<a name="ln4928">    // Paste switched from off to on.</a>
-<a name="ln4929">    // Save the current values, so they can be restored later.</a>
-<a name="ln4930">    if (!old_p_paste) {</a>
-<a name="ln4931">      // save options for each buffer</a>
-<a name="ln4932">      FOR_ALL_BUFFERS(buf) {</a>
-<a name="ln4933">        buf-&gt;b_p_tw_nopaste = buf-&gt;b_p_tw;</a>
-<a name="ln4934">        buf-&gt;b_p_wm_nopaste = buf-&gt;b_p_wm;</a>
-<a name="ln4935">        buf-&gt;b_p_sts_nopaste = buf-&gt;b_p_sts;</a>
-<a name="ln4936">        buf-&gt;b_p_ai_nopaste = buf-&gt;b_p_ai;</a>
-<a name="ln4937">        buf-&gt;b_p_et_nopaste = buf-&gt;b_p_et;</a>
-<a name="ln4938">        if (buf-&gt;b_p_vsts_nopaste) {</a>
-<a name="ln4939">          xfree(buf-&gt;b_p_vsts_nopaste);</a>
-<a name="ln4940">        }</a>
-<a name="ln4941">        buf-&gt;b_p_vsts_nopaste = buf-&gt;b_p_vsts &amp;&amp; buf-&gt;b_p_vsts != empty_option</a>
-<a name="ln4942">                                    ? xstrdup(buf-&gt;b_p_vsts)</a>
-<a name="ln4943">                                    : NULL;</a>
-<a name="ln4944">      }</a>
-<a name="ln4945"> </a>
-<a name="ln4946">      // save global options</a>
-<a name="ln4947">      save_sm = p_sm;</a>
-<a name="ln4948">      save_sta = p_sta;</a>
-<a name="ln4949">      save_ru = p_ru;</a>
-<a name="ln4950">      save_ri = p_ri;</a>
-<a name="ln4951">      save_hkmap = p_hkmap;</a>
-<a name="ln4952">      // save global values for local buffer options</a>
-<a name="ln4953">      p_ai_nopaste = p_ai;</a>
-<a name="ln4954">      p_et_nopaste = p_et;</a>
-<a name="ln4955">      p_sts_nopaste = p_sts;</a>
-<a name="ln4956">      p_tw_nopaste = p_tw;</a>
-<a name="ln4957">      p_wm_nopaste = p_wm;</a>
-<a name="ln4958">      if (p_vsts_nopaste) {</a>
-<a name="ln4959">        xfree(p_vsts_nopaste);</a>
-<a name="ln4960">      }</a>
-<a name="ln4961">      p_vsts_nopaste = p_vsts &amp;&amp; p_vsts != empty_option ? xstrdup(p_vsts) : NULL;</a>
-<a name="ln4962">    }</a>
-<a name="ln4963"> </a>
-<a name="ln4964">    // Always set the option values, also when 'paste' is set when it is</a>
-<a name="ln4965">    // already on.</a>
-<a name="ln4966">    // set options for each buffer</a>
-<a name="ln4967">    FOR_ALL_BUFFERS(buf) {</a>
-<a name="ln4968">      buf-&gt;b_p_tw = 0;              // textwidth is 0</a>
-<a name="ln4969">      buf-&gt;b_p_wm = 0;              // wrapmargin is 0</a>
-<a name="ln4970">      buf-&gt;b_p_sts = 0;             // softtabstop is 0</a>
-<a name="ln4971">      buf-&gt;b_p_ai = 0;              // no auto-indent</a>
-<a name="ln4972">      buf-&gt;b_p_et = 0;              // no expandtab</a>
-<a name="ln4973">      if (buf-&gt;b_p_vsts) {</a>
-<a name="ln4974">        free_string_option(buf-&gt;b_p_vsts);</a>
-<a name="ln4975">      }</a>
-<a name="ln4976">      buf-&gt;b_p_vsts = empty_option;</a>
-<a name="ln4977">      XFREE_CLEAR(buf-&gt;b_p_vsts_array);</a>
-<a name="ln4978">    }</a>
-<a name="ln4979"> </a>
-<a name="ln4980">    // set global options</a>
-<a name="ln4981">    p_sm = 0;                       // no showmatch</a>
-<a name="ln4982">    p_sta = 0;                      // no smarttab</a>
-<a name="ln4983">    if (p_ru) {</a>
-<a name="ln4984">      status_redraw_all();          // redraw to remove the ruler</a>
-<a name="ln4985">    }</a>
-<a name="ln4986">    p_ru = 0;                       // no ruler</a>
-<a name="ln4987">    p_ri = 0;                       // no reverse insert</a>
-<a name="ln4988">    p_hkmap = 0;                    // no Hebrew keyboard</a>
-<a name="ln4989">    // set global values for local buffer options</a>
-<a name="ln4990">    p_tw = 0;</a>
-<a name="ln4991">    p_wm = 0;</a>
-<a name="ln4992">    p_sts = 0;</a>
-<a name="ln4993">    p_ai = 0;</a>
-<a name="ln4994">    if (p_vsts) {</a>
-<a name="ln4995">      free_string_option(p_vsts);</a>
-<a name="ln4996">    }</a>
-<a name="ln4997">    p_vsts = empty_option;</a>
-<a name="ln4998">  } else if (old_p_paste) {</a>
-<a name="ln4999">    // Paste switched from on to off: Restore saved values.</a>
-<a name="ln5000"> </a>
-<a name="ln5001">    // restore options for each buffer</a>
-<a name="ln5002">    FOR_ALL_BUFFERS(buf) {</a>
-<a name="ln5003">      buf-&gt;b_p_tw = buf-&gt;b_p_tw_nopaste;</a>
-<a name="ln5004">      buf-&gt;b_p_wm = buf-&gt;b_p_wm_nopaste;</a>
-<a name="ln5005">      buf-&gt;b_p_sts = buf-&gt;b_p_sts_nopaste;</a>
-<a name="ln5006">      buf-&gt;b_p_ai = buf-&gt;b_p_ai_nopaste;</a>
-<a name="ln5007">      buf-&gt;b_p_et = buf-&gt;b_p_et_nopaste;</a>
-<a name="ln5008">      if (buf-&gt;b_p_vsts) {</a>
-<a name="ln5009">        free_string_option(buf-&gt;b_p_vsts);</a>
-<a name="ln5010">      }</a>
-<a name="ln5011">      buf-&gt;b_p_vsts = buf-&gt;b_p_vsts_nopaste ? xstrdup(buf-&gt;b_p_vsts_nopaste) : empty_option;</a>
-<a name="ln5012">      xfree(buf-&gt;b_p_vsts_array);</a>
-<a name="ln5013">      if (buf-&gt;b_p_vsts &amp;&amp; buf-&gt;b_p_vsts != empty_option) {</a>
-<a name="ln5014">        (void)tabstop_set(buf-&gt;b_p_vsts, &amp;buf-&gt;b_p_vsts_array);</a>
-<a name="ln5015">      } else {</a>
-<a name="ln5016">        buf-&gt;b_p_vsts_array = NULL;</a>
-<a name="ln5017">      }</a>
-<a name="ln5018">    }</a>
-<a name="ln5019"> </a>
-<a name="ln5020">    // restore global options</a>
-<a name="ln5021">    p_sm = save_sm;</a>
-<a name="ln5022">    p_sta = save_sta;</a>
-<a name="ln5023">    if (p_ru != save_ru) {</a>
-<a name="ln5024">      status_redraw_all();          // redraw to draw the ruler</a>
-<a name="ln5025">    }</a>
-<a name="ln5026">    p_ru = save_ru;</a>
-<a name="ln5027">    p_ri = save_ri;</a>
-<a name="ln5028">    p_hkmap = save_hkmap;</a>
-<a name="ln5029">    // set global values for local buffer options</a>
-<a name="ln5030">    p_ai = p_ai_nopaste;</a>
-<a name="ln5031">    p_et = p_et_nopaste;</a>
-<a name="ln5032">    p_sts = p_sts_nopaste;</a>
-<a name="ln5033">    p_tw = p_tw_nopaste;</a>
-<a name="ln5034">    p_wm = p_wm_nopaste;</a>
-<a name="ln5035">    if (p_vsts) {</a>
-<a name="ln5036">      free_string_option(p_vsts);</a>
-<a name="ln5037">    }</a>
-<a name="ln5038">    p_vsts = p_vsts_nopaste ? xstrdup(p_vsts_nopaste) : empty_option;</a>
-<a name="ln5039">  }</a>
-<a name="ln5040"> </a>
-<a name="ln5041">  old_p_paste = p_paste;</a>
-<a name="ln5042">}</a>
-<a name="ln5043"> </a>
-<a name="ln5044">/// vimrc_found() - Called when a vimrc or &quot;VIMINIT&quot; has been found.</a>
-<a name="ln5045">///</a>
-<a name="ln5046">/// Set the values for options that didn't get set yet to the defaults.</a>
-<a name="ln5047">/// When &quot;fname&quot; is not NULL, use it to set $&quot;envname&quot; when it wasn't set yet.</a>
-<a name="ln5048">void vimrc_found(char *fname, char *envname)</a>
-<a name="ln5049">{</a>
-<a name="ln5050">  if (fname != NULL &amp;&amp; envname != NULL) {</a>
-<a name="ln5051">    char *p = vim_getenv(envname);</a>
-<a name="ln5052">    if (p == NULL) {</a>
-<a name="ln5053">      // Set $MYVIMRC to the first vimrc file found.</a>
-<a name="ln5054">      p = FullName_save(fname, false);</a>
-<a name="ln5055">      if (p != NULL) {</a>
-<a name="ln5056">        os_setenv(envname, p, 1);</a>
-<a name="ln5057">        xfree(p);</a>
-<a name="ln5058">      }</a>
-<a name="ln5059">    } else {</a>
-<a name="ln5060">      xfree(p);</a>
-<a name="ln5061">    }</a>
-<a name="ln5062">  }</a>
-<a name="ln5063">}</a>
-<a name="ln5064"> </a>
-<a name="ln5065">/// Check whether global option has been set</a>
-<a name="ln5066">///</a>
-<a name="ln5067">/// @param[in]  name  Option name.</a>
+<a name="ln4695">  xp-&gt;xp_pattern = (char *)p + 1;</a>
+<a name="ln4696"> </a>
+<a name="ln4697">  if (flags &amp; P_EXPAND) {</a>
+<a name="ln4698">    p = options[opt_idx].var;</a>
+<a name="ln4699">    if (p == (char_u *)&amp;p_bdir</a>
+<a name="ln4700">        || p == (char_u *)&amp;p_dir</a>
+<a name="ln4701">        || p == (char_u *)&amp;p_path</a>
+<a name="ln4702">        || p == (char_u *)&amp;p_pp</a>
+<a name="ln4703">        || p == (char_u *)&amp;p_rtp</a>
+<a name="ln4704">        || p == (char_u *)&amp;p_cdpath</a>
+<a name="ln4705">        || p == (char_u *)&amp;p_vdir) {</a>
+<a name="ln4706">      xp-&gt;xp_context = EXPAND_DIRECTORIES;</a>
+<a name="ln4707">      if (p == (char_u *)&amp;p_path</a>
+<a name="ln4708">          || p == (char_u *)&amp;p_cdpath) {</a>
+<a name="ln4709">        xp-&gt;xp_backslash = XP_BS_THREE;</a>
+<a name="ln4710">      } else {</a>
+<a name="ln4711">        xp-&gt;xp_backslash = XP_BS_ONE;</a>
+<a name="ln4712">      }</a>
+<a name="ln4713">    } else if (p == (char_u *)&amp;p_ft) {</a>
+<a name="ln4714">      xp-&gt;xp_context = EXPAND_FILETYPE;</a>
+<a name="ln4715">    } else {</a>
+<a name="ln4716">      xp-&gt;xp_context = EXPAND_FILES;</a>
+<a name="ln4717">      // for 'tags' need three backslashes for a space</a>
+<a name="ln4718">      if (p == (char_u *)&amp;p_tags) {</a>
+<a name="ln4719">        xp-&gt;xp_backslash = XP_BS_THREE;</a>
+<a name="ln4720">      } else {</a>
+<a name="ln4721">        xp-&gt;xp_backslash = XP_BS_ONE;</a>
+<a name="ln4722">      }</a>
+<a name="ln4723">    }</a>
+<a name="ln4724">  }</a>
+<a name="ln4725"> </a>
+<a name="ln4726">  // For an option that is a list of file names, find the start of the</a>
+<a name="ln4727">  // last file name.</a>
+<a name="ln4728">  for (p = arg + STRLEN(arg) - 1; p &gt; (char_u *)xp-&gt;xp_pattern; p--) {</a>
+<a name="ln4729">    // count number of backslashes before ' ' or ','</a>
+<a name="ln4730">    if (*p == ' ' || *p == ',') {</a>
+<a name="ln4731">      s = p;</a>
+<a name="ln4732">      while (s &gt; (char_u *)xp-&gt;xp_pattern &amp;&amp; *(s - 1) == '\\') {</a>
+<a name="ln4733">        s--;</a>
+<a name="ln4734">      }</a>
+<a name="ln4735">      if ((*p == ' ' &amp;&amp; (xp-&gt;xp_backslash == XP_BS_THREE &amp;&amp; (p - s) &lt; 3))</a>
+<a name="ln4736">          || (*p == ',' &amp;&amp; (flags &amp; P_COMMA) &amp;&amp; ((p - s) &amp; 1) == 0)) {</a>
+<a name="ln4737">        xp-&gt;xp_pattern = (char *)p + 1;</a>
+<a name="ln4738">        break;</a>
+<a name="ln4739">      }</a>
+<a name="ln4740">    }</a>
+<a name="ln4741"> </a>
+<a name="ln4742">    // for 'spellsuggest' start at &quot;file:&quot;</a>
+<a name="ln4743">    if (options[opt_idx].var == (char_u *)&amp;p_sps</a>
+<a name="ln4744">        &amp;&amp; STRNCMP(p, &quot;file:&quot;, 5) == 0) {</a>
+<a name="ln4745">      xp-&gt;xp_pattern = (char *)p + 5;</a>
+<a name="ln4746">      break;</a>
+<a name="ln4747">    }</a>
+<a name="ln4748">  }</a>
+<a name="ln4749">}</a>
+<a name="ln4750"> </a>
+<a name="ln4751">int ExpandSettings(expand_T *xp, regmatch_T *regmatch, int *num_file, char ***file)</a>
+<a name="ln4752">{</a>
+<a name="ln4753">  int num_normal = 0;  // Nr of matching non-term-code settings</a>
+<a name="ln4754">  int match;</a>
+<a name="ln4755">  int count = 0;</a>
+<a name="ln4756">  char *str;</a>
+<a name="ln4757">  int loop;</a>
+<a name="ln4758">  static char *(names[]) = { &quot;all&quot; };</a>
+<a name="ln4759">  int ic = regmatch-&gt;rm_ic;  // remember the ignore-case flag</a>
+<a name="ln4760"> </a>
+<a name="ln4761">  // do this loop twice:</a>
+<a name="ln4762">  // loop == 0: count the number of matching options</a>
+<a name="ln4763">  // loop == 1: copy the matching options into allocated memory</a>
+<a name="ln4764">  for (loop = 0; loop &lt;= 1; loop++) {</a>
+<a name="ln4765">    regmatch-&gt;rm_ic = ic;</a>
+<a name="ln4766">    if (xp-&gt;xp_context != EXPAND_BOOL_SETTINGS) {</a>
+<a name="ln4767">      for (match = 0; match &lt; (int)ARRAY_SIZE(names);</a>
+<a name="ln4768">           match++) {</a>
+<a name="ln4769">        if (vim_regexec(regmatch, names[match], (colnr_T)0)) {</a>
+<a name="ln4770">          if (loop == 0) {</a>
+<a name="ln4771">            num_normal++;</a>
+<a name="ln4772">          } else {</a>
+<a name="ln4773">            (*file)[count++] = xstrdup(names[match]);</a>
+<a name="ln4774">          }</a>
+<a name="ln4775">        }</a>
+<a name="ln4776">      }</a>
+<a name="ln4777">    }</a>
+<a name="ln4778">    for (size_t opt_idx = 0; (str = options[opt_idx].fullname) != NULL;</a>
+<a name="ln4779">         opt_idx++) {</a>
+<a name="ln4780">      if (options[opt_idx].var == NULL) {</a>
+<a name="ln4781">        continue;</a>
+<a name="ln4782">      }</a>
+<a name="ln4783">      if (xp-&gt;xp_context == EXPAND_BOOL_SETTINGS</a>
+<a name="ln4784">          &amp;&amp; !(options[opt_idx].flags &amp; P_BOOL)) {</a>
+<a name="ln4785">        continue;</a>
+<a name="ln4786">      }</a>
+<a name="ln4787">      match = false;</a>
+<a name="ln4788">      if (vim_regexec(regmatch, str, (colnr_T)0)</a>
+<a name="ln4789">          || (options[opt_idx].shortname != NULL</a>
+<a name="ln4790">              &amp;&amp; vim_regexec(regmatch,</a>
+<a name="ln4791">                             options[opt_idx].shortname,</a>
+<a name="ln4792">                             (colnr_T)0))) {</a>
+<a name="ln4793">        match = true;</a>
+<a name="ln4794">      }</a>
+<a name="ln4795"> </a>
+<a name="ln4796">      if (match) {</a>
+<a name="ln4797">        if (loop == 0) {</a>
+<a name="ln4798">          num_normal++;</a>
+<a name="ln4799">        } else {</a>
+<a name="ln4800">          (*file)[count++] = xstrdup(str);</a>
+<a name="ln4801">        }</a>
+<a name="ln4802">      }</a>
+<a name="ln4803">    }</a>
+<a name="ln4804"> </a>
+<a name="ln4805">    if (loop == 0) {</a>
+<a name="ln4806">      if (num_normal &gt; 0) {</a>
+<a name="ln4807">        *num_file = num_normal;</a>
+<a name="ln4808">      } else {</a>
+<a name="ln4809">        return OK;</a>
+<a name="ln4810">      }</a>
+<a name="ln4811">      *file = xmalloc((size_t)(*num_file) * sizeof(char *));</a>
+<a name="ln4812">    }</a>
+<a name="ln4813">  }</a>
+<a name="ln4814">  return OK;</a>
+<a name="ln4815">}</a>
+<a name="ln4816"> </a>
+<a name="ln4817">void ExpandOldSetting(int *num_file, char ***file)</a>
+<a name="ln4818">{</a>
+<a name="ln4819">  char_u *var = NULL;</a>
+<a name="ln4820"> </a>
+<a name="ln4821">  *num_file = 0;</a>
+<a name="ln4822">  *file = xmalloc(sizeof(char_u *));</a>
+<a name="ln4823"> </a>
+<a name="ln4824">  // For a terminal key code expand_option_idx is &lt; 0.</a>
+<a name="ln4825">  if (expand_option_idx &lt; 0) {</a>
+<a name="ln4826">    expand_option_idx = findoption((const char *)expand_option_name);</a>
+<a name="ln4827">  }</a>
+<a name="ln4828"> </a>
+<a name="ln4829">  if (expand_option_idx &gt;= 0) {</a>
+<a name="ln4830">    // Put string of option value in NameBuff.</a>
+<a name="ln4831">    option_value2string(&amp;options[expand_option_idx], expand_option_flags);</a>
+<a name="ln4832">    var = (char_u *)NameBuff;</a>
+<a name="ln4833">  } else {</a>
+<a name="ln4834">    var = (char_u *)&quot;&quot;;</a>
+<a name="ln4835">  }</a>
+<a name="ln4836"> </a>
+<a name="ln4837">  // A backslash is required before some characters.  This is the reverse of</a>
+<a name="ln4838">  // what happens in do_set().</a>
+<a name="ln4839">  char_u *buf = vim_strsave_escaped(var, escape_chars);</a>
+<a name="ln4840"> </a>
+<a name="ln4841">#ifdef BACKSLASH_IN_FILENAME</a>
+<a name="ln4842">  // For MS-Windows et al. we don't double backslashes at the start and</a>
+<a name="ln4843">  // before a file name character.</a>
+<a name="ln4844">  for (var = buf; *var != NUL; MB_PTR_ADV(var)) {</a>
+<a name="ln4845">    if (var[0] == '\\' &amp;&amp; var[1] == '\\'</a>
+<a name="ln4846">        &amp;&amp; expand_option_idx &gt;= 0</a>
+<a name="ln4847">        &amp;&amp; (options[expand_option_idx].flags &amp; P_EXPAND)</a>
+<a name="ln4848">        &amp;&amp; vim_isfilec(var[2])</a>
+<a name="ln4849">        &amp;&amp; (var[2] != '\\' || (var == buf &amp;&amp; var[4] != '\\'))) {</a>
+<a name="ln4850">      STRMOVE(var, var + 1);</a>
+<a name="ln4851">    }</a>
+<a name="ln4852">  }</a>
+<a name="ln4853">#endif</a>
+<a name="ln4854"> </a>
+<a name="ln4855">  *file[0] = (char *)buf;</a>
+<a name="ln4856">  *num_file = 1;</a>
+<a name="ln4857">}</a>
+<a name="ln4858"> </a>
+<a name="ln4859">/// Get the value for the numeric or string option///opp in a nice format into</a>
+<a name="ln4860">/// NameBuff[].  Must not be called with a hidden option!</a>
+<a name="ln4861">///</a>
+<a name="ln4862">/// @param opt_flags  OPT_GLOBAL and/or OPT_LOCAL</a>
+<a name="ln4863">static void option_value2string(vimoption_T *opp, int opt_flags)</a>
+<a name="ln4864">{</a>
+<a name="ln4865">  char_u *varp = (char_u *)get_varp_scope(opp, opt_flags);</a>
+<a name="ln4866"> </a>
+<a name="ln4867">  if (opp-&gt;flags &amp; P_NUM) {</a>
+<a name="ln4868">    long wc = 0;</a>
+<a name="ln4869"> </a>
+<a name="ln4870">    if (wc_use_keyname(varp, &amp;wc)) {</a>
+<a name="ln4871">      STRLCPY(NameBuff, get_special_key_name((int)wc, 0), sizeof(NameBuff));</a>
+<a name="ln4872">    } else if (wc != 0) {</a>
+<a name="ln4873">      STRLCPY(NameBuff, transchar((int)wc), sizeof(NameBuff));</a>
+<a name="ln4874">    } else {</a>
+<a name="ln4875">      snprintf((char *)NameBuff,</a>
+<a name="ln4876">               sizeof(NameBuff),</a>
+<a name="ln4877">               &quot;%&quot; PRId64,</a>
+<a name="ln4878">               (int64_t)(*(long *)varp));</a>
+<a name="ln4879">    }</a>
+<a name="ln4880">  } else {  // P_STRING</a>
+<a name="ln4881">    varp = *(char_u **)(varp);</a>
+<a name="ln4882">    if (varp == NULL) {  // Just in case.</a>
+<a name="ln4883">      NameBuff[0] = NUL;</a>
+<a name="ln4884">    } else if (opp-&gt;flags &amp; P_EXPAND) {</a>
+<a name="ln4885">      home_replace(NULL, (char *)varp, (char *)NameBuff, MAXPATHL, false);</a>
+<a name="ln4886">      // Translate 'pastetoggle' into special key names.</a>
+<a name="ln4887">    } else if ((char **)opp-&gt;var == &amp;p_pt) {</a>
+<a name="ln4888">      str2specialbuf((const char *)p_pt, (char *)NameBuff, MAXPATHL);</a>
+<a name="ln4889">    } else {</a>
+<a name="ln4890">      STRLCPY(NameBuff, varp, MAXPATHL);</a>
+<a name="ln4891">    }</a>
+<a name="ln4892">  }</a>
+<a name="ln4893">}</a>
+<a name="ln4894"> </a>
+<a name="ln4895">/// Return true if &quot;varp&quot; points to 'wildchar' or 'wildcharm' and it can be</a>
+<a name="ln4896">/// printed as a keyname.</a>
+<a name="ln4897">/// &quot;*wcp&quot; is set to the value of the option if it's 'wildchar' or 'wildcharm'.</a>
+<a name="ln4898">static int wc_use_keyname(const char_u *varp, long *wcp)</a>
+<a name="ln4899">{</a>
+<a name="ln4900">  if (((long *)varp == &amp;p_wc) || ((long *)varp == &amp;p_wcm)) {</a>
+<a name="ln4901">    *wcp = *(long *)varp;</a>
+<a name="ln4902">    if (IS_SPECIAL(*wcp) || find_special_key_in_table((int)(*wcp)) &gt;= 0) {</a>
+<a name="ln4903">      return true;</a>
+<a name="ln4904">    }</a>
+<a name="ln4905">  }</a>
+<a name="ln4906">  return false;</a>
+<a name="ln4907">}</a>
+<a name="ln4908"> </a>
+<a name="ln4909">/// @returns true if &quot;x&quot; is present in 'shortmess' option, or</a>
+<a name="ln4910">/// 'shortmess' contains 'a' and &quot;x&quot; is present in SHM_ALL_ABBREVIATIONS.</a>
+<a name="ln4911">bool shortmess(int x)</a>
+<a name="ln4912">{</a>
+<a name="ln4913">  return (p_shm != NULL</a>
+<a name="ln4914">          &amp;&amp; (vim_strchr(p_shm, x) != NULL</a>
+<a name="ln4915">              || (vim_strchr(p_shm, 'a') != NULL</a>
+<a name="ln4916">                  &amp;&amp; vim_strchr(SHM_ALL_ABBREVIATIONS, x) != NULL)));</a>
+<a name="ln4917">}</a>
+<a name="ln4918"> </a>
+<a name="ln4919">/// paste_option_changed() - Called after p_paste was set or reset.</a>
+<a name="ln4920">static void paste_option_changed(void)</a>
+<a name="ln4921">{</a>
+<a name="ln4922">  static int old_p_paste = false;</a>
+<a name="ln4923">  static int save_sm = 0;</a>
+<a name="ln4924">  static int save_sta = 0;</a>
+<a name="ln4925">  static int save_ru = 0;</a>
+<a name="ln4926">  static int save_ri = 0;</a>
+<a name="ln4927">  static int save_hkmap = 0;</a>
+<a name="ln4928"> </a>
+<a name="ln4929">  if (p_paste) {</a>
+<a name="ln4930">    // Paste switched from off to on.</a>
+<a name="ln4931">    // Save the current values, so they can be restored later.</a>
+<a name="ln4932">    if (!old_p_paste) {</a>
+<a name="ln4933">      // save options for each buffer</a>
+<a name="ln4934">      FOR_ALL_BUFFERS(buf) {</a>
+<a name="ln4935">        buf-&gt;b_p_tw_nopaste = buf-&gt;b_p_tw;</a>
+<a name="ln4936">        buf-&gt;b_p_wm_nopaste = buf-&gt;b_p_wm;</a>
+<a name="ln4937">        buf-&gt;b_p_sts_nopaste = buf-&gt;b_p_sts;</a>
+<a name="ln4938">        buf-&gt;b_p_ai_nopaste = buf-&gt;b_p_ai;</a>
+<a name="ln4939">        buf-&gt;b_p_et_nopaste = buf-&gt;b_p_et;</a>
+<a name="ln4940">        if (buf-&gt;b_p_vsts_nopaste) {</a>
+<a name="ln4941">          xfree(buf-&gt;b_p_vsts_nopaste);</a>
+<a name="ln4942">        }</a>
+<a name="ln4943">        buf-&gt;b_p_vsts_nopaste = buf-&gt;b_p_vsts &amp;&amp; buf-&gt;b_p_vsts != empty_option</a>
+<a name="ln4944">                                    ? xstrdup(buf-&gt;b_p_vsts)</a>
+<a name="ln4945">                                    : NULL;</a>
+<a name="ln4946">      }</a>
+<a name="ln4947"> </a>
+<a name="ln4948">      // save global options</a>
+<a name="ln4949">      save_sm = p_sm;</a>
+<a name="ln4950">      save_sta = p_sta;</a>
+<a name="ln4951">      save_ru = p_ru;</a>
+<a name="ln4952">      save_ri = p_ri;</a>
+<a name="ln4953">      save_hkmap = p_hkmap;</a>
+<a name="ln4954">      // save global values for local buffer options</a>
+<a name="ln4955">      p_ai_nopaste = p_ai;</a>
+<a name="ln4956">      p_et_nopaste = p_et;</a>
+<a name="ln4957">      p_sts_nopaste = p_sts;</a>
+<a name="ln4958">      p_tw_nopaste = p_tw;</a>
+<a name="ln4959">      p_wm_nopaste = p_wm;</a>
+<a name="ln4960">      if (p_vsts_nopaste) {</a>
+<a name="ln4961">        xfree(p_vsts_nopaste);</a>
+<a name="ln4962">      }</a>
+<a name="ln4963">      p_vsts_nopaste = p_vsts &amp;&amp; p_vsts != empty_option ? xstrdup(p_vsts) : NULL;</a>
+<a name="ln4964">    }</a>
+<a name="ln4965"> </a>
+<a name="ln4966">    // Always set the option values, also when 'paste' is set when it is</a>
+<a name="ln4967">    // already on.</a>
+<a name="ln4968">    // set options for each buffer</a>
+<a name="ln4969">    FOR_ALL_BUFFERS(buf) {</a>
+<a name="ln4970">      buf-&gt;b_p_tw = 0;              // textwidth is 0</a>
+<a name="ln4971">      buf-&gt;b_p_wm = 0;              // wrapmargin is 0</a>
+<a name="ln4972">      buf-&gt;b_p_sts = 0;             // softtabstop is 0</a>
+<a name="ln4973">      buf-&gt;b_p_ai = 0;              // no auto-indent</a>
+<a name="ln4974">      buf-&gt;b_p_et = 0;              // no expandtab</a>
+<a name="ln4975">      if (buf-&gt;b_p_vsts) {</a>
+<a name="ln4976">        free_string_option(buf-&gt;b_p_vsts);</a>
+<a name="ln4977">      }</a>
+<a name="ln4978">      buf-&gt;b_p_vsts = empty_option;</a>
+<a name="ln4979">      XFREE_CLEAR(buf-&gt;b_p_vsts_array);</a>
+<a name="ln4980">    }</a>
+<a name="ln4981"> </a>
+<a name="ln4982">    // set global options</a>
+<a name="ln4983">    p_sm = 0;                       // no showmatch</a>
+<a name="ln4984">    p_sta = 0;                      // no smarttab</a>
+<a name="ln4985">    if (p_ru) {</a>
+<a name="ln4986">      status_redraw_all();          // redraw to remove the ruler</a>
+<a name="ln4987">    }</a>
+<a name="ln4988">    p_ru = 0;                       // no ruler</a>
+<a name="ln4989">    p_ri = 0;                       // no reverse insert</a>
+<a name="ln4990">    p_hkmap = 0;                    // no Hebrew keyboard</a>
+<a name="ln4991">    // set global values for local buffer options</a>
+<a name="ln4992">    p_tw = 0;</a>
+<a name="ln4993">    p_wm = 0;</a>
+<a name="ln4994">    p_sts = 0;</a>
+<a name="ln4995">    p_ai = 0;</a>
+<a name="ln4996">    if (p_vsts) {</a>
+<a name="ln4997">      free_string_option(p_vsts);</a>
+<a name="ln4998">    }</a>
+<a name="ln4999">    p_vsts = empty_option;</a>
+<a name="ln5000">  } else if (old_p_paste) {</a>
+<a name="ln5001">    // Paste switched from on to off: Restore saved values.</a>
+<a name="ln5002"> </a>
+<a name="ln5003">    // restore options for each buffer</a>
+<a name="ln5004">    FOR_ALL_BUFFERS(buf) {</a>
+<a name="ln5005">      buf-&gt;b_p_tw = buf-&gt;b_p_tw_nopaste;</a>
+<a name="ln5006">      buf-&gt;b_p_wm = buf-&gt;b_p_wm_nopaste;</a>
+<a name="ln5007">      buf-&gt;b_p_sts = buf-&gt;b_p_sts_nopaste;</a>
+<a name="ln5008">      buf-&gt;b_p_ai = buf-&gt;b_p_ai_nopaste;</a>
+<a name="ln5009">      buf-&gt;b_p_et = buf-&gt;b_p_et_nopaste;</a>
+<a name="ln5010">      if (buf-&gt;b_p_vsts) {</a>
+<a name="ln5011">        free_string_option(buf-&gt;b_p_vsts);</a>
+<a name="ln5012">      }</a>
+<a name="ln5013">      buf-&gt;b_p_vsts = buf-&gt;b_p_vsts_nopaste ? xstrdup(buf-&gt;b_p_vsts_nopaste) : empty_option;</a>
+<a name="ln5014">      xfree(buf-&gt;b_p_vsts_array);</a>
+<a name="ln5015">      if (buf-&gt;b_p_vsts &amp;&amp; buf-&gt;b_p_vsts != empty_option) {</a>
+<a name="ln5016">        (void)tabstop_set(buf-&gt;b_p_vsts, &amp;buf-&gt;b_p_vsts_array);</a>
+<a name="ln5017">      } else {</a>
+<a name="ln5018">        buf-&gt;b_p_vsts_array = NULL;</a>
+<a name="ln5019">      }</a>
+<a name="ln5020">    }</a>
+<a name="ln5021"> </a>
+<a name="ln5022">    // restore global options</a>
+<a name="ln5023">    p_sm = save_sm;</a>
+<a name="ln5024">    p_sta = save_sta;</a>
+<a name="ln5025">    if (p_ru != save_ru) {</a>
+<a name="ln5026">      status_redraw_all();          // redraw to draw the ruler</a>
+<a name="ln5027">    }</a>
+<a name="ln5028">    p_ru = save_ru;</a>
+<a name="ln5029">    p_ri = save_ri;</a>
+<a name="ln5030">    p_hkmap = save_hkmap;</a>
+<a name="ln5031">    // set global values for local buffer options</a>
+<a name="ln5032">    p_ai = p_ai_nopaste;</a>
+<a name="ln5033">    p_et = p_et_nopaste;</a>
+<a name="ln5034">    p_sts = p_sts_nopaste;</a>
+<a name="ln5035">    p_tw = p_tw_nopaste;</a>
+<a name="ln5036">    p_wm = p_wm_nopaste;</a>
+<a name="ln5037">    if (p_vsts) {</a>
+<a name="ln5038">      free_string_option(p_vsts);</a>
+<a name="ln5039">    }</a>
+<a name="ln5040">    p_vsts = p_vsts_nopaste ? xstrdup(p_vsts_nopaste) : empty_option;</a>
+<a name="ln5041">  }</a>
+<a name="ln5042"> </a>
+<a name="ln5043">  old_p_paste = p_paste;</a>
+<a name="ln5044">}</a>
+<a name="ln5045"> </a>
+<a name="ln5046">/// vimrc_found() - Called when a vimrc or &quot;VIMINIT&quot; has been found.</a>
+<a name="ln5047">///</a>
+<a name="ln5048">/// Set the values for options that didn't get set yet to the defaults.</a>
+<a name="ln5049">/// When &quot;fname&quot; is not NULL, use it to set $&quot;envname&quot; when it wasn't set yet.</a>
+<a name="ln5050">void vimrc_found(char *fname, char *envname)</a>
+<a name="ln5051">{</a>
+<a name="ln5052">  if (fname != NULL &amp;&amp; envname != NULL) {</a>
+<a name="ln5053">    char *p = vim_getenv(envname);</a>
+<a name="ln5054">    if (p == NULL) {</a>
+<a name="ln5055">      // Set $MYVIMRC to the first vimrc file found.</a>
+<a name="ln5056">      p = FullName_save(fname, false);</a>
+<a name="ln5057">      if (p != NULL) {</a>
+<a name="ln5058">        os_setenv(envname, p, 1);</a>
+<a name="ln5059">        xfree(p);</a>
+<a name="ln5060">      }</a>
+<a name="ln5061">    } else {</a>
+<a name="ln5062">      xfree(p);</a>
+<a name="ln5063">    }</a>
+<a name="ln5064">  }</a>
+<a name="ln5065">}</a>
+<a name="ln5066"> </a>
+<a name="ln5067">/// Check whether global option has been set</a>
 <a name="ln5068">///</a>
-<a name="ln5069">/// @return True if it was set.</a>
-<a name="ln5070">bool option_was_set(const char *name)</a>
-<a name="ln5071">{</a>
-<a name="ln5072">  int idx;</a>
-<a name="ln5073"> </a>
-<a name="ln5074">  idx = findoption(name);</a>
-<a name="ln5075">  if (idx &lt; 0) {  // Unknown option.</a>
-<a name="ln5076">    return false;</a>
-<a name="ln5077">  } else if (options[idx].flags &amp; P_WAS_SET) {</a>
-<a name="ln5078">    return true;</a>
-<a name="ln5079">  }</a>
-<a name="ln5080">  return false;</a>
-<a name="ln5081">}</a>
-<a name="ln5082"> </a>
-<a name="ln5083">/// Reset the flag indicating option &quot;name&quot; was set.</a>
-<a name="ln5084">///</a>
-<a name="ln5085">/// @param[in]  name  Option name.</a>
-<a name="ln5086">void reset_option_was_set(const char *name)</a>
-<a name="ln5087">{</a>
-<a name="ln5088">  const int idx = findoption(name);</a>
-<a name="ln5089"> </a>
-<a name="ln5090">  if (idx &gt;= 0) {</a>
-<a name="ln5091">    options[idx].flags &amp;= ~P_WAS_SET;</a>
-<a name="ln5092">  }</a>
-<a name="ln5093">}</a>
-<a name="ln5094"> </a>
-<a name="ln5095">/// fill_breakat_flags() -- called when 'breakat' changes value.</a>
-<a name="ln5096">void fill_breakat_flags(void)</a>
-<a name="ln5097">{</a>
-<a name="ln5098">  char_u *p;</a>
-<a name="ln5099">  int i;</a>
-<a name="ln5100"> </a>
-<a name="ln5101">  for (i = 0; i &lt; 256; i++) {</a>
-<a name="ln5102">    breakat_flags[i] = false;</a>
-<a name="ln5103">  }</a>
-<a name="ln5104"> </a>
-<a name="ln5105">  if (p_breakat != NULL) {</a>
-<a name="ln5106">    for (p = (char_u *)p_breakat; *p; p++) {</a>
-<a name="ln5107">      breakat_flags[*p] = true;</a>
-<a name="ln5108">    }</a>
-<a name="ln5109">  }</a>
-<a name="ln5110">}</a>
-<a name="ln5111"> </a>
-<a name="ln5112">/// fill_culopt_flags() -- called when 'culopt' changes value</a>
-<a name="ln5113">int fill_culopt_flags(char *val, win_T *wp)</a>
-<a name="ln5114">{</a>
-<a name="ln5115">  char *p;</a>
-<a name="ln5116">  char_u culopt_flags_new = 0;</a>
-<a name="ln5117"> </a>
-<a name="ln5118">  if (val == NULL) {</a>
-<a name="ln5119">    p = wp-&gt;w_p_culopt;</a>
-<a name="ln5120">  } else {</a>
-<a name="ln5121">    p = val;</a>
-<a name="ln5122">  }</a>
-<a name="ln5123">  while (*p != NUL) {</a>
-<a name="ln5124">    if (STRNCMP(p, &quot;line&quot;, 4) == 0) {</a>
-<a name="ln5125">      p += 4;</a>
-<a name="ln5126">      culopt_flags_new |= CULOPT_LINE;</a>
-<a name="ln5127">    } else if (STRNCMP(p, &quot;both&quot;, 4) == 0) {</a>
-<a name="ln5128">      p += 4;</a>
-<a name="ln5129">      culopt_flags_new |= CULOPT_LINE | CULOPT_NBR;</a>
-<a name="ln5130">    } else if (STRNCMP(p, &quot;number&quot;, 6) == 0) {</a>
-<a name="ln5131">      p += 6;</a>
-<a name="ln5132">      culopt_flags_new |= CULOPT_NBR;</a>
-<a name="ln5133">    } else if (STRNCMP(p, &quot;screenline&quot;, 10) == 0) {</a>
-<a name="ln5134">      p += 10;</a>
-<a name="ln5135">      culopt_flags_new |= CULOPT_SCRLINE;</a>
-<a name="ln5136">    }</a>
-<a name="ln5137"> </a>
-<a name="ln5138">    if (*p != ',' &amp;&amp; *p != NUL) {</a>
-<a name="ln5139">      return FAIL;</a>
-<a name="ln5140">    }</a>
-<a name="ln5141">    if (*p == ',') {</a>
-<a name="ln5142">      p++;</a>
-<a name="ln5143">    }</a>
-<a name="ln5144">  }</a>
-<a name="ln5145"> </a>
-<a name="ln5146">  // Can't have both &quot;line&quot; and &quot;screenline&quot;.</a>
-<a name="ln5147">  if ((culopt_flags_new &amp; CULOPT_LINE) &amp;&amp; (culopt_flags_new &amp; CULOPT_SCRLINE)) {</a>
-<a name="ln5148">    return FAIL;</a>
-<a name="ln5149">  }</a>
-<a name="ln5150">  wp-&gt;w_p_culopt_flags = culopt_flags_new;</a>
-<a name="ln5151"> </a>
-<a name="ln5152">  return OK;</a>
-<a name="ln5153">}</a>
-<a name="ln5154"> </a>
-<a name="ln5155">/// Set the callback function value for an option that accepts a function name,</a>
-<a name="ln5156">/// lambda, et al. (e.g. 'operatorfunc', 'tagfunc', etc.)</a>
-<a name="ln5157">/// @return  OK if the option is successfully set to a function, otherwise FAIL</a>
-<a name="ln5158">int option_set_callback_func(char *optval, Callback *optcb)</a>
-<a name="ln5159">{</a>
-<a name="ln5160">  if (optval == NULL || *optval == NUL) {</a>
-<a name="ln5161">    callback_free(optcb);</a>
-<a name="ln5162">    return OK;</a>
-<a name="ln5163">  }</a>
-<a name="ln5164"> </a>
-<a name="ln5165">  typval_T *tv;</a>
-<a name="ln5166">  if (*optval == '{'</a>
-<a name="ln5167">      || (STRNCMP(optval, &quot;function(&quot;, 9) == 0)</a>
-<a name="ln5168">      || (STRNCMP(optval, &quot;funcref(&quot;, 8) == 0)) {</a>
-<a name="ln5169">    // Lambda expression or a funcref</a>
-<a name="ln5170">    tv = eval_expr(optval);</a>
-<a name="ln5171">    if (tv == NULL) {</a>
-<a name="ln5172">      return FAIL;</a>
-<a name="ln5173">    }</a>
-<a name="ln5174">  } else {</a>
-<a name="ln5175">    // treat everything else as a function name string</a>
-<a name="ln5176">    tv = xcalloc(1, sizeof(*tv));</a>
-<a name="ln5177">    tv-&gt;v_type = VAR_STRING;</a>
-<a name="ln5178">    tv-&gt;vval.v_string = xstrdup(optval);</a>
-<a name="ln5179">  }</a>
-<a name="ln5180"> </a>
-<a name="ln5181">  Callback cb;</a>
-<a name="ln5182">  if (!callback_from_typval(&amp;cb, tv)) {</a>
-<a name="ln5183">    tv_free(tv);</a>
-<a name="ln5184">    return FAIL;</a>
-<a name="ln5185">  }</a>
-<a name="ln5186"> </a>
-<a name="ln5187">  callback_free(optcb);</a>
-<a name="ln5188">  *optcb = cb;</a>
-<a name="ln5189">  tv_free(tv);</a>
-<a name="ln5190">  return OK;</a>
-<a name="ln5191">}</a>
-<a name="ln5192"> </a>
-<a name="ln5193">/// Check if backspacing over something is allowed.</a>
-<a name="ln5194">/// @param  what  BS_INDENT, BS_EOL, BS_START, or BS_NOSTOP</a>
-<a name="ln5195">bool can_bs(int what)</a>
-<a name="ln5196">{</a>
-<a name="ln5197">  if (what == BS_START &amp;&amp; bt_prompt(curbuf)) {</a>
-<a name="ln5198">    return false;</a>
-<a name="ln5199">  }</a>
-<a name="ln5200">  switch (*p_bs) {</a>
-<a name="ln5201">  case '3':</a>
-<a name="ln5202">    return true;</a>
-<a name="ln5203">  case '2':</a>
-<a name="ln5204">    return what != BS_NOSTOP;</a>
-<a name="ln5205">  case '1':</a>
-<a name="ln5206">    return what != BS_START;</a>
-<a name="ln5207">  case '0':</a>
-<a name="ln5208">    return false;</a>
-<a name="ln5209">  }</a>
-<a name="ln5210">  return vim_strchr(p_bs, what) != NULL;</a>
-<a name="ln5211">}</a>
-<a name="ln5212"> </a>
-<a name="ln5213">/// Get the local or global value of 'backupcopy'.</a>
-<a name="ln5214">///</a>
-<a name="ln5215">/// @param buf The buffer.</a>
-<a name="ln5216">unsigned int get_bkc_value(buf_T *buf)</a>
-<a name="ln5217">{</a>
-<a name="ln5218">  return buf-&gt;b_bkc_flags ? buf-&gt;b_bkc_flags : bkc_flags;</a>
-<a name="ln5219">}</a>
-<a name="ln5220"> </a>
-<a name="ln5221">/// Get the local or global value of the 'virtualedit' flags.</a>
-<a name="ln5222">unsigned int get_ve_flags(void)</a>
-<a name="ln5223">{</a>
-<a name="ln5224">  return (curwin-&gt;w_ve_flags ? curwin-&gt;w_ve_flags : ve_flags) &amp; ~(VE_NONE | VE_NONEU);</a>
-<a name="ln5225">}</a>
-<a name="ln5226"> </a>
-<a name="ln5227">/// Get the local or global value of 'showbreak'.</a>
-<a name="ln5228">///</a>
-<a name="ln5229">/// @param win  If not NULL, the window to get the local option from; global</a>
-<a name="ln5230">///             otherwise.</a>
-<a name="ln5231">char_u *get_showbreak_value(win_T *const win)</a>
-<a name="ln5232">  FUNC_ATTR_WARN_UNUSED_RESULT</a>
-<a name="ln5233">{</a>
-<a name="ln5234">  if (win-&gt;w_p_sbr == NULL || *win-&gt;w_p_sbr == NUL) {</a>
-<a name="ln5235">    return (char_u *)p_sbr;</a>
-<a name="ln5236">  }</a>
-<a name="ln5237">  if (strcmp(win-&gt;w_p_sbr, &quot;NONE&quot;) == 0) {</a>
-<a name="ln5238">    return (char_u *)empty_option;</a>
-<a name="ln5239">  }</a>
-<a name="ln5240">  return (char_u *)win-&gt;w_p_sbr;</a>
-<a name="ln5241">}</a>
-<a name="ln5242"> </a>
-<a name="ln5243">/// Return the current end-of-line type: EOL_DOS, EOL_UNIX or EOL_MAC.</a>
-<a name="ln5244">int get_fileformat(const buf_T *buf)</a>
-<a name="ln5245">  FUNC_ATTR_PURE FUNC_ATTR_WARN_UNUSED_RESULT FUNC_ATTR_NONNULL_ALL</a>
-<a name="ln5246">{</a>
-<a name="ln5247">  int c = (unsigned char)(*buf-&gt;b_p_ff);</a>
-<a name="ln5248"> </a>
-<a name="ln5249">  if (buf-&gt;b_p_bin || c == 'u') {</a>
-<a name="ln5250">    return EOL_UNIX;</a>
-<a name="ln5251">  }</a>
-<a name="ln5252">  if (c == 'm') {</a>
-<a name="ln5253">    return EOL_MAC;</a>
-<a name="ln5254">  }</a>
-<a name="ln5255">  return EOL_DOS;</a>
-<a name="ln5256">}</a>
-<a name="ln5257"> </a>
-<a name="ln5258">/// Like get_fileformat(), but override 'fileformat' with &quot;p&quot; for &quot;++opt=val&quot;</a>
-<a name="ln5259">/// argument.</a>
-<a name="ln5260">///</a>
-<a name="ln5261">/// @param eap  can be NULL!</a>
-<a name="ln5262">int get_fileformat_force(const buf_T *buf, const exarg_T *eap)</a>
-<a name="ln5263">  FUNC_ATTR_NONNULL_ARG(1)</a>
-<a name="ln5264">{</a>
-<a name="ln5265">  int c;</a>
-<a name="ln5266"> </a>
-<a name="ln5267">  if (eap != NULL &amp;&amp; eap-&gt;force_ff != 0) {</a>
-<a name="ln5268">    c = eap-&gt;force_ff;</a>
-<a name="ln5269">  } else {</a>
-<a name="ln5270">    if ((eap != NULL &amp;&amp; eap-&gt;force_bin != 0)</a>
-<a name="ln5271">        ? (eap-&gt;force_bin == FORCE_BIN) : buf-&gt;b_p_bin) {</a>
-<a name="ln5272">      return EOL_UNIX;</a>
-<a name="ln5273">    }</a>
-<a name="ln5274">    c = (unsigned char)(*buf-&gt;b_p_ff);</a>
-<a name="ln5275">  }</a>
-<a name="ln5276">  if (c == 'u') {</a>
-<a name="ln5277">    return EOL_UNIX;</a>
-<a name="ln5278">  }</a>
-<a name="ln5279">  if (c == 'm') {</a>
-<a name="ln5280">    return EOL_MAC;</a>
-<a name="ln5281">  }</a>
-<a name="ln5282">  return EOL_DOS;</a>
-<a name="ln5283">}</a>
-<a name="ln5284"> </a>
-<a name="ln5285">/// Return the default fileformat from 'fileformats'.</a>
-<a name="ln5286">int default_fileformat(void)</a>
-<a name="ln5287">{</a>
-<a name="ln5288">  switch (*p_ffs) {</a>
-<a name="ln5289">  case 'm':</a>
-<a name="ln5290">    return EOL_MAC;</a>
-<a name="ln5291">  case 'd':</a>
-<a name="ln5292">    return EOL_DOS;</a>
-<a name="ln5293">  }</a>
-<a name="ln5294">  return EOL_UNIX;</a>
-<a name="ln5295">}</a>
-<a name="ln5296"> </a>
-<a name="ln5297">/// Set the current end-of-line type to EOL_UNIX, EOL_MAC, or EOL_DOS.</a>
-<a name="ln5298">///</a>
-<a name="ln5299">/// Sets 'fileformat'.</a>
+<a name="ln5069">/// @param[in]  name  Option name.</a>
+<a name="ln5070">///</a>
+<a name="ln5071">/// @return True if it was set.</a>
+<a name="ln5072">bool option_was_set(const char *name)</a>
+<a name="ln5073">{</a>
+<a name="ln5074">  int idx;</a>
+<a name="ln5075"> </a>
+<a name="ln5076">  idx = findoption(name);</a>
+<a name="ln5077">  if (idx &lt; 0) {  // Unknown option.</a>
+<a name="ln5078">    return false;</a>
+<a name="ln5079">  } else if (options[idx].flags &amp; P_WAS_SET) {</a>
+<a name="ln5080">    return true;</a>
+<a name="ln5081">  }</a>
+<a name="ln5082">  return false;</a>
+<a name="ln5083">}</a>
+<a name="ln5084"> </a>
+<a name="ln5085">/// Reset the flag indicating option &quot;name&quot; was set.</a>
+<a name="ln5086">///</a>
+<a name="ln5087">/// @param[in]  name  Option name.</a>
+<a name="ln5088">void reset_option_was_set(const char *name)</a>
+<a name="ln5089">{</a>
+<a name="ln5090">  const int idx = findoption(name);</a>
+<a name="ln5091"> </a>
+<a name="ln5092">  if (idx &gt;= 0) {</a>
+<a name="ln5093">    options[idx].flags &amp;= ~P_WAS_SET;</a>
+<a name="ln5094">  }</a>
+<a name="ln5095">}</a>
+<a name="ln5096"> </a>
+<a name="ln5097">/// fill_breakat_flags() -- called when 'breakat' changes value.</a>
+<a name="ln5098">void fill_breakat_flags(void)</a>
+<a name="ln5099">{</a>
+<a name="ln5100">  char_u *p;</a>
+<a name="ln5101">  int i;</a>
+<a name="ln5102"> </a>
+<a name="ln5103">  for (i = 0; i &lt; 256; i++) {</a>
+<a name="ln5104">    breakat_flags[i] = false;</a>
+<a name="ln5105">  }</a>
+<a name="ln5106"> </a>
+<a name="ln5107">  if (p_breakat != NULL) {</a>
+<a name="ln5108">    for (p = (char_u *)p_breakat; *p; p++) {</a>
+<a name="ln5109">      breakat_flags[*p] = true;</a>
+<a name="ln5110">    }</a>
+<a name="ln5111">  }</a>
+<a name="ln5112">}</a>
+<a name="ln5113"> </a>
+<a name="ln5114">/// fill_culopt_flags() -- called when 'culopt' changes value</a>
+<a name="ln5115">int fill_culopt_flags(char *val, win_T *wp)</a>
+<a name="ln5116">{</a>
+<a name="ln5117">  char *p;</a>
+<a name="ln5118">  char_u culopt_flags_new = 0;</a>
+<a name="ln5119"> </a>
+<a name="ln5120">  if (val == NULL) {</a>
+<a name="ln5121">    p = wp-&gt;w_p_culopt;</a>
+<a name="ln5122">  } else {</a>
+<a name="ln5123">    p = val;</a>
+<a name="ln5124">  }</a>
+<a name="ln5125">  while (*p != NUL) {</a>
+<a name="ln5126">    if (STRNCMP(p, &quot;line&quot;, 4) == 0) {</a>
+<a name="ln5127">      p += 4;</a>
+<a name="ln5128">      culopt_flags_new |= CULOPT_LINE;</a>
+<a name="ln5129">    } else if (STRNCMP(p, &quot;both&quot;, 4) == 0) {</a>
+<a name="ln5130">      p += 4;</a>
+<a name="ln5131">      culopt_flags_new |= CULOPT_LINE | CULOPT_NBR;</a>
+<a name="ln5132">    } else if (STRNCMP(p, &quot;number&quot;, 6) == 0) {</a>
+<a name="ln5133">      p += 6;</a>
+<a name="ln5134">      culopt_flags_new |= CULOPT_NBR;</a>
+<a name="ln5135">    } else if (STRNCMP(p, &quot;screenline&quot;, 10) == 0) {</a>
+<a name="ln5136">      p += 10;</a>
+<a name="ln5137">      culopt_flags_new |= CULOPT_SCRLINE;</a>
+<a name="ln5138">    }</a>
+<a name="ln5139"> </a>
+<a name="ln5140">    if (*p != ',' &amp;&amp; *p != NUL) {</a>
+<a name="ln5141">      return FAIL;</a>
+<a name="ln5142">    }</a>
+<a name="ln5143">    if (*p == ',') {</a>
+<a name="ln5144">      p++;</a>
+<a name="ln5145">    }</a>
+<a name="ln5146">  }</a>
+<a name="ln5147"> </a>
+<a name="ln5148">  // Can't have both &quot;line&quot; and &quot;screenline&quot;.</a>
+<a name="ln5149">  if ((culopt_flags_new &amp; CULOPT_LINE) &amp;&amp; (culopt_flags_new &amp; CULOPT_SCRLINE)) {</a>
+<a name="ln5150">    return FAIL;</a>
+<a name="ln5151">  }</a>
+<a name="ln5152">  wp-&gt;w_p_culopt_flags = culopt_flags_new;</a>
+<a name="ln5153"> </a>
+<a name="ln5154">  return OK;</a>
+<a name="ln5155">}</a>
+<a name="ln5156"> </a>
+<a name="ln5157">/// Set the callback function value for an option that accepts a function name,</a>
+<a name="ln5158">/// lambda, et al. (e.g. 'operatorfunc', 'tagfunc', etc.)</a>
+<a name="ln5159">/// @return  OK if the option is successfully set to a function, otherwise FAIL</a>
+<a name="ln5160">int option_set_callback_func(char *optval, Callback *optcb)</a>
+<a name="ln5161">{</a>
+<a name="ln5162">  if (optval == NULL || *optval == NUL) {</a>
+<a name="ln5163">    callback_free(optcb);</a>
+<a name="ln5164">    return OK;</a>
+<a name="ln5165">  }</a>
+<a name="ln5166"> </a>
+<a name="ln5167">  typval_T *tv;</a>
+<a name="ln5168">  if (*optval == '{'</a>
+<a name="ln5169">      || (STRNCMP(optval, &quot;function(&quot;, 9) == 0)</a>
+<a name="ln5170">      || (STRNCMP(optval, &quot;funcref(&quot;, 8) == 0)) {</a>
+<a name="ln5171">    // Lambda expression or a funcref</a>
+<a name="ln5172">    tv = eval_expr(optval);</a>
+<a name="ln5173">    if (tv == NULL) {</a>
+<a name="ln5174">      return FAIL;</a>
+<a name="ln5175">    }</a>
+<a name="ln5176">  } else {</a>
+<a name="ln5177">    // treat everything else as a function name string</a>
+<a name="ln5178">    tv = xcalloc(1, sizeof(*tv));</a>
+<a name="ln5179">    tv-&gt;v_type = VAR_STRING;</a>
+<a name="ln5180">    tv-&gt;vval.v_string = xstrdup(optval);</a>
+<a name="ln5181">  }</a>
+<a name="ln5182"> </a>
+<a name="ln5183">  Callback cb;</a>
+<a name="ln5184">  if (!callback_from_typval(&amp;cb, tv)) {</a>
+<a name="ln5185">    tv_free(tv);</a>
+<a name="ln5186">    return FAIL;</a>
+<a name="ln5187">  }</a>
+<a name="ln5188"> </a>
+<a name="ln5189">  callback_free(optcb);</a>
+<a name="ln5190">  *optcb = cb;</a>
+<a name="ln5191">  tv_free(tv);</a>
+<a name="ln5192">  return OK;</a>
+<a name="ln5193">}</a>
+<a name="ln5194"> </a>
+<a name="ln5195">/// Check if backspacing over something is allowed.</a>
+<a name="ln5196">/// @param  what  BS_INDENT, BS_EOL, BS_START, or BS_NOSTOP</a>
+<a name="ln5197">bool can_bs(int what)</a>
+<a name="ln5198">{</a>
+<a name="ln5199">  if (what == BS_START &amp;&amp; bt_prompt(curbuf)) {</a>
+<a name="ln5200">    return false;</a>
+<a name="ln5201">  }</a>
+<a name="ln5202">  switch (*p_bs) {</a>
+<a name="ln5203">  case '3':</a>
+<a name="ln5204">    return true;</a>
+<a name="ln5205">  case '2':</a>
+<a name="ln5206">    return what != BS_NOSTOP;</a>
+<a name="ln5207">  case '1':</a>
+<a name="ln5208">    return what != BS_START;</a>
+<a name="ln5209">  case '0':</a>
+<a name="ln5210">    return false;</a>
+<a name="ln5211">  }</a>
+<a name="ln5212">  return vim_strchr(p_bs, what) != NULL;</a>
+<a name="ln5213">}</a>
+<a name="ln5214"> </a>
+<a name="ln5215">/// Get the local or global value of 'backupcopy'.</a>
+<a name="ln5216">///</a>
+<a name="ln5217">/// @param buf The buffer.</a>
+<a name="ln5218">unsigned int get_bkc_value(buf_T *buf)</a>
+<a name="ln5219">{</a>
+<a name="ln5220">  return buf-&gt;b_bkc_flags ? buf-&gt;b_bkc_flags : bkc_flags;</a>
+<a name="ln5221">}</a>
+<a name="ln5222"> </a>
+<a name="ln5223">/// Get the local or global value of the 'virtualedit' flags.</a>
+<a name="ln5224">unsigned int get_ve_flags(void)</a>
+<a name="ln5225">{</a>
+<a name="ln5226">  return (curwin-&gt;w_ve_flags ? curwin-&gt;w_ve_flags : ve_flags) &amp; ~(VE_NONE | VE_NONEU);</a>
+<a name="ln5227">}</a>
+<a name="ln5228"> </a>
+<a name="ln5229">/// Get the local or global value of 'showbreak'.</a>
+<a name="ln5230">///</a>
+<a name="ln5231">/// @param win  If not NULL, the window to get the local option from; global</a>
+<a name="ln5232">///             otherwise.</a>
+<a name="ln5233">char_u *get_showbreak_value(win_T *const win)</a>
+<a name="ln5234">  FUNC_ATTR_WARN_UNUSED_RESULT</a>
+<a name="ln5235">{</a>
+<a name="ln5236">  if (win-&gt;w_p_sbr == NULL || *win-&gt;w_p_sbr == NUL) {</a>
+<a name="ln5237">    return (char_u *)p_sbr;</a>
+<a name="ln5238">  }</a>
+<a name="ln5239">  if (strcmp(win-&gt;w_p_sbr, &quot;NONE&quot;) == 0) {</a>
+<a name="ln5240">    return (char_u *)empty_option;</a>
+<a name="ln5241">  }</a>
+<a name="ln5242">  return (char_u *)win-&gt;w_p_sbr;</a>
+<a name="ln5243">}</a>
+<a name="ln5244"> </a>
+<a name="ln5245">/// Return the current end-of-line type: EOL_DOS, EOL_UNIX or EOL_MAC.</a>
+<a name="ln5246">int get_fileformat(const buf_T *buf)</a>
+<a name="ln5247">  FUNC_ATTR_PURE FUNC_ATTR_WARN_UNUSED_RESULT FUNC_ATTR_NONNULL_ALL</a>
+<a name="ln5248">{</a>
+<a name="ln5249">  int c = (unsigned char)(*buf-&gt;b_p_ff);</a>
+<a name="ln5250"> </a>
+<a name="ln5251">  if (buf-&gt;b_p_bin || c == 'u') {</a>
+<a name="ln5252">    return EOL_UNIX;</a>
+<a name="ln5253">  }</a>
+<a name="ln5254">  if (c == 'm') {</a>
+<a name="ln5255">    return EOL_MAC;</a>
+<a name="ln5256">  }</a>
+<a name="ln5257">  return EOL_DOS;</a>
+<a name="ln5258">}</a>
+<a name="ln5259"> </a>
+<a name="ln5260">/// Like get_fileformat(), but override 'fileformat' with &quot;p&quot; for &quot;++opt=val&quot;</a>
+<a name="ln5261">/// argument.</a>
+<a name="ln5262">///</a>
+<a name="ln5263">/// @param eap  can be NULL!</a>
+<a name="ln5264">int get_fileformat_force(const buf_T *buf, const exarg_T *eap)</a>
+<a name="ln5265">  FUNC_ATTR_NONNULL_ARG(1)</a>
+<a name="ln5266">{</a>
+<a name="ln5267">  int c;</a>
+<a name="ln5268"> </a>
+<a name="ln5269">  if (eap != NULL &amp;&amp; eap-&gt;force_ff != 0) {</a>
+<a name="ln5270">    c = eap-&gt;force_ff;</a>
+<a name="ln5271">  } else {</a>
+<a name="ln5272">    if ((eap != NULL &amp;&amp; eap-&gt;force_bin != 0)</a>
+<a name="ln5273">        ? (eap-&gt;force_bin == FORCE_BIN) : buf-&gt;b_p_bin) {</a>
+<a name="ln5274">      return EOL_UNIX;</a>
+<a name="ln5275">    }</a>
+<a name="ln5276">    c = (unsigned char)(*buf-&gt;b_p_ff);</a>
+<a name="ln5277">  }</a>
+<a name="ln5278">  if (c == 'u') {</a>
+<a name="ln5279">    return EOL_UNIX;</a>
+<a name="ln5280">  }</a>
+<a name="ln5281">  if (c == 'm') {</a>
+<a name="ln5282">    return EOL_MAC;</a>
+<a name="ln5283">  }</a>
+<a name="ln5284">  return EOL_DOS;</a>
+<a name="ln5285">}</a>
+<a name="ln5286"> </a>
+<a name="ln5287">/// Return the default fileformat from 'fileformats'.</a>
+<a name="ln5288">int default_fileformat(void)</a>
+<a name="ln5289">{</a>
+<a name="ln5290">  switch (*p_ffs) {</a>
+<a name="ln5291">  case 'm':</a>
+<a name="ln5292">    return EOL_MAC;</a>
+<a name="ln5293">  case 'd':</a>
+<a name="ln5294">    return EOL_DOS;</a>
+<a name="ln5295">  }</a>
+<a name="ln5296">  return EOL_UNIX;</a>
+<a name="ln5297">}</a>
+<a name="ln5298"> </a>
+<a name="ln5299">/// Set the current end-of-line type to EOL_UNIX, EOL_MAC, or EOL_DOS.</a>
 <a name="ln5300">///</a>
-<a name="ln5301">/// @param eol_style End-of-line style.</a>
-<a name="ln5302">/// @param opt_flags OPT_LOCAL and/or OPT_GLOBAL</a>
-<a name="ln5303">void set_fileformat(int eol_style, int opt_flags)</a>
-<a name="ln5304">{</a>
-<a name="ln5305">  char *p = NULL;</a>
-<a name="ln5306"> </a>
-<a name="ln5307">  switch (eol_style) {</a>
-<a name="ln5308">  case EOL_UNIX:</a>
-<a name="ln5309">    p = FF_UNIX;</a>
-<a name="ln5310">    break;</a>
-<a name="ln5311">  case EOL_MAC:</a>
-<a name="ln5312">    p = FF_MAC;</a>
-<a name="ln5313">    break;</a>
-<a name="ln5314">  case EOL_DOS:</a>
-<a name="ln5315">    p = FF_DOS;</a>
-<a name="ln5316">    break;</a>
-<a name="ln5317">  }</a>
-<a name="ln5318"> </a>
-<a name="ln5319">  // p is NULL if &quot;eol_style&quot; is EOL_UNKNOWN.</a>
-<a name="ln5320">  if (p != NULL) {</a>
-<a name="ln5321">    set_string_option_direct(&quot;ff&quot;, -1, p, OPT_FREE | opt_flags, 0);</a>
-<a name="ln5322">  }</a>
-<a name="ln5323"> </a>
-<a name="ln5324">  // This may cause the buffer to become (un)modified.</a>
-<a name="ln5325">  redraw_buf_status_later(curbuf);</a>
-<a name="ln5326">  redraw_tabline = true;</a>
-<a name="ln5327">  need_maketitle = true;  // Set window title later.</a>
-<a name="ln5328">}</a>
-<a name="ln5329"> </a>
-<a name="ln5330">/// Skip to next part of an option argument: skip space and comma</a>
-<a name="ln5331">char *skip_to_option_part(const char *p)</a>
-<a name="ln5332">{</a>
-<a name="ln5333">  if (*p == ',') {</a>
-<a name="ln5334">    p++;</a>
-<a name="ln5335">  }</a>
-<a name="ln5336">  while (*p == ' ') {</a>
-<a name="ln5337">    p++;</a>
-<a name="ln5338">  }</a>
-<a name="ln5339">  return (char *)p;</a>
-<a name="ln5340">}</a>
-<a name="ln5341"> </a>
-<a name="ln5342">/// Isolate one part of a string option separated by `sep_chars`.</a>
-<a name="ln5343">///</a>
-<a name="ln5344">/// @param[in,out]  option    advanced to the next part</a>
-<a name="ln5345">/// @param[in,out]  buf       copy of the isolated part</a>
-<a name="ln5346">/// @param[in]      maxlen    length of `buf`</a>
-<a name="ln5347">/// @param[in]      sep_chars chars that separate the option parts</a>
-<a name="ln5348">///</a>
-<a name="ln5349">/// @return length of `*option`</a>
-<a name="ln5350">size_t copy_option_part(char **option, char *buf, size_t maxlen, char *sep_chars)</a>
-<a name="ln5351">{</a>
-<a name="ln5352">  size_t len = 0;</a>
-<a name="ln5353">  char *p = *option;</a>
-<a name="ln5354"> </a>
-<a name="ln5355">  // skip '.' at start of option part, for 'suffixes'</a>
-<a name="ln5356">  if (*p == '.') {</a>
-<a name="ln5357">    buf[len++] = *p++;</a>
-<a name="ln5358">  }</a>
-<a name="ln5359">  while (*p != NUL &amp;&amp; vim_strchr(sep_chars, *p) == NULL) {</a>
-<a name="ln5360">    // Skip backslash before a separator character and space.</a>
-<a name="ln5361">    if (p[0] == '\\' &amp;&amp; vim_strchr(sep_chars, p[1]) != NULL) {</a>
-<a name="ln5362">      p++;</a>
-<a name="ln5363">    }</a>
-<a name="ln5364">    if (len &lt; maxlen - 1) {</a>
-<a name="ln5365">      buf[len++] = *p;</a>
-<a name="ln5366">    }</a>
-<a name="ln5367">    p++;</a>
-<a name="ln5368">  }</a>
-<a name="ln5369">  buf[len] = NUL;</a>
-<a name="ln5370"> </a>
-<a name="ln5371">  if (*p != NUL &amp;&amp; *p != ',') {  // skip non-standard separator</a>
-<a name="ln5372">    p++;</a>
-<a name="ln5373">  }</a>
-<a name="ln5374">  p = skip_to_option_part(p);    // p points to next file name</a>
-<a name="ln5375"> </a>
-<a name="ln5376">  *option = p;</a>
-<a name="ln5377">  return len;</a>
-<a name="ln5378">}</a>
-<a name="ln5379"> </a>
-<a name="ln5380">/// Return true when 'shell' has &quot;csh&quot; in the tail.</a>
-<a name="ln5381">int csh_like_shell(void)</a>
-<a name="ln5382">{</a>
-<a name="ln5383">  return strstr(path_tail(p_sh), &quot;csh&quot;) != NULL;</a>
-<a name="ln5384">}</a>
-<a name="ln5385"> </a>
-<a name="ln5386">/// Return true when 'shell' has &quot;fish&quot; in the tail.</a>
-<a name="ln5387">bool fish_like_shell(void)</a>
-<a name="ln5388">{</a>
-<a name="ln5389">  return strstr(path_tail(p_sh), &quot;fish&quot;) != NULL;</a>
-<a name="ln5390">}</a>
-<a name="ln5391"> </a>
-<a name="ln5392">/// Return the number of requested sign columns, based on current</a>
-<a name="ln5393">/// buffer signs and on user configuration.</a>
-<a name="ln5394">int win_signcol_count(win_T *wp)</a>
-<a name="ln5395">{</a>
-<a name="ln5396">  return win_signcol_configured(wp, NULL);</a>
-<a name="ln5397">}</a>
-<a name="ln5398"> </a>
-<a name="ln5399">/// Return the number of requested sign columns, based on user / configuration.</a>
-<a name="ln5400">int win_signcol_configured(win_T *wp, int *is_fixed)</a>
-<a name="ln5401">{</a>
-<a name="ln5402">  const char *scl = (const char *)wp-&gt;w_p_scl;</a>
-<a name="ln5403"> </a>
-<a name="ln5404">  if (is_fixed) {</a>
-<a name="ln5405">    *is_fixed = 1;</a>
-<a name="ln5406">  }</a>
-<a name="ln5407"> </a>
-<a name="ln5408">  // Note: It checks &quot;no&quot; or &quot;number&quot; in 'signcolumn' option</a>
-<a name="ln5409">  if (*scl == 'n'</a>
-<a name="ln5410">      &amp;&amp; (*(scl + 1) == 'o' || (*(scl + 1) == 'u'</a>
-<a name="ln5411">                                &amp;&amp; (wp-&gt;w_p_nu || wp-&gt;w_p_rnu)))) {</a>
-<a name="ln5412">    return 0;</a>
-<a name="ln5413">  }</a>
-<a name="ln5414"> </a>
-<a name="ln5415">  // yes or yes</a>
-<a name="ln5416">  if (!strncmp(scl, &quot;yes:&quot;, 4)) {</a>
-<a name="ln5417">    // Fixed amount of columns</a>
-<a name="ln5418">    return scl[4] - '0';</a>
-<a name="ln5419">  }</a>
-<a name="ln5420">  if (*scl == 'y') {</a>
-<a name="ln5421">    return 1;</a>
-<a name="ln5422">  }</a>
-<a name="ln5423"> </a>
-<a name="ln5424">  if (is_fixed) {</a>
-<a name="ln5425">    // auto or auto:&lt;NUM&gt;</a>
-<a name="ln5426">    *is_fixed = 0;</a>
-<a name="ln5427">  }</a>
-<a name="ln5428"> </a>
-<a name="ln5429">  int minimum = 0, maximum = 1;</a>
+<a name="ln5301">/// Sets 'fileformat'.</a>
+<a name="ln5302">///</a>
+<a name="ln5303">/// @param eol_style End-of-line style.</a>
+<a name="ln5304">/// @param opt_flags OPT_LOCAL and/or OPT_GLOBAL</a>
+<a name="ln5305">void set_fileformat(int eol_style, int opt_flags)</a>
+<a name="ln5306">{</a>
+<a name="ln5307">  char *p = NULL;</a>
+<a name="ln5308"> </a>
+<a name="ln5309">  switch (eol_style) {</a>
+<a name="ln5310">  case EOL_UNIX:</a>
+<a name="ln5311">    p = FF_UNIX;</a>
+<a name="ln5312">    break;</a>
+<a name="ln5313">  case EOL_MAC:</a>
+<a name="ln5314">    p = FF_MAC;</a>
+<a name="ln5315">    break;</a>
+<a name="ln5316">  case EOL_DOS:</a>
+<a name="ln5317">    p = FF_DOS;</a>
+<a name="ln5318">    break;</a>
+<a name="ln5319">  }</a>
+<a name="ln5320"> </a>
+<a name="ln5321">  // p is NULL if &quot;eol_style&quot; is EOL_UNKNOWN.</a>
+<a name="ln5322">  if (p != NULL) {</a>
+<a name="ln5323">    set_string_option_direct(&quot;ff&quot;, -1, p, OPT_FREE | opt_flags, 0);</a>
+<a name="ln5324">  }</a>
+<a name="ln5325"> </a>
+<a name="ln5326">  // This may cause the buffer to become (un)modified.</a>
+<a name="ln5327">  redraw_buf_status_later(curbuf);</a>
+<a name="ln5328">  redraw_tabline = true;</a>
+<a name="ln5329">  need_maketitle = true;  // Set window title later.</a>
+<a name="ln5330">}</a>
+<a name="ln5331"> </a>
+<a name="ln5332">/// Skip to next part of an option argument: skip space and comma</a>
+<a name="ln5333">char *skip_to_option_part(const char *p)</a>
+<a name="ln5334">{</a>
+<a name="ln5335">  if (*p == ',') {</a>
+<a name="ln5336">    p++;</a>
+<a name="ln5337">  }</a>
+<a name="ln5338">  while (*p == ' ') {</a>
+<a name="ln5339">    p++;</a>
+<a name="ln5340">  }</a>
+<a name="ln5341">  return (char *)p;</a>
+<a name="ln5342">}</a>
+<a name="ln5343"> </a>
+<a name="ln5344">/// Isolate one part of a string option separated by `sep_chars`.</a>
+<a name="ln5345">///</a>
+<a name="ln5346">/// @param[in,out]  option    advanced to the next part</a>
+<a name="ln5347">/// @param[in,out]  buf       copy of the isolated part</a>
+<a name="ln5348">/// @param[in]      maxlen    length of `buf`</a>
+<a name="ln5349">/// @param[in]      sep_chars chars that separate the option parts</a>
+<a name="ln5350">///</a>
+<a name="ln5351">/// @return length of `*option`</a>
+<a name="ln5352">size_t copy_option_part(char **option, char *buf, size_t maxlen, char *sep_chars)</a>
+<a name="ln5353">{</a>
+<a name="ln5354">  size_t len = 0;</a>
+<a name="ln5355">  char *p = *option;</a>
+<a name="ln5356"> </a>
+<a name="ln5357">  // skip '.' at start of option part, for 'suffixes'</a>
+<a name="ln5358">  if (*p == '.') {</a>
+<a name="ln5359">    buf[len++] = *p++;</a>
+<a name="ln5360">  }</a>
+<a name="ln5361">  while (*p != NUL &amp;&amp; vim_strchr(sep_chars, *p) == NULL) {</a>
+<a name="ln5362">    // Skip backslash before a separator character and space.</a>
+<a name="ln5363">    if (p[0] == '\\' &amp;&amp; vim_strchr(sep_chars, p[1]) != NULL) {</a>
+<a name="ln5364">      p++;</a>
+<a name="ln5365">    }</a>
+<a name="ln5366">    if (len &lt; maxlen - 1) {</a>
+<a name="ln5367">      buf[len++] = *p;</a>
+<a name="ln5368">    }</a>
+<a name="ln5369">    p++;</a>
+<a name="ln5370">  }</a>
+<a name="ln5371">  buf[len] = NUL;</a>
+<a name="ln5372"> </a>
+<a name="ln5373">  if (*p != NUL &amp;&amp; *p != ',') {  // skip non-standard separator</a>
+<a name="ln5374">    p++;</a>
+<a name="ln5375">  }</a>
+<a name="ln5376">  p = skip_to_option_part(p);    // p points to next file name</a>
+<a name="ln5377"> </a>
+<a name="ln5378">  *option = p;</a>
+<a name="ln5379">  return len;</a>
+<a name="ln5380">}</a>
+<a name="ln5381"> </a>
+<a name="ln5382">/// Return true when 'shell' has &quot;csh&quot; in the tail.</a>
+<a name="ln5383">int csh_like_shell(void)</a>
+<a name="ln5384">{</a>
+<a name="ln5385">  return strstr(path_tail(p_sh), &quot;csh&quot;) != NULL;</a>
+<a name="ln5386">}</a>
+<a name="ln5387"> </a>
+<a name="ln5388">/// Return true when 'shell' has &quot;fish&quot; in the tail.</a>
+<a name="ln5389">bool fish_like_shell(void)</a>
+<a name="ln5390">{</a>
+<a name="ln5391">  return strstr(path_tail(p_sh), &quot;fish&quot;) != NULL;</a>
+<a name="ln5392">}</a>
+<a name="ln5393"> </a>
+<a name="ln5394">/// Return the number of requested sign columns, based on current</a>
+<a name="ln5395">/// buffer signs and on user configuration.</a>
+<a name="ln5396">int win_signcol_count(win_T *wp)</a>
+<a name="ln5397">{</a>
+<a name="ln5398">  return win_signcol_configured(wp, NULL);</a>
+<a name="ln5399">}</a>
+<a name="ln5400"> </a>
+<a name="ln5401">/// Return the number of requested sign columns, based on user / configuration.</a>
+<a name="ln5402">int win_signcol_configured(win_T *wp, int *is_fixed)</a>
+<a name="ln5403">{</a>
+<a name="ln5404">  const char *scl = (const char *)wp-&gt;w_p_scl;</a>
+<a name="ln5405"> </a>
+<a name="ln5406">  if (is_fixed) {</a>
+<a name="ln5407">    *is_fixed = 1;</a>
+<a name="ln5408">  }</a>
+<a name="ln5409"> </a>
+<a name="ln5410">  // Note: It checks &quot;no&quot; or &quot;number&quot; in 'signcolumn' option</a>
+<a name="ln5411">  if (*scl == 'n'</a>
+<a name="ln5412">      &amp;&amp; (*(scl + 1) == 'o' || (*(scl + 1) == 'u'</a>
+<a name="ln5413">                                &amp;&amp; (wp-&gt;w_p_nu || wp-&gt;w_p_rnu)))) {</a>
+<a name="ln5414">    return 0;</a>
+<a name="ln5415">  }</a>
+<a name="ln5416"> </a>
+<a name="ln5417">  // yes or yes</a>
+<a name="ln5418">  if (!strncmp(scl, &quot;yes:&quot;, 4)) {</a>
+<a name="ln5419">    // Fixed amount of columns</a>
+<a name="ln5420">    return scl[4] - '0';</a>
+<a name="ln5421">  }</a>
+<a name="ln5422">  if (*scl == 'y') {</a>
+<a name="ln5423">    return 1;</a>
+<a name="ln5424">  }</a>
+<a name="ln5425"> </a>
+<a name="ln5426">  if (is_fixed) {</a>
+<a name="ln5427">    // auto or auto:&lt;NUM&gt;</a>
+<a name="ln5428">    *is_fixed = 0;</a>
+<a name="ln5429">  }</a>
 <a name="ln5430"> </a>
-<a name="ln5431">  if (!strncmp(scl, &quot;auto:&quot;, 5)) {</a>
-<a name="ln5432">    // Variable depending on a configuration</a>
-<a name="ln5433">    maximum = scl[5] - '0';</a>
-<a name="ln5434">    // auto:&lt;NUM&gt;-&lt;NUM&gt;</a>
-<a name="ln5435">    if (strlen(scl) == 8 &amp;&amp; *(scl + 6) == '-') {</a>
-<a name="ln5436">      minimum = maximum;</a>
-<a name="ln5437">      maximum = scl[7] - '0';</a>
-<a name="ln5438">    }</a>
-<a name="ln5439">  }</a>
-<a name="ln5440"> </a>
-<a name="ln5441">  int needed_signcols = buf_signcols(wp-&gt;w_buffer, maximum);</a>
-<a name="ln5442">  int ret = MAX(minimum, MIN(maximum, needed_signcols));</a>
-<a name="ln5443">  assert(ret &lt;= SIGN_SHOW_MAX);</a>
-<a name="ln5444">  return ret;</a>
-<a name="ln5445">}</a>
-<a name="ln5446"> </a>
-<a name="ln5447">/// Get window or buffer local options</a>
-<a name="ln5448">dict_T *get_winbuf_options(const int bufopt)</a>
-<a name="ln5449">  FUNC_ATTR_WARN_UNUSED_RESULT</a>
-<a name="ln5450">{</a>
-<a name="ln5451">  dict_T *const d = tv_dict_alloc();</a>
-<a name="ln5452"> </a>
-<a name="ln5453">  for (int opt_idx = 0; options[opt_idx].fullname; opt_idx++) {</a>
-<a name="ln5454">    struct vimoption *opt = &amp;options[opt_idx];</a>
-<a name="ln5455"> </a>
-<a name="ln5456">    if ((bufopt &amp;&amp; (opt-&gt;indir &amp; PV_BUF))</a>
-<a name="ln5457">        || (!bufopt &amp;&amp; (opt-&gt;indir &amp; PV_WIN))) {</a>
-<a name="ln5458">      char_u *varp = get_varp(opt);</a>
-<a name="ln5459"> </a>
-<a name="ln5460">      if (varp != NULL) {</a>
-<a name="ln5461">        if (opt-&gt;flags &amp; P_STRING) {</a>
-<a name="ln5462">          tv_dict_add_str(d, opt-&gt;fullname, strlen(opt-&gt;fullname),</a>
-<a name="ln5463">                          *(const char **)varp);</a>
-<a name="ln5464">        } else if (opt-&gt;flags &amp; P_NUM) {</a>
-<a name="ln5465">          tv_dict_add_nr(d, opt-&gt;fullname, strlen(opt-&gt;fullname),</a>
-<a name="ln5466">                         *(long *)varp);</a>
-<a name="ln5467">        } else {</a>
-<a name="ln5468">          tv_dict_add_nr(d, opt-&gt;fullname, strlen(opt-&gt;fullname), *(int *)varp);</a>
-<a name="ln5469">        }</a>
-<a name="ln5470">      }</a>
-<a name="ln5471">    }</a>
-<a name="ln5472">  }</a>
-<a name="ln5473"> </a>
-<a name="ln5474">  return d;</a>
-<a name="ln5475">}</a>
-<a name="ln5476"> </a>
-<a name="ln5477">/// Return the effective 'scrolloff' value for the current window, using the</a>
-<a name="ln5478">/// global value when appropriate.</a>
-<a name="ln5479">long get_scrolloff_value(win_T *wp)</a>
-<a name="ln5480">{</a>
-<a name="ln5481">  // Disallow scrolloff in terminal-mode. #11915</a>
-<a name="ln5482">  if (State &amp; MODE_TERMINAL) {</a>
-<a name="ln5483">    return 0;</a>
-<a name="ln5484">  }</a>
-<a name="ln5485">  return wp-&gt;w_p_so &lt; 0 ? p_so : wp-&gt;w_p_so;</a>
-<a name="ln5486">}</a>
-<a name="ln5487"> </a>
-<a name="ln5488">/// Return the effective 'sidescrolloff' value for the current window, using the</a>
-<a name="ln5489">/// global value when appropriate.</a>
-<a name="ln5490">long get_sidescrolloff_value(win_T *wp)</a>
-<a name="ln5491">{</a>
-<a name="ln5492">  return wp-&gt;w_p_siso &lt; 0 ? p_siso : wp-&gt;w_p_siso;</a>
-<a name="ln5493">}</a>
-<a name="ln5494"> </a>
-<a name="ln5495">Dictionary get_vimoption(String name, Error *err)</a>
-<a name="ln5496">{</a>
-<a name="ln5497">  int opt_idx = findoption_len((const char *)name.data, name.size);</a>
-<a name="ln5498">  if (opt_idx &lt; 0) {</a>
-<a name="ln5499">    api_set_error(err, kErrorTypeValidation, &quot;no such option: '%s'&quot;, name.data);</a>
-<a name="ln5500">    return (Dictionary)ARRAY_DICT_INIT;</a>
-<a name="ln5501">  }</a>
-<a name="ln5502">  return vimoption2dict(&amp;options[opt_idx]);</a>
-<a name="ln5503">}</a>
-<a name="ln5504"> </a>
-<a name="ln5505">Dictionary get_all_vimoptions(void)</a>
-<a name="ln5506">{</a>
-<a name="ln5507">  Dictionary retval = ARRAY_DICT_INIT;</a>
-<a name="ln5508">  for (size_t i = 0; options[i].fullname != NULL; i++) {</a>
-<a name="ln5509">    Dictionary opt_dict = vimoption2dict(&amp;options[i]);</a>
-<a name="ln5510">    PUT(retval, options[i].fullname, DICTIONARY_OBJ(opt_dict));</a>
-<a name="ln5511">  }</a>
-<a name="ln5512">  return retval;</a>
-<a name="ln5513">}</a>
-<a name="ln5514"> </a>
-<a name="ln5515">static Dictionary vimoption2dict(vimoption_T *opt)</a>
-<a name="ln5516">{</a>
-<a name="ln5517">  Dictionary dict = ARRAY_DICT_INIT;</a>
-<a name="ln5518"> </a>
-<a name="ln5519">  PUT(dict, &quot;name&quot;, CSTR_TO_OBJ(opt-&gt;fullname));</a>
-<a name="ln5520">  PUT(dict, &quot;shortname&quot;, CSTR_TO_OBJ(opt-&gt;shortname));</a>
-<a name="ln5521"> </a>
-<a name="ln5522">  const char *scope;</a>
-<a name="ln5523">  if (opt-&gt;indir &amp; PV_BUF) {</a>
-<a name="ln5524">    scope = &quot;buf&quot;;</a>
-<a name="ln5525">  } else if (opt-&gt;indir &amp; PV_WIN) {</a>
-<a name="ln5526">    scope = &quot;win&quot;;</a>
-<a name="ln5527">  } else {</a>
-<a name="ln5528">    scope = &quot;global&quot;;</a>
-<a name="ln5529">  }</a>
-<a name="ln5530"> </a>
-<a name="ln5531">  PUT(dict, &quot;scope&quot;, CSTR_TO_OBJ(scope));</a>
+<a name="ln5431">  int minimum = 0, maximum = 1;</a>
+<a name="ln5432"> </a>
+<a name="ln5433">  if (!strncmp(scl, &quot;auto:&quot;, 5)) {</a>
+<a name="ln5434">    // Variable depending on a configuration</a>
+<a name="ln5435">    maximum = scl[5] - '0';</a>
+<a name="ln5436">    // auto:&lt;NUM&gt;-&lt;NUM&gt;</a>
+<a name="ln5437">    if (strlen(scl) == 8 &amp;&amp; *(scl + 6) == '-') {</a>
+<a name="ln5438">      minimum = maximum;</a>
+<a name="ln5439">      maximum = scl[7] - '0';</a>
+<a name="ln5440">    }</a>
+<a name="ln5441">  }</a>
+<a name="ln5442"> </a>
+<a name="ln5443">  int needed_signcols = buf_signcols(wp-&gt;w_buffer, maximum);</a>
+<a name="ln5444">  int ret = MAX(minimum, MIN(maximum, needed_signcols));</a>
+<a name="ln5445">  assert(ret &lt;= SIGN_SHOW_MAX);</a>
+<a name="ln5446">  return ret;</a>
+<a name="ln5447">}</a>
+<a name="ln5448"> </a>
+<a name="ln5449">/// Get window or buffer local options</a>
+<a name="ln5450">dict_T *get_winbuf_options(const int bufopt)</a>
+<a name="ln5451">  FUNC_ATTR_WARN_UNUSED_RESULT</a>
+<a name="ln5452">{</a>
+<a name="ln5453">  dict_T *const d = tv_dict_alloc();</a>
+<a name="ln5454"> </a>
+<a name="ln5455">  for (int opt_idx = 0; options[opt_idx].fullname; opt_idx++) {</a>
+<a name="ln5456">    struct vimoption *opt = &amp;options[opt_idx];</a>
+<a name="ln5457"> </a>
+<a name="ln5458">    if ((bufopt &amp;&amp; (opt-&gt;indir &amp; PV_BUF))</a>
+<a name="ln5459">        || (!bufopt &amp;&amp; (opt-&gt;indir &amp; PV_WIN))) {</a>
+<a name="ln5460">      char_u *varp = get_varp(opt);</a>
+<a name="ln5461"> </a>
+<a name="ln5462">      if (varp != NULL) {</a>
+<a name="ln5463">        if (opt-&gt;flags &amp; P_STRING) {</a>
+<a name="ln5464">          tv_dict_add_str(d, opt-&gt;fullname, strlen(opt-&gt;fullname),</a>
+<a name="ln5465">                          *(const char **)varp);</a>
+<a name="ln5466">        } else if (opt-&gt;flags &amp; P_NUM) {</a>
+<a name="ln5467">          tv_dict_add_nr(d, opt-&gt;fullname, strlen(opt-&gt;fullname),</a>
+<a name="ln5468">                         *(long *)varp);</a>
+<a name="ln5469">        } else {</a>
+<a name="ln5470">          tv_dict_add_nr(d, opt-&gt;fullname, strlen(opt-&gt;fullname), *(int *)varp);</a>
+<a name="ln5471">        }</a>
+<a name="ln5472">      }</a>
+<a name="ln5473">    }</a>
+<a name="ln5474">  }</a>
+<a name="ln5475"> </a>
+<a name="ln5476">  return d;</a>
+<a name="ln5477">}</a>
+<a name="ln5478"> </a>
+<a name="ln5479">/// Return the effective 'scrolloff' value for the current window, using the</a>
+<a name="ln5480">/// global value when appropriate.</a>
+<a name="ln5481">long get_scrolloff_value(win_T *wp)</a>
+<a name="ln5482">{</a>
+<a name="ln5483">  // Disallow scrolloff in terminal-mode. #11915</a>
+<a name="ln5484">  if (State &amp; MODE_TERMINAL) {</a>
+<a name="ln5485">    return 0;</a>
+<a name="ln5486">  }</a>
+<a name="ln5487">  return wp-&gt;w_p_so &lt; 0 ? p_so : wp-&gt;w_p_so;</a>
+<a name="ln5488">}</a>
+<a name="ln5489"> </a>
+<a name="ln5490">/// Return the effective 'sidescrolloff' value for the current window, using the</a>
+<a name="ln5491">/// global value when appropriate.</a>
+<a name="ln5492">long get_sidescrolloff_value(win_T *wp)</a>
+<a name="ln5493">{</a>
+<a name="ln5494">  return wp-&gt;w_p_siso &lt; 0 ? p_siso : wp-&gt;w_p_siso;</a>
+<a name="ln5495">}</a>
+<a name="ln5496"> </a>
+<a name="ln5497">Dictionary get_vimoption(String name, Error *err)</a>
+<a name="ln5498">{</a>
+<a name="ln5499">  int opt_idx = findoption_len((const char *)name.data, name.size);</a>
+<a name="ln5500">  if (opt_idx &lt; 0) {</a>
+<a name="ln5501">    api_set_error(err, kErrorTypeValidation, &quot;no such option: '%s'&quot;, name.data);</a>
+<a name="ln5502">    return (Dictionary)ARRAY_DICT_INIT;</a>
+<a name="ln5503">  }</a>
+<a name="ln5504">  return vimoption2dict(&amp;options[opt_idx]);</a>
+<a name="ln5505">}</a>
+<a name="ln5506"> </a>
+<a name="ln5507">Dictionary get_all_vimoptions(void)</a>
+<a name="ln5508">{</a>
+<a name="ln5509">  Dictionary retval = ARRAY_DICT_INIT;</a>
+<a name="ln5510">  for (size_t i = 0; options[i].fullname != NULL; i++) {</a>
+<a name="ln5511">    Dictionary opt_dict = vimoption2dict(&amp;options[i]);</a>
+<a name="ln5512">    PUT(retval, options[i].fullname, DICTIONARY_OBJ(opt_dict));</a>
+<a name="ln5513">  }</a>
+<a name="ln5514">  return retval;</a>
+<a name="ln5515">}</a>
+<a name="ln5516"> </a>
+<a name="ln5517">static Dictionary vimoption2dict(vimoption_T *opt)</a>
+<a name="ln5518">{</a>
+<a name="ln5519">  Dictionary dict = ARRAY_DICT_INIT;</a>
+<a name="ln5520"> </a>
+<a name="ln5521">  PUT(dict, &quot;name&quot;, CSTR_TO_OBJ(opt-&gt;fullname));</a>
+<a name="ln5522">  PUT(dict, &quot;shortname&quot;, CSTR_TO_OBJ(opt-&gt;shortname));</a>
+<a name="ln5523"> </a>
+<a name="ln5524">  const char *scope;</a>
+<a name="ln5525">  if (opt-&gt;indir &amp; PV_BUF) {</a>
+<a name="ln5526">    scope = &quot;buf&quot;;</a>
+<a name="ln5527">  } else if (opt-&gt;indir &amp; PV_WIN) {</a>
+<a name="ln5528">    scope = &quot;win&quot;;</a>
+<a name="ln5529">  } else {</a>
+<a name="ln5530">    scope = &quot;global&quot;;</a>
+<a name="ln5531">  }</a>
 <a name="ln5532"> </a>
-<a name="ln5533">  // welcome to the jungle</a>
-<a name="ln5534">  PUT(dict, &quot;global_local&quot;, BOOL(opt-&gt;indir &amp; PV_BOTH));</a>
-<a name="ln5535">  PUT(dict, &quot;commalist&quot;, BOOL(opt-&gt;flags &amp; P_COMMA));</a>
-<a name="ln5536">  PUT(dict, &quot;flaglist&quot;, BOOL(opt-&gt;flags &amp; P_FLAGLIST));</a>
-<a name="ln5537"> </a>
-<a name="ln5538">  PUT(dict, &quot;was_set&quot;, BOOL(opt-&gt;flags &amp; P_WAS_SET));</a>
+<a name="ln5533">  PUT(dict, &quot;scope&quot;, CSTR_TO_OBJ(scope));</a>
+<a name="ln5534"> </a>
+<a name="ln5535">  // welcome to the jungle</a>
+<a name="ln5536">  PUT(dict, &quot;global_local&quot;, BOOL(opt-&gt;indir &amp; PV_BOTH));</a>
+<a name="ln5537">  PUT(dict, &quot;commalist&quot;, BOOL(opt-&gt;flags &amp; P_COMMA));</a>
+<a name="ln5538">  PUT(dict, &quot;flaglist&quot;, BOOL(opt-&gt;flags &amp; P_FLAGLIST));</a>
 <a name="ln5539"> </a>
-<a name="ln5540">  PUT(dict, &quot;last_set_sid&quot;, INTEGER_OBJ(opt-&gt;last_set.script_ctx.sc_sid));</a>
-<a name="ln5541">  PUT(dict, &quot;last_set_linenr&quot;, INTEGER_OBJ(opt-&gt;last_set.script_ctx.sc_lnum));</a>
-<a name="ln5542">  PUT(dict, &quot;last_set_chan&quot;, INTEGER_OBJ((int64_t)opt-&gt;last_set.channel_id));</a>
-<a name="ln5543"> </a>
-<a name="ln5544">  const char *type;</a>
-<a name="ln5545">  Object def;</a>
-<a name="ln5546">  // TODO(bfredl): do you even nocp?</a>
-<a name="ln5547">  char_u *def_val = (char_u *)opt-&gt;def_val;</a>
-<a name="ln5548">  if (opt-&gt;flags &amp; P_STRING) {</a>
-<a name="ln5549">    type = &quot;string&quot;;</a>
-<a name="ln5550">    def = CSTR_TO_OBJ(def_val ? (char *)def_val : &quot;&quot;);</a>
-<a name="ln5551">  } else if (opt-&gt;flags &amp; P_NUM) {</a>
-<a name="ln5552">    type = &quot;number&quot;;</a>
-<a name="ln5553">    def = INTEGER_OBJ((Integer)(intptr_t)def_val);</a>
-<a name="ln5554">  } else if (opt-&gt;flags &amp; P_BOOL) {</a>
-<a name="ln5555">    type = &quot;boolean&quot;;</a>
-<a name="ln5556">    def = BOOL((intptr_t)def_val);</a>
-<a name="ln5557">  } else {</a>
-<a name="ln5558">    type = &quot;&quot;; def = NIL;</a>
-<a name="ln5559">  }</a>
-<a name="ln5560">  PUT(dict, &quot;type&quot;, CSTR_TO_OBJ(type));</a>
-<a name="ln5561">  PUT(dict, &quot;default&quot;, def);</a>
-<a name="ln5562">  PUT(dict, &quot;allows_duplicates&quot;, BOOL(!(opt-&gt;flags &amp; P_NODUP)));</a>
-<a name="ln5563"> </a>
-<a name="ln5564">  return dict;</a>
-<a name="ln5565">}</a>
+<a name="ln5540">  PUT(dict, &quot;was_set&quot;, BOOL(opt-&gt;flags &amp; P_WAS_SET));</a>
+<a name="ln5541"> </a>
+<a name="ln5542">  PUT(dict, &quot;last_set_sid&quot;, INTEGER_OBJ(opt-&gt;last_set.script_ctx.sc_sid));</a>
+<a name="ln5543">  PUT(dict, &quot;last_set_linenr&quot;, INTEGER_OBJ(opt-&gt;last_set.script_ctx.sc_lnum));</a>
+<a name="ln5544">  PUT(dict, &quot;last_set_chan&quot;, INTEGER_OBJ((int64_t)opt-&gt;last_set.channel_id));</a>
+<a name="ln5545"> </a>
+<a name="ln5546">  const char *type;</a>
+<a name="ln5547">  Object def;</a>
+<a name="ln5548">  // TODO(bfredl): do you even nocp?</a>
+<a name="ln5549">  char_u *def_val = (char_u *)opt-&gt;def_val;</a>
+<a name="ln5550">  if (opt-&gt;flags &amp; P_STRING) {</a>
+<a name="ln5551">    type = &quot;string&quot;;</a>
+<a name="ln5552">    def = CSTR_TO_OBJ(def_val ? (char *)def_val : &quot;&quot;);</a>
+<a name="ln5553">  } else if (opt-&gt;flags &amp; P_NUM) {</a>
+<a name="ln5554">    type = &quot;number&quot;;</a>
+<a name="ln5555">    def = INTEGER_OBJ((Integer)(intptr_t)def_val);</a>
+<a name="ln5556">  } else if (opt-&gt;flags &amp; P_BOOL) {</a>
+<a name="ln5557">    type = &quot;boolean&quot;;</a>
+<a name="ln5558">    def = BOOL((intptr_t)def_val);</a>
+<a name="ln5559">  } else {</a>
+<a name="ln5560">    type = &quot;&quot;; def = NIL;</a>
+<a name="ln5561">  }</a>
+<a name="ln5562">  PUT(dict, &quot;type&quot;, CSTR_TO_OBJ(type));</a>
+<a name="ln5563">  PUT(dict, &quot;default&quot;, def);</a>
+<a name="ln5564">  PUT(dict, &quot;allows_duplicates&quot;, BOOL(!(opt-&gt;flags &amp; P_NODUP)));</a>
+<a name="ln5565"> </a>
+<a name="ln5566">  return dict;</a>
+<a name="ln5567">}</a>
 </code></pre>
 <div class="balloon" rel="880"><p><span style="font-size:18px">&uarr;</span> <a href="https://pvs-studio.com/en/docs/warnings/v557/" target="_blank">V557</a> Array overrun is possible. The value of 'strlen(whichwrap) - 1' index could reach 18446744073709551615.</p></div>
 <link rel="stylesheet" href="highlight.css">
