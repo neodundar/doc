@@ -114,7 +114,7 @@ Copyright: Copyright (C) 2005-2015 Charles E Campbell
 								<a name="zip-x"></a><code class="help-tag-right">zip-x</code>
    x : extract a listed file when the cursor is atop it</div>
 <div class="old-help-para">   OPTIONS~</div>
-<div class="old-help-para">   							<a name="g%3Azip_nomax"></a><code class="help-tag-right">g:zip_nomax</code></div>
+<div class="old-help-para">							<a name="g%3Azip_nomax"></a><code class="help-tag-right">g:zip_nomax</code></div>
 <div class="old-help-para">   If this variable exists and is true, the file window will not be
    automatically maximized when opened.</div>
 <div class="old-help-para">							<a name="g%3Azip_shq"></a><code class="help-tag-right">g:zip_shq</code>
@@ -125,7 +125,7 @@ Copyright: Copyright (C) 2005-2015 Charles E Campbell
 <div class="old-help-para">  which by default is a single quote under Unix (') and a double quote
    under Windows (").  If you'd rather have no quotes, simply set
    g:zip_shq to the empty string (let g:zip_shq= "") in your &lt;.vimrc&gt;.</div>
-<div class="old-help-para">   							<a name="g%3Azip_unzipcmd"></a><code class="help-tag-right">g:zip_unzipcmd</code>
+<div class="old-help-para">							<a name="g%3Azip_unzipcmd"></a><code class="help-tag-right">g:zip_unzipcmd</code>
    Use this option to specify the program which does the duty of "unzip".
    It's used during browsing. By default:<pre>let g:zip_unzipcmd= "unzip"</pre></div>
 <div class="old-help-para">							<a name="g%3Azip_zipcmd"></a><code class="help-tag-right">g:zip_zipcmd</code>
@@ -155,14 +155,14 @@ au BufReadCmd *.jar,*.xpi call zip#Browse(expand("&lt;amatch&gt;"))</pre></div>
 \ *.ppsx,*.ppsm,*.pptx,*.pptm,*.ppam,*.sldx,*.thmx,*.xlam,*.xlsx,*.xlsm,
 \ *.xlsb,*.xltx,*.xltm,*.xlam,*.crtx,*.vdw,*.glox,*.gcsx,*.gqsx,*.epub'</pre>
 <h2 class="help-heading">4. History<span class="help-heading-tags">							<a name="zip-history"></a><span class="help-tag">zip-history</span> {{{1</h2>   v32 Oct 22, 2021 * to avoid an issue with a vim 8.2 patch, zipfile: has
-   		      been changed to zipfile:// . This often shows up
+		      been changed to zipfile:// . This often shows up
 		      as zipfile:/// with zipped files that are root-based.
    v29 Apr 02, 2017 * (Klartext) reported that an encrypted zip file could
-   		      opened but the swapfile held unencrypted contents.
+		      opened but the swapfile held unencrypted contents.
 		      The solution is to edit the contents of a zip file
 		      using the <a href="recover.html#%3Anoswapfile">:noswapfile</a> modifier.
    v28 Oct 08, 2014 * changed the sanity checks for executables to reflect
-   		      the command actually to be attempted in zip#Read()
+		      the command actually to be attempted in zip#Read()
 		      and zip#Write()
 <div class="help-li" style=""> added the extraction of a file capability
        Nov 30, 2015 * added.epub to the <a href="pi_zip.html#g%3AzipPlugin_ext">g:zipPlugin_ext</a> list
@@ -228,7 +228,7 @@ au BufReadCmd *.jar,*.xpi call zip#Browse(expand("&lt;amatch&gt;"))</pre></div>
   <footer>
     <div class="container flex">
       <div class="generator-stats">
-        Generated at 2022-10-29 05:42 from <code><a href="https://github.com/neovim/neovim/commit/356244d50ba01c63b3ac33057a69462c4029612c">356244d</a></code>
+        Generated at 2022-10-30 05:40 from <code><a href="https://github.com/neovim/neovim/commit/75ec1b7208d4d8f38dff2adf4006de7ea82118d7">75ec1b7</a></code>
       </div>
       <div class="generator-stats">
       parse_errors: 0 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+pi_zip.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/pi_zip.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="	Nvim
