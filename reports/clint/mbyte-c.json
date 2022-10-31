@@ -1,0 +1,4 @@
+["src/nvim/mbyte.c", ["  static struct interval nonprint[] =", "  {", "    { 0x070f, 0x070f }, { 0x180b, 0x180e }, { 0x200b, 0x200f }, { 0x202a, 0x202e },"], "whitespace/braces"]
+["src/nvim/mbyte.c", ["    }", "    sprintf((char *)IObuff + rlen, \"%02x \",", "            (line[i] == NL) ? NUL : line[i]);          // NUL is stored as NL"], "runtime/printf"]
+["src/nvim/mbyte.c", ["#ifdef HAVE_NL_LANGINFO_CODESET", "  if (!(s = nl_langinfo(CODESET)) || *s == NUL)", "#endif"], "readability/braces"]
+["src/nvim/mbyte.c", ["#if defined(HAVE_LOCALE_H)", "    if (!(s = setlocale(LC_CTYPE, NULL)) || *s == NUL)", "#endif"], "readability/braces"]

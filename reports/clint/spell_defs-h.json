@@ -1,0 +1,1 @@
+["src/nvim/spell_defs.h", ["#define SPELL_TOUPPER(c) ((c) >= 128 ? mb_toupper(c) \\", "                                     : (int)spelltab.st_upper[c])", ""], "whitespace/alignment"]

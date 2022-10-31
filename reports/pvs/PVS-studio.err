@@ -1,0 +1,20 @@
+pvs-studio.com/en/docs/warnings/:1:1: error: Help: The documentation for all analyzer warnings is available here: https://pvs-studio.com/en/docs/warnings/.
+./src/mpack/conv.c:330:1: warning: V1048 The 'rv.lo' variable was assigned the same value.
+./src/mpack/object.c:137:1: warning: V1086 A call of the 'memcpy' function will lead to underflow of the buffer 'dst'.
+./src/mpack/object.c:137:1: warning: V1086 A call of the 'memcpy' function will lead to underflow of the buffer 'src'.
+./src/mpack/mpack_core.c:238:1: error: V610 Undefined behavior. Check the shift operator '<<'. The right operand is negative ('(t - 0xdb)' = [-27..4]).
+./src/mpack/mpack_core.c:31:1: warning: V1071 Consider inspecting the 'mpack_w1' function. The return value is not always used. Total calls: 48, discarded results: 5.
+./src/mpack/rpc.c:248:1: warning: V1086 A call of the 'memcpy' function will lead to underflow of the buffer 'dst'.
+./src/mpack/rpc.c:248:1: warning: V1086 A call of the 'memcpy' function will lead to underflow of the buffer 'src'.
+./src/nvim/drawline.c:2211:1: warning: V560 A part of conditional expression is always true: eol_hl_off == 0.
+./src/nvim/ex_getln.c:2876:1: error: V595 The 'colored_ccline->cmdbuff' pointer was utilized before it was verified against nullptr. Check lines: 2876, 2882.
+./src/nvim/fileio.c:5200:1: warning: V557 Array overrun is possible. The value of 'strlen(tmp) - strlen(user)' index could reach 18446744073709551615.
+./src/nvim/highlight.c:329:1: warning: V547 Expression '!wp->w_ns_hl_attr' is always false.
+./src/nvim/marktree.c:160:1: warning: V1086 A call of the 'memcpy' function will lead to underflow of the buffer 'z->key'.
+./src/nvim/msgpack_rpc/unpacker.c:402:1: error: V501 There are identical sub-expressions to the left and to the right of the '==' operator: MPACK_TOKEN_STR == MPACK_TOKEN_STR
+./src/nvim/msgpack_rpc/unpacker.c:463:1: error: V501 There are identical sub-expressions to the left and to the right of the '==' operator: MPACK_TOKEN_STR == MPACK_TOKEN_STR
+./src/nvim/msgpack_rpc/unpacker.c:474:1: error: V501 There are identical sub-expressions to the left and to the right of the '==' operator: MPACK_TOKEN_SINT == MPACK_TOKEN_SINT
+./src/nvim/ops.c:4105:1: warning: V601 The value of 'char' type is implicitly cast to a char pointer.
+./src/nvim/option.c:880:1: warning: V557 Array overrun is possible. The value of 'strlen(whichwrap) - 1' index could reach 18446744073709551615.
+./src/nvim/spell.c:2923:1: error: V781 The value of the 'i' index is checked after it was used. Perhaps there is a mistake in program logic.
+./src/nvim/spellsuggest.c:1155:1: warning: V1086 A call of the 'memset' function will lead to underflow of the buffer 'sp'.

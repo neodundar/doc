@@ -1,0 +1,676 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Neovim user documentation">
+    <link href="/css/normalize.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="help.css" rel="stylesheet">
+    <title> Vim_diff - Neovim docs</title>
+  </head>
+  <body>
+    <header class="container">
+    <nav class="navbar navbar-expand-lg">
+      <div>
+        <a href="/" class="navbar-brand" aria-label="logo">
+          <!--TODO: use <img src="….svg"> here instead. Need one that has green lettering instead of gray. -->
+              <svg xmlns="http://www.w3.org/2000/svg" role="img" width="173" height="50" viewBox="0 0 742 214" aria-label="Neovim">
+      <title>Neovim</title>
+      <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
+          <stop stop-color="#16B0ED" stop-opacity=".8" offset="0%" />
+          <stop stop-color="#0F59B2" stop-opacity=".837" offset="100%" />
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
+          <stop stop-color="#7DB643" offset="0%" />
+          <stop stop-color="#367533" offset="100%" />
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="c">
+          <stop stop-color="#88C649" stop-opacity=".8" offset="0%" />
+          <stop stop-color="#439240" stop-opacity=".84" offset="100%" />
+        </linearGradient>
+      </defs>
+      <g fill="none" fill-rule="evenodd">
+        <path
+          d="M.027 45.459L45.224-.173v212.171L.027 166.894V45.459z"
+          fill="url(#a)"
+          transform="translate(1 1)"
+        />
+        <path
+          d="M129.337 45.89L175.152-.149l-.928 212.146-45.197-45.104.31-121.005z"
+          fill="url(#b)"
+          transform="matrix(-1 0 0 1 305 1)"
+        />
+        <path
+          d="M45.194-.137L162.7 179.173l-32.882 32.881L12.25 33.141 45.194-.137z"
+          fill="url(#c)"
+          transform="translate(1 1)"
+        />
+        <path
+          d="M46.234 84.032l-.063 7.063-36.28-53.563 3.36-3.422 32.983 49.922z"
+          fill-opacity=".13"
+          fill="#000"
+        />
+        <g fill="#444">
+          <path
+            d="M227 154V64.44h4.655c1.55 0 2.445.75 2.685 2.25l.806 13.502c4.058-5.16 8.786-9.316 14.188-12.466 5.4-3.15 11.413-4.726 18.037-4.726 4.893 0 9.205.781 12.935 2.34 3.729 1.561 6.817 3.811 9.264 6.751 2.448 2.942 4.297 6.48 5.55 10.621 1.253 4.14 1.88 8.821 1.88 14.042V154h-8.504V96.754c0-8.402-1.91-14.987-5.729-19.757-3.82-4.771-9.667-7.156-17.544-7.156-5.851 0-11.28 1.516-16.292 4.545-5.013 3.032-9.489 7.187-13.427 12.467V154H227zM350.624 63c5.066 0 9.755.868 14.069 2.605 4.312 1.738 8.052 4.268 11.219 7.592s5.638 7.412 7.419 12.264C385.11 90.313 386 95.883 386 102.17c0 1.318-.195 2.216-.588 2.696-.393.48-1.01.719-1.851.719h-64.966v1.70c0 6.708.784 12.609 2.353 17.7 1.567 5.09 3.8 9.357 6.695 12.802 2.895 3.445 6.393 6.034 10.495 7.771 4.1 1.738 8.686 2.606 13.752 2.606 4.524 0 8.446-.494 11.762-1.483 3.317-.988 6.108-2.097 8.37-3.324 2.261-1.227 4.056-2.336 5.383-3.324 1.326-.988 2.292-1.482 2.895-1.482.784 0 1.388.3 1.81.898l2.352 2.875c-1.448 1.797-3.362 3.475-5.745 5.031-2.383 1.558-5.038 2.891-7.962 3.998-2.926 1.109-6.062 1.991-9.41 2.65a52.21 52.21 0 01-10.088.989c-6.152 0-11.762-1.064-16.828-3.19-5.067-2.125-9.415-5.225-13.043-9.298-3.63-4.074-6.435-9.06-8.415-14.96C310.99 121.655 310 114.9 310 107.294c0-6.408.92-12.323 2.76-17.744 1.84-5.421 4.493-10.093 7.961-14.016 3.467-3.922 7.72-6.991 12.758-9.209C338.513 64.11 344.229 63 350.624 63zm.573 6c-4.696 0-8.904.702-12.623 2.105-3.721 1.404-6.936 3.421-9.65 6.053-2.713 2.631-4.908 5.79-6.586 9.474S319.55 94.439 319 99h60c0-4.679-.672-8.874-2.013-12.588-1.343-3.712-3.232-6.856-5.67-9.43-2.44-2.571-5.367-4.545-8.782-5.92-3.413-1.374-7.192-2.062-11.338-2.062zM435.546 63c6.526 0 12.368 1.093 17.524 3.28 5.154 2.186 9.5 5.286 13.04 9.298 3.538 4.013 6.238 8.85 8.099 14.51 1.861 5.66 2.791 11.994 2.791 19.002 0 7.008-.932 13.327-2.791 18.957-1.861 5.631-4.561 10.452-8.099 14.465-3.54 4.012-7.886 7.097-13.04 9.254-5.156 2.156-10.998 3.234-17.524 3.234-6.529 0-12.369-1.078-17.525-3.234-5.155-2.157-9.517-5.242-13.085-9.254-3.57-4.013-6.285-8.836-8.145-14.465-1.861-5.63-2.791-11.95-2.791-18.957 0-7.008.93-13.342 2.791-19.002 1.861-5.66 4.576-10.496 8.145-14.51 3.568-4.012 7.93-7.112 13.085-9.299C423.177 64.094 429.017 63 435.546 63zm-.501 86c5.341 0 10.006-.918 13.997-2.757 3.99-1.838 7.32-4.474 9.992-7.909 2.67-3.435 4.664-7.576 5.986-12.428 1.317-4.85 1.98-10.288 1.98-16.316 0-5.965-.66-11.389-1.98-16.27-1.322-4.88-3.316-9.053-5.986-12.519-2.67-3.463-6-6.13-9.992-7.999-3.991-1.867-8.657-2.802-13.997-2.802s-10.008.935-13.997 2.802c-3.991 1.87-7.322 4.536-9.992 8-2.671 3.465-4.68 7.637-6.03 12.518-1.35 4.881-2.026 10.305-2.026 16.27 0 6.026.675 11.465 2.025 16.316 1.35 4.852 3.36 8.993 6.031 12.428 2.67 3.435 6 6.07 9.992 7.91 3.99 1.838 8.656 2.756 13.997 2.756z"
+            fill="currentColor"
+          />
+          <path
+            d="M530.57 152h-20.05L474 60h18.35c1.61 0 2.967.39 4.072 1.166 1.103.778 1.865 1.763 2.283 2.959l17.722 49.138a92.762 92.762 0 012.551 8.429c.686 2.751 1.298 5.5 1.835 8.25.537-2.75 1.148-5.499 1.835-8.25a77.713 77.713 0 012.64-8.429l18.171-49.138c.417-1.196 1.164-2.181 2.238-2.96 1.074-.776 2.356-1.165 3.849-1.165H567l-36.43 92zM572 61h23v92h-23zM610 153V60.443h13.624c2.887 0 4.78 1.354 5.682 4.06l1.443 6.856a52.7 52.7 0 015.097-4.962 32.732 32.732 0 015.683-3.879 30.731 30.731 0 016.496-2.57c2.314-.632 4.855-.948 7.624-.948 5.832 0 10.63 1.579 14.39 4.736 3.758 3.157 6.57 7.352 8.434 12.585 1.444-3.068 3.248-5.698 5.413-7.894 2.165-2.194 4.541-3.984 7.127-5.367a32.848 32.848 0 018.254-3.068 39.597 39.597 0 018.796-.992c5.111 0 9.653.783 13.622 2.345 3.97 1.565 7.307 3.849 10.014 6.857 2.706 3.007 4.766 6.675 6.18 11.005C739.29 83.537 740 88.5 740 94.092V153h-22.284V94.092c0-5.894-1.294-10.329-3.878-13.306-2.587-2.977-6.376-4.465-11.368-4.465-2.286 0-4.404.391-6.358 1.172a15.189 15.189 0 00-5.144 3.383c-1.473 1.474-2.631 3.324-3.474 5.548-.842 2.225-1.263 4.781-1.263 7.668V153h-22.37V94.092c0-6.194-1.249-10.704-3.744-13.532-2.497-2.825-6.18-4.24-11.051-4.24-3.19 0-6.18.798-8.976 2.391-2.799 1.593-5.399 3.775-7.804 6.54V153H610zM572 30h23v19h-23z"
+            fill="currentColor"
+            fill-opacity=".8"
+          />
+        </g>
+      </g>
+    </svg>
+  
+          <!--<img src="https://neovim.io/logos/neovim-logo.svg" width="173" height="50" alt="Neovim" />-->
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container golden-grid help-body">
+  <div class="col-wide">
+  <a name="vim_diff.txt"></a><a name="vim-differences"></a><h1> Vim_diff</h1>
+  <p>
+    <i>
+    Nvim <code>:help</code> pages, <a href="https://github.com/neovim/neovim/blob/master/scripts/gen_help_html.lua">generated</a>
+    from <a href="https://github.com/neovim/neovim/blob/master/runtime/doc/vim_diff.txt">source</a>
+    using the <a href="https://github.com/neovim/tree-sitter-vimdoc">tree-sitter-vimdoc</a> parser.
+    </i>
+  </p>
+  <hr/>
+  <div class="old-help-para">Differences between Nvim and Vim
+</div>
+<div class="old-help-para">Nvim differs from Vim in many ways, although editor and Vimscript (not
+Vim9script) features are mostly identical.  This document is a complete and
+centralized reference of the differences.
+</div>
+<a name="_-1.-configuration-"></a><h2 class="help-heading">1. Configuration<span class="help-heading-tags">					    <a name="nvim-config"></a><span class="help-tag">nvim-config</span></h2>
+<div class="old-help-para"><div class="help-li">Use <code>$XDG_CONFIG_HOME/nvim/init.vim</code> instead of <code>.vimrc</code> for your <a href="starting.html#config">config</a>. </div><div class="help-li">Use <code>$XDG_CONFIG_HOME/nvim</code> instead of <code>.vim</code> to store configuration files. </div><div class="help-li">Use <code>$XDG_STATE_HOME/nvim/shada/main.shada</code> instead of <code>.viminfo</code> for persistent session information.  <a href="starting.html#shada">shada</a></div></div>
+<a name="_-2.-defaults-"></a><h2 class="help-heading">2. Defaults<span class="help-heading-tags">					            <a name="nvim-defaults"></a><span class="help-tag">nvim-defaults</span></h2>
+<div class="old-help-para"><div class="help-li">Filetype detection is enabled by default. This can be disabled by adding ":filetype off" to <a href="starting.html#init.vim">init.vim</a>.</div><div class="help-li">Syntax highlighting is enabled by default. This can be disabled by adding ":syntax off" to <a href="starting.html#init.vim">init.vim</a>.</div></div>
+<div class="old-help-para"><div class="help-li"><a href="options.html#'autoindent'">'autoindent'</a> is enabled </div><div class="help-li"><a href="options.html#'autoread'">'autoread'</a> is enabled </div><div class="help-li"><a href="options.html#'background'">'background'</a> defaults to "dark" (unless set automatically by the terminal/UI) </div><div class="help-li"><a href="options.html#'backspace'">'backspace'</a> defaults to "indent,eol,start" </div><div class="help-li"><a href="options.html#'backupdir'">'backupdir'</a> defaults to .,~/.local/state/nvim/backup// (|xdg|), auto-created </div><div class="help-li"><a href="options.html#'belloff'">'belloff'</a> defaults to "all" </div><div class="help-li"><a href="vim_diff.html#'compatible'">'compatible'</a> is always disabled </div><div class="help-li"><a href="options.html#'complete'">'complete'</a> excludes "i" </div><div class="help-li"><a href="deprecated.html#'cscopeverbose'">'cscopeverbose'</a> is enabled </div><div class="help-li"><a href="options.html#'directory'">'directory'</a> defaults to ~/.local/state/nvim/swap// (|xdg|), auto-created </div><div class="help-li"><a href="options.html#'display'">'display'</a> defaults to "lastline,msgsep" </div><div class="help-li"><a href="options.html#'encoding'">'encoding'</a> is UTF-8 (cf. <a href="options.html#'fileencoding'">'fileencoding'</a> for file-content encoding) </div><div class="help-li"><a href="options.html#'fillchars'">'fillchars'</a> defaults (in effect) to "vert:│,fold:·,sep:│" </div><div class="help-li"><a href="options.html#'formatoptions'">'formatoptions'</a> defaults to "tcqj" </div><div class="help-li"><a href="options.html#'fsync'">'fsync'</a> is disabled </div><div class="help-li"><a href="options.html#'hidden'">'hidden'</a> is enabled </div><div class="help-li"><a href="options.html#'history'">'history'</a> defaults to 10000 (the maximum) </div><div class="help-li"><a href="options.html#'hlsearch'">'hlsearch'</a> is enabled </div><div class="help-li"><a href="options.html#'incsearch'">'incsearch'</a> is enabled </div><div class="help-li"><a href="options.html#'joinspaces'">'joinspaces'</a> is disabled </div><div class="help-li"><a href="deprecated.html#'langnoremap'">'langnoremap'</a> is enabled </div><div class="help-li"><a href="options.html#'langremap'">'langremap'</a> is disabled </div><div class="help-li"><a href="options.html#'laststatus'">'laststatus'</a> defaults to 2 (statusline is always shown) </div><div class="help-li"><a href="options.html#'listchars'">'listchars'</a> defaults to "tab:&gt; ,trail:-,nbsp:+" </div><div class="help-li"><a href="options.html#'mouse'">'mouse'</a> defaults to "nvi" </div><div class="help-li"><a href="options.html#'mousemodel'">'mousemodel'</a> defaults to "popup_setpos" </div><div class="help-li"><a href="options.html#'nrformats'">'nrformats'</a> defaults to "bin,hex" </div><div class="help-li"><a href="options.html#'ruler'">'ruler'</a> is enabled </div><div class="help-li"><a href="options.html#'sessionoptions'">'sessionoptions'</a> includes "unix,slash", excludes "options" </div><div class="help-li"><a href="options.html#'shortmess'">'shortmess'</a> includes "F", excludes "S" </div><div class="help-li"><a href="options.html#'showcmd'">'showcmd'</a> is enabled </div><div class="help-li"><a href="options.html#'sidescroll'">'sidescroll'</a> defaults to 1 </div><div class="help-li"><a href="options.html#'smarttab'">'smarttab'</a> is enabled </div><div class="help-li"><a href="options.html#'startofline'">'startofline'</a> is disabled </div><div class="help-li"><a href="options.html#'switchbuf'">'switchbuf'</a> defaults to "uselast" </div><div class="help-li"><a href="options.html#'tabpagemax'">'tabpagemax'</a> defaults to 50 </div><div class="help-li"><a href="options.html#'tags'">'tags'</a> defaults to "./tags;,tags" </div><div class="help-li"><a href="options.html#'ttimeoutlen'">'ttimeoutlen'</a> defaults to 50 </div><div class="help-li"><a href="vim_diff.html#'ttyfast'">'ttyfast'</a> is always set </div><div class="help-li"><a href="options.html#'undodir'">'undodir'</a> defaults to ~/.local/state/nvim/undo// (|xdg|), auto-created </div><div class="help-li"><a href="options.html#'viewoptions'">'viewoptions'</a> includes "unix,slash", excludes "options" </div><div class="help-li"><a href="deprecated.html#'viminfo'">'viminfo'</a> includes "!" </div><div class="help-li"><a href="options.html#'wildmenu'">'wildmenu'</a> is enabled </div><div class="help-li"><a href="options.html#'wildoptions'">'wildoptions'</a> defaults to "pum,tagfile" </div></div>
+<div class="old-help-para"><div class="help-li"><a href="filetype.html#man.lua">man.lua</a> plugin is enabled, so <a href="filetype.html#%3AMan">:Man</a> is available by default. </div><div class="help-li"><a href="v:null#matchit">matchit</a> plugin is enabled. To disable it in your config: &gt; :let loaded_matchit = 1</div></div>
+<div class="old-help-para"><div class="help-li"><a href="syntax.html#g%3Avimsyn_embed">g:vimsyn_embed</a> defaults to "l" to enable Lua highlighting </div></div>
+<div class="old-help-para"><div class="help-column_heading">Default Mouse</div>						<a name="default-mouse"></a><span class="help-tag-right">default-mouse</span> <a name="disable-mouse"></a><span class="help-tag">disable-mouse</span>
+By default the mouse is enabled.  The right button click opens <a href="gui.html#popup-menu">popup-menu</a>
+with standard actions, such as "Cut", "Copy" and "Paste".
+</div>
+<div class="old-help-para">If you don't like this you can add to your <a href="starting.html#config">config</a> any of the following:
+</div>
+<div class="old-help-para"><div class="help-li">ignore mouse completely &gt;   set mouse=
+&lt;</div><div class="help-li">no <a href="gui.html#popup-menu">popup-menu</a> but the right button extends selection &gt; set mousemodel=extend</div><a class="parse-error" target="_blank" title="Report bug... (parse error)" href="https://github.com/neovim/tree-sitter-vimdoc/issues/new?labels=bug&title=parse+error%3A+vim_diff.txt+&body=Found+%60tree-sitter-vimdoc%60+parse+error+at%3A+https://neovim.io/doc/user/vim_diff.html%0D%0DContext%3A%0D%0D%60%60%60%0D%3C%0A-%20no%20%7Cpopup-menu%7C%20but%20the%20right%20button%20extends%20selection%20%3E%0A%20%20set%20mousemodel%3Dextend%0A%3E%0A-%20pressing%20ALT%2BLeftMouse%20releases%20mouse%20until%20main%20cursor%20moves%20%20%3E%0A%20%20nnoremap%20%3CM-LeftMouse%3E%20%3CCmd%3E%0A%20%20%20%20%5C%20set%20mouse%3D%3CBar%3E%0A%20%20%20%20%5C%20echo%20'mouse%20OFF%20until%20next%20cursor-move'%3CBar%3E%0D%60%60%60">>
+-</a> pressing ALT+LeftMouse releases mouse until main cursor moves<pre>nnoremap &lt;M-LeftMouse&gt; &lt;Cmd&gt;
+  \ set mouse=&lt;Bar&gt;
+  \ echo 'mouse OFF until next cursor-move'&lt;Bar&gt;
+  \ autocmd CursorMoved * ++once set mouse&amp;&lt;Bar&gt;
+  \ echo 'mouse ON'&lt;CR&gt;
+</pre>
+Also, mouse is not in use in <a href="intro.html#command-mode">command-mode</a> or at <a href="message.html#more-prompt">more-prompt</a>.  So if you
+need to copy/paste with your terminal then just pressing makes Nvim to
+release the mouse cursor temporarily.</div></div>
+<div class="old-help-para"><div class="help-column_heading">Default Mappings</div>							<a name="default-mappings"></a><span class="help-tag-right">default-mappings</span>
+Nvim creates the following default mappings at <a href="starting.html#startup">startup</a>. You can disable any
+of these in your config by simply removing the mapping, e.g. ":unmap Y".
+<pre>nnoremap Y y$
+nnoremap &lt;C-L&gt; &lt;Cmd&gt;nohlsearch&lt;Bar&gt;diffupdate&lt;Bar&gt;normal! &lt;C-L&gt;&lt;CR&gt;
+inoremap &lt;C-U&gt; &lt;C-G&gt;u&lt;C-U&gt;
+inoremap &lt;C-W&gt; &lt;C-G&gt;u&lt;C-W&gt;
+xnoremap * y/\V&lt;C-R&gt;"&lt;CR&gt;
+xnoremap # y?\V&lt;C-R&gt;"&lt;CR&gt;
+nnoremap &amp; :&amp;&amp;&lt;CR&gt;
+</pre>
+<div class="help-column_heading">Default Autocommands</div>							<a name="default-autocmds"></a><span class="help-tag-right">default-autocmds</span>
+Default autocommands exist in the following groups. Use ":autocmd! <code>{group}</code>" to
+remove them and ":autocmd <code>{group}</code>" to see how they're defined.
+</div>
+<div class="old-help-para">nvim_terminal:
+<div class="help-li">BufReadCmd: Treats "term://" buffers as <a href="nvim_terminal_emulator.html#terminal">terminal</a> buffers. <a href="nvim_terminal_emulator.html#terminal-start">terminal-start</a> </div></div>
+<div class="old-help-para">nvim_cmdwin:
+<div class="help-li">CmdwinEnter: Limits syntax sync to maxlines=1 in the <a href="cmdline.html#cmdwin">cmdwin</a>. </div></div>
+<a name="_-3.-new-features-"></a><h2 class="help-heading">3. New Features<span class="help-heading-tags">						       <a name="nvim-features"></a><span class="help-tag">nvim-features</span></h2>
+<div class="old-help-para"><div class="help-column_heading">MAJOR COMPONENTS</div></div>
+<div class="old-help-para">API				<a href="api.html#API">API</a>
+Job control			<a href="job_control.html#job-control">job-control</a>
+LSP framework			<a href="lsp.html#lsp">lsp</a>
+Lua scripting			<a href="lua.html#lua">lua</a>
+Parsing engine			<a href="treesitter.html#treesitter">treesitter</a>
+Providers
+  Clipboard			<a href="provider.html#provider-clipboard">provider-clipboard</a>
+  Node.js plugins		<a href="provider.html#provider-nodejs">provider-nodejs</a>
+  Python plugins		<a href="provider.html#provider-python">provider-python</a>
+  Ruby plugins			<a href="provider.html#provider-ruby">provider-ruby</a>
+Remote plugins			<a href="remote_plugin.html#remote-plugin">remote-plugin</a>
+Shared data			<a href="starting.html#shada">shada</a>
+Terminal emulator		<a href="nvim_terminal_emulator.html#terminal">terminal</a>
+Vimscript parser		<a href="api.html#nvim_parse_expression()">nvim_parse_expression()</a>
+XDG base directories		<a href="starting.html#xdg">xdg</a>
+</div>
+<div class="old-help-para"><div class="help-column_heading">USER EXPERIENCE</div></div>
+<div class="old-help-para">Working intuitively and consistently is a major goal of Nvim.
+</div>
+<div class="old-help-para">							<a name="feature-compile"></a><span class="help-tag-right">feature-compile</span>
+<div class="help-li">Nvim always includes ALL features, in contrast to Vim (which ships with   various combinations of 100+ optional features). Think of it as a leaner
+  version of Vim's "HUGE" build. This reduces surface area for bugs, and
+removes a common source of confusion and friction for users.</div></div>
+<div class="old-help-para"><div class="help-li">Nvim avoids features that cannot be provided on all platforms; instead that   is delegated to external plugins/extensions. E.g. the <code>-X</code> platform-specific
+  option is "sometimes" available in Vim (with potential surprises:
+<a href="http://stackoverflow.com/q/14635295">http://stackoverflow.com/q/14635295</a>).</div></div>
+<div class="old-help-para"><div class="help-li">Vim's internal test functions (test_autochdir(), test_settime(), etc.) are not exposed (nor implemented); instead Nvim has a robust API.</div></div>
+<div class="old-help-para"><div class="help-li">Behaviors, options, documentation are removed if they cost users more time than they save.</div></div>
+<div class="old-help-para">Usability details have been improved where the benefit outweighs any
+backwards-compatibility cost. Some examples:
+</div>
+<div class="old-help-para"><div class="help-li">Directories for <a href="options.html#'directory'">'directory'</a> and <a href="options.html#'undodir'">'undodir'</a> are auto-created. </div><div class="help-li">Terminal features such as <a href="options.html#'guicursor'">'guicursor'</a> are enabled where possible. </div></div>
+<div class="old-help-para">Some features are built in that otherwise required external plugins:
+</div>
+<div class="old-help-para"><div class="help-li">Highlighting the yanked region, see <a href="lua.html#lua-highlight">lua-highlight</a>. </div></div>
+<div class="old-help-para"><div class="help-column_heading">ARCHITECTURE</div></div>
+<div class="old-help-para">External plugins run in separate processes. <a href="remote_plugin.html#remote-plugin">remote-plugin</a> This improves
+stability and allows those plugins to work without blocking the editor. Even
+"legacy" Python and Ruby plugins which use the old Vim interfaces (|if_pyth|,
+<a href="if_ruby.html#if_ruby">if_ruby</a>) run out-of-process.
+</div>
+<div class="old-help-para">Platform and I/O facilities are built upon libuv. Nvim benefits from libuv
+features and bug fixes, and other projects benefit from improvements to libuv
+by Nvim developers.
+</div>
+<div class="old-help-para"><div class="help-column_heading">FEATURES</div></div>
+<div class="old-help-para">Command-line highlighting:
+  The expression prompt (|@=|, <a href="cmdline.html#c_CTRL-R_%3D">c_CTRL-R_=</a>, <a href="insert.html#i_CTRL-R_%3D">i_CTRL-R_=</a>) is highlighted
+  using a built-in Vimscript expression parser. <a href="eval.html#expr-highlight">expr-highlight</a>
+					<a name="E5408"></a><span class="help-tag-right">E5408</span> <a name="E5409"></a><span class="help-tag">E5409</span>
+  <a href="builtin.html#input()">input()</a>, <a href="deprecated.html#inputdialog()">inputdialog()</a> support custom highlighting. <a href="builtin.html#input()-highlight">input()-highlight</a>
+					<a name="g%3ANvim_color_cmdline"></a><span class="help-tag-right">g:Nvim_color_cmdline</span>
+  (Experimental) Command-line (|:|) is colored by callback defined in
+  <code>g:Nvim_color_cmdline</code> (this callback is for testing only, and will be
+  removed in the future).
+</div>
+<div class="old-help-para">Commands:
+  <a href="pi_health.html#%3Acheckhealth">:checkhealth</a>
+  <a href="windows.html#%3Adrop">:drop</a> is always available
+  <a href="filetype.html#%3AMan">:Man</a> is available by default, with many improvements such as completion
+  <a href="pattern.html#%3Amatch">:match</a> can be invoked before highlight group is defined
+  <a href="repeat.html#%3Asource">:source</a> works with Lua
+  User commands can support <a href="map.html#%3Acommand-preview">:command-preview</a> to show results as you type
+</div>
+<div class="old-help-para">Events:
+  <a href="autocmd.html#RecordingEnter">RecordingEnter</a>
+  <a href="autocmd.html#RecordingLeave">RecordingLeave</a>
+  <a href="autocmd.html#SearchWrapped">SearchWrapped</a>
+  <a href="autocmd.html#Signal">Signal</a>
+  <a href="autocmd.html#TabNewEntered">TabNewEntered</a>
+  <a href="autocmd.html#TermClose">TermClose</a>
+  <a href="autocmd.html#TermOpen">TermOpen</a>
+  <a href="autocmd.html#UIEnter">UIEnter</a>
+  <a href="autocmd.html#UILeave">UILeave</a>
+</div>
+<div class="old-help-para">Functions:
+  <a href="builtin.html#dictwatcheradd()">dictwatcheradd()</a> notifies a callback whenever a <a href="eval.html#Dict">Dict</a> is modified
+  <a href="builtin.html#dictwatcherdel()">dictwatcherdel()</a>
+  <a href="builtin.html#menu_get()">menu_get()</a>
+  <a href="builtin.html#msgpackdump()">msgpackdump()</a>, <a href="builtin.html#msgpackparse()">msgpackparse()</a> provide msgpack de/serialization
+  <a href="builtin.html#stdpath()">stdpath()</a>
+  <a href="builtin.html#system()">system()</a>, <a href="builtin.html#systemlist()">systemlist()</a> can run <code>{cmd}</code> directly (without <a href="options.html#'shell'">'shell'</a>)
+  <a href="builtin.html#matchadd()">matchadd()</a> can be called before highlight group is defined
+</div>
+<div class="old-help-para">Highlight groups:
+  <a href="syntax.html#highlight-blend">highlight-blend</a> controls blend level for a highlight group
+  <a href="eval.html#expr-highlight">expr-highlight</a> highlight groups (prefixed with "Nvim")
+  <a href="syntax.html#hl-NormalFloat">hl-NormalFloat</a> highlights floating window
+  <a href="syntax.html#hl-NormalNC">hl-NormalNC</a> highlights non-current windows
+  <a href="syntax.html#hl-MsgArea">hl-MsgArea</a> highlights messages/cmdline area
+  <a href="syntax.html#hl-MsgSeparator">hl-MsgSeparator</a> highlights separator for scrolled messages
+  <a href="syntax.html#hl-Substitute">hl-Substitute</a>
+  <a href="syntax.html#hl-TermCursor">hl-TermCursor</a>
+  <a href="syntax.html#hl-TermCursorNC">hl-TermCursorNC</a>
+  <a href="syntax.html#hl-WinSeparator">hl-WinSeparator</a> highlights window separators
+  <a href="syntax.html#hl-Whitespace">hl-Whitespace</a> highlights <a href="options.html#'listchars'">'listchars'</a> whitespace
+</div>
+<div class="old-help-para">Input/Mappings:
+  ALT (|META|) chords always work (even in the <a href="term.html#TUI">TUI</a>). Map <a href="intro.html#%3CM-">&lt;M-</a> with any key:
+  &lt;M-1&gt;, &lt;M-BS&gt;, &lt;M-Del&gt;, &lt;M-Ins&gt;, &lt;M-/&gt;, &lt;M-\&gt;, &lt;M-Space&gt;, &lt;M-Enter&gt;, etc.
+  Case-sensitive: &lt;M-a&gt; and &lt;M-A&gt; are two different keycodes.
+</div>
+<div class="old-help-para">  ALT may behave like &lt;Esc&gt; if not mapped. <a href="insert.html#i_ALT">i_ALT</a> <a href="visual.html#v_ALT">v_ALT</a> <a href="cmdline.html#c_ALT">c_ALT</a>
+</div>
+<div class="old-help-para">Normal commands:
+  <a href="various.html#gO">gO</a> shows a filetype-defined "outline" of the current buffer.
+</div>
+<div class="old-help-para">Options:
+  <a href="options.html#'cpoptions'">'cpoptions'</a>   flags: <a href="options.html#cpo-_">cpo-_</a>
+  <a href="options.html#'display'">'display'</a>     flags: "msgsep" minimizes scrolling when showing messages
+  <a href="options.html#'guicursor'">'guicursor'</a>   works in the terminal
+  <a href="options.html#'fillchars'">'fillchars'</a>   flags: "msgsep" (see <a href="options.html#'display'">'display'</a>), "horiz", "horizup",
+                "horizdown", "vertleft", "vertright", "verthoriz"
+  <a href="options.html#'foldcolumn'">'foldcolumn'</a>  supports up to 9 dynamic/fixed columns
+  <a href="options.html#'inccommand'">'inccommand'</a>  shows interactive results for <a href="change.html#%3Asubstitute">:substitute</a>-like commands
+                and <a href="map.html#%3Acommand-preview">:command-preview</a> commands
+  <a href="options.html#'laststatus'">'laststatus'</a>  global statusline support
+  <a href="options.html#'mousescroll'">'mousescroll'</a> amount to scroll by when scrolling with a mouse
+  <a href="options.html#'pumblend'">'pumblend'</a>    pseudo-transparent popupmenu
+  <a href="options.html#'scrollback'">'scrollback'</a>
+  <a href="options.html#'signcolumn'">'signcolumn'</a>  supports up to 9 dynamic/fixed columns
+  <a href="options.html#'statusline'">'statusline'</a>  supports unlimited alignment sections
+  <a href="options.html#'tabline'">'tabline'</a>     %@Func@foo%X can call any function on mouse-click
+  <a href="options.html#'winblend'">'winblend'</a>    pseudo-transparency in floating windows <a href="api.html#api-floatwin">api-floatwin</a>
+  <a href="options.html#'winhighlight'">'winhighlight'</a> window-local highlights
+</div>
+<div class="old-help-para">Signs:
+  Signs are removed if the associated line is deleted.
+</div>
+<div class="old-help-para">Variables:
+  <a href="eval.html#v%3Aprogpath">v:progpath</a> is always absolute ("full")
+  <a href="eval.html#v%3Awindowid">v:windowid</a> is always available (for use by external UIs)
+</div>
+<a name="_-4.-changed-features-"></a><h2 class="help-heading">4. Changed features<span class="help-heading-tags">					 <a name="nvim-features-changed"></a><span class="help-tag">nvim-features-changed</span></h2>
+<div class="old-help-para">Nvim always builds with all features, in contrast to Vim which may have
+certain features removed/added at compile-time. <a href="vim_diff.html#feature-compile">feature-compile</a>
+</div>
+<div class="old-help-para">Some Vim features were changed in Nvim, and vice versa.
+</div>
+<div class="old-help-para">If a Python interpreter is available on your <code>$PATH</code>, <a href="if_pyth.html#%3Apython">:python</a> and <a href="if_pyth.html#%3Apython3">:python3</a>
+are always available and may be used simultaneously. See <a href="provider.html#provider-python">provider-python</a>.
+</div>
+<div class="old-help-para"><a href="various.html#%3Aredir">:redir</a> nested in <a href="builtin.html#execute()">execute()</a> works.
+</div>
+<div class="old-help-para"><a href="builtin.html#mkdir()">mkdir()</a> behaviour changed:
+1. Assuming /tmp/foo does not exist and /tmp can be written to
+   mkdir('/tmp/foo/bar',, 0700) will create both /tmp/foo and /tmp/foo/bar
+   with 0700 permissions. Vim mkdir will create /tmp/foo with 0755.
+2. If you try to create an existing directory with <code>'p'</code> (e.g. mkdir('/',
+)) mkdir() will silently exit. In Vim this was an error.
+3. mkdir() error messages now include strerror() text when mkdir fails.
+</div>
+<div class="old-help-para"><a href="builtin.html#string()">string()</a> and <a href="eval.html#%3Aecho">:echo</a> behaviour changed:
+1. No maximum recursion depth limit is applied to nested container
+   structures.
+2. <a href="builtin.html#string()">string()</a> fails immediately on nested containers, not when recursion limit
+   was exceeded.
+2. When <a href="eval.html#%3Aecho">:echo</a> encounters duplicate containers like<pre>let l = []
+echo [l, l]
+</pre>
+   it does not use "[...]" (was: "[[], [...]]", now: "[[], []]"). "..." is
+   only used for recursive containers.
+3. <a href="eval.html#%3Aecho">:echo</a> printing nested containers adds "@level" after "..." designating
+   the level at which recursive container was printed: <a href="eval.html#%3Aecho-self-refer">:echo-self-refer</a>.
+   Same thing applies to <a href="builtin.html#string()">string()</a> (though it uses construct like
+   "<code>{E724@level}</code>"), but this is not reliable because <a href="builtin.html#string()">string()</a> continues to
+   error out.
+4. Stringifyed infinite and NaN values now use <a href="builtin.html#str2float()">str2float()</a> and can be evaled
+   back.
+5. (internal) Trying to print or stringify VAR_UNKNOWN in Vim results in
+   nothing, E908, in Nvim it is internal error.
+</div>
+<div class="old-help-para"><a href="builtin.html#json_decode()">json_decode()</a> behaviour changed:
+1. It may output <a href="builtin.html#msgpack-special-dict">msgpack-special-dict</a>.
+2. <a href="builtin.html#msgpack-special-dict">msgpack-special-dict</a> is emitted also in case of duplicate keys, while in
+   Vim it errors out.
+3. It accepts only valid JSON.  Trailing commas are not accepted.
+</div>
+<div class="old-help-para"><a href="builtin.html#json_encode()">json_encode()</a> behaviour slightly changed: now <a href="builtin.html#msgpack-special-dict">msgpack-special-dict</a> values
+are accepted, but <a href="vim_diff.html#v%3Anone">v:none</a> is not.
+</div>
+<div class="old-help-para">Viminfo text files were replaced with binary (messagepack) ShaDa files.
+Additional differences:
+</div>
+<div class="old-help-para"><div class="help-li"><a href="options.html#shada-c">shada-c</a> has no effect. </div><div class="help-li"><a href="options.html#shada-s">shada-s</a> now limits size of every item and not just registers. </div><div class="help-li"><a href="deprecated.html#'viminfo'">'viminfo'</a> option got renamed to <a href="options.html#'shada'">'shada'</a>. Old option is kept as an alias for compatibility reasons.</div><div class="help-li"><a href="deprecated.html#%3Awviminfo">:wviminfo</a> was renamed to <a href="starting.html#%3Awshada">:wshada</a>, <a href="deprecated.html#%3Arviminfo">:rviminfo</a> to <a href="starting.html#%3Arshada">:rshada</a>.  Old commands are still kept.</div><div class="help-li">ShaDa file format was designed with forward and backward compatibility in mind. <a href="starting.html#shada-compatibility">shada-compatibility</a></div><div class="help-li">Some errors make ShaDa code keep temporary file in-place for user to decide   what to do with it.  Vim deletes temporary file in these cases.
+<a href="starting.html#shada-error-handling">shada-error-handling</a></div><div class="help-li">ShaDa file keeps search direction (|v:searchforward|), viminfo does not. </div></div>
+<div class="old-help-para"><a href="builtin.html#printf()">printf()</a> returns something meaningful when used with <code>%p</code> argument: in Vim
+it used to return useless address of the string (strings are copied to the
+newly allocated memory all over the place) and fail on types which cannot be
+coerced to strings. See <a href="builtin.html#id()">id()</a> for more details, currently it uses
+<code>printf("%p", {expr})</code> internally.
+</div>
+<div class="old-help-para"><a href="cmdline.html#c_CTRL-R">c_CTRL-R</a> pasting a non-special register into <a href="cmdline.html#cmdline">cmdline</a> omits the last &lt;CR&gt;.
+</div>
+<div class="old-help-para"><a href="autocmd.html#CursorMoved">CursorMoved</a> always triggers when moving between windows.
+</div>
+<div class="old-help-para">Lua interface (|lua.txt|):
+</div>
+<div class="old-help-para"><div class="help-li"><code>:lua print("a\0b")</code> will print <code>a^@b</code>, like with <code>:echomsg "a\nb"</code> . In Vim   that prints <code>a</code> and <code>b</code> on separate lines, exactly like
+<code>:lua print("a\nb")</code> .</div><div class="help-li"><code>:lua error('TEST')</code> emits the error “E5105: Error while calling lua chunk: [string "&lt;VimL compiled string&gt;"]:1: TEST”, whereas Vim emits only “TEST”.</div><div class="help-li">Lua has direct access to Nvim <a href="api.html#API">API</a> via <code>vim.api</code>. </div><div class="help-li">Lua package.path and package.cpath are automatically updated according to <a href="options.html#'runtimepath'">'runtimepath'</a>: <a href="lua.html#lua-require">lua-require</a>.</div></div>
+<div class="old-help-para">Commands:
+  <a href="autocmd.html#%3Adoautocmd">:doautocmd</a> does not warn about "No matching autocommands".
+  <a href="windows.html#%3Awincmd">:wincmd</a> accepts a count.
+  <code>:write!</code> does not show a prompt if the file was updated externally.
+</div>
+<div class="old-help-para">Command line completion:
+  The meanings of arrow keys do not change depending on <a href="options.html#'wildoptions'">'wildoptions'</a>.
+</div>
+<div class="old-help-para">Functions:
+  <a href="builtin.html#input()">input()</a> and <a href="deprecated.html#inputdialog()">inputdialog()</a> support for each other’s features (return on
+  cancel and completion respectively) via dictionary argument (replaces all
+  other arguments if used), and "cancelreturn" can have any type if passed in
+  a dictionary.
+  <a href="builtin.html#input()">input()</a> and <a href="deprecated.html#inputdialog()">inputdialog()</a> support user-defined cmdline highlighting.
+</div>
+<div class="old-help-para">Highlight groups:
+  <a href="syntax.html#hl-ColorColumn">hl-ColorColumn</a>, <a href="syntax.html#hl-CursorColumn">hl-CursorColumn</a> are lower priority than most other
+  groups
+  <a href="syntax.html#hl-CurSearch">hl-CurSearch</a> highlights match under cursor instead of last match found
+  using <a href="pattern.html#n">n</a> or <a href="pattern.html#N">N</a>
+  <a href="syntax.html#hl-CursorLine">hl-CursorLine</a> is low-priority unless foreground color is set
+  <a href="deprecated.html#hl-VertSplit">hl-VertSplit</a> superseded by <a href="syntax.html#hl-WinSeparator">hl-WinSeparator</a>
+  Highlight groups names are allowed to contain the characters <code>.</code> and <code>@</code>.
+  It is an error to define a highlight group with a name that doesn't match
+  the regexp <code>[a-zA-Z0-9_.@]*</code> (see <a href="syntax.html#group-name">group-name</a>).
+</div>
+<div class="old-help-para">Macro/|recording| behavior
+  Replay of a macro recorded during :lmap produces the same actions as when it
+  was recorded. In Vim if a macro is recorded while using :lmap'ped keys then
+  the behaviour during record and replay differs.
+</div>
+<div class="old-help-para">  <a href="options.html#'keymap'">'keymap'</a> is implemented via :lmap instead of :lnoremap so that you can use
+  macros and <a href="options.html#'keymap'">'keymap'</a> at the same time. This also means you can use <a href="map.html#%3Aimap">:imap</a> on
+  the results of keys from <a href="options.html#'keymap'">'keymap'</a>.
+</div>
+<div class="old-help-para">Mappings:
+  Creating a mapping for a simplifiable key (e.g. &lt;C-I&gt;) doesn't replace an
+  existing mapping for its simplified form (e.g. &lt;Tab&gt;).
+</div>
+<div class="old-help-para">Motion:
+  The <a href="motion.html#jumplist">jumplist</a> avoids useless/phantom jumps.
+</div>
+<div class="old-help-para">Normal commands:
+  <a href="repeat.html#Q">Q</a> replays the last recorded macro instead of switching to Ex mode.
+  Instead <a href="intro.html#gQ">gQ</a> can be used to enter Ex mode.
+</div>
+<div class="old-help-para">Options:
+  <a href="options.html#'ttimeout'">'ttimeout'</a>, <a href="options.html#'ttimeoutlen'">'ttimeoutlen'</a> behavior was simplified
+  <a href="options.html#'jumpoptions'">'jumpoptions'</a> "stack" behavior
+  <a href="options.html#'jumpoptions'">'jumpoptions'</a> "view" tries to restore the <a href="motion.html#mark-view">mark-view</a> when moving through
+  the <a href="motion.html#jumplist">jumplist</a>, <a href="motion.html#changelist">changelist</a>, <a href="editing.html#alternate-file">alternate-file</a> or using <a href="motion.html#mark-motions">mark-motions</a>.
+  <a href="options.html#'shortmess'">'shortmess'</a> the "F" flag does not affect output from autocommands
+</div>
+<div class="old-help-para">Shell:
+  Shell output (|:!|, <a href="quickfix.html#%3Amake">:make</a>, …) is always routed through the UI, so it
+  cannot "mess up" the screen. (You can still use "chansend(v:stderr,…)" if
+  you want to mess up the screen :)
+</div>
+<div class="old-help-para">  Nvim throttles (skips) messages from shell commands (|:!|, <a href="quickfix.html#%3Agrep">:grep</a>, <a href="quickfix.html#%3Amake">:make</a>)
+  if there is too much output. No data is lost, this only affects display and
+  improves performance. <a href="various.html#%3Aterminal">:terminal</a> output is never throttled.
+</div>
+<div class="old-help-para">  <a href="various.html#%3A%21">:!</a> does not support "interactive" commands. Use <a href="various.html#%3Aterminal">:terminal</a> instead.
+  (GUI Vim has a similar limitation, see ":help gui-pty" in Vim.)
+</div>
+<div class="old-help-para">  :!start is not special-cased on Windows.
+</div>
+<div class="old-help-para">  <a href="builtin.html#system()">system()</a> does not support writing/reading "backgrounded" commands. <a href="builtin.html#E5677">E5677</a>
+</div>
+<div class="old-help-para">Startup:
+  |-e| and |-es| invoke the same "improved Ex mode" as -E and -Es.
+  |-E| and |-Es| read stdin as text (into buffer 1).
+  |-es| and |-Es| have improved behavior:
+<div class="help-li">Quits automatically, don't need "-c qa!". </div><div class="help-li">Skips swap-file dialog.   |-s| reads Normal commands from stdin if the script name is "-".
+Reading text (instead of commands) from stdin |--|:</div><div class="help-li">works by default: "-" file is optional </div><div class="help-li">works in more cases: |-Es|, file args </div></div>
+<div class="old-help-para">Syntax highlighting:
+  syncolor.vim has been removed. Nvim now sets up default highlighting groups
+  automatically for both light and dark backgrounds, regardless of whether or
+  not syntax highlighting is enabled. This means that <a href="syntax.html#%3Asyntax-on">:syntax-on</a> and
+  <a href="syntax.html#%3Asyntax-enable">:syntax-enable</a> are now identical. Users who previously used an
+  after/syntax/syncolor.vim file should transition that file into a
+  colorscheme. <a href="syntax.html#%3Acolorscheme">:colorscheme</a>
+</div>
+<div class="old-help-para">TUI:
+			<a name="%3Aset-termcap"></a><span class="help-tag-right">:set-termcap</span>
+  Start Nvim with <a href="options.html#'verbose'">'verbose'</a> level 3 to show terminal capabilities:<pre>nvim -V3
+</pre>
+			<a name="'term'"></a><span class="help-tag-right">'term'</span> <a name="E529"></a><span class="help-tag">E529</span> <a name="E530"></a><span class="help-tag">E530</span> <a name="E531"></a><span class="help-tag">E531</span>
+  <a href="vim_diff.html#'term'">'term'</a> reflects the terminal type derived from <a href="term.html#%24TERM">$TERM</a> and other environment
+  checks.  For debugging only; not reliable during startup.<pre>:echo &amp;term
+</pre>
+  "builtin_x" means one of the <a href="term.html#builtin-terms">builtin-terms</a> was chosen, because the expected
+  terminfo file was not found on the system.
+</div>
+<div class="old-help-para">  Nvim will use 256-colour capability on Linux virtual terminals.  Vim uses
+  only 8 colours plus bright foreground on Linux VTs.
+</div>
+<div class="old-help-para">  Vim combines what is in its <a href="term.html#builtin-terms">builtin-terms</a> with what it reads from terminfo,
+  and has a <a href="vim_diff.html#'ttybuiltin'">'ttybuiltin'</a> setting to control how that combination works.  Nvim
+  uses one or the other, it does not attempt to merge the two.
+</div>
+<div class="old-help-para">UI/Display:
+  <a href="visual.html#Visual">Visual</a> selection highlights the character at cursor. <a href="visual.html#visual-use">visual-use</a>
+</div>
+<div class="old-help-para">Vimscript compatibility:
+  <code>count</code> does not alias to <a href="eval.html#v%3Acount">v:count</a>
+  <code>errmsg</code> does not alias to <a href="eval.html#v%3Aerrmsg">v:errmsg</a>
+  <code>shell_error</code> does not alias to <a href="eval.html#v%3Ashell_error">v:shell_error</a>
+  <code>this_session</code> does not alias to <a href="eval.html#v%3Athis_session">v:this_session</a>
+</div>
+<div class="old-help-para">Working directory (Vim implemented some of these later than Nvim):
+<div class="help-li"><a href="autocmd.html#DirChanged">DirChanged</a> and <a href="autocmd.html#DirChangedPre">DirChangedPre</a> can be triggered when switching to another window or tab.</div><div class="help-li"><a href="builtin.html#getcwd()">getcwd()</a> and <a href="builtin.html#haslocaldir()">haslocaldir()</a> may throw errors if the tab page or window cannot be found.  <a name="E5000"></a><span class="help-tag">E5000</span> <a name="E5001"></a><span class="help-tag">E5001</span> <a name="E5002"></a><span class="help-tag">E5002</span></div><div class="help-li"><a href="builtin.html#haslocaldir()">haslocaldir()</a> checks for tab-local directory if and only if -1 is passed as window number, and its only possible returns values are 0 and 1.</div><div class="help-li"><code>getcwd(-1)</code> is equivalent to <code>getcwd(-1, 0)</code> instead of returning the global working directory. Use <code>getcwd(-1, -1)</code> to get the global working directory.</div></div>
+<a name="_-5.-missing-legacy-features-"></a><h2 class="help-heading">5. Missing legacy features<span class="help-heading-tags">				 <a name="nvim-features-missing"></a><span class="help-tag">nvim-features-missing</span></h2>
+<div class="old-help-para">Some legacy Vim features are not yet implemented:
+</div>
+<div class="old-help-para"><div class="help-li"><a name="if_lua"></a><span class="help-tag">if_lua</span> : Nvim <a href="lua.html#Lua">Lua</a> API is not compatible with Vim's "if_lua" </div><div class="help-li"><a name="if_mzscheme"></a><span class="help-tag">if_mzscheme</span> </div><div class="help-li"><a href="if_pyth.html#if_pyth">if_pyth</a>: <a name="python-bindeval"></a><span class="help-tag">python-bindeval</span> <a name="python-Function"></a><span class="help-tag">python-Function</span> are not supported </div><div class="help-li"><a name="if_tcl"></a><span class="help-tag">if_tcl</span> </div></div>
+<div class="old-help-para"><a name="%3Agui"></a><span class="help-tag">:gui</span>
+<a name="%3Agvim"></a><span class="help-tag">:gvim</span>
+</div>
+<a name="_-6.-removed-features-"></a><h2 class="help-heading">6. Removed features<span class="help-heading-tags">					 <a name="nvim-features-removed"></a><span class="help-tag">nvim-features-removed</span></h2>
+<div class="old-help-para">These Vim features were intentionally removed from Nvim.
+</div>
+<div class="old-help-para">Aliases:
+  ex        (alias for "nvim -e")
+  exim      (alias for "nvim -E")
+  gex       (GUI)
+  gview     (GUI)
+  gvim      (GUI)
+  gvimdiff  (GUI)
+  rgview    (GUI)
+  rgvim     (GUI)
+  rview
+  rvim
+  view      (alias for "nvim -R")
+  vimdiff   (alias for "nvim -d" <a href="diff.html#diff-mode">diff-mode</a>)
+</div>
+<div class="old-help-para">Commands:
+  :fixdel
+  :helpfind
+  :mode (no longer accepts an argument)
+  :open
+  :Print
+  :promptfind
+  :promptrepl
+  :scriptversion (always version 1)
+  :shell
+  :sleep! (does not hide the cursor; same as :sleep)
+  :smile
+  :tearoff
+</div>
+<div class="old-help-para">Compile-time features:
+  Emacs tags support
+  X11 integration (see <a href="provider.html#x11-selection">x11-selection</a>)
+</div>
+<div class="old-help-para">Eval:
+  Vim9script
+  <a name="js_encode()"></a><span class="help-tag">js_encode()</span>
+  <a name="js_decode()"></a><span class="help-tag">js_decode()</span>
+  <a name="v%3Anone"></a><span class="help-tag">v:none</span> (used by Vim to represent JavaScript "undefined"); use <a href="eval.html#v%3Anull">v:null</a> instead.
+  <a name="v%3Asizeofint"></a><span class="help-tag">v:sizeofint</span>
+  <a name="v%3Asizeoflong"></a><span class="help-tag">v:sizeoflong</span>
+  <a name="v%3Asizeofpointer"></a><span class="help-tag">v:sizeofpointer</span>
+</div>
+<div class="old-help-para">Events:
+  <a name="SigUSR1"></a><span class="help-tag">SigUSR1</span> Use <a href="autocmd.html#Signal">Signal</a> to detect <code>SIGUSR1</code> signal instead.
+</div>
+<div class="old-help-para">Highlight groups:
+  <a name="hl-StatusLineTerm"></a><span class="help-tag">hl-StatusLineTerm</span> <a name="hl-StatusLineTermNC"></a><span class="help-tag">hl-StatusLineTermNC</span> are unnecessary because Nvim
+    supports <a href="options.html#'winhighlight'">'winhighlight'</a> window-local highlights.
+    For example, to mimic Vim's StatusLineTerm:<pre>hi StatusLineTerm ctermfg=black ctermbg=green
+hi StatusLineTermNC ctermfg=green
+autocmd TermOpen,WinEnter * if &amp;buftype=='terminal'
+  \|setlocal winhighlight=StatusLine:StatusLineTerm,StatusLineNC:StatusLineTermNC
+  \|else|setlocal winhighlight=|endif
+</pre>
+</div>
+<div class="old-help-para">Options:
+  antialias
+  <a name="'balloondelay'"></a><span class="help-tag">'balloondelay'</span> <a name="'bdlay'"></a><span class="help-tag">'bdlay'</span>
+  <a name="'ballooneval'"></a><span class="help-tag">'ballooneval'</span> <a name="'beval'"></a><span class="help-tag">'beval'</span> <a name="'noballooneval'"></a><span class="help-tag">'noballooneval'</span> <a name="'nobeval'"></a><span class="help-tag">'nobeval'</span>
+  <a name="'balloonexpr'"></a><span class="help-tag">'balloonexpr'</span> <a name="'bexpr'"></a><span class="help-tag">'bexpr'</span>
+  bioskey (MS-DOS)
+  conskey (MS-DOS)
+  <a name="'cp'"></a><span class="help-tag">'cp'</span> <a name="'nocompatible'"></a><span class="help-tag">'nocompatible'</span> <a name="'nocp'"></a><span class="help-tag">'nocp'</span> <a name="'compatible'"></a><span class="help-tag">'compatible'</span> (Nvim is always "nocompatible".)
+  <a href="options.html#'cpoptions'">'cpoptions'</a> (gjkHw&lt;*- and all POSIX flags were removed)
+  <a name="'cryptmethod'"></a><span class="help-tag">'cryptmethod'</span> <a name="'cm'"></a><span class="help-tag">'cm'</span> <a name="'key'"></a><span class="help-tag">'key'</span> (Vim encryption implementation)
+  <a name="'ed'"></a><span class="help-tag">'ed'</span> <a name="'edcompatible'"></a><span class="help-tag">'edcompatible'</span> <a name="'noed'"></a><span class="help-tag">'noed'</span> <a name="'noedcompatible'"></a><span class="help-tag">'noedcompatible'</span>
+  <a href="options.html#'encoding'">'encoding'</a> ("utf-8" is always used)
+  esckeys
+  <a href="options.html#'guioptions'">'guioptions'</a> "t" flag was removed
+  <a name="'guifontset'"></a><span class="help-tag">'guifontset'</span> <a name="'gfs'"></a><span class="help-tag">'gfs'</span> (Use <a href="options.html#'guifont'">'guifont'</a> instead.)
+  <a name="'guipty'"></a><span class="help-tag">'guipty'</span> (Nvim uses pipes and PTYs consistently on all platforms.)
+  <a href="deprecated.html#'highlight'">'highlight'</a> (Names of builtin <a href="syntax.html#highlight-groups">highlight-groups</a> cannot be changed.)
+  <a name="'imactivatefunc'"></a><span class="help-tag">'imactivatefunc'</span> <a name="'imaf'"></a><span class="help-tag">'imaf'</span>
+  <a name="'imactivatekey'"></a><span class="help-tag">'imactivatekey'</span> <a name="'imak'"></a><span class="help-tag">'imak'</span>
+  <a name="'imstatusfunc'"></a><span class="help-tag">'imstatusfunc'</span> <a name="'imsf'"></a><span class="help-tag">'imsf'</span>
+  <a name="'insertmode'"></a><span class="help-tag">'insertmode'</span> <a name="'im'"></a><span class="help-tag">'im'</span> Use the following script to emulate <a href="vim_diff.html#'insertmode'">'insertmode'</a>:
+<pre>autocmd BufWinEnter * startinsert
+inoremap &lt;Esc&gt; &lt;C-X&gt;&lt;C-Z&gt;&lt;C-]&gt;
+inoremap &lt;C-C&gt; &lt;C-X&gt;&lt;C-Z&gt;
+inoremap &lt;C-L&gt; &lt;C-X&gt;&lt;C-Z&gt;&lt;C-]&gt;&lt;Esc&gt;
+inoremap &lt;C-Z&gt; &lt;C-X&gt;&lt;C-Z&gt;&lt;Cmd&gt;suspend&lt;CR&gt;
+noremap &lt;C-C&gt; &lt;Esc&gt;
+snoremap &lt;C-C&gt; &lt;Esc&gt;
+noremap &lt;C-\&gt;&lt;C-G&gt; &lt;C-\&gt;&lt;C-N&gt;&lt;Cmd&gt;startinsert&lt;CR&gt;
+cnoremap &lt;C-\&gt;&lt;C-G&gt; &lt;C-\&gt;&lt;C-N&gt;&lt;Cmd&gt;startinsert&lt;CR&gt;
+inoremap &lt;C-\&gt;&lt;C-G&gt; &lt;C-X&gt;&lt;C-Z&gt;
+autocmd CmdWinEnter * noremap &lt;buffer&gt; &lt;C-C&gt; &lt;C-C&gt;
+autocmd CmdWinEnter * inoremap &lt;buffer&gt; &lt;C-C&gt; &lt;C-C&gt;
+lua &lt;&lt; EOF
+  vim.on_key(function(c)
+    if c == '\27' then
+      local mode = vim.api.nvim_get_mode().mode
+      if mode:find('^[nvV\22sS\19]') and vim.fn.getcmdtype() == '' then
+        vim.schedule(function()
+          vim.cmd('startinsert')
+        end)
+      end
+    end
+  end)
+EOF
+</pre>
+  <a name="'macatsui'"></a><span class="help-tag">'macatsui'</span>
+  <a name="'maxcombine'"></a><span class="help-tag">'maxcombine'</span> <a name="'mco'"></a><span class="help-tag">'mco'</span>
+    Nvim always displays up to 6 combining characters.  You can still edit
+    text with more than 6 combining characters, you just can't see them.
+    Use <a href="various.html#g8">g8</a> or <a href="various.html#ga">ga</a>.  See <a href="mbyte.html#mbyte-combining">mbyte-combining</a>.
+  <a name="'maxmem'"></a><span class="help-tag">'maxmem'</span> Nvim delegates memory-management to the OS.
+  <a name="'maxmemtot'"></a><span class="help-tag">'maxmemtot'</span> Nvim delegates memory-management to the OS.
+  <a name="'prompt'"></a><span class="help-tag">'prompt'</span> <a name="'noprompt'"></a><span class="help-tag">'noprompt'</span>
+  <a name="'remap'"></a><span class="help-tag">'remap'</span> <a name="'noremap'"></a><span class="help-tag">'noremap'</span>
+  <a name="'restorescreen'"></a><span class="help-tag">'restorescreen'</span> <a name="'rs'"></a><span class="help-tag">'rs'</span> <a name="'norestorescreen'"></a><span class="help-tag">'norestorescreen'</span> <a name="'nors'"></a><span class="help-tag">'nors'</span>
+  <a name="'shelltype'"></a><span class="help-tag">'shelltype'</span>
+  <a name="'shortname'"></a><span class="help-tag">'shortname'</span> <a name="'sn'"></a><span class="help-tag">'sn'</span> <a name="'noshortname'"></a><span class="help-tag">'noshortname'</span> <a name="'nosn'"></a><span class="help-tag">'nosn'</span>
+  <a name="'swapsync'"></a><span class="help-tag">'swapsync'</span> <a name="'sws'"></a><span class="help-tag">'sws'</span>
+  <a name="'termencoding'"></a><span class="help-tag">'termencoding'</span> <a name="'tenc'"></a><span class="help-tag">'tenc'</span> (Vim 7.4.852 also removed this for Windows)
+  <a name="'terse'"></a><span class="help-tag">'terse'</span> <a name="'noterse'"></a><span class="help-tag">'noterse'</span> (Add "s" to <a href="options.html#'shortmess'">'shortmess'</a> instead)
+  textauto
+  textmode
+  <a name="'toolbar'"></a><span class="help-tag">'toolbar'</span> <a name="'tb'"></a><span class="help-tag">'tb'</span>
+  <a name="'toolbariconsize'"></a><span class="help-tag">'toolbariconsize'</span> <a name="'tbis'"></a><span class="help-tag">'tbis'</span>
+  <a name="'ttybuiltin'"></a><span class="help-tag">'ttybuiltin'</span> <a name="'tbi'"></a><span class="help-tag">'tbi'</span> <a name="'nottybuiltin'"></a><span class="help-tag">'nottybuiltin'</span> <a name="'notbi'"></a><span class="help-tag">'notbi'</span>
+  <a name="'ttyfast'"></a><span class="help-tag">'ttyfast'</span> <a name="'tf'"></a><span class="help-tag">'tf'</span> <a name="'nottyfast'"></a><span class="help-tag">'nottyfast'</span> <a name="'notf'"></a><span class="help-tag">'notf'</span>
+  <a name="'ttymouse'"></a><span class="help-tag">'ttymouse'</span> <a name="'ttym'"></a><span class="help-tag">'ttym'</span>
+  <a name="'ttyscroll'"></a><span class="help-tag">'ttyscroll'</span> <a name="'tsl'"></a><span class="help-tag">'tsl'</span>
+  <a name="'ttytype'"></a><span class="help-tag">'ttytype'</span> <a name="'tty'"></a><span class="help-tag">'tty'</span>
+  weirdinvert
+</div>
+<div class="old-help-para">Startup:
+  --literal (file args are always literal; to expand wildcards on Windows, use
+    <a href="editing.html#%3An">:n</a> e.g. <code>nvim +"n *"</code>)
+  Easy mode: eview, evim, nvim -y
+  Restricted mode: rview, rvim, nvim -Z
+  Vi mode: nvim -v
+</div>
+<div class="old-help-para">Test functions:
+  test_alloc_fail()
+  test_autochdir()
+  test_disable_char_avail()
+  test_feedinput()
+  test_garbagecollect_soon
+  test_getvalue()
+  test_ignore_error()
+  test_null_blob()
+  test_null_channel()
+  test_null_dict()
+  test_null_function()
+  test_null_job()
+  test_null_list()
+  test_null_partial()
+  test_null_string()
+  test_option_not_set()
+  test_override()
+  test_refcount()
+  test_scrollbar()
+  test_setmouse()
+  test_settime()
+  test_srand_seed()
+</div>
+<div class="old-help-para">TUI:
+			  <a name="t_xx"></a><span class="help-tag-right">t_xx</span> <a name="termcap-options"></a><span class="help-tag">termcap-options</span> <a name="t_AB"></a><span class="help-tag">t_AB</span> <a name="t_Sb"></a><span class="help-tag">t_Sb</span> <a name="t_vb"></a><span class="help-tag">t_vb</span> <a name="t_SI"></a><span class="help-tag">t_SI</span>
+  Nvim does not have special <code>t_XX</code> options nor &lt;t_XX&gt; keycodes to configure
+  terminal capabilities. Instead Nvim treats the terminal as any other UI,
+  e.g. <a href="options.html#'guicursor'">'guicursor'</a> sets the terminal cursor style if possible.
+</div>
+<div class="old-help-para">			  <a name="termcap"></a><span class="help-tag-right">termcap</span>
+  Nvim never uses the termcap database, only <a href="term.html#terminfo">terminfo</a> and <a href="term.html#builtin-terms">builtin-terms</a>.
+</div>
+<div class="old-help-para">			  <a name="xterm-8bit"></a><span class="help-tag-right">xterm-8bit</span> <a name="xterm-8-bit"></a><span class="help-tag">xterm-8-bit</span>
+  Xterm can be run in a mode where it uses true 8-bit CSI.  Supporting this
+  requires autodetection of whether the terminal is in UTF-8 mode or non-UTF-8
+  mode, as the 8-bit CSI character has to be written differently in each case.
+  Vim issues a "request version" sequence to the terminal at startup and looks
+  at how the terminal is sending CSI.  Nvim does not issue such a sequence and
+  always uses 7-bit control sequences.
+</div>
+
+  </div>
+      <div class="col-narrow toc">
+      <div><a href="index.html">Main</a></div>
+      <div><a href="vimindex.html">Commands index</a></div>
+      <div><a href="quickref.html">Quick reference</a></div>
+      <hr/>
+  <div class="help-toc-h1"><a href="#_-1.-configuration-">
+1. Configuration					    
+</a>
+</div><div class="help-toc-h1"><a href="#_-2.-defaults-">
+2. Defaults					            
+</a>
+</div><div class="help-toc-h1"><a href="#_-3.-new-features-">
+3. New Features						       
+</a>
+</div><div class="help-toc-h1"><a href="#_-4.-changed-features-">
+4. Changed features					 
+</a>
+</div><div class="help-toc-h1"><a href="#_-5.-missing-legacy-features-">
+5. Missing legacy features				 
+</a>
+</div><div class="help-toc-h1"><a href="#_-6.-removed-features-">
+6. Removed features					 
+</a>
+</div></div>
+</div>
+  <footer>
+    <div class="container flex">
+      <div class="generator-stats">
+        Generated at 2022-10-04 06:04 from <code><a href="https://github.com/neovim/neovim/commit/a93ff5fc696387798c7ba066c11600ae2ce1ce03">a93ff5f</a></code>
+      </div>
+      <div class="generator-stats">
+      parse_errors: 1 (<a href="https://github.com/neovim/neovim/issues/new?labels=bug&title=user+docs+HTML%3A+vim_diff.txt+&body=%60gen_help_html.lua%60+problem+at%3A+https://neovim.io/doc/user/vim_diff.html%0D%0DContext%3A%0D%0D%60%60%60%0DTODO%0D%60%60%60" target="_blank">report docs bug...</a>) | <span title="    Nvim
+			    NVIM REFERENCE MANUAL
+				      Type &lt;a href="various.html#gO"&gt;gO&lt;/a&gt; to see the table of contents.
+ vim:tw=78:ts=8:sw=2:et:ft=help:norl:">noise_lines: 4</span>
+      </div>
+    <div>
+  </footer>
+  </body>
+</html>

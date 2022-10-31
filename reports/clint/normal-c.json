@@ -1,0 +1,3 @@
+["src/nvim/normal.c", ["      if (bytes == chars) {", "        sprintf((char *)showcmd_buf, \"%d\", chars);", "      } else {"], "runtime/printf"]
+["src/nvim/normal.c", ["      } else {", "        sprintf((char *)showcmd_buf, \"%d-%d\", chars, bytes);", "      }"], "runtime/printf"]
+["src/nvim/normal.c", ["  assert(len <= INT_MAX);", "  sprintf((char *)pat, vim_iswordp(ptr) ? \"\\\\V\\\\<%.*s\\\\>\" : \"\\\\V%.*s\",", "          (int)len, ptr);"], "runtime/printf"]

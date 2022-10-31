@@ -1,0 +1,1 @@
+["src/nvim/eval/typval.h", ["#define TV_LIST_ITER(l, li, code) \\", "  _TV_LIST_ITER_MOD( , l, li, code)", ""], "whitespace/parens"]

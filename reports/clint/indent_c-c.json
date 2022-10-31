@@ -1,0 +1,2 @@
+["src/nvim/indent_c.c", ["  if (lookfor == LOOKFOR_IF) {", "    elselevel = 1;", "    whilelevel = 0;"], "readability/braces"]
+["src/nvim/indent_c.c", ["  } else {", "    elselevel = 0;", "    whilelevel = 1;"], "readability/braces"]

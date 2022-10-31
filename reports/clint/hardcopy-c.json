@@ -1,0 +1,4 @@
+["src/nvim/hardcopy.c", ["          assert(prtpos.bytes_printed <= SIZE_MAX / 100);", "          sprintf((char *)IObuff, _(\"Printing page %d (%zu%%)\"),", "                  page_count + 1 + side,"], "runtime/printf"]
+["src/nvim/hardcopy.c", ["          for (page_line = 0; page_line < settings.lines_per_page;", "               ++page_line) {", "            prtpos.column = hardcopy_line(&settings,"], "readability/increment"]
+["src/nvim/hardcopy.c", ["    prt_dsc_font_resource((prt_use_courier ? NULL", "                                           : \"DocumentNeededResources\"), &prt_ps_mb_font);", "    if (!prt_custom_cmap) {"], "whitespace/alignment"]
+["src/nvim/hardcopy.c", ["      default:", "        sprintf((char *)ch_buff, \"%03o\", (unsigned int)ch);", "        ga_append(&prt_ps_buffer, (char)ch_buff[0]);"], "runtime/printf"]
